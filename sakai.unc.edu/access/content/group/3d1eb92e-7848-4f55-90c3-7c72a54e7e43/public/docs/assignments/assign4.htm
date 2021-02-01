@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style22 {color: #663366; font-weight: bold; }
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"> <a name="assign1" id="assign1"></a>Assignment 4 </h1>
+<h2>Due Date </h2>
+
+  <p>Friday, September 28, 2012</p>
+
+<h2>Data Source </h2>
+
+  <p>The data for this assignment is <a href="../../data/poplars.txt">poplars.txt</a>, a tab-delimited text file. This data set is a homework exercise in Sokal and Rohlf (1995), p. 390, and the original data are taken from Lunt (1947). The set-up is as follows. Oven-dry weights (in grams) of new growth of hybrid poplars grown in concrete soil frames and treated with lime (L), nitrogen (N), phosphorus (P), and/or potassium (K) were obtained. The frames were laid out in three blocks with no replication of the treatments within blocks. The goal was to determine the manner in which the different soil additives affected growth.</p>
+<h2 align="left">Questions</h2>
+<ol>
+  <li>In Sokal and Rohlf (1995) only the variables <span class="style8">weight</span>, <span class="style8">trt</span>, and <span class="style8">block</span> are given. I constructed the four factors  <span class="style8">L</span>, <span class="style8">N</span>, <span class="style8">P</span>, and <span class="style8">K</span> in  <a href="../../data/poplars.txt">poplars.txt</a> from the treatment variable (<span class="style8">trt</span>).  In <span class="style8">trt</span> a value of O indicates the absence of treatment (controls) while the symbols L, N, P, and K indicate that the particular soil additive was present. Question 1 is to figure out a way to repeat what I've already done. Write a few lines of R code that  will create the variables <span class="style8">L</span>, <span class="style8">N</span>, <span class="style8">P</span>, and <span class="style8">K</span> from the single variable <span class="style8">trt</span>.</li>
+  <li>Analyze the new growth weights of poplars (<span class="style8">weight</span>) to determine the manner in which different combinations of soil additives affects  growth. Report your final model.</li>
+  <li>Give a one or two sentence description of what your final model says.</li>
+  <li>Create a single graphic (the graphic may contain more than one part) that completely summarizes the results of your analysis. 
+    <ol type="a">
+      <li>It should show the average growth of  hybrid poplars as predicted by your model for those   treatments that had a significant effect on growth. </li>
+      <li>It should  allow the user to assess  the precision of the estimates of the means and be able to make comparisons among the means. </li>
+      <li>It should  clearly demonstrate how the individual factors operate separately and in concert.</li>
+    </ol>
+  </li>
+</ol>
+<h2>Hints</h2>
+
+  <ol>
+    <li> There are many ways to generate the variables <span class="style8">L</span>, <span class="style8">N</span>, <span class="style8">P</span>, and <span class="style8">K</span> for question 1. If you're stuck, here is a rough outline of what I did. I used the functions <span class="style1">as.character</span>, <span class="style1">strsplit</span>, <span class="style1">sapply</span>, <span class="style1">ifelse</span>, and the operator <span class="style1">%in%</span>. If you choose to match what I did you'll need to examine the help screen for some of these functions to see how to use them properly.
+      <ol type="a">
+  <li>I began by splitting each of the character strings of <span class="style8">trt</span> into  vectors each of whose elements were single characters. For this I used <span class="style1">as.character</span> to first convert the factor values to  character values  followed by <span class="style1">strsplit</span> with an appropriate value for the <span class="style22">split</span> argument to create a vector of singletons from each separate value of <span class="style8">trt</span>. The result<span class="style1"></span> will be a list whose elements are character vectors of varying lengths.</li>
+      <li>I then used four <span class="style1">ifelse</span> statements to separately create the individual variables <span class="style8">L</span>, <span class="style8">N</span>, <span class="style8">P</span>, and <span class="style8">K</span> based on the entries of the list created in (a). The logical test condition of each <span class="style1">ifelse</span> statement was constructed by using <span class="style1">sapply</span> on the list of vectors  from (a). The generic function I wrote for <span class="style1">sapply</span> tested whether a particular character,<span class="style10"> 'L'</span>, <span class="style10">'N'</span>, <span class="style10">'P'</span>, or <span class="style10">'K'</span> was present among the elements of each vector in the list. </li>
+      <li>For example to create the variable <span class="style8">L</span> I had to test  whether the character <span class="style10">'L'</span> was among the   vector entries. This had to be done separately for each element of the list. For this I used the <span class="style1">%in%</span> logical intersection operator. The <span class="style1">%in%</span> operator works as follows.
+        <p><span class="style10">'L' %in% c('N','K')</span><br>
+            <span class="style24">[1] FALSE</span><br>
+  <span class="style10">'L' %in% c('N','K','L')</span><br>
+          <span class="style24">[1] TRUE</span></p>
+      </li>
+      <li>The first input to <span class="style1">%in%</span> is the character we're searching for. The second input to <span class="style1">%in%</span> is an element of the list created in (a). The element of the list should be indexed by the variable of the generic function. As a result the list element will change as <span class="style1">sapply</span> moves through the list. Remeber that list elements are accessed using the double bracket notation: <span class="style10">[[  ]]</span>. The <span class="style1">sapply</span> is needed here because otherwise<span class="style1"> %in%</span> would look for an <span class="style10">'L'</span> in the entire list rather than element by element.</li>
+      <li>The output of (d) will be a vector of TRUEs and FALSEs. For each entry that evaluates to TRUE, <span class="style1">ifelse</span> should assign the value <span class="style10">'present'</span> to <span class="style8">L</span>. For each entry that evaluates to FALSE, <span class="style1">ifelse</span> should assign the value <span class="style10">'absent'</span> to <span class="style8">L</span>. </li>
+      <li>This whole process then needs to be repeated to create <span class="style8">N</span>, <span class="style8">P</span>, and <span class="style8">K</span>.    </li>
+      </ol>
+    </li>
+    <li>When constructing a function for use with <span class="style1">sapply</span> try getting your ideas to work on a single element first before using it in <span class="style1">sapply</span>. Once you're successful then rewrite it as a generic function for use in <span class="style1">sapply</span>.</li>
+  </ol>
+<h2>Cited references</h2>
+<ul>
+  <li>Lunt, H. A. 1947. The response of a hybrid poplar and other forest tree species to fertilizer and lime treatment in concrete soil frames. <em>Journal of Agricultural Research</em> <strong>74</strong>: 113&ndash;132.</li>
+  <li>Sokal, R. R. and F. J. Rohlf. 1995. <em>Biometry: The Principles and Practice of Statistics in Biological Research</em>. 3rd edition. W. H. Freeman and Co.: New York.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 20, 2012<br>
+      URL: <a href="assign4.htm#assign4" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/assign4.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

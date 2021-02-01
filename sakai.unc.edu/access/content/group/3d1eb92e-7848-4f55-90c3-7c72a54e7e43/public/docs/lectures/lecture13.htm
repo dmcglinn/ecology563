@@ -1,0 +1,474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 13&mdash;Monday, October 8, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture13" id="lecture4"></a>Lecture 13&mdash;Monday, October 8, 2012</h1>
+<h3>Topics </h3>
+<ul>
+
+  <li><a href="lecture13.htm#review">Review of likelihood theory</a> </li>
+  <li><a href="lecture13.htm#interpreting">Interpreting the information</a></li>
+  <li><a href="lecture13.htm#LRtest">Likelihood ratio test</a></li>
+  <li><a href="lecture13.htm#waldtest">Wald test</a></li>
+  <li><a href="lecture13.htm#probability">Probability distributions in regression</a>
+    <ul>
+      <li><a href="lecture13.htm#role">The role of the probability model in ordinary linear regression</a></li>
+      <li><a href="lecture13.htm#extending">Extending regression to  other probability distributions for the response</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture13.htm#probability">A review of probability and probability distributions</a></li>
+  <li><a href="lecture13.htm#normal">Normal distribution</a>
+    <ul>
+      <li><a href="lecture13.htm#normbasic">Basic characteristics</a></li>
+      <li><a href="lecture13.htm#normimport">Importance and use</a></li>
+      <li><a href="lecture13.htm#probfunc">R probability functions for the normal distribution</a>  </li>
+    </ul>
+  </li>
+  <li><a href="lecture13.htm#books">Books and articles on likelihood</a></li>
+  <li><a href="lecture13.htm#web">Some web references on likelihood</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture13.htm#dnorm">dnorm</a> is the density function for a normal distribution.</li>
+  <li><a href="lecture13.htm#pnorm">pnorm</a> is the cumulative distribution function for a normal distribution.</li>
+  <li><a href="lecture13.htm#qnorm">qnorm</a> is the normal quantile function.</li>
+  <li><a href="lecture13.htm#rnorm">rnorm</a> is the random number generator for generating observations from a normal distribution.</li>
+</ul>
+<h2><a name="review"></a>Review of likelihood theory</h2>
+<p class="style31">The probability of obtaining a random sample</p>
+<p>Let <img src="../../images/lectures/lecture13/randomsample.gif" alt="random sample" width="102" height="27" align="absmiddle"> denote a random sample of size <em>n</em>. We wish to compute the probability of obtaining this particular sample for different probability models in order to help us choose a model. Because the observations in a random sample are independent we can write the generic expression for the probability of obtaining this particular sample as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture13/probability.gif" width="577" height="92" alt="probability"></p>
+<p class="style31">The likelihood</p>
+<p>The next step is to  propose a particular probability model for our data. Let<img src="../../images/lectures/lecture13/probmodelgeneric.gif" alt="prob model" width="98" height="32" align="absmiddle"> denote this probability model where the notation is meant to indicate that the model requires the specification of two parameters &alpha; and &beta;. We can replace the generic probability terms in the above expression with the proposed model. </p>
+<p align="center"><img src="../../images/lectures/lecture13/probmodelL.gif" width="343" height="115" alt="likelihood"></p>
+<p align="left">The change in notation on the left hand side is deliberate. The new expression for the probability when treated as a function of &alpha; and &beta;  is referred to as the likelihood, <em>L</em>, of our data under the proposed probability model.</p>
+<p class="style31">The log-likelihood</p>
+<p>Typically we work with the log of this expression now called the log-likelihood of our data under the proposed probability model.</p>
+<p align="center"><img src="../../images/lectures/lecture13/probmodelLL.gif" width="400" height="58" alt="log-likelihood"></p>
+<p class="style31">The score (gradient) vector</p>
+<p>The maximum likelihood estimates (MLEs) of &alpha; and &beta; are those values that make the log-likelihood (and hence the likelihood) as large as possible. The MLEs maximize the likelihood of obtaining the data we obtained. Calculus is used for finding MLEs. The analytical protocol would involve taking the derivative of the log-likelihood with respect to each of the parameters separately, setting the derivatives equal to zero, and solving for the parameters (algebraically when possible, numerically if not). The derivative of the log-likelihood is called the score or gradient vector.</p>
+<p align="center"><img src="../../images/lectures/lecture13/scoreab.gif" width="373" height="127" alt="score"></p>
+<p align="left" class="style31">The Hessian</p>
+<p align="left">The matrix of second partial derivatives of the log-likelihood is called the Hessian matrix.</p>
+<p align="center"><img src="../../images/lectures/lecture13/hessianab.gif" width="488" height="135" alt="hessian"></p>
+<p align="left" class="style31">Newton-Raphson method</p>
+<p align="left">One method for obtaining maximum likelihood estimates is the Newton-Raphson method. It is an iterative method that makes use of both the gradient vector and the Hessian matrix to update the estimates of the parameters at each step of the algorithm.</p>
+<p align="center"><img src="../../images/lectures/lecture13/newton.gif" width="212" height="103" alt="NR method"></p>
+<p align="left" class="style31"><a name="information"></a>The information</p>
+<p>The observed information matrix, I(&theta;), is is just the negative of the Hessian evaluated at the maximum likelihood estimate. If  <img src="../../images/lectures/lecture12/thetahatn.gif" alt="theta hat n" width="22" height="32" align="absmiddle"> is the maximum likelihood estimate of &theta; based on a sample of size <i>n</i>, then </p>
+<p align="center"><img src="../../images/lectures/lecture12/varianceofthetathatn.gif" width="138" height="40"></p>
+<p>where <img src="../../images/lectures/lecture12/inverseofinformation.gif" alt="inverse information" width="55" height="32" align="absmiddle"> is the inverse of the information matrix (for  a sample of size <i>n</i>). Furthermore <img src="../../images/lectures/lecture12/thetahatn.gif" alt="theta hat n" width="22" height="32" align="absmiddle"> is asymptotically normally distributed. Thus we have </p>
+<p align="center"><img src="../../images/lectures/lecture12/asypmtoticallynormal.gif" width="152" height="43" alt="asymptotic distribution"></p>
+<h2><a name="interpreting"></a>Interpreting the information</h2>
+<p name="curvature"><a name="curvature"></a>You may have been introduced to the notion of <strong class="style9">curvature</strong>, &kappa;, in your calculus class. The formal definition of the curvature of a curve is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture13/curvature.gif" width="63" height="52" alt="curvature"></p>
+<p>Here &phi; is the angle of the tangent line to the curve and <em>s</em> is arc length. Thus curvature is the rate at which you turn (in radians per unit distance) as you walk along the curve. For a function written in the form<img src="../../images/lectures/lecture13/fofx.gif" alt="y=f(x)" width="73" height="27" align="absmiddle">, its curvature  can be calculated as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture13/curvature2.gif" width="153" height="122" alt="curvature formula"></p>
+<p>What happens if we apply the curvature formula to the log-likelihood, <img src="../../images/lectures/lecture13/loglike.gif" alt="log likelihood" width="42" height="30" align="absmiddle">? If the log-likelihood is a function of a single scalar parameter &theta;, then we have</p>
+<p align="center"><img src="../../images/lectures/lecture13/curvature3.gif" width="155" height="123" alt="curvature log-likelihood"></p>
+<p>Now suppose we  evaluate the curvature at the maximum likelihood estimate, <img src="../../images/lectures/lecture13/mletheta.gif" alt="mle theta" width="40" height="32" align="absmiddle">.</p>
+<p align="center"><img src="../../images/lectures/lecture13/curvature4.gif" width="260" height="123" alt="curvature at mle"></p>
+<p> Recall how the MLE is obtained. We differentiate the log-likelihood and set the derivative equal to zero. Thus, <img src="../../images/lectures/lecture13/mletheta.gif" alt="mle theta" width="40" height="32" align="absmiddle"> is the value of &theta; at which the first derivative of the log-likelihood is equal to zero, i.e.,</p>
+<p align="center"><img src="../../images/lectures/lecture13/scoreequalszero.gif" width="113" height="52" alt="score equals zero"></p>
+<p>Using this result in the curvature equation above we obtain the following. </p>
+<p align="center"><img src="../../images/lectures/lecture13/curvature5.gif" width="422" height="93" alt="curvature"></p>
+<p>Recall that except for the sign, the Hessian (scalar version) at the MLE is what is called the observed information. At the global maximum of a function the second derivative is required to be negative, so taking the negative of the Hessian is just a way of ensuring that the observed information is non-negative. Equivalently we could have taken the absolute value.  Thus the observed information is just the magnitude of the curvature of the log-likelihood when the curvature is evaluated at the MLE. </p>
+<p align="center"><img src="../../images/lectures/lecture13/curvature6.gif" width="160" height="43" alt="information and curvature"></p>
+<div class="figureR1">
+  <p align="center"><img src="../../images/lectures/lecture13/fig1.png" width="330" height="280">
+  <p align="center" class="styleArial"> <strong>Fig. 1</strong> Curvature and information</p>
+</div>
+<p>A similar argument can be made for a multivariate log-likelihood except that we have multiple directions (corresponding to curves obtained by taking different vertical sections of the log-likelihood surface) to consider when discussing curvature.</p>
+<p>So what do these ideas tell us about  information in the sense used in likelihood theory? Consider the the graph in Fig. 1 in which three different log-likelihoods are shown. Observe that the three log-likelihoods are all functions of a single parameter &theta;, they are all maximized at the same place, <img src="../../images/lectures/lecture13/mletheta.gif" alt="mle theta" width="40" height="32" align="absmiddle">, but they have very different curvatures. From red to black to blue we go from high curvature to moderate curvature to low curvature at the maximum likelihood estimate <img src="../../images/lectures/lecture13/mletheta.gif" alt="mle theta" width="40" height="32" align="absmiddle"> (the value of &theta; corresponding to the peak of the log-likelihoods). Using the diagram we can make the following observations.</p>
+<ol>
+  <li>Low curvature (<span class="style9">blue</span> curve) translates into a fairly flat log-likelihood. Thus in a neighborhood of <img src="../../images/lectures/lecture13/mletheta.gif" alt="mle theta" width="40" height="32" align="absmiddle"> most values of &theta; yield roughly the same log-likelihood value and hence the log-likelihood is not useful in discriminating one &theta; from another. In other words we have low information about the true value of &theta;. </li>
+  <li>High curvature (<span class="style1">red</span> curve) translates into a rapidly changing log-likelihood. Thus in a neighborhood of <img src="../../images/lectures/lecture13/mletheta.gif" alt="mle theta" width="40" height="32" align="absmiddle"> even those values of &theta; that differ from <img src="../../images/lectures/lecture13/mletheta.gif" alt="mle theta" width="40" height="32" align="absmiddle"> by a small amount have very different log-likelihoods and hence are readily distinguishable from one another. In this case we have a lot of information about the true value of &theta;. </li>
+</ol>
+<p>A similar set of statements can be made about the variance of the estimator because for scalar &theta; the information and the variance are reciprocals of each other.</p>
+<p align="center"><img src="../../images/lectures/lecture13/variance.gif" width="193" height="65" alt="variance of theta hat"></p>
+<p>Using the relationship between information and the variance, we can draw the following conclusions.</p>
+<ul>
+  <li>Low information translates into a high variance of our estimator. Hence confidence intervals for &theta; will be wide.</li>
+  <li>High information translates into a low variance of our estimator. Hence confidence intervals for &theta; will be narrow. </li>
+</ul>
+<p>The table below summarizes these results more  succinctly.</p>
+<table width="437" border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td width="64" bgcolor="#FFFFCC"><div align="center">Curvature</div></td>
+    <td width="81" bgcolor="#FFFFCC"><div align="center">Information</div></td>
+    <td width="72" bgcolor="#FFFFCC"><div align="center"><img src="../../images/lectures/lecture13/varofthetahat.gif" width="63" height="40" alt="var of theta hat"></div></td>
+    <td width="170" bgcolor="#FFFFCC"><div align="center">Confidence interval for &theta; </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">high</div></td>
+    <td><div align="center">high</div></td>
+    <td><div align="center">low</div></td>
+    <td width="170"><div align="center">narrow</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">low</div></td>
+    <td><div align="center">low</div></td>
+    <td><div align="center">high</div></td>
+    <td width="170"><div align="center">wide</div></td>
+  </tr>
+</table>
+<h2><a name="LRtest"></a>Likelihood Ratio Test </h2>
+<p> The <span class="style9">likelihood ratio (LR) test</span> is to likelihood analysis as ANOVA (more properly partial F-tests) is to ordinary linear regression. Partial F-tests are used to compare nested ordinary regression models; likelihood ratio tests are used to compare nested models that were fit using maximum likelihood estimation. Nested models are those that share the same probability generating mechanism, the same response, and  all of the same parameters. The only difference is  that in one of the models one or more of the parameters are set to specific values (usually zero), while in the other model those same parameters are estimated instead. So we have a restricted model (one in which some parameters are set to specific values) and a second less restricted full model (one in which these same parameters are estimated). </p>
+<p>Let &theta;<sub>1</sub> denote the set of estimated parameters from the full model and &theta;<sub>2</sub> denote the set of estimated parameters from the restricted model. Because the models are nested the parameter set &theta;<sub>2</sub> is a subset of the parameter set &theta;<sub>1</sub>. The likelihood ratio test takes the following form.</p>
+<p align="center"><img src="../../images/lectures/lecture13/LRtest.gif" width="380" height="67" alt="LR test"></p>
+<div class="figureR1">
+  <p align="center"><img src="../../images/lectures/lecture13/fig2.png" width="323" height="218">
+  <p align="center"> <strong>Fig. 2</strong> Geometry of the LR test</p>
+</div>
+<p>It turns out <img src="../../images/lectures/lecture13/LRdistribution.gif" alt="LR distribution" width="73" height="33" align="absmiddle"> , a chi-squared distribution with <em>p</em> degrees of freedom, where the degrees of freedom <em>p</em> is the difference in the number of estimated parameters in the two models.</p>
+<p>Let's consider the special case when there is only a single parameter &theta; and the restricted model specifies a  value for this parameter that we'll denote &theta;<sub>0</sub>. (A common case would be  &theta;<sub>0</sub> = 0.) Then we have</p>
+<p align="center"><img src="../../images/lectures/lecture13/LRtestspecialcase.gif" width="245" height="170" alt="LR test"></p>
+<p>where to simplify notation I use <img src="../../images/lectures/lecture13/scriptloftheta.gif" alt="script l of theta" width="42" height="30" align="absmiddle"> to denote <img src="../../images/lectures/lecture13/logLoftheta.gif" alt="log(L(theta))" width="73" height="30" align="absmiddle">. Fig. 2 illustrates the geometry of the LR test. The LR statistic maps closeness on the &theta;-axis into closeness on the log-likelihood axis (through the mapping given by the log-likelihood function). In the LR test two values of &theta; are deemed close only if their log-likelihoods are also found to be close. The chi-squared distribution provides the absolute scale for measuring closeness on the log-likelihood axis.</p>
+<div class="figureR1">
+  <p align="center"><img src="../../images/lectures/lecture13/fig3.png" width="383" height="201">
+  <p align="center"> <strong>Fig. 3</strong>&nbsp; LR test when the information varies</p>
+</div
+
+>
+<p>The role the log-likelihood curve plays in this becomes even clearer when we compare two different log-likelihoods, perhaps arising from different data sets, that yield the same maximum likelihood estimate of &theta;, but have different curvatures. Fig. 3 illustrates two such log-likelihoods. If we are interested in testing</p>
+<p align="center"><img src="../../images/lectures/lecture13/nullhypothesis.gif" width="112" height="58" alt="null hypothesis"></p>
+<p>then scenario B gives us far more information for rejecting the null hypothesis than does scenario A. Observe from Fig. 3 that</p>
+<p align="center"><img src="../../images/lectures/lecture13/LRtestcomparisons.gif" width="243" height="102" alt="LR test"></p>
+<p>So even though the distance <img src="../../images/lectures/lecture13/thetadistance.gif" alt="theta distance" width="60" height="40" align="absmiddle"> is the same in both cases, the distances on the log-likelihood scale are different due to their different curvatures. Using the LR test we are far more likely to reject the null hypothesis under scenario B than under scenario A because scenario B provides more information about &theta;.</p>
+<h2><a name="waldtest" id="waldtest"></a>Wald Test </h2>
+<p> The <span class="style9">Wald test</span> is an alternative to the likelihood ratio test that attempts to incorporate the distance <img src="../../images/lectures/lecture13/thetadistance.gif" width="60" height="40" align="absmiddle"> more directly into a test of the null hypothesis </p>
+<p align="center"><img src="../../images/lectures/lecture13/nullhypothesis.gif" width="112" height="58" alt="null hypothesis"></p>
+<p>As we've seen in Fig. 3 distance on the &theta;-axis is not enough. We also need to take into account  the curvature of the log-likelihood. In Fig. 3 the more informative scenario B is the one with the greater curvature. In the Wald test we weight the distance on the &theta;-axis by the curvature of the log-likelihood curves. Formally, the Wald statistic, <em>W</em>, is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture13/Wsquared.gif" width="393" height="80" alt="W2"></p>
+<p>where in the second inequality I make use of the relationship between curvature and information that was  described above. Taking square roots of both sides yields the Wald statistic.</p>
+<p align="center"><img src="../../images/lectures/lecture13/waldstat.gif" width="113" height="75" alt="wald statistic"></p>
+<p>Recall  that <img src="../../images/lectures/lecture13/Varthetahatformula.gif" alt="variance of thetahat" width="133" height="40" align="absmiddle">. Thus the Wald statistic <em>W</em> can also be written as</p>
+<p align="center"><img src="../../images/lectures/lecture13/Wformulastderr.gif" width="125" height="70"></p>
+<p>From likelihood theory we also know that asymptotically  the MLE is unbiased for &theta; and under the null hypothesis <img src="../../images/lectures/lecture13/thetanaught.gif" alt="theta naught" width="22" height="27" align="absmiddle"> is the true value of &theta;. So asymptotically, at least, if the null hypothesis is true then <img src="../../images/lectures/lecture13/Expectedthetahat.gif" alt="expected theta hat" width="83" height="40" align="absmiddle">. Thus asymptotically the expression for <em>W</em> given above is a <em>z</em>-score: a statistic minus its mean divided by its standard error. Since we also know that the MLE of &theta; is asymptotically normally distributed, it follows that <em>W</em>, being a <em>z</em>-score, must have a standard normal distribution. This provides the basis for the Wald test as well as  Wald confidence intervals. (Note: Another way of viewing the Wald test is that it locally approximates the log-likelihood surface with a quadratic function.)</p>
+<h2 align="center"><a name="probability"></a>Probability distributions in regression</h2>
+<h3><a name="role"></a>The role of the probability model in ordinary linear regression</h3>
+<p>In ordinary regression we  assume that the response variable has a normal distribution conditional on the values of the predictors in the model. In a simple linear regression model this would be written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture13/conditionalmean.gif" width="237" height="35" alt="conditionalmean"></p>
+<p>The vertical bar is the usual notation for conditional probability. Thus conditional on the value of <em>x</em>, <em>Y</em> has a normal distribution with  mean &beta;<sub>0</sub> + &beta;<sub>1</sub><em>x</em> and variance &sigma;<sup>2</sup>. Least squares, which is typically used to obtain estimates of the regression coefficients, makes no assumption about the underlying probability model. Least squares finds the values of &beta;<sub>0</sub> and &beta;<sub>1</sub> that minimize the error we make when we use the model prediction, &beta;<sub>0</sub> + &beta;<sub>1</sub>x<sub>i</sub>, instead of the actual data value y<sub>i</sub>. Formally, least squares minimizes the sum of squared errors, SSE.</p>
+<p align="center"><img src="../../images/lectures/lecture13/SSE.gif" width="225" height="58" alt="SSE"></p>
+<p>So,  the normal probability model plays no role in least squares parameter estimation. But having obtained parameter estimates for the data at hand we might wonder how stable those estimates are. What would happen if we went back and collected new data from the same population that gave rise to our first sample? Obviously  estimates based on the new sample would be different but how different? To answer this question we need to know how  observations vary from sample to sample and for that we need a probability model. </p>
+<p>In the least squares formulation of the regression problem, the regression line is treated as a signal contaminated by noise. The signal plus noise view of regression is written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture13/signalnoise.gif" width="163" height="53" alt="signal noise"></p>
+<p>Typically the x<sub>i</sub> are treated as fixed and the y<sub>i</sub> and &epsilon;<sub>i</sub> are random. Choosing a probability model for &epsilon;<sub>i</sub> also gives us a probability model for y<sub>i</sub>. In the signal plus noise formulation least squares tries to find the values of &beta;<sub>0</sub> and &beta;<sub>1</sub> that minimize <img src="../../images/lectures/lecture13/SSE2.gif" alt="SSE2" width="103" height="58" align="absmiddle">, the sum of the  &quot;squared errors&quot;. Because  the errors are squared,  positive and negative deviations from the line are treated as being equally important. Consequently the only reasonable probability distributions for the errors are symmetric ones. This makes the normal distribution an obvious choice. (In the engineering literature various integrated functions of the normal distribution are often referred to as error functions, or erfs.) We assume that</p>
+<p align="center"><img src="../../images/lectures/lecture13/errordistribution.gif" width="118" height="35" alt="error distribution"></p>
+<p>From this we obtain that the response, y<sub>i</sub>, is also normally distributed with variance &sigma;<sup>2</sup> but with a mean given by the regression line. </p>
+<p>Having assumed that the response has a normal distribution, statistical theory tells us that both the intercept and slope will also have normal distributions. This result is the basis for the statistical tests that appear in the summary tables of regression models. Still, it's important to realize that the least squares estimates themselves are obtained without specifying a probability model for the response.</p>
+<h3><a name="extending"></a>Extending regression to other probability distributions for the response</h3>
+<p> Fig. 1 illustrates the role that the normal distribution plays in ordinary regression.  Letting <img src="../../images/lectures/lecture13/normalerrors.gif" width="113" height="35" align="absmiddle"> I  generated observations using a model of the form <img src="../../images/lectures/lecture13/linearmodel.gif" alt="linear model" width="138" height="27" align="absmiddle"> and used ordinary least squares to estimate the regression line<img src="../../images/lectures/lecture13/estregmodel.gif" alt="estimated regression" width="72" height="33" align="absmiddle">&nbsp;. Fig. 4 displays the raw data used as well as the regression line that was fit to those data.</p>
+<p align="center"><img src="../../images/lectures/lecture13/fig4.png" width="440" height="260" alt="fig1"></p>
+<p align="center" class="styleArial"><strong>Fig. 4</strong> &nbsp;The normal distribution as a data-generating mechanism. <a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/notes/lecture13&#32;fig4Rcode.txt">R code for Fig. 4</a></p>
+<p> The estimated errors, e<sub>i</sub>, are the vertical distances of  the individual points to the plotted regression line. The estimated normal error distributions at four different locations are shown. Each normal distribution is centered on the regression line. The data values at these locations are the points that appear to just overlap the bottom edges (left sides) of the individual normal distributions. I've drawn the normal distributions so that they extend &plusmn; 3 standard deviations above and below the regression line. (The pink normal curve extends &plusmn; 2 standard deviations with the gray tails then extending out the remaining 1 standard deviation.) </p>
+<p>Instead of thinking of the normal curves as   error distributions, we can think of them as  data generating mechanisms. At each point along the regression line, the normal curve centered at that point gives the likely locations of data values for that specific value of x<sub>3</sub> according to our model. Recall that  95% of the values of a normal distribution fall within &plusmn; 2 standard deviations of the mean while nearly all of the observations (approximately 99.9%) fall within &plusmn; 3 standard deviations of the mean. The four selected data values associated with the four displayed normal curves are all  well within &plusmn; 2 standard deviations of the regression line. Thus they could easily have been generated by the model.</p>
+<p>The way to generalize this is obvious. Replace the normal curves by some other probability distribution and think of the new probability models as the data generating mechanisms. How should we choose these probability models? Here are some things to consider when choosing a probability model.</p>
+<ol>
+  <li>Is the measured response variable discrete or continuous? An extreme version of discrete is categorical where the recorded numbers just label categories.</li>
+  <li> Are the possible values of the response constrained to some interval or are they theoretically unbounded?</li>
+  <li>If we group the values of the response variable with respect to the categories of putative predictors, do the mean and variance of the response show an obvious relationship?</li>
+  <li>Does theory suggest that a particular probabilistic mechanism may have generated the data we obtained?</li>
+</ol>
+<h2 align="left"><a name="probability" id="probability"></a>A  review of probability and probability distributions </h2>
+<p> A mathematical function that maps the outcomes of a random experiment (domain) to a set of real numbers (range) is called a random variable. Formally a random variable is a function on the sample space of possible outcomes. Typically in applications the response variable  is the random variable whereas the predictors are fixed. If the range of a random variable can be put into one-to-one correspondence with the set of non-negative integers (or if the range is just a finite set) we call the random variable discrete. If the range is the set of real numbers (or a set isomorphic to the set of real numbers) we call it a continuous random variable. </p>
+<p>Generally we  associate with the random variable <em>X</em> another function called a probability function that describes the probability distribution of <em>X</em>. If <em>X</em> is a discrete random variable we call this function a <strong>probability mass function</strong> and if <em>X</em> is continuous we call it a <strong>probability density function</strong>. We will denote the probability function by <em>f</em>(<em>x</em>) or <img src="../../images/lectures/lecture13/probfunction.gif" alt="density" width="87" height="32" align="absmiddle"> when we wish to emphasize the fact that the distribution depends on certain parameters that need to be specified. Here the symbols &alpha; and &beta; denote the parameters. As an example, in a normal distribution the parameters are the mean &mu; and the variance &sigma;<sup>2</sup>.</p>
+<p>In an axiomatic formulation of probability theory a probability  function must satisfy three properties. </p>
+<ol>
+  <li>The probability function is non-negative, i.e.,<img src="../../images/lectures/lecture13/prop1a.gif" alt="non-negativity" width="73" height="27" align="absmiddle">. If  the function is a probability mass function  then we also must have <img src="../../images/lectures/lecture13/prop1.gif" alt="range" width="102" height="27" align="absmiddle">. (This is not the case for density functions.)</li>
+  <li>If we sum the probability function over all possible value of <em>x</em> we get 1.
+    <ol type="i">
+      <li><em>X</em> discrete: <img src="../../images/lectures/lecture13/prop2a.gif" alt="sum to 1" width="93" height="47" align="absmiddle"></li>
+      <li><em>X</em> continuous: <img src="../../images/lectures/lecture13/prop2b.gif" alt="integrate to 1" width="102" height="38" align="absmiddle"></li>
+    </ol>
+  </li>
+  <li>If <em>A</em> and <em>B </em>are sets of possible values of the random variable <em>X</em> such that they are disjoint, i.e., <img src="../../images/lectures/lecture13/prop3.gif" alt="disjoint" width="92" height="23" align="absmiddle">, then <img src="../../images/lectures/lecture13/prop3b.gif" alt="additivity" width="202" height="30" align="absmiddle">. So the function is additive on disjoint sets.</li>
+</ol>
+<p>A large number of probability distributions have been studied and been given names. A  flowchart of the relationships between those distributions commonly used in scientific applications appears <a href="http://www.johndcook.com/distribution_chart.html">here</a>. A more complete version of this flowchart appears on p. 47 of <a href="http://www.math.wm.edu/~leemis/2008amstat.pdf"> Leemis and McQueston (2008)</a>. </p>
+<p>In truth any non-negative portion of a discrete continuous function can be reformulated as a probability function. Consider for instance the function <em>x</em><sup>2</sup>, but restricted to the interval 0 &le; <em>x</em> &le; 4. If we define</p>
+<p align="center"><img src="../../images/lectures/lecture13/x2density.gif" width="262" height="115"></p>
+<p>then <em>f</em>(<em>x</em>) satisfies the three properties listed above and hence is a probability density function. Our focus in this course will be on the Poisson, negative binomial, and binomial distributions. Before discussing these we review some of the salient properties of the normal distribution.</p>
+<h2 align="center"><strong><a name="normal" id="normal"></a></strong>Normal Distribution</h2>
+<h3><strong><a name="normbasic" id="normbasic"></a>Basic characteristics</strong></h3>
+<ul>
+  <li>It is a continuous distribution. </li>
+  <li>It has two parameters, denoted &mu; and &sigma;<sup>2</sup>, which also happen to be the mean and variance of the distribution. </li>
+  <li>We write <img src="../../images/lectures/lecture13/normal.gif" alt="normal" width="165" height="35" align="absmiddle">.</li>
+  <li>One hallmark of  the normal distribution is that the mean and variance are independent. There is no relationship between them. Knowing one tells us nothing about the value of the other. This characteristic makes the normal distribution unusual. </li>
+  <li>The normal distribution is symmetric.</li>
+  <li>The normal distribution is unbounded both above and below. Hence the normal distribution is defined for all real numbers.</li>
+  <li>R normal functions: <span class="style1">dnorm</span>, <span class="style1">pnorm</span>, <span class="style1">qnorm</span>, and <span class="style1">rnorm</span>. These are described below. </li>
+</ul>
+<h3><a name="normimport" id="normimport"></a>Importance and use</h3>
+<p>The importance of the normal distribution stems from the central limit theorem.
+  In words, if what we observe in nature is the result of adding up lots of independent and identically distributed things, then no matter what their individual distributions are the distribution of  the sum tends to become normal the more things we add up. As a practical application sample means tend to have a normal distribution when the sample size is big enough because in calculating a mean we have to add things up. </p>
+<p>Even if the response is a discrete random variable such as a count, a normal distribution may be an adequate approximation to its distribution if we&rsquo;re dealing with a large sample and the values we've obtained are far removed from any boundary values. On the other hand count data with lots of zero values cannot possibly have a normal distribution nor be transformed to approximate normality. </p>
+<h3><a name="probfunc" id="probfunc"></a> R probability functions for the normal distribution</h3>
+<p>For each probability distribution in R there are four basic probability functions. Each of R's probability functions begins with one of four prefixes&mdash;<span class="style3">d</span>, <span class="style3">p</span>, <span class="style3">q</span>, or <span class="style3">r</span>&mdash;followed by a root name that identifies the probability distribution. For the normal distribution the root name is &quot;norm&quot;. The meaning of these prefixes is as follows. </p>
+<ul>
+  <li><span class="style3">d</span> is for &quot;density&quot; and the corresponding function returns the value of the probability density function (continuous distributions) or the probability mass function (discrete distributions). </li>
+  <li><span class="style3">p</span> is for &quot;probability&quot; and the corresponding function returns a value from the cumulative distribution function. </li>
+  <li><span class="style3">q</span> is for &quot;quantile&quot; and the corresponding function returns a value from the inverse cumulative distribution function, also know as the quantile function.</li>
+  <li><span class="style3">r</span> is for &quot;random&quot; and the corresponding function returns a  randomly drawn value   from the given distribution.</li>
+</ul>
+<p>To better understand what these functions do I'll focus on the four probability functions for the normal distribution: <span class="style3">dnorm</span>, <span class="style3">pnorm</span>, <span class="style3">qnorm</span>, and <span class="style3">rnorm</span>.
+  Fig. 5 illustrates the  relationships among these four functions.</p>
+<p align="center"><img src="../../images/lectures/lecture13/fig5a.png" width="640" height="365" alt="fig. 5"><br>
+  <span class="styleArial"><strong>Fig. 5</strong> &nbsp;The four probability functions for the normal distribution </span>&nbsp;<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/notes/lecture13&#32;fig5Rcode.txt">R code for Fig. 5</a></p>
+<p name="dnorm"><span class="style3"><a name="dnorm"></a>dnorm</span> is the normal probability density function. Without any further arguments it returns the density of the standard normal distribution (mean 0 and standard deviation 1). If you plot <span class="style7">dnorm(x)</span> over a range of <em>x</em>-values you obtain the usual bell-shaped curve of the normal distribution. In Fig. 5, the value of <span class="style7">dnorm(2)</span> is indicated by the height of the vertical red line segment. It's  the <em>y</em>-coordinate of the normal curve when <em>x</em> = 2. Keep in mind that  density values  are not probabilities. To obtain probabilities from densities one has to integrate the density function over an interval. Alternatively for a very small interval, say one of width &Delta;<em>x</em>,  if <em>f</em>(<em>x</em>) is a probability density function, then we can approximate the probability of <em>x</em> being in that interval as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture13/probdensity.gif" width="233" height="30" alt="probability from a density"></p>
+<p name="pnorm"><span class="style3"><a name="pnorm"></a>pnorm</span> is the cumulative distribution function for the normal distribution. By definition <span class="style7">pnorm(x)</span> = <em>P</em>(<em>X</em> &le;<em> x</em>) which is the area under the normal density curve to the left of <em>x</em>. Fig. 5 shows <span class="style7">pnorm(2)</span>as the shaded area under the normal density curve to the left of <em>x</em> = 2. As is indicated on the figure, this area is 0.977. So the probability that a standard normal random variable takes on a value less than or equal to 2 is 0.977. </p>
+<p name="qnorm"><span class="style3"><a name="qnorm"></a>qnorm</span> is the quantile function of the standard normal distribution. If <span class="style7">qnorm(x)</span> = <em>k</em> then <em>k</em> is the value such that P(<em>X</em> &le; <em>k</em>) = <em>x</em> . <span class="style3">qnorm</span> is the inverse function for <span class="style3">pnorm</span>. From Fig. 5 we have, <span class="style7">qnorm(0.977) = qnorm(pnorm(2)) = 2. </span></p>
+<p name="rnorm"><span class="style3"><a name="rnorm"></a>rnorm</span> generates random values from a standard normal distribution. The only required  argument is a number specifying the number of realizations of a normal random variable to produce. Fig. 5 illustrates <span class="style7">rnorm(50)</span>, the locations of 50 random realizations from the standard normal distribution, jittered slightly to prevent overlap. </p>
+<p name="rnorm">To obtain normal distributions other than the standard normal, all four normal functions support the additional arguments <span class="style17">mean</span> and <span class="style17">sd</span> for the mean and standard deviation of the normal distribution. For instance, <span class="style10">dnorm(x, mean=4, sd=2)</span> is a normal density with mean 4 and standard deviation 2. Notice that R parameterizes the normal distribution in terms of the standard deviation rather than the variance.</p>
+<h2><b><a name="books"></a>Books and articles on likelihood</b></h2>
+<ul>
+  <li>Azzalini, Adelchi. 1996. <i>Statistical inference: based on the likelihood.</i> New York: Chapman &amp; Hall.</li>
+  <li>Bolker, Benjamin M. 2008. <em>Ecological Models and Data in R</em>. Princeton University Press. <font size="-1">Chapter 6 covers maximum likelihood. </font></li>
+  <li>Buse, A. 1982. The likelihood ratio, Wald, and Lagrange multiplier tests: An expository note. <em>The American Statistician</em> <strong>36</strong>: 153&ndash;157. <font size="-1">Discusses the geometry of the likelihood ratio and Wald tests. </font></li>
+  <li>Devore, Jay L. 1995. <i>Probability and Statistics for Engineering and the Sciences</i>. Pacific Grove, CA: Duxbury Press. <font size="-1">General discussion of maximum likelihood estimation with examples, pp 265&#150;271.</font></li>
+  <li>Edwards, A. W. F. 1992. <i>Likelihood</i>. Baltimore: John Hopkins University Press.</li>
+  <li>Eliason, Scott R. 1993. <i>Maximum likelihood estimation: logic and practice</i>. Newbury Park, CA: Sage Publications.</li>
+  <li>Hilborn, Ray and Marc Mangel. 1997. <em>The ecological detective: confronting models with data</em>. Princeton, NJ: Princeton University Press. </li>
+  <li>Krebs, Charles J. 1999. <i>Ecological Methodology</i>. Menlo Park, CA: Addison-Wesley. <font size="-1">A number of fairly advanced applications of maximum likelihood estimation appear on pp 84&#150;88, 91, 128&#150;131, 525&#150;529.</font></li>
+  <li>Larsen, Richard J. and Marx, Morris L. 1981. <i>An Introduction to Mathematical Statistics and Its Applications</i>. Englewood Cliffs, New Jersey: Prentice-Hall. <font size="-1">General discussion of maximum likelihood estimation with examples, pp 212&#150;218.</font></li>
+  <li>McCallum, Hamish. 2000. <i>Population Parameters: Estimation of Ecological Models</i>. Oxford, England: Blackwell Science. <font size="-1">General discussion of maximum likelihood estimation with examples, pp 29&#150;44.</font></li>
+  <li>Myung, In Jae. 2003. Tutorial on maximum likelihood estimation. <i>Journal of Mathematical Psychology </i><b>47</b>: 90&#150;100. </li>
+  <li>Pawitan, Yudi. 2001. <i>In all likelihood: statistical modelling and inference using likelihood</i>. New York: Oxford University Press.</li>
+  <li>Roff, Derek A. 2006. <em>Introduction to Computer-Intensive Methods of Data Analysis in Biology</em>. New York: Cambridge University Press. <span class="style6">Chapter 2 covers maximum likelihood estimation. Uses S-Plus (code also works in R). </span></li>
+  <li>Royall, Richard M. 1997. <i>Statistical evidence: a likelihood paradigm</i>. New York: Chapman &amp; Hall.</li>
+  <li>Severini, Thomas A. 2000.<i> Likelihood methods in statistics</i>. New York: Oxford University Press. </li>
+  <li>Sorensen, Daniel. 2002. <em>Likelihood, Bayesian and MCMC methods in quantitative genetics</em>. New York: Springer-Verlag. </li>
+</ul>
+<h2><a name="web"></a>Some web references on likelihood </h2>
+<ul>
+  <li> <a href="http://statgen.iop.kcl.ac.uk/bgim/mle/sslike_1.html" target="_parent">Maximum Likelihood Estimation</a> by S. Purcell</li>
+  <li> <a href="http://data.princeton.edu/wws509/notes/a1.pdf" target="_parent">Review of Likelihood Theory</a> by German Rodriguez</li>
+  <li><a href="http://cnx.rice.edu/content/m11446/latest/?format=pdf">Maximum Likelihood Estimation</a> by Clayton Scott and Rob Nowak</li>
+</ul>
+<p name="rnorm">&nbsp;</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 8, 2012<br>
+      URL: <a href="lecture13.htm#lecture13" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture13.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

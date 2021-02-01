@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 10&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign10" id="assign10"></a>Assignment 10&mdash;Solution</h1>
+<h2>Question 1 </h2>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">bycatch &lt;- read.csv('ecol 563/bycatch.csv')</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> bycatch[1:6,]</div>
+<span class="style24">  &nbsp;&nbsp; Season&nbsp; Area Gear.Type&nbsp; Time Tows Bycatch<br>
+  1 1989-90 North&nbsp;&nbsp;&nbsp; Bottom&nbsp;&nbsp; Day&nbsp;&nbsp; 48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  2 1989-90 North&nbsp;&nbsp;&nbsp; Bottom Night&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  3 1989-90 North Mid-Water Night&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  4 1989-90 South&nbsp;&nbsp;&nbsp; Bottom&nbsp;&nbsp; Day&nbsp; 139&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  5 1989-90 South Mid-Water&nbsp;&nbsp; Day&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  6 1989-90 South&nbsp;&nbsp;&nbsp; Bottom Night&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.manly &lt;- glm(Bycatch~Season+Area+Gear.Type+Time, data=bycatch, <span class="style33">offset=log(Tows)</span>, family=poisson)</div>
+<h2>Question 2</h2>
+<p>Let <em>y</em> be the Poisson response, <img src="../../images/assignments/assignment10/poisson.gif" alt="Poisson" width="142" height="38" align="absmiddle">. Let <em>x</em> be a continuous predictor, <em>z</em> be a dichotomous variable coded 0 and 1, and <em>w</em> be the offset variable, then a generic Poisson regression model with an offset is the following.</p>
+<p align="center"><img src="../../images/assignments/assignment10/offset.gif" width="340" height="167" alt="offset"></p>
+<p>Exponentiating both sides and using the fact that exp(<em>a</em> + <em>b</em> + <em>c</em>) = exp(<em>a</em> + <em>b</em>) exp(<em>c</em>) we obtain the following.</p>
+<p align="center"><img src="../../images/assignments/assignment10/dummy.gif" width="257" height="75" alt="exponentiated"></p>
+<p>Now <em>z</em> is a dummy variable coded 0 and 1. Thus we have two predicted rates depending on the value of <em>z</em>.</p>
+<p align="center"><img src="../../images/assignments/assignment10/dichotomous.gif" width="300" height="112" alt="dichotomous"></p>
+<p>So with a dummy regressor in a Poisson regression with a log link, exponentiating the coefficient of the dummy regressor tells us the amount by which the mean rate is multiplied when we switch from the reference level (<em>z</em> = 0) to the other level (<em>z</em> = 1). Area, gear type, and time of day are dummy variables in the current model. So we just need to exponentiate their estimated coefficients to determine the multiplying factor. The regression coefficients and their exponentiated values are summarized in the table below.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(coef(out.manly),3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Season1990-91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Season1991-92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Season1992-93 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -7.328&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -19.665&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.819&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.074 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Season1993-94&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Season1994-95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AreaSouth Gear.TypeMid-Water <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.932&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.135&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.822&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.918 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TimeNight <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.177</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(out.manly)[7:9])</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AreaSouth Gear.TypeMid-Water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TimeNight <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.187000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.805199&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.815959</span>
+<p>The table summarizes the effect of area, gear type, and time of day on the estimated mean bycatch rate.</p>
+<table width="650" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+    <colgroup>
+    </colgroup>
+    <colgroup>    </colgroup>
+        <colgroup>    </colgroup>
+            <colgroup>    </colgroup>
+            <colgroup>    </colgroup>
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td align="center" scope="col"><strong>Predictor</strong></td>
+        <td align="center"  scope="col"><strong>Reference level (<em>z</em> = 0)</strong></td>
+        <td align="center"  scope="col"><strong>Effect level (<em>z</em> = 1)</strong></td>
+        <td align="center"  scope="col"><strong><em>&beta;</em></strong></td>
+        <td align="center"  scope="col"><strong>exp(&beta;)</strong></td>
+        <td align="center"  scope="col"><strong>Interpretation</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">Area</td>
+        <td align="center">North</td>
+        <td align="center">South</td>
+        <td align="center">1.822</td>
+        <td align="center">6.187</td>
+        <td align="center"><div align="left">The bycatch rate is 6.2 times greater in the South than the North.</div></td>
+      </tr>
+      <tr>
+        <td align="center">Gear type</td>
+        <td align="center">Bottom</td>
+        <td align="center">Midwater</td>
+        <td align="center">1.918</td>
+        <td align="center">6.805</td>
+        <td align="center"><div align="left">The bycatch rate is 6.8 times greater with midwater gear than with bottom gear.</div></td>
+      </tr>
+      <tr>
+        <td align="center">Time of day</td>
+        <td align="center">Day</td>
+        <td align="center">Night</td>
+        <td align="center">2.177</td>
+        <td align="center">8.816</td>
+        <td align="center"><div align="left">The bycatch rate is 8.8 times greater at night than during the day.</div></td>
+      </tr>
+    </tbody>
+  </table>
+<h2>Question 3</h2>
+<p>The numbers reported by Manly are the same numbers shown at the bottom of the summary table of the model.</p>
+<span class="style24">&nbsp;&nbsp;&nbsp; Null deviance: 335.096&nbsp; on 42&nbsp; degrees of freedom<br>
+  Residual deviance:&nbsp; 42.078&nbsp; on 34&nbsp; degrees of freedom<br>
+AIC: 97.461</span>
+<p>The residual deviance is an appropriate goodness of fit statistic for a Poisson regression and has a chi-squared distribution only if the individual predicted counts are large. A seat-of-the-pants rule is that no more than 20% of the predicted counts should be less than 5 and none should be less than 1. I tabulate the predicted means obtained from the estimated model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(fitted(out.manly)&lt;5)/sum(table(fitted(out.manly)&lt;5))</div>
+<span class="style24">&nbsp;&nbsp;&nbsp; FALSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TRUE <br>
+  0.1162791 </span><span class="style25">0.8837209
+  </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(fitted(out.manly)&lt;1)/sum(table(fitted(out.manly)&lt;1))</div>
+<span class="style24">&nbsp;&nbsp;&nbsp; FALSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TRUE <br>
+  0.2325581 </span><span class="style25">0.7674419
+  </span>
+<p>So 88.4% of the predicted counts are less than 5 and 76.7% of the mean counts are less than 1. Using the residual deviance as a goodness of fit statistic here is highly suspect.</p>
+<h2>Question 4</h2>
+<p>The summary table of coefficient estimates is shown below.</p>
+<span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -7.32782&nbsp;&nbsp;&nbsp; 0.59038 -12.412&nbsp; &lt; 2e-16 ***<br>
+Season1990-91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -19.66524 </span><span class="style25">2439.00216</span><span class="style24">&nbsp; -0.008&nbsp;&nbsp; 0.9936&nbsp;&nbsp;&nbsp; <br>
+  Season1991-92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.81895&nbsp;&nbsp;&nbsp; 0.28503&nbsp;&nbsp; 6.382 1.75e-10 ***<br>
+  Season1992-93&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.07391&nbsp;&nbsp;&nbsp; 0.39557&nbsp;&nbsp; 0.187&nbsp;&nbsp; 0.8518&nbsp;&nbsp;&nbsp; <br>
+  Season1993-94&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.93191&nbsp;&nbsp;&nbsp; 0.41132&nbsp; -2.266&nbsp;&nbsp; 0.0235 *&nbsp; <br>
+  Season1994-95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.13503&nbsp;&nbsp;&nbsp; 0.30923&nbsp; -0.437&nbsp;&nbsp; 0.6623&nbsp;&nbsp;&nbsp; <br>
+  AreaSouth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.82245&nbsp;&nbsp;&nbsp; 0.41063&nbsp;&nbsp; 4.438 9.07e-06 ***<br>
+  Gear.TypeMid-Water&nbsp;&nbsp;&nbsp; 1.91769&nbsp;&nbsp;&nbsp; 0.44308&nbsp;&nbsp; 4.328 1.50e-05 ***<br>
+  TimeNight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.17656&nbsp;&nbsp;&nbsp; 0.45138&nbsp;&nbsp; 4.822 1.42e-06 ***<br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>The obvious problem is that the standard error for the  season 1990-1991 effect estimate is 2439, over 100 times larger than the point estimate. Notice that all the other reported standard errors in the model are less 1, so this particular standard error is clearly anomalous. If we tabulate the bycatch by season we can see why this is happening.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(bycatch$Bycatch, bycatch$Season)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; 1989-90 1990-91 1991-92 1992-93 1993-94 1994-95<br>
+&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">5</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+&nbsp; 23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span>
+<p>In the 1990-1991 season there was no bycatch at all. This  apparently is causing the software problems in estimating the variability of this effect. Given that we can't estimate the precision, we should probably not try to estimate the individual season effects.</p>
+<h2>Question 5</h2>
+<p>To fit a random effects model we need to use the <span class="style19">lme4</span> package and let the intercepts vary by season.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.manly2 &lt;- lmer(Bycatch~Area + Gear.Type + Time <span class="style33">+ (1|Season)</span>, data=bycatch, offset=log(Tows), family=poisson)</div>
+<h2>Question 6</h2>
+<p>I modify the code we've used previously to display the predicted Poisson distributions for individual bycatch observations.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">bycatch$mu &lt;- fitted(out.manly2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  bycatch$z &lt;- dpois(bycatch$Bycatch, fitted(out.manly2))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  bycatch$obs &lt;- 1:nrow(bycatch)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.p &lt;- lapply(1:nrow(bycatch), function(x) dpois(0:45, lambda=fitted(out.manly2)[x]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  bycatch$ux &lt;- sapply(1:nrow(bycatch), function(x) max((0:45)[out.p[[x]]&gt;1e-4]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  bycatch$lx &lt;- sapply(1:nrow(bycatch), function(x) min((0:45)[out.p[[x]]&gt;1e-4]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  bycatch$uy &lt;- sapply(out.p, max)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  bycatch$ly &lt;- rep(0, nrow(bycatch))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  prepanel.ci2 &lt;- function(x, y, ly, lx, uy, ux, subscripts, ...) { </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">list(ylim=range(y, uy[subscripts], ly[subscripts], finite=T), xlim=range(x, ux[subscripts], lx[subscripts], finite=T))}</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lattice) </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(z~Bycatch|factor(obs), data=bycatch, ux=bycatch$ux, lx=bycatch$lx, uy=bycatch$uy, ly=bycatch$ly, layout=c(5,5), prepanel=prepanel.ci2, ylab='Probability', xlab='Bycatch', panel=function(x, y, subscripts){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(0:45, dpois(0:45, lambda=bycatch$mu[subscripts]), type='h', col='grey', lwd=2, lineend=1)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=x, col=2, lty=2)},</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  scale=list(x=list(relation='free',at=c(0:4,seq(5,45,5))), y='free'), strip=strip.custom(par.strip.text=list(cex=0.8)))</div><br>
+<table width="675" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment10/fig1a.png" width="650" height="430" alt="fig. 1a"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 70px; text-indent:-70px"><strong>Fig. 1</strong>(a) &nbsp;&nbsp;Predicted Poisson distributions with observed bycatch values superimposed. Observations 1&ndash;25.</td>
+  </tr>
+</table>
+<table width="675" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment10/fig1b.png" width="650" height="350" alt="Fig. 2"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 70px; text-indent:-70px"><strong>Fig. 1(b)</strong> &nbsp;&nbsp;Predicted Poisson distributions with observed bycatch values superimposed. Observations 26&ndash;43.</td>
+  </tr>
+</table>
+<p>From the graphs we can see that observations 16, 19, and 41 are poorly described by the model. We can test this formally by calculating upper and lower-tailed <em>p</em>-values. I carry out a two-tailed test and compare each <em>p</em>-value against &alpha; = 0.025</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> upper.p &lt;- 1-ppois(bycatch$Bycatch-1, lambda=bycatch$mu)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lower.p &lt;- ppois(bycatch$Bycatch, lambda=bycatch$mu)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(upper.p&lt;=.025)</div>
+<span class="style24">  [1] 3</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(lower.p&lt;=.025)</div>
+<span class="style24">  [1] 0</span>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 3/43</div>
+<span class="style24">[1] 0.06976744</span>
+<p>There are three significant results. Because 3 out of 43 = 6.9%, this is a little bit larger than we'd expect by chance. Fig. 2 displays the upper and lower-tailed <em>p</em>-values separately. (Note: it's not possible here to display them in a common plot because for most of the observations both the lower- and upper-tailed <em>p</em>-values are large, greater than 0.9.)</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">pval.dat &lt;- data.frame(pvalue=c(lower.p, upper.p), obs=rep(bycatch$obs,2), label=rep(c('lower', 'upper'), each=nrow(bycatch)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  dotplot(obs~pvalue|factor(label, levels=levels(label), labels=c('Lower-tailed', 'Upper-tailed')), data=pval.dat, xlab='p-value', ylab='Observation', panel=function(x,y) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.dotplot(x,y)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.abline(v=.05, col=2,lty=2)}, scales=list(y=list(at=seq(1,43,2), cex=.7)))</div><br>
+<table width="650" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment10/fig2.png" width="610" height="400" alt="Fig. 3"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Upper- and lower-tailed p-values for individual observations with respect to their predicted Poisson distributions.</td>
+  </tr>
+</table>
+<h2>Question 7</h2>
+<p>I first identify the observations with significant <em>p</em>-values.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> (1:43)[upper.p&lt;.05]</div>
+<span class="style24">[1] 16 19 41</span>
+<p>I extract the residuals, label them, and display them in decreasing order.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.r &lt;- residuals(out.manly2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(out.r) &lt;- 1:43</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(sort(out.r, decreasing=TRUE),4)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22 <br>
+  &nbsp;5.0873&nbsp; 3.2824&nbsp; 2.7921&nbsp; 0.6848&nbsp; 0.6225&nbsp; 0.3864&nbsp; 0.2637 -0.0082 -0.0979 -0.0993 -0.1178 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14 <br>
+  -0.1448 -0.1488 -0.1713 -0.1779 -0.1782 -0.1836 -0.1896 -0.1988 -0.2173 -0.3075 -0.3236 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 37&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17 <br>
+  -0.3734 -0.3813 -0.3847 -0.4005 -0.4566 -0.4661 -0.4689 -0.4824 -0.5050 -0.5532 -0.5941 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 39 <br>
+-0.6329 -0.6460 -0.6707 -0.6927 -0.6933 -0.7502 -0.8181 -0.9427 -1.2328 -1.6007</span>
+<p>So the significant <em>p</em>-values correspond to the observations with the largest Pearson residuals. Thus the residuals can serve as goodness of fit statistics in the sense that we're using it here.</p>
+<h2>Question 8</h2>
+<p>I refit the random intercepts model but this time treating <span class="style81">log(Tows)</span> as a covariate rather than an offset.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.manly3 &lt;- lmer(Bycatch~Area+Gear.Type+Time+log(Tows)+(1|Season), data=bycatch, family=poisson)</div>
+<p>There are three ways to determine whether a model with <span class="style81">log(Tows)</span> as a covariate is superior to a model in which <span class="style81">log(Tows)</span> is treated as an offset: likelihood ratio test, Wald test, and AIC.</p>
+<h3>Likelihood ratio test</h3>
+<p>The Poisson random intercepts model with <span class="style81">log(Tows)</span> as an offset is nested in the Poisson random intercepts model with <span class="style81">log(Tows)</span> treated as a covariate. In the offset model we're setting the coefficient equal to 1. Thus we can formally compare the models using a likelihood ratio test. The hypothesis test this yields is the following.</p>
+<blockquote>
+  <p>H<sub>0</sub>: &beta; = 1<br>
+    H<sub>1</sub>: &beta; &ne; 1
+  </p>
+</blockquote>
+<p>We can carry out the test with the <span class="style4">anova</span> function (or by hand by using twice the difference in the loglikelihoods).<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out.manly2, out.manly3)</div>
+<span class="style24">  Data: bycatch<br>
+  Models:<br>
+  out.manly2: Bycatch ~ Area + Gear.Type + Time + (1 | Season)<br>
+  out.manly3: Bycatch ~ Area + Gear.Type + Time + log(Tows) + (1 | Season)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp;&nbsp;&nbsp; AIC&nbsp;&nbsp;&nbsp; BIC&nbsp; logLik&nbsp; Chisq Chi Df Pr(&gt;Chisq)&nbsp; <br>
+  out.manly2&nbsp; 5 78.928 87.734 -34.464&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+out.manly3&nbsp; 6 77.327 87.894 -32.663 3.6008&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0.05775 .<br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>So the likelihood ratio test is not significant. Thus 1 is a legitimate value for the coefficient suggesting that treating <span class="style81">log(Tows)</span> as an offset is reasonable.</p>
+<h3>Wald test</h3>
+<p>A second test we can carry out is a Wald test. The Wald test shown in the summary table is not useful here because it tests H<sub>0</sub>: &beta; = 0, whereas we want to test whether H<sub>0</sub>: &beta; = 1. Testing that a parameter has a specific value is equivalent to determining whether that value lies in a confidence interval for that parameter. We can construct the confidence interval by hand using the output from the summary table. The confidence interval takes the form <img src="../../images/assignments/assignment10/ci.gif" alt="ci" width="150" height="43" align="absmiddle">.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.manly3)@coefs</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error&nbsp;&nbsp; z value&nbsp;&nbsp;&nbsp;&nbsp; Pr(&gt;|z|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -6.2572205&nbsp; 0.9865600 -6.342463 2.261201e-10<br>
+  AreaSouth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.9094421&nbsp; 0.4093076&nbsp; 4.665055 3.085350e-06<br>
+  Gear.TypeMid-Water&nbsp; 1.8989800&nbsp; 0.3975042&nbsp; 4.777258 1.777018e-06<br>
+  TimeNight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1012796&nbsp; 0.4143827&nbsp; 5.070867 3.960082e-07<br>
+  log(Tows)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6188474&nbsp; 0.1847997&nbsp; 3.348747 8.117790e-04</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.manly3)@coefs[5,1] + c(qnorm(.025), qnorm(.975)) * summary(out.manly3)@coefs[5,2]</div>
+<span class="style24">[1] 0.2566467 0.9810482</span>
+<p>Because 1 does not lie in the 95% confidence interval a Wald test rejects the null hypothesis that the coefficient of <span class="style81">log(Tows)</span> is equal to one. Therefore according to the Wald test <span class="style81">log(Tows)</span> should not be treated as an offset. Alternatively to carry out the test formally we need to calculate the following test statistic.</p>
+<p align="center"><img src="../../images/assignments/assignment10/wald.gif" width="118" height="73" alt="Wald"></p>
+<p>The two-tailed <em>p</em>-value is calculated as follows.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1-pnorm(abs((summary(out.manly3)@coefs[5,1]-1) / summary(out.manly3)@coefs[5,2]),.025)</div>
+ <span class="style24"> [1] 0.02079911</span>
+<h3>Using AIC</h3>
+<p>I compare the models using AIC.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(out.manly2, out.manly3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  out.manly2&nbsp; 5 78.92763<br>
+out.manly3&nbsp; 6 77.32684</span>
+<p>Although the AIC values are close, the model in which the coefficient of <span class="style81">log(Tows)</span> is estimated has a lower AIC than a model in which<span class="style81"> log(Tows)</span> is treated as an offset, even though we have to estimate one more parameter. Thus our results are ambiguous. Both the Wald test and AIC favor treating <span class="style81">log(Tows</span>) as a covariate while the likelihood ratio test favors treating <span class="style81">log(Tows</span> as an offset. This is not surprising given the arbitrariness of the &alpha; = .05 cut-off.</p>
+<h3>Goodness of fit</h3>
+<p>I calculate the upper and lower-tailed <em>p</em>-values for the new model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">bycatch$mu2 &lt;- fitted(out.manly3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> upper.p2 &lt;- 1-ppois(bycatch$Bycatch-1, lambda=bycatch$mu2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lower.p2 &lt;- ppois(bycatch$Bycatch, lambda=bycatch$mu2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(upper.p2&lt;=.025)</div>
+<span class="style24">  [1] 2</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(lower.p2&lt;=.025)</div>
+<span class="style24">  [1] 0</span>
+<p>So, the number of significant <em>p</em>-values has been reduced from three to two. I examine the largest residuals from this model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.r2 &lt;- residuals(out.manly3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(out.r2) &lt;- 1:43</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(sort(out.r2, decreasing=TRUE),4)[1:3]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp;&nbsp;&nbsp; 19 <br>
+  3.5137 3.0470 2.1011 </span> 
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #offset model </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(sort(out.r, decreasing=TRUE),4)[1:3]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp;&nbsp;&nbsp; 19 <br>
+5.0873 3.2824 2.7921</span>
+<p>So the three largest positive residuals are all reduced from what they were in the offset model.
+
+</p>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment10/hw10scores.png" width="405" height="240" alt="HW 10 scores"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 25, 2012<br>
+      URL: <a href="assign10.htm#assign10">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign10.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

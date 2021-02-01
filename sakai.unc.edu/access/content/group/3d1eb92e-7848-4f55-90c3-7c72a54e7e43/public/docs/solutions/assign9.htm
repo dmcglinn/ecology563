@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 9&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign9" id="assign9"></a>Assignment 9&mdash;Solution</h1>
+<h2>Question 1 </h2>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">birdbeetles &lt;- read.delim('ecol 563/birdbeetles.txt')</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> birdbeetles[1:4,]</div>
+<span class="style24">  &nbsp; grid beetles birds relief latitude longitude<br>
+  1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 261&nbsp;&nbsp; 7.77&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 73<br>
+  2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 224&nbsp;&nbsp; 4.27 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 71<br>
+  3&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp; 171&nbsp;&nbsp; 5.27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75<br>
+  4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 326&nbsp;&nbsp; 6.80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 78</span>
+<p>My intention was that you just fit the six models treating beetle richness and relief as predictors in an additive model. The models in question are the following.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod1 &lt;- lm(birds~beetles+relief, data=birdbeetles)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> mod2 &lt;- glm(birds~beetles+relief, data=birdbeetles, family=poisson)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> library(MASS)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> mod3 &lt;- glm.nb(birds~beetles+relief, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  library(gamlss)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  mod4 &lt;- gamlss(birds~beetles+relief, data=birdbeetles, family=NBII)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  mod5 &lt;- lm(log(birds)~beetles+relief, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod6 &lt;- lm(sqrt(birds)~beetles+relief, data=birdbeetles)</div>
+<h2>Question 2</h2>
+<p>Models mod1, mod2, mod3, and mod4 can be compared directly using log-likelihood and AIC. Models mod5 and mod6 involve a transformed response variable and therefore require some manipulation in order to compare them with the untransformed response models. The functions for this purpose were presented in lecture 20.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># lognormal log-likelihood</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lognorm.LL &lt;- function(y, model, c=0) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  sigma2 &lt;- sum(residuals(model)^2)/length(residuals(model))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  prob &lt;- ifelse(y==0, pnorm(log(y+c+0.5), mean=predict(model), sd=sqrt(sigma2)), 
+  pnorm(log(y+c+0.5), mean=predict(model), sd=sqrt(sigma2))-pnorm(log(y+c-0.5), mean=predict(model), sd=sqrt(sigma2)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  LL &lt;- sum(log(prob))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  df &lt;- length(coef(model))+1
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  AIC &lt;- -2*LL + 2*df</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> out &lt;- data.frame(LL=LL, df=df, AIC=AIC)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">out}</div><br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># square root normal log-likelihood</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sqrtnorm.LL &lt;- function(y, model, c=0) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">sigma2 &lt;- sum(residuals(model)^2)/length(residuals(model))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">prob &lt;- ifelse(y==0, pnorm(sqrt(y+c+0.5), mean=predict(model), sd=sqrt(sigma2)),
+pnorm(sqrt(y+c+0.5), mean=predict(model), sd=sqrt(sigma2)) - pnorm(sqrt(y+c-0.5), mean=predict(model), sd=sqrt(sigma2)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">LL &lt;- sum(log(prob))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">df &lt;- length(coef(model))+1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">AIC &lt;- -2*LL + 2*df</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">out &lt;- data.frame(LL=LL, df=df, AIC=AIC)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">out}</div>
+<p>I obtain the log-likelihoods and AICs and assemble the results in a table.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part1 &lt;- data.frame(LL=sapply(list(mod1, mod2, mod3, mod4), logLik), AIC(mod1, mod2, mod3, mod4))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># add lognormal and square root normal</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.out &lt;- rbind(part1, lognorm.LL(birdbeetles$birds, mod5), sqrtnorm.LL(birdbeetles$birds, mod6))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rownames(my.out)[5:6] &lt;- c('mod5', 'mod6')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cbind(model=c('normal', 'Poisson', 'NB-2', 'NB=1', 'lognormal', 'square root normal'), my.out)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LL df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  mod1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; normal -323.9595&nbsp; 4&nbsp; 655.9191<br>
+  mod2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Poisson -498.0946&nbsp; 3 1002.1892<br>
+mod3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NB-2 -313.7719&nbsp; 4&nbsp; </span><span class="style25">635.5438</span><span class="style24"><br>
+  mod4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NB=1 -315.8734&nbsp; 4&nbsp; 639.7468<br>
+mod5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lognormal -313.7582&nbsp; 4&nbsp; </span><span class="style25">635.5165</span><span class="style24"><br>
+mod6 square root normal -315.9871&nbsp; 4&nbsp; 639.9741</span>
+
+<p>The lognormal and negative binomial (NB-2) models are essentially tied, although technically the lognormal model has a slighlty lower AIC. At this point either model could be chosen. I would probably choose the negative binomial model only because it is a discrete probability model and makes it easier to interpret the response variable, which is a discrete count.</p>
+
+<h3>Variations on this answer</h3>
+<p>Many people considered transformations of the predictor. I didn't expect you to explore this possibility but it is certainly a legitimate thing to pursue. There is no theory to motivate the choice here. If we carry out a preliminary plot of the response variable versus each predictor separately both plots reveal what appear to be linear relationships (Fig. 1).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mar=c(5.1,4.1,2.1,1.1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,2))</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(birds~beetles, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(birds~relief, data=birdbeetles)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig0a.png" width="520" height="305" alt="fig. 1"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Scatter plots of bird richness versus beetle richness and relief</td>
+  </tr>
+</table>
+<p>A plot of the residuals of the lognormal or NB-2 models versus the predictors doesn't reveal anything especially unusual (Fig. 2).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mar=c(5.1,4.1,2.1,1.1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,2))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(residuals(mod3)~beetles, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lines(lowess(residuals(mod3)~birdbeetles$beetles, f=.9), col=2)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig2.png" width="520" height="305" alt="fig. 2"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Plot of residuals from negative binomial regression model (mod3) versus beetle richness and relief with a lowess curve superimposed.</td>
+  </tr>
+</table><br>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(residuals(mod5)~relief, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lines(lowess(residuals(mod5)~birdbeetles$relief, f=.9), col=2)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig2a.png" width="525" height="310" alt="fig. 3"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;&nbsp;Plot of residuals from a lognormal regression model (mod5) versus beetle richness and relief with a lowess curve superimposed.</td>
+  </tr>
+</table>
+<p>None the less it turns out that if you include log(beetles) as a predictor you do get a better model in terms of AIC.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod1a &lt;- lm(birds~log(beetles)+relief, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod2a &lt;- glm(birds~log(beetles)+relief, data=birdbeetles, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod3a &lt;- glm.nb(birds~log(beetles)+relief, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod4a &lt;- gamlss(birds~log(beetles)+relief, data=birdbeetles, family=NBII)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod5a &lt;- lm(log(birds)~log(beetles)+relief, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod6a &lt;- lm(sqrt(birds)~log(beetles)+relief, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part1a &lt;- data.frame(LL=sapply(list(mod1a, mod2a, mod3a, mod4a), logLik), AIC(mod1a, mod2a, mod3a, mod4a))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myout1a &lt;- rbind(part1a, lognorm.LL(birdbeetles$birds,mod5a), sqrtnorm.LL(birdbeetles$birds,mod6a))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rownames(my.out1a)[5:6] &lt;- c('mod5a','mod6a')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.out1a</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LL df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  mod1a -325.0018&nbsp; 4 658.0036<br>
+  mod2a -455.8539&nbsp; 3 917.7078<br>
+  mod3a -308.2056&nbsp; 4 624.4112<br>
+  mod4a -310.6032&nbsp; 4 629.2064<br>
+  mod5a -307.6964&nbsp; 4 623.3928<br>
+mod6a -313.5032&nbsp; 4 635.0064</span>
+<p>Once again the lognormal and negative binomial (NB-2) models are extremely competititve with the lognormal model ranking slightly ahead of the negative binomial. A residual plot does show a slight improvement. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(residuals(mod5a)~beetles, data=birdbeetles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lines(lowess(residuals(mod5a)~birdbeetles$beetles), col=2)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig3a.png" width="460" height="300" alt="fig. 4"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 4</strong> &nbsp;&nbsp;Plot of residuals from a lognormal regression model with log(beetles) as a predictor (mod5a) versus beetle richness with a lowess curve superimposed.</td>
+  </tr>
+</table>
+<p>Given that log-transforming the predictor does permit interpreting the bird-beetle relationship as a power law relationship one could argue that log-transforming beetles yields a model that is easier to interpret.</p>
+<h2>Question 3</h2>
+<h3>Negative binomial model with beetles and relief as predictors</h3>
+<p>The fitted model is</p>
+<p align="center"><img src="../../images/assignments/assignment9/NBbeetles.gif" width="258" height="35" alt="NB model"></p>
+<p>Exponentiating both sides yields the following.</p>
+<p align="center"><img src="../../images/assignments/assignment9/NBbeetles2.gif" width="377" height="108" alt="NB 2"></p>
+<p>So beetle richness has a multiplicative effect on the mean. If beetle richness is increased by one unit we find</p>
+<p align="center"><img src="../../images/assignments/assignment9/NBbeetles3.gif" width="443" height="153" alt="NB 3"></p>
+<p>Raising beetle richness by one unit multiplies the mean by exp(&beta;<sub>1</sub>). Similarly increasing relief by one unit  multiplies the mean by the factor exp(&beta;<sub>2</sub>).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(mod3)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; beetles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; relief <br>
+  &nbsp;4.88846537&nbsp; 0.01365378&nbsp; 0.09552305 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(mod3)[2:3])</div>
+<span class="style24">  &nbsp;beetles&nbsp;&nbsp; relief <br>
+1.013747 1.100234</span>
+<p>So a one unit change in beetle richness leads to multiplying the mean by 1.013747, which is roughly a 1.4% increase in the mean. A one unit change in relief leads to multiplying the mean by 1.1, which is a 10% increase in the mean.</p>
+<h3>Negative binomial model with log(beetles) and relief as predictors</h3>
+<p>The fitted model is</p>
+<p align="center"><img src="../../images/assignments/assignment9/NBlogbeetles.gif" width="303" height="38" alt="NB log beetles"></p>
+<p>The interpretation for a change in relief is the same as was described above for the previous model. With log predictors the proper way to think of effects is multiplicatively. Thus rather than adding one unit to beetle richness, we can think in terms of, say, a 1% change in beetle richness. To obtain a 1% change we multiply beetles by 1.01.</p>
+<p align="center"><img src="../../images/assignments/assignment9/log1.gif" width="435" height="155" alt="log 1"></p>
+<p>Subtracting the log old mean from the log new mean yields the following.</p>
+<p align="center"><img src="../../images/assignments/assignment9/log2.gif" width="253" height="213" alt="log 2"></p>
+<p>So a 1% change in beetle richness multiplies bird richness by <img src="../../images/assignments/assignment9/1.01b1.gif" alt="1.01 b1" width="67" height="43" align="absmiddle"> = 1.00192, i.e., a .19% increase in the mean.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(mod3a)</div>
+<span class="style24">  &nbsp;(Intercept) log(beetles)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; relief <br>
+  &nbsp;&nbsp; 4.6450623&nbsp;&nbsp;&nbsp; 0.1927450&nbsp;&nbsp;&nbsp; 0.1075616 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1.01^0.1927450 </div>
+<span class="style24">[1] 1.00192</span>
+<p>We can obtain a simpler interpretation of the effect as follows. The binomial series, a generalization of the binomial theorem, is given as follows.</p>
+<p align="center"><img src="../../images/assignments/assignment9/log3.gif" width="347" height="93" alt="binomial series"></p>
+<p>for &Delta;x small. Therefore we have</p>
+<p align="center"><img src="../../images/assignments/assignment9/log4.gif" width="172" height="82" alt="binomial series 2"></p>
+<p>So a 1% increase in <em>x</em> leads to a &beta;<sub>1</sub>% increase in the mean, which again is approximately a .19% increase for a 1% increase in beetle richness.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(mod3a)[2]*.01</div>
+ <span class="style24"> log(beetles) <br>
+&nbsp; 0.00192745</span>
+<h3>Lognormal  models</h3>
+<p>The fitted model with beetles and relief as predictors is</p>
+<p align="center"><img src="../../images/assignments/assignment9/lognormal.gif" width="288" height="38" alt="lognormal"></p>
+<p>As was discussed in lecture 21, the mean of a log is not the same as the log of a mean. If we exponentiate the lefthand side we don't get the mean of the lognormal distribution. Instead we get the median. Thus the same interpretations described above for the negative binomial model apply to the lognormal except we apply it to the median rather than the mean. Thus a one unit change in beetles multiplies the median by exp(b1) while a one unit change in relief multiplies the median by exp(b2).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(mod5)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; beetles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; relief <br>
+  &nbsp;4.86905760&nbsp; 0.01356396&nbsp; 0.09554528 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(mod5)[2:3])</div>
+<span class="style24">  &nbsp;beetles&nbsp;&nbsp; relief <br>
+1.013656 1.100259</span>
+<p>The fitted model with log(beetles) and relief as predicts is the following.</p>
+<p align="center"><img src="../../images/assignments/assignment9/lognormal2.gif" width="332" height="38" alt="lognormal2"></p>
+<p>Now a 1% increase in beetles leads to a &beta;<sub>1</sub>% increase in the median, an approximately .19% increase.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1.01^coef(mod5a)[2]</div>
+<span class="style24">  log(beetles) <br>
+  &nbsp;&nbsp;&nbsp; 1.001887 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(mod5a)[2]</div>
+<span class="style24">  log(beetles) <br>
+&nbsp;&nbsp; 0.1894447</span>
+<h2>Question 4</h2>
+<p>I plot the mean from the negative binomial model, mod3, but all of the predicted surfaces look about the same. To plot the regression surface we need to determine the range of the data and plot the surface only over that range.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> range(birdbeetles$beetles)</div>
+<span class="style24">  [1]&nbsp; 1 58</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> range(birdbeetles$relief)</div>
+<span class="style24">[1] 0.18 8.78</span>
+<p>I create a grid of values over this range, construct a function that defines the regression surface, and then evaluate the function over this grid.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">g &lt;- expand.grid(beetles=seq(1,59,3), relief=seq(0.15,8.9,.6))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">
+  surf &lt;- function(p) exp(coef(mod3)[1]+coef(mod3)[2]*p[1]+coef(mod3)[3]*p[2])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  g$z&lt;-apply(g,1,surf)</div>
+<p>The persp function requires that the z values be organized in a matrix that has the same dimensions as the grid over which we'll plot.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  z.matrix &lt;- matrix(g$z, nrow=length(seq(1,59,3)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(z.matrix)</div>
+<span class="style24">[1] 20 15</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> length(seq(1,59,3))</div>
+<span class="style24">[1] 20</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> length(seq(0.15,8.9,.6))</div>
+<span class="style24">[1] 15</span>
+<p>I play with the angle settings to get a surface in the most useful orientation.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.persp &lt;- persp(seq(1,59,3), seq(0.15,8.9,.6), z.matrix, xlab=&quot;beetles&quot;, ylab=&quot;relief&quot;, zlab=&quot;birds&quot;, phi=0, theta=30, ticktype=&quot;detailed&quot;, zlim=c(10,750), border='grey70')</div>
+<p>To plot the points we need model predictions at each of the observed values. The trans3d function converts the 3-dimensional coordinates into the projected two-dimensional coordinates for plotting. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">z.est &lt;- predict(mod3,type='response')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  vals2 &lt;- trans3d(birdbeetles$beetles, birdbeetles$relief, z.est, out.persp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  vals1 &lt;- trans3d(birdbeetles$beetles, birdbeetles$relief, birdbeetles$birds, out.persp)</div>
+<p>I use segments to draw the line segments and points to draw the points. For the colors I test if the observed points lie above the surface, convert the result to a number (0 for FALSE, 1 for TRUE), and 1 to the result so that we obtain 1 or 2. I then use this to select the first or second component of my color vector, c(4,2).<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  segments(vals1[[1]], vals1[[2]], vals2[[1]], vals2[[2]], col=c(4,2)[as.numeric(vals1[[2]] &gt; vals2[[2]])+1])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">points(trans3d(birdbeetles$beetles, birdbeetles$relief, birdbeetles$birds, out.persp), pch=16, col=c(4,2)[as.numeric(vals1[[2]]&gt;vals2[[2]])+1], cex=.7)</div>
+<br>
+<table width="450" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig1a.png" width="400" height="410" alt="fig. 3"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 5</strong> &nbsp;&nbsp;Plot of the regression surface of the negative binomial regression model (mod3).</td>
+  </tr>
+</table>
+<h2>Question 5</h2>
+<p>The code from lecture 20 can be used almost as is. The conditioning variable is &quot;group&quot; and there are 61 observations. I arrange the graph in a 4 x 4 layout. The code below graphically examines the fit of the negative binomial model mod3.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">birdbeetles$mu &lt;- fitted(mod3)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> birdbeetles$p &lt;- dnbinom(birdbeetles$birds, mu=birdbeetles$mu, size=mod3$theta)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(dnbinom(1000, mu=birdbeetles$mu, size=mod3$theta))</div>
+<span class="style24">  [1] 1.409487e-05</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.p &lt;- lapply(1:61, function(x) dnbinom(0:1000, mu=birdbeetles$mu[x], size=mod3$theta))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">birdbeetles$ux &lt;- sapply(1:61, function(x) max((0:1000)[out.p[[x]]&gt;1e-5]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  birdbeetles$lx &lt;- sapply(1:61, function(x) min((0:1000)[out.p[[x]]&gt;1e-5]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  birdbeetles$uy &lt;- sapply(out.p,max)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  birdbeetles$ly&lt;-rep(0,61)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # prepanel function to set limits for each graph</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  prepanel.ci2 &lt;- function(x, y, ly, lx, uy, ux, subscripts, ...) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  list(ylim=range(y, uy[subscripts], ly[subscripts], finite=T), xlim=range(x, ux[subscripts], lx[subscripts], finite=T))}</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(p~birds|factor(grid), data=birdbeetles, ux=birdbeetles$ux, lx=birdbeetles$lx, uy=birdbeetles$uy, ly=birdbeetles$ly, layout=c(4,4),
+  prepanel=prepanel.ci2, panel=function(x,y,subscripts){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(0:1000, dnbinom(0:1000, mu=birdbeetles$mu[subscripts], size=mod3$theta), type='h', col='grey')</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=x, col=2, lty=2)},</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  scale=list(x='free', y='free'))</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig5a.png" width="510" height="420" alt="fig 6a"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 6</strong> &nbsp;&nbsp;(a) Predicted negative binomial distributions with observed bird richness values superimposed. Grid cells 1&ndash;16.</td>
+  </tr>
+</table>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig5b.png" width="515" height="420" alt="fig. 6b"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 6</strong> &nbsp;&nbsp;(b) Predicted negative binomial distributions with observed bird richness values superimposed. Grid cells 17&ndash;32.</td>
+  </tr>
+</table>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig5c.png" width="515" height="420" alt="fig. 6c"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 6</strong> &nbsp;&nbsp;(c) Predicted negative binomial distributions with observed bird richness values superimposed. Grid cells 33&ndash;48.</td>
+  </tr>
+</table>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig5d.png" width="510" height="420" alt="fig. 6d"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 6</strong> &nbsp;&nbsp;(d) Predicted negative binomial distributions with observed bird richness values superimposed. Grid cells 49&ndash;61.</td>
+  </tr>
+</table>
+<p>From the graphs the obvious instances of lack of fit are grid cells 61, 33, and perhaps 23.</p>
+<h3> Analytical test</h3>
+<p>I calculate upper and lower p-values for each observed value and count the number that are less than .025, (two-tailed test). I display the results in a graph.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">upper.pval &lt;- 1-pnbinom(birdbeetles$birds-1, mu=birdbeetles$mu, size=mod3$theta)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lower.pval &lt;- pnbinom(birdbeetles$birds, mu=birdbeetles$mu, size=mod3$theta)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(c(upper.pval,lower.pval)&lt;.025)</div>
+<span class="style24">[1] 3</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># choose upper or lower p-value to plot</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">p.to.plot &lt;- ifelse(pnbinom(birdbeetles$birds, mu=birdbeetles$mu, size=mod3$theta) &lt; .5, pnbinom(birdbeetles$birds, mu=birdbeetles$mu, size=mod3$theta), pnbinom(birdbeetles$birds-1, mu=birdbeetles$mu, size=mod3$theta))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(grid)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  dotplot(birdbeetles$grid~p.to.plot, xlab=' ', xlim=c(-0.03,1.03), ylab='grid', panel=function(x,y){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.dotplot(x,y)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=c(.025,.975), col=2, lty=2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=0.5, col='grey70', lwd=2)},
+  scales=list(y=list(at=seq(2,60,2),cex=.7), x=list(at=seq(0,1,.2), labels=c(0, 0.2, 0.4, 0.4, 0.2, 0))), page = function(n) {</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  grid.text(&quot;upper-tailed p-value&quot;, x = .85, y = 0.025, default.units = &quot;npc&quot;, just = c(&quot;right&quot;, &quot;bottom&quot;))</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  grid.text(&quot;lower-tailed p-value&quot;, x = .45, y = 0.025, default.units = &quot;npc&quot;, just = c(&quot;right&quot;, &quot;bottom&quot;))})</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig7NB.png" width="580" height="420" alt="fig. 7"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 7</strong> &nbsp;&nbsp;Lower and upper-tailed p-values for the observed bird richness values with respect to negative binomial regression model. Vertical lines represent lower and upper 2.5% quantiles.</td>
+  </tr>
+</table>
+<p>Three observations out of 61 are clear outliers, which is less than 5% of the values, not more than we'd expect to obtain by chance.</p>
+<h3>Fit of lognormal model</h3>
+<p>To examine the fit of the lognormal model the same code will work except we need to us the dlnorm function rather than dnbinom. The arguments of dlnorm are meanlog, which we obtain as the fitted values of our model, and sdlog, which is the square root of the average of the squared residuals. In the graph I display the fit for only the first 16 grid cells for the lognormal model with log(beetles) and relief as predictors.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">birdbeetles$logmu &lt;- fitted(mod5a)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  mod5a.sd &lt;- sqrt(sum(residuals(mod5a)^2)/length(residuals(mod5a)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  birdbeetles$p &lt;- dlnorm(birdbeetles$birds, meanlog=birdbeetles$logmu, sdlog=mod5a.sd)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(dlnorm(1000, meanlog=birdbeetles$logmu, sdlog=mod5a.sd))</div>
+<span class="style24">  [1] 7.528603e-06</span>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.p &lt;- lapply(1:61, function(x) dlnorm(0:1000, meanlog=birdbeetles$logmu[x], sdlog=mod5a.sd))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">birdbeetles$ux &lt;- sapply(1:61, function(x) max((0:1000)[out.p[[x]]&gt;1e-5]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  birdbeetles$lx &lt;- sapply(1:61, function(x) min((0:1000)[out.p[[x]]&gt;1e-5]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  birdbeetles$uy &lt;- sapply(out.p,max)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  birdbeetles$ly&lt;-rep(0,61)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # prepanel function to set limits for each graph</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  prepanel.ci2 &lt;- function(x, y, ly, lx, uy, ux, subscripts, ...) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> list(ylim=range(y, uy[subscripts], ly[subscripts], finite=T), xlim=range(x, ux[subscripts], lx[subscripts], finite=T))}</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(p~birds|factor(grid), data=birdbeetles, ux=birdbeetles$ux, lx=birdbeetles$lx, uy=birdbeetles$uy, ly=birdbeetles$ly, layout=c(4,4),
+  prepanel=prepanel.ci2, panel=function(x,y,subscripts){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(0:1000, dlnorm(0:1000, meanlog=birdbeetles$logmu[subscripts],sdlog=mod5a.sd), type='h', col='grey')</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=x, col=2, lty=2)},
+  scale=list(x='free', y='free'))</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig8.png" width="510" height="420" alt="fig. 8"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 7</strong> &nbsp;&nbsp;Predicted lognormal distributions with observed bird richness values superimposed. Grid cells 49&ndash;61.</td>
+  </tr>
+</table>
+<p></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> upper.pval2 &lt;- 1-plnorm(birdbeetles$birds-.5,meanlog=birdbeetles$logmu, sdlog=mod5a.sd)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lower.pval2 &lt;- plnorm(birdbeetles$birds+.5,meanlog=birdbeetles$logmu, sdlog=mod5a.sd)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sum(c(upper.pval2,lower.pval2)&lt;.025)</div>
+<span class="style24">[1] 5</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">p.to.plot2 &lt;- ifelse(plnorm(birdbeetles$birds+0.5,  meanlog=birdbeetles$logmu, sdlog=mod5a.sd) &lt; .5, plnorm(birdbeetles$birds+0.5,  meanlog=birdbeetles$logmu, sdlog=mod5a.sd), plnorm(birdbeetles$birds-.5,  meanlog=birdbeetles$logmu, sdlog=mod5a.sd))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(grid)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  dotplot(birdbeetles$grid~p.to.plot2, xlab=' ', xlim=c(-0.03,1.03), ylab='grid', panel=function(x,y){</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.dotplot(x,y)</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.abline(v=c(.025,.975), col=2, lty=2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=0.5, col='grey70', lwd=2)},
+  scales=list(y=list(at=seq(2,60,2),cex=.7),x=list(at=seq(0,1,.2), labels=c(0, 0.2, 0.4, 0.4, 0.2, 0))), page = function(n) {</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  grid.text(&quot;upper-tailed p-value&quot;, x = .85, y = 0.025, default.units = &quot;npc&quot;, just = c(&quot;right&quot;, &quot;bottom&quot;))</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  grid.text(&quot;lower-tailed p-value&quot;, x = .45, y = 0.025, default.units = &quot;npc&quot;, just = c(&quot;right&quot;, &quot;bottom&quot;))})</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig9lognorm.png" width="580" height="420" alt="fig. 9"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 9</strong> &nbsp;&nbsp;Lower and upper-tailed p-values for the observed bird richness values with respect to a lognormal regression model with log(beetles) and relief as predictors. Vertical lines represent lower and upper 2.5% quantiles.</td>
+  </tr>
+</table>
+<p>Five observations out of 61 are clear outliers, which is about 8% of the values. This is more than we'd expect to obtain by chance. So, although the lognormal model with log(beetles) and relief as predictors had a lower AIC than a negative binomial model with beetles and relief as predictors, the lognormal model appears to fit fewer grid cells.</p>
+<h2>Question 6</h2>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># negative binomial</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(latitude~longitude, data=birdbeetles, pch=16, col=c(2,4)[as.numeric(residuals(mod3)&lt;0)+1])</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig10.png" width="495" height="375" alt="fig. 10"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 60px; text-indent:-60px"><strong>Fig. 10</strong> &nbsp;&nbsp;Plot of negative binomial residuals by sign (red = positive, blue = negative) by their geographic location</td>
+  </tr>
+</table>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # lognormal</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(latitude~longitude, data=birdbeetles, pch=16, col=c(2,4)[as.numeric(residuals(mod5a)&lt;0)+1])</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment9/fig11lognormal.png" width="495" height="375" alt="fig. 11"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 60px; text-indent:-60px"><strong>Fig. 11</strong> &nbsp;&nbsp;Plot of lognormal residuals by sign (red = positive, blue = negative) by their geographic location</td>
+  </tr>
+</table>
+<p>Both models show that the residuals of the same sign are clustered geographically suggesting that the model residuals are not independent. This is a violation of one of the assumptions of the regression model. We can formally assess this correlation analytically by carrying out a Mantel test. A Mantel test calculates the correlation between the geographic distances of points with the distance in the value of their residuals. It assesses the significance of the correlation using a randomization test. Residuals are randomly assigned to geographic location and the correlation of the randomized residuals is used to construct a null distribution for the statistic.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Mantel test for negative binomial residuals </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dist1 &lt;- dist(cbind(birdbeetles$latitude, birdbeetles$longitude))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dist2 &lt;- dist(residuals(mod3))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(vegan)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mantel(dist1, dist2)</div>
+<span class="style24">Mantel statistic based on Pearson's product-moment correlation </span>
+<p><span class="style24">Call:<br>
+  mantel(xdis = dist1, ydis = dist2) </span>
+<p><span class="style24">Mantel statistic r: </span><span class="style25">0.335</span><span class="style24"> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Significance: </span><span class="style25">0.001
+  </span>
+<p><span class="style24">Empirical upper confidence limits of r:<br>
+  &nbsp;&nbsp; 90%&nbsp;&nbsp;&nbsp; 95%&nbsp; 97.5%&nbsp;&nbsp;&nbsp; 99% <br>
+  0.0765 0.1040 0.1199 0.1418 </span>
+<p><span class="style24">Based on 999 permutations</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Mantel test for lognormal residuals </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dist2a &lt;- dist(residuals(mod5a))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mantel(dist1, dist2a)</div>
+<span class="style24">Mantel statistic based on Pearson's product-moment correlation </span>
+<p><span class="style24">Call:<br>
+  mantel(xdis = dist1, ydis = dist2a) </span>
+<p><span class="style24">Mantel statistic r: </span><span class="style25">0.2382</span><span class="style24"> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Significance: </span><span class="style25">0.001
+  </span>
+<p><span class="style24">Empirical upper confidence limits of r:<br>
+  &nbsp; 90%&nbsp;&nbsp; 95% 97.5%&nbsp;&nbsp; 99% <br>
+  0.080 0.101 0.122 0.143 </span>
+<p><span class="style24">Based on 999 permutations</span>
+<p>Both tests indicate a significant degree of spatial correlation in the residuals. A solution would be to add a spatial correlation structure for the residuals. This is easy to do for the lognormal model using generalized least squares (gls function of the nlme package), but more difficult for the negative binomial model. At this point I would switch exclusively to the lognormal model and adding a model for the residual correlation component using the <span class="style4">gls</span> function from the <span class="style19">nlme</span> package.</p>
+<p></p>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment9/hw9scores.png" width="405" height="240" alt="hw 9 scores"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 23, 2012<br>
+      URL: <a href="assign9.htm#assign9">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign9.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

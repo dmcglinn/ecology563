@@ -1,0 +1,750 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 24&mdash;Wednesday, November 14, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+.style1012 {	font-family: "Courier New", Courier, mono
+}
+.style1012 {font-family: "Courier New", Courier, mono}
+.style221 {color: #339966;
+	font-weight: bold;
+}
+.style29 {font-family: "Courier New", Courier, mono}
+.style30 {color: #333399;
+	font-weight: bold;
+}
+.style28 {color: #CC0000; font-weight: bold; }
+.style411 {	color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #009900;  font-weight: bold; font-family: "Courier New", Courier, mono;}
+.style5 {	color: #CC0000;
+	font-weight: bold;
+}
+span.GramE {mso-style-name:"";
+	mso-gram-e:yes;}
+span.SpellE {mso-style-name:"";
+	mso-spl-e:yes;}
+.style331 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style391 {font-family: "Courier New", Courier, mono; font-weight: bold; color: #339933}
+.style42 {color: #CCCCCC}
+.style42 {color: #CC0000;
+	font-weight: bold;
+}
+.style401 {color: #CC0000}
+.style2311 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style261 {font-family: "Courier New", Courier, mono}
+.style371 {color: #FF0000;
+	font-weight: bold;
+}
+.style4011 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style421 {color: #0000FF; font-weight: bold; }
+.style44 {font-family: "Courier New", Courier, mono; color: #000000; font-size: smaller; }
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture24" id="lecture24"></a>Lecture 24&mdash;Wednesday, November 14, 2012</h1>
+<h3>Topics</h3>
+<ul>
+  
+  <li><a href="lecture24.htm#refitting">Refitting the analysis of covariance model from last time</a></li>
+  <li><a href="lecture24.htm#generating">MCMC diagnostics</a>
+    <ul>
+      <li><a href="lecture24.htm#trace">Trace plots of individual Markov chains</a></li>
+      <li><a href="lecture24.htm#convergence">Convergence statistics</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture24.htm#densityplot">Displaying the posterior distributions</a>
+    <ul>
+      <li><a href="lecture24.htm#method1">Method 1</a></li>
+      <li><a href="lecture24.htm#method2">Method 2</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture24.htm#credible">Bayesian credible intervals</a>
+    <ul>
+      <li><a href="lecture24.htm#percentile">Percentile intervals</a></li>
+      <li><a href="lecture24.htm#hpd">HPD intervals</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture24.htm#comparing">The Bayesian posterior density and the frequentist likelihood</a></li>
+  <li><a href="lecture24.htm#choosing">Choosing uninformative priors in Bayesian models</a>
+    <ul>
+      <li><a href="lecture24.htm#regression">Uninformative priors for regression parameters</a></li>
+      <li><a href="lecture24.htm#precision">Uninformative priors for precision parameters</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture24.htm#Bayesian">Bayesian estimation of a random intercepts model</a>
+    <ul>
+      <li><a href="lecture24.htm#common">Complete pooling model</a></li>
+      <li><a href="lecture24.htm#separate">Separate intercepts model</a></li>
+  </ul>  
+<li><a href="lecture24.htm#cited">Cited references</a></li>
+  <li><a href="lecture24.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture24.htm#asmcmc">as.mcmc</a> (from <span class="style191">coda</span>) converts a matrix or a vector to an <span class="styleArial">mcmc</span> object.</li>
+  <li><a href="lecture24.htm#asmcmc">as.mcmc.list</a> (from <span class="style191">coda</span>) converts an object to an <span class="styleArial">mcmc</span> list object of parallel chains with different starting points.</li>
+  <li><a href="lecture24.htm#densityplot">densityplot</a> (from <span class="style19">lattice</span>) obtains a kernel density estimate (smoothed histogram)  and plots the result.</li>
+  <li><a href="lecture24.htm#docall">do.call</a> executes a function evaluated on a list of arguments.</li>
+  <li><a href="lecture24.htm#hpdinterval">HPDinterval</a> calculates highest posterior density intervals for the components of an <span class="styleArial">mcmc</span> object.</li>
+</ul>
+<h3>R packages used </h3>
+<ul>
+  <li><a href="lecture24.htm#arm">arm</a> for the <span class="style42">bugs</span> function that allows running WinBUGS from within R.</li>
+  <li><a href="lecture24.htm#asmcmc">coda</a> for MCMC diagnostics.</li>
+  <li><a href="lecture24.htm#lattice">lattice</a> for <span class="style1">xyplot</span> and <span class="style1">densityplot</span>.</li>
+  <li><a href="lecture24.htm#jags">R2jags</a> for the <span class="style42">jags</span> function that allows running JAGS from within R.</li>
+</ul>
+<h2><a name="refitting" id="refitting"></a>Refitting the analysis of covariance model from last time</h2>
+<p>I refit the frequentist and Bayesian  analysis of covariance models we worked with in <a href="lecture23.htm#covariance">lecture 23</a>. For this I use the BUGS model definition file  <span class="style8">ipomodel.txt</span>  from <a href="lecture23.htm#BUGSmodel">lecture 23</a>. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo &lt;- read.table( 'ecol 563/ipomopsis.txt', header=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">out2 &lt;- lm(Fruit~Root+Grazing, data=ipo)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#Bayesian analysis</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">x &lt;- ipo$Root</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> y &lt;- ipo$Fruit</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> z &lt;- as.numeric(ipo$Grazing=='Ungrazed')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">n &lt;- length(y)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#set directory to location of BUGS file</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">setwd(&quot;C:/Users/jmweiss/Documents/ecol 563&quot;)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#variables needed for bugs and jags functions</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> ipo.data &lt;- c('y','x','z','n')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> ipo.inits &lt;- function() {list(b0=rnorm(1), b1=rnorm(1), b2=rnorm(1), sigma.y=runif(1))}</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> ipo.parms &lt;- c(&quot;b0&quot;,&quot;b1&quot;,&quot;b2&quot;,&quot;sigma.y&quot;)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #for WinBUGS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> <a name="arm"></a>library(arm)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#run WinBUGS first with 100 iterations as a check</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> ipo.1 &lt;- bugs(ipo.data, ipo.inits, ipo.parms, &quot;ipomodel.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=100, debug=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> ipo.1 &lt;- bugs(ipo.data, ipo.inits, ipo.parms, &quot;ipomodel.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=10000, debug=T)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #for JAGS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> <a name="jags"></a>library(R2jags)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#run jags</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> ipo.1.jags &lt;- jags(ipo.data, ipo.inits, ipo.parms, &quot;ipomodel.txt&quot;, n.chains=3, n.iter=10000)</div>
+<h2><a name="generating"></a>MCMC diagnostics</h2>
+<p>Using the argument <span class="style17">debug=T</span> of the <span class="style13">bugs</span> function causes the WinBUGS program to pause after the model is fit allowing us to inspect the graphs and diagnostics that WinBUGS has produced before the program shuts down and the numerical results are returned to R. It is not possible to do this with the <span class="style13">jags</span> function because JAGS is not a stand-alone application. Trace plots of the Markov chains have to be generated in R. </p>
+<p><a name="asmcmc"></a>When the <span class="style19">arm</span> and <span class="style19">R2jags</span> packages are loaded, the <span class="style19">coda</span> package is also loaded into memory. The <span class="style19">coda</span> package provides a number of tools and diagnostics for Bayesian models. To use them we have to first create an <span class="styleArial">mcmc</span> object. For a <span class="style13">bugs</span> object we do this with the  <span class="style1">as.mcmc.list</span> function while for a <span class="style13">jags</span> object we use the <span class="style1">as.mcmc</span> function.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">bugsfit.mcmc &lt;- as.mcmc.list(ipo.1)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">jagsfit.mcmc &lt;- as.mcmc(ipo.1.jags)</div>
+<h3><a name="trace"></a>Trace plots of individual Markov chains</h3>
+<p><a name="lattice"></a>To obtain trace plots of the individual Markov chains we can use the <span class="style1">xyplot</span> function from <span class="style19">lattice</span> on the <span class="styleArial">mcmc</span> object that has been created. Fig. 1a shows the output from <span class="style13">bugs</span> while Fig. 1b shows the output from <span class="style13">jags</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># WinBUGS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  xyplot(bugsfit.mcmc)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # JAGS
+</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">xyplot(jagsfit.mcmc)</div><br>
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">(a) &nbsp;&nbsp;<img src="../../images/lectures/lecture24/fig1a.png" alt="fig. 1a" width="400" height="315" align="texttop"></div></td>
+  <tr>
+    <td  valign="top"><div align="center">(b) <img src="../../images/lectures/lecture24/fig1b.png" alt="fig. 1b" width="420" height="320" align="texttop">&nbsp;&nbsp;&nbsp;</div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Trace plots of individual Markov chains from (a) WinBUGS and (b) JAGS.</td>
+  </tr>
+</table>
+<p>Each chain (denoted by a different color) derives from a different random start of the MCMC algorithm. The displayed trajectories trace the sampled values in the order they were obtained for each chain. (Compare this with the discussion of the toy example of the Metropolis algorithm given in <a href="lecture23.htm#toy">lecture 23</a>.) By default both <span class="style1">jags</span> and <span class="style42">bugs</span> are set up to treat the first half of the iterates as part of the the burn-in period. So the first 5,000 iterations of this run of 10,000 are discarded and only the values from the second half of the run are saved. (This can be changed by specifying a value for the <span class="style22">n.burnin</span> argument.) </p>
+<p>Both <span class="style1">jags</span> and <span class="style42">bugs</span> have thinned the chains to reduce memory use and to decrease the correlation between the sampled observations. The default thinning rate for WinBUGS is <span class="styleArial">max(1, floor(n.chains*(n.iter-n.burnin)/1000)</span>. The <span class="style22">n.thin </span>argument can be used to override this default. With <span class="styleArial">n.chains = 3</span>, <span class="styleArial">n.iter = 10000</span>, and <span class="styleArial">n.burnin = 5000</span>, the thinning rate is 15. Thus only every 15th simulation value is saved. With 3 chains this means BUGS will return 1002 (3 times 334) samples that hopefully, if convergence has been attained, will be samples from the posterior distributions of each parameter. JAGS apparently thins things on a per chain basis so that 1000 observations remain in each chain. As a result the thinning rate here is only 5. Thus JAGS returns three times as many observations as does WinBUGS. That's why the trace plots from JAGS look like they have more observations. They do! </p>
+<p>Another difference in the plots is how the <em>x</em>-axis is labeled. The <em>x</em>-axis for  WinBUGS output denotes the actual position of the sampled observation in the thinned chain. For JAGS the <em>x</em>-axis denotes the original index location of the sampled observation in the unthinned chain.</p>
+<p>Using the trace plots we can assess whether the chains have converged to the posterior distribution and whether we've obtained  a random sample from that distribution. From Fig. 1 we can conclude the following.</p>
+<ol>
+  <li>The three chains in each panel are traversing the same range of <em>y</em>-values. This is clear from the fact that each chain occupies the same region of the <em>y</em>-axis and the chains  repeatedly cross each other. We describe this  by saying that the chains are mixing well.</li>
+  <li>Each individual chain is oscillating rapidly so that successive observations on the same chain are very different from each other. This tells us that the individual observations being returned from the thinned chains are approximately uncorrelated. Thus the effective sample size we're obtaining from each posterior distribution is very close to the number of simulations. So, we can treat the returned values as approximately a random sample from the corresponding posterior distribution.</li>
+</ol>
+<h3><a name="convergence"></a>Convergence statistics </h3>
+<p>The <span class="styleArial">summary</span> component returned by <span class="style1">bugs</span> and <span class="style1">jags</span> (for <span class="style1">jags</span> the <span class="styleArial">summary</span> component is contained in the <span class="styleArial">BUGSoutput</span> component) contains two useful diagnostics for assessing mixing and convergence of the individual Markov chains: <span class="styleArial">Rhat</span> and <span class="styleArial">n.eff</span>. </p>
+<p><span class="styleArial">Rhat</span> is the mixing index. Numerically it is the square root of the variance of the mixture of all the chains divided by the average within-chain variance. If the chains are mixing these values should be roughly the same yielding a ratio of approximately 1. A useful decision rule is to stop when all the reported <span class="styleArial">Rhat</span> values for the different parameters are less than 1.10. With small models such as this one the <span class="styleArial">Rhat</span> values can be examined individually. For larger models determining the maximum reported <span class="styleArial">Rhat</span> is a more practical option. Because the largest returned value of <span class="styleArial">Rhat</span> for the current model is less than 1.10 we have evidence the chains are mixing well.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># WinBUGS</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  max(ipo.1$summary[,&quot;Rhat&quot;])</div>
+<span class="style24">[1]  1.001431</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># JAGS</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(ipo.1.jags$BUGSoutput$summary[,&quot;Rhat&quot;])</div>
+<span class="style24">[1] 1.001763</span>
+<p>The statistic <span class="styleArial">n.eff</span> is a crude measure that tries to account for the correlations between the successive values of the thinned Markov chain  to provide a measure of effective sample size. Due to correlation the effective sample size will tend to be smaller than the actual number of simulations. The effective sample size is calculated indirectly by comparing two different measures of variability and  should not be taken too seriously. Still, we  want this number to be relatively large particularly for the parameters that are of special interest to us, i.e., the parameters for which we need an interval estimate. Extremely small values of <span class="styleArial">n.eff</span> should be worrisome. For both the JAGS and WinBUGS runs the smallest reported effective sample size turns out to be quite large.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># WinBUGS</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">min(ipo.1$summary[,&quot;n.eff&quot;])</div>
+<span class="style24">[1]  1000</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># JAGS</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> min(ipo.1.jags$BUGSoutput$summary[,&quot;n.eff&quot;])</div>
+<span class="style24">[1] 1600</span>
+<h2><a name="densityplot"></a>Displaying the posterior distributions</h2>
+<p>The <span class="style1">densityplot</span> function of <span class="style19">lattice</span> can be used to display kernel density estimates (smoothed histograms) of the frequency distributions of the sampled posterior distributions obtained by MCMC. The default display when <span class="style1">densityplot</span> is applied to the <span class="styleArial">mcmc</span> objects we've created is to produce a separate density plot for each chain.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">densityplot(bugsfit.mcmc, layout=c(3,2))</div><br>
+<table width="600" border="0" align="center" cellpadding="2">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture24/fig2b.png" width="540" height="170" alt="fig. 2"></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><span class="styleArial1"><strong>Fig. 2&nbsp;</strong> Posterior densities for individual parameters and individual Markov chains</span></div></td>
+  </tr>
+</table>
+
+<p>In order to get a single density estimate for each parameter we need to combine the individual chains. There are two ways to do this. </p>
+<h3><a name="method1"></a>Method 1</h3>
+<p><a name="docall"></a>The <span class="styleArial">mcmc</span> object  created from a <span class="style1">bugs</span> or <span class="style1">jags</span> object is a list of matrices. We can <span class="style1">rbind</span> the individual list elements together and plot the result.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">bugsfit.matrix &lt;- rbind(bugsfit.mcmc[[1]], bugsfit.mcmc[[2]], bugsfit.mcmc[[3]])</div>
+<p>This can be done more efficiently with the <span class="style1">do.call</span> function of R. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">bugsfit.matrix &lt;- do.call(rbind, bugsfit.mcmc)</div>
+<p>The <span class="style1">do.call</span> function resembles <span class="style1">sapply</span> in that it can be used to apply a function to a list of elements. Unlike <span class="style1">sapply</span> which applies a function separately to each component of the list, <span class="style1">do.call</span> applies the function to all list components simultaneously. Thus in the above call we end up<span class="style1"> rbind</span>ing  the list components of <span class="styleArial">bugsfit.mcmc</span> together. The result is a matrix and no longer an mcmc object so we need to use the <span class="style1">as.mcmc</span> function on the result. (We use <span class="style1">as.mcmc</span> here rather than <span class="style1">as.mcmc.list</span> because the object is not a list.)</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">densityplot(as.mcmc(do.call(rbind, bugsfit.mcmc)))</div>
+<p>There's no reason to display the posterior distribution of the deviance, so I redo the plot but this time specify only the columns that I want displayed (Fig. 3). At the bottom of each density plot is a rug plot of the data. The density plot summarizes our posterior beliefs about the true values of the parameters indicating which values are more likely and which values are less likely.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">densityplot(as.mcmc(do.call(rbind, bugsfit.mcmc))[,c(&quot;b0&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;sigma.y&quot;)])</div><br>
+<table width="600" border="0" align="center" cellpadding="2">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture24/fig2c.png" width="540" height="210" alt="fig. 3"></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><span class="styleArial1"><strong>Fig. 3&nbsp;</strong> Estimated posterior densities for individual parameters</span></div></td>
+  </tr>
+</table>
+
+<h3><a name="method2"></a>Method 2</h3>
+<p>A simpler way of producing a single density plot for each parameter is to work with the <span class="styleArial">sims.matrix</span> component of the <span class="style1">bugs</span> object. We first need to  convert it to an <span class="styleArial">mcmc</span> object with the <span class="style1">as.mcmc</span> function after which we can plot the result.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># WinBUGS</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">densityplot(as.mcmc(ipo.1$sims.matrix[,c(&quot;b0&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;sigma.y&quot;)]))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># JAGS</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">densityplot(as.mcmc(ipo.1.jags$BUGSoutput$sims.matrix[,c(&quot;b0&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;sigma.y&quot;)]))</div>
+<h2><a name="credible" id="Bayesian2"></a>Bayesian credible intervals</h2>
+<h3><a name="percentile"></a>Percentile intervals</h3>
+<p>The <span class="styleArial">$summary</span> component of the <span class="style42">bugs</span> object contains some representative quantiles of the posterior distribution for each parameter. Using these values  we can  construct 95% percentile credible intervals for the parameters. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.1$summary[,c('2.5%','97.5%')]</div>
+
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 97.5%<br>
+  b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -148.11655 -107.513014<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21.15234&nbsp;&nbsp; 25.954514<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 29.10089&nbsp;&nbsp; 43.176769<br>
+  deviance&nbsp; 263.63983&nbsp; 275.637311<br>
+  sigma.y&nbsp;&nbsp;&nbsp;&nbsp; 5.50889&nbsp;&nbsp;&nbsp; 8.901616</span>
+
+<p>We can also calculate these quantiles using the <span class="styleArial">$sims.matrix</span> component of the <span class="style42">bugs</span> object. To get them in this fashion we just use the <span class="style13">quantile</span> function.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">quantile(<span class="style103">ipo.1$sims.matrix</span>[,&quot;b0&quot;], c(.025,.975))</div>
+
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp;&nbsp; 97.5% <br>
+  -148.1166 -107.5130</span>
+<p>To obtain credible intervals for more than one parameter at a time we can use the <strong class="style42">sapply</strong> function. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">sapply(c('b0','b1','b2'), function(x) quantile(ipo.1$sims.matrix[,x], c(.025,.975)))</div>
+
+<span class="style24">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b2<br>
+  2.5%&nbsp; -148.1166 21.15234 29.10089<br>
+  97.5% -107.5130 25.95451 43.17677</span>
+<p><a name="freq"></a>To compare these results to the frequentist's 95% confidence intervals, we can apply the <span class="style1">confint</span> function to the corresponding <span class="style13">lm</span> model object, <span class="styleArial">out2</span>. The two sets of intervals are similar. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out2 &lt;- lm(Fruit ~ Root + Grazing, data=ipo)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> confint(out2)</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp;&nbsp; 97.5 %<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; -147.41068 -108.24804<br>
+  Root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21.23242&nbsp;&nbsp; 25.88768<br>
+ GrazingUngrazed&nbsp;&nbsp; 29.30052&nbsp;&nbsp; 42.90598</span>
+<h3><a name="hpd"></a>HPD intervals</h3>
+<p>An alternative way to calculate Bayesian credible intervals is as an HPD (highest posterior density) interval, also known as an HDI. The HDI contains those <em>x</em>-values that have highest believability. Let <em>f</em>(<em>x</em>) denote the posterior density of a parameter as estimated by MCMC. To calculate the HDI we need to find a value <em>W</em> such that integrating the posterior density over <em>x</em> where <em>f</em>(<em>x</em>) &gt; <em>W</em> yields a probability = 0.95.</p>
+<p align="center"><img src="../../images/lectures/lecture24/HDI.gif" width="183" height="53" alt="HDI"></p>
+<p>Generally the HDI and percentile intervals are similar, but Fig. 4 illustrates a case where they are  quite different. The estimated posterior distribution of &theta; is bimodal. As a result, choosing the most probable values of &theta; such that the probability sums to 0.95 has yielded two disjoint intervals that together define the HPD interval. The percentile interval on the other hand is a single interval that also includes a region of fairly improbable values of &theta;, the interval around 3 that lies between the two modes of the posterior distribution.</p>
+<table width="600" border="0" align="center" cellpadding="2">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture24/fig3.png" width="530" height="340" alt="fig. 4"></div></td>
+  </tr>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 4&nbsp;</strong> &nbsp;Contrasting HPD credible intervals and percentile credible intervals for a posterior distribution that is bimodal. (<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/notes/lecture24&#32;fig4.txt">R code for Fig. 4</a>)</td>
+  </tr>
+</table>
+<p><a name="hpdinterval"></a>The <span class="style1">HPDinterval</span> function can be used to extract HPD intervals from an <span class="styleArial">mcmc</span> object. Like <span class="style1">densityplot</span>, <span class="style1">HPDinterval</span> when applied to an <span class="styleArial">mcmc</span> object created from a <span class="style1">bugs</span> or <span class="style1">jags</span> object will return HPD intervals separately for each chain. To obtain single HPD intervals using the data from all three chains simultaneously we can create the <span class="styleArial">mcmc</span> object from the <span class="styleArial">sims.matrix</span> component.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># WinBUGS output</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">HPDinterval(as.mcmc(ipo.1$sims.matrix[,c(&quot;b0&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;sigma.y&quot;)]))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># JAGS output
+</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> HPDinterval(as.mcmc(ipo.1.jags$BUGSoutput$sims.matrix[,c(&quot;b0&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;sigma.y&quot;)]))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -148.526983 -108.124759<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21.149649&nbsp;&nbsp; 25.908808<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 29.499327&nbsp;&nbsp; 43.481139<br>
+  sigma.y&nbsp;&nbsp;&nbsp; 5.412113&nbsp;&nbsp;&nbsp; 8.717793<br>
+  attr(,&quot;Probability&quot;)<br>
+[1] 0.95</span>
+<p>The results are quite similar to the percentile intervals calculated previously.</p>
+<h2><a name="comparing"></a>The Bayesian posterior density and the frequentist likelihood </h2>
+<p>With an entire posterior distribution at our disposal we have to choose what we want to call the Bayesian point estimate. Obvious choices are the mean or the median of the posterior distribution. For symmetrical posterior distributions these should be fairly similar. The frequentist maximum likelihood estimate is the value of the parameter that maximizes the likelihood, the parameter value that makes the data we obtained most likely. With an uninformative prior, the posterior distribution should be proportional to the likelihood in which case the maximum likelihood estimate should correspond  to the mode of the posterior distribution. </p>
+<p>Fig. 5 displays a kernel density estimate (smoothed histogram) of the posterior distribution of the intercept, <span class="style103">b0</span>, using the samples of the posterior distribution contained in the <span class="styleArial">$sims.matrix</span> component. Indicated on the graph are the locations of the maximum likelihood estimate (frequentist estimate from <span class="style42">lm</span>) as well as the mean,  median, and mode of the estimated posterior distribution (Bayesian). Observe that all the estimates are very close to each other.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(density(ipo.1$sims.matrix[,&quot;b0&quot;]),main='Posterior distribution', xlab='b0', col='skyblue', lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.density &lt;- density(ipo.1$sims.matrix[,"b0"])</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # posterior mode</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> mode.posterior &lt;- out.density$x[out.density$y==max(out.density$y)]</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">c(coef(out2)[1], median(ipo.1$sims.matrix[,"b0"]), mean(ipo.1$sims.matrix[,"b0"]), mode.posterior)</div>
+<span class="style331">(Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp; -127.8294&nbsp;&nbsp; -127.9000&nbsp;&nbsp; -127.8129&nbsp;&nbsp; -128.4677</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> abline(v=mode.posterior, lwd=3, col='grey70')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">abline(v=coef(out2)[1], lty=1)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">abline(v=median(ipo.1$sims.matrix[,&quot;b0&quot;]), lty=2, col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">abline(v=mean(ipo.1$sims.matrix[,&quot;b0&quot;]), lty=2, col='seagreen')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">legend('topright', c('MLE', 'posterior median', 'posterior mean', 'posterior mode'), col=c(1,2, 'seagreen', 'grey70'), lty=c(1,2,2,1), lwd=c(1,1,1,2), bty='n', cex=.9)</div><br>
+<table width="500" border="0" align="center" cellpadding="2">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture24/fig2a.png" width="475" height="335" alt="fig 2"></div></td>
+  </tr>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 5&nbsp;</strong> &nbsp;Posterior distribution of the intercept</td>
+  </tr>
+</table>
+<h2><a name="choosing"></a>Choosing uninformative priors in Bayesian models</h2>
+<p>We saw an example in <a href="lecture23.htm#comparing">lecture 23</a> where presumably uninformative priors  turned out to be too informative and managed to affect the posterior estimates we obtained. While we might therefore be tempted to choose  priors that are very uninformative,  priors that allow parameters to have too wide a range can lead to computational instability. In WinBUGS this results in an error message such as <span class="styleArial1">&quot;cannot bracket slice for node....&quot;</span> indicating that the current prior is too diffuse. A good general strategy is to  rescale the variables in the model so that all the regression parameters have the same limited range. A reasonable rule is to rescale things so that parameter values lie in the interval &ndash;10 to 10. When things are scaled in this way beforehand, the same uninformative priors will work for every model  and no further adjustments need to be made to the priors. </p>
+<h3><a name="regression"></a>Uninformative priors for regression parameters</h3>
+<p>Without prior information about a regression parameter, the usual approach is to assume that a regression parameter has a normal distribution with a mean of zero (representing no relationship with the response) and a very large variance.  This choice yields a prior distribution that is roughly flat over its likely range and leaves the regression parameter essentially unrestricted. Because the normal distribution in the BUGS language  is parameterized in terms of precision rather than variance,  a large variance is obtained by specifying a very small precision. Fig. 6 shows four normal priors with decreasing levels of precision (increasing variance). Notice that as the precision is decreased each normal distribution is flatter than the one before. On the scale of the most precise normal prior,<span class="styleArial"> dnorm(0, .01)</span>, the least precise normal prior, <span class="styleArial">dnorm(0, .00001)</span>, appears to be essentially flat.<br>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(dnorm(x, 0, sqrt(1/.01)), from=-200, to=200, col=1,  ylab='Density', xlab='x')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(dnorm(x, 0, sqrt(1/.001)), add=T, col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(dnorm(x, 0, sqrt(1/.0001)), add=T, col=3)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(dnorm(x, 0, sqrt(1/.00001)), add=T, col=4) </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> legend('topleft', c('dnorm(0,.01)', 'dnorm(0,.001)', 'dnorm(0,.0001)', 'dnorm(0,.00001)'), col=1:4, lty=1, bty='n', cex=.9, title=expression(bold('Normal priors')))</div><br>
+<table width="500" border="0" align="center" cellpadding="2">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture24/fig3b.png" width="455" height="360" alt="fig 3b"></div></td>
+  </tr>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 6&nbsp;</strong> &nbsp; The effect of varying the precision parameter of normal priors</td>
+  </tr>
+</table>
+
+<h3><a name="precision"></a>Uninformative priors for precision parameters</h3>
+<p>The following  line  is commented out in the BUGS program file we used in <a href="lecture23.htm#BUGSmodel">lecture 23</a>.</p>
+<p align="center" class="style103">tau.y~dgamma(.001,.001)</p>
+<p>This gives an &quot;uninformative&quot; prior for the precision parameter of a normal distribution and is the prior that typically appears in textbooks on Bayesian modeling. In general if <span class="styleArial"> Y ~ dgamma(a,b)</span> then <span class="styleArial">Y</span> has mean<img src="../../images/lectures/lecture24/aoverb.gif" width="18" height="32" align="absmiddle"> and variance <img src="../../images/lectures/lecture24/aoverb2.gif" alt="a over b2" width="25" height="37" align="absmiddle">. The two parameters of the gamma distribution used in the  BUGS parameterization are referred to as the shape and rate parameters in the R parameterization. Fig. 7 illustrates how changing these two parameters affects the shape of the gamma distribution.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #gamma priors</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(dgamma(x,.001,.001), from=0, to=10, ylab='Density', xlab='x')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(dgamma(x,.1,.1), add=T, col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(dgamma(x,.01,.01), add=T, col=3)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(dgamma(x,.01,.1), add=T, col=4)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">legend('center', c('dgamma(.001,.001)', 'dgamma(.1,.1)', 'dgamma(.01,.01)', 'dgamma(.01,.1)'), col=1:4, bty='n', cex=.9, lty=1, title=expression(bold('Gamma priors')))</div><br>
+<table width="500" border="0" align="center" cellpadding="2">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture24/fig3a.png" width="455" height="365" alt="fig 3b"></div></td>
+  </tr>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 7&nbsp;</strong> &nbsp;&nbsp;The effect of varying parameter values on the gamma prior</td>
+  </tr>
+</table>
+
+ <p> The prior <span class="styleArial">dgamma(.001,.001)</span> is a gamma distribution with a mean of 1 and a variance of 1000. From the graph this resembles a classic dust bunny distribution (McCune &amp; Grace 2002). Nearly all of the weight is placed at zero but because of the large variance, large values  are also possible. Without the large spike at zero, the prior is essentially flat. Because this is a prior for a precision parameter, a large weight at zero is not considered a problem. In using such a prior for the precision we're  saying that we have no information about the parameter that has this precision. </p>
+<p>The primary rationale for using a gamma prior is that it is a conjugate prior for the precision in a normal model with a known mean. (Technically when the normal priors for the regression coefficients  are independent of the gamma prior for the precision, as they are here, we call them conditionally conjugate or semi-conjugate priors for the normal mean and precision.) Using a conjugate prior yields a posterior distribution of known form. While historically this was   essential for getting estimates analytically, with MCMC it is no longer considered necessary. In the BUGS program of <a href="lecture23.htm#BUGSmodel">lecture 23</a> instead of modeling the precision <span class="styleArial">tau.y</span> directly we chose instead to place a uniform prior on <span class="styleArial">sigma.y</span>, the standard deviation. This is also the approach taken by Gelman &amp; Hill (2006) and Jackman (2009).</p>
+<p class="style103">tau.y &lt;- pow(sigma.y,-2)<br>
+  sigma.y~dunif(0,10000)</p>
+<p>In BUGS models gamma priors for precisions tend to cause numerical problems more often than do uniform priors for standard deviations. Furthermore  the spike at the origin can make it difficult to get variance estimates in some of the multilevel problems we'll be considering later. A gamma prior that is flat over most of its distribution but is quite informative around zero  causes problems if the true value of the precision parameter is actually close to zero. Consequently I will rarely use a gamma prior for the precision in this course.</p>
+<h2><a name="Bayesian" id="Bayesian"></a>Bayesian estimation of a random intercepts model</h2>
+<p> We next revisit a data set we analyzed in <a href="lecture22.htm#count">lecture 22</a>. This is the Jamaican birds data set in which the goal was to determine if bird richness varied by landscape type, in particular whether areas that had been subjected to bauxite mining exhibited lower bird richness. The response variable <span class="styleArial">S</span> is a species count. The counts are far removed from zero and have a modest range so we chose to use a Poisson distribution for the response. Species richness counts were obtained from the same patch in multiple years so this is  a repeated measures data set.  Patches also varied widely in their area so we included log(area) as a covariate. Our final model included a categorical predictor for year, log(area) as a covariate, and a landscape categorical predictor that classified each patch. To account for the repeated measures we included patch random effects that linked together the observations made on the same patch. The final model was a generalized linear mixed effects model that we fit using the <span class="style1">lmer</span> function of the <span class="style19">lme4</span> package. Our goal today is to reproduce those results using  Bayesian methods.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">birds &lt;- read.table( 'ecol 563/birds.csv', 
+  header=T, sep=',')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> birds.short &lt;- birds[!is.na(birds$S),]</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #complete pooling model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model1.glm &lt;- glm(S~factor(year), data=birds.short, family=poisson)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #separate intercepts model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model2.glm &lt;- glm(S~factor(patch)+factor(year), data=birds.short, family=poisson)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #random intercepts model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(lme4)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model3.lmer &lt;- lmer(S~factor(year) + (1|patch), data=birds.short, family=poisson)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #random intercepts model with predictors</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.lmer &lt;- lmer(S~factor(year)+log(area)+landscape +(1|patch), data=birds.short, family=poisson)</div>
+<h3><a name="common"></a>Complete pooling model</h3>
+<p>I start by fitting a Poisson regression model that ignores the inherent structure of these data. This is sometimes referred to as the complete pooling model. I begin with a model that includes categorical  year as the only predictor. The Poisson distribution in BUGS is specified with <span class="styleArial">dpois</span>, the same name as the Poisson probability mass function of R. Consistent with the frequentist approach I use a log link, thus I set the linear predictor equal to the log mean. Therefore to obtain the mean of the Poisson distribution I have to exponentiate the linear predictor.</p>
+<table width="400" border="1" align="center" cellpadding="5">
+  <tr bgcolor="#F1D2D8">
+    <td><div align="center"><strong>Complete pooling model &nbsp;<span class="style44">(model1.txt)</span></strong></div></td>
+  </tr>
+  <tr>
+    <td><div class="style103" style="padding-left: 30px; text-indent:-30px">model{</div>
+      <div class="style103" style="padding-left: 60px; text-indent:-30px"> for(i in 1:n) {</div>
+      <div class="style103" style="padding-left: 90px; text-indent:-30px">y[i]~dpois(mu.hat[i])</div>
+            <div class="style391" style="padding-left: 90px; text-indent:-30px"># log link</div>
+      <div class="style103" style="padding-left: 90px; text-indent:-30px">logmu.hat[i] &lt;- a + b1*year2[i] + b2*year3[i]</div>
+            <div class="style103" style="padding-left: 90px; text-indent:-30px">mu.hat[i] &lt;- exp(logmu.hat[i])</div>
+      <div class="style103" style="padding-left: 60px; text-indent:-30px">}</div>
+      <div class="style103" style="padding-left: 60px; text-indent:-30px">a~dnorm(0,.000001)</div>
+      <div class="style103" style="padding-left: 60px; text-indent:-30px">b1~dnorm(0,.000001)</div>
+      <div class="style103" style="padding-left: 60px; text-indent:-30px">b2~dnorm(0,.000001)</div>
+
+      <div class="style103" style="padding-left: 30px; text-indent:-30px">}</div></td>
+  </tr>
+</table>
+<p>I create the variables and objects needed to fit the model.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#create variables for Bayesian run</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> y &lt;- birds.short$S</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> year2 &lt;- as.numeric(birds.short$year==2006)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> year3 &lt;- as.numeric(birds.short$year==2007)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> n &lt;- length(y)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.data &lt;- list(&quot;y&quot;, &quot;year2&quot;, &quot;year3&quot;, &quot;n&quot;)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.inits &lt;- function() {list(a=rnorm(1), b1=rnorm(1), b2=rnorm(1))}</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.parms &lt;- c(&quot;a&quot;, &quot;b1&quot;, &quot;b2&quot;)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(arm)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">setwd(&quot;C:/Users/jmweiss/Documents/ecol 563/models&quot;)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#fit complete pooling model (ignore structure)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model1.bugs &lt;- bugs(bird.data, bird.inits, bird.parms, &quot;model1.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=100, debug=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model1.bugs &lt;- bugs(bird.data, bird.inits, bird.parms, &quot;model1.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=10000, debug=T)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#JAGS run </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(R2jags)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model1.jags &lt;- jags(bird.data, bird.inits, bird.parms, &quot;model1.txt&quot;, n.chains=3, n.iter=10000)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">round(model1.bugs$summary,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp;&nbsp; sd&nbsp;&nbsp;&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75%&nbsp;&nbsp;&nbsp; 97.5%&nbsp; Rhat n.eff<br>
+  a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.238 0.020&nbsp;&nbsp;&nbsp; 3.199&nbsp;&nbsp;&nbsp; 3.225&nbsp;&nbsp;&nbsp; 3.238&nbsp;&nbsp;&nbsp; 3.253&nbsp;&nbsp;&nbsp; 3.276 1.003&nbsp;&nbsp; 650<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.174 0.034&nbsp;&nbsp; -0.238&nbsp;&nbsp; -0.198&nbsp;&nbsp; -0.174&nbsp;&nbsp; -0.151&nbsp;&nbsp; -0.110 1.002&nbsp;&nbsp; 870<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.129 0.029&nbsp;&nbsp; -0.183&nbsp;&nbsp; -0.150&nbsp;&nbsp; -0.130&nbsp;&nbsp; -0.109&nbsp;&nbsp; -0.071 1.002&nbsp;&nbsp; 730<br>
+deviance 1928.850 2.474 1926.000 1927.000 1928.000 1930.000 1935.000 1.001&nbsp; 1000</span>
+<p><a name="deviance"></a>The deviance statistic reported in the summary table is not the residual deviance or null deviance that we've seen reported in the output of the <span class="style13">glm</span> function. It is just &ndash;2 &times; log-likelihood of the model. If we compare this to &ndash;2 &times; log-likelihood for the frequentist model  we see there is a slight discrepancy.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model1.glm &lt;- glm(S~factor(year), data=birds.short, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> -2*logLik(model1.glm)[1]</div>
+<span class="style24">[1] 1925.771</span>
+<p>The frequentist value is three less than the Bayesian mean deviance. The deviance reported in the BUGS summary table is the average of the separate deviance values from all of the returned Markov chain samples. It is the mean of the posterior distribution of the deviance. This is what the Bayesians denote as <img src="../../images/lectures/lecture24/Dbar.gif" alt="Dbar" width="22" height="25" align="absbottom">. The frequentist value on the other hand is the deviance (&ndash;2 &times; log-likelihood) calculated at the maximum likelihood estimates of the parameters. A Bayesian would approximate the frequentist value by evaluating  &ndash;2 &times; log-likelihood  at the mean of the posterior distributions of the three parameters in the model, a statistic that Bayesians denote <img src="../../images/lectures/lecture24/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom">. Because the reported posterior means are all close to the frequentist maximum likelihood estimates, <img src="../../images/lectures/lecture24/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom"> will be approximately the same as the frequentist value of   &ndash;2 &times; log-likelihood. We can verify this by obtaining the means of the posterior distributions of the parameters and then calculating the Poisson log-likelihood.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">bugs.pred &lt;- exp(model1.bugs$summary[&quot;a&quot;,&quot;mean&quot;] + model1.bugs$summary[&quot;b1&quot;,&quot;mean&quot;]*year2 + model1.bugs$summary[&quot;b2&quot;,&quot;mean&quot;]*year3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> -2*sum(log(dpois(y,lambda=bugs.pred)))</div>
+<span class="style24">[1] 1925.772</span>
+<p>Bayesians calculate the effective number of parameters in the model by subtracting these two quantities.</p>
+<p align="center"><img src="../../images/lectures/lecture24/pD.gif" alt="pD" width="102" height="32" align="absmiddle">.</p>
+<p> As we've seen <img src="../../images/lectures/lecture24/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom"> is three less than <img src="../../images/lectures/lecture24/Dbar.gif" alt="Dbar" width="22" height="25" align="absbottom"> and this does equal the number of model parameters.   Bayesians calculate a statistic DIC (deviance information criterion) that is analogous to AIC. It is defined as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture24/DIC.gif" width="345" height="35" alt="DIC"></p>
+<p>It's returned as part of the output from the <span class="style1">bugs</span> function and is approximately the same as AIC here.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">model1.bugs$DIC</div>
+<span class="style24">[1] 1931.92 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(model1.glm)</div>
+<span class="style24">[1] 1931.771</span>
+<h3><a name="separate"></a>Separate intercepts model</h3>
+<p>Generally speaking the separate intercepts model is usually not interesting because it severely overfits the data. From a Bayesian point of view it is useful because it is transitional to the random intercepts model that we consider next. The separate intercepts model does not include random effects. To fit this model to the birds data we  assume a common year effect but we allow each patch to have a different richness in 2005. Thus each patch has a different intercept that we treat as a fixed effect. For the birds data set the separate intercepts model estimates 101 separate intercepts. In the frequentist version of this model the variable <span class="style261">patch</span> is added to the complete pooling model as a factor with 101 levels. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model2.glm &lt;- glm(S~factor(patch)+factor(year), data=birds.short, family=poisson)</div>
+<p>The separate intercepts  model is a viable alternative to a random intercepts model in the following two cases: </p>
+<ol>
+  <li>when there is a small number of level-2 units or </li>
+  <li>when the particular level-2 units in the sample are of special interest  even more so than the population from which the level-2 units were drawn. </li>
+</ol>
+<p>To set up the separate intercepts model  in WinBUGS we first need to convert the patch variable into a numeric variable. We also need a variable that records the number of patches in the data set. I call the numeric patch variable <span class="style8">patch</span> and I let <span class="style8">J</span> denote the total number of patches present.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">J &lt;- length(unique(birds.short$patch))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">patch &lt;- as.numeric(<span class="style371">factor</span>(birds.short$patch))</div>
+<p>Notice the use of the <span class="style13">factor</span> function in creating the <span class="styleArial">patch</span> variable. This is necessary because the levels of <span class="styleArial">patch</span> were first created in the original <span class="styleArial">birds</span> data frame where there were 102 levels. The variable <span class="styleArial">patch</span> in the data frame <span class="style8">birds.short</span> inherits these levels even though one of the patches has been deleted because it had all missing values for the response.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> length(levels(birds.short$patch))</div>
+<span class="style141">[1] 102</span>
+<p> This would not be a problem except that in turning patch to a numeric variable, the numeric value of a patch derives from its level. The deleted patch  was number 59 and this would create a gap in our list of patch numbers. In the BUGS code we would need to skip over this value somehow, but it's far easier to just renumber the patches by redeclaring the factor variable. This yields the correct number of levels for <span class="styleArial">patch</span> in the shorter data set.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> length(levels(factor(birds.short$patch)))</div>
+<span class="style141">[1] 101</span>
+<p>In the new BUGS program the biggest conceptual change  is that we replace the constant intercept, <span class="style103">a</span>, of the complete pooling model with the varying intercept, <span class="style103">a[j]</span>, of the separate intercepts model. In the table below I've color-coded the corresponding portions of the two models that are different.</p>
+<table width="700" border="1" align="center" cellpadding="1" cellspacing="0">
+  <tr bgcolor="#F1D2D8">
+    <td ><div align="center"><strong>Complete pooling model </strong></div></td>
+    <td ><div align="center"><strong>Separate intercepts model &nbsp;<span class="style44">(model2.txt)</span></strong></div></td>
+  </tr>
+  <tr>
+    <td valign="top"><span class="style261">model{<br>
+      for(i in 1:n) {<br>
+      </span>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px"> y[i]~dpois(mu.hat[i])</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px"> logmu.hat[i]&lt;- <span class="style371">a</span> + b1*year2[i] + b2*year3[i]</div>
+            <div class="style261" style="padding-left: 50px; text-indent:-30px"> mu.hat[i]&lt;- exp(logmu.hat[i])</div>
+      <span class="style261"> }<br>
+      </span><span class="style4011">a~dnorm(0,.000001)</span><span class="style261"><br>
+          b1~dnorm(0,.000001)<br>
+          b2~dnorm(0,.000001)<br>
+          }</span></td>
+    <td><span class="style261">model{<br>
+      </span> <span class="style261">for(i in 1:n) {</span>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px"> y[i]~dpois(mu.hat[i])</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">logmu.hat[i]&lt;- <span class="style371">a[patch[i]]</span> + b1*year2[i] + b2*year3[i]</div>
+                  <div class="style261" style="padding-left: 50px; text-indent:-30px"> mu.hat[i]&lt;- exp(logmu.hat[i])</div>
+ 
+      <span class="style261"> }</span><br>
+      <span class="style4011">for(j in 1:J){</span><br>
+      <div class="style4011" style="padding-left: 50px; text-indent:-30px">a[j]~dnorm(0,.000001)</div>
+      <span class="style4011"> }</span><br>
+      <span class="style261">b1~dnorm(0,.000001)</span><br>
+      <span class="style261"> b2~dnorm(0,.000001)</span><br>
+      <span class="style261">}</span>
+      </p></td>
+  </tr>
+</table>
+<p>Because the model for the response varies by observation we need an index for<span class="style103"> a </span>that also varies with the observation, hence <span class="style103">patch[i]</span>. The variable <span class="style8">patch</span> has 257 values of which only 101 are different. The different values  correspond to the different patches. In the code above <span class="style103">patch[i]</span> does not change its current value until the <span class="style2311">i</span> index reaches an observation that corresponds to a different patch. In the end there are only 101 different intercepts and the code manages to link up the correct intercept with the correct patch for each observation. </p>
+<p>Each of the separate intercepts also gets its own prior so the single prior for the constant intercept in the complete pooling model gets replaced by 101 priors, one for each patch. Because the intercepts are unmodeled, the prior is uninformative. The assignment of priors is efficiently handled with the <span class="style2311">for</span> loop shown at the end of the program. The value of <span class="style103">J</span> is 101, the number of patches, and is listed as data   in the data argument of the <span class="style1021">bugs</span> function. </p>
+<p>I save the BUGS model description in the file <span class="style8">model2.txt </span>in the R working directory. To fit this model we need to add the new data arguments to the data object and change how the initial values for<span class="style103"> a </span>are specified. </p>
+<ul>
+  <li>Two new variables are included in the data list: <span class="style4011">patch</span> and <span class="style4011">J.</span></li>
+  <li>The parameter<span class="style103"> a </span>is assigned a vector of length <span class="style4011">J</span> of random initial values because there are now 101 intercepts to initialize.</li>
+  <li>Notice that even though<span class="style103"> a </span>is now a vector it is still entered in the parameter list as <span class="style103">&quot;a&quot;</span> just as before.</li>
+</ul>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#create objects for BUGS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.data &lt;- list(&quot;y&quot;, &quot;year2&quot;, &quot;year3&quot;, &quot;n&quot;, &quot;<span class="style421">patch</span>&quot;, &quot;<span class="style421">J</span>&quot;)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.inits &lt;- function() {list(a=rnorm(<span class="style421">J</span>), b1=rnorm(1), b2=rnorm(1))}</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">bird.parms &lt;- c(&quot;a&quot;, &quot;b1&quot;, &quot;b2&quot;)</div>
+<p>I try running the model in WinBUGS</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#fit separate intercepts model</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model2.bugs &lt;- bugs(bird.data, bird.inits, bird.parms, &quot;model2.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=100, debug=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model2.bugs &lt;- bugs(bird.data, bird.inits, bird.parms, &quot;model2.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=10000, debug=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#JAGS run</div>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model2.jags &lt;- jags(bird.data, bird.inits, bird.parms, "model2.txt", n.chains=3, n.iter=10000)</div>
+<p>I compare the frequentist with the Bayesian estimates</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(model2.glm)[102:103]</div>
+<span class="style24">  factor(year)2006 factor(year)2007 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.1483309&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.1180493</span>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">round(model2.bugs$summary[102:104,],3)</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp;&nbsp;&nbsp; sd&nbsp;&nbsp;&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75%&nbsp;&nbsp;&nbsp; 97.5%&nbsp; Rhat n.eff<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.147&nbsp; 0.036&nbsp;&nbsp; -0.217&nbsp;&nbsp; -0.170&nbsp;&nbsp; -0.146&nbsp;&nbsp; -0.123&nbsp;&nbsp; -0.074 1.004&nbsp;&nbsp; 480<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.118&nbsp; 0.031&nbsp;&nbsp; -0.174&nbsp;&nbsp; -0.138&nbsp;&nbsp; -0.119&nbsp;&nbsp; -0.098&nbsp;&nbsp; -0.055 1.001&nbsp; 1000<br>
+deviance 1452.927 13.903 1429.000 1443.000 1452.000 1461.000 1483.975 1.002&nbsp; 1000</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(model2.bugs$summary[,&quot;Rhat&quot;])</div>
+<span class="style24">  [1] 1.013346</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> min(model2.bugs$summary[,&quot;n.eff&quot;])</div>
+<span class="style24">  [1] 200</span>
+
+<p>The AIC and DIC once again match.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(model2.glm)</div>
+<span class="style24">[1] 1555.208</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">model2.bugs$DIC</div>
+<span class="style24">[1] 1555.98</span>
+
+<p>In lecture 25  we'll fit the random effects version of this model.</p>
+<h2><a name="cited"></a>Cited references</h2>
+<ul>
+  <li>Gelman, Andrew and Jennifer Hill. 2006. <em>Data Analysis Using Regression and Multilevel/Hierarchical Models</em>. Cambridge University Press: New York.</li>
+  <li>Jackman, Simon. 2009. <em>Bayesian Analysis for the Social Sciences</em>. Wiley.</li>
+  <li>McCune, Bruce and James Grace. 2002. <em>The Analysis of Ecological Communities</em>. MjM Software Design.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture24&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 21, 2012<br>
+      URL: <a href="lecture24.htm#lecture24" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture24.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

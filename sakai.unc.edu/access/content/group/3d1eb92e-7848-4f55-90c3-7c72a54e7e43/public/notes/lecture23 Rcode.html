@@ -1,0 +1,144 @@
+<html>
+<head>
+<style type="text/css">
+.number{
+	color: rgb(21,20,181) ;
+}
+
+.functioncall{
+	color: red ;
+}
+
+.string{
+	color: rgb(153,153,255) ;
+}
+
+.keyword{
+	font-weight: bolder ;
+	color: black;
+}
+
+.argument{
+	color: rgb( 177,63,5) ;
+}
+
+.comment{
+	color: rgb( 204,204,204) ;
+}
+
+.roxygencomment{
+	color: rgb(0,151,255);
+}
+
+.formalargs{
+	color: rgb(18,182,18);
+}
+
+.eqformalargs{
+	color: rgb(18,182,18);
+}
+
+.assignement{
+	font-weight: bolder;
+	color: rgb(55,55,98);
+}
+
+.package{
+	color: rgb(150,182,37);
+}
+
+.slot{
+	font-style:italic;
+}
+
+.symbol{
+	color: black ;
+}
+
+.prompt{
+	color: black ;
+}
+
+</style>
+
+<title>R Code for Lecture 23 (Monday, November 12, 2012)</title><h2 align="center">R Code for Lecture 23 (Monday, November 12, 2012)</h2>
+
+<body>
+
+<pre>
+<span class="symbol">ipo</span> <span class="assignement">&lt;-</span> <span class="functioncall">read.delim</span><span class="keyword">(</span><span class="string">'ecol 563/ipomopsis.txt'</span><span class="keyword">)</span>
+<span class="symbol">ipo</span><span class="keyword">[</span><span class="number">1</span><span class="keyword">:</span><span class="number">8</span><span class="keyword">,</span><span class="keyword">]</span>
+<span class="symbol">out1</span> <span class="assignement">&lt;-</span> <span class="functioncall">lm</span><span class="keyword">(</span><span class="symbol">Fruit</span><span class="keyword">~</span><span class="symbol">Root</span><span class="keyword">+</span><span class="symbol">Grazing</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">ipo</span><span class="keyword">)</span>
+<span class="functioncall">coef</span><span class="keyword">(</span><span class="symbol">out1</span><span class="keyword">)</span>
+
+<span class="comment"># package for BUGS</span>
+<span class="functioncall">library</span><span class="keyword">(</span><span class="symbol">arm</span><span class="keyword">)</span>
+<span class="comment"># package for JAGS</span>
+<span class="functioncall">library</span><span class="keyword">(</span><span class="symbol">R2jags</span><span class="keyword">)</span>
+
+<span class="comment"># create variables</span>
+<span class="symbol">x</span> <span class="assignement">&lt;-</span> <span class="symbol">ipo</span><span class="keyword">$</span><span class="symbol">Root</span>
+<span class="symbol">y</span> <span class="assignement">&lt;-</span> <span class="symbol">ipo</span><span class="keyword">$</span><span class="symbol">Fruit</span>
+<span class="comment"># create dummy variable for grazing</span>
+<span class="symbol">z</span> <span class="assignement">&lt;-</span> <span class="functioncall">as.numeric</span><span class="keyword">(</span><span class="symbol">ipo</span><span class="keyword">$</span><span class="symbol">Grazing</span><span class="keyword">)</span><span class="keyword">-</span><span class="number">1</span>
+<span class="symbol">n</span> <span class="assignement">&lt;-</span> <span class="functioncall">length</span><span class="keyword">(</span><span class="symbol">y</span><span class="keyword">)</span>
+
+<span class="comment">##### BUGS/JAGS program stored in separate file: ipomodel.txt</span>
+</pre>
+
+<p><code>model {</code></p>
+<p><code>  # likelihood<br>
+  for (i in 1:n) {<br>
+  y[i] ~ dnorm(y.hat[i], tau.y)<br>
+  y.hat[i] &lt;- b0 + b1*x[i] + b2*z[i]<br>
+  }</code></p>
+  <p><code># priors<br>
+  b0 ~ dnorm(0, .000001)<br>
+  b1 ~ dnorm(0, .000001)<br>
+  b2 ~ dnorm(0, .000001)</code></p>
+<p><code># tau.y ~ dgamma(.001,.001)</code><br>
+<code>tau.y &lt;- pow(sigma.y,-2)<br>
+  sigma.y ~ dunif(0,10000)<br>
+  }</code></p>
+<pre>
+<span class="comment">########</span>
+
+<span class="comment"># set working directory where BUGS program file is stored</span>
+<span class="functioncall">setwd</span><span class="keyword">(</span><span class="string">"C:/Users/jmweiss/Documents/ecol 563"</span><span class="keyword">)</span>
+
+<span class="comment"># list of variables in model</span>
+<span class="symbol">ipo.data</span> <span class="assignement">&lt;-</span> <span class="functioncall">list</span><span class="keyword">(</span><span class="string">"n"</span><span class="keyword">,</span> <span class="string">"y"</span><span class="keyword">,</span> <span class="string">"z"</span><span class="keyword">,</span> <span class="string">"x"</span><span class="keyword">)</span>
+<span class="comment"># initial value functions for chains</span>
+<span class="symbol">ipo.inits</span> <span class="assignement">&lt;-</span> <span class="keyword">function</span><span class="keyword">(</span><span class="keyword">)</span> <span class="keyword">{</span><span class="functioncall">list</span><span class="keyword">(</span><span class="argument">b0</span><span class="argument">=</span><span class="functioncall">rnorm</span><span class="keyword">(</span><span class="number">1</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">b1</span><span class="argument">=</span><span class="functioncall">rnorm</span><span class="keyword">(</span><span class="number">1</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">b2</span><span class="argument">=</span><span class="functioncall">rnorm</span><span class="keyword">(</span><span class="number">1</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">sigma.y</span><span class="argument">=</span><span class="functioncall">runif</span><span class="keyword">(</span><span class="number">1</span><span class="keyword">)</span> <span class="keyword">)</span><span class="keyword">}</span>
+<span class="comment"># parameters whose posterior distributions should be returned</span>
+<span class="symbol">ipo.parms</span> <span class="assignement">&lt;-</span> <span class="functioncall">c</span><span class="keyword">(</span><span class="string">"b0"</span><span class="keyword">,</span> <span class="string">"b1"</span><span class="keyword">,</span><span class="string">"b2"</span><span class="keyword">,</span><span class="string">"sigma.y"</span><span class="keyword">)</span>
+
+<span class="comment"># if WinBUGS program is in default location</span>
+<span class="symbol">ipo.1</span> <span class="assignement">&lt;-</span> <span class="functioncall">bugs</span><span class="keyword">(</span><span class="symbol">ipo.data</span><span class="keyword">,</span> <span class="symbol">ipo.inits</span><span class="keyword">,</span> <span class="symbol">ipo.parms</span><span class="keyword">,</span> <span class="string">"ipomodel.txt"</span><span class="keyword">,</span> <span class="argument">n.chains</span><span class="argument">=</span><span class="number">3</span><span class="keyword">,</span> <span class="argument">n.iter</span><span class="argument">=</span><span class="number">100</span><span class="keyword">,</span> <span class="argument">debug</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span>
+<span class="comment"># specify location of WinBUGS program</span>
+<span class="symbol">ipo.1</span> <span class="assignement">&lt;-</span> <span class="functioncall">bugs</span><span class="keyword">(</span><span class="symbol">ipo.data</span><span class="keyword">,</span> <span class="symbol">ipo.inits</span><span class="keyword">,</span> <span class="symbol">ipo.parms</span><span class="keyword">,</span> <span class="string">"ipomodel.txt"</span><span class="keyword">,</span> <span class="argument">bugs.directory</span><span class="argument">=</span><span class="string">"C:/WinBUGS14"</span><span class="keyword">,</span> <span class="argument">n.chains</span><span class="argument">=</span><span class="number">3</span><span class="keyword">,</span> <span class="argument">n.iter</span><span class="argument">=</span><span class="number">100</span><span class="keyword">,</span> <span class="argument">debug</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span>
+<span class="comment"># rerun with more iterations</span>
+<span class="symbol">ipo.1</span> <span class="assignement">&lt;-</span> <span class="functioncall">bugs</span><span class="keyword">(</span><span class="symbol">ipo.data</span><span class="keyword">,</span> <span class="symbol">ipo.inits</span><span class="keyword">,</span> <span class="symbol">ipo.parms</span><span class="keyword">,</span> <span class="string">"ipomodel.txt"</span><span class="keyword">,</span> <span class="argument">bugs.directory</span><span class="argument">=</span><span class="string">"C:/WinBUGS14"</span><span class="keyword">,</span> <span class="argument">n.chains</span><span class="argument">=</span><span class="number">3</span><span class="keyword">,</span> <span class="argument">n.iter</span><span class="argument">=</span><span class="number">1000</span><span class="keyword">,</span> <span class="argument">debug</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span>
+
+<span class="comment"># JAGS run</span>
+<span class="symbol">ipo.1.jags</span> <span class="assignement">&lt;-</span> <span class="functioncall">jags</span><span class="keyword">(</span><span class="symbol">ipo.data</span><span class="keyword">,</span> <span class="symbol">ipo.inits</span><span class="keyword">,</span> <span class="symbol">ipo.parms</span><span class="keyword">,</span> <span class="string">"ipomodel.txt"</span><span class="keyword">,</span> <span class="argument">n.chains</span><span class="argument">=</span><span class="number">3</span><span class="keyword">,</span> <span class="argument">n.iter</span><span class="argument">=</span><span class="number">1000</span><span class="keyword">)</span>
+<span class="comment"># WinBUGS components</span>
+<span class="functioncall">names</span><span class="keyword">(</span><span class="symbol">ipo.1</span><span class="keyword">)</span>
+<span class="comment"># JAGS components</span>
+<span class="functioncall">names</span><span class="keyword">(</span><span class="symbol">ipo.1.jags</span><span class="keyword">)</span>
+<span class="comment"># JAGS components in WinBUGS format</span>
+<span class="functioncall">names</span><span class="keyword">(</span><span class="symbol">ipo.1.jags</span><span class="keyword">$</span><span class="symbol">BUGSoutput</span><span class="keyword">)</span>
+
+<span class="comment"># model summary</span>
+<span class="symbol">ipo.1</span><span class="keyword">$</span><span class="symbol">summary</span>
+<span class="symbol">ipo.1.jags</span><span class="keyword">$</span><span class="symbol">BUGSoutput</span><span class="keyword">$</span><span class="symbol">summary</span>
+
+<span class="comment"># compare with frequentist results</span>
+<span class="functioncall">coef</span><span class="keyword">(</span><span class="symbol">out1</span><span class="keyword">)</span>
+
+<span class="comment"># samples of posterior distributions</span>
+<span class="symbol">ipo.1</span><span class="keyword">$</span><span class="symbol">sims.matrix</span><span class="keyword">[</span><span class="number">1</span><span class="keyword">:</span><span class="number">10</span><span class="keyword">,</span><span class="keyword">]</span>
+<span class="functioncall">dim</span><span class="keyword">(</span><span class="symbol">ipo.1</span><span class="keyword">$</span><span class="symbol">sims.matrix</span><span class="keyword">)</span>
+</pre>
+</body>
+</html>

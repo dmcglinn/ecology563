@@ -1,0 +1,897 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 9&mdash;Monday, September 24, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture9" id="lecture4"></a>Lecture 9&mdash;Monday, September 24, 2012</h1>
+<h3>Topics </h3>
+<ul>
+<li><a href="lecture9.htm#ancova">Analysis of covariance</a></li>
+<li><a href="lecture9.htm#extension">Analysis of covariance as an extension of  analysis of variance </a>
+  <ul>
+    <li><a href="lecture9.htm#wrong">A poor way to control for root size&mdash;create a ratio variable</a></li>
+    <li><a href="lecture9.htm#correct">A better  way to control for root size&mdash;analysis of covariance</a></li>
+    <li><a href="lecture9.htm#graphing">Graphing the analysis of covariance model</a></li>
+    <li><a href="lecture9.htm#ratios">The problem with ratios</a></li>
+  </ul>
+</li>
+  <li><a href="lecture9.htm#comparing">Comparing regression models across groups</a></li>
+  <li><a href="lecture9.htm#assessing">Assessing treatment differences in the presence of an interaction</a></li>
+  <li><a href="lecture9.htm#cited">Cited references</a></li>
+  <li><a href="lecture9.htm#reference">References on the ratio &quot;problem&quot;</a></li>
+  <li><a href="lecture9.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture9.htm#abline">abline</a> adds a straight line regression model to an already existing graph.</li>
+  <li><a href="lecture9.htm#graphing">curve</a> is used to draw a curve that is a function of <em>x</em>. It can be used to draw a curve in a new graphics window or to add a specific curve to an already existing plot.</li>
+  <li><a href="lecture9.htm#ttest">t.test</a> carries out a two-sample t-test.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+<li><a href="lecture9.htm#graphing">add=</a> (argument to <span class="style1">curve</span>) when set to TRUE causes <span class="style1">curve</span> to add a specified curve to an already existing plot.</li>
+<li><a href="lecture9.htm#from">from=</a> (argument to <span class="style1">curve</span>) specifies a value for <em>x</em> at which to start drawing the curve.</li>
+  <li><a href="lecture9.htm#from">to=</a> (argument to <span class="style1">curve</span>) specifies a value for <em>x</em> at which to stop drawing the curve.</li>
+  <li><a href="lecture9.htm#ttest">var.equal</a>= (argument to <span class="style1">t.test</span>) when set to TRUE specifies the pooled variance independent samples t-test.</li>
+</ul>
+<h2><a name="ancova"></a>Analysis of Covariance </h2>
+<p> Analysis of covariance is just a regression model in which the main predictor(s) of interest is (are) categorical, but a potentially confounding continuous variable was also measured. Thus analysis of covariance is analysis of variance in which there is one or more additional continuous covariates. The terminology dates from a time when it was not generally appreciated that regression is the common theme that links analysis of variance and regression models together.</p>
+<p>There are two basic uses for analysis of covariance and related models.</p>
+<ol>
+  <li><strong>Extending analysis of variance to include a continuous covariate</strong>. Here the primary objective is to determine if the mean of a variable <em>y</em> varies across groups, denoted by factor variable <em>g</em>. This is the classic analysis of variance problem. But suppose we  discover that the groups also differ in the distribution of a continuous variable <em>x</em>, a variable that also happens to have a linear relationship with the response variable <em>y</em>. Suppose   that  the relationship between <em>y</em> and <em>x</em> is roughly the same in each of the groups. Analysis of covariance can be used to determine if the mean response of <em>y</em> is different in the different groups <em>g</em> while  controlling  for the effect of the continuous variable <em>x</em>. Analysis of covariance is the regression of <em>y</em> on both <em>x</em> and<em> g </em>in which  <em>x</em> and <em>g</em> have only an additive effect on <em>y</em>.</li>
+  <li><strong>Separate regressions for different subpopulations</strong>. Suppose we know that two continuous variables <em>y</em> and <em>x</em> are linearly related but we suspect that the relationship is not the same in different subgroups <em>g</em> of our population. Either the slopes and/or the intercepts of the relationship may vary. To investigate this we carry out a regression of <em>y</em> on <em>x</em>, <em>g</em>, and the interaction of <em>x</em> and <em>g</em>. If the interaction term  is not statistically significant then this model reduces to the analysis of covariance model described in (1).</li>
+</ol>
+<h2><a name="extension"></a>Analysis of covariance as an extension of  analysis of variance </h2>
+<p>The example we'll consider appears in Crawley (2002), p. 287, (also Crawley 2007) where it is described as follows. </p>
+<blockquote>
+  <p>&quot;The next worked example concerns an experiment on the impact of grazing on the seed production of a biennial plant (<em>Ipomopsis</em>). Forty plants were allocated to treatments, grazed and ungrazed, and the grazed plants were exposed to rabbits during the first two weeks of stem elongation. They were then protected from subsequent grazing by the erection of a fence and allowed to regrow. Because initial plant size was thought likely to influence fruit production, the diameter of the top of the rootstock was measured before each plant was potted up. At the end of the growing season, the fruit production (dry weight, mg) was recorded on each of the 40 plants, and this forms the response variable for the analysis.&quot;</p>
+</blockquote>
+<p>There are three recorded variables. </p>
+<ul>
+  <li>Fruit: the response variable</li>
+  <li>Grazing: a categorical variable that identifies the treatment, Grazed or Ungrazed</li>
+  <li>Root: a proxy for plant size, a confounding variable that is known to influence the amount of fruit produced</li>
+</ul>
+<p>The goal is to determine the effect  that grazing on plants when they're young has on their fruit production when they're adults.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">ipo &lt;- read.table( 'ecol 563/ipomopsis.txt', header=T) </div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ipo[1:10,]</div>
+<span class="style24">&nbsp;&nbsp;&nbsp; Root Fruit&nbsp; Grazing<br>
+1&nbsp; 6.225 59.77 Ungrazed<br>
+2&nbsp; 6.487 60.98 Ungrazed<br>
+3&nbsp; 4.919 14.73 Ungrazed<br>
+4&nbsp; 5.130 19.28 Ungrazed<br>
+5&nbsp; 5.417 34.25 Ungrazed<br>
+6&nbsp; 5.359 35.53 Ungrazed<br>
+7&nbsp; 7.614 87.73 Ungrazed<br>
+8&nbsp; 6.352 63.21 Ungrazed<br>
+9&nbsp; 4.975 24.25 Ungrazed<br>
+10 6.930 64.34 Ungrazed</span>
+<p>To test for a grazing effect on fruit production we carry out an analysis of variance.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out0 &lt;- lm(Fruit~Grazing, data=ipo)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out0)</div>
+
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: Fruit<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value&nbsp; Pr(&gt;F)&nbsp; <br>
+  Grazing&nbsp;&nbsp;&nbsp; 1&nbsp; 2910.4 2910.44&nbsp; 5.3086 0.02678 *<br>
+  Residuals 38 20833.4&nbsp; 548.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 <br>
+  </span>
+<p>So there's a significant effect due to grazing. When we examine the estimated effect we see that it's in a surprising direction. Grazed plants have higher fruit production than ungrazed plants.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # grazing has a positive effect</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out0)</div>
+<span class="style24">Call:<br>
+lm(formula = Fruit ~ Grazing, data = ipo)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -52.991 -18.028&nbsp;&nbsp; 2.915&nbsp; 14.049&nbsp; 48.109 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 67.941&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.236&nbsp; 12.976 1.54e-15 ***<br>
+  GrazingUngrazed&nbsp; </span><span class="style25">-17.060</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.404 &nbsp;-2.304&nbsp;&nbsp; </span><span class="style25">0.0268</span><span class="style24"> *&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 23.41 on 38 degrees of freedom<br>
+  Multiple R-squared: 0.1226,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: 0.09949 <br>
+  F-statistic: 5.309 on 1 and 38 DF,&nbsp; p-value: 0.02678 </span>
+<p><a name="ttest"></a>It's worth noting that analysis of variance when a categorical predictor has two levels is identical to carrying out a two sample <em>t</em>-test. We can carry out a <em>t</em>-test in R with the <span class="style1">t.test</span> function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # t-test with separate variances</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> t.test(Fruit ~ Grazing, data = ipo)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Welch Two Sample t-test</span>
+<p><span class="style24">data:&nbsp; Fruit by Grazing <br>
+  t = 2.304, df = 37.306, p-value = 0.02689<br>
+  alternative hypothesis: true difference in means is not equal to 0 <br>
+  95 percent confidence interval:<br>
+  &nbsp; 2.061464 32.058536 <br>
+  sample estimates:<br>
+  &nbsp; mean in group Grazed mean in group Ungrazed <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 67.9405&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50.8805 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # t-test with pooled variances = ANOVA</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> t.test(Fruit ~ Grazing, data = ipo, var.equal=T)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Two Sample t-test</span>
+<p><span class="style24">data:&nbsp; Fruit by Grazing <br>
+  t = 2.304, df = 38, p-value = 0.02678<br>
+  alternative hypothesis: true difference in means is not equal to 0 <br>
+  95 percent confidence interval:<br>
+  &nbsp; 2.070631 32.049369 <br>
+  sample estimates:<br>
+  &nbsp; mean in group Grazed mean in group Ungrazed <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 67.9405&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50.8805 </span>
+<p>The ANOVA result is identical to the pooled-variances <em>t</em>-test obtained by specifying <span class="style22">var.equal=T</span>. The separate variances <em>t</em>-test is equivalent to the variance heterogeneity  ANOVA model like the one we fit using <span class="style1">gls</span> with a weights argument in <a href="lecture3.htm#weights">lecture 3</a>.</p>
+<p>If we plot the distribution of fruit mass in the two groups we see that the distributions are consistent with the analytical results. Grazed plants have a higher average fruit production than do ungrazed plants.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">boxplot(Fruit~Grazing, data=ipo, ylab='Fruit mass (mg)')</div>
+<p align="center"><img src="../../images/lectures/lecture9/boxplot.png" width="335" height="230" alt="fig 1"></p>
+<p align="center" class="styleArial1"><strong>Fig. 1</strong>&nbsp; The effect of grazing on fruit mass</p>
+<p>So far we've been ignoring the covariate root size that was also measured as part of the experiment. In Fig. 2 I plot  fruit mass versus root size color coding the  points according to their grazing status. I use the numeric values of the Grazing factor, 1 and 2, as the argument to <span class="style22">col=</span> to specify the color codes 1 and 2. I do the same to get different plotting symbols but this time using 1 and 2 to select either the first or the second element of the vector <span class="style8">mypch</span> that specifies open and filled circles.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mypch &lt;- c(1,16)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(Fruit~Root, data=ipo, col=as.numeric(Grazing), pch=mypch[as.numeric(Grazing)])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">legend('topleft', levels(ipo$Grazing), col=1:2, pch=mypch, cex=.9, bty='n')</div>
+<p align="center"><img src="../../images/lectures/lecture9/fig1.png" width="455" height="370" alt="fig 1"></p>
+<p align="center" class="styleArial1"><strong>Fig. 2</strong>&nbsp; The effect of grazing on fruit mass 
+  while controlling for root size </p>
+<p>Observe that the root size distributions are different in the two treatment groups. The plants in the grazed group tend to have larger root sizes that those in the ungrazed group. Also notice that there is a strong linear relationship between fruit production and root size. Thus it seems possible that by not accounting for root size in our analysis that the estimation of a treatment effect has been compromised.</p>
+<h3><a name="wrong"></a>A poor way to control for root size&mdash;create a ratio variable</h3>
+<p>In the biological literature a   method that is often used to adjust for a potentially confounding variable such as root size is to create a new response variable that is the ratio of the original response variable and the confounder. Using this approach here we would analyze the ratio of fruit production to root size rather than  fruit production. If we do so we find that the fruit production to root size ratio is not significantly different between the two grazing groups. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # change response variable to a ratio</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out0a &lt;- lm(Fruit/Root~Grazing, data=ipo)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # grazing effect is not significant</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out0a)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: Fruit/Root<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value Pr(&gt;F)<br>
+  Grazing&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 0.177&nbsp; 0.1773&nbsp; 0.0306&nbsp; </span><span class="style25">0.862</span><span class="style24"><br>
+  Residuals 38 219.994&nbsp; 5.7893&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # grazing has negative effect but is not significant</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out0a)</div>
+<span class="style24">Call:<br>
+  lm(formula = Fruit/Root ~ Grazing, data = ipo)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -5.4980 -1.6605&nbsp; 0.7814&nbsp; 1.5884&nbsp; 3.4426 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.9464&nbsp;&nbsp;&nbsp;&nbsp; 0.5380&nbsp; 14.770&nbsp;&nbsp; &lt;2e-16 ***<br>
+  GrazingUngrazed&nbsp;&nbsp; </span><span class="style25">0.1332</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp; 0.7609&nbsp;&nbsp; 0.175&nbsp;&nbsp;&nbsp; </span><span class="style25">0.862</span><span class="style24">&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 2.406 on 38 degrees of freedom<br>
+  Multiple R-squared: 0.0008054,&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: -0.02549 <br>
+  F-statistic: 0.03063 on 1 and 38 DF,&nbsp; p-value: 0.862 </span>
+<p>Notice that although the point estimate of the grazing effect on the ratio is not significant, it is positive suggesting that  ungrazed plots have a larger fruit to root ratio than do grazed plots. This is the reverse of the direction we found when not accounting for root size.</p>
+<p>In addition to creating a variable that is harder to interpret than  the original variable, the use of a ratio response makes some unwarranted assumptions about the relationship of fruit production to root size. We'll examine these assumptions <a href="lecture9.htm#ratios">below</a> after we  consider a better way to adjust for root size&mdash;analysis of covariance.</p>
+<h3><a name="correct"></a>A better way to control for root size&mdash;analysis of covariance</h3>
+<p>Notice that in Fig. 2 the  two treatment groups are completely segregated each lying within a distinct band. At any root size where the treatment groups overlap, the fruit production is seen to be higher for the ungrazed group and than for the grazed group. This suggests that there is a treatment effect, although not as simple as an ordinary mean difference between the groups. Given that a linear relationship between fruit mass and root size appears to be  appropriate for both treatment groups there are three possible models to consider here.</p>
+<ul>
+  <li><strong>Model 1</strong>: <span class="style121">Single line model</span>. Fruit production is linearly related to root size. Grazing has no effect (Fig. 3a). </li>
+  <li><strong>Model 2</strong>: <span class="style121">Parallel lines model</span>, also called the <span class="style121">additive model</span>. Fruit production is linearly related to root size and the relationship is the same under both grazing regimes. The effect of grazing is to decrease fruit production by a constant amount at all root sizes (Fig. 3b). This is the classic analysis of covariance model and appears to match what we see in Fig. 2. </li>
+  <li><strong>Model 3</strong>: <span class="style121">Non-parallel lines model</span>, also called the <span class="style121">interaction model</span>. Fruit production is linearly related to root size but the nature of the relationship changes depending on the presence or absence of grazing (Fig. 3c). </li>
+</ul>
+<div align="center">
+  <table width="700" border="0" cellpadding="5">
+    <tr>
+      <td>(a)<img src="../../images/lectures/lecture9/nfig3a.png" width="229" height="222" alt="fig2a"></td>
+      <td>(b)<img src="../../images/lectures/lecture9/nfig3b.png" width="229" height="222" alt="fig 2b"></td>
+      <td>(c)<img src="../../images/lectures/lecture9/nfig3C.png" width="232" height="222" alt="fig 2c"></td>
+    </tr>
+    <tr>
+      <td colspan="3" class="styleArial1"><strong>Fig. 3</strong> &nbsp;Three possible regression models for the effect of grazing on fruit production</td>
+    </tr>
+  </table>
+</div>
+<p>Let</p>
+<p align="center"><img src="../../images/lectures/lecture9/crawleymodel.gif" width="345" height="73" alt="crawley model"></p>
+<p>The three models can be expressed as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture9/threemodels.gif" width="308" height="87" alt="three models"></p>
+<p>Regression models with categorical variables can also be written as multiple linear equations where there is a separate equation for each category of the categorical variable. A regression model with a single dummy variable yields two different equations, one for each value of the dummy variable. To see the connection between the three models described above and Fig. 3, replace the dummy variable <em>Z</em> by its values 0 and 1. </p>
+<p><strong>Model 2: Parallel lines</strong></p>
+<p align="center"><img src="../../images/lectures/lecture9/grazing&#32;model&#32;2.gif" width="317" height="152" alt="grazing model 2"></p>
+<p>We have the equations of two lines that have the same slope, &beta;<sub>1</sub>, but different intercepts. The parameter &beta;<sub>2</sub> measures how much the intercepts differ. It also corresponds to the vertical distance between the parallel lines in Fig. 3b.</p>
+<p><strong><a name="model3"></a>Model 3: Non-parallel lines</strong></p>
+<p align="center"><img src="../../images/lectures/lecture9/grazing&#32;model&#32;3.gif" width="388" height="152" alt="grazing model 3"></p>
+<p>Here we have the equations of two lines with different intercepts and different slopes. The parameter &beta;<sub>2</sub> measures how much the intercepts differ. The parameter &beta;<sub>3</sub> measures how much the slopes differ.</p>
+<p>I fit a sequence of models starting with the single line model, then the additive model, and finally the full interaction model. The additive model is  the analysis of covariance model in this example. When we examine model 1 in which root is the only predictor, we see that there is a significant positive effect due to root size.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- lm(Fruit~Root, data=ipo)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">round(summary(out1)$coefficients,3)</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)<br>
+(Intercept)&nbsp; -41.286&nbsp;&nbsp;&nbsp;&nbsp; 10.723&nbsp; -3.850&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+Root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14.022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.463&nbsp;&nbsp; 9.584&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span>
+<p>Next we turn to model 2, the parallel lines model.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out2 &lt;- lm(Fruit~Root+Grazing, data=ipo)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out2)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: Fruit<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  Root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 16795.0 16795.0&nbsp; 368.91 &lt; 2.2e-16 ***<br>
+  Grazing&nbsp;&nbsp;&nbsp; 1&nbsp; 5264.4&nbsp; 5264.4&nbsp; 115.63 </span><span class="style25">6.107e-13</span><span class="style24"> ***<br>
+  Residuals 37&nbsp; 1684.5&nbsp;&nbsp;&nbsp; 45.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+  <p>From the output we see that having controlled for root size, there is a significant grazing effect on fruit production. To see the nature of that effect we can examine the summary table of the model.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # now grazing has a significant negative effect</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out2)</div>
+<span class="style24">Call:<br>
+  lm(formula = Fruit ~ Root + Grazing, data = ipo)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -17.1920&nbsp; -2.8224&nbsp;&nbsp; 0.3223&nbsp;&nbsp; 3.9144&nbsp; 17.3290 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; -127.829&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.664&nbsp; -13.23 1.35e-15 ***<br>
+  Root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.560&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.149&nbsp;&nbsp; 20.51&nbsp; &lt; 2e-16 ***<br>
+  GrazingUngrazed&nbsp;&nbsp; </span><span class="style25">36.103</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.357&nbsp;&nbsp; 10.75 </span><span class="style25">6.11e-13</span><span class="style24"> ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 6.747 on 37 degrees of freedom<br>
+  Multiple R-squared: 0.9291,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: 0.9252 <br>
+  F-statistic: 242.3 on 2 and 37 DF,&nbsp; p-value: &lt; 2.2e-16 </span>
+<p>According to  model 2 the fruits of ungrazed plants are on average 36.1 mg heavier than the fruits of grazed plants. Finally I consider model 3, the non-parallel lines model.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # examine interaction model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out3 &lt;- lm(Fruit~Root*Grazing, data=ipo)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # test whether slopes are the same</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out3)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: Fruit<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq&nbsp; F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  Root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 16795.0 16795.0 359.9681 &lt; 2.2e-16 ***<br>
+  Grazing&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;1&nbsp; 5264.4&nbsp; 5264.4 112.8316 1.209e-12 ***<br>
+  Root:Grazing&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 4.8&nbsp;&nbsp;&nbsp;&nbsp; 4.8&nbsp;&nbsp; 0.1031&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">0.75</span><span class="style24">&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp; 36&nbsp; 1679.6&nbsp;&nbsp;&nbsp; 46.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span></p>
+<p>
+  The interaction is not significant thus we can stick with the parallel lines model. Because the interaction is not significant, the linear relationship between fruit mass and root size is the same in both grazing groups. I re-examine the coefficients of the parallel lines model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(out2)$coefficients,3)</div>
+
+<span class="style24"> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)<br>
+(Intercept)&nbsp;&nbsp;&nbsp;&nbsp; -127.829&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.664 -13.227&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+Root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.560&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.149&nbsp; 20.509&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+GrazingUngrazed&nbsp;&nbsp; 36.103&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.357&nbsp; 10.753&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span>
+<p>The parallel lines model is the classic analysis of covariance model. In this model the grazing effect term adds to the intercept, so the intercept of the fruit-root relationship is 36.1 units larger  for ungrazed plants than it is for grazed plants. Because the lines are parallel, 36.1 is also the vertical distance between the lines at any root size. So we can say  that ungrazed plants yield fruit that is on average 36.1 mg heavier than the the fruit of grazed plants after controlling for the size of the plant (based on the size of their root). This result is the exact opposite of the one we obtained when we did not control for the confounding effects of root size.  The utility of the analysis of covariance model is that it allows us to statistically control for systematic differences between groups so that we can validly compare the means of the groups.
+</p>
+<h3><a name="graphing"></a>Graphing the analysis of covariance model</h3>
+<p>I graph the raw data and superimpose the best model, the  parallel lines model (model 2).  A convenient way to superimpose functions on already plotted data is with the <span class="style1">curve</span> function. The first argument of <span class="style1">curve</span> should be a function of the variable <em>x</em>. To force the <span class="style1">curve</span> function to add the graph of the function to the currently active graphics window we need to include the <span class="style22">add=T</span> argument.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"># write function that yields ANCOVA regression model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2)</div>
+
+<span class="style24">   &nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Root GrazingUngrazed <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; -127.82936&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.56005&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36.10325 </span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> myfunc &lt;- function(x,z) coef(out2)[1] + coef(out2)[2]*x + coef(out2)[3]*z</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # plot models separately by grazing status</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mypch &lt;- c(1,16)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(Fruit~Root, data=ipo, col=as.numeric(Grazing), pch=mypch[as.numeric(Grazing)])</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # grazed group</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(myfunc(x,0), col=1, lty=2, add=T)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # ungrazed group</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(myfunc(x,1), col=2, lty=2, add=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> legend('topleft', levels(ipo$Grazing), col=1:2, pch=mypch, cex=.9, bty='n')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> arrows(6.7, myfunc(6.7,0), 6.7, myfunc(6.7,1), code=3, angle=45, length=.07, col=4, lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> text(6.78, 44, expression(beta[2]==36.1), pos=2, cex=.95, col=4)</div>
+<p align="center"><img src="../../images/lectures/lecture9/fig2.png" width="455" height="370" alt="fig 2"></p>
+<p align="center" class="styleArial1"><strong>Fig. 4</strong>&nbsp; Analysis of covariance model showing the treatment effect &beta;<sub>2</sub></p>
+<p><a name="from" id="from"></a>The estimate of the grazing effect on fruit mass corresponds to the vertical distance between the parallel lines in Fig. 4. Generally speaking when graphing regression lines we should not extrapolate beyond the range of the data. I redraw Fig. 4 and truncate the regression lines accordingly using the minimum and maximum values of root size in each grazing group. The <span class="style1">curve</span> function has <span class="style22">from=</span> and <span class="style22">to=</span> arguments that allow you to specify <em>x</em>-axis limits in drawing the function.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#redo plot so that regression lines do not extend beyond data</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(Fruit~Root, data=ipo, col=as.numeric(Grazing), pch=mypch[as.numeric(Grazing)])</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(myfunc(x,0) ,col=1, lty=2, add=T, <span class="style39">from=min(ipo$Root[ipo$Grazing=='Grazed'])</span>, <span class="style39">to=max(ipo$Root[ipo$Grazing=='Grazed'])</span>)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(myfunc(x,1), col=2, lty=2, add=T, <span class="style39">from=min(ipo$Root[ipo$Grazing=='Ungrazed'])</span>, <span class="style39">to=max(ipo$Root[ipo$Grazing=='Ungrazed'])</span>)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">legend('topleft', levels(ipo$Grazing), col=1:2, pch=mypch, cex=.9, bty='n')</div>
+<p align="center"><img src="../../images/lectures/lecture9/fig3.png" width="421" height="315" alt="fig 4"></p>
+<p align="center"><span class="styleArial1"><strong>Fig. 5</strong>&nbsp; Analysis of covariance model</span> with regression lines truncated to the range of data</p>
+<h3><a name="ratios"></a>The problem with ratios</h3>
+<p>Having adjusted for root size by using the analysis of covariance model let's revisit the regression model that used the ratio of fruit mass to root size as the response variable and see what's wrong with it. If <em>Y</em> is fruit mass, <em>X</em> is root size, and <em>Z</em> is a dummy variable indicating grazing status, then the regression model we fit for the ratio of fruit mass to root size is the following.</p>
+
+<table summary="multivariate likelihood and number." class="eq">
+  <tr>
+<td> <p align="center"><img src="../../images/lectures/lecture9/ratio.gif" width="138" height="52" alt="ratio"></p> </td>
+<th>(1) </th>
+</tr>
+</table>
+<p>where <img src="../../images/lectures/lecture9/epsilon.gif" alt="epsilon" width="157" height="37" align="absmiddle">. I've used different symbols for the regression coefficients so as not to confuse them with the analysis of covariance model above. Multiply both sides of the equation by <em>X</em>, the root size variable.</p>
+
+<table summary="multivariate likelihood and number." class="eq">
+  <tr>
+<td> <p align="center"><img src="../../images/lectures/lecture9/ratio2.gif" width="197" height="58" alt="ratio2"></p> </td>
+<th>(2) </th>
+</tr>
+</table>
+<p>where &epsilon;* is just my notation for the new error term. (Note: Because &epsilon; is multiplied by <em>X</em> this model assumes that the standard deviation of the residuals is not constant but varies with the magnitude of <em>X</em>. So, we have a heteroscedastic error model.) Compare this last equation with <a href="lecture9.htm#model3">model 3</a>, the non-parallel lines model,  described above.</p>
+<table summary="multivariate likelihood and number." class="eq">
+  <tr>
+<td> <p align="center"><img src="../../images/lectures/lecture9/model3.gif" width="260" height="27" alt="model 3"></p> </td>
+<th>(3) </th>
+</tr>
+</table>
+<p>There are two obvious differences between the models shown in eqns (2) and (3).</p>
+<ol>
+  <li>The first and third terms on the right side of eqn (3) are missing in the ratio model of eqn (2). These terms together define the intercepts of the two lines that correspond to the two grazing treatments. Because the term &beta;<sub>2</sub><em>Z</em> is missing in eqn (2) the ratio model assumes the intercepts in a plot of <em>Y</em> versus <em>X</em> are the same for the two grazing treatments. Because &beta;<sub>0 </sub>is also missing in eqn (2) the ratio model assumes that both of the intercepts are  zero! At first glance this may not seem unreasonable, after all if the root size is zero then the fruit production should also be zero. But the ratio model is actually making a far bigger assumption here. It assumes that the linear relationship that is apparent in Fig. 2 extends beyond the range of the data all the way to the origin. We have no evidence of that. All we know for sure is that over the range of the data, for which the root size is between 5 and 10, the relationship appears to be linear. Over the root size range from 0 to 10 the relationship could be curvilinear.</li>
+  <li>In the ratio model of eqn (1) a treatment difference corresponds to &gamma;<sub>1</sub> &ne; 0. But in eqn (2) we see that &gamma;<sub>1</sub>  causes the slope of  the fruit mass to root size relationship to be different depending on the grazing treatment. Thus when we fit a ratio model and look for a treatment effect we're testing for a difference in these slopes. In the analysis of covariance model  the slopes need to be the same in the two treatment groups for the notion of a treatment effect to make sense. (We tested for this  by fitting the interaction model and verifying that the interaction is not significant.). When the slopes are  the same  the effect of grazing on fruit production is the same regardless of the size of the plant. The treatment effect is the vertical distance between the lines. So the ratio model and the analysis of covariance find a &quot;treatment effect&quot; in  completely different portions of the fruit mass versus root size linear relationship. For the ratio model a treatment effect is a difference in slopes. For the analysis of covariance model a treatment effect is a difference in intercepts (after verifying that the slopes are the same). If the slopes are not the same  in the analysis of covariance model then there is not a fixed treatment effect; it varies with root size.</li>
+</ol>
+<p>Fig. 6 shows the analysis of covariance model of Fig. 4 and superimposes the ratio model of eqn (2) using the  coefficients estimated from eqn (1). The badness of the ratio model is readily apparent.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">myfunc &lt;- function(x,z) coef(out2)[1] + coef(out2)[2]*x + coef(out2)[3]*z</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mypch &lt;- c(1,16)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(Fruit~Root, data=ipo, col=as.numeric(Grazing), pch=mypch[as.numeric(Grazing)])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">curve(myfunc(x,0), col=1, lty=2, add=T, lwd=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">curve(myfunc(x,1), col=2, lty=2, add=T, lwd=2)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># add ratio model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">curve(coef(out0a)[1]*x, col='pink2', add=T ,lty=3, lwd=2)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> curve((coef(out0a)[1]+coef(out0a)[2])*x, col='grey70', add=T, lty=3, lwd=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">legend('topleft', c(levels(ipo$Grazing), 'ANCOVA', 'ratio'), col=c(1,2,1,2), pch=c(mypch,NA,NA), lty=c(NA,NA,2,3), lwd=c(1,1,2,2), cex=.9, bty='n')</div>
+<p align="center"><img src="../../images/lectures/lecture9/fig6.png" width="430" height="270" alt="fig. 6"></p>
+<p align="center"><span class="styleArial1"><strong>Fig. 6</strong>&nbsp; Analysis of covariance model</span> compared with ratio regression model</p>
+<p align="left">Fig. 6 is a bit unfair because fitting the ratio model in eqn (1) using least squares does not yield the same parameter estimates as fitting eqn (2) using least squares (although they are close). Basically the difference is that the mean of a ratio is not equal to the ratio of the means. Still dividing a response variable by a covariate as an attempt to &quot;standardize&quot; it is generally a bad idea. Ratio variables cause problems in ordinary regression because their distribution is typically non-normal. Even worse the use of ratios has the potential of inducing spurious correlations between the variables of interest. Recognition of the problems posed by ratio variables dates back to the beginning of statistics itself (Pearson 1897).  Over the years researchers in applied disciplines have repeatedly &quot;rediscovered&quot; the ratio problem. Some recent criticisms of using ratio variables in regression instead of analysis of covariance, organized by discipline, include the following.</p>
+<ul>
+  <li>aquatic science: Jackson et al. (1990)</li>
+  <li>conservation biology: Riggs et al. (2008), Serrano et al. (2008)</li>
+  <li>ecology: Beaupre and Dunham (1995), Packard and Boardman (1988), Jackson and Somers (1991), Jasienski and Bazzaz (1999) </li>
+  <li>environmental science: McCuen and Surbeck (2008), Righetti et al. (2012)</li>
+  <li>horticulture: Righetti et al. (2007)</li>
+  <li>medicine: Allison et al. (1995), Tu et al. (2004), Tu et al. (2010)</li>
+  <li>physiology: Tanner (1949), Horton and Redak (1993), Poehlman and Toth (1995), Packard and Boardman (1999), Raubenheimer and Simpson (1992), Karp et al. (2012)</li>
+  <li>psychology: Porter and Raudenbush (1987)</li>
+  <li>sociology and political science: Chilton (1982), Logan (1982), Kritzer (1990)</li>
+  <li>statistics: Kronmal (1993) </li>
+  <li>systematics: Atchley et al. (1976)</li>
+</ul>
+<p>Here are two excerpts of the criticisms found in these papers. From  Beaupre and Dunham (1995), p. 880:</p>
+<blockquote>
+  <p class="styleArial">(The) dangers (of using ratios) include: (1) identification of spurious relationships which may lead to erroneous biological interpretation, (2) false identification of effects as significant, (3) failure to identify significant effects and (4) potentially large errors in ... estimation.<br>
+    <br>
+    &hellip; We believe that our reanalysis suggests that these problems are far worse than most appreciate. We urge physiologists to abandon analyses of ratio-based indices in favour of ANCOVA. </p>
+</blockquote>
+<p>From Packard and Boardman (1999), p. 1:</p>
+<blockquote>
+  <p><span class="styleArial">Ecological physiologists commonly divide individual values for variables of interest by corresponding measures for body size to adjust (or scale) data that vary in magnitude or intensity with body size of the animals being studied. These ratios are formed in an attempt to increase the precision of data gathered in planned experiments or to remove the confounding effects of body size from descriptive studies...<br>
+    <br>
+    This procedure for adjusting data is based on the implicit, albeit critical, assumption that the variable of interest varies isometrically with body size. Isometry occurs whenever a plot of a physiological variable (y) against a measure of body size (x) yields a straight line that passes through the origin of a graph with linear coordinates. Alternatively allometry obtains whenever such a plot yields either a curved line or a straight line that intersects the Y-axis at some point other than zero. Most physiological variables change allometrically with body size (Smith 1984), so the assumption of isometry that is fundamental to the use of ratios for scaling data seldom is satisfied ... statistical analyses of ratios lead&nbsp; to conclusions that are inconsistent with impressions gained from visual examinations of data displayed in bivariate plots. In comparison, analyses of covariance lead to conclusions that agree with impressions gained from these same plots. We therefore recommend that ecological physiologists discontinue using ratios to scale data and that they use the ANCOVA instead. </span></p>
+</blockquote>
+<p>The  opinion of all of these authors is that ratios should almost never be used for statistical control purposes. Their most important objection is that ratios can correctly adjust for the effect of the covariate only when the the response and the covariate are collinear with an intercept of zero. If the intercept is not zero or the relationship is nonlinear (or  linear  only over a short range), regression with a ratio response can yield spurious results. While the use of ratios is not always inappropriate,  if the  ratio itself is not of primary interest but is being used only to adjust the value of the response, then analysis of covariance is a far better approach.</p>
+<h2><a name="comparing"></a>Comparing regression models across groups</h2>
+<p>Forrester and Steele (2004) studied the effect of competition and resource availability on the mortality of gobies. Resource availability for gobies was defined to be the density of available refuges that allow gobies to hide from their potential predators.  It is expected that mortality will increase as population density increases because of intraspecific competition for refuges. Because each refuge is only used by a single goby, the effect of increasing population density should be lower when the availability of refuges is high. The experiment was conducted in the natural habitat of gobies where refuge density was classified into three categories: low, medium, and high. Six replicates of each of these refuge density categories were obtained and for each  replicate a different goby density was maintained. Using a detailed census of the resident fish population, mortality was recorded as  percent  survival. Because percentages are  bounded on the interval 0 to 100 treating them as normally distributed variables can lead to nonsensical results. Forrester and Steele (2004) chose to ignore these complications and for today's lecture we will too.</p>
+<p>Unlike the <em>Ipomopsis</em> example considered previously where the focus was to compare means across groups and regression was used only to account for a confounding variable, here the focus is on the regression equation itself. The question of interest is whether the relationship between goby mortality and goby density is different for different categories of refuge density. In the <em>Ipomopsis</em> example we  had to first rule out the presence of an interaction between the continuous predictor &quot;root&quot; and the categorical treatment variable &quot;grazing&quot; in order to estimate a treatment effect. In the goby experiment the interaction  between the continuous predictor goby density and the categorical predictor refuge density was the focus of the analysis. If a significant interaction is present it means that the relationship between goby mortality and goby density  is different for  different refuge densities.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> goby &lt;- read.delim(ecol 563/goby.txt')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(mortality~density, col=refuge, data=goby, pch=c(1,15,16)[refuge], xlab='Goby density')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> legend('topleft', legend=1:3, col=unique(goby$refuge), pch=c(1,15,16), title='Refuge density', cex=.9, bty='n')</div>
+<p align="center"><img src="../../images/lectures/lecture9/fig7.png" width="420" height="300" alt="fig. 7"></p>
+<p align="center"><span class="styleArial1"><strong>Fig. 7</strong>&nbsp; Effect of goby density and refuge density on goby mortality</span></p>
+<p>The graph would seem to indicate that the goby mortality-goby density relationship varies with refuge density. I fit a model that includes an interaction between refuge density and goby density.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod1 &lt;- lm(mortality ~ density*factor(refuge), data=goby)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">anova(mod1)</div>
+<span class="style24">Analysis of Variance Table</span>
+<span class="style24">Response: mortality<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 4.1659&nbsp; 4.1659 49.5146 1.363e-05 ***<br>
+  factor(refuge)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1.2549&nbsp; 0.6274&nbsp; 7.4577 0.0078540 ** <br>
+  density:factor(refuge)&nbsp; 2 2.4788&nbsp; 1.2394 14.7313 0.0005877 ***<br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 1.0096&nbsp; 0.0841&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>The interaction is statistically significant. The regression equation that was fit is the following. If <em>x</em> = goby density, </p>
+<p align="center"><img src="../../images/lectures/lecture9/z2.gif" alt="z2" width="185" height="75" align="absmiddle">, and&nbsp;<img src="../../images/lectures/lecture9/z3.gif" alt="z3" width="185" height="75" align="absmiddle"></p>
+<p>then the  predicted mean is</p>
+<p align="center"><img src="../../images/lectures/lecture9/gobymodel.gif" width="325" height="35" alt="goby model"></p>
+<p>This reduces to three regression models, one for each refuge type.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=600 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 1 &nbsp;</strong> Regression model with a continuous predictor and a categorical predictor with three levels<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="600" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=all>
+    <colgroup>
+    </colgroup>
+    <colgroup></colgroup><colgroup></colgroup>
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td align="center" width="60" scope="col">refuge</td>
+        <td align="center" width="44" scope="col"><em>z</em><sub>1</sub></td>
+        <td align="center" width="44" scope="col"><em>z</em><sub>2</sub></td>
+        <td align="center" width="209" scope="col"><img src="../../images/lectures/lecture9/gobymodel.gif" width="325" height="35" alt="goby model"></td>
+      </tr>
+    </thead>
+    <tr>
+    <tbody>
+      <tr >
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center"><img src="../../images/lectures/lecture9/refuge1.gif" width="342" height="67" alt="refuge 1"></td>
+      </tr>
+      <tr >
+        <td align="center">2</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center"><img src="../../images/lectures/lecture9/refuge2.gif" alt="refuge 2" width="342" height="130" align="texttop"></td>
+      </tr>
+      <tr >
+        <td align="center">3</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center"><img src="../../images/lectures/lecture9/refuge3.gif" width="342" height="130" alt="refuge 3"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>Next we examine the summary table of the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(mod1)</div>
+<span class="style24">Call:<br>
+lm(formula = mortality ~ density * factor(refuge))</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -0.47439 -0.10553&nbsp; 0.06187&nbsp; 0.15585&nbsp; 0.35897 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0843&nbsp;&nbsp;&nbsp;&nbsp; 0.3009&nbsp;&nbsp; 0.280 0.784129&nbsp;&nbsp;&nbsp; <br>
+  density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.0756&nbsp;&nbsp;&nbsp;&nbsp; 0.1581&nbsp;&nbsp; 6.805 1.89e-05 ***<br>
+  factor(refuge)2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.0493&nbsp;&nbsp;&nbsp;&nbsp; 0.3564&nbsp;&nbsp; 2.944 0.012288 *&nbsp; <br>
+  factor(refuge)3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.4016&nbsp;&nbsp;&nbsp;&nbsp; 0.4021&nbsp;&nbsp; 3.486 0.004500 ** <br>
+  density:factor(refuge)2&nbsp; -0.6269&nbsp;&nbsp;&nbsp;&nbsp; 0.1762&nbsp; -3.558 </span><span class="style25">0.003938</span><span class="style24"> ** <br>
+  density:factor(refuge)3&nbsp; -1.1029&nbsp;&nbsp;&nbsp;&nbsp; 0.2035&nbsp; -5.419 </span><span class="style25">0.000155</span><span class="style24"> ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 0.2901 on 12 degrees of freedom<br>
+  Multiple R-squared: 0.8867,&nbsp; Adjusted R-squared: 0.8395 <br>
+  F-statistic: 18.78 on 5 and 12 DF,&nbsp; p-value: 2.664e-05 </span>
+
+<p>From the summary table we see that &beta;<sub>4</sub> &ne;&nbsp;0 (<em>p</em> = .004) so the slopes for refuge =1 and refuge = 2 differ. Because the point estimate of &beta;<sub>4</sub> is negative, the slope for refuge 2 is less than the slope for refuge = 1. Also from the summary table we see that &beta;<sub>5</sub> &ne; 0 (<em>p</em> = .0002) so the slopes for refuge =1 and refuge = 3 differ. Because the point estimate of &beta;<sub>5</sub> is negative, the slope for refuge = 3 is less than the slope for refuge = 1. </p>
+<p>To compare the slopes  for refuge = 2 and refuge =3 we can refit the model choosing a different reference level for refuge. I make refuge = 3 the reference level in the run below.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod1.1 &lt;- lm(mortality~density*factor(refuge, levels=3:1), data=goby)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(mod1.1)</div>
+<span class="style24">Call:<br>
+  lm(formula = mortality ~ density * factor(refuge, levels = 3:1))</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -0.47439 -0.10553&nbsp; 0.06187&nbsp; 0.15585&nbsp; 0.35897 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.48587&nbsp;&nbsp;&nbsp; 0.26674&nbsp;&nbsp; 5.571 0.000122 ***<br>
+  density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;-0.02728&nbsp;&nbsp;&nbsp; 0.12818&nbsp; -0.213 0.835038&nbsp;&nbsp;&nbsp; <br>
+  factor(refuge, levels = 3:1)2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.35231&nbsp;&nbsp;&nbsp; 0.32811&nbsp; -1.074 0.304049&nbsp;&nbsp;&nbsp; <br>
+  factor(refuge, levels = 3:1)1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.40157&nbsp;&nbsp;&nbsp; 0.40211&nbsp; -3.486 0.004500 ** <br>
+  density:factor(refuge, levels = 3:1)2&nbsp; 0.47603&nbsp;&nbsp;&nbsp; 0.14996&nbsp;&nbsp; 3.174 </span><span class="style25">0.008003</span><span class="style24"> ** <br>
+  density:factor(refuge, levels = 3:1)1&nbsp; 1.10292&nbsp;&nbsp;&nbsp; 0.20351&nbsp;&nbsp; 5.419 0.000155 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 0.2901 on 12 degrees of freedom<br>
+  Multiple R-squared: 0.8867,&nbsp; Adjusted R-squared: 0.8395 <br>
+  F-statistic: 18.78 on 5 and 12 DF,&nbsp; p-value: 2.664e-05 </span>
+<p>With refuge = 3 as the reference level,   a test of H<sub>0</sub>: &beta;<sub>4</sub> = 0 is a test of whether the slopes for refuge = 2 and refuge = 3 are the same. From the output we conclude &beta;<sub>4</sub> &ne; 0 (p = 0.008). The point estimate is positive so we conclude that the slope for refuge = 2 exceeds the slope for refuge = 1.</p>
+<p><a name="abline"></a>To graph the model we can use the <span class="style1">abline</span> function applied to <span class="style1">lm</span> models fit separately for  different values of refuge. The <span class="style1">abline</span> extracts the intercept and slope form the <span class="style1">lm</span> model object and draws the regression line. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># use separate regressions to plot the lines</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(mortality~density, col=refuge, data=goby, pch=c(1,15,16)[refuge], xlab='Goby density')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> legend('topleft', legend=1:3, col=unique(goby$refuge), pch=c(1,15,16), title='Refuge density', cex=.9, bty='n')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">abline(lm(mortality ~ density, data=goby[goby$refuge==1,]), col=1, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> abline(lm(mortality ~ density, data=goby[goby$refuge==2,]), col=2, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> abline(lm(mortality ~ density, data=goby[goby$refuge==3,]), col=3, lty=2)</div>
+<p align="center"><img src="../../images/lectures/lecture9/fig8.png" width="420" height="300" alt="fig. 8"></p>
+<p align="center"><span class="styleArial1"><strong>Fig. 8</strong>&nbsp; Regression of mortality on goby density separately by range density</span></p>
+<p>Alternatively we can produce Fig. 8 by extracting the intercepts and slopes ourselves from the full interaction model and then providing them to <span class="style1">abline</span> to plot the lines.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># use the full model to plot the lines</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(mortality~density, col=refuge, data=goby, pch=c(1,15,16)[refuge], xlab='Goby density')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> legend('topleft', legend=1:3, col=unique(goby$refuge), pch=c(1,15,16), title='Refuge density', cex=.9, bty='n')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">abline(coef(mod1)[1], coef(mod1)[2], col=1, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> abline(coef(mod1)[1] + coef(mod1)[3], coef(mod1)[2] + coef(mod1)[5], col=2, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> abline(coef(mod1)[1] + coef(mod1)[4], coef(mod1)[2] + coef(mod1)[6], col=3, lty=2)</div>
+<p>Unfortunately <span class="style1">abline</span> does not have an option that permits restricting the regression line to the range of the data. For that we could use the <span class="style1">curve</span> function like we did in <a href="lecture9.htm#from">Fig. 5</a> for the <em>Ipomopsis</em> example. Alternatively we can use the <span class="style1">predict</span> function with the <span class="style22">newdata</span> argument to obtain the coordinates of the endpoints of the regression line. The <span class="style1">range</span> function can be used to calculate the minimum and maximum values of goby density for a given refuge category and the <span class="style1">predict</span> function used to obtain the model predictions at those values. I assemble all of this as a function whose sole argument is the refuge density category.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">graph.lines &lt;- function(refuge){</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # create data frame containing  range of goby density for a given refuge</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> newdat &lt;- data.frame(density=range(goby$density[goby$refuge==refuge]), refuge=c(refuge,refuge))</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # convert refuge to a factor</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> newdat$refuge &lt;- factor(newdat$refuge)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # obtain model predictions</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> pred.range &lt;- predict(mod1, newdata=newdat)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # add line</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> lines(newdat$density, pred.range, lty=2, col=refuge)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>Using the function I add the regression lines to a scatter plot of the data.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(mortality~density, col=refuge, data=goby, pch=c(1,15,16)[refuge], xlab='Goby density')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> legend('topleft', legend=1:3, col=unique(goby$refuge), pch=c(1,15,16), title='Refuge density', cex=.9, bty='n', lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">graph.lines(1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> graph.lines(2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> graph.lines(3)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture9/fig9.png" width="420" height="300" alt="fig. 8"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 9</strong> &nbsp;&nbsp;<span class="styleArial1">Regression of goby mortality on goby density separately by refuge density in which regression lines are restricted to the range of the data</span></td>
+  </tr>
+</table>
+<h2><a name="assessing"></a>Assessing treatment differences in the presence of an interaction</h2>
+<p>If we attempt to use analysis of covariance to control for a continuous covariate and it turns out that there is a significant interaction between the treatment and the covariate then there is no unique treatment effect. The magnitude (and perhaps the direction) of the treatment effect varies with the value of the continuous covariate. So, in this case we might just summarize the results by reporting the different slopes of the regression lines for the different treatments. Still, we might be interested in knowing if there is a range of  covariate values for which a significant treatment effect did occur and perhaps obtain a ranking of the treatments over that range. For example, in Fig. 9 it appears that on the left side of the diagram refuge density doesn't matter, but on the right side of Fig. 9 the percent mortality  for different values of refuge can be ranked as follows: mortality(refuge = 1) &gt; mortality(refuge = 2) &gt; mortality(refuge = 3). Can we quantify this result and perhaps summarize it graphically?</p>
+<p>Using the trick that was discussed <a href="lecture8.htm#shortcut">previously</a>, I begin by reparameterizing the model so that the parameter estimates we obtain are estimates of the individual slopes and intercepts.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod1a &lt;- lm(mortality ~ density:factor(refuge) + factor(refuge)-1, data=goby)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">summary(mod1a)</div>
+<span class="style24">Call:<br>
+lm(formula = mortality ~ density:factor(refuge) + factor(refuge) - <br>
+&nbsp;&nbsp;&nbsp; 1)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -0.47439 -0.10553&nbsp; 0.06187&nbsp; 0.15585&nbsp; 0.35897 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp; &nbsp;&nbsp;<br>
+  factor(refuge)1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.08430&nbsp;&nbsp;&nbsp; 0.30090&nbsp;&nbsp; 0.280 0.784129&nbsp;&nbsp;&nbsp; <br>
+  factor(refuge)2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.13355&nbsp;&nbsp;&nbsp; 0.19108&nbsp;&nbsp; 5.932 6.90e-05 ***<br>
+  factor(refuge)3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.48587&nbsp;&nbsp;&nbsp; 0.26674&nbsp;&nbsp; 5.571 0.000122 ***<br>
+  density:factor(refuge)1&nbsp; 1.07564&nbsp;&nbsp;&nbsp; 0.15807&nbsp;&nbsp; 6.805 1.89e-05 ***<br>
+  density:factor(refuge)2&nbsp; 0.44875&nbsp;&nbsp;&nbsp; 0.07782&nbsp;&nbsp; 5.767 8.93e-05 ***<br>
+  density:factor(refuge)3 -0.02728&nbsp;&nbsp;&nbsp; 0.12818&nbsp; -0.213 0.835038&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 0.2901 on 12 degrees of freedom<br>
+  Multiple R-squared: 0.985,&nbsp;&nbsp; Adjusted R-squared: 0.9775 <br>
+  F-statistic: 131.2 on 6 and 12 DF,&nbsp; p-value: 3.13e-10</span>
+<p>Based on  the labels  of the coefficient vector of regression parameters I write a function that constructs the appropriate  vector of  regressors corresponding to the given values of density and refuge.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">coef(mod1a)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; factor(refuge)1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;factor(refuge)2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; factor(refuge)3 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.08430008&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.13355232&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.48586650 <br>
+  density:factor(refuge)1 density:factor(refuge)2 density:factor(refuge)3 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.07563805&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.44875123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.02728036</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">myvec &lt;- function(r,x) c(r==1, r==2, r==3, x*(r==1), x*(r==2), x*(r==3))</div>
+<p>Our goal is  to calculate the confidence level that  allows individual overlapping confidence intervals to be used to graphically assess treatment differences separately at each value of goby density. To accomplish this we need the <span class="style8">ci.func</span> function that was first presented in <a href="lecture5.htm#difference">lecture 5</a>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># function to calculate difference-adjusted confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func &lt;- function(rowvals, lm.model, glm.vmat) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> nor.func1a &lt;- function(alpha, model, sig) 1-pt(-qt(1-alpha/2, model$df.residual) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*%c (1,-1)), model$df.residual) - pt(qt(1-alpha/2, model$df.residual) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*% c(1,-1)), model$df.residual, lower.tail=F)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> nor.func2 &lt;- function(a,model,sigma) nor.func1a(a,model,sigma)-.95</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> n &lt;- length(rowvals)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> xvec1b &lt;- numeric(n*(n-1)/2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> vmat &lt;- glm.vmat[rowvals,rowvals]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> ind &lt;- 1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> for(i in 1:(n-1)) {</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px"> for(j in (i+1):n){</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px"> sig &lt;- vmat[c(i,j), c(i,j)]</div>
+<div class="style15" style="padding-left: 120px; text-indent:-30px"> #solve for alpha</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px"> xvec1b[ind] &lt;- uniroot(function(x) nor.func2(x, lm.model, sig), c(.001,.999))$root</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px"> ind &lt;- ind+1</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px"> }}</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> 1-xvec1b</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>This function requires the variance-covariance matrix of the means. I illustrate how to create it for the smallest goby density when refuge = 1.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">goby$density[goby$refuge==1]</div>
+<span class="style24">[1] 1.1250 0.7500 1.5625 1.6250 2.5625 2.8750</span>
+<p>I build a data frame consisting of the three values of refuge density with goby density = 1.125.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mydat &lt;- data.frame(r=1:3, x=1.125)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mydat</div>
+<span class="style24">  &nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; x<br>
+  1 1 1.125<br>
+  2 2 1.125<br>
+3 3 1.125</span>
+<p>I construct a vector of regressors for each of the three observations in the data frame and assemble them in a  matrix.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat &lt;- t(apply(mydat, 1, function(x) myvec(x[1],x[2])))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; r r r&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp;&nbsp;&nbsp;&nbsp; x<br>
+  [1,] 1 0 0 1.125 0.000 0.000<br>
+  [2,] 0 1 0 0.000 1.125 0.000<br>
+[3,] 0 0 1 0.000 0.000 1.125</span>
+<p>I  obtain the variance-covariance matrix of the means and use it as input to the <span class="style8">ci.func</span> function to obtain the difference-adjusted confidence levels needed to make pairwise comparisons between the three refuge category means. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat1 &lt;- cmat%*%vcov(mod1a)%*%t(cmat)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func(1:3, mod1a, vmat1)</div>
+<span class="style24">[1] 0.8515959 0.8506829 0.8513936</span>
+<p>I assemble the above steps in a function so that we can obtain the difference-adjusted confidence levels using any goby density value.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">my.ci &lt;- function(x){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  mydat &lt;- data.frame(r=1:3, x=x)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  cmat &lt;- t(apply(mydat, 1, function(x) myvec(x[1],x[2])))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  vmat1 &lt;- cmat %*% vcov(mod1a) %*% t(cmat)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  ci.func(1:3, mod1a, vmat1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>Finally I use this function on each of the different goby density values using <span class="style1">sapply</span> to apply the function separately to each density value.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sort(unique(goby$density))</div>
+<span class="style24">  &nbsp;[1] 0.1875 0.5625 0.7500 1.0000 1.1250 1.1875 1.2500 1.4375 1.5625 1.6250 1.7500<br>
+  [12] 1.8125 2.3125 2.5625 2.8125 2.8750 3.6875 4.7500</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.values &lt;- sapply(sort(unique(goby$density)), my.ci)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> range(ci.values)</div>
+<span class="style24">[1] 0.8506703 0.8687014</span>
+<p>The range of confidence levels reported is from 0.85 to 0.87 so there isn't much variability. Clearly we can get by with  using just one value. I  add 95% and 85% confidence intervals for the mean to each point on the regression line that corresponds to an observed goby density. To illustrate the steps I start by doing just refuge = 1.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(lend=1)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># set up the graph</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(mortality~density, data=goby, ylim=c(0,4), type='n', xlab='Goby density')</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># obtain the goby density values for refuge = 1 </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.x &lt;- sort(unique(goby$density[goby$refuge==1]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.x</div>
+<span class="style24">[1] 0.7500 1.1250 1.5625 1.6250 2.5625 2.8750</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># obtain values for the regressors</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.c &lt;- t(sapply(cur.x, function(x) myvec(1,x)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.c</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp; [,1] [,2] [,3]&nbsp;&nbsp; [,4] [,5] [,6]<br>
+[1,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0 0.7500&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp;&nbsp; 0<br>
+[2,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0 1.1250&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+[3,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0 1.5625&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+[4,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0 1.6250&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+[5,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0 2.5625&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+[6,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0 2.8750&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># calculate the means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.y &lt;- my.c%*%coef(mod1a)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.y</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+[1,] 0.8910286<br>
+[2,] 1.2943929<br>
+[3,] 1.7649845<br>
+[4,] 1.8322119<br>
+[5,] 2.8406226<br>
+[6,] 3.1767595</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># obtain standard errors of the mean</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.se &lt;- sqrt(diag(my.c %*% vcov(mod1a)%*% t(my.c)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.se</div>
+<span class="style24">[1] 0.1975068 0.1542166 0.1220689 0.1200533 0.1746923 0.2136492</span>
+<p>Using the means and standard errors I plot the regression line,  95% confidence intervals of the mean at each goby density value for refuge = 1, and the 85% difference-adjusted intervals.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lines(cur.x, cur.y, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> segments(cur.x, cur.y + qt(.025,mod1a$df.residual)*cur.se, cur.x, cur.y+qt(.975, mod1a$df.residual)*cur.se, col='pink2')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> segments(cur.x, cur.y + qt((1-.85)/2, mod1a$df.residual)*cur.se, cur.x, cur.y + qt(1-(1-.85)/2, mod1a$df.residual)*cur.se, col=2, lwd=3)</div>
+<br>
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture9/fig10.png" width="420" height="295" alt="fig. 10"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 10</strong> &nbsp;&nbsp;Preliminary graph showing confidence intervals for refuge = 1</td>
+  </tr>
+</table>
+
+<p>Finally I assemble things as a function whose argument is the value of <span class="style8">refuge</span>. I include two color arguments to specify  colors for the regression line and the difference-adjusted confidence levels.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># function to draw regression line and confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot.func &lt;- function(r, col1, col2) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">cur.x &lt;- sort(unique(goby$density[goby$refuge==r]))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">my.c &lt;- t(sapply(cur.x, function(x) myvec(r,x)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">cur.y &lt;- my.c%*%coef(mod1a)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">cur.se &lt;- sqrt(diag(my.c %*% vcov(mod1a)%*% t(my.c)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">lines(cur.x, cur.y, col=col2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">segments(cur.x, cur.y + qt(.025,mod1a$df.residual)*cur.se, cur.x, cur.y+qt(.975, mod1a$df.residual)*cur.se, col=col1)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">segments(cur.x, cur.y + qt((1-.86)/2,mod1a$df.residual)*cur.se, cur.x, cur.y + qt(1-(1-.86)/2, mod1a$df.residual)*cur.se, col=col2, lwd=3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>Finally I draw the graph.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(mortality~density, data=goby, ylim=c(0,4), type='n', xlab='Goby density')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(lend=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  plot.func(1, 'pink2', 2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  plot.func(2, 'dodgerblue1', 'dodgerblue4')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot.func(3, 'seagreen3', 'seagreen4')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> legend('topleft', legend=1:3,  col=c(2, 'dodgerblue4', 'seagreen4'), title='Refuge density', cex=.9, bty='n', lty=1, lwd=1)</div>
+<br>
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture9/fig11.png" width="420" height="295" alt="fig. 11`"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 55px; text-indent:-55px"><strong>Fig. 11</strong> &nbsp;Graph to compare mean mortality across refuge level for specific values of goby density</td>
+  </tr>
+</table>
+<p>What we can see from Fig. 11 is that when goby density &gt; 1.8 (approximately) refuge = 3 has a significantly lower mean mortality than do the other two values of refuge. The sparse data make it difficult to determine these change point precisely but probably when goby density &gt; 2.8, refuge = 2 has a significantly lower mortality than does refuge = 1.</p>
+<h2><a name="cited" id="cited"></a>Cited references</h2>
+<ul>
+  <li>Crawley, Michael J. 2002. <i>Statistical Computing: An Introduction to 
+    Data Analysis Using S-Plus</i>. Wiley, New York.</li>
+  <li>Crawley, Michael J. 2007. <i>The R Book</i>. Wiley, New York.</li>
+  <li>Forrester, G. E. and M. A. Steele. 2004. Predators, prey refuges, and the spatial scaling of density-dependent prey mortality. <em>Ecology</em> <strong>85</strong>: 1332&ndash;1342.</li>
+</ul>
+<h2><a name="reference"></a>References on the  ratio &quot;problem&quot;</h2>
+<ul>
+  <li>Allison, D. B., F. Paultre, M. I. Goran, E. T. Poehlman, and S. B. Heymsfield. 1995. Statistical considerations regarding the use of ratios to adjust data. <em>International Journal of Obesity</em> <strong>19</strong>: 644&ndash;652. </li>
+  <li>Atchley, W. R., C. T. Gaskins, and D. Anderson. 1976. Statistical properties of ratios. I. Empirical results. <em>Systematic Zoology</em> <strong>25</strong>: 137&ndash;148. </li>
+  <li> Beaupre, S. J. and A. E. Dunham. 1995. A comparison of ratio-based and covariance analyses of a nutritional data set. <em>Functional Ecology</em> <strong>9</strong>: 876&ndash;880. </li>
+  <li>Chilton, R. 1982. Analyzing urban crime data: deterrence and the limitations of arrests per offense ratios. <em>Criminology</em> <strong>19</strong>: 590&ndash;607.</li>
+  <li> Horton, D. R. and R. A. Redak. 1993. Further comments on analysis of covariance in insect dietary studies. <em>Entomologia Experimentalis Et Applicata</em>. <strong>69</strong>: 263&ndash;275. </li>
+  <li>Jackson, D. A., H. H. Harvey, K. M. Somers. 1990. Ratios in aquatic sciences: Statistical shortcomings with mean depth and the morphoedaphic index. <em>Canadian Journal of Fisheries and Aquatic Sciences</em> <strong>47</strong>: 1788&ndash;1795.</li>
+  <li>Jackson, D. A. and K. M. Somers. 1991. The spectre of 'spurious' correlations. <em>Oecologia</em> <strong>86</strong>: 147&ndash;151.</li>
+  <li>Jasienski, M. and F. A. Bazzaz. 1999. The fallacy of ratios and the testability of models in biology. <em>Oikos</em> <strong>84</strong>: 321&ndash;326.</li>
+  <li>Karp, N. A., A. Segonds-Pichon, A. K. B. Gerdin, R. Ramirez-Solis, and J. K. White. 2012. The fallacy of ratio correction to address confounding factors. <em>Laboratory Animals</em> <strong>46</strong>: 245&ndash;252.</li>
+  <li>Kritzer, H. M.  1990. Substance and method in the use of ratio variables, or the spurious nature of spurious correlation? <em>The Journal of Politics</em> <strong>52</strong>: 243&ndash;254.</li>
+  <li>Kronmal, R. A. 1993. Spurious correlation and the fallacy of the ratio standard revisited. <em>Journal of the Royal Statistical Society Series A: Statistics in Society</em> <strong>156</strong>: 379&ndash;392.</li>
+  <li>Logan, C. H. 1982. Problems in ratio correlation: the case of deterrence research. <em>Social Forces</em> <strong>60</strong>: 791&ndash;810.</li>
+  <li>McCuen, R. H. and C. Q. Surbeck. 2008. An alternative to specious linearization of environmental models. <em>Water Research </em><strong>42</strong>: 4033&ndash;4040.</li>
+  <li>Packard, G. C. and T. J. Boardman. 1988. The misuse of ratios, indices, and percentages in ecophysiological research. <em>Physiological Zoology</em> <strong>61</strong>: 1&ndash;9.</li>
+  <li>Packard, G. C and T. J. Boardman. 1999. The use of percentages and size-specific indices to normalize physiological data for variation in body size: wasted time, wasted effort? <em>Comparative Biochemistry and Physiology A&mdash;Molecular and Integrative Physiology</em> <strong>122</strong>(1): 37&ndash;44.</li>
+  <li>Pearson, K. 1897. Mathematical contributions to the theory of evolution-on a form of spurious correlation which may arise when indices are used in the measurements of organs.<em> Proceedings of the Royal Society of London </em><strong>60</strong>: 489&ndash;497.</li>
+  <li>Poehlman, E. T. and M. J. Toth. 1995. Mathematical ratios lead to spurious conclusions regarding age-related and sex-related differences in resting metabolic rate. <em>American Journal of Clinical Nutrition</em> <strong>61</strong>: 482&ndash;485.</li>
+  <li>Porter, A. C. and S. W. Raudenbush. 1987. Analysis of covariance: its model and use in psychological research. <em>Journal of Counseling Psychology</em> <strong>34</strong>(4): 383&ndash;392. </li>
+  <li>Raubenheimer, D. and S. J. Simpson. 1992. Analysis of covariance: an alternative to nutritional indices. <em>Entomologia Experimentalis Et Applicata</em> <strong>62</strong>: 221&ndash;231.</li>
+  <li>Riggs, M. R., K. J. Haroldson, and M. A. Hanson. 2008. Analysis of covariance models for data from observational field studies. <em>Journal of Wildlife Management</em> <strong>72</strong>: 34&ndash;43. </li>
+  <li>Righetti, T. L., D. R. Sandrock, B. Strik, C. Vasconcelos, Y. Moreno, S. Ortega-Farias, and P. Banados. 2007. Analysis of ratio-based responses. <em>Journal of the American Society for Horticultural Science</em> <strong>132</strong>: 3&ndash;13.</li>
+  <li>Righetti, T. L., D. Dalthorp, J. Lambrinos, B. Strik, D. Sandrock, and C. Phillips. 2012. <em>International Journal of Environmental Analytical Chemistry</em> <strong>92</strong>: 1&ndash;27.</li>
+  <li>Serrano, E., R. Alpizar-Jara, N. Morellet, and A. J. M. Hewison. 2008. A half a century of measuring ungulate body condition using indices: is it time for a change? <em>European Journal of Wildlife Research</em> <strong>54</strong>(4): 675&ndash;680.</li>
+  <li>Tanner, J. M. 1949. Fallacy of per-weight and per-surface area standards, and their relation to spurious correlation. <em>Journal of the Applied Physiology</em> <strong>2</strong>: 1&ndash;15.</li>
+  <li>Tu, Y.-K., V. Clerehugh, and M. S. Gilthorpe. 2004. Ratio variables in regression analysis can give rise to spurious results: illustration from two studies in periodontology. <em>Journal of Dentistry</em> <strong>32</strong>: 143&ndash;151.</li>
+  <li>Tu, Y.-K. , G. R. Law, G. T. H. Ellison, and M. S. Gilthorpe. 2010. Ratio index variables or ANCOVA? Fisher&rsquo;s cats revisited. <em>Pharmaceutical Statistics</em> <strong>9</strong>: 77&ndash;83</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture8&#32;Rcode.html">here</a>. </p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 30, 2012<br>
+      URL: <a href="lecture9.htm#lecture9" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture9.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

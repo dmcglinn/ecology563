@@ -1,0 +1,272 @@
+<html>
+<head>
+<style type="text/css">
+.number{
+	color: rgb(21,20,181) ;
+}
+
+.functioncall{
+	color: red ;
+}
+
+.string{
+	color: rgb(153,153,255) ;
+}
+
+.keyword{
+	font-weight: bolder ;
+	color: black;
+}
+
+.argument{
+	color: rgb( 177,63,5) ;
+}
+
+.comment{
+	color: rgb( 204,204,204) ;
+}
+
+.roxygencomment{
+	color: rgb(0,151,255);
+}
+
+.formalargs{
+	color: rgb(18,182,18);
+}
+
+.eqformalargs{
+	color: rgb(18,182,18);
+}
+
+.assignement{
+	font-weight: bolder;
+	color: rgb(55,55,98);
+}
+
+.package{
+	color: rgb(150,182,37);
+}
+
+.slot{
+	font-style:italic;
+}
+
+.symbol{
+	color: black ;
+}
+
+.prompt{
+	color: black ;
+}
+
+</style>
+<title>R Code for Lecture 22 (Wednesday, November 7, 2012)</title></head>
+<body>
+
+<h2 align="center">R Code for Lecture 22 (Wednesday, November 7, 2012)</h2>
+<pre>
+
+<span class="comment">## generate goodness of fit graph from last time ###</span>
+
+ <span class="symbol">gala</span> <span class="assignement">&lt;-</span> <span class="functioncall">read.table</span><span class="keyword">(</span><span class="string">'ecol 563/galapagos.txt'</span><span class="keyword">,</span> <span class="argument">header</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span>
+<span class="comment"># fit NB-2 model</span>
+<span class="functioncall">library</span><span class="keyword">(</span><span class="symbol">MASS</span><span class="keyword">)</span>
+<span class="symbol">out.NB2</span> <span class="assignement">&lt;-</span> <span class="functioncall">glm.nb</span><span class="keyword">(</span><span class="symbol">Species</span><span class="keyword">~</span><span class="functioncall">log</span><span class="keyword">(</span><span class="symbol">Area</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">)</span>
+<span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">mu</span> <span class="assignement">&lt;-</span> <span class="functioncall">fitted</span><span class="keyword">(</span><span class="symbol">out.NB2</span><span class="keyword">)</span>
+<span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">z</span> <span class="assignement">&lt;-</span> <span class="functioncall">dnbinom</span><span class="keyword">(</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">Species</span><span class="keyword">,</span> <span class="argument">mu</span><span class="argument">=</span><span class="functioncall">fitted</span><span class="keyword">(</span><span class="symbol">out.NB2</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">size</span><span class="argument">=</span><span class="symbol">out.NB2</span><span class="keyword">$</span><span class="symbol">theta</span><span class="keyword">)</span>
+<span class="symbol">out.p</span> <span class="assignement">&lt;-</span> <span class="functioncall">lapply</span><span class="keyword">(</span><span class="number">1</span><span class="keyword">:</span><span class="number">29</span><span class="keyword">,</span> <span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">x</span><span class="keyword">)</span> <span class="functioncall">dnbinom</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">:</span><span class="number">1000</span><span class="keyword">,</span> <span class="argument">mu</span><span class="argument">=</span><span class="functioncall">fitted</span><span class="keyword">(</span><span class="symbol">out.NB2</span><span class="keyword">)</span><span class="keyword">[</span><span class="symbol">x</span><span class="keyword">]</span><span class="keyword">,</span> <span class="argument">size</span><span class="argument">=</span><span class="symbol">out.NB2</span><span class="keyword">$</span><span class="symbol">theta</span><span class="keyword">)</span><span class="keyword">)</span>
+<span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">ux</span> <span class="assignement">&lt;-</span> <span class="functioncall">sapply</span><span class="keyword">(</span><span class="number">1</span><span class="keyword">:</span><span class="number">29</span><span class="keyword">,</span> <span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">x</span><span class="keyword">)</span> <span class="functioncall">max</span><span class="keyword">(</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">:</span><span class="number">1000</span><span class="keyword">)</span><span class="keyword">[</span><span class="symbol">out.p</span><span class="keyword">[[</span><span class="symbol">x</span><span class="keyword">]</span><span class="keyword">]</span><span class="keyword">&gt;</span><span class="number">1e-5</span><span class="keyword">]</span><span class="keyword">)</span><span class="keyword">)</span>
+<span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">lx</span> <span class="assignement">&lt;-</span> <span class="functioncall">rep</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">,</span> <span class="number">29</span><span class="keyword">)</span>
+<span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">uy</span> <span class="assignement">&lt;-</span> <span class="functioncall">sapply</span><span class="keyword">(</span><span class="symbol">out.p</span><span class="keyword">,</span> <span class="symbol">max</span><span class="keyword">)</span>
+<span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">ly</span> <span class="assignement">&lt;-</span> <span class="functioncall">rep</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">,</span> <span class="number">29</span><span class="keyword">)</span>
+<span class="functioncall">library</span><span class="keyword">(</span><span class="symbol">lattice</span><span class="keyword">)</span>
+<span class="symbol">prepanel.ci2</span> <span class="assignement">&lt;-</span> <span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">x</span><span class="keyword">,</span> <span class="formalargs">y</span><span class="keyword">,</span> <span class="formalargs">ly</span><span class="keyword">,</span> <span class="formalargs">lx</span><span class="keyword">,</span> <span class="formalargs">uy</span><span class="keyword">,</span> <span class="formalargs">ux</span><span class="keyword">,</span> <span class="formalargs">subscripts</span><span class="keyword">,</span> <span class="formalargs">...</span><span class="keyword">)</span> <span class="keyword">{</span>
+<span class="functioncall">list</span><span class="keyword">(</span><span class="argument">ylim</span><span class="argument">=</span><span class="functioncall">range</span><span class="keyword">(</span><span class="symbol">y</span><span class="keyword">,</span> <span class="symbol">uy</span><span class="keyword">[</span><span class="symbol">subscripts</span><span class="keyword">]</span><span class="keyword">,</span> <span class="symbol">ly</span><span class="keyword">[</span><span class="symbol">subscripts</span><span class="keyword">]</span><span class="keyword">,</span> <span class="argument">finite</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">xlim</span><span class="argument">=</span><span class="functioncall">range</span><span class="keyword">(</span><span class="symbol">x</span><span class="keyword">,</span> <span class="symbol">ux</span><span class="keyword">[</span><span class="symbol">subscripts</span><span class="keyword">]</span><span class="keyword">,</span> <span class="symbol">lx</span><span class="keyword">[</span><span class="symbol">subscripts</span><span class="keyword">]</span><span class="keyword">,</span> <span class="argument">finite</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span><span class="keyword">)</span><span class="keyword">}</span>
+<span class="functioncall">xyplot</span><span class="keyword">(</span><span class="symbol">z</span><span class="keyword">~</span><span class="symbol">Species</span><span class="keyword">|</span><span class="symbol">Island</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">,</span> <span class="argument">ux</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">ux</span><span class="keyword">,</span> <span class="argument">lx</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">lx</span><span class="keyword">,</span> <span class="argument">uy</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">uy</span><span class="keyword">,</span> <span class="argument">ly</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">ly</span><span class="keyword">,</span> <span class="argument">prepanel</span><span class="argument">=</span><span class="symbol">prepanel.ci2</span><span class="keyword">,</span> <span class="argument">ylab</span><span class="argument">=</span><span class="string">'Probability'</span><span class="keyword">,</span> <span class="argument">xlab</span><span class="argument">=</span><span class="string">'Species richness'</span><span class="keyword">,</span>  <span class="argument">panel</span><span class="argument">=</span><span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">x</span><span class="keyword">,</span> <span class="formalargs">y</span><span class="keyword">,</span> <span class="formalargs">subscripts</span><span class="keyword">)</span><span class="keyword">{</span>
+<span class="functioncall">panel.xyplot</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">:</span><span class="number">1000</span><span class="keyword">,</span> <span class="functioncall">dnbinom</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">:</span><span class="number">1000</span><span class="keyword">,</span> <span class="argument">mu</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">mu</span><span class="keyword">[</span><span class="symbol">subscripts</span><span class="keyword">]</span><span class="keyword">,</span> <span class="argument">size</span><span class="argument">=</span><span class="symbol">out.NB2</span><span class="keyword">$</span><span class="symbol">theta</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">type</span><span class="argument">=</span><span class="string">'h'</span><span class="keyword">,</span> <span class="argument">col</span><span class="argument">=</span><span class="string">'grey'</span><span class="keyword">)</span>
+<span class="functioncall">panel.abline</span><span class="keyword">(</span><span class="argument">v</span><span class="argument">=</span><span class="symbol">x</span><span class="keyword">,</span> <span class="argument">col</span><span class="argument">=</span><span class="number">2</span><span class="keyword">,</span> <span class="argument">lty</span><span class="argument">=</span><span class="number">2</span><span class="keyword">)</span><span class="keyword">}</span><span class="keyword">,</span>
+<span class="argument">scale</span><span class="argument">=</span><span class="functioncall">list</span><span class="keyword">(</span><span class="argument">x</span><span class="argument">=</span><span class="string">'free'</span><span class="keyword">,</span> <span class="argument">y</span><span class="argument">=</span><span class="string">'free'</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">strip</span><span class="argument">=</span><span class="functioncall">strip.custom</span><span class="keyword">(</span><span class="argument">par.strip.text</span><span class="argument">=</span><span class="functioncall">list</span><span class="keyword">(</span><span class="argument">cex</span><span class="argument">=</span><span class="number">0.8</span><span class="keyword">)</span><span class="keyword">)</span><span class="keyword">)</span>
+
+<span class="comment"># there are 29 panels</span>
+<span class="comment"># we can spready panels over multiple pages by using the layout argument</span>
+<span class="comment"># to plot fewer than 29 panels on a page</span>
+
+<span class="functioncall">xyplot</span><span class="keyword">(</span><span class="symbol">z</span><span class="keyword">~</span><span class="symbol">Species</span><span class="keyword">|</span><span class="symbol">Island</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">,</span> <span class="argument">ux</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">ux</span><span class="keyword">,</span> <span class="argument">lx</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">lx</span><span class="keyword">,</span> <span class="argument">uy</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">uy</span><span class="keyword">,</span> <span class="argument">ly</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">ly</span><span class="keyword">,</span> <span class="argument">prepanel</span><span class="argument">=</span><span class="symbol">prepanel.ci2</span><span class="keyword">,</span> <span class="argument">ylab</span><span class="argument">=</span><span class="string">'Probability'</span><span class="keyword">,</span> <span class="argument">xlab</span><span class="argument">=</span><span class="string">'Species richness'</span><span class="keyword">,</span>  <span class="argument">layout</span><span class="argument">=</span><span class="functioncall">c</span><span class="keyword">(</span><span class="number">4</span><span class="keyword">,</span><span class="number">4</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">panel</span><span class="argument">=</span><span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">x</span><span class="keyword">,</span> <span class="formalargs">y</span><span class="keyword">,</span> <span class="formalargs">subscripts</span><span class="keyword">)</span><span class="keyword">{</span>
+<span class="functioncall">panel.xyplot</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">:</span><span class="number">1000</span><span class="keyword">,</span> <span class="functioncall">dnbinom</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">:</span><span class="number">1000</span><span class="keyword">,</span> <span class="argument">mu</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">mu</span><span class="keyword">[</span><span class="symbol">subscripts</span><span class="keyword">]</span><span class="keyword">,</span> <span class="argument">size</span><span class="argument">=</span><span class="symbol">out.NB2</span><span class="keyword">$</span><span class="symbol">theta</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">type</span><span class="argument">=</span><span class="string">'h'</span><span class="keyword">,</span> <span class="argument">col</span><span class="argument">=</span><span class="string">'grey'</span><span class="keyword">)</span>
+<span class="functioncall">panel.abline</span><span class="keyword">(</span><span class="argument">v</span><span class="argument">=</span><span class="symbol">x</span><span class="keyword">,</span> <span class="argument">col</span><span class="argument">=</span><span class="number">2</span><span class="keyword">,</span> <span class="argument">lty</span><span class="argument">=</span><span class="number">2</span><span class="keyword">)</span><span class="keyword">}</span><span class="keyword">,</span>
+<span class="argument">scale</span><span class="argument">=</span><span class="functioncall">list</span><span class="keyword">(</span><span class="argument">x</span><span class="argument">=</span><span class="string">'free'</span><span class="keyword">,</span> <span class="argument">y</span><span class="argument">=</span><span class="string">'free'</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">strip</span><span class="argument">=</span><span class="functioncall">strip.custom</span><span class="keyword">(</span><span class="argument">par.strip.text</span><span class="argument">=</span><span class="functioncall">list</span><span class="keyword">(</span><span class="argument">cex</span><span class="argument">=</span><span class="number">0.8</span><span class="keyword">)</span><span class="keyword">)</span><span class="keyword">)</span>
+
+<span class="comment"># we can pause the display of graphs before each page</span>
+<span class="functioncall">par</span><span class="keyword">(</span><span class="argument">ask</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span>
+<span class="functioncall">xyplot</span><span class="keyword">(</span><span class="symbol">z</span><span class="keyword">~</span><span class="symbol">Species</span><span class="keyword">|</span><span class="symbol">Island</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">,</span> <span class="argument">ux</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">ux</span><span class="keyword">,</span> <span class="argument">lx</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">lx</span><span class="keyword">,</span> <span class="argument">uy</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">uy</span><span class="keyword">,</span> <span class="argument">ly</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">ly</span><span class="keyword">,</span> <span class="argument">prepanel</span><span class="argument">=</span><span class="symbol">prepanel.ci2</span><span class="keyword">,</span> <span class="argument">ylab</span><span class="argument">=</span><span class="string">'Probability'</span><span class="keyword">,</span> <span class="argument">xlab</span><span class="argument">=</span><span class="string">'Species richness'</span><span class="keyword">,</span>  <span class="argument">layout</span><span class="argument">=</span><span class="functioncall">c</span><span class="keyword">(</span><span class="number">4</span><span class="keyword">,</span><span class="number">4</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">panel</span><span class="argument">=</span><span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">x</span><span class="keyword">,</span> <span class="formalargs">y</span><span class="keyword">,</span> <span class="formalargs">subscripts</span><span class="keyword">)</span> <span class="keyword">{</span>
+<span class="functioncall">panel.xyplot</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">:</span><span class="number">1000</span><span class="keyword">,</span> <span class="functioncall">dnbinom</span><span class="keyword">(</span><span class="number">0</span><span class="keyword">:</span><span class="number">1000</span><span class="keyword">,</span> <span class="argument">mu</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">$</span><span class="symbol">mu</span><span class="keyword">[</span><span class="symbol">subscripts</span><span class="keyword">]</span><span class="keyword">,</span> <span class="argument">size</span><span class="argument">=</span><span class="symbol">out.NB2</span><span class="keyword">$</span><span class="symbol">theta</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">type</span><span class="argument">=</span><span class="string">'h'</span><span class="keyword">,</span> <span class="argument">col</span><span class="argument">=</span><span class="string">'grey'</span><span class="keyword">)</span>
+<span class="functioncall">panel.abline</span><span class="keyword">(</span><span class="argument">v</span><span class="argument">=</span><span class="symbol">x</span><span class="keyword">,</span> <span class="argument">col</span><span class="argument">=</span><span class="number">2</span><span class="keyword">,</span> <span class="argument">lty</span><span class="argument">=</span><span class="number">2</span><span class="keyword">)</span><span class="keyword">}</span><span class="keyword">,</span>
+<span class="argument">scale</span><span class="argument">=</span><span class="functioncall">list</span><span class="keyword">(</span><span class="argument">x</span><span class="argument">=</span><span class="string">'free'</span><span class="keyword">,</span> <span class="argument">y</span><span class="argument">=</span><span class="string">'free'</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">strip</span><span class="argument">=</span><span class="functioncall">strip.custom</span><span class="keyword">(</span><span class="argument">par.strip.text</span><span class="argument">=</span><span class="functioncall">list</span><span class="keyword">(</span><span class="argument">cex</span><span class="argument">=</span><span class="number">0.8</span><span class="keyword">)</span><span class="keyword">)</span><span class="keyword">)</span>
+
+<span class="comment"># reset ask parameter to its default setting</span>
+<span class="functioncall">par</span><span class="keyword">(</span><span class="argument">ask</span><span class="argument">=</span><span class="symbol">F</span><span class="keyword">)</span>
+
+<span class="comment"># residual deviance can be a goodness of fit statistic</span>
+<span class="symbol">out.pois</span> <span class="assignement">&lt;-</span> <span class="functioncall">glm</span><span class="keyword">(</span><span class="symbol">Species</span><span class="keyword">~</span><span class="functioncall">log</span><span class="keyword">(</span><span class="symbol">Area</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">,</span> <span class="argument">family</span><span class="argument">=</span><span class="symbol">poisson</span><span class="keyword">)</span>
+<span class="functioncall">summary</span><span class="keyword">(</span><span class="symbol">out.pois</span><span class="keyword">)</span>
+
+<span class="comment"># the deviance residuals</span>
+<span class="functioncall">residuals</span><span class="keyword">(</span><span class="symbol">out.pois</span><span class="keyword">,</span> <span class="argument">type</span><span class="argument">=</span><span class="string">'deviance'</span><span class="keyword">)</span>
+<span class="comment"># sum of the squared deviance residuals is the deviance</span>
+<span class="functioncall">sum</span><span class="keyword">(</span><span class="functioncall">residuals</span><span class="keyword">(</span><span class="symbol">out.pois</span><span class="keyword">,</span> <span class="argument">type</span><span class="argument">=</span><span class="string">'deviance'</span><span class="keyword">)</span><span class="keyword">^</span><span class="number">2</span><span class="keyword">)</span>
+<span class="comment"># Pearson residuals</span>
+<span class="functioncall">residuals</span><span class="keyword">(</span><span class="symbol">out.pois</span><span class="keyword">,</span> <span class="argument">type</span><span class="argument">=</span><span class="string">'pearson'</span><span class="keyword">)</span>
+<span class="comment"># sum of the squared Pearson residuals is the Pearson deviance</span>
+<span class="functioncall">sum</span><span class="keyword">(</span><span class="functioncall">residuals</span><span class="keyword">(</span><span class="symbol">out.pois</span><span class="keyword">,</span> <span class="argument">type</span><span class="argument">=</span><span class="string">'pearson'</span><span class="keyword">)</span><span class="keyword">^</span><span class="number">2</span><span class="keyword">)</span>
+
+<span class="comment"># to use the residual deviance as a goodness of fit statistic</span>
+<span class="comment"># the expected counts need to be sufficiently large</span>
+<span class="functioncall">fitted</span><span class="keyword">(</span><span class="symbol">out.pois</span><span class="keyword">)</span>
+<span class="functioncall">sum</span><span class="keyword">(</span><span class="functioncall">fitted</span><span class="keyword">(</span><span class="symbol">out.pois</span><span class="keyword">)</span><span class="keyword">&lt;</span><span class="number">5</span><span class="keyword">)</span>
+
+<span class="comment"># carry out goodness of fit test</span>
+<span class="functioncall">summary</span><span class="keyword">(</span><span class="symbol">out.pois</span><span class="keyword">)</span>
+<span class="number">1</span><span class="keyword">-</span><span class="functioncall">pchisq</span><span class="keyword">(</span><span class="number">649.22</span><span class="keyword">,</span><span class="number">27</span><span class="keyword">)</span>
+<span class="comment"># overdispersion if ratio is much larger than 1</span>
+<span class="number">649.22</span><span class="keyword">/</span><span class="number">27</span>
+<span class="comment"># technically we should use the Pearson deviance for a Poisson model</span>
+<span class="comment"># but the difference is usually trivial</span>
+
+<span class="comment"># although the residual deviance is reported for an NB model</span>
+<span class="comment"># it is not a goodness of fit statistic</span>
+<span class="symbol">out.NB2</span> <span class="assignement">&lt;-</span> <span class="functioncall">glm.nb</span><span class="keyword">(</span><span class="symbol">Species</span><span class="keyword">~</span><span class="functioncall">log</span><span class="keyword">(</span><span class="symbol">Area</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">gala</span><span class="keyword">)</span>
+<span class="functioncall">summary</span><span class="keyword">(</span><span class="symbol">out.NB2</span><span class="keyword">)</span>
+<span class="comment"># invalid test</span>
+<span class="number">1</span><span class="keyword">-</span><span class="functioncall">pchisq</span><span class="keyword">(</span><span class="number">31.295</span><span class="keyword">,</span><span class="number">27</span><span class="keyword">)</span>
+
+
+<span class="comment">#### Jamaican birds data set ####</span>
+<span class="symbol">birds</span> <span class="assignement">&lt;-</span> <span class="functioncall">read.csv</span><span class="keyword">(</span><span class="string">'ecol 563/birds.csv'</span><span class="keyword">,</span> <span class="argument">header</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span>
+<span class="symbol">birds</span><span class="keyword">[</span><span class="number">1</span><span class="keyword">:</span><span class="number">8</span><span class="keyword">,</span><span class="keyword">]</span>
+
+<span class="comment"># missing values in response yield missing means</span>
+<span class="functioncall">tapply</span><span class="keyword">(</span><span class="symbol">birds</span><span class="keyword">$</span><span class="symbol">S</span><span class="keyword">,</span><span class="symbol">birds</span><span class="keyword">$</span><span class="symbol">landscape</span><span class="keyword">,</span><span class="symbol">mean</span><span class="keyword">)</span>
+
+<span class="comment"># obtain mean richness by landscape </span>
+<span class="functioncall">tapply</span><span class="keyword">(</span><span class="symbol">birds</span><span class="keyword">$</span><span class="symbol">S</span><span class="keyword">,</span><span class="symbol">birds</span><span class="keyword">$</span><span class="symbol">landscape</span><span class="keyword">,</span><span class="symbol">mean</span><span class="keyword">,</span><span class="argument">na.rm</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span>
+<span class="comment"># obtain mean richness by year by landscape</span>
+<span class="functioncall">tapply</span><span class="keyword">(</span><span class="symbol">birds</span><span class="keyword">$</span><span class="symbol">S</span><span class="keyword">,</span><span class="functioncall">list</span><span class="keyword">(</span><span class="symbol">birds</span><span class="keyword">$</span><span class="symbol">year</span><span class="keyword">,</span><span class="symbol">birds</span><span class="keyword">$</span><span class="symbol">landscape</span><span class="keyword">)</span><span class="keyword">,</span> <span class="symbol">mean</span><span class="keyword">,</span> <span class="argument">na.rm</span><span class="argument">=</span><span class="symbol">T</span><span class="keyword">)</span>
+
+<span class="comment"># include year and landscape as predictors</span>
+<span class="symbol">out.S</span> <span class="assignement">&lt;-</span> <span class="functioncall">glm</span><span class="keyword">(</span><span class="symbol">S</span> <span class="keyword">~</span> <span class="functioncall">factor</span><span class="keyword">(</span><span class="symbol">year</span><span class="keyword">)</span><span class="keyword">+</span><span class="symbol">landscape</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">birds</span><span class="keyword">,</span> <span class="argument">family</span><span class="argument">=</span><span class="symbol">poisson</span><span class="keyword">)</span>
+<span class="functioncall">summary</span><span class="keyword">(</span><span class="symbol">out.S</span><span class="keyword">)</span>
+<span class="functioncall">anova</span><span class="keyword">(</span><span class="symbol">out.S</span><span class="keyword">,</span> <span class="argument">test</span><span class="argument">=</span><span class="string">'Chisq'</span><span class="keyword">)</span>
+<span class="functioncall">summary</span><span class="keyword">(</span><span class="symbol">out.S</span><span class="keyword">)</span>
+
+<span class="comment"># all predicted counts exceeed 5: deviance GoF test is OK</span>
+<span class="functioncall">sum</span><span class="keyword">(</span><span class="functioncall">fitted</span><span class="keyword">(</span><span class="symbol">out.S</span><span class="keyword">)</span><span class="keyword">&lt;</span><span class="number">5</span><span class="keyword">)</span>
+<span class="comment"># significant lack of fit--we need more predictors to account for overdispersion</span>
+<span class="number">1</span><span class="keyword">-</span><span class="functioncall">pchisq</span><span class="keyword">(</span><span class="number">532.25</span><span class="keyword">,</span><span class="number">251</span><span class="keyword">)</span>
+
+<span class="comment"># plot of S versus area indicates log linearizes the relationship</span>
+<span class="functioncall">plot</span><span class="keyword">(</span><span class="symbol">S</span><span class="keyword">~</span><span class="symbol">area</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">birds</span><span class="keyword">)</span>
+<span class="functioncall">plot</span><span class="keyword">(</span><span class="symbol">S</span><span class="keyword">~</span><span class="functioncall">log</span><span class="keyword">(</span><span class="symbol">area</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">birds</span><span class="keyword">)</span>
+<span class="symbol">out.S1</span> <span class="assignement">&lt;-</span> <span class="functioncall">glm</span><span class="keyword">(</span><span class="symbol">S</span> <span class="keyword">~</span> <span class="functioncall">factor</span><span class="keyword">(</span><span class="symbol">year</span><span class="keyword">)</span><span class="keyword">+</span><span class="symbol">landscape</span><span class="keyword">+</span><span class="functioncall">log</span><span class="keyword">(</span><span class="symbol">area</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">birds</span><span class="keyword">,</span> <span class="argument">family</span><span class="argument">=</span><span class="symbol">poisson</span><span class="keyword">)</span>
+
+<span class="comment"># compare models with and without log(Area)</span>
+<span class="functioncall">AIC</span><span class="keyword">(</span><span class="symbol">out.S</span><span class="keyword">,</span><span class="symbol">out.S1</span><span class="keyword">)</span>
+<span class="functioncall">anova</span><span class="keyword">(</span><span class="symbol">out.S1</span><span class="keyword">,</span><span class="argument">test</span><span class="argument">=</span><span class="string">'Chisq'</span><span class="keyword">)</span>
+<span class="functioncall">summary</span><span class="keyword">(</span><span class="symbol">out.S1</span><span class="keyword">)</span>
+
+<span class="comment"># deviance goodness of fit test is now almost adequate</span>
+<span class="number">1</span><span class="keyword">-</span><span class="functioncall">pchisq</span><span class="keyword">(</span><span class="number">297.53</span><span class="keyword">,</span><span class="number">250</span><span class="keyword">)</span>
+
+<span class="comment"># there are two ways to include an offset term</span>
+<span class="symbol">out.S2</span> <span class="assignement">&lt;-</span> <span class="functioncall">glm</span><span class="keyword">(</span><span class="symbol">S</span> <span class="keyword">~</span> <span class="functioncall">factor</span><span class="keyword">(</span><span class="symbol">year</span><span class="keyword">)</span><span class="keyword">+</span><span class="symbol">landscape</span><span class="keyword">+</span><span class="functioncall">offset</span><span class="keyword">(</span><span class="functioncall">log</span><span class="keyword">(</span><span class="symbol">area</span><span class="keyword">)</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">birds</span><span class="keyword">,</span> <span class="argument">family</span><span class="argument">=</span><span class="symbol">poisson</span><span class="keyword">)</span>
+<span class="symbol">out.S3</span> <span class="assignement">&lt;-</span> <span class="functioncall">glm</span><span class="keyword">(</span><span class="symbol">S</span> <span class="keyword">~</span> <span class="functioncall">factor</span><span class="keyword">(</span><span class="symbol">year</span><span class="keyword">)</span><span class="keyword">+</span><span class="symbol">landscape</span><span class="keyword">,</span> <span class="argument">offset</span><span class="argument">=</span><span class="functioncall">log</span><span class="keyword">(</span><span class="symbol">area</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">birds</span><span class="keyword">,</span> <span class="argument">family</span><span class="argument">=</span><span class="symbol">poisson</span><span class="keyword">)</span>
+
+<span class="comment"># the offset term does not appear in output</span>
+<span class="functioncall">summary</span><span class="keyword">(</span><span class="symbol">out.S2</span><span class="keyword">)</span>
+<span class="comment"># but estimates have been adjusted</span>
+<span class="functioncall">coef</span><span class="keyword">(</span><span class="symbol">out.S2</span><span class="keyword">)</span>
+<span class="functioncall">coef</span><span class="keyword">(</span><span class="symbol">out.S</span><span class="keyword">)</span>
+<span class="functioncall">coef</span><span class="keyword">(</span><span class="symbol">out.S1</span><span class="keyword">)</span>
+
+<span class="comment"># examine 95% confidence interval for log(area): does it include 1?</span>
+<span class="functioncall">summary</span><span class="keyword">(</span><span class="symbol">out.S1</span><span class="keyword">)</span>
+
+<span class="comment"># compare AIC of oriinal model, ancova model, and offset model</span>
+<span class="functioncall">AIC</span><span class="keyword">(</span><span class="symbol">out.S</span><span class="keyword">,</span> <span class="symbol">out.S1</span><span class="keyword">,</span> <span class="symbol">out.S2</span><span class="keyword">)</span>
+
+<span class="comment"># number of repeated measures per patch</span>
+<span class="functioncall">table</span><span class="keyword">(</span><span class="symbol">birds</span><span class="keyword">$</span><span class="symbol">patch</span><span class="keyword">[</span><span class="keyword">!</span><span class="functioncall">is.na</span><span class="keyword">(</span><span class="symbol">birds</span><span class="keyword">$</span><span class="symbol">S</span><span class="keyword">)</span><span class="keyword">]</span><span class="keyword">)</span>
+
+<span class="functioncall">library</span><span class="keyword">(</span><span class="symbol">lme4</span><span class="keyword">)</span>
+<span class="comment"># fit Poisson model with patch random effects</span>
+<span class="symbol">out.lmer</span> <span class="assignement">&lt;-</span> <span class="functioncall">lmer</span><span class="keyword">(</span><span class="symbol">S</span><span class="keyword">~</span><span class="functioncall">factor</span><span class="keyword">(</span><span class="symbol">year</span><span class="keyword">)</span><span class="keyword">+</span><span class="symbol">landscape</span><span class="keyword">+</span><span class="functioncall">log</span><span class="keyword">(</span><span class="symbol">area</span><span class="keyword">)</span> <span class="keyword">+</span> <span class="keyword">(</span><span class="number">1</span><span class="keyword">|</span><span class="symbol">patch</span><span class="keyword">)</span><span class="keyword">,</span> <span class="argument">data</span><span class="argument">=</span><span class="symbol">birds</span><span class="keyword">,</span> <span class="argument">family</span><span class="argument">=</span><span class="symbol">poisson</span><span class="keyword"></span><span class="symbol"></span><span class="keyword">)</span>
+
+<span class="comment"># compare estimates</span>
+<span class="functioncall">summary</span><span class="keyword">(</span><span class="symbol">out.lmer</span><span class="keyword">)</span>
+<span class="functioncall">coef</span><span class="keyword">(</span><span class="symbol">out.S1</span><span class="keyword">)</span>
+
+<span class="comment"># AIC and log-likelihood returned by lmer</span>
+<span class="comment"># not comparable to that returned by glm</span>
+<span class="functioncall">AIC</span><span class="keyword">(</span><span class="symbol">out.lmer</span><span class="keyword">)</span>
+<span class="functioncall">AIC</span><span class="keyword">(</span><span class="symbol">out.S1</span><span class="keyword">)</span>
+<span class="functioncall">logLik</span><span class="keyword">(</span><span class="symbol">out.S1</span><span class="keyword">)</span>
+<span class="functioncall">logLik</span><span class="keyword">(</span><span class="symbol">out.lmer</span><span class="keyword">)</span>
+
+
+<span class="comment">## function to calculate marginal log-likelihood of Poisson random intercepts model</span>
+
+<span class="symbol">poisloglike.log</span><span class="assignement">&lt;-</span><span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">int.mod</span><span class="keyword">,</span> <span class="formalargs">mult</span><span class="eqformalargs">=</span><span class="number">1</span><span class="keyword">)</span> <span class="keyword">{</span>
+<span class="comment"># int.mod is the Poisson model random intercepts model fit by lmer</span>
+<span class="comment"># mult is a large multiplier, e.g., 1e40, 1e80, 1e120, etc.</span>
+<span class="comment"># used to improve the accuracy of the numerical integration</span>
+<span class="comment">####### extract model components #######</span>
+<span class="comment">#level-1 variance</span>
+<span class="symbol">s</span> <span class="assignement">&lt;-</span> <span class="functioncall">attr</span><span class="keyword">(</span><span class="functioncall">VarCorr</span><span class="keyword">(</span><span class="symbol">int.mod</span><span class="keyword">)</span><span class="keyword">[[</span><span class="number">1</span><span class="keyword">]</span><span class="keyword">]</span><span class="keyword">,</span><span class="string">"stddev"</span><span class="keyword">)</span>
+<span class="comment">#Poisson mean</span>
+<span class="symbol">etavec</span><span class="assignement">&lt;-</span><span class="symbol">int.mod</span><span class="keyword">@</span><span class="slot">X</span> <span class="keyword">%*%</span> <span class="functioncall">fixef</span><span class="keyword">(</span><span class="symbol">int.mod</span><span class="keyword">)</span>
+<span class="comment">#check if offset was used</span>
+<span class="keyword">if</span><span class="keyword">(</span><span class="functioncall">length</span><span class="keyword">(</span><span class="symbol">int.mod</span><span class="keyword">@</span><span class="slot">offset</span><span class="keyword">)</span><span class="keyword">&gt;</span><span class="number">0</span><span class="keyword">)</span> <span class="symbol">etavec</span> <span class="assignement">&lt;-</span> <span class="symbol">etavec</span><span class="keyword">+</span><span class="symbol">int.mod</span><span class="keyword">@</span><span class="slot">offset</span>
+<span class="comment">#response variable</span>
+<span class="symbol">y</span><span class="symbol"></span> <span class="assignement">&lt;-</span> <span class="symbol">int.mod</span><span class="keyword">@</span><span class="slot">y</span>
+<span class="comment">#split the response and Poisson mean by group</span>
+<span class="symbol">temp.dat</span> <span class="assignement">&lt;-</span> <span class="functioncall">data.frame</span><span class="keyword">(</span><span class="symbol">y</span><span class="keyword">,</span><span class="symbol">etavec</span><span class="keyword">)</span>
+<span class="symbol">split.by.group</span> <span class="assignement">&lt;-</span> <span class="functioncall">split</span><span class="keyword">(</span><span class="symbol">temp.dat</span><span class="keyword">,</span> <span class="symbol">int.mod</span><span class="keyword">@</span><span class="slot">flist</span><span class="keyword">)</span>
+<span class="comment">#function to evaluate the integrated likelihood for a group</span>
+<span class="symbol">pois.component</span> <span class="assignement">&lt;-</span> <span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">xvec</span><span class="keyword">)</span> <span class="keyword">{</span>
+<span class="comment">#likelihood term for the first element in the group</span>
+<span class="symbol">base.eta</span> <span class="assignement">&lt;-</span> <span class="functioncall">paste</span><span class="keyword">(</span><span class="string">"exp("</span><span class="keyword">,</span> <span class="symbol">xvec</span><span class="keyword">[</span><span class="number">1</span><span class="keyword">,</span><span class="number">2</span><span class="keyword">]</span><span class="keyword">,</span> <span class="string">"+x)"</span><span class="keyword">,</span> <span class="argument">sep</span><span class="argument">=</span><span class="string">''</span><span class="keyword">)</span>
+<span class="symbol">base.pois</span> <span class="assignement">&lt;-</span> <span class="functioncall">paste</span><span class="keyword">(</span><span class="string">"dpois("</span><span class="keyword">,</span> <span class="symbol">xvec</span><span class="keyword">[</span><span class="number">1</span><span class="keyword">,</span><span class="number">1</span><span class="keyword">]</span><span class="keyword">,</span> <span class="string">","</span><span class="keyword">,</span> <span class="symbol">base.eta</span><span class="keyword">,</span><span class="string">")"</span><span class="keyword">,</span> <span class="argument">sep</span><span class="argument">=</span><span class="string">''</span><span class="keyword">)</span>
+<span class="comment">#add more terms to the product if the group size is &gt; 1</span>
+<span class="keyword">if</span><span class="keyword">(</span><span class="functioncall">nrow</span><span class="keyword">(</span><span class="symbol">xvec</span><span class="keyword">)</span><span class="keyword">&gt;</span><span class="number">1</span><span class="keyword">)</span>
+<span class="keyword">for</span><span class="keyword">(</span><span class="symbol">i</span> <span class="keyword">in</span> <span class="number">2</span><span class="keyword">:</span><span class="functioncall">nrow</span><span class="keyword">(</span><span class="symbol">xvec</span><span class="keyword">)</span><span class="keyword">)</span> <span class="keyword">{</span>
+<span class="symbol">cur.eta</span> <span class="assignement">&lt;-</span> <span class="functioncall">paste</span><span class="keyword">(</span><span class="string">"exp("</span><span class="keyword">,</span> <span class="symbol">xvec</span><span class="keyword">[</span><span class="symbol">i</span><span class="keyword">,</span><span class="number">2</span><span class="keyword">]</span><span class="keyword">,</span> <span class="string">"+x)"</span><span class="keyword">,</span> <span class="argument">sep</span><span class="argument">=</span><span class="string">''</span><span class="keyword">)</span>
+<span class="symbol">cur.pois</span> <span class="assignement">&lt;-</span> <span class="functioncall">paste</span><span class="keyword">(</span><span class="string">"dpois("</span><span class="keyword">,</span> <span class="symbol">xvec</span><span class="keyword">[</span><span class="symbol">i</span><span class="keyword">,</span><span class="number">1</span><span class="keyword">]</span><span class="keyword">,</span> <span class="string">","</span><span class="keyword">,</span> <span class="symbol">cur.eta</span><span class="keyword">,</span><span class="string">")"</span><span class="keyword">,</span> <span class="argument">sep</span><span class="argument">=</span><span class="string">''</span><span class="keyword">)</span>
+<span class="symbol">base.pois</span> <span class="assignement">&lt;-</span> <span class="functioncall">paste</span><span class="keyword">(</span><span class="symbol">base.pois</span><span class="keyword">,</span> <span class="symbol">cur.pois</span><span class="keyword">,</span> <span class="argument">sep</span><span class="argument">=</span><span class="string">'*'</span><span class="keyword">)</span>
+<span class="keyword">}</span>
+<span class="comment">#construct the integral as a text expression</span>
+<span class="symbol">int.call</span><span class="symbol"></span> <span class="assignement">&lt;-</span> <span class="functioncall">paste</span><span class="keyword">(</span><span class="string">"integrate(function(x) "</span><span class="keyword">,</span> <span class="symbol">base.pois</span><span class="keyword">,</span> <span class="string">"*dnorm(x,0,"</span><span class="keyword">,</span><span class="symbol">s</span><span class="keyword">,</span><span class="string">")*mult, -Inf, Inf, rel.tol = 1e-12)"</span><span class="keyword">,</span> <span class="argument">sep</span><span class="argument">=</span><span class="string">''</span><span class="keyword">)</span>
+<span class="comment">#calculate integral</span>
+<span class="functioncall">eval</span><span class="keyword">(</span><span class="functioncall">parse</span><span class="keyword">(</span><span class="argument">text</span><span class="argument">=</span><span class="symbol">int.call</span><span class="keyword">)</span><span class="keyword">)</span>
+<span class="keyword">}</span>
+<span class="comment">#obtain likelihood terms by group</span>
+<span class="functioncall">sapply</span><span class="keyword">(</span><span class="symbol">split.by.group</span><span class="keyword">,</span><span class="symbol">pois.component</span><span class="keyword">)</span> -&gt; <span class="symbol">like.terms</span>
+<span class="comment">#log-likelihood</span>
+<span class="functioncall">sum</span><span class="keyword">(</span><span class="functioncall">log</span><span class="keyword">(</span><span class="functioncall">unlist</span><span class="keyword">(</span><span class="symbol">like.terms</span><span class="keyword">[</span><span class="number">1</span><span class="keyword">,</span><span class="keyword">]</span><span class="keyword">)</span><span class="keyword">/</span><span class="symbol">mult</span><span class="keyword">)</span><span class="keyword">)</span>
+<span class="keyword">}</span>
+
+<span class="comment">#### end function ####</span>
+
+<span class="comment"># log-likelihood of random effects model</span>
+<span class="functioncall">poisloglike.log</span><span class="keyword">(</span><span class="symbol">out.lmer</span><span class="keyword">)</span>
+<span class="comment"># log-likelihood of model without random effects</span>
+<span class="functioncall">logLik</span><span class="keyword">(</span><span class="symbol">out.S1</span><span class="keyword">)</span>
+
+<span class="comment"># number of estimated parameters</span>
+<span class="functioncall">attr</span><span class="keyword">(</span><span class="functioncall">logLik</span><span class="keyword">(</span><span class="symbol">out.lmer</span><span class="keyword">)</span><span class="keyword">,</span><span class="string">"df"</span><span class="keyword">)</span>
+
+<span class="comment"># calculate AIC of random intercepts model</span>
+<span class="keyword">-</span><span class="number">2</span><span class="keyword">*</span><span class="functioncall">poisloglike.log</span><span class="keyword">(</span><span class="symbol">out.lmer</span><span class="keyword">)</span><span class="keyword">+</span><span class="number">2</span><span class="keyword">*</span><span class="functioncall">attr</span><span class="keyword">(</span><span class="functioncall">logLik</span><span class="keyword">(</span><span class="symbol">out.lmer</span><span class="keyword">)</span><span class="keyword">,</span><span class="string">"df"</span><span class="keyword">)</span>
+<span class="comment"># compare to model without random effects</span>
+<span class="functioncall">AIC</span><span class="keyword">(</span><span class="symbol">out.S1</span><span class="keyword">)</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 11&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign11" id="assign11"></a>Assignment 11&mdash;Solution</h1>
+<h2>Question 1 </h2>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> quinn &lt;- read.csv('ecol 563/quinn1.csv')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> quinn[1:4,]</div>
+<span class="style24">  &nbsp; Density Season&nbsp; Eggs<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 spring 1.167<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 spring 0.500<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 spring 1.667<br>
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 summer 4.000</span>
+<p>I create the variables needed for the BUGS program.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> x1 &lt;- as.numeric(quinn$Density==12)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> x2 &lt;- as.numeric(quinn$Density==24)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> z &lt;- as.numeric(quinn$Season==&quot;summer&quot;)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> y &lt;- quinn$Eggs</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> n &lt;- length(y)</div>
+<p>The regression model we're fitting written in terms of dummy variables is the following.</p>
+<p align="center"><img src="../../images/assignments/assignment11/regressioneqn.gif" width="330" height="35" alt="regression"></p>
+<p>where</p>
+<p align="center"><img src="../../images/assignments/assignment11/x1.gif" alt="x1" width="205" height="75" align="absmiddle">, <img src="../../images/assignments/assignment11/x2.gif" alt="x2" width="207" height="75" align="absmiddle">, <img src="../../images/assignments/assignment11/z.gif" alt="z" width="250" height="75" align="absmiddle"></p>
+<p>The BUGS program that implements the two-factor interaction model is shown below.</p>
+<div class="style1" style="padding-left: 30px; text-indent:-30px">model{</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  for(i in 1:n) {</div>
+<div class="style1" style="padding-left: 90px; text-indent:-30px">  y[i]~dnorm(y.hat[i],tau.y)</div>
+ <div class="style1" style="padding-left: 90px; text-indent:-30px"> y.hat[i] &lt;- b0 + b1*x1[i] + b2*x2[i] + b3*z[i] + b4*x1[i]*z[i] + b5*x2[i]*z[i]</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  }</div>
+ <div class="style1" style="padding-left: 60px; text-indent:-30px"> b0~dnorm(0,.000001)</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  b1~dnorm(0,.000001)</div>
+ <div class="style1" style="padding-left: 60px; text-indent:-30px"> b2~dnorm(0,.000001)</div>
+ <div class="style1" style="padding-left: 60px; text-indent:-30px"> b3~dnorm(0,.000001)</div>
+ <div class="style1" style="padding-left: 60px; text-indent:-30px"> b4~dnorm(0,.000001)</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  b5~dnorm(0,.000001)</div>
+ <div class="style1" style="padding-left: 60px; text-indent:-30px"> tau.y &lt;- pow(sigma.y,-2)</div>
+ <div class="style1" style="padding-left: 60px; text-indent:-30px"> sigma.y~dunif(0,10000)</div>
+<div class="style1" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>I create the objects needed by WinBUGS and run the model.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">quinn.data &lt;- list(&quot;n&quot;, &quot;y&quot;, &quot;x1&quot;, &quot;x2&quot;, &quot;z&quot;)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">quinn.inits &lt;- function() {list(b0=rnorm(1), b1=rnorm(1), b2=rnorm(1), b3=rnorm(1), b4=rnorm(1), b5=rnorm(1), sigma.y=runif(1))}</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">quinn.parms &lt;- c(&quot;b0&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;b3&quot;, &quot;b4&quot;, &quot;b5&quot;, &quot;sigma.y&quot;)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">setwd(&quot;C:/Users/jmweiss/Documents/ecol 563/models&quot;)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># WinBUGS</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  library(arm)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  quinn.1 &lt;- bugs(quinn.data, quinn.inits, quinn.parms, &quot;quinnmodel.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=100, debug=T)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  quinn.1 &lt;- bugs(quinn.data, quinn.inits, quinn.parms, &quot;quinnmodel.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=10000, debug=T)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># JAGS</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  library(R2jags)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">quinn.1.jags &lt;- jags(quinn.data, quinn.inits, quinn.parms, &quot;quinnmodel.txt&quot;,  n.chains=3, n.iter=10000) </div>
+<p>I display trace plots of the individual Markov chains for each parameter. The chains appear to be mixing wel and traversing the same region of parameter space.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> xyplot(as.mcmc.list(quinn.1),layout=c(3,3))</div><br>
+<table width="600" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment11/mixing.png" width="550" height="415" alt="mixing"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Trace plots of individual Markov chains for each parameter.</td>
+  </tr>
+</table>
+<p>The summary table reveals that all the <span class="style81">Rhat</span> values are  near 1 and the effective sample sizes (<span class="style81">n.eff</span>) are all large. All of this suggests that we are sampling from the posterior distributions of the various parameters.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(quinn.1$summary,3)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp;&nbsp; sd&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp; 25%&nbsp;&nbsp;&nbsp; 50%&nbsp;&nbsp;&nbsp; 75%&nbsp; 97.5%&nbsp; Rhat n.eff<br>
+b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.110 0.242&nbsp; 0.607&nbsp; 0.954&nbsp; 1.098&nbsp; 1.261&nbsp; 1.576 1.000&nbsp; 1000<br>
+b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.001 0.352 -0.672 -0.228&nbsp; 0.004&nbsp; 0.231&nbsp; 0.689 1.000&nbsp; 1000<br>
+b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.427 0.359 -1.161 -0.649 -0.415 -0.198&nbsp; 0.256 1.000&nbsp; 1000<br>
+b3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.789 0.346&nbsp; 2.095&nbsp; 2.561&nbsp; 2.786&nbsp; 2.996&nbsp; 3.493 1.003&nbsp; 1000<br>
+b4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.008 0.502 -2.016 -1.311 -1.004 -0.697 -0.050 1.003&nbsp; 1000<br>
+b5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.470 0.506 -2.488 -1.788 -1.461 -1.180 -0.442 1.000&nbsp; 1000<br>
+sigma.y&nbsp;&nbsp; 0.432 0.107&nbsp; 0.280&nbsp; 0.357 &nbsp;0.413&nbsp; 0.484&nbsp; 0.682 1.000&nbsp; 1000<br>
+deviance 18.498 5.097 11.053 14.832 17.800 21.050 30.463 1.000&nbsp; 1000</span>
+<h2>Question 2</h2>
+<p>The 95% percentile credible intervals are returned in the summary table. The HPD intervals can be obtained by applying the <span class="style4">HPDinterval</span> function to the <span class="style81">sims.matrix</span> component of the <span class="style4">bugs</span> object. I collect them together in a single table.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> colnames(quinn.1$sims.matrix)</div>
+<span class="style24"> [1] &quot;b0&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b1&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b2&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b3&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b4&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b5&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;sigma.y&quot;&nbsp; &quot;deviance&quot;</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.hpd &lt;- HPDinterval(as.mcmc(quinn.1$sims.matrix)[,1:7])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.hpd</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6335&nbsp; 1.602000<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.6425&nbsp; 0.704200<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.1030&nbsp; 0.305500<br>
+  b3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1190&nbsp; 3.504000<br>
+  b4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.9430&nbsp; 0.001201<br>
+  b5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.5220 -0.488700<br>
+  sigma.y&nbsp; 0.2626&nbsp; 0.650600<br>
+  attr(,&quot;Probability&quot;)<br>
+  [1] 0.9500998</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> colnames(quinn.1$summary)</div>
+<span class="style24">  [1] &quot;mean&quot;&nbsp; &quot;sd&quot;&nbsp;&nbsp;&nbsp; &quot;2.5%&quot;&nbsp; &quot;25%&quot;&nbsp;&nbsp; &quot;50%&quot;&nbsp;&nbsp; &quot;75%&quot;&nbsp;&nbsp; &quot;97.5%&quot; &quot;Rhat&quot;&nbsp; &quot;n.eff&quot;</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> rownames(quinn.1$summary)</div>
+<span class="style24">[1] &quot;b0&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b1&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b2&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b3&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b4&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;b5&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;sigma.y&quot;&nbsp; &quot;deviance&quot;</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.ci &lt;- data.frame(quinn.1$summary[1:7, c(&quot;mean&quot;, &quot;2.5%&quot;,&quot;97.5%&quot;)], out.hpd)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> colnames(out.ci)[2:5] &lt;- c('percent 2.5', 'percent 97.5', 'HPD 2.5', 'HPD 97.5')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(out.ci,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean percent 2.5 percent 97.5 HPD 2.5 HPD 97.5<br>
+  b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.110&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.607&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.576&nbsp;&nbsp; 0.634&nbsp;&nbsp;&nbsp; 1.602<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.672&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.689&nbsp; -0.642&nbsp;&nbsp;&nbsp; 0.704<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.427&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.161&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.256&nbsp; -1.103&nbsp;&nbsp;&nbsp; 0.306<br>
+  b3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.789&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.095&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.493&nbsp;&nbsp; 2.119&nbsp;&nbsp;&nbsp; 3.504<br>
+  b4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.008&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.016&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.050&nbsp; -1.943&nbsp;&nbsp;&nbsp; 0.001<br>
+  b5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.470&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.488&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.442&nbsp; -2.522&nbsp;&nbsp; -0.489<br>
+sigma.y&nbsp; 0.432&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.280&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.682&nbsp;&nbsp; 0.263&nbsp;&nbsp;&nbsp; 0.651</span>
+<h2>Question 3</h2>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> densityplot(as.mcmc(quinn.1$sims.matrix)[,1:7])</div><br>
+<table width="600" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment11/density.png" width="560" height="405" alt="HPD"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Estimated posterior densities for individual regression parameters</td>
+  </tr>
+</table>
+<h2>Question 4</h2>
+<p>The individual means are obtained by assigning appropriate values to the dummy variables of the regression model. Table 1 below lists the dummy variable assignments and the corresponding expressions for the six means.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=400 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 1 &nbsp;</strong> Individual means as determined by the regression model<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="499" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+    <colgroup>
+    </colgroup>
+    <colgroup>
+    </colgroup>
+    <colgroup span=3>
+    </colgroup>
+    <colgroup>
+    </colgroup>
+    <colgroup>
+    </colgroup>
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td align="center"valign="middle"  width="60" scope="col">Season</td>
+        <td align="center" valign="middle" width="60" scope="col">Density</td>
+        <td align="center" valign="middle" width="44" scope="col"><em>x</em><sub>1</sub></td>
+        <td align="center" valign="middle" width="44" scope="col"><em>x</em><sub>2</sub></td>
+        <td align="center" valign="middle" width="44" scope="col"><em>z</em></td>
+        <td align="center" valign="middle" width="209" scope="col">Mean</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">Spring</td>
+        <td align="center">6</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center"><sub><img src="../../images/assignments/assignment11/mua.gif" width="25" height="27" alt="muA"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">Spring</td>
+        <td align="center">12</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center"><sub><img src="../../images/assignments/assignment11/mub.gif" width="62" height="27" alt="muB"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">Spring</td>
+        <td align="center">24</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center"><img src="../../images/assignments/assignment11/regdummy3.gif" width="63" height="27" alt="regdummy3"></td>
+      </tr>
+      <tr>
+        <td align="center">Summer</td>
+        <td align="center">6</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center"><sub><img src="../../images/assignments/assignment11/muc.gif" width="60" height="35" alt="summer"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">Summer</td>
+        <td align="center">12</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center"><img src="../../images/assignments/assignment11/muc12int.gif" alt="" width="132" height="35"></td>
+      </tr>
+      <tr>
+        <td align="center">Summer</td>
+        <td align="center">24</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+        <td align="center"><img src="../../images/assignments/assignment11/muc24int.gif" width="130" height="35"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h3>Method 1</h3>
+<p>One way to obtain estimates of the means is to place expressions for the means in the BUGS program, add them to the parameter list, and rerun the model. The modified BUGS program is shown below.</p>
+<div class="style1" style="padding-left: 30px; text-indent:-30px">model{</div>
+ <div class="style1" style="padding-left: 60px; text-indent:-30px"> for(i in 1:n) {</div>
+<div class="style1" style="padding-left: 90px; text-indent:-30px">  y[i]~dnorm(y.hat[i],tau.y)</div>
+ <div class="style1" style="padding-left: 90px; text-indent:-30px"> y.hat[i] &lt;- b0 + b1*x12[i] + b2*x24[i]+b3*z[i] + b4*x12[i]*z[i] + b5*x24[i]*z[i]</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  }</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  b0~dnorm(0,.000001)</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  b1~dnorm(0,.000001)</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  b2~dnorm(0,.000001)</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  b3~dnorm(0,.000001)</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  b4~dnorm(0,.000001)</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  b5~dnorm(0,.000001)</div>
+ <div class="style1" style="padding-left: 60px; text-indent:-30px"> tau.y &lt;- pow(sigma.y,-2)</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  sigma.y~dunif(0,10000)</div>
+<div class="style19" style="padding-left: 60px; text-indent:-30px">  # means </div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  mean1 &lt;- b0</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  mean2 &lt;- b0 + b1</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  mean3 &lt;- b0 + b2</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  mean4 &lt;- b0 + b3</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  mean5 &lt;- b0 + b1 + b3 + b4</div>
+<div class="style1" style="padding-left: 60px; text-indent:-30px">  mean6 &lt;- b0 + b2 + b3 + b5</div>
+<div class="style1" style="padding-left: 30px; text-indent:-30px">}</div>
+<p> I create a new parameters object adding the six means to the list of parameters to be returned. Rather than refit the model from scratch I use the last values of the different chains from the previous run as initial values for a new run.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> quinn.parms2 &lt;- c(&quot;mean1&quot;, &quot;mean2&quot;, &quot;mean3&quot;, &quot;mean4&quot;, &quot;mean5&quot;, &quot;mean6&quot;, &quot;b0&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;b3&quot;, &quot;b4&quot;, &quot;b5&quot;, &quot;sigma.y&quot;)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> quinn.2 &lt;- bugs(quinn.data, quinn.1$last.values, quinn.parms2, &quot;quinnmodel.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=10000, debug=T)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(quinn.2$summary,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp;&nbsp; sd&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp; 25%&nbsp;&nbsp;&nbsp; 50%&nbsp;&nbsp;&nbsp; 75%&nbsp; 97.5%&nbsp; Rhat n.eff<br>
+  mean1&nbsp;&nbsp;&nbsp;&nbsp; 1.102 0.249&nbsp; 0.586&nbsp; 0.948&nbsp; 1.112&nbsp; 1.252&nbsp; 1.577 1.000&nbsp; 1000<br>
+  mean2&nbsp;&nbsp;&nbsp;&nbsp; 1.126 0.242&nbsp; 0.652&nbsp; 0.963&nbsp; 1.130&nbsp; 1.282&nbsp; 1.633 1.012&nbsp;&nbsp; 380<br>
+  mean3&nbsp;&nbsp;&nbsp;&nbsp; 0.667 0.243&nbsp; 0.144&nbsp; 0.503&nbsp; 0.673&nbsp; 0.838&nbsp; 1.145 1.001&nbsp; 1000<br>
+  mean4&nbsp;&nbsp;&nbsp;&nbsp; 3.884 0.262&nbsp; 3.367&nbsp; 3.713&nbsp; 3.869&nbsp; 4.057&nbsp; 4.394 1.000&nbsp; 1000<br>
+  mean5&nbsp;&nbsp;&nbsp;&nbsp; 2.897 0.250&nbsp; 2.393&nbsp; 2.740&nbsp; 2.894&nbsp; 3.054&nbsp; 3.373 1.004&nbsp;&nbsp; 890<br>
+  mean6&nbsp;&nbsp;&nbsp;&nbsp; 1.984 0.240&nbsp; 1.491&nbsp; 1.831&nbsp; 1.978&nbsp; 2.139&nbsp; 2.456 1.001&nbsp; 1000<br>
+  b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.102 0.249&nbsp; 0.586&nbsp; 0.948&nbsp; 1.112&nbsp; 1.252&nbsp; 1.577 1.000&nbsp; 1000<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.024 0.340 -0.623 -0.186&nbsp; 0.008&nbsp; 0.234&nbsp; 0.734 1.002&nbsp;&nbsp; 910<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.435 0.348 -1.128 -0.658 -0.424 -0.218&nbsp; 0.249 1.000&nbsp; 1000<br>
+  b3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.782 0.375&nbsp; 2.065&nbsp; 2.549&nbsp; 2.780&nbsp; 3.007&nbsp; 3.552 1.000&nbsp; 1000<br>
+  b4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.011 0.516 -2.077 -1.304 -1.010 -0.705 -0.029 1.000&nbsp; 1000<br>
+  b5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.465 0.518 -2.435 -1.793 -1.466 -1.130 -0.461 1.000&nbsp; 1000<br>
+  sigma.y&nbsp;&nbsp; 0.422 0.098&nbsp; 0.284&nbsp; 0.351&nbsp; 0.407&nbsp; 0.473&nbsp; 0.650 1.004&nbsp;&nbsp; 460<br>
+deviance 18.147 4.925 10.900 14.580 17.325 21.007 29.107 1.002&nbsp;&nbsp; 810</span>
+<h3>Method 2</h3>
+<p>There's actia;;u no need to refit the model. We can obtain the posterior distributions of each parameter from the posterior distributions of b0, b1, b2, b3, b4, and b5. We just use the formulas for the means on the corresponding columns of the <span class="style81">sims.matrix</span> component of the bugs model that contains samples from the posterior distributions. Then we calculate the .025 and .975 quantiles using the values in each vector.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> post.mean &lt;- data.frame(mean1=quinn.1$sims.matrix[,&quot;b0&quot;], mean2=quinn.1$sims.matrix[,&quot;b0&quot;] + quinn.1$sims.matrix[,&quot;b1&quot;], mean3=quinn.1$sims.matrix[,&quot;b0&quot;] + quinn.1$sims.matrix[,&quot;b2&quot;], mean4=quinn.1$sims.matrix[,&quot;b0&quot;] + quinn.1$sims.matrix[,&quot;b3&quot;], mean5=quinn.1$sims.matrix[,&quot;b0&quot;] + quinn.1$sims.matrix[,&quot;b1&quot;] + quinn.1$sims.matrix[,&quot;b3&quot;] + quinn.1$sims.matrix[,&quot;b4&quot;],  &nbsp; mean6=quinn.1$sims.matrix[,&quot;b0&quot;] + quinn.1$sims.matrix[,&quot;b2&quot;] + quinn.1$sims.matrix[,&quot;b3&quot;] + quinn.1$sims.matrix[,&quot;b5&quot;])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> apply(post.mean, 2, mean)</div>
+<span class="style24">  &nbsp;&nbsp; mean1&nbsp;&nbsp;&nbsp; mean2&nbsp;&nbsp;&nbsp; mean3&nbsp;&nbsp;&nbsp; mean4&nbsp;&nbsp;&nbsp; mean5&nbsp;&nbsp;&nbsp; mean6 <br>
+  1.109545 1.108993 0.682457 3.898386 2.889691 2.000862 </span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> apply(post.mean, 2, function(x) quantile(x,c(.025,.975)))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean1&nbsp;&nbsp;&nbsp; mean2&nbsp;&nbsp;&nbsp;&nbsp; mean3&nbsp;&nbsp;&nbsp; mean4&nbsp;&nbsp;&nbsp; mean5&nbsp;&nbsp;&nbsp; mean6<br>
+  2.5%&nbsp; 0.6071675 0.620670 0.1728275 3.402343 2.402527 1.484685<br>
+97.5% 1.5759750 1.613133 1.1831560 4.424975 3.354662 2.562403</span>
+<h3>Comparing Bayesian and frequentist results</h3>
+<p>I fit the frequentist version of the model and obtain the 95% confidence intervals. I then append the Bayesian results.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- lm(Eggs~factor(Density)*Season, data=quinn)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">out.g &lt;- expand.grid(Density=levels(factor(quinn$Density)), Season=levels(quinn$Season))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> freq &lt;- data.frame(out.g,round(predict(out1, newdata=out.g, interval=&quot;confidence&quot;),3))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> bayes &lt;- round(quinn.2$summary[1:6,c(&quot;mean&quot;, &quot;2.5%&quot;, &quot;97.5%&quot;)], 3)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> both &lt;- data.frame(freq, bayes)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> names(both)[3:8] &lt;- c('freq.mean', 'freq.low', 'freq.high', 'Bayes.mean', 'Bayes.low', 'Bayes.high')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> both</div>
+<span class="style24">  &nbsp; Density Season freq.mean freq.low freq.high Bayes.mean Bayes.low Bayes.high<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 spring&nbsp;&nbsp;&nbsp;&nbsp; 1.111&nbsp;&nbsp;&nbsp; 0.635&nbsp;&nbsp;&nbsp;&nbsp; 1.587&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.102&nbsp;&nbsp;&nbsp;&nbsp; 0.586&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.577<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 spring&nbsp;&nbsp;&nbsp;&nbsp; 1.111&nbsp;&nbsp;&nbsp; 0.635&nbsp;&nbsp;&nbsp;&nbsp; 1.587&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.126&nbsp;&nbsp;&nbsp;&nbsp; 0.652&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.633<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24 spring&nbsp;&nbsp;&nbsp;&nbsp; 0.695&nbsp;&nbsp;&nbsp; 0.219&nbsp;&nbsp;&nbsp;&nbsp; 1.171&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.667&nbsp;&nbsp;&nbsp;&nbsp; 0.144&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.145<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 summer&nbsp;&nbsp;&nbsp;&nbsp; 3.887&nbsp;&nbsp;&nbsp; 3.411&nbsp;&nbsp;&nbsp;&nbsp; 4.363&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.884&nbsp;&nbsp;&nbsp;&nbsp; 3.367&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.394<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 summer&nbsp;&nbsp;&nbsp;&nbsp; 2.887&nbsp;&nbsp;&nbsp; 2.411&nbsp;&nbsp;&nbsp;&nbsp; 3.363&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.897&nbsp;&nbsp;&nbsp;&nbsp; 2.393&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.373<br>
+6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24 summer&nbsp;&nbsp;&nbsp;&nbsp; 2.000&nbsp;&nbsp;&nbsp; 1.524&nbsp;&nbsp;&nbsp;&nbsp; 2.476&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.984&nbsp;&nbsp;&nbsp;&nbsp; 1.491&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.456</span>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment11/hw11scores.png" width="450" height="250" alt="hw 11"></p>
+<p align="center"><img src="../../images/assignments/assignment11/hwaverage.png" width="560" height="240" alt="hw average"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--December 1, 2012<br>
+      URL: <a href="assign11.htm#assign11">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign11.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

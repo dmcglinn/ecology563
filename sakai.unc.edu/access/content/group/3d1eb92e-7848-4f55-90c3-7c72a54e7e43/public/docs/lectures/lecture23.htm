@@ -1,0 +1,922 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 23&mdash;Monday, November 12, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+.style1012 {	font-family: "Courier New", Courier, mono
+}
+.style1012 {font-family: "Courier New", Courier, mono}
+.style221 {color: #339966;
+	font-weight: bold;
+}
+.style29 {font-family: "Courier New", Courier, mono}
+.style30 {color: #333399;
+	font-weight: bold;
+}
+.style28 {color: #CC0000; font-weight: bold; }
+.style411 {	color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #009900;  font-weight: bold; font-family: "Courier New", Courier, mono;}
+.style5 {	color: #CC0000;
+	font-weight: bold;
+}
+span.GramE {mso-style-name:"";
+	mso-gram-e:yes;}
+span.SpellE {mso-style-name:"";
+	mso-spl-e:yes;}
+.style331 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style391 {font-family: "Courier New", Courier, mono; font-weight: bold; color: #339933}
+.style42 {color: #CCCCCC}
+.style42 {color: #CC0000;
+	font-weight: bold;
+}
+.style401 {color: #CC0000}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture23" id="lecture23"></a>Lecture 23&mdash;Monday, November 12, 2012</h1>
+<h3>Topics</h3>
+<ul>
+  <li><a href="lecture23.htm#history">A brief history of statistics</a>
+  <li><a href="lecture23.htm#Bayes">Bayes rule</a></li>
+  <li><a href="lecture23.htm#simple">A simple application of Bayes rule</a></li>
+  <li><a href="lecture23.htm#inference">The Bayesian approach to statistical inference</a></li>
+  <li><a href="lecture23.htm#contrast">A contrast of the frequentist and  Bayesian approaches to estimation</a>
+    <ul>
+      <li><a href="lecture23.htm#frequentist">Frequentist approach</a></li>
+      <li><a href="lecture23.htm#Bayesian">Bayesian approach</a> </li>
+    </ul>
+  </li>
+  <li><a href="lecture23.htm#modern">A modern approach to Bayesian estimation</a>
+<ul>
+      <li><a href="lecture23.htm#metropolis">Metropolis algorithm</a></li>
+      <li><a href="lecture23.htm#Gibbs">The Gibbs sampler</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture23.htm#critique">The frequentist philosophy of statistics and a Bayesian critique</a></li>
+  <li><a href="lecture23.htm#alternative">The Bayesian alternative to the frequentist approach</a></li>
+  <li><a href="lecture23.htm#counter">A frequentist critique of the Bayesian approach</a></li>
+  <li><a href="lecture23.htm#bottomline">Bayesian statistics&mdash;why should a frequentist care?</a></li>
+  <li><a href="lecture23.htm#covariance">Estimating an analysis of covariance model using JAGS and BUGS</a>
+    <ul>
+      <li><a href="lecture23.htm#preliminaries">WinBUGS (JAGS) preliminaries</a></li>
+      <li><a href="lecture23.htm#setting">Describing the model in the BUGS language</a>
+        <ul>
+          <li><a href="lecture23.htm#commentary">A line by line commentary on the code</a></li>
+        </ul>
+      </li>
+      <li><a href="lecture23.htm#some">Some remarks about WinBUGS/JAGS models in general </a></li>
+      <li><a href="lecture23.htm#running">Running the WinBUGS/JAGS model from R</a></li>
+      <li><a href="lecture23.htm#information">Information returned by the bugs (jags) function</a></li>
+      <li><a href="lecture23.htm#comparing">Priors that are too informative: comparing Bayesian and frequentist results</a></li>
+      <li><a href="lecture23.htm#golden">Golden rule for fitting models with MCMC</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture23.htm#cited">Cited reference</a></li>
+  <li><a href="lecture23.htm#books">Introductory books and articles on Bayesian estimation</a></li>
+  <li><a href="lecture23.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture23.htm#bugs">bugs</a> (from <span class="style191">arm</span>) runs WinBUGS from within R </li>
+  <li><a href="lecture23.htm#setwd">getwd</a> retrieves the current R working directory</li>
+  <li><a href="lecture23.htm#jags">jags</a> (from <span class="style191">R2jags</span>) runs JAGS from within R </li>
+  <li><a href="lecture23.htm#setwd">setwd</a> sets the current working directory to the location specified (in quotes) </li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture23.htm#bugs">data=</a> (argument to <span class="style191">bugs</span>) name of R object containing the variable names  formatted as a list </li>
+  <li><a href="lecture23.htm#bugs">debug=</a> (argument to <span class="style191">bugs</span>) is assigned the value TRUE or FALSE depending on whether the WinBUGS window should remain open for debugging after fitting a model </li>
+  <li><a href="lecture23.htm#bugs">inits=</a> (argument to <span class="style191">bugs</span>) a list of initial values or a function that initializes each Markov chain </li>
+  <li><a href="lecture23.htm#bugs">model.file=</a> (argument to <span class="style191">bugs</span>) name of the file containing the code that specifies the BUGS model, in quotes. The directory should have previously been specified with R's setwd function.</li>
+  <li> <a href="lecture23.htm#bugs">parameters=</a> (argument to <span class="style191">bugs</span>) name of the R object containing the vector of parameter names of the parameters to track</li>
+  <li><a href="lecture23.htm#nburnin">n.burnin=</a> (argument to <span class="style191">bugs</span>) number of samples to be used for the burn-in period that are then discarded. The default value is one half the number of iterations.</li>
+  <li><a href="lecture23.htm#bugs">n.chains=</a> (argument to <span class="style191">bugs</span>) the number of chains to run simultaneously</li>
+  <li><a href="lecture23.htm#bugs">n.iter=</a> (argument to <span class="style191">bugs</span>) the total number of iterations for each chain </li>
+  <li><a href="lecture23.htm#nthin">n.thin=</a> (argument to <span class="style191">bugs</span>) the thinning rate for the Markov chains. If <span class="style22">n.thin=k</span> then every kth observation in the chain is retained. </li>
+</ul>
+<h3>R packages used </h3>
+<ul>
+  <li><a href="lecture23.htm#bugs">arm</a> for the <span class="style42">bugs</span> function that allows running WinBUGS from within R </li>
+  <li><a href="lecture23.htm#jags">R2jags</a> for the <span class="style42">jags</span> function that allows running JAGS from within R</li>
+</ul>
+<h2><a name="history" id="history"></a>A brief  history of  statistics </h2>
+<p>Bayesian inference is as old as statistics itself. The frequentist approach on the other hand is a more recent innovation and derives from the uncomfortable marriage of methodologies developed by the Neyman-Pearson-Wald school (hypothesis testing) and the Fisherian school (everything else). While there are fundamental differences in the Bayesian and frequentist approaches that are difficult to reconcile, most statisticians treat them as just two options on a menu and are willing to use the tools they offer without necessarily embracing the accompanying baggage. </p>
+<p>The history of Bayesian statistics began in 1763 with a paper written by Thomas Bayes in which he outlined a formula that has come to be called Bayes rule. In the early 1900s the frequentists (Fisher, Neyman, and Pearson) rejected the Bayesian approach, after which it temporarily slipped into obscurity and all focus shifted to  frequentist methods. Bayesian methods experienced a revival in the early 1990s so much so that Bayesian approaches are now the hottest area of modern statistics.</p>
+<p> While there has been considerable rancor in the literature (particularly among scientists) with regard to these two approaches, I think it is fair to say that Bayesian inference has always been recognized as being the more legitimate approach to doing statistics. Because Bayesian inference was difficult to carry out except in a few fairly artificial cases, the frequentist approach has held sway by default. Except for a few universities that have built their reputation on being Bayesian hotbeds, (Duke, for example), most statistics departments have tended to include only token representatives of the Bayesian viewpoint among their faculty. </p>
+<p>This situation dramatically changed about 20 years ago. Using methodologies originally developed by physicists, Bayesian inference is now easy to do. Furthermore Bayesian methods are able to solve problems that are currently impossible for the frequentist approach to solve. This has generated a great deal of interest in Bayesian statistics among scientists in general. I introduce Bayesian statistics here not as an alternative to frequentist statistics but as a collection of tools that can be useful in many instances. </p>
+<h2><a name="Bayes"></a>Bayes rule </h2>
+<p>On first pass, Bayes rule would seem to be just a trivial extension of the concept of conditional probability. I begin by reviewing the  definition of conditional probability. Let Fig. 1 represent a sample space <em>S</em> consisting of 12 equally likely sample points. The events <em>A</em> and <em>B</em> are the subsets of sample points shown in the figure. Under the equally likely assumption we have the following.</p>
+<div class="figureR">
+  <p align="center"><img src="../../images/lectures/lecture23/circles.png" width="196" height="160">
+  <p align="center"> <strong>Fig. 1</strong> &nbsp;The sample space S with events<br>
+    A and B (<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/notes/lecture12&#32;fig1&#32;Rcode.html">R code</a>)</p>
+</div>
+<p align="center"><img src="../../images/lectures/lecture23/probAnew.gif" width="273" height="55"></p>
+<p align="center"><img src="../../images/lectures/lecture23/probB.gif" width="273" height="55"></p>
+<p align="center"><img src="../../images/lectures/lecture23/probAB.gif" width="378" height="55"></p>
+<p>Conditional probabilities effectively change the sample space. For instance, <em>P</em>(<em>A</em>|<em>B</em>) restricts the sample space to <em>B</em> and is calculated under the equally likely scenario by counting up the number of sample points that are both in <em>A</em> and <em>B</em> and dividing  by the number of sample points in <em>B</em>. Formally we have</p>
+<p align="center"><img src="../../images/lectures/lecture23/probAgivenB.gif" width="502" height="58" alt="prob A given B"></p>
+<p>With this background, Bayes rule can be derived as follows. Let <em>A</em> and <em>B</em> be any two events. Using the definition of conditional probability we can write the following.</p>
+<p align="center"><img src="../../images/lectures/lecture23/conditiona1.gif" width="360" height="58"></p>
+<p align="center"><img src="../../images/lectures/lecture23/conditional2.gif" width="360" height="58"></p>
+<p>Having solved for the joint probability <img src="../../images/lectures/lecture23/jointprob.gif" width="61" height="30" align="absmiddle"> in each expression we can set the results equal to each other.</p>
+<p align="center"><img src="../../images/lectures/lecture23/bayes1.gif" width="240" height="96"></p>
+<p>This latter formula is essentially Bayes rule but not as it is usually written. Imagine a set of events <img src="../../images/lectures/lecture23/Bset.gif" width="138" height="31" align="absmiddle"> that are pairwise disjoint and partition the sample space <em>S</em> such that <img src="../../images/lectures/lecture23/Bunion.gif" alt="B union" width="182" height="27" align="absmiddle">, then we can write <em>P</em>(<em>A</em>), the denominator in the above expression, as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture23/probA.gif" width="505" height="188" alt="Prob A"></p>
+<p>Substituting this expression for <em>P</em>(<em>A</em>) in the denominator of the formula for <em>P</em>(<em>B</em>|<em>A</em>) given above yields Bayes rule.</p>
+<p align="center"><img src="../../images/lectures/lecture23/Bayesrule1.gif" width="222" height="75" alt="Bayes rule"></p>
+<p>If <em>B</em> is continuous, the sum is replaced by an integral.</p>
+<p align="center"><img src="../../images/lectures/lecture23/Bayesrule2.gif" width="235" height="68"></p>
+<h2><a name="simple"></a>A simple application of Bayes rule <span class="style6">(not covered in lecture)</span></h2>
+<p>The following Bayes rule problem is typical of the kind that appears in textbooks on elementary probability theory and biostatistics.</p>
+<blockquote>
+  <p class="styleArial1"> Suppose a certain drug test is 99% sensitive
+    and 99% specific, that is, the test will correctly identify a drug user as
+    testing positive 99% of the time, and will correctly identify a non-user as
+    testing negative 99% of the time. This would seem to be a relatively accurate
+    test, but <span class=SpellE>Bayes</span>' theorem can be used to demonstrate
+    the relatively high probability of misclassifying non-users as users. Let's
+    assume a corporation decides to test its employees for drug use, and that only
+    0.5% of the employees actually <span class=GramE>use</span> the drug. What is
+    the probability that, given a positive drug test, an employee is actually a drug
+    user? </p>
+</blockquote>
+<p>The assertions made in the problem can be formulated as conditional probabilities. Let's make the following identifications.</p>
+<blockquote>
+  <p>D = event that an employee uses drugs<br>
+    D<sup>c</sup> = event that an employee does not use drugs</p>
+</blockquote>
+<p>Notice that these two events form an exhaustive partition of our sample space, i.e., <img src="../../images/lectures/lecture23/samplespace.gif" alt="sample space" width="102" height="27" align="absmiddle">. Either an employee uses drugs or he/she does not. Continuing with our identifications, let</p>
+<blockquote>
+  <p>T = event that an employee tests positive on a drug test<br>
+    T<sup>c</sup> = event that an employee tests negative on a drug test</p>
+</blockquote>
+<p>These two events form a second partition of our sample space, i.e., <img src="../../images/lectures/lecture23/samplespace2.gif" alt="sample space 2" width="97" height="27" align="absmiddle">. Sensitivity and specificity are   formulated as conditional probabilities.</p>
+<blockquote>
+  <p>sensitivity: <img src="../../images/lectures/lecture23/sensitivity.gif" alt="sensitivity" width="117" height="33" align="absmiddle"></p>
+  <p>specificity: <img src="../../images/lectures/lecture23/specificity.gif" alt="specificity" width="137" height="38" align="absmiddle"></p>
+</blockquote>
+<p>Conditional probabilities satisfy the laws of probability so given drug use either an individual tests positive or not. Thus we also know</p>
+<p><img src="../../images/lectures/lecture23/sensitivity2.gif" alt="oneminus sensitivity" width="125" height="35" align="absmiddle"> and similarly <img src="../../images/lectures/lecture23/specificity2.gif" alt="one minus specificity" width="125" height="38" align="absmiddle">. We're also told <img src="../../images/lectures/lecture23/probdrug.gif" alt="prob drug" width="107" height="30" align="absmiddle">, from which it follows <img src="../../images/lectures/lecture23/probnodrug.gif" alt="prob no drug" width="118" height="35" align="absmiddle"> because these two probabilities have to add to 1. We're asked to find <img src="../../images/lectures/lecture23/drugposterior.gif" alt="drug posterior" width="70" height="33" align="absmiddle">. From the definition of conditional probability we have</p>
+<p align="center"><img src="../../images/lectures/lecture23/bayesruleex.gif" width="358" height="133" alt="bayes rule example"></p>
+<p>where in the last step I use Bayes rule in which our sample space of people with positive tests is partitioned as <img src="../../images/lectures/lecture23/samplespace.gif" alt="sample space" width="102" height="27" align="absmiddle">. Plugging in the numbers we obtain the following.</p>
+<p align="center"><img src="../../images/lectures/lecture23/bayesex2.gif" width="290" height="58" alt="bayes example 2"></p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">(.99*.005)/(.99*.005+.01*.995)</div>
+<span class="style141">[1] 0.3322148</span>
+<p>This low accuracy seems anomalous given the apparently high precision of the tests until we realize that the activity being tested for is quite rare. While I present this largely as an illustration of Bayes rule in action there is another   message to take home from this example. The order of the events in the conditional probability truly matters. In the example <img src="../../images/lectures/lecture23/drugposterior.gif" alt="drug posterior" width="70" height="33" align="absmiddle"> and <img src="../../images/lectures/lecture23/sensitivityraw.gif" alt="sensitivity" width="70" height="33" align="absmiddle">are not only different  conceptually but also very different numerically.</p>
+<h2><a name="inference"></a>The Bayesian approach to statistical inference</h2>
+<p>In the Bayesian approach to statistics Bayes rule becomes both a method of estimation and a way to make inferences. Here's Bayes rule again in its continuous form.</p>
+<p align="center"><img src="../../images/lectures/lecture23/Bayesrule2.gif" alt="Bayes rule" width="235" height="68" align="absmiddle"></p>
+<p>Now let <em>B</em> = &theta;, a parameter, and <em>A</em> = data, then Bayes rule can be written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture23/Bayesrule3.gif" width="266" height="68"></p>
+<ul>
+  <ul>
+    <li>Here <img src="../../images/lectures/lecture23/likelihood.gif" width="85" height="33" align="absmiddle"> is our old friend the <strong class="style9">likelihood</strong>. </li>
+    <li><img src="../../images/lectures/lecture23/prior.gif" width="46" height="30" align="absmiddle"> is called the<strong class="style9"> prior probability</strong>. It represents our opinion about &theta; before we carry out the experiment (i.e., before we collect data).</li>
+    <li><img src="../../images/lectures/lecture23/posterior.gif" width="85" height="33" align="absmiddle"> is called the <span class="style9">posterior probability</span>. It represents our opinion about &theta; after we carry out the experiment (collect data).</li>
+  </ul>
+</ul>
+<p>With these definitions  we can express Bayes rule as</p>
+<p align="center"><img src="../../images/lectures/lecture23/Bayesrule4.gif" width="420" height="27" alt="Bayes rule"></p>
+<p>where the constant of proportionality is give by the reciprocal of the integral shown above. Thus with Bayes rule we update the prior probability of &theta; via the likelihood to obtain the posterior probability of &theta;.</p>
+<p>The posterior probability is a statement of our belief about the state of nature. It takes into consideration our prior beliefs as well as what we've learned from our data. If we have no substantive prior beliefs then we can use what are called &quot;vague&quot; or &quot;uninformative&quot; priors. In these cases we essentially derive all of our inference from the likelihood, just like in the frequentist approach to statistics. A subtle difference is that because we used Bayes rule to set up our problem the conclusions we draw about the parameters can be formulated as probability statements. </p>
+<h2 align="left"><a name="contrast"></a>A contrast of the  frequentist and Bayesian approaches to parameter estimation </h2>
+<p>To illustrate the differences between the frequentist and Bayesian approaches to parameter estimation, I apply the two methodologies to a common problem. The problem is simple enough that  classical Bayesian methods can be used. An experiment is carried out to determine the seed germination success of a particular genetic strain. Eighty seeds were sewn separately in a single tray placed in a greenhouse. The total number of seeds that successfully germinated was recorded. Suppose we observe that 42 seeds germinated. We make the assumptions that the seed are independent, so that the individual seeds in a given tray do not interfere with each other, and that the seeds have an identical germination success rate <em>p</em>. </p>
+<p>Regardless of whether we are taking a frequentist or Bayesian approach, we begin by writing down the likelihood for this experiment, the probability of observing the data that we observed. Let <em>X<sub>i</sub></em> = outcome for seed <em>i.</em> This outcome is 1 if the seed germinated, and 0 otherwise. If we list the outcome for each seed in order, then the probability of our data is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture23/examplikelihood.gif" width="583" height="163" alt="example"></p>
+<p align="left">This is an example of what's called a product Bernoulli distribution, which is closely related to the more familiar binomial distribution.</p>
+<h3 align="left"><a name="frequentist"></a>Frequentist approach to this problem</h3>
+<p>Frequentists work exclusively with the log-likelihood.</p>
+<p align="center"><img src="../../images/lectures/lecture23/examploglikelihood.gif" width="275" height="30" alt="example logL"></p>
+<p>To find the maximum likelihood estimate of <em>p</em> using calculus we can differentiate the log-likelihood, set the result equal to zero, and solve for <em>p</em>. For this problem these steps are easy.</p>
+<p align="center"><img src="../../images/lectures/lecture23/exampderiv.gif" width="235" height="260" alt="frequentist calculation"></p>
+<p>Observe that the estimate is just the total number of successes (germinations) divided by the total number of trials, i.e., the fraction of successes. As is often the case the maximum likelihood estimate is a fairly natural estimate. To obtain this result numerically we can write a function that calculates the negative log-likelihood as a function of <em>p</em> and then use the <span class="style13">nlm</span> function to find its minimum.</p>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> binomial.negLL &lt;- function(p) -(42*log(p)+38*log(1-p))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">out1 &lt;- nlm(binomial.negLL, .5, hessian=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out1$estimate</div>
+<span class="style24">[1] 0.5249995</span>
+<p>This is the total number of successes divided by the total number of trials.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 42/80</div>
+<span class="style141"> [1] 0.525</span>
+<p>Using the Hessian we can calculate a 95% Wald confidence interval for the proportion.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #Wald confidence interval</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out1$estimate+c(qnorm(.025), qnorm(.975))*sqrt(1/out1$hessian)</div>
+<span class="style141">[1] 0.4155734 0.6344256</span>
+<h3><a name="Bayesian"></a>Bayesian approach to this problem</h3>
+<p>Bayesians also begin with the likelihood.</p>
+<p align="center"><img src="../../images/lectures/lecture23/exampbayeslike.gif" width="198" height="37" alt="exampBayes"></p>
+<p>In addition to the likelihood a Bayesian requires a prior probability for <em>p</em>. The prior probability is a  probability distribution that summarizes our knowledge about <em>p</em> before we collected the current data. In a classical Bayesian analysis we would like a probability distribution for the prior that readily combines with the likelihood so that the posterior distribution can be obtained by inspection. Furthermore a prior for <em>p</em> should be a probability model that  assigns non-zero probabilities to values in the interval (0, 1) and zero values outside this interval. The beta distribution is an example of such a probability distribution. The probability density function of a beta distribution with parameters <em>a</em> and <em>b</em> is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture23/beta.gif" width="288" height="122" alt="beta"></p>
+<p>where <em>B</em>(<em>a</em>, <em>b</em>) is a normalizing constant called the beta function. The mean of a beta distribution in terms of its parameters is<img src="../../images/lectures/lecture23/betamean2.gif" alt="beta mean" width="77" height="55" align="absmiddle">. Using a generic beta prior for <em>p</em>, the posterior probability of <em>p</em> can be written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture23/bayespostbeta.gif" width="328" height="247" alt="beta posterior"></p>
+<p>If we ignore the normalizing constants in the denominator, we see that the numerator has the form of a beta distribution with parameters 42 + <em>a</em> and 38 + <em>b</em>. Thus it must be the case that the normalizing constant must reduce to  B(42 + <em>a</em>, 38 + <em>b</em>) and hence the posterior distribution is also a beta distribution. </p>
+<p align="center"><img src="../../images/lectures/lecture23/bayespostbeta2.gif" width="250" height="65" alt="posterior beta"></p>
+<p>The mean of this distribution is </p>
+<p align="center"><img src="../../images/lectures/lecture23/betamean3.gif" width="245" height="55" alt="beta mean"></p>
+<p>In order to agree with the frequentist estimate, we need to choose an uninformative prior for <em>p</em>. For a proportion bounded on the interval [0, 1] a natural choice is the uniform distribution on this interval. A uniform distribution on (0, 1) has the constant density <em>f</em>(<em>p</em>) = 1 and is a special case of a beta distribution in which <em>a</em> = <em>b</em> = 1. For a Bayesian point estimate of <em>p</em> we can use the mean of the posterior distribution that is given by</p>
+<p align="center"><img src="../../images/lectures/lecture23/betamean4.gif" alt="beta mean" width="195" height="55" align="absmiddle"> = 0.5243902</p>
+<p align="left">Notice that the Bayesian estimate of <em>p</em> is similar but not identical to the frequentist estimate. The difference between the two estimates would be smaller with a larger sample size because the influence of the prior would be further reduced.</p>
+
+<h2><strong><a name="modern"></a>A modern approach to Bayesian estimation</strong></h2>
+<p>The beta distribution is referred to as a conjugate distribution of the product Bernoulli distribution (more generally, it is a conjugate distribution of the binomial distribution). They are conjugates because the product of the two distributions yields a new distribution that is of the same form, in this case a beta distribution. Historically this was how Bayesian estimation proceeded. We construct a likelihood and then try to find a suitable prior such that the prior is a  conjugate to the likelihood, or is such that the normalizing integral in the denominator of Bayes rule that results can be evaluated. The problem with the classical approach is that it restricts the use of Bayesian methods to only  very simple problems. When we turn to regression problems in which there are multiple parameters of interest each with their own priors there is  no simple way  to select the priors so that the corresponding posterior distribution can be determined.</p>
+<p>The manner in which statisticians carry out Bayesian estimation changed dramatically in the early 1990s. Today Bayesian analysis is carried out using a set of techniques referred to as Markov Chain Monte Carlo methods that make it possible to sample from the posterior distribution, for a given prior and likelihood, without the need to obtain an explicit formula. Markov chain Monte Carlo (MCMC for short) has two components to its name: Monte Carlo and Markov chain.</p>
+<ol>
+  <li>The &quot;Monte Carlo&quot; in MCMC refers to Monte Carlo methods, the name being derived from  the casino. Technically a Monte Carlo method is a stochastic simulation in which values from a probability distribution are obtained by sampling. Monte Carlo methods include a large class of statistical methods that depend on random number generation and sampling from computer-generated values to obtain approximate answers to statistical questions. In MCMC, the Monte Carlo methods are used for obtaining  random samples from the desired posterior distribution, <img src="../../images/lectures/lecture23/posterior.gif" alt="posterior" width="85" height="33" align="absmiddle">.</li>
+  <li> &quot;Markov chain&quot; refers to the algorithm used for generating sequential random values that lead us to the putative posterior distribution. If a Markov chain is formulated correctly, theory guarantees that eventually the  values it generates will be samples from the desired posterior distribution. Formally, we need what's called an ergodic Markov chain  because such chains possess a  stationary distribution. The methods commonly used in MCMC are  guaranteed to produce ergodic Markov chains.</li>
+</ol>
+<p>So a Markov chain is how we get to the posterior distribution and Monte Carlo is how we obtain samples of that posterior distribution once we get there. Markov chain Monte Carlo doesn't  return a formula for the posterior distribution, just a set of values. But with a large enough sample we can characterize most features of interest about the posterior distribution&mdash;quantiles, means, medians, etc. The trick in Markov chain Monte Carlo is to find a Markov chain whose stationary distribution is <img src="../../images/lectures/lecture23/posterior.gif" width="85" height="33" align="absmiddle">. With such a Markov chain we just let it run for a while (the so-called burn-in period) to give the chain time to reach its stationary distribution. Once there the chain will roughly visit values in the stationary distribution in proportion to their probabilities. Thus values in more probable regions of the distribution will be visited more often than  values in the tail of the distribution.</p>
+<p>A full discussion of  MCMC methods and why MCMC works is beyond the scope of this course. Some of the references cited at the end of this document provide more information. The programs BUGS and JAGS are adaptive in their choice of method. They will use  Gibbs sampling, adaptive rejection sampling, the Metropolis algorithm, or various other MCMC methodologies   depending on the nature of the problem you submit. To give a hint at the flavor of what's involved I briefly describe the logic behind two of these MCMC methods: the Metropolis algorithm and Gibbs sampling.</p>
+<h3><a name="metropolis"></a>Metropolis algorithm</h3>
+<p>The  Metropolis algorithm originates from work in statistical physics dating back to the 1950s and was adapted for Bayesian estimation only in the last 25 years. The method uses the fact that knowing the full formula for the posterior distribution, including the normalizing constant, is unnecessary if one only needs to deal with the ratios of posteriors. Ignoring the details of the normalizing constant Bayes rule can be written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture23/ratio1.gif" width="262" height="98" alt="ratio1"></p>
+<p>where <em>k</em> is the normalizing constant. So, when we look at the ratios of the posterior densities at two distinct values of the parameter, &theta;<sub>1</sub> and &theta;<sub>2</sub>, the normalizing constant cancels. So, we  only need to work  with the likelihood and the prior, the two quantities for which we  have formulas.</p>
+<p align="center"><img src="../../images/lectures/lecture23/ratio2.gif" width="207" height="62" alt="ratio2"></p>
+<p name="proposal">The Metropolis algorithm uses what's called a <span class="style">proposal distribution</span> (also a jumping or instrumental distribution) to generate  candidate values of &theta;. The proposal distribution is denoted</p>
+<p align="center"><img src="../../images/lectures/lecture23/proposal.gif" width="230" height="35" alt="proposal"></p>
+<p>In the Metropolis algorithm the proposal distribution must be one that is symmetric, i.e., <img src="../../images/lectures/lecture23/symmetry.gif" alt="symmetry" width="168" height="32" align="absmiddle">. In another variation, the Metropolis-Hastings algorithm,  the symmetry requirement is replaced with a more general condition. </p>
+<p>At step <em>t</em> &ndash; 1 of the Metropolis algorithm, a new candidate value <img src="../../images/lectures/lecture23/thetastar.gif" width="28" height="23" align="absmiddle"> is drawn from the proposal distribution.  A form of rejection sampling is then used to decide if we should keep this new value. We calculate </p>
+<p align="center"><img src="../../images/lectures/lecture23/metropolis.gif" width="183" height="77" alt="Metropolis"></p>
+<p>and the new parameter value <img src="../../images/lectures/lecture23/thetastar.gif" width="28" height="23" align="absmiddle"> is  accepted with probability &alpha;. In the Metropolis-Hastings algorithm the formula that is used for &alpha; is slightly more complicated in that it also involves a ratio of the proposal distributions. In practice if &alpha; &lt; 1 then we draw a random value <em>u</em> from the uniform distribution on (0, 1) and keep <img src="../../images/lectures/lecture23/thetastar.gif" width="28" height="23" align="absmiddle"> if <em>u</em> &ge; &alpha;. </p>
+<p>It turns out that the series of &theta; values generated by this algorithm forms a Markov chain whose stationary distribution is the desired posterior distribution <img src="../../images/lectures/lecture23/piofx.gif" width="45" height="30" align="absmiddle">. The Markov chain generated by the Metropolis-Hastings algorithm converges to <img src="../../images/lectures/lecture23/piofx.gif" width="45" height="30" align="absmiddle"> regardless of the choice of proposal distribution <em>q</em>, but the choice of <em>q</em> can affect how fast the convergence takes place.</p>
+<p><a name="toy"></a>Here's a trivial illustration of how the Metropolis algorithm might work in practice. Suppose there are only seven possible values of &theta;, the numbers 1 through 7, and that we can evaluate the prior, the likelihood, and their product at each of these seven values. The product of the prior and the likelihood is the numerator  of Bayes rule and is referred to as the target distribution, <img src="../../images/lectures/lecture23/target2.gif" alt="target" width="187" height="33" align="absmiddle">. It's the posterior density without the appropriate normalizing constant. For our example with seven distinct values of &theta;, suppose the target distribution takes the following form, where for convenience I've chosen <em>f</em>(&theta;) = &theta; (Fig. 2).</p>
+<table width="425" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center"><img src="../../images/lectures/lecture23/target.png" width="395" height="320" alt="target">&nbsp;&nbsp;&nbsp;</div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Hypothetical target distribution.</td>
+  </tr>
+</table>
+<p >We begin by choosing one of the seven possible values of &theta; at random. This is our starting value. Next we need a proposal distribution, a way of generating new values of &theta; given the current value of &theta;. A simple choice is to either select the observation immediately to the left of &theta; with probability 1/2 or to select the observation immediately to the right of &theta; with probability 1/2. Thus if the current value of &theta; is &theta;<sub>i</sub>, we next choose either &theta;<sub>i</sub> &ndash; 1 or &theta;<sub>i</sub> + 1 with equal probabilities. (Note: we would need to treat the endpoints &theta; = 1 and &theta; = 7 as special cases.) We can implement this by choosing a random number between 0 and 1. If the random number is less than 0.5, we choose &theta;<sub>i</sub> &ndash; 1; if this number is greater than 0.5 we choose &theta;<sub>i</sub> + 1.</p>
+<p >Having selected a candidate value we have to decide whether to keep it (move there). For that we evaluate the target distribution function at the candidate value and compare it to the value of the target distribution function at the current value. If the target distribution is larger at the candidate value, so that the ratio of the target distributions is greater than 1, we move there. If the ratio is less than one then we move to the candidate value with probability equal to the ratio. For the target distribution in Fig. 2 our decision rule is the following.</p>
+<ol>
+  <li>If we draw  &theta;<sub>i</sub> + 1 we move there because <img src="../../images/lectures/lecture23/rule1.gif" alt="rule 1" width="138" height="32" align="absmiddle">.</li>
+  <li>If we draw   &theta;<sub>i</sub> &ndash; 1 we move there with probability <img src="../../images/lectures/lecture23/rule2.gif" alt="rule 2" width="78" height="62" align="absmiddle">, otherwise we stay where we are.</li>
+</ol>
+<p>This leads to the formal decision rule given previously. To see how this would work in practice suppose the random starting point is &theta; = 4. I generate six random numbers between 0 and 1.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(10)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> probs &lt;- runif(6)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> probs</div>
+<span class="style24">[1] 0.50747820 0.30676851 0.42690767 0.69310208 0.08513597 0.22543662</span>
+<ol>
+  <li>We start at &theta; = 4. We need to choose between the adjacent values &theta; = 3 and &theta; = 5.</li>
+  <li>Because probs[1] &gt; 0.5 we choose &theta; = 5. Then because <em>f</em>(5) = 5 &gt; 4 = <em>f</em>(4) we move to  &theta; = 5. </li>
+  <li>Because probs[2] &lt; 0.5 we next choose &theta; = 4. Then because <img src="../../images/lectures/lecture23/f&#32;ratio.gif" alt="f(4)/f(5)" width="47" height="58" align="absmiddle"> = 0.8 &gt; probs[3], we move to &theta; = 4.</li>
+  <li>Because probs[4] &gt; 0.5 we next choose &theta; = 5. Then because <em>f</em>(5) = 5 &gt; 4 = <em>f</em>(4) we move to  &theta; = 5.</li>
+  <li>Because probs[5] &lt; 0.5 we next choose &theta; = 4. Then because<img src="../../images/lectures/lecture23/f&#32;ratio.gif" alt="f(4)/f(5)" width="47" height="58" align="absmiddle"> = 0.8 &gt; probs[6], we move to &theta; = 4.</li>
+</ol>
+<p>So after five steps our Markov chain consists of the values {4, 5, 4, 5, 4}. The claim is that if we carry out this protocol long enough the relative frequencies of the elements of our sample will correspond to the probabilities of the posterior distribution (which is a multiple of the target distribution). The rationale for this assertion is that our  choices in moving from one point to another are entirely determined by  the relative magnitudes of the posterior probabilities.</p>
+<p>For the case in which there is a continuum of possible values for &theta; we need a more elaborate proposal distribution. A typical choice might be a normal distribution centered at the current value with a standard deviation that is  treated as a tuning parameter. Because it generally takes a while to explore the parameter space, particularly if we start in an unrepresentative portion of it,  the Metropolis algorithm requires a burn-in period. The observations obtained during the burn-in period are discarded. Because also it will take a while for the relative frequencies in our sample to stabilize around those of the posterior distribution, the Metropolis algorithm  needs to be run for a long time after the initial burn-in period. (There are a number of diagnostics that have been developed for determining how long to run the algorithm and when to terminate the burn-in period.) Once we're satisfied that we're sampling from the stationary (posterior) distribution, we let the Markov chain run some more this time saving the values it generates. The  values we obtain are then used  to obtain Monte Carlo estimates of whatever characteristics of the  posterior distribution we desire. </p>
+<h3> <a name="Gibbs"></a>The Gibbs sampler </h3>
+<p>The Gibbs sampler is another of the Markov chain Monte Carlo methods implemented in the software BUGS and JAGS.  The Gibbs sampler yields a Markov chain whose stationary distribution is the posterior distribution we want. Thus after a finite amount of time we're guaranteed that the sequential values of the Markov chain are correlated samples from the desired posterior distribution. The relative frequency of observations from different intervals corresponds approximately to the probabilities defined by the posterior distribution over those intervals.</p>
+<p>Suppose <img src="../../images/lectures/lecture23/image015.gif" alt="target" width="127" height="33" align="absmiddle">&nbsp;depends on <em>k</em> parameters <img src="../../images/lectures/lecture23/image018.gif" alt="theta" width="103" height="27" align="absmiddle">. Then the Gibbs sampler requires <em>k</em> conditional probability statements of the form</p>
+<p align="center" style="text-align:center"><img src="../../images/lectures/lecture23/image021.gif" width="173" height="140" alt="sampler"></p>
+<p>These probabilities are often obtainable from hierarchical models when the models are formulated from a Bayesian perspective. Typically the basic regression model is itself a conditional statement, the random effects are conditional on the values of parameters of a normal distribution, and all the remaining parameters are conditional on their priors.</p>
+<p>With the conditional probabilities formulated we choose starting values <img src="../../images/lectures/lecture23/image024.gif" alt="initial" width="137" height="30" align="absmiddle">&nbsp;and then use the probability statements one by one to update these values by drawing new values from the full conditional probability distributions. At stage <em>j</em> of the iteration the update equations will look as follows.</p>
+<p align="center" style="text-align:center"><img src="../../images/lectures/lecture23/image027.gif" width="302" height="192" alt="update"></p>
+<p>Notice that once a new value is generated it is immediately used as the conditioning value for the remaining parameters in all subsequent conditional probability distributions at stage <em>j</em>. This is clearly a Markov chain. It also turns out to be an ergodic Markov chain.</p>
+<p align="center"><img src="../../images/lectures/lecture23/image030.gif" alt="ergodic" width="182" height="38" align="absmiddle">, </p>
+<p>i.e., in the limit the probability of going from <img src="../../images/lectures/lecture23/image033.gif" alt="thetai" width="20" height="27" align="absmiddle">&nbsp;to <img src="../../images/lectures/lecture23/image036.gif" alt="thetaj" width="22" height="30" align="absmiddle">&nbsp;in <em>n</em> steps depends only on the final state. When the Gibbs sampler is formulated from the likelihood and priors of a Bayesian model, the limiting probability <img src="../../images/lectures/lecture23/image039.gif" alt="limiting prob" width="52" height="37" align="absmiddle">&nbsp;is in fact the desired posterior probability. </p>
+<p>So, we set up the Gibbs sampler and we let it run for a while (the burn-in period) to give the chain time to &quot;reach&quot; its limiting distribution. Once there the chain visits values roughly in proportion to their probabilities. With a large enough sample of chain values we can obtain estimates of these probabilities and use them to estimate other parameters of interest. Bayesian problems are well-suited for the Gibbs sampler because they are already based on a series of conditional probability statements. The good news is that we don&rsquo;t have to set up the equations for the Gibbs sampler ourselves, WinBUGS and JAGS do it for us based on the model definition file we give it.</p>
+<p>When conjugate priors are chosen so that the posterior distribution has a known form  WinBUGS can bypass all this and sample directly from the posterior distribution using standard algorithms. One such standard algorithm is the inversion method. When this is not the case WinBUGS can use a method called adaptive rejection sampling. Rejection sampling requires that we can find an envelope function, <em>g</em>(<em>x</em>), that when multiplied by some constant, <em>m</em>, is greater than the true posterior density, <em>f</em>(<em>x</em>), at all values of <em>x</em>. The envelope function needs to be one from which sampling is easy. Having drawn a value <em>z</em> from the envelope function, we examine the ratio <em>R</em>, </p>
+<p align="center"><img src="../../images/lectures/lecture23/adaptive.gif" width="112" height="58" alt="adaptive"></p>
+<p align="left">We then draw a number <em>u</em> from the uniform distribution on the interval (0, 1). If <em>R</em> &gt; <em>u</em>, we accept the value of <em>z</em> as the new value of our parameter. Otherwise we keep the old value. The envelope function used by BUGS is constructed from a set of tangents to the log of the conditional density.</p>
+<h2><a name="critique" id="critique"></a> The frequentist philosophy of statistics and the Bayesian critique</h2>
+<p>For the frequentist everything hinges on the notion of repeated sampling.
+  In the informal definition of probability the probability of an event represents the long range relative frequency of the occurrence of that event. To say that the probability of heads is one half when a fair coin is tossed once means that if we were to flip a fair coin repeatedly the long run relative frequency of heads is one half. (Note: another way to interpret probability in this example is to treat the possible outcomes of a coin flip as equally likely.)</p>
+<p>Statistical inference derives from the sampling distribution of a statistic. The sampling distribution is the set of estimates obtained when all possible samples are selected from a target population. Properties of a statistic (unbiasedness), standard errors, etc. derive from the sampling distribution of that statistic. </p>
+<p>Implicit in the frequentist approach to estimation is that there is a fixed quantity in nature, the parameter &theta;, that we wish to measure with a statistic. For example, the bias of a statistic is the difference between mean of the sampling distribution of the statistic and the  true value that is being estimated. So,  for a frequentist  it is parameters that are fixed while it is the data that are random. This is diametrically opposed to the Bayesian point of view. For a Bayesian it is the data that are fixed and parameters that are random. </p>
+<p> The notion that the parameter is a fixed quantity in nature causes problems in interpretation for the frequentist.
+  When we construct a confidence interval for a parameter we like to treat the interval as a probability statement for the parameter&mdash;the set of likely values it might take. But in truth if the parameter is fixed then it is either in the interval we've constructed or it's not. There's no probability associated with it. The probability instead derives from the sampling distribution. We call it a 95% confidence interval because we're guaranteed that 95% of the intervals we might have constructed, if we had obtained all possible samples from the population, do in fact contain the true parameter value. All we can do is  hope that this is one of the lucky ones. </p>
+<p>It's been said that constructing a 95% confidence interval is analogous to running from an elephant while shooting an elephant gun over your shoulder. Did you hit it? You don't know but you know that 95% of the time an elephant gun is known to stop an elephant. You just hope this is one of those times. The bottom line is that when &theta; is treated as real and fixed, then it's only our methods that can have probability associated with them. </p>
+<p>The frequentist perspective uses <em>p</em>-values as measures of evidence against hypotheses, but the <em>p</em>-value is a measure of how likely are the observed data under the null hypothesis, i.e., <img src="../../images/lectures/lecture23/probofdata.gif" width="98" height="35" align="absmiddle">. This doesn't address the probability of the null hypothesis, for that we need <img src="../../images/lectures/lecture23/probofnull.gif" width="98" height="33" align="absmiddle">. So the <em>p</em>-value addresses the wrong probability. We've seen from our simple drug example application of Bayes rule that the order matters in conditional probability statements. Practically speaking the frequentist is trying to trying to draw inference about whether a specific individual who tested positive on a test is a drug user using only the sensitivity of the test.</p>
+<p>A Bayesian has other problems with <em>p</em>-values beyond the fact that they estimate the wrong probability. By definition a <em>p</em>-value is the probability under the null hypothesis of obtaining data as extreme or more extreme than the data one actually obtained. A Bayesian would wonder why we are basing our decision about the null hypothesis using data we didn't obtain. Shouldn't we base our decisions on the evidence at hand and not on the evidence we might have obtained?</p>
+<h2><a name="alternative"></a>The Bayesian alternative to the frequentist approach</h2>
+<p>In the Bayesian approach, probability is a matter of opinion. It still must follow the standard rules of probability (the Kolmogorov axioms, for instance), but other than that things are pretty flexible. For this reason Bayesians are said to take a subjective approach to probability (as opposed to the &quot;objective&quot; approach of the frequentists). </p>
+<p>As far as the existence of a true value of &theta; in nature, Bayesians are of an open mind. &theta; may or may not be real, but in the Bayesian perspective it doesn't matter. All we know about &theta; is what we believe about it. As knowledge accumulates our beliefs about &theta; become more focused. Since the value of &theta; is a matter of belief, and probability is a matter of belief, for all intents and purposes &theta; can be viewed as a random quantity. Consequently  to a Bayesian parameters are random variables, not fixed constants. As a result confidence intervals pose no philosophical dilemma for a Bayesian. Since parameters are random we can make probability statements about their values. Thus a confidence interval for &theta; is a probability statement about the likely values of &theta;. To avoid confusion with frequentist confidence intervals, Bayesians often call their intervals &quot;credible intervals&quot;. </p>
+<p>A Bayesian takes pride in the fact that Bayes rule as formulated above essentially encapsulates inductive science in a single formula. In science we develop theories about nature. Observation and experiment then cause us to modify those theories. Further data collection causes further modification. Thus science is a constant dynamic between prior and posterior probabilities, with prior probabilities becoming modified into posterior probabilities through experimentation at which point they become the prior probabilities of future experiments. Thus the Bayesian perspective accounts for the cumulative nature of science. </p>
+<h2><a name="counter"></a>A frequentist critique of the Bayesian approach </h2>
+<p>The frequentist retort is that this is a mischaracterization of science. Science is inherently objective and has no use for subjective quantities such as prior probabilities. Science should be based on data alone and not the prejudices of the researcher.</p>
+<p> The Bayesian rejoinder to this is first that science does have a subjective component. The &quot;opinions&quot; of scientists dictate the kinds of research questions they pursue. In any case if there is concern that a prior probability unfairly skews the results, the analysis can be rerun with other priors. In Bayesian analysis it is fairly typical to carry out analyses with a range of priors to demonstrate that results are robust to the choice of prior. </p>
+<p>In fact both schools of thought are correct here. While Bayesians may have described the ideal scientific method, in truth consensus in science is informal at best. Perhaps there should be a current prior probability in vogue for everything in science, but typically there isn't. Without this consensus the inherent subjectivity of priors does seem to be a problem.</p>
+<p>It's interesting then that Bayesians and frequentists reject the other's approaches for essentially the same reason.</p>
+<ul>
+  <li>Frequentists reject the Bayesian approach because Bayesians use information not contained in the data at hand&mdash;the prior distribution. </li>
+  <li>Bayesians reject the frequentist approach because frequentists use information not contained in the data at hand&mdash;the sampling distribution of the statistic and the values of test statistics more extreme than the observed value of the test statistic (the basis for computing a <em>p</em>-value). </li>
+</ul>
+<p>Until Markov chain Monte Carlo came along this entire argument was moot because very few interesting problems could be solved using Bayes rule. The reason lies in the integral that appears in the denominator. For most higher dimensional scenarios evaluating this integral is an intractable problem. </p>
+<p align="center"><img src="../../images/lectures/lecture23/Bayesrule3.gif" width="266" height="68"></p>
+<p name="conjugate"><a name="conjugate"></a>Historically the only estimation problems  Bayesians were able to solve were trivial ones where the integral can be ignored because the form of the posterior probability can be determined by inspection. These situations involve what are called <span class="style5">conjugate priors</span> in which the  likelihood and prior combine in a nice fashion so that the posterior probability can be determined without integration.
+  For instance, a normal prior and a normal likelihood yield a normal posterior of a known form. A binomial likelihood coupled with a beta prior yield a beta posterior of known form. There are a number of other examples of conjugates, but the list is not very long. Now that MCMC methods have obviated this problem by sampling from the posterior distribution directly the pendulum of opinion has swung back in the Bayesian direction.</p>
+<h2><a name="bottomline"></a>Bayesian statistics&mdash;why should a frequentist care? </h2>
+<p>While there are many good reasons for taking a Bayesian perspective, I address this section to someone who is committed to doing statistics from a frequentist perspective. So  why in general should a frequentist care about the Bayesian approach and have to grapple with the issue of choosing prior probabilities? I give two reasons. </p>
+<ol>
+  <li>If you have lots of data, then the choice of prior won&rsquo;t matter much. So parameter estimates based on the posterior distribution will resemble parameter estimates based on the likelihood. Thus one can get MLEs via MCMC.
+    For instance, in a simple estimation problem with a normal likelihood and a normal prior it turns out that the posterior mean is just a weighted sum of the sample mean and prior mean. In this case <span
+>the posterior mean = <i>w</i></span><sub>1</sub> &times; sample mean + <i>w</i><sub>2</sub> &times;  prior mean, where the weights are measures of relative precision. The weights are of the form <img src="../../images/lectures/lecture23/image003.gif" alt="precision 1" width="52" height="42" align="absmiddle">&nbsp;and <img src="../../images/lectures/lecture23/image006.gif" alt="precision 2" width="53" height="42" align="absmiddle">&nbsp;in which <i>n</i><span
+> is the sample size, s<sup>2</sup></span>&nbsp;and &tau;<sup>2</sup>&nbsp;are the variances of the sample and prior respectively, and <em>k</em> is a normalizing constant. Clearly from the weights if the sample size <em>n</em> is large the sample mean will dominate this sum and the prior will have little effect. </li>
+  <li>With only a moderate amount of data we can choose to carry out an &quot;objective&quot; Bayesian analysis. In this approach we select an uninformative (vague, flat, diffuse) prior so that the prior has minimal impact on determining the posterior distribution. That this is possible is also clear from the weighted mean example above. If the variance of the normal prior is large (yielding an uninformative prior) the corresponding weight will be small. </li>
+</ol>
+<p>The upstart of this is that MCMC can be used to obtain parameter estimates for distributions when it is far too complicated to obtain these estimates using ordinary frequentist optimization methods. The typical situations where the Bayesian perspective may be necessary are the following: </p>
+<ul>
+  <ol>
+    <li>Models with many random effects</li>
+    <li>Models using exotic probability distributions. Keep in mind that most probability models become exotic when coupled with random effects. For instance there currently are limited frequentist tools available for fitting negative binomial regressions with random effects. </li>
+    <li>There are many parameters to estimate </li>
+    <li>Models in which the estimated variances of some of the random effects are small and/or the number of replicates is small</li>
+  </ol>
+</ul>
+<p>One or more of these  four conditions is typical in ecology. The only real problem from a practical standpoint with using Markov chain Monte Carlo in model estimation is that it exacerbates the temptation to toss parsimony out the window and to fit extremely complicated models. This temptation should be resisted at all costs!</p>
+
+<h2 ><a name="covariance" id="covariance"></a>Estimating an analysis of covariance model using JAGS and BUGS</h2>
+<p>Software such as WinBUGS and JAGS that implement Markov chain Monte Carlo (MCMC) methodology can be to carry out Bayesian estimation.  BUGS is an acronym for &quot;Bayesian inference Using Gibbs Sampling&quot; while JAGS is an acronym for &quot;Just Another Gibbs Sampler&quot;. Both use the BUGS programming language to formulate the likelihood of our data under our chosen model along with  prior distributions for the model parameters. Based on the information we provide it, WinBUGS and JAGS   set up the appropriate Gibbs sampler (or some alternative MCMC method) that yields Markov chains that we can then track.</p>
+<p>To illustrate the use of  this software I refit the   analysis of covariance model we considered in <a href="lecture9.htm">lecture 9</a>. The data were taken from Crawley (2002) who described  three variables of interest. </p>
+<ul>
+  <li>Fruit: the response variable</li>
+  <li>Root: a proxy for plant size, a confounding variable that is known to influence the amount of fruit produced</li>
+  <li>Grazing: a categorical variable that identifies the treatment, Grazed or Ungrazed</li>
+</ul>
+<p>Our final model  from <a href="lecture9.htm">lecture 9</a> was the following.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">ipo &lt;- read.table( 'ecol 563/ipomopsis.txt', header=T) </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">out2 &lt;- lm(Fruit ~ Root + Grazing, data=ipo)</div>
+<p>We will 
+fit this same model using Bayesian methods and compare the estimates  to those returned by <span class="style1">lm</span>.</p>
+<h2><a name="preliminaries"></a>WinBUGS/JAGS Preliminaries</h2>
+<div class="figureR">
+  <p align="center"><img src="../../images/lectures/lecture23/Clip1.gif" width="136" height="255">
+  <p align="center" class="styleArial1"> <strong>Fig. 3</strong>&nbsp; R file menu choices</p>
+</div>
+<p> WinBUGS is a stand-alone package that is not particularly easy to use. Andrew Gelman of Columbia University has written an R package, <span class="style191">arm</span>, that among other things permits running WinBUGS models from within R by calling on the <span class="style13">bugs</span> function from the <span class="style191">R2WinBUGS</span> package. This simplifies the use of WinBUGS considerably because we can use R to set up the analysis and process the results and then use WinBUGS only to fit the model. </p>
+<p>JAGS also uses the BUGS programming language with some minor differences. It is not stand-alone software but requires R in order to run. The <span class="style191">R2jags</span> package can be used to run JAGS models from R. The <span class="style13">jags</span> function from this package returns output that matches the format of the output generated by WinBUGS.</p>
+<p>To run WinBUGS using <span class="style13">bugs</span> requires the following. </p>
+<ol>
+  <li>Version 2.4 (or later) of R. The <span class="style191">arm</span> package is not compatible with earlier versions of R.</li>
+  <li>The <span class="style191">arm</span> package of R.</li>
+  <li>WinBUGS 1.4 plus patches. </li>
+  <li>The perpetual key that removes any restrictions on the use of WinBUGS.</li>
+</ol>
+<p>WinBUGS can be installed to any location on your machine. If WinBUGS is not installed in the default location, C:\Program Files\WinBUGS14, then the correct path needs to be specified when you invoke WinBUGS from within R. To run JAGS you need the JAGS software and the <span class="style191">R2jags</span> package from the CRAN site.</p>
+<p>At the core of every  WinBUGS or JAGS run is a  model definition file that specifies the details of the model. This is a text file written in the BUGS language. It should be created in Notepad or some other text editor. It is important that the working directory of R be set to the directory where this text file has been saved. The working directory can be set by making a menu choice or by using the <span class="style42">setwd</span> command at the R console. To set the working directory using menus on Windows go to the File menu and select <span class="styleArial1">Change dir...</span> (Fig. 4). In the dialog box that appears set the directory to match the location where  the WinBUGS model definition file lives. This directory now becomes the default location where R will save graphics and other output. On a Mac choose <span class="styleArial1">R &gt; Preferences &gt; Start up</span> and make the changes in the Initial Working Directory section. I prefer to use the<span class="style42"> setwd</span> command from the console (see <a href="lecture23.htm#setwd">below</a>). </p>
+<p>IMPORTANT CAVEAT!! Do not bury your BUGS program inside many folders. Try to store it only a few layers deep. More importantly, do not save it in folders with long and complicated names. WinBUGS will fail to run and give you a completely incomprehensible error message to boot.</p>
+<h2><a name="setting" id="setting"></a>Describing the model in the BUGS language</h2>
+<p>WinBUGS likes things simple. For instance WinBUGS accepts only numeric data. Character data and factors are not allowed so factors need to be converted to a set of dummy variables. In addition variables must be entered into WinBUGS in a special way. To facilitate this I begin by pulling out the individual variables of the data frame <span class="style103">ipo</span> that we will need for the regression analysis. In doing so I try to keep the variable names simple and generic.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">x &lt;- ipo$Root</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">y &lt;- ipo$Fruit</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">z &lt;- as.numeric(ipo$Grazing)-1</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<p>The BUGS model definition file that we'll construct  at one point makes use of the number of observations in the data set as a constant. So I calculate this value in R and assign the result to another object.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">n &lt;- length(y)</div>
+<p>Next I write the Bayesian model using the BUGS language. Much of the language resembles R but with subtle differences. The language is documented in manuals available at the site where you downloaded WinBUGS and/or JAGS. I enter the lines in NotePad and save the resulting file as <span class="style103">ipomodel.txt</span>. Here's the model definition file followed by a line-by-line explanation.</p>
+<div class="style103" style="padding-left: 30px; text-indent:-30px"><a name="BUGSmodel"></a>model{</div>
+<div class="style391" style="padding-left: 60px; text-indent:-30px"> #likelihood </div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> for(i in 1:n) {</div>
+<div class="style103" style="padding-left: 90px; text-indent:-30px"> y[i]~dnorm(y.hat[i],tau.y)</div>
+<div class="style103" style="padding-left: 90px; text-indent:-30px"> y.hat[i] &lt;- b0+b1*x[i]+b2*z[i]</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> }</div>
+<div class="style391" style="padding-left: 60px; text-indent:-30px"> #priors</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> b0~dnorm(0,.000001)</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> b1~dnorm(0,.000001)</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px">b2~dnorm(0,.000001)</div>
+<div class="style391" style="padding-left: 60px; text-indent:-30px">#tau.y~dgamma(.001,.001)</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> tau.y &lt;- pow(sigma.y,-2)</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> sigma.y~dunif(0,10000)</div>
+<div class="style103" style="padding-left: 30px; text-indent:-30px"> }</div>
+<h3><strong><a name="commentary"></a>A line by line commentary on the code </strong></h3>
+<ol>
+  <li>The model begins with the key word <span class="style103">model</span>. The actual model code is contained within the pair of curly braces { }.</li>
+  <li> A <span class="style103">for</span> loop is used to describe the probability model for the data, the likelihood so to speak. Notice that the index runs from 1 to <span class="style103">n</span>, where <span class="style103">n</span> is the number of observations, so this loop specifies a probability model for each observation. To make the code more portable I do not hardwire the number of observations explicitly into the code but represent it with the variable <span class="style103">n</span> instead. </li>
+  <li>The <span class="style103">dnorm</span> &quot;function&quot; in WinBUGS differs from that of R. First it is not really a function (it's missing the first argument of the <span class="style1">dnorm</span> function of R). It is just the way BUGS denotes the normal distribution, much like in the standard mathematical notation <em>Y</em> <span class="style103">~</span> Normal(0, 1). The first &quot;argument&quot; of <span class="style103">dnorm</span> is the mean of the distribution and the second argument specifies what's called the precision.
+    <ul>
+      <li>Notice that the value I give to the mean argument, <span class="style103">y.hat[i]</span>, includes an index i. This causes each observation to have a potentially different mean.</li>
+      <li>The value of the precision argument is given the name <span class="style103">tau.y</span>. Bayesians prefer to work with precisions rather than variances. Formally the precision of a normal distribution is the reciprocal of its variance. </li>
+    </ul>
+  </li>
+  <li>The second line of the loop further defines the mean, <span class="style103">y.hat</span>. The use of the assignment arrow means that <span class="style103">y.hat</span> is a derived quantity. The formula given is just the analysis of covariance regression model: b<sub>0</sub> + b<sub>1</sub><em>x </em>+ b<sub>2</sub><em>z</em>.</li>
+  <li>The definition of <span class="style103">y.hat</span> here appears to be redundant. It would seem that we could have made the formula<span class="style103"> b0+b1*x[i]+b2*z[i]</span> the first argument of the <span class="style103">dnorm</span> function and skipped the definition of <span class="style103">y.hat</span> entirely. You should never do this! WinBUGS is easily confused when complicated expressions are used as arguments in probability functions. Regression formulas and the like should always be specified outside of probability functions just as we're doing here.</li>
+  <li>The remainder of the code specifies priors for the model parameters. The next three lines place what are hopefully uninformative priors on the regression parameters <span class="style103">b0</span>, <span class="style103">b1</span>, and <span class="style103">b2</span>. Since a priori these coefficients can be anything, we use normal priors because the support for the normal distribution is the entire real line. The second argument is the precision and we choose this to be low. As was noted above, the precision is the reciprocal of the variance so here we're choosing a prior that is a normal distribution with a variance of 1,000,000. This yields a  fairly wide distribution implying that we have little knowledge about the true values of <span class="style103">b0</span>, <span class="style103">b1</span>, and <span class="style103">b2</span>. </li>
+  <li>The next line defines the quantity <span class="style103">tau.y</span>, the precision of the normal distribution for the likelihood. The usual approach is to use a gamma distribution (the line that is commented out). The  approach we use here is to place a prior on the standard deviation rather than on the precision itself. Hence the line<span class="style103"> tau.y &lt;- pow(sigma.y,&ndash;2) </span>is used to connect the precision to the standard deviation thus causing the precision to be a derived quantity rather than a parameter. Notice the use of the <span class="style42">pow</span> (for power) function instead of writing this out with the exponentiation operator. This is the preferred way of writing powers in the BUGS language.</li>
+  <li>Finally the last line sets a uniform prior on the standard deviation, <span class="style103">sigma.y</span>, uniform on the interval (0, 10000). Setting the priors on a standard deviation parameter can be tricky. We need to set the precision low enough to have a minimal effect on the results, but not so low that the sampler used by BUGS has trouble generating values. When the precision is set too low you'll  obtain a message such as: &quot;cannot bracket slice for node sigma.y&quot;.</li>
+</ol>
+<h2><a name="some"></a>Some remarks about WinBUGS/JAGS models in general</h2>
+<p>BUGS code looks just like R code but with important differences. BUGS code is used to specify the model. The lines of code are not instructions that are executed. In fact BUGS code is not executed at all; it is a declarative language. Although lines are entered sequentially, they&rsquo;re not interpreted sequentially. BUGS parses the entire model and then runs a process. BUGS can make use of for loops for model specification but there use is just a matter of convenience. There are six kinds of BUGS objects.</p>
+<ol>
+  <li>Modeled data: in code these are defined with a ~. For example <span class="style103">y</span> ~ followed by a probability distribution. The variable <span class="style103">y</span> here is the response in our regression model. Modeled data are objects that are assigned probability distributions.</li>
+  <li>Unmodeled data: objects that are not assigned probability distributions. Examples include predictors, constants, and index variables. In the above code <span class="style103">x</span>, <span class="style103">z</span>, and <span class="style103">n</span> are examples of unmodeled data. </li>
+  <li>Modeled parameters: these are given informative &ldquo;priors&rdquo; that themselves depend on parameters called hyperparameters. These are what a frequentist would call random effects. There are none in the above model.</li>
+  <li>Unmodeled parameters: these are given uninformative priors. So in truth all parameters are modeled in the Bayesian approach. All the rest of the frequentist parameters fall under this category.</li>
+  <li>Derived quantities: these objects are typically defined with the assignment arrow, &lt;-</li>
+  <li>Looping indexes: i, j, etc.</li>
+</ol>
+<p>BUGS uses probability function with names that match many of R's probability functions but there is a twist. For instance the <span class="style10">dnorm</span> function is parameterized in terms of precision (reciprocal variance) rather than the standard deviation. Secondly, <span class="style10">dnorm</span> is not really a function in WinBUGS(as it is in R) but is just a label for the normal distribution. The <span class="style103">~</span> as used here has the meaning it has mathematically, namely &quot;is distributed as&quot;, and is not the formula operator of R. </p>
+<p>In this course we will use the following strategies for setting uninformative priors for model parameters. </p>
+<ol>
+  <li>For nonnegative quantities (standard deviations) or restricted range quantities (correlations) we will use a uniform prior. </li>
+  <li>For all other quantities we will use a normal prior.</li>
+</ol>
+<p>The most important modeling strategy when using BUGS is to start simple and complexify gradually each time checking that the current model works and makes sense before moving to a more complex model.</p>
+<h2><a name="running"></a>Running the WinBUGS/JAGS model from R</h2>
+<p>With the model saved to the working directory, we enter the following three lines back at the console prompt in R.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.data &lt;- list(&quot;n&quot;, &quot;y&quot;, &quot;x&quot;, &quot;z&quot;)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.inits &lt;- function() {list(b0=rnorm(1), b1=rnorm(1), b2=rnorm(1), sigma.y=runif(1))}</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.parms &lt;- c(&quot;b0&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;sigma.y&quot;)</div>
+<p>These three lines create objects that will be passed to WinBUGS/JAGS for use in estimating the model. </p>
+<ul>
+  <li>The first object <span class="style103">ipo.data</span> lists the names of variables and constants used in the WinBUGS/JAGS model. Notice the unusual syntax with the <span class="style42">list</span> function followed by the object names in quotes. This is required. The data object should contain only those quantities actually used in the WinBUGS model and no extra variables. If you include variables in this list that are then not used in the model definition file WinBUGS will issue an error message and fail to run.</li>
+  <li>The second object <span class="style103">ipo.inits</span> provides a way to initialize the Gibbs sampler. The values specified here are not important except that they must be legal values for the parameters. Thus to guarantee that <span class="style22">sigma.y</span> is given an initial positive value, a random uniform number is drawn (which by default is taken from the interval 0 to 1). The <span class="style22">inits</span> object is set up as a function because it needs to be used  for each of the chains we request. Setting it up as a function guarantees that each chain will begin at a different point.</li>
+  <li>The last object <span class="style103">ipo.parms</span> lists the parameter values and derived objects that we wish to track. WinBUGS will return samples from the posterior distribution for all objects listed here. Any variable appearing in the BUGS model definition file can be listed here. </li>
+</ul>
+<p name="setwd"><a name="setwd"></a>I next set the working directory (if this hasn't already been done using the menu, Fig. 3) using the <span class="style42">setwd</span> function. The working directory is the one that contains the BUGS model definition file. It is not a good idea to bury things in folders that are many layers deep. The containing folders should also have fairly simple names. If you violate either of these recommendations, WinBUGS may fail to run (and the error message you get will be completely cryptic). To see what the current working directory is use the <span class="style13">getwd()</span> command.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">getwd()</div>
+<span class="style141">&quot;C:/Users/jmweiss/Documents/&quot; </span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">setwd(&quot;C:/Users/jmweiss/Documents/ecol 563&quot;)</div>
+<p name="bugs"><a name="jags" id="jags"></a>We're now ready to run the model. On a Mac I load the <span class="style191">R2jags</span> package (which must be initially downloaded from the CRAN site because it's not part of the standard R installation--be sure to check the <span class="styleArial1">install dependencies</span> box when you download it) and make the following call using the <span class="style13">jags</span> function from <span class="style191">R2jags</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(R2jags)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.1j &lt;- jags(ipo.data, ipo.inits, ipo.parms, &quot;ipomodel.txt&quot;, n.chains=3,  n.iter=100)</div>
+<p name="bugs"><a name="bugs"></a>On Windows I load the <span class="style191">arm</span> package (which must  be initially downloaded from the CRAN site because it is not part of the standard R installation) and make the following call using the <span class="style42">bugs</span> function from <span class="style191">arm</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(arm)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.1 &lt;- bugs(ipo.data, ipo.inits, ipo.parms, &quot;ipomodel.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3,  n.iter=100, debug=T)</div>
+<div class="figureR">
+  <p align="center"><img src="../../images/lectures/lecture23/fig5.png" width="384" height="373" alt="fig 5">
+  <p align="center" class="styleArial1"> <strong>Fig. 4</strong>&nbsp; WinBUGS report on the model</p>
+</div>
+<p>Shown below is an explanation of each of the arguments of <span class="style13">jags</span> and <span class="style13">bugs</span>.</p>
+
+<ol>
+  <li><span class="style103">data = ipo.data&nbsp;</span> The first argument to <span class="style13">bugs</span> is the data object that was created above listing the variable names.</li>
+  <li><span class="style103">inits = ipo.inits&nbsp;</span> The second argument is the function that sets the initial values for each chain.</li>
+  <li><span class="style103">parameters = ipo.parms</span>&nbsp; The third argument is an object containing the names of the parameters we wish to monitor.</li>
+  <li><span class="style103">model.file = &quot;ipomodel.txt&quot;</span>&nbsp; The fourth argument is the name of the file that contains the WinBUGS code that defines the model.</li>
+  <li><span class="style10">bugs.directory = &quot;C:/WinBUGS14&quot;</span> &nbsp;This is an optional argument that specifies the directory that contains the WinBUGS program, <span class="styleArial1">WinBUGS14.exe</span>. If you did the default installation to the C: drive in the Program Files folder, leave off this argument.</li>
+  <li><span class="style103">n.chains=3</span> &nbsp;This argument lists the number of Markov chains to create. Three is generally enough to check proper mixing.</li>
+  <li><span class="style103">n.iter=100</span> &nbsp;This argument specifies the number of iterations of Gibbs sampling to carry out. For a first run this should be a small number since more than likely the code will fail to run anyway.</li>
+  <li><span class="style103">debug=T</span> &nbsp;The last argument turns the debugger on. With <span class="style103">debug=T</span> R will freeze and the WinBUGS window will remain open so that error messages can be examined and interpreted. Closing the WinBUGS window will then unfreeze R and return control to the console. </li>
+</ol>
+<p>JAGS provides minimal output. WinBUGS provides a lot more information. Fig. 4 shows the partial contents of the log window in WinBUGS from this run. The important thing to observe is that there are no error messages here. </p>
+<ul>
+  <li>WinBUGS reports the &quot;model is syntactically correct&quot; telling us there are no coding errors in the model file. </li>
+  <li>The line &quot;data loaded&quot; tells us that WinBUGS had no problems with the data values.</li>
+  <li>The line &quot;model compiled&quot; tells us the model plus data is ready to run.</li>
+  <li>The line &quot;model initialized&quot; tells us that all parameters in all three chains have been assigned suitable initial values. Notice that the three chains are initialized in sequence and after each of the first two chains are initialized we're told &quot;chain initialized but other chain(s) contain uninitialized variables.&quot; This is because there are still more chains to initialize.</li>
+  <li>The line &quot;Bugs:gen.inits cannot be executed&quot; refers to the fact that we initialized the parameters ourselves so that there was no need for BUGS to do it. </li>
+</ul>
+<p>The rest of the log (Fig. 5) displays summary statistics and graphs of individual Markov chains for different parameters and statistics. With only 100 iterations contributing to these reports, there is little to be learned from them. Observe though that the last 50 iterations of the chains already appear to be mixing. </p>
+
+  <p align="center"><img src="../../images/lectures/lecture23/fig6.png" width="574" height="414" alt="fig 6">
+  <p align="center" class="styleArial1"> <strong>Fig. 5&nbsp;</strong> Additional information in the WinBUGS log window</p>
+
+<p name="nburnin"><a name="nburnin"></a>Since there were no errors we can now run the model for real with a reasonable number of iterations. In the run below I specify 10,000 iterations. By default the <span class="style42">bugs</span> function is set up to treat the first half of the iterates as part of the the burn-in period. So the first 5,000 iterations of this run are discarded and only the values from the second half of the run are saved. (This can be changed by specifying a value for the <span class="style22">n.burnin</span> argument of <span class="style42">bugs</span>.) </p>
+<p name="nthin"><a name="nthin"></a>Furthermore the <span class="style42">bugs</span> function uses a default thinning rate of <span class="style103">max(1, floor(n.chains*(n.iter-n.burnin)/1000)</span>. The <span class="style22">n.thin </span>argument can be used to override this default. With three chains, <span class="style103">n.iter = 10000</span>, and <span class="style103">n.burnin = 5000</span>, the thinning rate is 15. Thus only every 15th simulation value is saved. With 3 chains this means BUGS will return 1002 (3 times 334) samples, which, if convergence has been attained, will be samples from the posterior distributions of each parameter. It is not necessary to keep the debugger on at this point, but I do so in order to inspect some of trace plots of the Markov chains that are produced. JAGS thins things so that 1000 observations remain in each chain. Thus JAGS returns three times as many observations as does WinBUGS.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.1 &lt;- bugs(ipo.data, ipo.inits, ipo.parms, &quot;ipomodel.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3,  n.iter=10000, debug=T)</div>
+<p>Fig. 6 shows plots of the three Markov chains for the standard deviation parameter, <span class="style22">sigma.y.</span> Observe that trajectories are thoroughly interdigitating indicating that the chains have mixed fairly well. The fact that all three chains are traversing the same range of <em>y</em>-values provides evidence that the chains are now sampling from the posterior distribution of <span class="style22">sigma.y</span>. The fact that the individual chains are jumping around a lot indicates there is very little autocorrelation in the chains. This is good because it implies that the returned observations are nearly independent meaning that our effective sample size is close to the actual sample size. </p>
+
+  <p align="center"><img src="../../images/lectures/lecture23/Clip4.png" width="657" height="214">
+  <p align="center" class="styleArial1"> <strong>Fig. 6</strong>&nbsp; Trace plots of the individual Markov chains for the standard deviation of the response </p>
+
+<p>This last model would be fit using JAGS as follows.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.1j &lt;- jags(ipo.data, ipo.inits, ipo.parms, &quot;ipomodel.txt&quot;, n.chains=3,  n.iter=10000)</div>
+<h2><a name="information"></a>Information returned by the bugs (jags) function</h2>
+<p>To unfreeze the R console, close the WinBUGS window. We can view summary statistics for the posterior distributions of each parameter by typing the name of the object to which the bugs output was assigned. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.1</div>
+<span class="style141"> Inference for Bugs model at &quot;badipomodel.txt&quot;, fit using WinBUGS,<br>
+&nbsp;3 chains, each with 10000 iterations (first 5000 discarded), n.thin = 15<br>
+&nbsp;n.sims = 1002 iterations saved<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp; sd&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp; 25%&nbsp;&nbsp;&nbsp; 50%&nbsp;&nbsp;&nbsp; 75%&nbsp; 97.5% Rhat n.eff<br>
+b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -128.0 10.4 -148.8 -135.0 -127.6 -121.3 -107.7&nbsp;&nbsp;&nbsp; 1&nbsp; &nbsp;500<br>
+b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.6&nbsp; 1.2&nbsp;&nbsp; 21.2&nbsp;&nbsp; 22.8&nbsp;&nbsp; 23.5&nbsp;&nbsp; 24.4&nbsp;&nbsp; 26.0&nbsp;&nbsp;&nbsp; 1&nbsp; &nbsp;600<br>
+b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36.1&nbsp; 3.6&nbsp;&nbsp; 29.2&nbsp;&nbsp; 33.8&nbsp;&nbsp; 36.0&nbsp;&nbsp; 38.5&nbsp;&nbsp; 43.5&nbsp;&nbsp;&nbsp; 1&nbsp; &nbsp;700<br>
+sigma.y&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp; 0.9&nbsp;&nbsp;&nbsp; 5.5&nbsp;&nbsp;&nbsp; 6.4&nbsp;&nbsp;&nbsp; 6.9&nbsp;&nbsp;&nbsp; 7.6&nbsp;&nbsp;&nbsp; 8.7&nbsp;&nbsp;&nbsp; 1&nbsp; 1000<br>
+deviance&nbsp; 267.6&nbsp; 3.2&nbsp; 263.6&nbsp; 265.2&nbsp; 266.9&nbsp; 269.2&nbsp; 276.0&nbsp;&nbsp;&nbsp; 1&nbsp; &nbsp;830</span>
+<p><span class="style141">For each parameter, n.eff is a crude measure of effective sample size,<br>
+  and Rhat is the potential scale reduction factor (at convergence, Rhat=1).</span>
+<p><span class="style141">DIC info (using the rule, pD = Dbar-Dhat)<br>
+  pD = 4.0 and DIC = 271.6<br>
+  DIC is an estimate of expected predictive error (lower deviance is better).</span>
+<p>The output shows the mean, standard deviation, and various quantiles of the posterior distributions of the four parameters <span class="style22">b0</span>, <span class="style22">b1</span>, <span class="style22">b2</span>, and <span class="style22">sigma.y</span>. To be sure that we are actually sampling from the posterior distribution we should examine the column labeled <span class="style22">Rhat</span>. <span class="style22">Rhat</span> is the mixing index. Numerically it is the square root of the variance of the mixture of all the chains divided by the average within-chain variance. If the chains are mixed these values should be roughly the same yielding a ratio of approximately 1. Since <span class="style22">Rhat</span> is reported to be 1 for all the parameters this is evidence that the chains are well-mixed and that the Gibbs sampler is sampling from the posterior distribution. </p>
+<p>A lot of other useful information is contained in different components of the object created by the <span class="style42">bugs</span> function. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">names(ipo.1)</div>
+<span class="style331">&nbsp;[1] &quot;n.chains&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;n.iter&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;n.burnin&quot; &nbsp;&nbsp;&quot;n.thin&quot; <br>
+&nbsp;[5] &quot;n.keep&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;n.sims&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;sims.array&quot; &quot;sims.list&quot; <br>
+&nbsp;[9] &quot;sims.matrix&quot; &nbsp;&nbsp;&quot;summary&quot; &nbsp;&nbsp;&nbsp;&nbsp;&quot;mean&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;sd&quot; <br>
+[13] &quot;median&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;root.short&quot; &nbsp;&quot;long.short&quot; &quot;dimension.short&quot;<br>
+[17] &quot;indexes.short&quot; &quot;last.values&quot; &quot;is.DIC&quot; &nbsp;&nbsp;&nbsp;&nbsp;&quot;DICbyR&quot; <br>
+[21] &quot;pD&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;DIC&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;model.file&quot; &quot;program&quot; </span>
+</p>
+<ol>
+  <li>The component called <span class="style22">summary</span> contains the information shown in the above summary table but organized in matrix form. </li>
+  <li>The three components <span class="style22">mean</span>, <span class="style22">sd</span>, and <span class="style22">median</span> repeat some of the information contained in <span class="style22">summary</span>.</li>
+  <li>The three components <span class="style22">sims.array</span>, <span class="style22">sims.list</span>, <span class="style22">sims.matrix</span> each contain the 1002 samples from the posterior distribution for each parameter but organized in different ways. </li>
+</ol>
+<p>With JAGS this same information is contained in the <span class="style16">$BUGSoutput</span> component of the <span class="style13">jags</span> object.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> names(ipo.1j)</div>
+
+<span class="style141">  [1] &quot;model&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;BUGSoutput&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;parameters.to.save&quot;<br>
+  [4] &quot;model.file&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;n.iter&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;DIC&quot;</span>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> names(ipo.1j$BUGSoutput)</div>
+
+<span class="style141">  &nbsp;[1] &quot;n.chains&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;n.iter&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;n.burnin&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;n.thin&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;[5] &quot;n.keep&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;n.sims&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;sims.array&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;sims.list&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;[9] &quot;sims.matrix&quot;&nbsp;&nbsp;&nbsp;&nbsp; &quot;summary&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;mean&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;sd&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [13] &quot;median&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;root.short&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;long.short&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;dimension.short&quot;<br>
+  [17] &quot;indexes.short&quot;&nbsp;&nbsp; &quot;last.values&quot;&nbsp;&nbsp;&nbsp;&nbsp; &quot;program&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;model.file&quot;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+  [21] &quot;isDIC&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;DICbyR&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;pD&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;DIC&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<p>So with the <span class="style13">jags</span> object we access the these components as <span class="style8">ipo.1j$BUGSoutput$sims.matrix</span>, <span class="style8">ipo.1j$BUGSoutput$summary</span>, etc.</p>
+<p>The <span class="style22">sims.array</span> component arranges the information in a three dimensional array, a set of matrices, one for each parameter. The individual matrices contain the samples obtained from each Markov chain as separate columns listed in the order the sampled observations were obtained. Thus each column records the sampling history for that Markov chain. For the current example each parameter is represented by a 334 &times; 3 matrix. Below I display the first two sampled observations in each chain for all of the parameters. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.1$sims.array[1:2,,]</div>
+<span class="style331"> , , b0 </span>
+</p>
+<p class="style331"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[,1]   &nbsp;&nbsp;[,2]&nbsp;&nbsp;   [,3]<br>
+  [1,] -135.1 -136.3 -132.1<br>
+  [2,] -112.3 -138.2 -133.8</p>
+<p class="style331">, , b1</p>
+<p class="style331"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[,1] &nbsp;[,2] &nbsp;[,3]<br>
+  [1,] 24.24 24.77 23.84<br>
+  [2,] 21.73 24.49 24.16</p>
+<p class="style331">, , b2</p>
+<p class="style331"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[,1] &nbsp;[,2] &nbsp;[,3]<br>
+  [1,] 38.22 35.02 37.19<br>
+  [2,] 30.64 42.11 37.07</p>
+<p class="style331">, , sigma.y</p>
+<p class="style331"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[,1] &nbsp;[,2] &nbsp;[,3]<br>
+  [1,] 5.911 7.994 7.598<br>
+  [2,] 7.157 6.489 6.518</p>
+<p class="style331">, , deviance</p>
+<p class="style331"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[,1] &nbsp;[,2] &nbsp;[,3]<br>
+  [1,] 266.4 269.3 267.1<br>
+  [2,] 266.5 267.9 264.7</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">dim(ipo.1$sims.array[,,'b0'])</div>
+<span class="style331">[1] 334 3</span>
+</p>
+<p>We can use the information contained in the <span class="style22">sims.array</span> component to make our own trace plot of the Markov chains in order to evaluate mixing. </p>
+<p>In the <span class="style22">sims.list </span>component, the chains are combined into a single long vector and their order is randomly permuted (so that the actual sample history of the observations is lost). The individual parameters can be accessed as list objects, as in <span class="style103">ipo.1$sims.list$b0</span>, <span class="style103">ipo.1$sims.list$b1</span>, etc. Below I select the first five elements of each parameter and in the second call I request the first five samples from the posterior distribution of the parameter <span class="style103">b0</span>. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">sapply(ipo.1$sims.list, function(x) x[1:5])</div>
+<span class="style331"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b0 &nbsp;&nbsp;&nbsp;b1 &nbsp;&nbsp;&nbsp;b2 sigma.y deviance<br>
+[1,] -112.3 21.73 30.64   &nbsp;&nbsp;7.157    &nbsp;&nbsp;&nbsp;266.5<br>
+[2,] -125.0 23.27 34.16   &nbsp;&nbsp;6.311    &nbsp;&nbsp;&nbsp;263.7<br>
+[3,] -133.6 24.02 37.37   &nbsp;&nbsp;5.950    &nbsp;&nbsp;&nbsp;267.8<br>
+[4,] -111.0 21.84 29.60   &nbsp;&nbsp;6.957    &nbsp;&nbsp;&nbsp;268.1<br>
+[5,] -126.2 23.46 31.99 &nbsp;&nbsp;7.176 &nbsp;&nbsp;&nbsp;267.8</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> ipo.1$sims.list$b0[1:5]</div>
+<span class="style331">[1] -112.3 -125.0 -133.6 -111.0 -126.2</span>
+</p>
+<p> In the <span class="style22">sims.matrix </span>component the three chains are combined again but this time the samples from the posterior distributions occupy the columns of a matrix. As was the case with the <span class="style22">sims.list </span>component, the row order of the observations in the <span class="style22">sims.matrix </span>component has been randomly permuted (so that the actual sample history is lost). </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.1$sims.matrix[1:10,]</div>
+<span class="style331">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b0    &nbsp;&nbsp;&nbsp;b1    &nbsp;&nbsp;&nbsp;b2 sigma.y deviance<br>
+&nbsp;[1,] -112.3 21.73 30.64 &nbsp;&nbsp;7.157 &nbsp;&nbsp;&nbsp;266.5<br>
+&nbsp;[2,] -125.0 23.27 34.16 &nbsp;&nbsp;6.311 &nbsp;&nbsp;&nbsp;263.7<br>
+&nbsp;[3,] -133.6 24.02 37.37 &nbsp;&nbsp;5.950 &nbsp;&nbsp;&nbsp;267.8<br>
+&nbsp;[4,] -111.0 21.84 29.60 &nbsp;&nbsp;6.957 &nbsp;&nbsp;&nbsp;268.1<br>
+&nbsp;[5,] -126.2 23.46 31.99 &nbsp;&nbsp;7.176 &nbsp;&nbsp;&nbsp;267.8<br>
+&nbsp;[6,] -122.3 22.55 37.08 &nbsp;&nbsp;7.475 &nbsp;&nbsp;&nbsp;268.2<br>
+&nbsp;[7,] -131.6 23.94 36.66 &nbsp;&nbsp;7.791 &nbsp;&nbsp;&nbsp;266.0<br>
+&nbsp;[8,] -135.5 24.69 37.03 &nbsp;&nbsp;6.838 &nbsp;&nbsp;&nbsp;265.5<br>
+&nbsp;[9,] -126.2 23.38 36.71 &nbsp;&nbsp;6.076 &nbsp;&nbsp;&nbsp;264.3<br>
+[10,] -113.8 21.83 34.88 &nbsp;&nbsp;9.046 &nbsp;&nbsp;&nbsp;272.9</span>
+</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.1$sims.matrix[1:5,'b0']</div>
+<span class="style331">[1] -112.3 -125.0 -133.6 -111.0 -126.2</span>
+</p>
+<p>We can use this information to calculate our own summary statistics. Here are the means of the sampled posterior distributions. The values match what's reported in the summary table above.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">apply(ipo.1$sims.matrix,2,mean)</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b2&nbsp;&nbsp;&nbsp;&nbsp; sigma.y&nbsp;&nbsp;&nbsp; deviance <br>
+-127.950409&nbsp;&nbsp; 23.579501&nbsp;&nbsp; 36.143623&nbsp;&nbsp;&nbsp; 7.019558&nbsp; 267.581836 </span>
+<h2><a name="comparing"></a>Priors that are too informative: comparing Bayesian and frequentist results </h2>
+<p>It's useful at this point to contrast the estimates obtained from the Bayesian posterior distributions with what we  obtained previously from fitting the model using the <span class="style42">lm</span> function and ordinary least squares. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> round(ipo.1$summary,3)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp;&nbsp;&nbsp; sd&nbsp;&nbsp;&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75%&nbsp;&nbsp;&nbsp; 97.5%&nbsp; Rhat n.eff<br>
+  b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -127.950 10.352 -148.798 -135.000 -127.600 -121.325 -107.710 1.003&nbsp;&nbsp; 500<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.580&nbsp; 1.225&nbsp;&nbsp; 21.171&nbsp;&nbsp; 22.820&nbsp;&nbsp; 23.540&nbsp;&nbsp; 24.377&nbsp;&nbsp; 26.019 1.003&nbsp;&nbsp; 600<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36.144&nbsp; 3.599&nbsp;&nbsp; 29.210&nbsp;&nbsp; 33.782&nbsp;&nbsp; 36.050&nbsp;&nbsp; 38.490&nbsp;&nbsp; 43.509 1.002&nbsp;&nbsp; 700<br>
+  sigma.y&nbsp;&nbsp;&nbsp;&nbsp; 7.020&nbsp; 0.851&nbsp;&nbsp;&nbsp; 5.499&nbsp;&nbsp;&nbsp; 6.421&nbsp;&nbsp;&nbsp; 6.944&nbsp;&nbsp;&nbsp; 7.599&nbsp;&nbsp;&nbsp; 8.740 1.002&nbsp; 1000<br>
+deviance&nbsp; 267.582&nbsp; 3.204&nbsp; 263.600&nbsp; 265.200&nbsp; 266.900&nbsp; 269.200&nbsp; 275.992 1.004&nbsp;&nbsp; 830</span>
+
+<p>The ordinary least squares results for this model are the following.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2)</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Root GrazingUngrazed <br>
+&nbsp;&nbsp;&nbsp;&nbsp; -127.82936&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.56005&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36.10325</span>
+<p>In general we don't expect the frequentist and Bayesian estimates to be the same, but for well-defined, trivial problems such as this with truly uninformative priors, we expect them to be close. If the differences in the estimates are large there are three possible explanations. </p>
+<ol>
+  <li>A longer burn-in period is needed. We're not yet sampling from the posterior distribution.</li>
+  <li>There's a mistake in how the model was defined.</li>
+  <li>Some of the priors are weakly informative and they're unduly influencing the results.</li>
+</ol>
+<p>Explanation (1) can be ruled out by looking at  chain diagnostics, as we've done. Explanation (3) is always a possibility. What's uninformative for one problem may be informative for another. The intercept in this model is an order of magnitude larger than either of the effect estimates. Suppose I increase the precision of all the priors by a factor of 100 in the model definition file. I save the new file as <span class="style103">badipomodel.txt</span>. The changes to the old model definition file are indicated in <span class="style401">red</span>. </p>
+<div class="style103" style="padding-left: 30px; text-indent:-30px">model{</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> for(i in 1:n) {</div>
+<div class="style103" style="padding-left: 90px; text-indent:-30px"> y[i]~dnorm(y.hat[i],tau.y)</div>
+<div class="style103" style="padding-left: 90px; text-indent:-30px"> y.hat[i] &lt;- b0+b1*x[i]+b2*z[i]</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> }</div>
+<div class="style391" style="padding-left: 60px; text-indent:-30px"># priors are too informative</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> b0~dnorm(0,<span class="style401">.0001</span>)</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> b1~dnorm(0,<span class="style401">.0001</span>)</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> b2~dnorm(0,<span class="style401">.0001</span>)</div>
+<div class="style391" style="padding-left: 60px; text-indent:-30px"></div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> tau.y &lt;- pow(sigma.y,-2)</div>
+<div class="style103" style="padding-left: 60px; text-indent:-30px"> sigma.y~dunif(0,<span class="style401">100</span>)</div>
+<div class="style103" style="padding-left: 30px; text-indent:-30px"> }</div>
+<p>I rerun the model with the new model definition file and then display the summary statistics  of the posterior distributions again. </p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#refit model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> ipo.3 &lt;- bugs(ipo.data, ipo.inits, ipo.parms, &quot;badipomodel.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3,  n.iter=50000, debug=T) </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">ipo.3</div>
+
+<span class="style24">Inference for Bugs model at &quot;ipomodel2.txt&quot;, fit using WinBUGS,<br>
+&nbsp;3 chains, each with 50000 iterations (first 25000 discarded), n.thin = 75<br>
+&nbsp;n.sims = 1002 iterations saved<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp; sd&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp; 25%&nbsp;&nbsp;&nbsp; 50%&nbsp;&nbsp;&nbsp; 75%&nbsp; 97.5% Rhat n.eff<br>
+b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">-126.5</span><span class="style24"> 10.1 -146.5 -133.5 -126.3 -119.8 -107.0&nbsp;&nbsp;&nbsp; 1&nbsp; 1000<br>
+b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.4&nbsp; 1.2&nbsp;&nbsp; 21.2&nbsp;&nbsp; 22.6&nbsp;&nbsp; 23.4&nbsp;&nbsp; 24.2&nbsp;&nbsp; 25.8&nbsp;&nbsp;&nbsp; 1&nbsp; 1000<br>
+b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 35.8&nbsp; 3.6&nbsp;&nbsp; 28.8&nbsp;&nbsp; 33.6&nbsp;&nbsp; 35.8&nbsp;&nbsp; 38.2&nbsp;&nbsp; 42.4&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 760<br>
+sigma.y&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp; 0.8&nbsp;&nbsp;&nbsp; 5.5&nbsp;&nbsp;&nbsp; 6.4&nbsp;&nbsp;&nbsp; 6.9&nbsp;&nbsp;&nbsp; 7.5&nbsp;&nbsp;&nbsp; 8.8&nbsp;&nbsp;&nbsp; 1&nbsp; 1000<br>
+deviance&nbsp; 267.3&nbsp; 3.0&nbsp; 263.6&nbsp; 265.2&nbsp; 266.7&nbsp; 268.7&nbsp; 275.4&nbsp;&nbsp;&nbsp; 1&nbsp; 1000</span>
+<p><span class="style24">For each parameter, n.eff is a crude measure of effective sample size,<br>
+  and Rhat is the potential scale reduction factor (at convergence, Rhat=1).</span>
+<p><span class="style24">DIC info (using the rule, pD = Dbar-Dhat)<br>
+  pD = 3.8 and DIC = 271.2<br>
+  DIC is an estimate of expected predictive error (lower deviance is better).</span>
+
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2)</div>
+<span class="style141">&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Root GrazingUngrazed <br>
+&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">-127.82936</span><span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.56005&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36.10325</span>
+<p>Now the Bayesian and frequentist estimates of the intercept are much further apart. So what went wrong? Choosing a precision of .0001 is equivalent to a normal variance of 10000, or a normal standard deviation of 100. This says that we are 95% certain for instance that the estimate of the intercept  lies in the interval (&ndash;200, 200). The estimate of the intercept turns out to be &ndash;126, so clearly the prior we're using is quite informative. Here the standard deviation is the same order of magnitude as the parameter we're trying to estimate. To be an uninformative prior we need the standard deviation to be at least a couple of orders of magnitude greater than the estimate, yielding a range of uncertainty that is wider than the range of reasonable values of the parameter. </p>
+<p>The obvious solution would be to always choose the precision to be very small. The problem with this is that in complicated problems this can lead to numerical instability. BUGS can become computationally unstable when the priors on parameter values are given too  wide a range. For instance if I change the prior for <span class="style103">sigma.y</span> to <span class="style103">sigma.y~dunif(0,1000000)</span> WinBUGS runs the model but I get no output. Instead in the WinBUGS log window the following line appears amidst a lot of other text. </p>
+<blockquote>
+  <p class="styleArial1">thin.updater(15)<br>
+    update(334)<br>
+    cannot bracket slice for node sigma.y</p>
+</blockquote>
+<p>This last line is an error message that indicates the chosen prior for <span class="style103">sigma.y</span> is too diffuse.</p>
+<h2><a name="golden"></a>Golden rule for fitting models with MCMC</h2>
+<p> The best strategy for having success in fitting Bayesian models is to rescale the data values so that all estimated parameters  end up being smaller than 10 in absolute value and typically close to 1. Things can always be rescaled back later either within the WinBUGS program or in R. If such rescaling is done for the current problem, even the original choice of precision of .0001 for the regression parameters will turn out to be reasonable.</p>
+<h2><a name="cited" id="cited"></a>Cited reference</h2>
+<p>Crawley, Michael J. 2002. <i>Statistical Computing: An Introduction to 
+  Data Analysis Using S-Plus</i>. Wiley, New York.</p>
+<h2><b><a name="books"></a>Introductory books and articles on Bayesian estimation</b></h2>
+<ul>
+  <li> Berger. James O. and Donald A. Berry. 1988. Statistical analysis and the illusion of objectivity. <em>American Scientist</em> <strong>76</strong>(2): 159&ndash;165.</li>
+  <li> Clark, J. S. 2005. Why environmental scientists are becoming Bayesians. <i>Ecology Letters </i> <b>8</b>(1): 2&ndash;14. </li>
+  <li>Dennis, B. 1996. Discussion: Should ecologists become Bayesians? <em>Ecological Applications</em> <strong>6</strong>(4): 1095&ndash;1103. <font size="-1">One of the hold-outs.</font></li>
+  <li>Ellison, A. M. 1996. An introduction to Bayesian inference for ecological research and environmental decision-making. <em>Ecological Applications</em> <strong>6</strong>(4): 1036&ndash;1046.</li>
+  <li>Ellison, Aaron M. 2004. Bayesian inference in ecology. <i>Ecology Letters</i> <b>7</b>: 509&ndash;520.</li>
+  <li>Gelman, Andrew and Jennifer Hill. 2007. <em>Data Analysis Using Regression and Multilevel/Hierarchical Models</em>. Cambridge University Press.</li>
+  <li>Gelman, Andrew, John B. Carlin, Hal S. Stern, and Donald B. Rubin. 2004. <em>Bayesian Data Analysis</em>. CRC Press. <font size="-1">A standard reference.</font></li>
+  <li>Gill, Jeff. 2008. <em>Bayesian Methods: A Social and Behavioral Sciences Approach</em>. CRC Press. <font size="-1">Very thorough and understandable presentation of Bayesian ideas.</font></li>
+  <li>Jackman, Simon. 2009. <em>Bayesian Analysis for the Social Sciences</em>. Wiley.</li>
+  <li>K&eacute;ry, Marc. 2010. <em>Introduction to WinBUGS for Ecologists</em>. Academic Press, Burlington, MA.</li>
+  <li>Kruschke, John K. 2011.<em> Doing Bayesian Data Analysis: A Tutorial with R and BUGS</em>. Academic Press, Burlington, MA.</li>
+  <li>Link, W. A., E. Cam, J. D. Nichols, and E. G. Cooch. 2002. Of BUGS and birds: a Markov chain Monte Carlo for hierarchical modeling in wildlife research. <i>Journal of Wildlife Management</i> <b>66</b>: 277&ndash;291.&nbsp; </li>
+  <li>Lunn, David, Chris Jackson, Nicky Best, Andrew Thomas, and David Spiegelhalter. 2012. <em>The BUGS Book: A Practical Introduction to Bayesian Analysis.</em> Chapman &amp; Hall/CRC Press.</li>
+  <li>Lynch, Scott M. 2007. <em>Introduction to Applied Bayesian Statistics and Estimation for Social Scientists</em>. Springer-Verlag. </li>
+  <li>McCarthy, Michael A. 2007. <em>Bayesian Methods for Ecology</em>. Cambridge University Press. <font size="-1">Notable in that  WinBUGS code is included for all described models. Unfortunately, most of the models included are fairly trivial. </font></li>
+  <li>Mila, A. L. and A. L. Carriquiry. 2004. Bayesian analysis in plant pathology. <em>Phytopathology</em> <strong>94</strong>(9): 1027&ndash;1030. </li>
+  <li>Ntzoufras, Ioannis. 2009. <em>Bayesian Modeling Using WinBUGS</em>. Wiley.</li>
+  <li>Roff, Derek A. 2006. <em>Introduction to Computer-Intensive Methods of Data Analysis in Biology</em>. Cambridge University Press. Chapter 7 &quot;Bayesian Methods&quot;.</li>
+  <li>Wade, P. R. 2000. Bayesian methods in conservation biology. <em>Conservation Biology</em> <strong>14</strong>(5): 1308&ndash;1316.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture23&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 20, 2012<br>
+      URL: <a href="lecture23.htm#lecture23" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture23.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

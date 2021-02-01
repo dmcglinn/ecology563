@@ -1,0 +1,645 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 6&mdash;Wednesday, September 12, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture6" id="lecture4"></a>Lecture 6&mdash;Wednesday, September 12, 2012</h1>
+<h3>Topics</h3>
+<ul>
+<li><a href="lecture6.htm#randomized">Randomized block design</a></li>
+<li><a href="lecture6.htm#RCBD">An example of a randomized complete block design (RCBD)</a></li>
+<li><a href="lecture6.htm#fixed">The fixed effects approach to analyzing randomized block designs</a></li>
+<li><a href="lecture6.htm#using">Using random effects to account for blocking</a> </li>
+<li><a href="lecture6.htm#estimating">Estimating a model with random effects</a>
+  <ul>
+  <li><a href="lecture6.htm#nlme">Estimating a RCBD model using the nlme package</a></li>
+  <li><a href="lecture6.htm#lme4">Estimating a RCBD model using the lme4 package</a></li>
+    </ul>
+</li>
+<li><a href="lecture6.htm#pvalue">The p-value problem in mixed effects models</a></li>
+<li><a href="lecture6.htm#parametric">The parametric bootstrap</a></li>
+<li><a href="lecture6.htm#mcmc">Markov chain Monte Carlo methods</a></li>
+
+  <li><a href="lecture6.htm#cited">Cited references</a></li>
+  <li><a href="lecture6.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture6.htm#asdataframe">as.data.frame</a> checks if an object is a data frame and if not tries to coerce it into one.</li>
+  <li><a href="lecture6.htm#detach">detach</a> can be used to remove packages from memory.</li>
+  <li><a href="lecture6.htm#fixef">fixef</a> extracts estimates of the fixed effects from an <span class="style1">lmer</span> or <span class="style1">lme</span> object.</li>
+  <li><a href="lecture6.htm#for">for</a> defines a for loop, a programming tool that allows a set of instructions to be executed repeatedly. </li>
+  <li><a href="lecture6.htm#HPDinterval">HPDinterval</a> (from the <span class="style19">lme4</span> package) obtains highest probability density credible intervals from the posterior distributions generated by the <span class="style1">mcmcsamp</span> function.</li>
+  <li><a href="lecture6.htm#lme">lme</a> (from the <span class="style19">nlme</span> package) fits mixed effects models with a normally distributed response variable.</li>
+  <li><a href="lecture6.htm#lmer">lmer</a> (from the <span class="style19">lme4</span> package) fits generalized mixed effects models with hierarchical or crossed random effects.</li>
+  <li><a href="lecture6.htm#mcmcsamp">mcmcsamp</a> (from the <span class="style19">lme4</span> package) carries out Markov chain Monte Carlo sampling to approximate the posterior distributions of parameters from an <span class="style1">lmer</span> object.</li>
+  <li><a href="lecture6.htm#numeric">numeric</a> creates a vector or coerces an object into a vector of a specified length.</li>
+  <li><a href="lecture6.htm#quantile">quantile</a> estimates  specified quantiles from the empirical distribution of a variable.</li>
+  <li><a href="lecture6.htm#ranef">ranef</a> extracts predictions of the random effects from an <span class="style1">lmer</span> or <span class="style1">lme</span> object.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture6.htm#groups">auto.key=</a> (argument to many <span class="style19">lattice</span> plotting functions) adds a crude key to the graph.</li>
+  <li><a href="lecture6.htm#groups">groups=</a> (argument to many <span class="style19">lattice</span> plotting functions) specifies a variable that identifies different groups within a panel for plotting.</li>
+  <li><a href="lecture6.htm#level">level=</a> (argument to <span class="style1">predict</span>) when <span class="style1">predict</span> is applied to an <span class="style1">lme</span> object <span class="style22">level</span> controls which random effects are used in  predicting  the mean. The choice <span class="style22">level=0</span>  corresponds to no random effects at all and yields the marginal (population average) prediction.</li>
+  <li><a href="lecture6.htm#lme">random=</a> (argument to the <span class="style1">lme</span> function) is used to specify the random effects structure of an <span class="style1">lme</span> model. The basic syntax is <span class="style22">random=~x|group</span> where <span class="style8">x</span> is the variable whose coefficient is to be made random and <span class="style8">group</span> is the variable or variables that identifies the hierarchical structure of the data.</li>
+</ul>
+<h3>Additional R packages used </h3>
+<ul>
+  <li><a href="lecture6.htm#groups">lattice</a> for the <span class="style1">dotplot</span> function.</li>
+  <li><a href="lecture6.htm#lme4">lme4</a> for the <span class="style1">lmer</span>, <span class="style1">mcmcsamp</span>, and <span class="style1">HPDinterval</span> functions.</li>
+  <li><a href="lecture6.htm#nlme">nlme</a> for the <span class="style1">lme</span> function.</li>
+</ul>
+<h2><a name="randomized" id="refitting4"></a>Randomized block design</h2>
+<p>Up until now we&rsquo;ve worked only with completely randomized statistical designs. In a completely randomized design treatments are randomly assigned to units and the only recognizable differences between those units are the different treatments that have been applied to them. If the units are in fact heterogeneous then the hope is that the random assignment of treatments to units has mixed things up so that on balance the heterogeneity of units assigned to the different treatment groups will be roughly the same. </p>
+<p>This is not always optimal. Sometimes we can recognize the heterogeneity of the units ahead of time and   wish to take advantage of it. For instance, if we can group similar units together such that each of the similar units  gets a different treatment, we could restrict ourselves to making comparisons between the similar units and   thus remove some of the background variation that might  otherwise make detecting a treatment effect more difficult. If the units are  similar then the differences we detect are more likely  due to treatment differences.&nbsp; A common example of this is to use  genetically related individuals as experimental subjects in which individuals from the same litter or cuttings from the same plant are assigned different treatments. In statistics we use the term <strong>block</strong> to refer to a group of similar experimental units.</p>
+<p>Sometimes the creation of blocks is accidental. The set-up of the experiment may cause some units to be more similar to each other than to others. </p>
+<ul>
+  <li>Consider a greenhouse experiment with plants in pots. To save space we grow multiple plants in the same pot. As a result  plants in the same plot share a common environment  that is different from other plants that are growing in different pots.</li>
+  <li>In this same greenhouse experiment groups of pots  are placed benches. Some of the benches are near a door or a window and it's thought that this may affect the results..</li>
+  <li>In a field experiment in which the experimental unit is a plot, some plots occur on a slope. To prevent the confounding of treatment effects with slope effects  we may choose to partition the hillside into blocks to ensure that all the treatments are represented at each height of the hill.</li>
+</ul>
+<p>In all of these examples the variable that identifies the similar units is called a block. When we include a blocking variable  in an analysis we are trying to account for all the things we failed to measure that makes one block different from the next block (and make the individuals in the same block more similar to each other). Statistically a block appears in a regression model as just another categorical variable. So, it would seem that a block is no different than an ordinary factor in analysis of variance. This is more or less true but there are some fundamental differences in how we treat blocks and treatments in regression models.</p>
+<ul>
+  <li>Blocks are usually small and typically, but not always, there are only enough experimental units for a single replication of the individual treatments in a block. This is  because blocks are supposed to be homogeneous units. The larger and more expansive we make the block  the less homogeneous it is likely to be. Without replication of the treatments within a block we can't formally estimate a block &times; treatment interaction. Graphical methods and various analytical methods that  test for  specific kinds of interactions are useful in this case.</li>
+  <li>Unlike treatment effects the  estimates of the block effects are  generally of no interest to us. Because there are often a lot of blocks the presence of block effect estimates in a summary table tends to create a confusing mess.</li>
+  <li>As is the case with any categorical variable, when we treat block as a factor variable in a regression analysis  one block gets chosen as the reference block and all the other block estimates become effects&mdash;deviations from this reference group. Consequently the estimates of the mean response for a given treatment  will be for this specific reference block  rather than for  an average block.</li>
+  <li>If we plan to use the model to predict the mean response for new individuals we will need to supply the value of the block variable for these individuals in order to obtain a prediction. Because the blocks appearing in the analysis correspond to unique categories and refer only to the subjects  in the current study, prediction for new individuals is essentially impossible.</li>
+</ul>
+<h2><a name="RCBD"></a>An example of a randomized complete block design (RCBD)</h2>
+<p>This example comes from <a href="lecture6.htm#Sokal">Sokal and Rohlf (1995)</a>, p. 365. &quot;Blakeslee (1921) studied length/width ratios of second seedling leaves of two types of Jimsonweed called globe (<em>G</em>) and nominal (<em>N</em>). Three seeds of each type were planted in 16 pots. Is there sufficient evidence to conclude that globe and nominal differ in length/width ratio?&quot; The file <a href="../../data/jimsonweed.txt">jimsonweed.txt</a> is a tab-delimited text file.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plants &lt;- read.table('ecol 563/jimsonweed.txt', header=T, sep='\t')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plants[1:8,]</div>
+<span class="style24">&nbsp; lw.rat&nbsp;&nbsp; pot type<br>
+1&nbsp;&nbsp; 1.67 16533&nbsp;&nbsp;&nbsp; G<br>
+2&nbsp;&nbsp; 1.53 16533&nbsp;&nbsp;&nbsp; G<br>
+3&nbsp;&nbsp; 1.61 16533&nbsp;&nbsp;&nbsp; G<br>
+4&nbsp;&nbsp; 2.18 16533&nbsp;&nbsp;&nbsp; N<br>
+5&nbsp;&nbsp; 2.23 16533&nbsp;&nbsp;&nbsp; N<br>
+6&nbsp;&nbsp; 2.32 16533&nbsp;&nbsp;&nbsp; N<br>
+7&nbsp;&nbsp; 1.68 16534&nbsp;&nbsp;&nbsp; G<br>
+8&nbsp;&nbsp; 1.70 16534&nbsp;&nbsp;&nbsp; G</span>
+<p><a name="groups"></a>We can examine the structure of the data set by using a dot plot in which we display the length-width ratios of plants from  different pots using different colors to denote the different treatments. For this I use the <span class="style1">dotplot</span> function from <span class="style19">lattice</span>. To color observations by the levels of the treatment variable &quot;<span class="style8">type</span>&quot; I specify that variable in the <span class="style22">groups</span> argument of <span class="style1">dotplot</span>. To get a crude key that identifies the groups I include the argument <span class="style22">auto.key=T</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">
+  library(lattice)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> dotplot(factor(pot)~lw.rat, groups=type, data=plants, auto.key=T)</div>
+ <br>
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture6/fig1.png" width="445" height="350"></td>
+
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Dot plot of length-width ratios separately by pot colored by treatment</td> 
+  </tr>
+</table>
+<p align="left">Even if  we didn't know that this was a randomized block design the blocking structure is immediately apparent from Fig. 1. In a completely randomized design with  treatments randomly assigned to plants and pot playing no role in the treatment assignment we would not be seeing an equal number of G and N treatment assignments in each pot. It's also obvious from Fig. 1 that there is a marked treatment effect with nominal (N) plants having a larger length-width ratio than globe (G) plants. This pattern holds up in every pot which suggests that there is no interaction between treatment and block. </p>
+<p align="left">Fig. 1 does reveal some systematic differences across pots (whole distributions are shifted to the left or the right) so  accounting for the blocking in the analysis is potentially useful. One unusual thing about this experiment is that  treatments are replicated within blocks (pots). Thus we will be able to formally test for   a block &times; treatment interaction.</p>
+<h2><a name="fixed" id="refitting"></a>The fixed effects approach to analyzing randomized block designs</h2>
+<p>Because a block is just a categorical variable we can use analysis of variance type models to analyze the randomized block design. Below I fit an additive model (<span class="style8">pot</span> + <span class="style8">type</span>) and  an interaction model (<span class="style8">pot</span>*<span class="style8">type</span>) to the data. Because the variable that labels the <span class="style8">pot</span> categories is numeric I have to convert it explicitly to a factor in the function call.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod1 &lt;- lm(lw.rat~factor(pot)+type, data=plants)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod2 &lt;- lm(lw.rat~factor(pot)*type, data=plants)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod2)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: lw.rat<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(pot)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15 0.8977&nbsp; 0.0598&nbsp;&nbsp; 3.373&nbsp; 0.000342 ***<br>
+  type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 7.3206 &nbsp;7.3206 412.575 &lt; 2.2e-16 ***<br>
+  factor(pot):type 15 0.3050&nbsp; 0.0203&nbsp;&nbsp; 1.146&nbsp; 0.336418&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 64 1.1356&nbsp; 0.0177&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>From the ANOVA table we see that block &times; treatment interaction is not significant. On the other hand both the treatment and block effects are statistically significant.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod1)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: lw.rat<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(pot) 15 0.8977&nbsp; 0.0598&nbsp;&nbsp; 3.282 0.0002944 ***<br>
+  type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 7.3206&nbsp; 7.3206 401.444 &lt; 2.2e-16 ***<br>
+  Residuals&nbsp;&nbsp; 79 1.4406&nbsp; </span><span class="style25">0.0182</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>It's worthwhile at this point to compare the randomized block design results with what we would have obtained had we ignored the blocking structure of the experiment and had  instead carried out a one-way analysis of variance (which in this example is just an independent samples t-test).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod0)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: lw.rat<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 7.3206&nbsp; 7.3206&nbsp; 294.28 &lt; 2.2e-16 ***<br>
+  Residuals 94 2.3384&nbsp; </span><span class="style25">0.0249</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>The crucial thing to look at in comparing these models is the mean squared error. This is the  estimate of the background noise that is then used as the gold standard in the construction of the reported <em>F</em>-tests. For the randomized block design the mean squared error is reported to be 0.0182; for the one-way analysis of variance it is 0.0249. So there's about a 25% reduction in the variance that has been accounted for by the blocking.</p>
+<p>If we examine the summary table of the model we see that we've estimated a large number of uninteresting terms, the block effects.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(mod1)</div>
+<span class="style24">Call:<br>
+  lm(formula = lw.rat ~ factor(pot) + type, data = plants)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -0.30719 -0.09349&nbsp; 0.01333&nbsp; 0.08010&nbsp; 0.36052 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.64719&nbsp;&nbsp;&nbsp; 0.05683&nbsp; 28.986&nbsp; &lt; 2e-16 ***<br>
+  factor(pot)16534 -0.06167&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -0.791&nbsp; 0.43134&nbsp;&nbsp;&nbsp; <br>
+  factor(pot)16550&nbsp; 0.04000&nbsp;&nbsp;&nbsp; 0.07797&nbsp;&nbsp; 0.513&nbsp; 0.60935&nbsp;&nbsp;&nbsp; <br>
+  factor(pot)16668 -0.13000&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -1.667&nbsp; 0.09939 .&nbsp; <br>
+  factor(pot)16767 -0.07667&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -0.983&nbsp; 0.32844&nbsp;&nbsp;&nbsp; <br>
+  factor(pot)16768&nbsp; 0.02833&nbsp;&nbsp;&nbsp; 0.07797&nbsp;&nbsp; 0.363&nbsp; 0.71727&nbsp;&nbsp;&nbsp; <br>
+  factor(pot)16770 -0.10833&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -1.390&nbsp; 0.16858&nbsp;&nbsp;&nbsp; <br>
+  factor(pot)16771 -0.08167&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -1.047&nbsp; 0.29807&nbsp;&nbsp;&nbsp; <br>
+  factor(pot)16773 -0.17667&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -2.266&nbsp; 0.02619 *&nbsp; <br>
+  factor(pot)16775 -0.23833&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -3.057&nbsp; 0.00305 ** <br>
+  factor(pot)16776 -0.21167&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -2.715&nbsp; 0.00814 ** <br>
+  factor(pot)16777 -0.25000&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -3.207&nbsp; 0.00194 ** <br>
+  factor(pot)16780 -0.25833&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -3.313&nbsp; 0.00139 ** <br>
+  factor(pot)16781 -0.09333&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -1.197&nbsp; 0.23484&nbsp;&nbsp;&nbsp; <br>
+  factor(pot)16787 -0.19000&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -2.437&nbsp; 0.01706 *&nbsp; <br>
+  factor(pot)16789 -0.24000&nbsp;&nbsp;&nbsp; 0.07797&nbsp; -3.078&nbsp; 0.00286 ** <br>
+  typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style25">0.55229</span><span class="style24">&nbsp;&nbsp;&nbsp; 0.02756&nbsp; 20.036&nbsp; &lt; 2e-16 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 0.135 on 79 degrees of freedom<br>
+  Multiple R-squared: 0.8509,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: 0.8206 <br>
+  F-statistic: 28.17 on 16 and 79 DF,&nbsp; p-value: &lt; 2.2e-16</span>
+<p>The only  interesting estimate, the treatment effect, appears at the bottom. From the output we conclude that the mean length-width ratio of nominal (N) plants is 0.553 units bigger than it is for globe (G) plants. </p>
+<p>So the above analysis provides an estimate of the treatment effect but if we want to know what the average length-width ratios are for the two treatment groups then we have a problem. If this were a one-way analysis of variance model  then the intercept would represent the mean length-width ratio for globe plants and to obtain the mean for nominal plants we would just add the treatment effect 0.552 to  the intercept. In a two-way design the intercept  represents the mean response when both factors are set to their reference values. Similarly in a randomized block design the intercept represents the mean response when the treatment is at its reference value and block is at its reference value.  So, in the above design the intercept, 1.647, is the mean length-ratio for a globe plant that was reared in <span class="style8">pot</span> #16533, the reference block. When we add the treatment effect to this value we  obtain the mean length-ratio for a nominal plant but again only for those plants reared in <span class="style8">pot</span> #16533.</p>
+<p>So, in order to obtain the length-width ratio for a given treatment  we have to specify a <span class="style8">pot</span> number too. If we try to use the <span class="style1">predict</span> function on the model  just specifying values for <span class="style8">type</span>, R complains that it doesn't have enough information.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> predict(mod1, newdata=data.frame(type=c('G','N')))</div>
+<span class="style24">Error in factor(pot) : object 'pot' not found</span>
+<p>If instead we create a data frame consisting of values of <span class="style8">type</span> and <span class="style8">pot</span> in all possible combinations we can obtain the treatment means for the specific pots used in the experiment.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> nd &lt;- expand.grid(pot=levels(factor(plants$pot)), type=levels(factor(plants$type)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.p &lt;- predict(mod1, newdata=nd)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> data.frame(nd, prediction=out.p)[1:8,]</div>
+<span class="style24">&nbsp;&nbsp;&nbsp; pot type prediction<br>
+1 16533&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp; 1.647187<br>
+2 16534&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp; 1.585521<br>
+3 16550&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp; 1.687187<br>
+4 16668&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp; 1.517188<br>
+5 16767&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp; 1.570521<br>
+6 16768&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp; 1.675521<br>
+7 16770&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp; 1.538854<br>
+8 16771&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp; 1.565521</span>
+<p>So while the randomized design when analyzed in the fashion described above is useful for estimating treatment effects it is not particularly useful for estimating treatment means.</p>
+<h2><a name="using" id="refitting2"></a>Using random effects to account for blocking </h2>
+<p>The analysis we carried out above is called the fixed effects approach to the randomized complete block design (RCBD). In it we define separate sets of dummy variables for treatment and block. If <em>i</em> denotes the block, here numbered 1 through 16, and <em>j</em> the observation in that block, <em>j</em> = 1 through 6, then we create the following set of dummy variables.</p>
+<p align="center"><img src="../../images/lectures/lecture6/xfactor.gif" width="182" height="75" align="absmiddle">,  &nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture6/zfactor.gif" alt="z factor" width="175" height="72" align="absmiddle"></p>
+<p>The model for the mean response is</p>
+<p align="center"><img src="../../images/lectures/lecture6/fixedrcbdmean.gif" width="188" height="60" alt="fixed mean"></p>
+<p>and the model for an individual observation is</p>
+<p align="center"><img src="../../images/lectures/lecture6/fixedrcbdobs.gif" width="222" height="60" alt="observation"></p>
+<p>where <img src="../../images/lectures/lecture6/errors.gif" alt="error distribution" width="163" height="40" align="absmiddle">. In this formulation the intercept &beta;<sub>0</sub> represents the mean response for type = 'G' in block 1, &beta;<sub>1</sub> is the treatment effect which is the same in each block (because there is no interaction), and &beta;<sub>2</sub> through &beta;<sub>16</sub> are individual block effects. </p>
+<p>There is a second way to formulate the RCBD using what are called random effects. In this approach the model for the mean is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture6/randommean.gif" width="153" height="37" alt="random mean"></p>
+<p>and the model for an individual observation is</p>
+<table summary="multivariate likelihood and number." class="eq">
+  <tr>
+<td> <p align="center"><img src="../../images/lectures/lecture6/randomobs.gif" width="188" height="37" alt="random observation"></p> </td>
+<th>(1) </th>
+</tr>
+</table>
+
+<p>where as before <img src="../../images/lectures/lecture6/errors.gif" alt="error distribution" width="163" height="40" align="absmiddle"> but in addition <img src="../../images/lectures/lecture6/randomeffectdist.gif" alt="random effects distribution" width="162" height="40" align="absmiddle">. The u<sub>0i</sub> are called random effects, more specifically in the RCBD, random intercepts. There is one random effect for each block, a total of 16 in all for the current design. They are called random effects because they have a distribution instead of being  constants like the &beta;<sub>i</sub> parameters in the model. The &beta;<sub>i</sub> are called fixed effects, the u<sub>0i</sub> are called random effects, and the entire model is called a mixed effects model.</p>
+<p>According to the distributional assumption  the random effects have a mean of zero, as do the random errors. Thus if we take the mean of eqn (1) we obtain just the fixed effects portion of the model: <img src="../../images/lectures/lecture6/popmean.gif" alt="population mean" width="108" height="37" align="absmiddle">. So  in the mixed effects approach, unlike the fixed effects model of the RCBD, the fixed effects portion of the model corresponds to the  treatment mean averaged over all the blocks. &beta;<sub>0</sub> is the mean length-width ratio for the globe plants averaged across pots and &beta;<sub>0</sub> + &beta;<sub>1</sub> is the mean length-width ratio for the nominal plants averaged across pots. If the blocks used in the experiment are a random sample from a population of such blocks then it is legitimate to refer to the fixed effect portion of the model as the population-average model.</p>
+<h2><a name="estimating" id="refitting3"></a>Estimating a model with random effects</h2>
+<p>For an ordinary linear regression model least squares provides us with an explicit solution for the regression parameters. For a mixed effects model there is no explicit solution; parameter estimates have to be obtained iteratively using some variation of Newton's method. Two different packages in R can be used to fit mixed effects models: <span class="style19">nlme</span> and <span class="style19">lme4</span>. The <span class="style19">nlme</span> package is the older of the two and can only fit models in which the response variable has a normal distribution. It is best suited for fitting models with what are called hierarchical random effects. We previously used the <span class="style1">gls</span> function from the <span class="style19">nlme</span> package in <a href="lecture3.htm#gls">lecture 3</a>. The <span class="style19">lme4</span> package is a recent development and extends the <span class="style19">nlme</span> package to include additional probability distributions for the response besides the normal distribution. It can also fit models with both crossed and hierarchical random effects. I illustrate fitting the RCBD to the jimsonweed data using both packages.</p>
+<h3><a name="nlme"></a>Estimating a RCBD model using the nlme package</h3>
+<p><a name="lme"></a>Although the  <span class="style19">nlme</span> package is part of the standard installation of R,  it still needs to be loaded into memory at the start of each R session. The function in the <span class="style19">nlme</span> package that fits linear regression models with random effects is called <span class="style1">lme</span>, for <u>l</u>inear <u>m</u>ixed <u>e</u>ffects models. Its syntax is the same as <span class="style1">lm</span> except for an additional <span class="style22">random</span> argument in which the random effects specification is described.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod2.lme &lt;- lme(lw.rat~type, random=~1|pot, data=plants)</div>
+<p>Notice the syntax that appears in the <span class="style22">random</span> argument: <span class="style10">~1|pot</span>. </p>
+<ul>
+  <li>The ~ signifies that what comes next is the right side of a formula. </li>
+  <li>The numeral 1 refers to the intercept, which is why this is sometimes called a random intercepts model. </li>
+  <li>A vertical bar separates the random coefficient from the grouping variable.</li>
+  <li>The grouping variable is the variable that identifies the blocks.</li>
+</ul>
+<p>The <span class="style1">anova</span> function when applied to an <span class="style1">lme</span> object produces a fairly standard ANOVA table. The blocks don't appear in the table because they are part of random effects formulation of the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod2.lme)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 79 5170.002&nbsp; &lt;.0001<br>
+type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 79&nbsp; 401.444&nbsp; &lt;.0001</span>
+<p>The summary table for the model provides an estimate of the intercept &beta;<sub>0</sub>, the treatment effect &beta;<sub>1</sub>,  the standard deviation of the error distribution, &sigma;, and the standard deviation of the random effects distribution, &tau;.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(mod2.lme)</div>
+<span class="style24">  Linear mixed-effects model fit by REML<br>
+  &nbsp;Data: plants <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BIC&nbsp;&nbsp; logLik<br>
+&nbsp; -76.08137 -65.90819 42.04068</span>
+<p><span class="style24">Random effects:<br>
+  &nbsp;Formula: ~1 | pot<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp; Residual<br>
+StdDev:&nbsp; </span><span class="style25">0.08328042</span><span class="style25"> 0.1350398</span>
+<p><span class="style24">Fixed effects: lw.rat ~ type <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value&nbsp; Std.Error DF&nbsp; t-value p-value<br>
+  (Intercept) </span><span class="style25">1.5191667</span><span class="style24"> 0.02851996 79 53.26679&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">0.5522917</span><span class="style24"> 0.02756488 79 20.03607&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;Correlation: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intr)<br>
+  typeN -0.483</span>
+<p><span class="style24">Standardized Within-Group Residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Med&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -1.89568380 -0.65943997 &nbsp;0.02981137&nbsp; 0.62150485&nbsp; 3.04884738 </span>
+<p><span class="style24">Number of Observations: 96<br>
+  Number of Groups: 16 </span>
+<p>I've highlighted the entries in the summary table corresponding to the parameter estimates. </p>
+<ul>
+  <li>The regression coefficient estimates are &beta;<sub>0</sub> = 1.5192 and &beta;<sub>1</sub> = 0.55229. The estimate of &beta;<sub>1</sub> is identical to what we obtained using <span class="style1">lm</span> to fit the fixed effects RCBD model. The estimate of &beta;<sub>0</sub> is  different from the fixed effects model but that's because &beta;<sub>0</sub> now represents something quite different. In the mixed effects model &beta;<sub>0</sub> is the average length-width ratio for all globe plants (not just the average length-width ratio for globe plants in pot #16533). </li>
+  <li>The section labeled &quot;Random effects&quot; displays estimates of the parameters  of the random effects distribution and the error distribution. The entry labeled &quot;(Intercept)&quot; is &tau;, the standard deviation of the random effects distribution, and the entry labeled &quot;Residual&quot; is &sigma;, the standard deviation of the error distribution.</li>
+</ul>
+<p><a name="fixef"></a>To extract the two regression coefficients &beta;<sub>0</sub> and &beta;<sub>1</sub> from the model object we can use the <span class="style1">fixef</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fixef(mod2.lme)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; typeN <br>
+&nbsp; 1.5191667&nbsp;&nbsp; 0.5522917</span>
+<p>If we use the <span class="style1">coef</span> function, which serves this purpose for <span class="style1">lm</span> objects, we get a very different kind of output.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">coef(mod2.lme)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; typeN<br>
+  16533&nbsp;&nbsp;&nbsp; 1.608180 0.5522917<br>
+  16534&nbsp;&nbsp;&nbsp; 1.565303 0.5522917<br>
+  16550&nbsp;&nbsp;&nbsp; 1.635993 0.5522917<br>
+  16668&nbsp;&nbsp;&nbsp; 1.517791 0.5522917<br>
+  16767&nbsp;&nbsp;&nbsp; 1.554874 0.5522917<br>
+  16768&nbsp;&nbsp;&nbsp; 1.627881 0.5522917<br>
+  16770&nbsp;&nbsp;&nbsp; 1.532856 0.5522917<br>
+  16771&nbsp;&nbsp;&nbsp; 1.551397 0.5522917<br>
+  16773&nbsp;&nbsp;&nbsp; 1.485343 0.5522917<br>
+  16775&nbsp;&nbsp;&nbsp; 1.442466 0.5522917<br>
+  16776&nbsp;&nbsp;&nbsp; 1.461007 0.5522917<br>
+  16777&nbsp;&nbsp;&nbsp; 1.434354 0.5522917<br>
+  16780&nbsp;&nbsp;&nbsp; 1.428559 0.5522917<br>
+  16781&nbsp;&nbsp;&nbsp; 1.543285 0.5522917<br>
+  16787&nbsp;&nbsp;&nbsp; 1.476072 0.5522917<br>
+16789&nbsp;&nbsp;&nbsp; 1.441307 0.5522917</span>
+<p>Notice that we get 16 pairs of estimators for &beta;<sub>0</sub> and &beta;<sub>1</sub>, one for each of the 16 blocks (pots). The value for &beta;<sub>1</sub> is the same for each but the value of the intercept varies by block. What's being returned here are the random intercepts defined by</p>
+<p align="center"><img src="../../images/lectures/lecture6/randomints.gif" width="103" height="35" alt="random intercepts"></p>
+<p><a name="ranef"></a>These consist of the overall population intercept plus a prediction of the individual block random effects. To see the predictions of the random effects alone use the <span class="style1">ranef</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ranef(mod2.lme)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)<br>
+  16533&nbsp; 0.089013757<br>
+  16534&nbsp; 0.046136504<br>
+  16550&nbsp; 0.116826030<br>
+  16668 -0.001376128<br>
+  16767&nbsp; 0.035706902<br>
+  16768&nbsp; 0.108714117<br>
+  16770&nbsp; 0.013688853<br>
+  16771&nbsp; 0.032230368<br>
+  16773 -0.033823779<br>
+  16775 -0.076701033<br>
+  16776 -0.058159518<br>
+  16777 -0.084812945<br>
+  16780 -0.090607169<br>
+  16781&nbsp; 0.024118455<br>
+  16787 -0.043094537<br>
+16789 -0.077859877</span>
+<p>These random effects are not obtained as part of the ordinary estimation protocol that returns estimates of &beta;<sub>0</sub>, &beta;<sub>1</sub>, &sigma;, and &tau;, but instead are obtained afterwards using these estimates. For that reason they are usually called predictions rather than estimates. They are variously called empirical Bayes predictions (estimates) or BLUPs (best linear unbiased predictors).</p>
+<p>The <span class="style1">predict</span> function works with <span class="style1">lme</span> objects. If you apply the <span class="style1">predict</span> function to an <span class="style1">lme</span> model object you obtain the predicted means for each observation used to fit the model. There are 96 observations in the data set so below I just display the predictions for the first twelve.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> predict(mod2.lme)[1:12]</div>
+<span class="style24">  &nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534 <br>
+  1.608180 1.608180 1.608180 2.160472 2.160472 2.160472 1.565303 1.565303 1.565303 2.117595 <br>
+  &nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534 <br>
+2.117595 2.117595</span>
+<p><a name="level"></a>Notice that the predicted mean changes when we switch  blocks. By default the <span class="style1">predict</span> function returns an estimate for the mean that includes the block effects. Thus it returns <img src="../../images/lectures/lecture6/globeest.gif" alt="globe estimate" width="62" height="35" align="absmiddle"> for  globe plants and <img src="../../images/lectures/lecture6/nominalest.gif" alt="nominal est" width="97" height="35" align="absmiddle"> for  nominal plants. To obtain predictions of the mean that don't include the random effects we have to specify the <span class="style22">level</span> argument of <span class="style1">predict</span> (an argument that is only appropriate for <span class="style1">lme</span> objects) and set it to <span class="style22">level=0</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> predict(mod2.lme, level=0)[1:12]</div>
+<span class="style24">  &nbsp; &nbsp;16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534 <br>
+  1.519167 1.519167 1.519167 2.071458 2.071458 2.071458 1.519167 1.519167 1.519167 2.071458 <br>
+  &nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534 <br>
+2.071458 2.071458</span>
+<p>Now we see that the globe and nominal means are the same for plants coming from different blocks.</p>
+<h3><a name="lme4"></a>Estimating a RCBD model using the lme4 package</h3>
+<p>The <span class="style19">lme4</span> package is not part of the standard R installation so it must be downloaded first from the CRAN site. Because the <span class="style19">lme4</span> package is still undergoing active development you'll probably want to make sure you have the latest version of R too. When you load <span class="style19">lme4</span> into memory with the <span class="style1">library</span> function you'll obtain some warning messages about objects being masked.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<span class="style24">Attaching package: &lsquo;lme4&rsquo;</span>
+<p><span class="style24">The following object(s) are masked from &lsquo;package:nlme&rsquo;:</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; lmList, VarCorr</span>
+<p><span class="style24">The following object(s) are masked from &lsquo;package:stats&rsquo;:</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; AIC, BIC</span>
+<p><a name="detach"></a>Some of the functions in the <span class="style19">lme4</span> and <span class="style19">nlme</span> packages have the same name. To ensure that the correct function is called when you need it you should unload the <span class="style19">nlme</span> package from memory by using the <span class="style1">detach</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> detach(package:nlme)</div>
+<p><a name="lmer"></a>The function in the <span class="style19">lme4</span> package that fits linear mixed effects models is <span class="style1">lmer</span>. The <span class="style1">lmer</span> function does not have a random argument. Instead the random effects specification is included as part of the regression model as follows.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod2.lmer &lt;- lmer(lw.rat~type + (1|pot), data=plants)</div>
+<p>Notice that in the <span class="style1">lme</span> function we specified: <span class="style10">random=~1|pot</span>. Here we include <span class="style10">(1|pot)</span> as a term in the model. Both the <span class="style1">anova</span> and <span class="style1">summary</span> functions work on <span class="style1">lmer</span> objects.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod2.lmer)</div>
+<span class="style24">Analysis of Variance Table<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value<br>
+type&nbsp; 1 7.3206&nbsp; 7.3206&nbsp; 401.44</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(mod2.lmer)</div>
+<span class="style24">Linear mixed model fit by REML <br>
+Formula: lw.rat ~ type + (1 | pot) <br>
+&nbsp;&nbsp; Data: plants <br>
+&nbsp;&nbsp;&nbsp; AIC&nbsp;&nbsp;&nbsp; BIC logLik deviance REMLdev<br>
+&nbsp;-76.08 -65.82&nbsp; 42.04&nbsp;&nbsp; -94.99&nbsp; -84.08<br>
+Random effects:<br>
+&nbsp;Groups&nbsp;&nbsp; Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variance&nbsp; Std.Dev.<br>
+&nbsp;pot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept) 0.0069356 </span><span class="style25">0.08328</span><span class="style24"> <br>
+&nbsp;Residual&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0182357 </span><span class="style25">0.13504</span><span class="style24"> <br>
+Number of obs: 96, groups: pot, 16</span>
+<p><span class="style24">Fixed effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value<br>
+  (Intercept)&nbsp; </span><span class="style25">1.51917</span><span class="style24">&nbsp;&nbsp;&nbsp; 0.02852&nbsp;&nbsp; 53.27<br>
+  typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">0.55229</span><span class="style24">&nbsp;&nbsp;&nbsp; 0.02756&nbsp;&nbsp; 20.04</span>
+<p><span class="style24">Correlation of Fixed Effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intr)<br>
+  typeN -0.483</span>
+<p>If you compare the estimates reported by <span class="style1">lmer</span> with those reported by <span class="style1">lme</span>, they are the same. One noticeable difference between the <span class="style1">lme</span> output and the <span class="style1">lmer</span> output is that <span class="style1">lmer</span> reports the values of test statistics, but it does not report <em>p</em>-values. </p>
+<h2><a name="pvalue"></a>The p-value problem in mixed effects models</h2>
+<p>The absence of <em>p</em>-values in the output from <span class="style1">lmer</span>  is by design. The author of the <span class="style19">lme4</span> package, Douglas Bates, argues that there is no  legitimate method using standard probability distributions for obtaining <em>p</em>-values for the <em>F</em>- and <em>t</em>-statistics of mixed effects models that will work in all cases. His explanation can be found <a href="https://stat.ethz.ch/pipermail/r-help/2006-May/094765.html">here</a> and is summarized briefly below.</p>
+<ul>
+  <li>With ordinary fixed effects models we can compare nested models using an <em>F</em>-test. Degrees of freedom are based on the sample size and number of estimated parameters. If we can assume that the errors have a normal distribution the <em>F</em>-distribution is exact.</li>
+  <li>With mixed effects models (models with one or more sets of random effects) we could try doing something similar. If we assume that the estimated parameters of the random effects distribution are the true values, then the mixed effects model reduces to a fixed effects model but with  a different variance-covariance matrix for the errors. The usual <em>F</em>-tests then apply. This is the approach taken by the <span class="style19">nlme</span> package.</li>
+</ul>
+<p>There are problems with the approach used by <span class="style19">nlme</span>.</p>
+<ol>
+  <li>Random effects parameters are not known; they&rsquo;re estimated. So at best the <em>F</em>-distribution is an approximation.</li>
+  <li>The notion of degrees of freedom is no longer well-defined. We have multiple random effects but they are not getting counted as parameters. When we turn to hierarchical data (the primary kind of data for which mixed effects models get used) what constitutes an observation for a specific test will vary as will the sample size.</li>
+</ol>
+<p>There have been lots of recommendations for obtaining correct <em>p</em>-values of test statistics in mixed effects models but none of these apply in general. For example, SAS offers the user a number of different ways to carry out tests and calculate <em>p</em>-values but leaves it up to the user to choose one. Some of these approaches are clearly good choices for a few special cases, e.g., balanced data with a simple structure, but none of these are general solutions.</p>
+<p>We can make the following general recommendations for carrying out hypothesis testing in mixed effects models (<a href="lecture6.htm#Faraway">Faraway 2010</a>).</p>
+<ol>
+  <li>When  samples are large it is legitimate to assume that the summary table statistics (<em>t</em>-values) are normally distributed. In this case use a likelihood ratio test rather than an <em>F</em>-test for comparing nested models that differ in more than one parameter.</li>
+  <li>Instead of appealing to some distributional assumption of the test statistic, generate an empirical distribution of the test statistic using a parametric bootstrap.</li>
+  <li>Use methods based on Markov chain Monte Carlo to obtain confidence (credible) intervals for parameters of interest.</li>
+</ol>
+<h2><a name="parametric"></a>The parametric bootstrap</h2>
+<p>The parametric bootstrap is a Monte Carlo method for obtaining the empirical distribution of a test statistic of interest. In this method we fit a model of interest to a sequence of simulated data sets where the simulation is carried out in such a way that the null hypothesis is true. For each simulation we calculate the test statistic whose distribution we don't know. The set of test statistics we obtain estimates the null distribution of our test statistic. We then determine the position of the actual test statistic, the one that was calculated using the real data, in this null distribution. If it is an extreme value in this distribution we have reason to reject the null hypothesis. Formally we can obtain a <em>p</em>-value for the test by counting up the number of simulated test statistics as large or larger than the actual test statistic (for a one-tailed test) and divide this by the total number of simulations. Usually  the actual test statistic is counted as one of the simulations so the number of simulated test statistics as large as or larger than the actual test statistic is always at least one.</p>
+<p>We can use the parametric bootstrap to obtain a <em>p</em>-value for the <em>F</em>-statistic for the variable <span class="style8">type</span> that is reported by the <span class="style1">anova</span> function when applied to an <span class="style1">lmer</span> object. The <em>F</em>-statistic lies in row 1, column 4 of the <span class="style1">anova</span> output.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod2.lmer)</div>
+ <span class="style24"> Analysis of Variance Table<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value<br>
+  type&nbsp; 1 7.3206&nbsp; 7.3206&nbsp; 401.44</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod2.lmer)[1,4]</div>
+<span class="style24">[1] 401.4437</span>
+<p>Next we fit a mixed effects model to the plants data set but we don't include <span class="style8">type</span> as a predictor. The model includes only the random intercepts.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # fit a model to the data without type as a predictor</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod1.lmer &lt;- lmer(lw.rat~(1|pot), data=plants)</div>
+<p>We  now use this model to generate new data sets. Data sets generated from this model will have the same random effects structure as do our actual data. By construction the variable <span class="style8">type</span> will not be a  predictor of the response (because the response variable was generated without it).  We fit a mixed effects model  to each simulated data set in which we include <span class="style8">type</span> as a predictor. Because the simulated response does not depend on   <span class="style8">type</span> the <em>F</em>-statistics we obtain from these fits  provide a null distribution for the <em>F</em>-statistic for <span class="style8">type</span>.</p>
+<p><a name="numeric"></a><a name="for"></a>In the code below I carry out 999 simulations each time extracting the <em>F</em>-statistic. I initialize a vector using the <span class="style1">numeric</span> function to store the results of the simulations. I use a <span class="style1">for</span> loop to perform the iterations and the <span class="style1">simulate</span> function to generate data from the <span class="style1">lmer</span> model. In the end I append the actual <em>F</em>-statistic as one additional simulation to yield a total of 1000.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">nrep &lt;- 999</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # initialize storage vector</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Fstat &lt;- numeric(nrep+1)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # loop to carry out simulations</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> for(i in 1:nrep) {</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # simulate data from model in which type has no effect</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px">  rmath &lt;- unlist(simulate(mod1.lmer))</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px">  # estimate type model to these data</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px">  rmod &lt;- lmer(rmath~(1|pot)+type, data=plants)</div>
+  <div class="style15" style="padding-left: 60px; text-indent:-30px">  # extract statistic</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px">  Fstat[i] &lt;- anova(rmod)[1,4]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Fstat[1000] &lt;- anova(mod2.lmer)[1,4]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(Fstat[1:999])</div>
+<span class="style24">  [1] 9.41978</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Fstat[1000]</div>
+<span class="style24">[1] 401.4437</span>
+<p>The largest simulated <em>F</em>-statistic is 9.42 while the actual <em>F</em>-statistic exceeds 400. Since the actual F-statistic is the largest of the simulated <em>F</em>-statistics our <em>p</em>-value is 1 out of 1000, or .001. The <em>F</em>-test of <span class="style8">type</span> is statistically significant.<br>
+</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(Fstat&gt;=Fstat[1000])/length(Fstat)</div>
+<span class="style24">  [1] 0.001</span>
+<h2><a name="mcmc"></a>Markov chain Monte Carlo methods</h2>
+<p>We will discuss Bayesian estimation in greater detail later in this course, so at this point I give only a cursory introduction. The standard statistical methods we've  covered so far in this course are called frequentist methods. The logical foundation of the frequentist approach is based on the notion of a sampling distribution. Parameters are thought to be fixed in a nature, but  a statistic that is used to estimate that parameter being based on a sample varies. If we were to obtain a different sample of the same size from the same population the value of the statistic would probably be different. The set of statistics calculated from all possible samples from the population yields the sampling distribution of the statistic. The sampling distribution  is the basis for constructing confidence intervals and carrying out statistical tests in the frequentist approach.</p>
+<p>The Bayesian school of statistics approaches statistical estimation from a different philosophical viewpoint. Bayesians are indifferent to the notion of whether there exists a true value of a parameter in nature. From a Bayesian point of view what we know about a parameter is really just a matter of opinion. Being rational beings we should formulate our opinions as probability statements that quantify what are the likely values of the  parameter. Before we collect any data we generally have some opinion about what  values the parameter might take. This is called our prior distribution for the parameter. If we truly don't know anything about the parameter then we have what's called a flat or uninformative prior. After collecting data or carrying out an experiment we use the information contained in the data to update our prior opinion about the parameter. Our updated opinion is called the posterior distribution of the parameter.</p>
+<p>The modern way of carrying out Bayesian estimation is via Markov chain Monte Carlo (MCMC) sampling. MCMC doesn't provide formulas for the posterior distributions of parameters, instead it yields samples from these distributions. Using these samples we can then calculate summary statistics to characterize the distributions of the parameters. For instance we could calculate means or medians of the distribution and use them as point estimates. For interval estimates we can calculate the .025 and .975 quantiles of the sampled posterior distributions to obtain 95% confidence intervals for the parameters (although Bayesians prefer to use the term  credible intervals). </p>
+<p><a name="mcmcsamp"></a>R provides the <span class="style1">mcmcsamp</span> function as a simple way to obtain Bayesian parameter estimates using a frequentist model fit with <span class="style1">lmer</span>. To use <span class="style1">mcmcsamp</span> we supply the name of the <span class="style1">lmer</span> model plus the number of desired samples from the posterior distribution. There are a number of diagnostics that one should look at to verify that the Markov chain has stabilized and is truly sampling from the posterior distribution. We'll ignore those issues for now and explore them at a later date when we formally consider Bayesian estimation. In the call below I use the <span class="style1">lmer</span> model <span class="style8">mod2.lmer</span> and request 10,000 samples. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Bayesian estimation using MCMC</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.mc &lt;- mcmcsamp(mod2.lmer, n=10000)</div>
+<p><a name="asdataframe"></a>To organize the output from <span class="style1">mcmcsamp</span> in the form of a data frame we can use the <span class="style1">as.data.frame</span> function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # convert to a data frame</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ff &lt;- as.data.frame(out.mc)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> head(ff)</div>
+<span class="style24">  &nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ST1&nbsp;&nbsp;&nbsp;&nbsp; sigma<br>
+  1&nbsp;&nbsp;&nbsp; 1.519167 0.5522917 0.6167091 0.1350398<br>
+  2&nbsp;&nbsp;&nbsp; 1.555116 0.5903976 0.3500714 0.1333496<br>
+  3&nbsp;&nbsp;&nbsp; 1.522187 0.5537884 0.5679478 0.1316728<br>
+  4&nbsp;&nbsp;&nbsp; 1.527750 0.5135399 0.2876111 0.1477140<br>
+  5&nbsp;&nbsp;&nbsp; 1.492065 0.5687822 0.2561409 0.1378538<br>
+6&nbsp;&nbsp;&nbsp; 1.479926 0.6054857 0.2515148 0.1578332</span>
+<p>The data frame contains samples from the posterior distribution of the intercept &beta;<sub>0</sub>, the treatment effect &beta;<sub>1</sub> labeled &quot;typeN&quot;, the standard deviation of the errors &quot;sigma&quot;, and ST1 which is the ratio of the random effects standard deviation to the error standard deviation, &tau;/&sigma;. To obtain point estimates of these parameters we can take the mean or median of each of the columns of the data frame. These values compare favorably with the point estimates returned by <span class="style1">lmer</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> apply(ff,2,median)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ST1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sigma <br>
+  &nbsp; 1.5192098&nbsp;&nbsp; 0.5524536&nbsp;&nbsp; 0.4420691&nbsp;&nbsp; 0.1414697 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> apply(ff,2,mean)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;ST1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sigma <br>
+  &nbsp; 1.5190424&nbsp;&nbsp; 0.5524594&nbsp;&nbsp; 0.4460139&nbsp;&nbsp; 0.1421281 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fixef(mod2.lmer)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; typeN <br>
+&nbsp; 1.5191667&nbsp;&nbsp; 0.5522917</span>
+<p><a name="quantile"></a>To obtain 95% confidence (credible) intervals for the parameters we can extract the .025 and .975 quantiles of each column with the <span class="style1">quantile</span> function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # 95% credible interval for treatment effect using percentile method</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> apply(ff, 2, function(x) quantile(x, c(.025,.975)))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ST1&nbsp;&nbsp;&nbsp;&nbsp; sigma<br>
+  2.5%&nbsp;&nbsp;&nbsp;&nbsp; 1.467927 0.4961414 0.1528084 0.1211936<br>
+97.5%&nbsp;&nbsp;&nbsp; 1.569291 0.6092351 0.7489960 0.1671108</span>
+<p><a name="HPDinterval"></a>Because the 95% credible interval for the treatment effect (<span class="style8">typeN</span>) does not include zero we can conclude that the length-width ratios of globe and nominal jimsonweed plants are significantly different. Bayesians generally prefer to calculate something called an HPD (highest probability density) interval instead of a percentile interval. The HPD intervals can be obtained by applying the <span class="style1">HPDinterval</span> function  directly to the original <span class="style1">mcmcsamp</span> object. In the output below the differences between the HPD intervals and the percentile intervals obtained above are fairly small.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # 95% highest probability density interval</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> HPDinterval(out.mc)</div>
+<span class="style24">$fixef<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+(Intercept) 1.4689726 1.5701743<br>
+typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.4956552 0.6084897<br>
+attr(,&quot;Probability&quot;)<br>
+[1] 0.95</span>
+<p><span class="style24">$ST<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  [1,] 0.163902 0.7560056<br>
+  attr(,&quot;Probability&quot;)<br>
+  [1] 0.95</span>
+<p><span class="style24">$sigma<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  [1,] 0.1196254 0.1654788<br>
+  attr(,&quot;Probability&quot;)<br>
+  [1] 0.95</span>
+<p>What's especially attractive about Bayesian estimation is that we can easily obtain interval estimates for functions of parameter estimates. In the mixed effects model &beta;<sub>0</sub> is the mean length-width ratio of the globe plants while &beta;<sub>0</sub> + &beta;<sub>1</sub> is the mean length-width ratio of  nominal plants. To obtain a sample from the posterior distribution of the mean length-width ratio of nominal plants we just add the sample from the posterior distribution of &beta;<sub>0</sub> to the sample from the posterior distribution of &beta;<sub>1</sub>. Intervals estimates for the treatment means can be obtained by calculating quantiles of the posterior distributions.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain posterior distributions of the treatment means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mean.post &lt;- data.frame(mean.g=ff[,1], mean.n=ff[,1]+ff[,2])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mean.post[1:10,]</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp; mean.g&nbsp;&nbsp; mean.n<br>
+  1&nbsp; 1.519167 2.071458<br>
+  2&nbsp; 1.555116 2.145513<br>
+  3&nbsp; 1.522187 2.075975<br>
+  4&nbsp; 1.527750 2.041290<br>
+  5&nbsp; 1.492065 2.060847<br>
+  6&nbsp; 1.479926 2.085411<br>
+  7&nbsp; 1.524527 2.061974<br>
+  8&nbsp; 1.491247 2.098950<br>
+  9&nbsp; 1.531388 2.044900<br>
+  10 1.566630 2.119074</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain 95% credible intervals for the individual treatment means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> apply(mean.post, 2, function(x) quantile(x, c(.025,.975)))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean.g&nbsp;&nbsp; mean.n<br>
+  2.5%&nbsp; 1.467927 2.019288<br>
+97.5% 1.569291 2.122747</span>
+<p>Because the 95% credible intervals don't overlap we can say that the mean length-width ratios of the two plant types are significantly different.
+</p>
+<h2><a name="cited"></a>Cited references</h2>
+<ul>
+  <li>Blakeslee, A. F. 1921. The globe mutant in the jimson weed (<em>Datura stramonium</em>). <em>Genetics</em> <strong>6</strong>: 241&ndash;264.</li>
+  <li><a name="Faraway"></a>Faraway, Julian. 2010. Changes to the mixed effects models chapters in <em>Extending the Linear Model with R</em>, 2006, CRC Press. <a href="http://www.maths.bath.ac.uk/~jjf23/ELM/mixchange.pdf">www.maths.bath.ac.uk/~jjf23/ELM/mixchange.pdf</a></li>
+  <li><a name="Sokal" id="Sokal"></a>Sokal, R. R. and F. J. Rohlf. 1995. <em>Biometry: The Principles and Practice of Statistics in Biological Research</em>. 3rd edition. W. H. Freeman and Co.: New York.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture6&#32;Rcode.html">here</a>. </p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 17, 2012<br>
+      URL: <a href="lecture6.htm#lecture6" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture6.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

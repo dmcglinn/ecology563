@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 7</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style22 {color: #663366; font-weight: bold; }
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style36 {font-size: larger}
+
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+.border-side {
+  border-left: solid 1px black;
+}
+.border-bottom {
+  border-bottom: solid 1px black;
+} 
+
+td, th {
+  border-left: solid 1px black;
+} 
+
+.no-border {
+  border-left: none;
+} 
+
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"> <a name="assign7" id="assign7"></a>Assignment 7 </h1>
+<h2>Due Date </h2>
+
+  <p>Friday, October 26, 2012</p>
+
+<h2>Data Source </h2>
+
+  <p>The data for this assignment is <a href="../../data/Pyrausta.txt">Pyrausta.txt</a>,  a tab-delimited text file.  </p>
+  <h2>Background</h2>
+  <p>The data are from Beall (1940) and concern the European corn borer, <em>Pyrausta nubilalis</em>. Table 1 tabulates the number of egg masses found on individual corn plants for three independent samples of corn plants from three consecutive years. </p>
+<div align="center">
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td valign=top  class="styleArial no-border" style="padding-left: 72px; text-indent:-62px" ><strong>Table 1 &nbsp;</strong> Frequency of egg masses on individual corn plants by year<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+  <table width="400" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+
+    <thead>
+      <tr  bgcolor="#F1D2D8" class="border-bottom">
+        <td rowspan="2" align="center" scope="col"><strong>Number of egg masses found</strong></td>
+        <td colspan="3" align="center"  scope="col"><strong>Number of corn plants</strong></td>
+      </tr>
+      <tr  bgcolor="#F1D2D8">
+        <td width="54" align="center" scope="col" ><strong>1936</strong></td>
+        <td width="54" align="center" scope="col" class="no-border"><strong>1937</strong></td>
+        <td width="54" align="center" scope="col" class="no-border"><strong>1938</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td align="center">0</td>
+        <td align="center" >26</td>
+        <td align="center" class="no-border">37</td>
+        <td align="center" class="no-border">14</td>
+      </tr>
+      <tr >
+        <td align="center">1</td>
+        <td align="center" >19</td>
+        <td align="center" class="no-border">14</td>
+        <td align="center" class="no-border">21</td>
+      </tr>
+      <tr>
+        <td align="center">2</td>
+        <td align="center" >7</td>
+        <td align="center" class="no-border">2</td>
+        <td align="center" class="no-border">11</td>
+      </tr>
+      <tr >
+        <td align="center">3</td>
+        <td align="center" >1</td>
+        <td align="center" class="no-border">3</td>
+        <td align="center" class="no-border">7</td>
+      </tr>
+      <tr >
+        <td align="center">4</td>
+        <td align="center" >3</td>
+        <td align="center" class="no-border">0</td>
+        <td align="center" class="no-border">2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 align="left">Questions</h2>
+<ol>
+  <li>Fit one or more Poisson regression models to test whether the mean number of egg masses is the same or varied by year.</li>
+  <li>Produce an appropriate graph of the raw data on which you superimpose the predictions of your final model. Your graph should clearly show the distribution of egg mass counts separately by year.</li>
+  <li>Carry out a goodness of fit test separately by year (three tests). Because we're fitting a fairly minimal model and we don't have many categories to work with I suggest using a parametric bootstrap, i.e., a simulation-based approach. 
+    <ol type="a">
+      <li>What do you conclude from the tests?</li>
+      <li>If you find a significant lack of fit what observation(s) is(are) driving it?</li>
+    </ol>
+  </li>
+  <li>Carry out a goodness of fit test using all three years simultaneously. What do you conclude?</li>
+</ol>
+<h2>Hints</h2>
+
+  <ol>
+    <li>The number of corn plants examined is not the same in each of the three years.</li>
+    <li>To answer Question 4 you will need to construct your own parametric bootstrap in which you simulate data from each year separately but you combine the results and use them to calculate a single Pearson statistic. See lecture 17.</li>
+  </ol>
+<h2>Cited references</h2>
+<ul>
+  <li>Beall, Geoffrey. 1940. The fit and significance of contagious distributions when applied to observations on larval insects. <em>Ecology</em> <strong>21</strong>: 460&ndash;474.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 18, 2012<br>
+      URL: <a href="assign7.htm#assign7" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/assign7.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

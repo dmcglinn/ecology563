@@ -1,0 +1,635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 20&mdash;Wednesday, October 31, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture20" id="lecture20"></a>Lecture 20&mdash;Wednesday, October 31, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture20.htm#example">Model selection example&mdash;continued</a></li>
+  <li><a href="lecture20.htm#model3">Model 3: nonlinear Arrhenius model</a></li>
+  <li><a href="lecture20.htm#transform">Transformed response variables and log-likelihood</a>
+    <ul>
+      <li><a href="lecture20.htm#predictor">Transforming the predictor</a>
+        <ul>
+          <li><a href="lecture20.htm#logx">Interpreting log <em>x</em> as a predictor</a></li>
+        </ul>
+      </li>
+      <li><a href="lecture20.htm#response">Transforming the response</a>
+        <ul>
+          <li><a href="lecture20.htm#logy">Interpreting log <em>y</em> as a response when <em>x</em> is the predictor</a></li>
+          <li><a href="lecture20.htm#both">Interpreting log <em>y</em> as a response when log <em>x</em> is the predictor</a></li>
+        </ul>
+      </li>
+      <li><a href="lecture20.htm#comparing">Comparing discrete and continuous models using AIC</a></li>
+      <li><a href="lecture20.htm#using">Using AIC to compare a discrete model and a continuous model with a transformed response </a></li>
+    </ul>
+  </li>
+  <li><a href="lecture20.htm#model7">Model 7: Log-transformed response model</a></li>
+  <li><a href="lecture20.htm#model8">Model 8: Square root transformed response model</a> </li>
+  <li><a href="lecture20.htm#interpreting">Interpreting the transformed response regression models</a> </li>
+  <li><a href="lecture20.htm#cited">Cited references</a></li>
+<li><a href="lecture20.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture20.htm#nls">nls</a> is the nonlinear least squares function for fitting nonlinear models using least squares.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture20.htm#nls">start</a>= (argument to <span class="style1">nls</span>) specifies the named starting values for parameters in a nonlinear model.</li>
+</ul>
+<h3>R packages used</h3>
+<ul>
+  <li><a href="lecture20.htm#gamlss">gamlss</a> for separate dispersion negative binomial models.</li>
+  <li><a href="lecture20.htm#MASS">MASS</a> for the <span class="style1">glm.nb</span> function.</li>
+</ul>
+<h2><a name="example" id="example"></a>Model selection example&mdash;continued</h2>
+<p>Last time we considered the problem of choosing a statistical model of the species-area relationship. Following Johnson and Raven (1973) and Hamilton et al. (1963) we attempted to find a model relating species richness to area using vascular plant data from the Galapagos islands. I start by refitting the five models we considered last time: normal model in area, normal model in log area, Poisson model in log area, negative binomial model in log area (both NB-2 and NB-1).</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # read in galapagos flora data</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> gala &lt;- read.table('ecol 563/galapagos.txt', header=T)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # fit normal model in area</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.norm1 &lt;- lm(Species~Area, data=gala)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # fit normal model in log area</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> out.norm2 &lt;- lm(Species~log(Area), data=gala)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # fit Poisson model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois &lt;- glm(Species~log(Area), data=gala, family=poisson)</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # fit NB-2 model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> <a name="MASS"></a>library(MASS)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB2 &lt;- glm.nb(Species~log(Area), data=gala)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> <a name="gamlss"></a>library(gamlss)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># fit NB-1 model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB1 &lt;- gamlss(Species~log(Area), data=gala, family=NBII)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # compare models fit so far</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(out.norm1, out.norm2, out.pois, out.NB2, out.NB1)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  out.norm1&nbsp; 3 349.1721<br>
+  out.norm2&nbsp; 3 335.1547<br>
+  out.pois&nbsp;&nbsp; 2 800.0266<br>
+  out.NB2&nbsp;&nbsp;&nbsp; 3 273.9926<br>
+out.NB1&nbsp;&nbsp;&nbsp; 3 277.8913</span>
+
+<h2><a name="model3"></a>Model 3: nonlinear Arrhenius Model </h2>
+<p name="nls"><a name="nls"></a>A third normal model we have not yet considered is the   Arrhenius model. This model expresses mean species richness as a function of area using the  power law equation,<img src="../../images/lectures/lecture20/Arrhenius.gif" alt="Arrhenius" width="75" height="37" align="absmiddle"> and is an example of a nonlinear model. The <span class="style33">nls</span> function of R (an acronym for nonlinear least squares) can be used to fit nonlinear models. As part of  the model specification the <span class="style33">nls</span> function requires initial estimates for the parameters. These get specified by name in the <span class="style22">start</span> argument of <span class="style33">nls</span>. I choose 0.5 for the initial estimate of b1 because a square root curve appears to be a reasonable guess for the functional relationship seen in a scatter plot of the data. Power functions with exponents between 0 and 1 yield graphs that are concave down while power functions with  exponents that are greater than 1 yield graphs that are concave up.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model3 &lt;- nls(Species~b0*Area^b1, data=gala, start=list(b0=1, b1=.5))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(model3)</div>
+<span class="style141">Formula: Species ~ b0 * Area^b1</span>
+<p><span class="style24">Parameters:<br>
+  &nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  b0 33.39760&nbsp;&nbsp; 10.04865&nbsp;&nbsp; 3.324&nbsp; 0.00256 ** <br>
+  b1&nbsp; 0.29857&nbsp;&nbsp;&nbsp; 0.04412&nbsp;&nbsp; 6.767 2.89e-07 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">Residual standard error: 60.04 on 27 degrees of freedom</span>
+<p><span class="style141">Number of iterations to convergence: 10 <br>
+  Achieved convergence tolerance: 3.115e-06 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(model3)</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1 <br>
+33.3976022&nbsp; 0.2985702 </span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(model3)[&quot;b0&quot;]</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp; b0 <br>
+33.3976 </span>
+<p>I graph the data and add the estimated Arrhenius model to the scatter plot using the <span class="style33">curve</span> function (Fig. 1). </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(Species~Area, data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">curve(coef(model3)[&quot;b0&quot;]*x^coef(model3)[&quot;b1&quot;], col=2, add=T, lty=2)</div>
+<p align="center"><img src="../../images/lectures/lecture20/fig5.png" width="420" height="305" alt="fig 5"><br>
+  <span class="styleArial1"><strong>Fig. 1&nbsp;&nbsp;</strong>&nbsp;Nonlinear Arrhenius model </span></p>
+<p> Because of the scale of the plot, the fit is difficult to judge visually. One thing is clear though, the scatter about the fitted curve is not constant; it increases with area. This is something that is not accounted for when a normal distribution is used as the random component of the model. (Recall that in a normal distribution the mean and variance are independent and the variance is constant.) Having said this, notice that the AIC we obtain is the best of the three normal models thus far, but the Arrhenius model does not do as well as the negative binomial models that properly account for the mean-variance relationship.</p>
+ 
+<div class="style231" style="padding-left: 30px; text-indent:-30px">
+ sapply(list(out.norm1, out.norm2, out.norm3, out.pois, out.NB2, out.NB1), AIC)</div>
+<span class="style141">  [1] 349.1721 335.1547 323.7350 800.0266 273.9926 277.8913</span>
+
+<h2><a name="transform" id="transform"></a>Transformed response variables and log-likelihood</h2>
+<p>The two remaining models in our list  fit a linear model in log area to a transformed response variable: log species richness or square root species richness. Before considering these two models specifically we need to discuss the use of variable transformations in regression.</p>
+<h3><a name="predictor"></a>Transforming the predictor</h3>
+<p>We transform a predictor in a regression model in an attempt to obtain a better linear relationship with the response. As we saw last time when we plot species richness against area we fail to see even a hint of linear relationship (Fig. 2a), but when we plot species richness against log(Area) some semblance of a linear relationship does emerge (Fig. 2b). The graph in Fig. 2b as well as the residual plot shown last time suggests that adding an additional quadratic term in log(Area) to the regression equation might still be necessary.
+</p>
+<table width="630" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture20/fig1.png" width="590" height="295" alt="fig. 1"></div></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><p><strong>Fig. 2</strong> &nbsp;The &quot;linear&quot; relationship between species richness and area (a) before and (b) after applying a log transformation to the predictor.</p></td>
+  </tr>
+</table>
+<p><strong><a name="logx"></a>Interpreting log <em>x</em> as a predictor</strong></p>
+<p>Interpreting transformed predictors can be tricky. One way to get a basic understanding of how change in a transformed predictor alters the response is to carry out a linearization. The definition of the derivative tell us</p>
+<p align="center"><img src="../../images/lectures/lecture20/derivative.gif" width="222" height="55" alt="derivative"></p>
+<p>So, if our regression equation is</p>
+<p align="center"><img src="../../images/lectures/lecture20/regeqn.gif" width="160" height="35" alt="reg eqn"></p>
+<p>then the linearization is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture20/logpred.gif" width="93" height="55" alt="linearized log"></p>
+<p>The form of the linearization suggests that we ought to consider multiplicative changes in <em>x</em>. Suppose we have a 1% change in <em>x</em>. Then the linearization equation gives us the following.</p>
+<p align="center"><img src="../../images/lectures/lecture20/linearization2.gif" width="167" height="55" alt="linearization"></p>
+<p>So a 1% change in <em>x</em> leads to <em>y</em> changing by the amount .01&beta;<sub>1</sub>.</p>
+<h3><a name="response" id="response"></a>Transforming the response</h3>
+<p>Transformations of a response variable are carried out either to (1) stabilize the variance, i.e., remove variance heterogeneity or (2) achieve normality. In Fig. 2b we see that before and after transforming the predictor  there is  a good deal of heterogeneity in the spread of the data about the regression line. Two transformations that have been commonly used to stabilize the variance with count data  are the log and square root. I try both of these transformations using log(Area) as a predictor and display the results in Fig. 3.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,2))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(log(Species)~log(Area), data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> abline(lm(log(Species)~log(Area), data=gala), lty=2, col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(sqrt(Species)~log(Area), data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> abline(lm(sqrt(Species)~log(Area), data=gala), lty=2, col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,1))</div>
+<br>
+<table width="600" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><img src="../../images/lectures/lecture20/fig2.png" width="495" height="250" alt="fig. 2"></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><p align="left"><strong>Fig. 3</strong>&nbsp; Plot of the two transformed response models (a) log and (b) square root. The displayed regression lines are the means of the transformed response variables.</p></td>
+  </tr>
+</table>
+<p>Both of the transformations shown in Fig. 3 appear to have stabilized the variance, but the plot of log(Species) plotted against log(Area) appears to have also achieved the best linear relationship. Of course there was already a good theoretical basis for using a log transformation on both the response and the predictor. If the theoretical power law relationship for the species-area relationship is correct, then log-transforming both sides of the equation  yields a linear equation.</p>
+<p align="center"><img src="../../images/lectures/lecture20/linearize.gif" width="258" height="135" alt="linearize"></p>
+<p align="left"><strong><a name="logy"></a>Interpreting log <em>y</em> as the response when <em>x</em> is the predictor</strong></p>
+<p align="left">There are two situations to consider, one where <em>y </em>is transformed but <em>x</em> is not and the other where both <em>y</em> and <em>x</em> are transformed. I consider only the case of a log transformation. If we transform <em>y</em> but not <em>x</em> then our regression equation is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture20/regeqn2.gif" width="157" height="35" alt="reg eqn"></p>
+<p align="left">If we let <em>z</em> = log <em>y</em>, then the linearization equation tells us</p>
+<p align="center"><img src="../../images/lectures/lecture20/linearization3.gif" width="153" height="55" alt="linearization"></p>
+<p align="left">But we can also write</p>
+<p align="center"><img src="../../images/lectures/lecture20/linearization4.gif" width="138" height="58" alt="linearization"></p>
+<p align="left">Therefore the approximate change in <em>y</em> is given by the following.</p>
+<p align="center"><img src="../../images/lectures/lecture20/logyinterp.gif" width="168" height="38" alt="logy interpretation"></p>
+<p align="left">Notice that an absolute change in <em>x</em> leads to a multiplicative effect on <em>y</em>. So a one unit change in <em>x</em> leads to a (100 &times; &beta;<sub>1</sub>)% change in <em>y</em>.</p>
+<p align="left"><strong><a name="both" id="both"></a>Interpreting log <em>y</em> as the response when log <em>x</em> is the predictor</strong></p>
+<p align="left">Finally we consider the case where log <em>y</em> is the response and log <em>x</em> is the predictor. Our regression equation is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture20/regeqn3.gif" width="187" height="35" alt="reg eqn"></p>
+<p align="left">To interpret the effect that changing <em>x</em> has on <em>y</em> we just need to combine the previous two results. Let <em>z</em> = log <em>y</em>, then with log <em>x</em> as a predictor we have the following.</p>
+<p align="center"><img src="../../images/lectures/lecture20/linearization5.gif" width="158" height="55" alt="linearization"></p>
+<p align="left">Expressing this in terms of &Delta;<em>y</em> yields the following.</p>
+<p align="center"><img src="../../images/lectures/lecture20/linearization6.gif" width="158" height="55" alt="linearization"></p>
+<p align="left">Suppose we have a 1% change in <em>x</em>. It then follows that the change in <em>y</em> is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture20/linearization7.gif" width="208" height="55" alt="linearization"></p>
+<p align="left">So a 1% change in <em>x</em> leads to a &beta;<sub>1</sub>% change in <em>y</em>. </p>
+<p align="left">Table 1 summarizes these results for the various possible combinations of response and predictor. In all cases &beta;<sub>1</sub> is the coefficient of the predictor in the regression equation.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=500 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 1 &nbsp;</strong> Interpreting models with a transformed predictor and/or response<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="600" border="1" align="center" cellpadding=4 cellspacing=0 frame=box rules=groups>
+    <colgroup>
+    </colgroup>
+    <colgroup></colgroup><colgroup></colgroup><colgroup></colgroup>
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td align="center" width="100" scope="col"><strong>Response</strong></td>
+        <td align="center" width="100" scope="col"><strong>Predictor</strong></td>
+        <td align="center" width="180" scope="col"><strong>Change in <em>x</em></strong></td>
+        <td align="center" width="180" scope="col"><strong>Change in <em>y</em></strong></td>
+      </tr>
+    </thead>
+    <tr>
+    <tbody>
+      <tr>
+        <td align="center"><em>y</em></td>
+        <td align="center"><em>x</em></td>
+        <td align="center">1 unit change</td>
+        <td align="center">&beta;<sub>1</sub> unit change</td>
+      </tr>
+      <tr>
+        <td align="center"><em>y</em></td>
+        <td align="center">log <em>x</em></td>
+        <td align="center">1%  change</td>
+        <td align="center">(.01 &times; &beta;<sub>1</sub>) unit change</td>
+      </tr>
+      <tr>
+        <td align="center">log <em>y</em></td>
+        <td align="center"><em>x</em></td>
+        <td align="center">1 unit change</td>
+        <td align="center">(100 &times; &beta;<sub>1</sub>)% change</td>
+      </tr>
+      <tr>
+        <td align="center">log <em>y</em></td>
+        <td align="center">log <em>x</em></td>
+        <td align="center">1%  change</td>
+        <td align="center">&beta;<sub>1</sub>%  change </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h3><a name="comparing"></a>Comparing discrete and continuous models using AIC</h3>
+<p>Three of the six models we've fit so far use a continuous normal distribution for the response and three of the models  use a discrete probability model for the response: either a negative binomial or a Poisson distribution. Even though we have both continuous and discrete models  we've used AIC to compare them all. This should give you pause. AIC is based on likelihood and the likelihood of a normal model is the product of density functions while the likelihood of a discrete distribution such as the negative binomial model is a product of probabilities. </p>
+<p align="center"><img src="../../images/lectures/lecture20/discretevscontinuous.gif" width="292" height="117" alt="discrete versus continuous"></p>
+<p>Densities and probabilities are not directly comparable.  To obtain a probability from a density we have to first integrate it over an interval. Furthermore a discrete model like a negative binomial model returns the probability of obtaining a specific count value, e.g., P(<em>Y</em> = 4) whereas the probability of any single value in a continuous probability model   is zero. We can only obtain nonzero probabilities with continuous random variables when we consider intervals of the form <em>a</em> &lt; <em>Y</em> &lt; <em>b</em>. </p>
+<p> So, when we use a normal distribution to model a discrete random variable such as a count, how are we supposed to interpret the predictions from the model?  If our goal is to calculate P(<em>Y</em> = 4) then a sensible approach is to treat all values of <em>Y</em> that  round to 4 as corresponding to the discrete value 4. Hence, we should define P(<em>Y</em> = 4) = P(3.5 &lt; <em>Y</em> &le; 4.5). For a normal regression model this is the area under the normal curve between <em>Y</em> = 3.5 and <em>Y</em> = 4.5 (Fig. 4a).</p>
+<p align="center"><img src="../../images/lectures/lecture20/normprob.gif" width="445" height="112" alt="normal probability"></p>
+<table width="650" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><img src="../../images/lectures/lecture20/fig3.png" width="625" height="300" alt="fig. 3"></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><p align="left"><strong>Fig. 4</strong>&nbsp; The probability of a discrete count, P(Y = 4), when we use a continuous model is defined to be the probability of the set of values that round to 4, P(3.5 &lt; Y &le; 4.5). (a) shows the exact probability  of this quantity while  (b) shows how this probability  can be approximated as the area of a rectangle obtained using the midpoint rule for numerical integration.</p></td>
+  </tr>
+</table>
+<p>When the notion of the integral is first developed in a calculus class as the area under a curve, one typically starts by trying to approximate that area using methods based on summing the areas of approximating rectangles. One such method is the midpoint rule. To approximate the area shown in Fig. 4a we evaluate the function at the midpoint of the interval (3.5, 4.5) and use that value as  the height of a rectangle. We then multiply the height by the width of the interval to obtain an approximation of the area under the curve.</p>
+<p align="center"><img src="../../images/lectures/lecture20/densityapprox.gif" width="407" height="118" alt="density approximation"></p>
+<p>Thus the density function evaluated at discrete values  also  approximates  the probability of that discrete value. So, when we use a continuous probability model for a discrete random variable the densities that occur in the likelihood are each approximations (Fig. 4b) of the exact probabilities (Fig. 4a). Typically the exact probabilities and the approximations based on the midpoint rule are quite close. For instance, for the normal distribution shown in Fig. 4 where &mu; = 3 and &sigma; =1  we find the following.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dnorm(4,3,1)</div>
+<span class="style141">  [1] 0.2419707</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pnorm(4.5,3,1)-pnorm(3.5,3,1)</div>
+<span class="style141">[1] 0.2417303</span>
+<p>So, we have accuracy to three decimal places. Thus it is legitimate  to compare the AICs of discrete models and continuous models when the continuous models are being used to approximate a discrete random variable whose domain is the set of non-negative integers.</p>
+<h3><a name="using"></a>Using AIC to compare a discrete model and a continuous model with a transformed response</h3>
+<p>In <a href="lecture19.htm#caveats">lecture 19</a> we listed some caveats associated with using AIC to compare different models. <a href="lecture19.htm#caveat2">Caveat 2</a> noted that the  response variable must be the same in all models being compared. Thus if we log-transform a response and assume that the transformed variable has a normal distribution, the likelihood of the transformed variable model is not comparable to the likelihood of a probability model with an untransformed  response. Returning to the Galapagos data set suppose we log-transform the response and assume that the transformed response has a normal distribution. We fit that model below and calculate its AIC.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.lognorm &lt;- lm(log(Species)~log(Area), data=gala)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(out.lognorm)</div>
+<span class="style24">[1] 70.13803</span>
+<p>The lowest AIC we've previously obtained  has been 273.99 with the negative binomial (NB-2) model. The reported AIC of the lognormal model is lower than that this but according to caveat 2 we should draw no conclusion from this because the likelihoods of the two models are not comparable. Fig. 5 illustrates the basic problem.</p>
+<table width="660" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><img src="../../images/lectures/lecture20/fig4.png" width="630" height="300" alt="fig. 4"></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><p align="left"><strong>Fig. 5</strong>&nbsp; The figure shows the area that corresponds to the discrete probability, P(Y = 4). In Fig. 4a the probability is the area under the lognormal curve P(3.5 &lt; Y &lt; 4.5). In Fig. 4b it is the area under the normal curve P(log 3.5 &lt; Z &lt; log 4.5) where Z = log Y. If we approximate these area using the midpoint rule  the width of the approximating rectangle in Fig. 4a is 1, but the width of the same rectangle in Fig. 4b is log 4.5 &ndash; log 3.5.</p></td>
+  </tr>
+</table>
+<p>When the log-transformed version of a variable has a normal distribution, we say that the original variable has a lognormal distribution. The R density function for the lognormal distribution is <span class="style1">dlnorm</span>. Following the same logic that we used in Fig. 3 we would calculate P(<em>Y</em> = 4) as P(3.5 &lt; <em>Y</em> &le; 4.5). This is shown in Fig. 5a.</p>
+<p align="center"><img src="../../images/lectures/lecture20/lnormprob.gif" width="427" height="223" alt="lognormal probability"></p>
+<p>So we can construct a likelihood for a discrete random variable using the continuous lognormal densities and treat the product of densities as an approximation to the probability of our data. Here I use &mu;* and &sigma;* to denote the two parameters of the lognormal distribution. In the usual parameterization of the lognormal distribution  &mu;* is the mean of log(<em>Y</em>) and &sigma;* is the standard deviation of log(<em>Y</em>). </p>
+<p>But this is not the same as the likelihood that we would construct from the log-transformed response. From Fig. 5b we would calculate P(<em>Y</em> = 4) as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture20/lofnormprob.gif" width="445" height="180" alt="log normal prob"></p>
+<p>because log 4.5 &ndash; log 3.5 &ne; 1. So the density of the log-transformed predictor is not an approximation of P(<em>Y</em> = 4). We can salvage things but it involves constructing the log-likelihood ourselves. There are two options.</p>
+<ol>
+  <li>Use the midpoint rule for each <em>y</em> but rescale the normal density, dnorm(log 4, &mu;, &sigma;), so that it correctly approximates the area under the curve. The rescaling constant turns out to be the  derivative of the transformation.</li>
+  <li>For each  <em>y</em> calculate the exact area under the curve using the difference of cumulative distributions: pnorm(log (4.5), &mu;, &sigma;) &ndash; pnorm(log (3.5), &mu;, &sigma;).</li>
+</ol>
+<p>If the response variable <em>y</em> is continuous then we should use (1) because we are comparing densities, not probabilities. If the response variable <em>y</em> is discrete then we should use (2). In truth when <em>y</em> is discrete both options will work except when there are zero values of <em>y</em> in the data set. In that case using the midpoint rule to calculate probabilities can yield wildly inaccurate estimates.</p>
+<h2><a name="model7" id="model7"></a>Model 7: Log-transformed response model</h2>
+<p>If <em>Y</em> is a discrete non-negative random variable with no zero values then log <em>Y</em> is well-defined. In that case as discussed above P(<em>Y</em><sub><em>i</em></sub> = <em>y</em><sub><em>i</em></sub>) can be calculated as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture20/nozeros.gif" width="565" height="72" alt="no zeros"></p>
+<p>The likelihood is therefore the following.</p>
+<p align="center"><img src="../../images/lectures/lecture20/likelihood3.gif" width="618" height="57" alt="likelihood"></p>
+<p><em>Y</em> = 0 is a boundary value so for zero values of <em>Y</em> we have to define P(<em>Y</em> = 0) = P(<em>Y</em> &le; 0.5). Because log <em>Y</em> is undefined for<em> Y</em> = 0, the usual recommendation when there are zero values of <em>Y</em> is to add a small constant <em>c</em> to each of the data values before taking the log. Choices of <em>c</em> = 1 or <em>c</em> = 0.5 are common. In this case the likelihood will consist of two distinct terms depending upon whether <em>Y</em> = 0 or not.</p>
+<p align="center"><img src="../../images/lectures/lecture20/zeros.gif" width="740" height="88" alt="zeros"></p>
+<p>The R function shown below implements this formula for a normal model with a log-transformed response variable. It takes as input arguments the raw response variable (before being transformed) and the name of the model. It has an optional argument <em>c</em> set by default to zero that can be specified if a constant has been added to the response to adjust for zero values. The first line of the function estimates  &sigma;<sup>2</sup> by squaring the residuals of the model and dividing by how many observations there are. This is the MLE of &sigma;<sup>2</sup> and is different from the usual estimate returned by <span class="style1">lm</span>. The return values of the function are the log-likeihood, the number of model parameters, and the AIC.  </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lognorm.LL &lt;- function(y, model, c=0) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  sigma2 &lt;- sum(residuals(model)^2)/length(residuals(model))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  prob &lt;- ifelse(y==0, pnorm(log(y+c+0.5), mean=predict(model), sd=sqrt(sigma2)), 
+  pnorm(log(y+c+0.5), mean=predict(model), sd=sqrt(sigma2))-pnorm(log(y+c-0.5), mean=predict(model), sd=sqrt(sigma2)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  LL &lt;- sum(log(prob))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  df &lt;- length(coef(model))+1
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  AIC &lt;- -2*LL + 2*df</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> out &lt;- data.frame(LL=LL, df=df, AIC=AIC)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">out}</div>
+<p>I try it out on a log-transformed response model with log(Area) as the regressor.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.lognorm &lt;- lm(log(Species)~log(Area), data=gala)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lognorm.LL(gala$Species, out.lognorm)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LL df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+&nbsp;-134.1667 &nbsp;3 274.3334</span>
+<p>Comparing this result to the models we've fit so far we see that this model ranks second after the negative binomial NB-2 model. The difference in AIC between it and the NB-2 model is quite small.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sapply(list(out.norm1, out.norm2, out.norm3, out.pois, out.NB2, out.NB1), AIC)</div>
+<span class="style24"> [1] 349.1721 335.1547 323.7350 800.0266 273.9926 277.8913</span>
+<h2><a name="model8" id="model8"></a>Model 8: Square root transformed response model</h2>
+<p>A similar approach works with the square root transformation. We calculate the log-likelihood in the same way replacing the log transformation with the square root function. Even though there is really no need for it I keep the option of adding a small constant to the response because the literature has sometimes recommended adding a constant before taking the square root.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sqrtnorm.LL &lt;- function(y, model, c=0) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">sigma2 &lt;- sum(residuals(model)^2)/length(residuals(model))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">prob &lt;- ifelse(y==0, pnorm(sqrt(y+c+0.5), mean=predict(model), sd=sqrt(sigma2)),
+pnorm(sqrt(y+c+0.5), mean=predict(model), sd=sqrt(sigma2)) - pnorm(sqrt(y+c-0.5), mean=predict(model), sd=sqrt(sigma2)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">LL &lt;- sum(log(prob))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">df &lt;- length(coef(model))+1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">AIC &lt;- -2*LL + 2*df</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">out &lt;- data.frame(LL=LL, df=df, AIC=AIC)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">out }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sqrtnorm.LL(gala$Species, out.sqrtnorm)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LL df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  &nbsp;-140.0459 &nbsp;3 286.0919</span>
+
+<p>I assemble the model results in a single table where I also include the log-likelihoods of the models fit thus far.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.AIC &lt;- AIC(out.norm1, out.norm2, out.norm3, out.pois, out.NB2, out.NB1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.LL &lt;- sapply(list(out.norm1, out.norm2, out.norm3, out.pois, out.NB2, out.NB1), logLik)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results1 &lt;- data.frame(LL=my.LL, my.AIC)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results &lt;- rbind(results1, lognorm.LL(gala$Species, out.lognorm), sqrtnorm.LL(gala$Species, out.sqrtnorm))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rownames(results)[7:8] &lt;- c('out.lognormal', 'out.sqrtnormal')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LL df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  out.norm1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -171.5861&nbsp; 3 349.1721<br>
+  out.norm2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -164.5773&nbsp; 3 335.1547<br>
+  out.norm3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -158.8675&nbsp; 3 323.7350<br>
+  out.pois&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -398.0133&nbsp; 2 800.0266<br>
+  out.NB2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -133.9963&nbsp; 3 273.9926<br>
+  out.NB1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -135.9456&nbsp; 3 277.8913<br>
+  out.lognormal&nbsp; -134.1667&nbsp; 3 274.3334<br>
+out.sqrtnormal -140.0459&nbsp; 3 286.0919</span>
+<p>Finally I sort the models by their AIC values.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results[order(results$AIC),]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LL df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  out.NB2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -133.9963&nbsp; 3 273.9926<br>
+  out.lognormal&nbsp; -134.1667&nbsp; 3 274.3334<br>
+  out.NB1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -135.9456&nbsp; 3 277.8913<br>
+  out.sqrtnormal -140.0459&nbsp; 3 286.0919<br>
+  out.norm3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -158.8675&nbsp; 3 323.7350<br>
+  out.norm2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -164.5773&nbsp; 3 335.1547<br>
+  out.norm1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -171.5861&nbsp; 3 349.1721<br>
+out.pois&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -398.0133&nbsp; 2 800.0266</span>
+<p>Based on the output we see there are only two models that have substantial empirical support, the Arrhenius model (<span class="style8">out.lognormal</span>) and the negative binomial model (<span class="style8">out.NB2</span>), both of which use log(Area) as the predictor. Other than the NB-1 model none of the other models are even players. While the negative binomial model just edges out the Arrhenius model, these two models are virtually identical in terms of log-likelihood and AIC. So using these criteria alone there is little  basis for choosing one over the other. Both of these models allow for heteroscedasticity in the data and the assumed form of the heteroscedasticity is roughly  the same for each. As will be explained in the next section there is a practical reason to perhaps prefer the negative binomial. The negative binomial model estimates the mean richness while the Arrhenius model estimates the median richness when we back-transform to  the raw richness scale. </p>
+<h2 align="left"><a name="interpreting"></a>Interpreting the transformed response regression models</h2>
+<p align="left">Can we interpret a regression model for the transformed response variable on the scale of the raw response variable? Yes, but the prediction we obtain is not the mean. The three count models we've fit, models 4, 5 and 6, use a log link function and thus fit a model for log &mu;.</p>
+<p align="center"><strong>models 4, 5 and 6:</strong> <img src="../../images/lectures/lecture20/poissonlink.gif" width="201" height="30" align="absmiddle"></p>
+<p align="left">With a log link recovering the mean is easy; we just exponentiate both sides of this equation to remove the logarithm.</p>
+<p align="center"><img src="../../images/lectures/lecture20/meanloglink.gif" width="215" height="32" alt="mean log link"></p>
+<p align="left">With a log-transformed response (and an identity link) we  fit a regression model to the mean of the transformed response variable.</p>
+<p align="center"><strong>model 7:</strong> <img src="../../images/lectures/lecture20/logarrhenius.gif" width="195" height="30" align="absmiddle"></p>
+<p align="left">The logarithm function now is shielded by the mean function. We can still exponentiate both sides but unlike the case with a log link the result will not be the mean. The logarithm is an example of a concave function. A concave function is one that lies above any secant line drawn connecting two points on its curve. For a concave function <em>f</em> a relationship called Jensen's inequality tells us that</p>
+<p align="center"><img src="../../images/lectures/lecture20/jensen.gif" width="157" height="38" alt="jensen"></p>
+<p align="left">For the logarithm function Jensen's inequality states that the log of a mean of a set of values exceeds the mean of log of those same values. Fig. 6 demonstrates Jensen's equality for <em>f</em>(<em>x</em>) = log <em>x</em> where the  data set consists of just the two numbers {1, 3}. The mean of these two numbers is 2. I plot on the graph the log of their mean, log 2, as well as the mean of their logs: (log 1 + log 3) /2. The mean of the logs lies on the line segment connecting (1, log 1) to (3, log 3) while log of the mean lies on logarithm curve. As Fig. 6 shows the log of the mean exceeds the mean of the logs.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># demonstrating that mean(log(x)) &lt; log(mean(x))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  curve(log(x), from=.8, to=3.5)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  abline(h=0, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(c(1,3), c(log(1), log(3)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  segments(1, log(1),3, log(3), lty=2)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # plot log of mean of 1 and 3</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(2,log(2), pch=16, col=2, cex=.8)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  text(2, log(2), expression('log of mean'==log2), pos=2, col=2, cex=.8)</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # plot mean of log 1 and log 3.</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> points(2,(log(1)+log(3))/2, col=4, cex=.8, pch=16)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">text(2, (log(1)+log(3))/2, expression(paste('mean of log'==over(log1 + log3, 2), sep='')), col=4, cex=.8, pos=4)</div>
+<p align="center"><img src="../../images/lectures/lecture20/fig4a.png" width="470" height="315" alt="fig. 5"><br>
+  <span class="styleArial1"><strong>Fig. 6&nbsp;&nbsp;</strong>&nbsp;An illustration of Jensen's inequality for concave functions: log &mu;(x) &ge; &mu;(log x)</span></p>
+<p align="left">In fitting the model <span class="style8">out.lognormal</span> we assumed that the log-transformed richness variable had a normal distribution. By definition, if a log-transformed random variable has a normal distribution, then the original response variable is said to have a lognormal distribution.  While the mode, median, and mean of a normal distribution are all the same, in a lognormal distribution the mode, median, and mean are typically different. </p>
+<p align="left">The exponential function is  a monotone function because   <img src="../../images/lectures/lecture20/expnentialmonotone.gif" alt="exponential monotone" width="180" height="25" align="absmiddle">. As a result if we exponentiate both sides of the log-transformed regression equation of model 7 the relative order of the values will not change. Quantiles on the log-transformed scale will get mapped to quantiles on the raw response scale. In particular the median on the log-transformed scale will get mapped to the median on the raw scale.  So when we exponentiate the regression equation of model 7 (which is a model for the mean log, but also the median and mode of log <em>S</em>) we do get the median richness of a lognormal distribution on the original raw scale. The mean and mode on the other hand are not the same. Fig. 7 shows the relationships between these statistics for the sixth island, Daphne Major, whose predicted log species richness is 1.62.</p>
+<table width="670" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><img src="../../images/lectures/lecture20/fig8.png" width="640" height="350" alt="fig. 8"></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><p align="left"><strong>Fig. 7</strong>&nbsp; When the regression equation of a log-transformed response is back-transformed by exponentiating both sides, we obtain a regression equation for the median on the scale of the original response variable, not the mean.</p></td>
+  </tr>
+</table>
+<p>A lognormal distribution is typically positively skewed so that the median and mean can be very different. The mean &mu;* of the lognormal distribution can be expressed in terms of &mu; and &sigma;<sup>2</sup>, the mean and variance of the log-transformed variables. </p>
+<div align="center"><img src="../../images/lectures/lecture20/lognormalmean.gif" width="197" height="62" alt="lognormal mean"></div>
+<p>This makes it possible to calculate the mean raw response after fitting a regression model to the log-transformed response. Because the square root transformation is  also a monotonic transformation, squaring its regression equation will also yield a regression equation for the median on the original richness scale. </p>
+<p>Fig. 8 graphically compares  the four AIC-best ranked models for the Galapagos flora data set. It shows both predicted mean and the predicted median of the lognormal distribution corresponding to the log-transformed response normal model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(Species~log(Area), data=gala)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">curve(exp(coef(out.NB2)[1] + coef(out.NB2)[2]*x), add=T, col=2, lty=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  curve(exp(coef(out.NB1)[1] + coef(out.NB1)[2]*x), add=T, col=2, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sigma2.lognorm &lt;- sum(residuals(out.lognorm)^2)/length(residuals(out.lognorm))/2</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">curve(exp(coef(out.lognorm)[1] + coef(out.lognorm)[2]*x), add=T, col='grey60', lwd=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  curve(exp(coef(out.lognorm)[1] + coef(out.lognorm)[2]*x + sigma2.lognorm/2), add=T, col=1, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  curve((coef(out.sqrtnorm)[1] + coef(out.sqrtnorm)[2]*x)^2, add=T, lty=2, col=3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">legend('topleft', c('NB-2 (mean)', 'NB-1 (mean)','lognormal (median)','lognormal (mean)', 'sqrt-normal (median)'), col=c(2,2,'grey60',1,3), lty=c(1,2,1,2,1), lwd=c(1,1,2,1,1), cex=.9, bty='n')</div>
+
+<br>
+<table width="580" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture20/fig6.png" width="520" height="360" alt="fig. 6"></div></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 55px; text-indent:-55px"><p align="left"><strong>Fig. 8</strong>&nbsp; &nbsp;&nbsp;Fitted regression equations for the four AIC-best models. Shown are  the two negative binomial means (NB-1 and NB-2), the lognormal mean and lognormal median, and the square root normal median. </p></td>
+  </tr>
+</table>
+<h2><a name="cited"></a>Cited References</h2>
+<ul>
+<li><font face="Times New Roman, Times, serif">Hamilton, Terrell H., Ira Rubinoff, Robert H. Barth, Jr., and Guy L. Bush. 1963. Species abundance: natural regulation of insular variation. <em>Science</em> <strong>142</strong>: 1575&ndash;1576.</font></li>
+  <li><font face="Times New Roman, Times, serif">Johnson, Michael P. and Peter H. Raven. 1973. Species number and endemism: The Galapagos archipelago revisited. <em>Science</em> <strong>179</strong>: 893&ndash;895. </font></li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture20&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 9, 2012<br>
+      URL: <a href="lecture20.htm#lecture20" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture20.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

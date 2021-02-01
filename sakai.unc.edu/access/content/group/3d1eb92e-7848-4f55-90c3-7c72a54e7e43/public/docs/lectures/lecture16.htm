@@ -1,0 +1,1077 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 16&mdash;Wednesday, October 16, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture16" id="lecture16"></a>Lecture 16&mdash;Wednesday, October 17, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture16.htm#examples">Graphs of various negative binomial distributions</a></li>
+  <li><a href="lecture16.htm#negativebinomial">Negative binomial model for the aphid count data</a>
+    <ul>
+      <li><a href="lecture16.htm#NBlogL">Constructing the negative binomial log-likelihood</a></li>
+      <li><a href="lecture16.htm#NBMLE">Obtaining the MLE</a></li>
+      <li><a href="lecture16.htm#regression">Negative binomial regression functions</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture16.htm#NBassess">Assessing the fit of the negative binomial model graphically</a></li>
+  <li><a href="lecture16.htm#NBtest">Testing the fit of the negative binomial model to the aphid count data</a>
+    <ul>
+      <li><a href="lecture16.htm#NBparametric">Parametric goodness of fit test</a></li>
+      <li><a href="lecture16.htm#NBsimulate">Simulation-based goodness of fit test</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture16.htm#Crawley">The Crawley slug data set</a>
+    <ul>
+      <li><a href="lecture16.htm#base">Bar plots using base graphics</a></li>
+      <li><a href="lecture16.htm#lattice">Bar plots using lattice</a></li>
+      <li><a href="lecture16.htm#MLE">Maximum likelihood estimation of a Poisson regression model</a></li>
+      <li><a href="lecture16.htm#testing">Testing for a mean difference: likelihood ratio and Wald tests</a>
+        <ul>
+          <li><a href="lecture16.htm#LRtest">Likelihood ratio test</a></li>
+          <li><a href="lecture16.htm#Wald">Wald test</a></li>
+        </ul>
+      </li>
+      <li><a href="lecture16.htm#glm">Fitting the models using the glm function</a></li>
+      <li><a href="lecture16.htm#graphing">Graphing the fitted Poisson model</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture16.htm#cited">Cited references</a></li>
+  <li><a href="lecture16.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture16.htm#ascharacter">as.character</a> when applied to a factor extracts the character values of the levels.</li>
+  <li><a href="lecture16.htm#asnumeric">as.numeric</a> when applied to a factor extracts the numerical values of the levels (the numbers 1 up to the number of levels).</li>
+  <li><a href="lecture16.htm#horizontal">barchart</a> is the bar plot function of lattice.</li>
+  <li><a href="lecture16.htm#beside">barplot</a> is the bar plot function of base graphics.</li>
+  <li><a href="lecture16.htm#solve">diag</a> extracts the diagonal entries of a matrix.</li>
+  <li><a href="lecture16.htm#dnbinom">dnbinom</a>  is the probability mass function of the negative binomial distribution.</li>
+  <li><a href="lecture16.htm#glmnb">glm.nb</a> (from <span class="style19">MASS</span>) extends the <span class="style1">glm</span> function to fit regression models with negative binomial response variables.</li>
+  <li><a href="lecture16.htm#panelbarchart">panel.barchart</a> is the panel function of lattice that produces bar plots.</li>
+  <li><a href="lecture16.htm#pnbinom">pnbinom</a> is the cumulative distribution function of the negative binomial distribution.</li>
+  <li><a href="lecture16.htm#solve">solve</a> is used to compute the inverse of a square matrix</li>
+  <li><a href="lecture16.htm#legend">t</a> is the transpose function. It swaps the rows and columns of a matrix. </li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  
+  <li><a href="lecture16.htm#beside">beside</a>= (argument to <strong class="style1">barplot</strong>) when TRUE creates side-by-side bar plots rather than stacked bar plots. </li>
+  <li><a href="lecture16.htm#namesarg">cex.names</a>= (argument to <strong class="style1">barplot</strong>) controls the size of the bar labels.</li>
+  <li><a href="lecture16.htm#horizontal">horizontal</a>= (argument to <span class="style1">barplot</span> and <span class="style1">barchart</span>) takes on values TRUE (the default) or FALSE. It controls whether the bars in the bar plot are displayed horizontal or vertical.</li>
+  <li><a href="lecture16.htm#legend">legend.text</a>= (argument to <strong class="style1">barplot</strong>) when TRUE adds a legend to a bar plot when multiple groups are plotted.</li>
+  <li><a href="lecture16.htm#lineend">lineend</a>= (argument to <span class="style1">xyplot</span> of <span class="style19">lattice</span>) is used to change the shape of the ends of line segments.</li>
+  <li><a href="lecture16.htm#namesarg">names.arg</a>= (argument to <span class="style1">barplot</span>) specifies a vector containing the names to be used to label the bars.</li>
+  <li><a href="lecture16.htm#origin">origin</a>= (argument to <span class="style1">barchart</span> of <span class="style19">lattice</span>) sets the value at which to place the bottom of the bars of the bar plots.</li>
+  <li><a href="lecture16.htm#test">test=</a> (argument to <span class="style1">anova</span>) is used to specify a parametric test for model comparison. We used <span class="style22">test='Chisq'</span> to obtain the likelihood ratio test.</li>
+  <li><a href="lecture16.htm#type">type</a>= (argument to <span class="style1">predict</span>) can be used to obtain different kinds of model predictions for <span class="style1">glm</span> models. The  default is a prediction on the scale of the linear predictors; the alternative <span class="style22">type=&quot;response&quot;</span> is a prediction on the scale of the response variable. </li>
+</ul>
+<h3>R packages used</h3>
+<ul>
+  <li><a href="lecture16.htm#lattice">lattice</a> for lattice graphics functions.</li>
+  <li><a href="lecture16.htm#glmnb">MASS</a> for the <span class="style1">glm.nb</span> function.</li>
+</ul>
+<h2 align="center"><a name="examples"></a>Graphs of various negative binomial distributions</h2>
+<p><a name="dnbinom"></a>If you examine the help screen for the <span class="style1">dnbinom</span> function, <span class="style10">?dnbinom</span>, the following syntax for the function is displayed.</p>
+<p class="style10">dnbinom(<span class="style100">x</span>, <span class="style100">size</span>, prob, <span class="style100">mu</span>, log = FALSE)</p>
+<p>The <span class="style1">dnbinom</span> function can be used to calculate probabilities using the classical definition of the negative binomial (Pascal) or the ecological definition of the negative binomial (Polya). For the ecological parameterization the relevant parameters are <span class="style22">size</span> and <span class="style22">mu</span>, corresponding to the dispersion parameter and the mean, respectively. Notice that <span class="style22">mu</span> is the 4th listed argument and appears after an argument we will not be using, <span class="style22">prob</span>. Thus we'll always need to specify the value of <span class="style22">mu</span> by name when we use the <span class="style1">dnbinom</span> function. For consistency I  also specify the <span class="style22">size</span> argument by name so that I don't have to remember to list it second.</p>
+<p>As a first illustration of various negative binomial distributions I fix the mean of the negative binomial distribution to be 1 (&mu; = 1) and I vary the dispersion parameter from small (&theta; = 0.1) to relatively large (&theta; = 100).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,4))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(lend=2)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#fix the mean, vary the dispersion parameter</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:20, dnbinom(0:20, mu=1, size=.1), type='h', lwd=4, xlab='count category', ylab='probability', ylim=c(0,.8))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, expression(list(mu==1, theta==.1)), cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:20, dnbinom(0:20, mu=1, size=1), type='h', lwd=4, xlab='count category', ylab='probability', ylim=c(0,.8))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(side=3, line=.5, expression(list(mu==1, theta==1)), cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:20, dnbinom(0:20, mu=1, size=10),type='h', lwd=4, xlab='count category', ylab='probability', ylim=c(0,.8))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(side=3, line=.5, expression(list(mu==1, theta==10)), cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:20, dnbinom(0:20,mu=1,size=100), type='h', lwd=4, xlab='count category', ylab='probability', ylim=c(0,.8))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(side=3, line=.5, expression(list(mu==1, theta==100)), cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,1))</div><br>
+<table width="620" border="0" align="center" cellpadding="5">
+  <tr>
+    <th scope="col"><img src="../../images/lectures/lecture16/figA1.png" width="600" height="210" alt="fig 2"></th>
+  </tr>
+  <tr>
+    <td><p align="center" class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;Negative binomial distributions with the same mean but different dispersions</td>
+  </tr>
+</table>
+<p>What we see is that as  &theta; gets small the fraction of zeros increases and the distribution becomes more spread out. Observe that with &theta; = 0.1 almost 80% of the observations are zero yet there is a non-negligible probability of obtaining a count of 20 or more. On the other hand when &theta; = 100 less than 40% of the observations are zero and the probability of obtaining a count beyond 10 is negligible.</p>
+<p>When &theta; = 100 in Fig. 1 the distribution looks very Poisson-like. We can investigate this by comparing it to a Poisson distribution with the same mean.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#compare Poisson and NB</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,2))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(0:12, dnbinom(0:12, mu=1, size=100), type='h', lwd=6, xlab='count category', ylab='probability', ylim=c(0,.5))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, expression(paste('NB: ', list(mu==1, theta==100))))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:12, dpois(0:12,1), type='h', lwd=6, xlab='count category', ylab='probability', ylim=c(0,.5))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(side=3, line=.5, expression(paste('Poisson: ', lambda==1)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,1))</div><br>
+<table width="500" border="0" align="center" cellpadding="5">
+  <tr>
+    <th scope="col"><img src="../../images/lectures/lecture16/figA2.png" width="480" height="280" alt="fig 3"></th>
+  </tr>
+  <tr>
+    <td><p style="padding-left: 45px; text-indent:-45px"><span class="styleArial"><strong>Fig. 2</strong> &nbsp;Comparing a negative binomial and Poisson distribution with the same mean (&mu; = 1) and &theta; relatively large (&theta; = 100)</span></td>
+  </tr>
+</table>
+<p>The distributions are nearly identical. In retrospect this should be expected. As &theta; &rarr; &infin;, the negative binomial distribution with mean &mu; becomes a Poisson distribution with mean &mu;.</p>
+<p>Finally I fix the dispersion parameter of the negative binomial distribution at a small value and vary the mean.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#fix the dispersion parameter, &theta; = 0.1, vary the mean</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,3))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(0:40, dnbinom(0:40, mu=1, size=.1), type='h', lwd=3, xlab='count category', ylab='probability', ylim=c(0,.8))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, expression(paste('NB: ', list(mu==1, theta==.1))), cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:40, dnbinom(0:40, mu=10, size=.1), type='h', lwd=3, xlab='count category', ylab='probability', ylim=c(0,.8))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(side=3, line=.5, expression(paste('NB: ', list(mu==10, theta==.1))), cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:40, dnbinom(0:40, mu=20, size=.1), type='h', lwd=3, xlab='count category', ylab='probability', ylim=c(0,.8))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(side=3, line=.5, expression(paste('NB: ', list(mu==20, theta==.1))), cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,1))</div>
+<br>
+<table width="580" border="0" align="center" cellpadding="5">
+  <tr>
+    <th scope="col"><img src="../../images/lectures/lecture16/figA3.png" width="565" height="240" alt="fig 4"></th>
+  </tr>
+  <tr>
+    <td><p align="center" class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;Negative binomial distributions with the same dispersion but different means</td>
+  </tr>
+</table>
+<p>What's striking about Fig. 3 is that other than a slight shrinkage in the zero fraction, the distributions look about the same. In truth the right tails of the distribution also become more prominent as the mean increases. Still the primary consequence of increasing the mean is to reduce the number of zeros. A negative binomial distribution with a small dispersion parameter will still have a sizeable zero fraction even if it  has a very large mean.</p>
+<h2 align="center"><a name="negativebinomial"></a>Negative binomial model for the aphid count data</h2>
+<p>I reload the aphid count data, fit the Poisson model, and display the data and the fit of the Poisson model using the code from last time.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">num.stems &lt;- c(6,8,9,6,6,2,5,3,1,4)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # data frame of tabulated data</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> aphids &lt;- data.frame(aphids=0:9, counts=num.stems)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  aphid.data &lt;- rep(0:9,num.stems)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  poisson.LL &lt;- function(lambda) sum(log(dpois(aphid.data, lambda)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  poisson.negloglik &lt;- function(lambda) -poisson.LL(lambda)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois &lt;- nlm(poisson.negloglik,3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  exp.pois &lt;- c((dpois(0:8, out.pois$estimate)), 1-ppois(8,out.pois$estimate))*50</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.bar &lt;- barplot(num.stems, ylim=c(0,11), names.arg=c(0:8,'9+'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(out.bar, exp.pois, pch=16, cex=.9, type='o')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">legend('topright', 'Poisson model', pch=16, col=1, lty=1, cex=.9, bty='n')</div>
+<p align="center"><img src="../../images/lectures/lecture16/fig0.png" width="380" height="210" alt="fig. 0"></p>
+<p align="center" class="styleArial"><strong>Fig. 4 </strong>&nbsp;Fit of the Poisson  model</p>
+
+<h3><a name="NBlogL"></a>Constructing the negative binomial log-likelihood</h3>
+<p align="left">Following an argument that is completely analogous to the one presented for the Poisson distribution, the log-likelihood for a negative binomial distribution applied to these data is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture16/nbinom.gif" width="457" height="58" alt="dnbinom"></p>
+<p> Translating this into an R function yields the following.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #negative binomial log-likelihood</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">NB.LL <- function(mu,theta) sum(log(dnbinom(aphid.data, mu=mu, size=theta)))</div>
+<p>As you can see the only difference from the Poisson function is that we need to specify two arguments, the mean and the dispersion parameter. Instead of specifying the two arguments as separate variables, we can specify them as components of a vector.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#alternative vector version</span></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">NB.LL2 <- function(p) sum(log(dnbinom(aphid.data, mu=p[1], size=p[2])))</div>
+<p>The next few lines contrast how these two versions of the negative binomial log-likelihood function differ.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#first function </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">NB.LL(3,4)</div>
+<span  class="style24">[1] -116.1379 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #incorrect use of 2nd function with two separate arguments</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> NB.LL2(3,4)</div>
+<span  class="style24">Error in NBvec.pos(3, 4) : unused argument(s) ( ...) </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #correct usage in which arguments are entered as a vector </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> NB.LL2(c(3,4))</div>
+<span  class="style24">[1] -116.1379</span>
+<p>The <span class="style41">nlm</span> function does minimization, not maximization, so our function needs to return the negative of the log-likelihood. The <span class="style1">nlm</span> function also requires that the function have a single vector argument of parameters, i.e., it requires the second version of the log-likelihood function given above.  I use  the function <span class="style10">NB.LL2</span> created above  to define a negative log-likelihood negative binomial function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #negative log-likelihood for nlm</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> negNB.LL <- function(p) -NB.LL2(p)</div>
+<h3><a name="NBMLE"></a>Obtaining the MLE</h3>
+<p> I use the <span class="style41">nlm</span> function and the negative log-likelihood function created above to numerically approximate the MLEs. I supply initial guesses for <img src="../../images/lectures/lecture16/muhat.gif" width="18" height="28" align="absmiddle"> and <img src="../../images/lectures/lecture16/thetahat.gif" width="16" height="28" align="absmiddle">.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB &lt;- nlm(negNB.LL, c(3,4), hessian=TRUE)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB</div>
+<span  class="style24"> $minimum<br>
+[1] 114.7009</span>
+<p><span  class="style24">$estimate<br>
+  [1] 3.459995 2.645024</span>
+<p><span  class="style24">$gradient<br>
+  [1] -2.251151e-05&nbsp; 1.317917e-05</span>
+<p><span  class="style24">$hessian<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,2]<br>
+  [1,] 6.2589597977 0.0002248452<br>
+  [2,] 0.0002248452 0.9535296142</span>
+<p><span  class="style24">$code<br>
+  [1] 1</span>
+<p><span  class="style24">$iterations<br>
+  [1] 8</span>
+<p><a name="optim"></a>From the output we see the algorithm converged (<span class="styleArial">code = 1</span>) and both components of the gradient are close to zero. The estimated value of &mu; is 3.460 while that of &theta; is 2.645.</p>
+<h3><a name="regression"></a>Negative binomial regression functions</h3>
+<p><a name="glmnb"></a>A simpler way to fit the negative binomial distribution to the aphids data is as regression model using the <span class="style1">glm.nb</span> function from the the <span class="style19">MASS</span> package. (<span class="style19">MASS</span> is part of the standard installation of R and does not need to be downloaded first.) To estimate the two parameters we fit a regression model with only an intercept. The <span class="style1">glm.nb</span> function only fits negative binomial regressions so there is no family argument. There is a <span class="style22">link</span> argument and like Poisson regression the default link is a log link.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(MASS)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.nb &lt;- glm.nb(aphid.data~1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.nb)</div>
+<span class="style24">Call:<br>
+  glm.nb(formula = aphid.data ~ 1, init.theta = 2.645011574, link = log)</span>
+<p><span class="style24">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -2.1035&nbsp; -1.1302&nbsp; -0.1688&nbsp;&nbsp; 0.6997&nbsp;&nbsp; 1.4722&nbsp; </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  </span><span class="style25">(Intercept)&nbsp; &nbsp;1.2413</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp; 0.1155&nbsp;&nbsp; 10.75&nbsp;&nbsp; &lt;2e-16 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">(Dispersion parameter for Negative Binomial(2.645) family taken to be 1)</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; Null deviance: 57.073&nbsp; on 49&nbsp; degrees of freedom<br>
+  Residual deviance: 57.073&nbsp; on 49&nbsp; degrees of freedom<br>
+  AIC: 233.4</span>
+<p><span class="style24">Number of Fisher Scoring iterations: 1</span>
+
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">Theta:&nbsp; 2.65</span><span class="style24"> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Std. Err.:&nbsp; 1.02 </span>
+<p><span class="style24">&nbsp;2 x log-likelihood:&nbsp; -229.402 </span>
+<p>The reported intercept is for the mean model, log &mu; = &beta;<sub>0</sub>. Therefore to obtain the estimate of the mean we need to exponentiate this value.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">exp(coef(out.nb))</div>
+<span class="style24">  (Intercept) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.46 </span>
+  <p>The dispersion parameter is returned as the model component called <span class="style8">theta</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.nb$theta</div>
+<span class="style24">  [1] 2.645012</span>
+<p>The estimates of &mu; and &theta; are identical to what we obtained using the <span class="style1">nlm</span> function.</p>
+<h2 align="center"><a name="NBassess" id="NBassess"></a>Assessing the fit of the negative binomial model graphically</h2>
+<p>I produce a graph that compares the fit of the negative binomial and Poisson models. First I examine the predicted probabilities and counts (by summing over all 50 observations).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dnbinom(0:9, mu=out.NB$estimate[1], size=out.NB$estimate[2])</div>
+<span class="style24">[1] 0.10943985 0.16405655 0.16945422 0.14869883 0.11893284 0.08958118 <br>
+[7] 0.06468935 0.04527822&nbsp;0.03093792 0.02073880 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # expected counts </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dnbinom(0:9, mu=out.NB$estimate[1], size=out.NB$estimate[2])*50</div>
+<span class="style24">[1] 5.471993 8.202827 8.472711 7.434941 5.946642 4.479059 3.234468 2.263911 <br>
+[9] 1.546896 1.036940</span><br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # anything left over?</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(dnbinom(0:9, mu=out.NB$estimate[1], size=out.NB$estimate[2])*50)</div>
+<span class="style24">[1] 48.09039</span>
+</p>
+<p><a name="pnbinom"></a>I combine the counts 9 and above into the last category using the <span class="style1">pnbinom</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> NB.p &lt;- c (dnbinom(0:8, mu=out.NB$estimate[1], size=out.NB$estimate[2]), 1-pnbinom(8, mu=out.NB$estimate[1], size=out.NB$estimate[2]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp.NB &lt;- NB.p*50</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<p>I rename the last category so that it correctly indicates 9 and above. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(num.stems) &lt;- c(0:8, &quot;9+&quot;)</div>
+<p>I next produce a bar graph that compares the fit of the Poisson and negative binomial models. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.bar &lt;- barplot(num.stems, ylim=c(0, max(c(exp.NB, exp.pois, num.stems))))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#add negative binomial</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(out.bar, exp.NB, col=2, pch=22, cex=.9, type='o')</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#add poisson</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">points(out.bar, exp.pois, col=1, pch=16, cex=.9, type='o')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> legend('topright', c('negative binomial', 'Poisson'), col=c(2,1), lty=1, pch=c(22,16), bty='n', cex=.8)</div>
+<p align="center"><img src="../../images/lectures/lecture16/figA4.png" width="380" height="210" alt="fig. 4"></p>
+<p align="center" class="styleArial"><strong>Fig. 5 </strong>&nbsp;Fit of the Poisson and negative binomial models</p>
+<p> Based on the plot the fit of the negative binomial model appears to be a big improvement over that of the Poisson.</p>
+<h2 align="center"><a name="NBtest"></a>Testing the fit of the negative binomial model</h2>
+<h3><a name="NBparametric"></a>Parametric goodness of fit test</h3>
+<p>If we examine the expected counts we see that a number of them are below 5. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp.NB</div>
+<span class="style24">[1] 5.471993 8.202827 8.472711 7.434941 5.946642 4.479059 3.234468<br>
+[8] 2.263911 1.546896 2.946552</span>
+<p>As was noted in <a href="lecture15.htm#rule20">lecture 15</a> if too many of the expected counts are small (5 being a guideline for smallness) then the chi-squared distribution of the Pearson statistic becomes questionable. To deal with this I combine categories. One way to do this would be to leave the first five categories alone, combine the next two, and combine the last three. A good strategy is to start with the tail and work backwards.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> NB.p.new &lt;- c(NB.p[1:5] ,sum(NB.p[6:7]), sum(NB.p[8:10]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> NB.merge &lt;- 50*NB.p.new</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> NB.merge</div>
+<span class="style24">[1] 5.471993 8.202827 8.472711 7.434941 5.946642 7.713526 6.757360</span>
+</p>
+<p>I merge these same categories for the observed counts and carry out the test. The degrees of freedom for the chi-squared statistic is <em>m</em> &ndash;&nbsp;1 &ndash; <em>p</em> where <em>m</em> is the number of categories (after merging) and <em>p</em> is the number of estimated parameters. We have two estimated parameters: &mu; and &theta; so <em>p</em> = 2.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Oi.merge &lt;- c(num.stems[1:5], sum(num.stems[6:7]), sum(num.stems[8:10]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Pearson &lt;- sum((Oi.merge-NB.merge)^2/NB.merge)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">Pearson</div>
+<span class="style24">[1] 0.6607193</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Pearson.p &lt;- 1-pchisq(Pearson, length(Oi.merge)-1-2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Pearson.p</div>
+<span class="style24">[1] 0.9560832</span>
+<p>We can also use the output from the <span class="style1">chisq.test</span> function to obtain the Pearson statistic and then calculate the <em>p</em>-value ourselves (to properly account for the two parameters we estimated).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">chisq.NB &lt;- chisq.test(Oi.merge, p=NB.p.new)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(chisq.NB)</div>
+<span class="style24"> [1] &quot;statistic&quot; &quot;parameter&quot; &quot;p.value&quot;&nbsp;&nbsp; &quot;method&quot;&nbsp;&nbsp;&nbsp; &quot;data.name&quot; &quot;observed&quot; <br>
+[7] &quot;expected&quot;&nbsp; &quot;residuals&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(chisq.NB$statistic, df=chisq.NB$parameter-2)</div>
+<span class="style24"> X-squared <br>
+0.9560832</span>
+<p>The <em>p</em>-value is large so we fail to reject the fit of the negative binomial model.</p>
+<h3><a name="NBsimulate"></a>Simulation-based goodness of fit test</h3>
+<p>By pooling categories we have distorted the negative binomial distribution. Failing to find a significant lack of fit with the pooled categories does not guarantee that the model would still fit if we didn't pool the categories. We can obtain a better measure of fit by using a randomization test.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> chisq.test(num.stems, p=NB.p, simulate.p.value=TRUE, B=9999)</div>
+<p> <span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi-squared test for given probabilities with simulated p-value<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (based on 9999 replicates)</span>
+<p> <span class="style24">data:&nbsp; num.stems <br>
+  X-squared = 3.5113, df = NA, p-value = 0.9459</span>
+<p>The result is nearly identical to what we obtained with the parametric test using the combined categories. </p>
+<p>A skeptic might argue that the way we're handling the last category is  overly favorable to our model. The empirical distribution of the raw data does not decrease to zero; the last observed category has four observations. By lumping the tail of the negative binomial distribution into the last observed category we force the expected results to more closely resemble the observed data. To satisfy such a skeptic I create a new category, X = 10+, for both the observed and expected counts and redo the randomization test. This category represents stems with aphid counts of 10 or more. Of course, the observed frequency of this new category  is 0.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> new.numstems &lt;- c(num.stems,0)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> new.NB.p &lt;- c(dnbinom(0:9, mu=out.NB$estimate[1],
+  size=out.NB$estimate[2]), 1-pnbinom(9, mu=out.NB$estimate[1],
+  size=out.NB$estimate[2]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> new.NB.p</div>
+<span class="style24">[1] 0.10943985 0.16405655 0.16945422 0.14869883 0.11893284 0.08958118<br>
+[7] 0.06468935 0.04527822 0.03093792 0.02073880 0.03819224</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> new.NB.p*50</div>
+<span class="style24">[1] 5.471993 8.202827 8.472711 7.434941 5.946642 4.479059 3.234468<br>
+[8] 2.263911 1.546896 1.036940 1.909612</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> chisq.test(new.numstems, p=new.NB.p, simulate.p.value=TRUE, B=9999)</div>
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi-squared test for given probabilities with simulated p-value<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (based on 9999 replicates)</span>
+<p><span class="style24">data:&nbsp; new.numstems <br>
+  X-squared = 13.5113, df = NA, p-value = 0.1923</span>
+<p>So even after creating a separate final category in which the observed count is zero, we still fail to find a significant lack of fit (although the <em>p</em>-value of our test has been reduced substantially).</p>
+<p><strong>Warning</strong>. I should point out one deficiency of the simulation-based test. There is no penalty for overfitting. In the Pearson chi-squared test the degrees of freedom of the chi-squared distribution used for assessing the significance of the test statistic gets reduced by the number of parameters that were estimated. This has the effect of reducing the threshold (critical value) for lack of fit. As a result, models that use more parameters are forced to meet a higher goodness of fit standard than are models using fewer parameters. This makes it harder for complicated models to pass the test. Thus the parametric version of the chi-squared test has a built-in protection against over-fitting. With the simulation-based version of the test there is no such protection.</p>
+<h2><a name="Crawley"></a>The Crawley slug data set </h2>
+<p> We use a data set that appears on Michael Crawley's web site for his text <em>Statistical Computing</em> (Crawley 2002) and is also used in <em>The R Book</em> (2007).</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #obtain data </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugs &lt;- read.table( 'http://www.bio.ic.ac.uk/research/mjcraw/statcomp/data/slugsurvey.txt', header=TRUE)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">names(slugs)</div>
+<span class="style141">[1] &quot;slugs&quot; &quot;field&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dim(slugs)</div>
+<span class="style141">[1] 80 2</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugs[1:8,]</div>
+<span class="style141">&nbsp;&nbsp;slugs &nbsp;&nbsp;field<br>
+1 &nbsp;&nbsp;&nbsp;&nbsp;3 Nursery<br>
+2 &nbsp;&nbsp;&nbsp;&nbsp;0 Nursery<br>
+3 &nbsp;&nbsp;&nbsp;&nbsp;0 Nursery<br>
+4 &nbsp;&nbsp;&nbsp;&nbsp;0 Nursery<br>
+5 &nbsp;&nbsp;&nbsp;&nbsp;0 Nursery<br>
+6 &nbsp;&nbsp;&nbsp;&nbsp;1 Nursery<br>
+7 &nbsp;&nbsp;&nbsp;&nbsp;0 Nursery<br>
+8 &nbsp;&nbsp;&nbsp;&nbsp;3 Nursery
+</p>
+</span>
+<p>Crawley describes these data as follows (Crawley 2002, p. 542). &quot;Count data were obtained on the number of slugs found beneath 40 tiles placed in a stratified random grid over each of two permanent grasslands. This was part of a pilot study in which the question was simply whether the mean slug density differed significantly between the two grasslands.&quot; My interpretation of this is that the experiment was extraordinarily simple. Rocks of standard shape and size were laid out in two fields and at some point later in time the fields were revisited and the number of slugs under each rock was recorded. The data we are given are the raw counts, i.e., the individual slug counts for each rock. Thus we have a total of 80 observations, 40 from each field type. A value of 0 means no slugs were found under that rock.We can verify this by tabulating the data by field type.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(slugs$field)</div>
+<span class="style141">Nursery Rookery <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;40</span>
+<p>Crawley then spends a chapter of his textbook trying one statistical test after another to test the hypothesis of no mean difference in slugs between the two field types. In the end his conclusion is ambiguous. Some tests say there is a difference, some say there isn't.</p>
+<p>I submit that the problem posed by Crawley is essentially an uninteresting one. Any two populations in nature will typically differ with respect to whatever characteristic we care to measure. Whether that difference can be deemed statistically significant is not a statement about nature, but instead is a statement about the sample size used in the study. With enough data any difference, no matter how small, will achieve &quot;statistical significance&quot;. A far more useful approach is to determine some way to characterize the differences in slug distribution that exist and then assess whether that characterization tells us anything interesting about slugs and/or nature in general. </p>
+<p>First we summarize the distribution of slugs under rocks in the two field types.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slug.table &lt;- table(slugs$slugs, slugs$field)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slug.table</div>
+<p class="style141"> &nbsp;&nbsp;Nursery Rookery<br>
+  0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9<br>
+  1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8<br>
+  3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<br>
+  4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+  5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>
+  8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+  9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</p>
+<p name="lend">A bar plot of the two distributions would be useful. One problem with using a bar plot with ordinal data such as count categories is that it treats the categories as nominal, so if there are any gaps (missing categories) they won't show up in the plot unless we insert the zero categories ourselves beforehand. This is not a problem here because each of the eleven count categories are present in at least one of the field types, so the <span class="style1">table</span> function has inserted the zero values when needed.</p>
+<h2 name="lend"><a name="base" id="base"></a>Bar plots using base graphics</h2>
+<p name="lend"><a name="beside"></a>The output of the <span class="style1">table</span> function can be used as input to the <span class="style1">barplot</span> function to produce a bar plot. When we generate separate frequency distributions for one variable (slugs) by the levels of a second variable (field), the <span class="style1">barplot</span> default is to generate a stacked bar plot (Fig. 6a). If we add the <span class="style22">beside=T</span> argument we get two separate bar plots, one for each category of field.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#stacked bar plot</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">barplot(table(slugs$slugs, slugs$field))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#separate bar plots</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">barplot(table(slugs$slugs, slugs$field), beside=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<br>
+<table width="630" border="0" align="center" cellpadding="5">
+  <tr>
+    <td scope="col">(a) <img src="../../images/lectures/lecture16/fig1a.png" alt="fig 1a" width="270" height="240" align="texttop"></td>
+    <td scope="col">(b) <img src="../../images/lectures/lecture16/fig1b.png" alt="fig 1b" width="270" height="240" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial"><strong>Fig. 6</strong> &nbsp;Distribution of slugs counts using (a) a stacked bar plot and (b) separate bar plots</td>
+  </tr>
+</table>
+<p align="left">Because our goal is to superimpose predictions from a model onto the observed distribution of slug counts, the stacked bar plot is of no use to us. Although it appears that there are two separate graphs in Fig 1b in fact this is a single graph with a single set of coordinates on the <em>x</em>-axis. We can see this by assigning a name to the output of the <span class="style1">barplot</span> function and printing the object.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">coord1 &lt;- barplot(table(slugs$slugs, slugs$field), beside=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coord1</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1] [,2]<br>
+&nbsp;[1,]&nbsp; 1.5 13.5<br>
+&nbsp;[2,]&nbsp; 2.5 14.5<br>
+&nbsp;[3,]&nbsp; 3.5 15.5<br>
+&nbsp;[4,]&nbsp; 4.5 16.5<br>
+&nbsp;[5,]&nbsp; 5.5 17.5<br>
+&nbsp;[6,]&nbsp; 6.5 18.5<br>
+&nbsp;[7,]&nbsp; 7.5 19.5<br>
+&nbsp;[8,]&nbsp; 8.5 20.5<br>
+&nbsp;[9,]&nbsp; 9.5 21.5<br>
+[10,] 10.5 22.5<br>
+[11,] 11.5 23.5</span>
+<p>The columns contain the <em>x</em>-coordinates of the bars with each column corresponding to a  different field type. Notice that the top of the second column  continues where the bottom of the first column left off.</p>
+<p align="left"><a name="namesarg"></a>Notice that the categories aren't labeled in the separate bar plots. We can add labels with the <span class="style22">names.arg</span> argument in which we specify a single vector of names for both graphs. When we do so the field type labels under the graphs disappear so we need to add those  with the <span class="style1">mtext</span> function. To position the labels at the center of each display I use the values in row 6 of the matrix of bar coordinates contained in the object <span class="style10">coord1</span>. The <span class="style22">cex.names</span> argument can be used to reduce the size of the bar labels so that more are displayed.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">coord1 &lt;- barplot(table(slugs$slugs, slugs$field), beside=T, names.arg=c(0:10,0:10), cex.names=.75)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=1, line=2.5, at=coord1[6,], text=c('Nursery', 'Rookery'), cex=.9)</div>
+<p align="center"><img src="../../images/lectures/lecture16/fig2.png" width="410" height="270" alt="fig 2"></p>
+<p align="center"><span class="styleArial"><strong>Fig. 7</strong> &nbsp;Separate bar plots</span> of the two slug distributions with labels for the bars</p>
+<div align="left"></div>
+<p name="barplot"><a name="legend" id="legend"></a>When there are only two groups to display in a bar plot,  another option is to use a side by side bar plot in which the distributions of the two groups are interwoven. This can be accomplished with <span class="style1">barplot</span> and the <span class="style22">beside=T</span> option if we first transpose the table of counts with the <span class="style1">t</span> function so that the rows of the matrix correspond to the groups and the columns correspond to the separate count categories. There is a <span class="style22">legend.text</span> argument which if set to TRUE will add a legend indicating which bar corresponds to which group.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> t(table(slugs$slugs, slugs$field))</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9 10<br>
+&nbsp; Nursery 25&nbsp; 5&nbsp; 2&nbsp; 2&nbsp; 2&nbsp; 1&nbsp; 1&nbsp; 1&nbsp; 0&nbsp; 0&nbsp; 1<br>
+&nbsp; Rookery&nbsp; 9&nbsp; 9&nbsp; 8&nbsp; 5&nbsp; 2&nbsp; 4&nbsp; 1&nbsp; 0&nbsp; 1 &nbsp;1&nbsp; 0</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">barplot(t(table(slugs$slugs, slugs$field)), beside=T, legend.text=T)</div>
+<p align="center" name="barplot"><img src="../../images/lectures/lecture16/fig3.png" width="345" height="245" alt="fig 3"></p>
+<p align="center" name="barplot"><span class="styleArial"><strong>Fig. 8</strong> &nbsp;Side by side bar plots</span> of the two slug distributions with labels</p>
+<p>The coordinates of the bars now are contained in a 2 &times; 11 matrix.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">coord2 &lt;- barplot(t(table(slugs$slugs, slugs$field)), beside=T, legend=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coord2</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp; [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11]<br>
+[1,]&nbsp; 1.5&nbsp; 4.5&nbsp; 7.5 10.5 13.5 16.5 19.5 22.5 25.5&nbsp; 28.5&nbsp; 31.5<br>
+[2,]&nbsp; 2.5&nbsp; 5.5&nbsp; 8.5 11.5 14.5 17.5 20.5 23.5 26.5&nbsp; 29.5 &nbsp;32.5</span>
+<h2 name="lend"><a name="lattice"></a>Bar plots using lattice</h2>
+<p name="lend">When the goal is to produce separate graphs according to the levels of another variable (such as the <span class="style8">field</span> variable here) <span class="style19">lattice</span> is usually a better choice than base graphics. In order to use <span class="style19">lattice</span> we need to organize the table of counts into a data frame. This can be accomplished with the <span class="style1">data.frame</span> function applied directly to the output from the <span class="style1">table</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable &lt;- data.frame(table(slugs$slugs, slugs$field))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable</div>
+<span class="style141"> &nbsp;&nbsp; Var1&nbsp;&nbsp;&nbsp; Var2 Freq<br>
+1&nbsp;&nbsp;&nbsp;&nbsp; 0 Nursery&nbsp;&nbsp; 25<br>
+2&nbsp;&nbsp;&nbsp;&nbsp; 1 Nursery&nbsp;&nbsp;&nbsp; 5<br>
+3&nbsp;&nbsp;&nbsp;&nbsp; 2 Nursery&nbsp;&nbsp;&nbsp; 2<br>
+4&nbsp;&nbsp;&nbsp;&nbsp; 3 Nursery&nbsp;&nbsp;&nbsp; 2<br>
+5&nbsp;&nbsp;&nbsp;&nbsp; 4 Nursery&nbsp;&nbsp;&nbsp; 2<br>
+6&nbsp;&nbsp;&nbsp;&nbsp; 5 Nursery&nbsp;&nbsp;&nbsp; 1<br>
+7&nbsp;&nbsp;&nbsp;&nbsp; 6 Nursery&nbsp;&nbsp;&nbsp; 1<br>
+8&nbsp;&nbsp;&nbsp;&nbsp; 7 Nursery&nbsp;&nbsp;&nbsp; 1<br>
+9&nbsp;&nbsp;&nbsp;&nbsp; 8 Nursery&nbsp;&nbsp;&nbsp; 0<br>
+10&nbsp;&nbsp;&nbsp; 9 Nursery&nbsp;&nbsp;&nbsp; 0<br>
+11&nbsp;&nbsp; 10 Nursery&nbsp;&nbsp;&nbsp; 1<br>
+12&nbsp;&nbsp;&nbsp; 0 Rookery&nbsp;&nbsp;&nbsp; 9<br>
+13&nbsp;&nbsp;&nbsp; 1 Rookery&nbsp;&nbsp;&nbsp; 9<br>
+14&nbsp;&nbsp;&nbsp; 2 Rookery&nbsp;&nbsp;&nbsp; 8<br>
+15&nbsp;&nbsp;&nbsp; 3 Rookery&nbsp;&nbsp;&nbsp; 5<br>
+16&nbsp;&nbsp;&nbsp; 4 Rookery&nbsp;&nbsp;&nbsp; 2<br>
+17&nbsp;&nbsp;&nbsp; 5 Rookery&nbsp;&nbsp;&nbsp; 4<br>
+18&nbsp;&nbsp;&nbsp; 6 Rookery&nbsp;&nbsp;&nbsp; 1<br>
+19&nbsp;&nbsp;&nbsp; 7 Rookery&nbsp;&nbsp;&nbsp; 0<br>
+20&nbsp;&nbsp;&nbsp; 8 Rookery&nbsp;&nbsp;&nbsp; 1<br>
+21&nbsp;&nbsp;&nbsp; 9 Rookery&nbsp;&nbsp;&nbsp; 1<br>
+22&nbsp;&nbsp; 10 Rookery&nbsp;&nbsp;&nbsp; 0</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$Var1</div>
+<span class="style141"> &nbsp;[1] 0&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9&nbsp; 10 0&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9&nbsp; 10<br>
+Levels: 0 1 2 3 4 5 6 7 8 9 10</span>
+<p><a name="asnumeric"></a>The count categories have been converted to a factor. It will be useful to have the actual numerical values when we try to add model predictions. If we try to convert them to numbers with the <span class="style1">as.numeric</span> function we see that we don't get what we want.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> as.numeric(slugtable$Var1)</div>
+<span class="style141"> &nbsp;[1]&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9 10 11&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9 10 11</span>
+<p><a name="ascharacter"></a>The problem is that factor levels are always numbered starting at 1. The trick to getting the actual numeric labels back is to first convert the factor levels to character data with the <span class="style1">as.character</span> function and then convert the character data to numbers.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> as.numeric(as.character(slugtable$Var1))</div>
+<span class="style141"> &nbsp;[1]&nbsp; 0&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9 10&nbsp; 0&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9 10</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugtable$Var1.num &lt;- as.numeric(as.character(slugtable$Var1))</div>
+<p name="lend"><a name="horizontal"></a>The bar plot function in <span class="style19">lattice</span> is called <span class="style1">barchart</span>. The default arrangement is a horizontal bar plot if the <em>x</em>-variable is numeric and a vertical bar chart if the <em>x</em>-variable is a factor. To get a vertical bar plot under all circumstances we can add the <span class="style22">horizontal = F</span> argument. The graph is shown in Fig. 9a.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> barchart(Freq~Var1|Var2, data=slugtable, xlab='Count category')</div>
+<br>
+<table width="700" border="0" align="center" cellpadding="5">
+  <tr>
+    <td>(a) <img src="../../images/lectures/lecture16/fig9a.png" alt="fig. 9a" width="310" height="240" align="texttop"></td>
+    <td>(b) <img src="../../images/lectures/lecture16/fig9b.png" alt="fig. 9b" width="310" height="240" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p style="padding-left: 50px; text-indent:-45px"><span class="styleArial"><strong>Fig. 9</strong> &nbsp;Bar plots using the lattice barchart function with (a) default settings and (b) with the origin=0 argument.</span></p></td>
+  </tr>
+</table>
+<p name="barplot"><a name="origin"></a>We see that the graph is not ideal. </p>
+<ol>
+  <li>The bars start at the bottom of the graph rather than at zero. We can fix that by specifying <span class="style22">origin=0</span>.</li>
+  <li>The default bar color is hard on the eyes. I change the color to gray.</li>
+</ol>
+<p>The following produces the graph shown in Fig. 9b.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">barchart(Freq~Var1|Var2, data=slugtable, xlab='Count category', origin=0, col='grey')</div>
+<p><a name="lineend"></a>We can get almost the same display with the <span class="style1">xyplot</span> function by using the <span class="style22">type='h'</span> option to draw vertical lines from the plotted points to the <em>x</em>-axis with <span class="style22">lwd</span> (line width) set to a large value to produce bars.  To get square ends on the bars I use <span class="style22">lineend=1</span>. For <span class="style1">xyplot</span> we need the numerical version of <span class="style8">Var1</span> rather than the factor version. Fig. 10 shows the result. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(Freq~Var1.num|Var2, data=slugtable, xlab='Count category', type='h', lineend=1, lwd=10, col='grey')</div>
+<p align="center" name="barplot"><img src="../../images/lectures/lecture16/fig10.png" width="420" height="280" alt="fig. 10"><br>
+<span class="styleArial"><strong>Fig. 10</strong> &nbsp;Bar plots using the lattice xyplot function</span></p>
+<p align="left" name="barplot">The differences from <span class="style1">barchart</span> are that we don't get the dark borders around the bars and the missing categories are just missing and not indicated by horizontal lines as they are in Fig. 4. More importantly, if there had been gaps in the data (count categories with a frequency of zero that were not recorded) then <span class="style1">xyplot</span> would display the gaps whereas barchart would not. The <span class="style1">barchart</span> function uses the levels of the factor function to construct the categories. </p>
+<h2 name="barplot"><a name="MLE"></a>Maximum likelihood estimation of a Poisson regression model</h2>
+<p>I start by fitting a single Poisson distribution to the data that ignores the field type from the which the slug data were obtained. The negative log-likelihood function we need is the same one we used in <a href="lecture15.htm#poissonLL">lecture 15</a> except modified to use the slug counts rather than the aphid counts we analyzed there. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#negative LL for a Poisson model--common mean</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> negpois1.LL&lt;-function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> LL&lt;-sum(log(dpois(slugs$slugs,lambda=p)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> -LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>This is a single mean model, one mean for both field types. The parameter &lambda; in the Poisson distribution is the mean and its maximum likelihood estimate is the sample mean. For the initial estimate required by  the <span class="style1">nlm</span> function I choose a value close to the sample mean.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mean(slugs$slugs)</div>
+<span class="style141">[1] 1.775</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois1 &lt;- nlm(negpois1.LL,2)</div>
+<span class="style141">Warning messages:<br>
+1: In dpois(x, lambda, log) : NaNs produced<br>
+2: In nlm(negpois1.LL, 2) : NA/Inf replaced by maximum positive value</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois1</div>
+<span class="style141">$minimum<br>
+[1] 176.8383</span>
+<p><span class="style141">$estimate<br>
+  [1] 1.774999</span>
+<p><span class="style141">$gradient<br>
+  [1] 1.056808e-06</span>
+<p><span class="style141">$code<br>
+  [1] 1</span>
+<p><span class="style141">$iterations<br>
+  [1] 5</span>
+<p>The iterations converged (the gradient is approximately zero and <span class="style16">code = 1</span>) and as expected the function returns the sample mean as the point estimate of &lambda;. The warning messages indicate that during the iterations we obtained an illegal value for <span class="style1">dpois</span>, probably because lambda had become negative. The function did recover and it appears we have sensible estimates.</p>
+<p>We can easily generalize this function to fit a separate mean to each field. I begin by defining a 0-1 dummy variable that indicates the field type. For this we can use a Boolean expression that tests whether the field type is equal to &quot;Rookery&quot;.</p>
+
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugs$field=='Rookery'</div>
+<span class="style24">  &nbsp;[1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE<br>
+  [13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE<br>
+  [25] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE<br>
+  [37] FALSE FALSE FALSE FALSE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+  [49]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+  [61]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+  [73]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> as.numeric(slugs$field==&quot;Rookery&quot;)</div>
+<span class="style24">  &nbsp;[1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br>
+  [37] 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1<br>
+[73] 1 1 1 1 1 1 1 1</span>
+<p>I next rewrite the negative Poisson log-likelihood function using this so that the mean varies by field type. We don't need to explicitly convert the Boolean expression to numeric because using it in an arithmetic expression will cause the conversion to happen automatically.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#negative LL for a Poisson model--separate means model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">negpois2.LL &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">mu &lt;- p[1] + p[2]*(slugs$field==&quot;Rookery&quot;)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">LL &lt;- sum(log(dpois(slugs$slugs, lambda=mu)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">-LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>The first line of the function creates a variable called <span class="style32">mu</span> that is defined in terms of the Boolean expression<span class="style32"></span>. Since the Boolean expression returns <span class="style32"></span> a vector, <span class="style32">mu</span> will also be a vector. As the value of the Boolean expression<span class="style32"></span> changes from observation to observation, the value of <span class="style32">mu</span> will also change.
+  For nursery slugs the Boolean expression returns<span class="style32"></span>  0. Thus for nursery slugs <span class="style32">mu</span> has the value</p>
+<p align="center" class="style101">mu = p[1] + p[2]*0 = p[1]</p>
+<p>For rookery slugs the Boolean expression returns 1. Thus for rookery slugs <span class="style32">mu</span> has the value</p>
+<p align="center" class="style101">mu = p[1] + p[2]*1 = p[1] + p[2] </p>
+<p>In summary we have the following. </p>
+<p align="center"><img src="../../images/lectures/lecture16/rookerynursery.gif" width="228" height="117"></p>
+<p>So we see that <strong>p</strong>[1] is the value of the mean &lambda; for nursery slugs. Since the value of &lambda; for rookery slugs is <strong>p</strong>[1] +<strong> p</strong>[2] we see that <strong>p</strong>[2] represents the difference in the value of &lambda; between nursery and rookery slugs. So, <strong>p</strong>[2] is the mean slug count difference between nursery and rookery slugs.</p>
+<p>To obtain starting values for the elements of <strong>p</strong> I calculate the mean in each field type.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tapply(slugs$slugs, slugs$field,mean)</div>
+<span class="style141"> Nursery Rookery <br>
+&nbsp; 1.275&nbsp; &nbsp;2.275</span>
+<p>So the sample mean for nursery slugs is 1.275 and the mean difference is 1. I use <span class="style10">p = c(1.2,1)</span> as initial estimates.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois2 &lt;- nlm(negpois2.LL, c(1.2,1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois2</div>
+<span class="style141">$minimum<br>
+[1] 171.1275</span>
+<p><span class="style141">$estimate<br>
+  [1] 1.2749997 0.9999997</span>
+<p><span class="style141">$gradient<br>
+  [1]&nbsp; 1.125723e-05 -1.506351e-06</span>
+<p><span class="style141">$code<br>
+  [1] 1</span>
+<p><span class="style141">$iterations<br>
+  [1] 8</span>
+<p>The iterations converged (both elements of the gradient vector are near zero and <span class="style16">code = 1</span>). The estimates <span class="style1">nlm</span> returns are the values we predicted they would be.</p>
+<h2><a name="testing"></a>Testing for a mean difference: likelihood ratio and Wald tests</h2>
+<h3><a name="LRtest"></a>Likelihood ratio test</h3>
+<p>The two models we've fit for the mean are the following.</p>
+<p align="center"><img src="../../images/lectures/lecture16/poissonmodels.gif" width="182" height="58" alt="Poisson models"></p>
+<p>where <em>z</em> is the dummy variable defined above that indicates the rookery slugs. We wish to test </p>
+<p align="center"><img src="../../images/lectures/lecture16/nullhypothesis.gif" width="95" height="58" alt="null hypothesis"></p>
+<p>The use of the likelihood ratio test in comparing models was discussed in <a href="lecture13.htm#LRtest">lecture 13</a>. The <span class="style22">$minimum</span> component of the <span class="style1">nlm</span> object is the negative log-likelihood evaluated at the maximum likelihood estimate. The likelihood ratio statistic is twice the difference in these values for the two models ordered in such a way  that the difference is positive.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LRstat &lt;- 2*(out.pois1$minimum-out.pois2$minimum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LRstat</div>
+<span class="style141">[1] 11.42156</span>
+<p>This statistic has an asymptotic chi-squared distribution with degrees of freedom equal to the difference in the number of parameters estimated in the two models, which is 1 for these two models.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> length(out.pois2$estimate)-length(out.pois1$estimate)</div>
+<span class="style141">[1] 1</span>
+<p><a name="LRpvalue"></a>The likelihood ratio test is a one-tailed upper-tailed test. We reject the null hypothesis at &alpha; = .05 if <img src="../../images/lectures/lecture16/LRstat.gif" alt="LR test" width="142" height="32" align="absmiddle">. I obtain the <em>p</em>-value for this test next.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#Likelihood ratio test of whether the Poisson means are the same in the field types</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">1-pchisq(LRstat, df=1)</div>
+<span class="style141">[1] 0.0007259673</span>
+<p>So using the likelihood ratio test I reject the null hypothesis and conclude that the Poisson rate constants (means) of slug occurrence are different in the two field types.</p>
+<h3><a name="Wald"></a>Wald test</h3>
+<p>The Wald test is an alternative to the likelihood ratio test and was also discussed in <a href="lecture13.htm#waldtest">lecture 13</a>. In order to use it we only need to fit the second of the two models, but we do need to compute the Hessian matrix to obtain the standard errors of the parameter estimates. For that we need to include <span class="style22">hessian=T</span> as an argument of the <span class="style1">nlm</span> function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#Wald test: need Hessian to calculate standard errors</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois2 &lt;- nlm(negpois2.LL, c(2,1), hessian=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois2</div>
+<span class="style141">$minimum<br>
+[1] 171.1275</span>
+<p><span class="style141">$estimate<br>
+  [1] 1.274999 1.000001</span>
+<p><span class="style141">$gradient<br>
+  [1] 1.337493e-07 5.996976e-06</span>
+<p><span class="style141">$hessian<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp; [,2]<br>
+  [1,] 48.94677 17.58066<br>
+  [2,] 17.58066 17.58087</span>
+<p><span class="style141">$code<br>
+  [1] 1</span>
+<p><span class="style141">$iterations<br>
+  [1] 9</span>
+<p><a name="solve"></a>From <a href="lecture8.htm#information">lecture 8</a> we learned that the inverse of the negative of the Hessian yields the variance-covariance matrix of the parameters. Because we're working with the negative log-likelihood, the negative sign has already been taken care of. To carry out matrix inversion we use the <span class="style1">solve</span> function of R. The variances occur on the diagonal of the inverted matrix and can be extracted with the <span class="style1">diag</span> function. Finally we take their square root to obtain the standard errors of the parameter estimates.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#invert Hessian to get standard errors</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> se2 &lt;- sqrt(diag(solve(out.pois2$hessian)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">se2</div>
+<span class="style141">[1] 0.1785534 0.2979271</span>
+<p>Individual 95% Wald confidence intervals are obtained from the formula</p>
+<p align="center"><img src="../../images/lectures/lecture16/waldconf.gif" width="327" height="43" alt="Wald confidence"></p>
+<p>Using R we obtain the following.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#95% confidence intervals for both parameters</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rbind(out.pois2$estimate + qnorm(.025)*se2, out.pois2$estimate + qnorm(.975)*se2)</div>
+<span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,2]<br>
+[1,] 0.9250408 0.4160743<br>
+[2,] 1.6249574 1.5839271</span>
+<p>The  95% Wald confidence interval for &beta;<sub>0</sub> is (0.95, 1.63) while that for &beta;<sub>1</sub> is (0.42, 1.58). Because 0 is not contained in the confidence interval for &beta;<sub>1</sub>, we reject the null hypothesis and conclude that &beta;<sub>1</sub> &ne; 0. </p>
+<p>As an alternative to constructing confidence intervals  we can carry out the Wald test formally. The Wald statistic for our null hypothesis is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture16/Wformulastderr.gif" width="240" height="73" alt="Wald formula"></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> W &lt;- out.pois2$estimate[2]/se2[2]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> W</div>
+<span class="style141">[1] 3.356528</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> qnorm(.975)</div>
+<span class="style141">[1] 1.959964</span>
+<p>We reject H<sub>0</sub> if <img src="../../images/lectures/lecture16/Waldcrit.gif" alt="Wald critical value" width="82" height="30" align="absmiddle">. Because 3.356 &gt; 1.96, we reject the null hypothesis and conclude that the Poisson rate constants are different in the two field types. The <em>p</em>-value of the test statistic is just the probability under the null model that <img src="../../images/lectures/lecture16/Waldcrit.gif" alt="Wald critical value" width="82" height="30" align="absmiddle">. We  obtain this by calculating this probability for one tail and then doubling the result. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 2*(1-pnorm(abs(out.pois2$estimate[2]/se2[2])))</div>
+<span class="style141">[1] 0.0007892766</span>
+<p>Observe that this <em>p</em>-value is very close to what we obtained from the likelihood ratio test <a href="lecture16.htm#LRpvalue">above</a>.</p>
+<h2><a name="glm" id="glm"></a>Fitting the models using the glm function</h2>
+<p>As we've seen regression models can be fit to a response variable that has a Poisson distribution by using the <span class="style1">glm</span> function with <span class="style22">family=poisson</span>. The default link function is the log link thus using <span class="style1">glm</span> we actually fit the following two models:</p>
+<p><strong>Model 1: </strong>&nbsp;<span class="style10">log &mu; = &beta;<sub>0</sub></span><br>
+<strong>Model 2: </strong>&nbsp;<span class="style10">log &mu; = &beta;<sub>0</sub> + &beta;<sub>1</sub>*(field=='Rookery')</span></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- glm(slugs~1, data=slugs , family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out2 &lt;- glm(slugs~field, data=slugs, family=poisson)</div>
+<p><a name="test"></a>To obtain the likelihood ratio test of H<sub>0</sub>: &beta;<sub>1</sub> = 0, we use the <span class="style1">anova</span> function and list the reduced model followed by the full model. Adding the argument<span class="style22"> test='Chisq'</span> produces the test.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out1, out2, test='Chisq')</div>
+<span class="style24">Analysis of Deviance Table</span>
+<p><span class="style24">Model 1: slugs ~ 1<br>
+  Model 2: slugs ~ field<br>
+  &nbsp; Resid. Df Resid. Dev Df Deviance Pr(&gt;Chi)&nbsp;&nbsp;&nbsp; <br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp;&nbsp; 224.86&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp; 213.44&nbsp; 1&nbsp;&nbsp; 11.422 </span><span class="style25">0.000726</span><span class="style24"> ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>We can also get the likelihood ratio test by specifying only the full model in the <span class="style1">anova</span> function along with <span class="style22">test='Chisq'</span>. This time <span class="style1">anova</span> returns sequential likelihood ratio tests, much like the sequential <em>F</em>-tests it returns with normal models.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out2, test='Chisq')</div>
+<span class="style24">Analysis of Deviance Table</span>
+<p><span class="style24">Model: poisson, link: log</span>
+<p><span class="style24">Response: slugs</span>
+<p><span class="style24">Terms added sequentially (first to last)</span>
+
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Deviance Resid. Df Resid. Dev Pr(&gt;Chi)&nbsp;&nbsp;&nbsp; <br>
+  NULL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp;&nbsp; 224.86&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  field&nbsp; 1&nbsp;&nbsp; 11.422&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp; 213.44 </span><span class="style25">0.000726</span><span class="style24"> ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>The summary table of the full model reports the Wald test of H<sub>0</sub>: &beta;<sub>1</sub> = 0.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out2)</div>
+<span class="style24">Call:<br>
+  glm(formula = slugs ~ field, family = poisson, data = slugs)</span>
+<p><span class="style24">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -2.1331&nbsp; -1.5969&nbsp; -0.9519&nbsp;&nbsp; 0.4580&nbsp;&nbsp; 4.8727&nbsp; </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp; 0.2429&nbsp;&nbsp;&nbsp;&nbsp; 0.1400&nbsp;&nbsp; 1.735 0.082744 .&nbsp; <br>
+  fieldRookery&nbsp;&nbsp; 0.5790&nbsp;&nbsp;&nbsp;&nbsp; 0.1749&nbsp;&nbsp; 3.310 0.000932 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">(Dispersion parameter for poisson family taken to be 1)</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; Null deviance: 224.86&nbsp; on 79&nbsp; degrees of freedom<br>
+  Residual deviance: 213.44&nbsp; on 78&nbsp; degrees of freedom<br>
+  AIC: 346.26</span>
+<p><span class="style24">Number of Fisher Scoring iterations: 6</span>
+<p>Notice that the reported <em>p</em>-values for the Wald test (<em>p</em> = 0.000932) and the likelihood ratio test (<em>p</em> = 0.000726) are similar but different. This will always be the case. The likelihood ratio test is based on the full log-likelihood while the Wald test uses only the curvature of the log-likelihood surface.</p>
+<p>If we use the <span class="style1">predict</span> function on a <span class="style1">glm</span> model we get the predictions on the scale of the link  function. For Poisson regression that means the predictions are of the log mean.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> predict(out2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 <br>
+  0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14 <br>
+  0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21 <br>
+  0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28 <br>
+  0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 35 <br>
+  0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;37&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 42 <br>
+  0.2429462 0.2429462 0.2429462 0.2429462 0.2429462 0.8219801 0.8219801 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 46&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 49 <br>
+  0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 56 <br>
+  0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 58&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 61&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 62&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 63 <br>
+  0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 66&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 67&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 68&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 70 <br>
+  0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 71&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 72&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 73&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 74&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 76&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 77 <br>
+  0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 0.8219801 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80 <br>
+  0.8219801 0.8219801 0.8219801 </span>
+
+
+
+<p><a name="type"></a>To get predictions on the scale of the response variable we need to add the <span class="style22">type='response'</span> argument.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> predict(out2, type='response')</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 12 <br>
+  1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 <br>
+  &nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 21&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp; 24 <br>
+  1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 <br>
+  &nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp; 28&nbsp;&nbsp;&nbsp; 29&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 31&nbsp;&nbsp;&nbsp; 32&nbsp;&nbsp;&nbsp; 33&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp; 35&nbsp;&nbsp;&nbsp; 36 <br>
+  1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 1.275 <br>
+  &nbsp;&nbsp; 37&nbsp;&nbsp;&nbsp; 38&nbsp;&nbsp;&nbsp; 39&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp;&nbsp; 42&nbsp;&nbsp;&nbsp; 43&nbsp;&nbsp;&nbsp; 44&nbsp;&nbsp;&nbsp; 45&nbsp;&nbsp;&nbsp; 46&nbsp;&nbsp;&nbsp; 47&nbsp;&nbsp;&nbsp; 48 <br>
+  1.275 1.275 1.275 1.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 <br>
+  &nbsp;&nbsp; 49&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp; 51&nbsp;&nbsp;&nbsp; 52&nbsp;&nbsp;&nbsp; 53&nbsp;&nbsp;&nbsp; 54&nbsp;&nbsp;&nbsp; 55&nbsp;&nbsp;&nbsp; 56&nbsp;&nbsp;&nbsp; 57&nbsp;&nbsp;&nbsp; 58&nbsp;&nbsp;&nbsp; 59&nbsp;&nbsp;&nbsp; 60 <br>
+  2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 <br>
+  &nbsp;&nbsp; 61&nbsp;&nbsp;&nbsp; 62&nbsp;&nbsp;&nbsp; 63&nbsp;&nbsp;&nbsp; 64&nbsp;&nbsp;&nbsp; 65&nbsp;&nbsp;&nbsp; 66&nbsp;&nbsp;&nbsp; 67&nbsp;&nbsp;&nbsp; 68&nbsp;&nbsp;&nbsp; 69&nbsp;&nbsp;&nbsp; 70&nbsp;&nbsp;&nbsp; 71&nbsp;&nbsp;&nbsp; 72 <br>
+  2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 <br>
+  &nbsp;&nbsp; 73&nbsp;&nbsp;&nbsp; 74&nbsp;&nbsp;&nbsp; 75&nbsp;&nbsp;&nbsp; 76&nbsp;&nbsp;&nbsp; 77&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp; 80 <br>
+  2.275 2.275 2.275 2.275 2.275 2.275 2.275 2.275 </span>
+
+<h2><a name="graphing"></a>Graphing the fitted Poisson model</h2>
+<p>With only two groups it's easy to calculate the probabilities we need. I do things a bit more systematically in order to be able to generalize to more complicated situations. We need the Poisson probabilities for the categories 0 through 10. The Poisson mean varies depending on the field type the slugs inhabit so we'll need to account for this. I elect to add the tail probability, P(<em>X</em> &gt; 10) to the last category, P(<em>X</em> = 10). The <span class="style8">slugtable</span> data frame variable <span class="style8">Var1</span> contains the different count categories while <span class="style8">Var2</span> contains the field variable. I begin by using the <span class="style1">predict</span> function with the <span class="style22">newdata</span> argument to obtain the predicted means for each observation in the <span class="style8">slugtable</span> data frame.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugtable$mu &lt;- predict(out2, type='response', newdata=data.frame(field=slugtable$Var2))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable</div>
+<span class="style24">  &nbsp;&nbsp; Var1&nbsp;&nbsp;&nbsp; Var2 Freq Var1.num&nbsp;&nbsp;&nbsp; mu<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 0 Nursery&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 1.275<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; 1 Nursery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 1.275<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; 2 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1.275<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp; 3 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 1.275<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; 4 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 1.275<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; 5 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 1.275<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 6 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 1.275<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp; 7 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 1.275<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp; 8 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 1.275<br>
+  10&nbsp;&nbsp;&nbsp; 9 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 1.275<br>
+  11&nbsp;&nbsp; 10 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 1.275<br>
+  12&nbsp;&nbsp;&nbsp; 0 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 2.275<br>
+  13&nbsp;&nbsp;&nbsp; 1 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.275<br>
+  14&nbsp;&nbsp;&nbsp; 2 Rookery&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 2.275<br>
+  15&nbsp;&nbsp;&nbsp; 3 Rookery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 2.275<br>
+  16&nbsp;&nbsp;&nbsp; 4 Rookery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 2.275<br>
+  17&nbsp;&nbsp;&nbsp; 5 Rookery&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 2.275<br>
+  18&nbsp;&nbsp;&nbsp; 6 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 2.275<br>
+  19&nbsp;&nbsp;&nbsp; 7 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 2.275<br>
+  20&nbsp;&nbsp;&nbsp; 8 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 2.275<br>
+  21&nbsp; &nbsp;&nbsp;9 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 2.275<br>
+22&nbsp;&nbsp; 10 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 2.275</span>
+<p>Next I calculate the Poisson probabilities for  categories 0 through 10  (<span class="style8">Var1.num</span>) using the mean recorded in each row.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$p &lt;- dpois(slugtable$Var1.num, lambda=slugtable$mu)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable</div>
+<span class="style24">  &nbsp;&nbsp; Var1&nbsp;&nbsp;&nbsp; Var2 Freq Var1.num&nbsp;&nbsp;&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 0 Nursery&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 1.275 2.794310e-01<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; 1 Nursery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 1.275 3.562745e-01<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; 2 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1.275 2.271250e-01<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp; 3 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 1.275 9.652812e-02<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; 4 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 1.275 3.076834e-02<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; 5 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 1.275 7.845926e-03<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 6 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;6 1.275 1.667259e-03<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp; 7 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 1.275 3.036794e-04<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp; 8 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 1.275 4.839890e-05<br>
+  10&nbsp;&nbsp;&nbsp; 9 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 1.275 6.856511e-06<br>
+  11&nbsp;&nbsp; 10 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 1.275 8.742051e-07<br>
+  12&nbsp;&nbsp;&nbsp; 0 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 2.275 1.027969e-01<br>
+  13&nbsp;&nbsp;&nbsp; 1 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.275 2.338630e-01<br>
+  14&nbsp;&nbsp;&nbsp; 2 Rookery&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 2.275 2.660191e-01<br>
+  15&nbsp;&nbsp;&nbsp; 3 Rookery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 2.275 2.017312e-01<br>
+  16&nbsp;&nbsp;&nbsp; 4 Rookery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 2.275 1.147346e-01<br>
+  17&nbsp;&nbsp;&nbsp; 5 Rookery&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 2.275 5.220424e-02<br>
+  18&nbsp;&nbsp;&nbsp; 6 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 2.275 1.979411e-02<br>
+  19&nbsp;&nbsp;&nbsp; 7 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 2.275 6.433086e-03<br>
+  20&nbsp;&nbsp;&nbsp; 8 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 2.275 1.829409e-03<br>
+  21&nbsp;&nbsp;&nbsp; 9 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 2.275 4.624339e-04<br>
+22&nbsp;&nbsp; 10 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 2.275 1.052037e-04</span>
+<p>Finally I add the tail probability, P(<em>X</em> &gt; 10) to the <em>X</em> = 10 category. For this I  use a Boolean expression to select only the <em>X</em> = 10 category: <span class="style8">slugtable$Var1.num==10</span>. Recall that P(<em>X</em> &gt; 10) = <span class="style8">ppois(10, lambda, lower.tail=F)</span>. To make sure I've done this correctly I create a new variable and calculate all of the probabilities again adding the tail probability only to the <em>X</em> = 10 category.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$p2 &lt;- dpois(as.numeric(as.character(slugtable$Var1)), lambda=slugtable$mu) + &nbsp;(slugtable$Var1==10) * ppois(as.numeric(as.character(slugtable$Var1)), lambda=slugtable$mu, lower.tail=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable</div>
+<span class="style24">  &nbsp;&nbsp; Var1&nbsp;&nbsp;&nbsp; Var2 Freq Var1.num&nbsp;&nbsp;&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p2<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 0 Nursery&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 1.275 2.794310e-01 2.794310e-01<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; 1 Nursery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 1.275 3.562745e-01 3.562745e-01<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; 2 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1.275 2.271250e-01 2.271250e-01<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp; 3 Nursery&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 1.275 9.652812e-02 9.652812e-02<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; 4 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 1.275 3.076834e-02 3.076834e-02<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; 5 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 1.275 7.845926e-03 7.845926e-03<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 6 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 1.275 1.667259e-03 1.667259e-03<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp; 7 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 1.275 3.036794e-04 3.036794e-04<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp; 8 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 1.275 4.839890e-05 4.839890e-05<br>
+  10&nbsp;&nbsp;&nbsp; 9 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 1.275 6.856511e-06 6.856511e-06<br>
+  11&nbsp;&nbsp; 10 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 1.275 8.742051e-07 9.874605e-07<br>
+  12&nbsp;&nbsp;&nbsp; 0 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 2.275 1.027969e-01 1.027969e-01<br>
+  13&nbsp;&nbsp;&nbsp; 1 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.275 2.338630e-01 2.338630e-01<br>
+  14&nbsp;&nbsp;&nbsp; 2 Rookery&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 2.275 2.660191e-01 2.660191e-01<br>
+  15&nbsp;&nbsp;&nbsp; 3 Rookery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 2.275 2.017312e-01 2.017312e-01<br>
+  16&nbsp;&nbsp;&nbsp; 4 Rookery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 2.275 1.147346e-01 1.147346e-01<br>
+  17&nbsp;&nbsp;&nbsp; 5 Rookery&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 2.275 5.220424e-02 5.220424e-02<br>
+  18&nbsp;&nbsp;&nbsp; 6 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 2.275 1.979411e-02 1.979411e-02<br>
+  19&nbsp;&nbsp;&nbsp; 7 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 2.275 6.433086e-03 6.433086e-03<br>
+  20&nbsp;&nbsp;&nbsp; 8 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 2.275 1.829409e-03 1.829409e-03<br>
+  21&nbsp;&nbsp;&nbsp; 9 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 2.275 4.624339e-04 4.624339e-04<br>
+22&nbsp;&nbsp; 10 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 2.275 1.052037e-04 1.319466e-04</span>
+<p>Checking we see that the Nursery and Rookery probabilities now sum to 1.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(slugtable$p2[slugtable$Var2=='Nursery'])</div>
+<span class="style24">  [1] 1</span>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(slugtable$p2[slugtable$Var2=='Rookery'])</div>
+<span class="style24">[1] 1</span>
+<p> If we sum the probabilities separately for each  count category over all rocks of that field type, we get the predicted counts for that field. For our simple model the predicted probabilities  are the same for each rock that comes from the same field type. So a simpler way to get the predicted counts is to multiply the probability distribution for one rock by the total number of rocks, which is 40 for each field type. </p>
+<p>In general the situation could be more complicated so I handle this more generally. I tabulate the counts by field type and then use the <span class="style8">Var2</span> variable to select which entry of this table I should use to multiply the individual probabilities. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">n &lt;- table(slugs$field)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n</div>
+<span class="style141">Nursery Rookery <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;40</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> as.numeric(slugtable$Var2)</div>
+<span class="style141">[1] 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2<br>
+</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#calculate predicted counts under Poisson model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$exp &lt;- slugtable$p2 * n[as.numeric(slugtable$Var2)]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable</div>
+<span class="style141">  &nbsp;&nbsp; Var1&nbsp;&nbsp;&nbsp; Var2 Freq Var1.num&nbsp;&nbsp;&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exp<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 0 Nursery&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 1.275 2.794310e-01 2.794310e-01 1.117724e+01<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; 1 Nursery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 1.275 3.562745e-01 3.562745e-01 1.425098e+01<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; 2 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1.275 2.271250e-01 2.271250e-01 9.084999e+00<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp; 3 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 1.275 9.652812e-02 9.652812e-02 3.861125e+00<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; 4 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 1.275 3.076834e-02 3.076834e-02 1.230734e+00<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; 5 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 1.275 7.845926e-03 7.845926e-03 3.138370e-01<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 6 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 1.275 1.667259e-03 1.667259e-03 6.669037e-02<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp; 7 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 1.275 3.036794e-04 3.036794e-04 1.214717e-02<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp; 8 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 1.275 4.839890e-05 4.839890e-05 1.935956e-03<br>
+  10&nbsp;&nbsp;&nbsp; 9 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 1.275 6.856511e-06 6.856511e-06 2.742604e-04<br>
+  11&nbsp;&nbsp; 10 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 1.275 8.742051e-07 9.874605e-07 3.949842e-05<br>
+  12&nbsp;&nbsp;&nbsp; 0 Rookery&nbsp;&nbsp; &nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 2.275 1.027969e-01 1.027969e-01 4.111876e+00<br>
+  13&nbsp;&nbsp;&nbsp; 1 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.275 2.338630e-01 2.338630e-01 9.354519e+00<br>
+  14&nbsp;&nbsp;&nbsp; 2 Rookery&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 2.275 2.660191e-01 2.660191e-01 1.064076e+01<br>
+  15&nbsp;&nbsp;&nbsp; 3 Rookery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 2.275 2.017312e-01 2.017312e-01 8.069247e+00<br>
+  16&nbsp;&nbsp;&nbsp; 4 Rookery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 2.275 1.147346e-01 1.147346e-01 4.589384e+00<br>
+  17&nbsp;&nbsp;&nbsp; 5 Rookery&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 2.275 5.220424e-02 5.220424e-02 2.088170e+00<br>
+  18&nbsp;&nbsp;&nbsp; 6 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 2.275 1.979411e-02 1.979411e-02 7.917644e-01<br>
+  19&nbsp;&nbsp; &nbsp;7 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 2.275 6.433086e-03 6.433086e-03 2.573234e-01<br>
+  20&nbsp;&nbsp;&nbsp; 8 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 2.275 1.829409e-03 1.829409e-03 7.317635e-02<br>
+  21&nbsp;&nbsp;&nbsp; 9 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 2.275 4.624339e-04 4.624339e-04 1.849735e-02<br>
+  22&nbsp;&nbsp; 10 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 2.275 1.052037e-04 1.319466e-04 5.277863e-03</span> 
+<p><a name="startplot"></a>To add the predicted counts to a lattice bar plot of the observed counts we need to use the <span class="style16">subscripts</span> variable in a panel function to select the appropriate predicted counts for each panel. Here's an example where I use the <span class="style1">panel.xyplot</span> function to draw the bar chart and then use a <span class="style1">panel.points</span> function to superimpose the predicted counts on top of the bars. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#add predicted counts to the bar plot of the observed counts</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(Freq~Var1.num|Var2, data=slugtable, xlab='Count category',
+  panel=function(x, y, subscripts) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x, y, type='h', lineend=1, col='grey', lwd=10)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.points(x, <span class="style39">slugtable$exp[subscripts]</span>, pch=16, cex=.6, col=1, type='o')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">})</div>
+<p>In a lattice graph the formula expression <span class="style8">Freq~Var1.num|Var2</span> defines the <em>x</em>- and <em>y</em>-variables for the panel function.  In the panel function <em>x</em> and <em>y</em> correspond to the values of <span class="style8">Var1.num</span> and <span class="style8">Freq</span> respectively for the subset of observations  whose  value of variable <span class="style8">Var2</span> matches the the value for  the  panel currently being drawn. For all other variables not included in the formula we have to do the subsetting by panel explicitly ourselves. That's what the <span class="style16">subscripts</span> variable is for. It acts like a dummy variable that selects the current panel observations. So in the <span class="style1">panel.points</span> function <span class="style8">slugtable$exp[subscripts]</span> selects the predicted counts for the current panel while <em>x</em> represents  the already subsetted values of <span class="style8">Var1.num</span>.</p>
+<p><a name="panelbarchart"></a>There's a <span class="style1">barchart</span> panel function, <span class="style1">panel.barchart</span>, that can be used instead of <span class="style1">panel.xyplot</span> to generate the observed counts. This time I use the factor version of  <span class="style8">Var1</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#add predicted counts to the bar plot of the observed counts</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(Freq~Var1|Var2, data=slugtable, xlab='Count category',  panel=function(x, y,subscripts) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.barchart(x, y, horizontal=F, origin=0, col='grey')</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.points(x, slugtable$exp[subscripts], pch=16, cex=.6, col=1, type='o')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">})</div>
+<p> The two versions of the lattice bar plot are shown in Fig. 11. </p>
+<div align="center">
+  <table width="690" border="0" cellpadding="5">
+    <tr>
+      <td>(a) <img src="../../images/lectures/lecture16/fig11a.png" alt="fig. 11a" width="310" height="240" align="texttop"></td>
+      <td>(b) <img src="../../images/lectures/lecture16/fig11b.png" alt="fig. 11b" width="310" height="240" align="texttop"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><p style="padding-left: 55px; text-indent:-55px"><span class="styleArial"><strong>Fig. 11</strong> &nbsp;Bar plots with superimposed predictions from a Poisson model. (a) uses the panel.xyplot function to draw the bars while (b) uses the panel.barchart function to draw the bars.</span></p></td>
+    </tr>
+  </table>
+</div>
+<h2><a name="cited" id="cited"></a>Cited references</h2>
+<ul>
+  <li>Crawley, Michael J. 2002. <i>Statistical Computing: An Introduction to 
+  Data Analysis Using S-Plus</i>. Wiley, New York.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture16&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 19, 2012<br>
+      URL: <a href="lecture16.htm#lecture16" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture16.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

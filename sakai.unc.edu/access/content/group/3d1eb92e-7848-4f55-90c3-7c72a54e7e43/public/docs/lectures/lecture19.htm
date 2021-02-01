@@ -1,0 +1,746 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 19&mdash;Monday, October 29, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture19" id="lecture19"></a>Lecture 19&mdash;Monday, October 29, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture19.htm#criteria">Model selection criteria</a></li>
+  <li><a href="lecture19.htm#theory">The theory behind AIC</a>
+    <ul>
+      <li><a href="lecture19.htm#kullback">Kullback-Leibler information and AIC</a></li>
+      <li><a href="lecture19.htm#true">The true state of nature drops out as a constant</a></li>
+      <li><a href="lecture19.htm#Akaike">Akaike's contribution</a></li>
+      <li><a href="lecture19.htm#caveats">Caveats with using AIC for model selection</a>
+        <ul>
+          <li><a href="lecture19.htm#caveat1">Caveat 1&mdash;missing data</a></li>
+          <li><a href="lecture19.htm#caveat2">Caveat 2&mdash;transformations of the response</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="lecture19.htm#using">Using AIC on models for the slugs data</a></li>
+  <li><a href="lecture19.htm#galapagos">Fitting species area curves to the Galapagos Islands plant richness data set</a>
+    <ul>
+      <li><a href="lecture19.htm#rawmodels">Normal models with the raw response</a></li>
+      <li><a href="lecture19.htm#countmodels">Count models</a></li>
+      <li><a href="lecture19.htm#normmodels">Normal models with a transformed response</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture19.htm#raw">Normal models with the raw response</a>
+    <ul>
+      <li><a href="lecture19.htm#model1">Model 1: linear model</a></li>
+      <li><a href="lecture19.htm#model2">Model 2: Gleason model</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture19.htm#count">Count models </a>
+    <ul>
+      <li><a href="lecture19.htm#model3">Model 4: Poisson model</a></li>
+      <li><a href="lecture19.htm#model4">Model 5: Negative binomial model (NB-2)</a></li>
+      <li><a href="lecture19.htm#model5">Model 6: Negative binomial model (NB-1)</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture19.htm#assessing">Assessing the variance-mean relationship in data</a></li>
+  <li><a href="lecture19.htm#cited">Cited references</a></li>
+  <li><a href="lecture19.htm#references">References on AIC</a><a href="lecture19.htm#references"></a></li>
+  <li><a href="lecture19.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture19.htm#RAIC">AIC</a> calculates the AIC of a regression model.</li>
+  <li><a href="lecture19.htm#cut">cut</a> defines categories for a continuous variable using user-specified cut points. By default categories are half-open intervals (open on left) and the first cut point (which defines the minimum value) is not part of the first interval.</li>
+  <li><a href="lecture19.htm#Identity">I</a> is the identity function. Used in formulas to force R to perform arithmetic on a variable before fitting the model.</li>
+  <li><a href="lecture19.htm#quantile">quantile</a> calculates quantiles of a variable at user-specified values. By default, it returns quartiles, min, and max. </li>
+  <li><a href="lecture19.htm#var">var</a> calculates the variance of its argument.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture19.htm#includelowest">include.lowest</a>= (argument to <span class="style1">cut</span>) takes on values TRUE or FALSE. Alters first (or last, if <span class="style22">right=FALSE</span>) interval created by the <span class="style1">cut</span> function so that the interval is closed (rather than half-open).</li>
+</ul>
+<h3>R packages used</h3>
+<ul>
+  <li><a href="lecture19.htm#gamlss">gamlss</a> for separate dispersion negative binomial models.</li>
+  <li><a href="lecture19.htm#mass">MASS</a> for the <span class="style1">glm.nb</span> function.</li>
+</ul>
+<h2><a name="criteria" id="criteria"></a>Model selection criteria</h2>
+<p>Choosing a best model from a collection of candidates is a nontrivial task for which statisticians can only offer rough guidelines. The first step is to choose a suitable collection of candidate models. This is fundamentally a biological problem rather than a statistical one (although statistics can offer guidelines in, for example, the choice of probability generating mechanisms). In what follows I will assume a manageable set of models based on clear biological principles has already been assembled. </p>
+<p>Having chosen the field of candidates the next problem is choosing a criterion on which to evaluate them. Methods based on significance testing have limited utility here. </p>
+<ul>
+  <li>Approaches such as the likelihood ratio test require that the models are nested and are of no help when they are not. </li>
+  <li>If you wish to compare models using different probability generating mechanisms, such as Poisson, negative binomial, lognormal, or some other transformation to normality, significance testing is helpful in only special circumstances.</li>
+  <li>Finally significance testing has a lot of intellectual baggage associated with it and has been heavily criticized in many scientific disciplines (including ecology) as being divorced from the scientific method. </li>
+</ul>
+<p>We can  compare non-nested models directly using log-likelihood as long as all the models in question estimate the same number of parameters, use the same response variable, and use exactly the same set of observations in fitting the model. The rule is simple. Models with larger log-likelihoods are better  models although there is no real way to quantify how much better. When two models  use the same response variable but in one model the response variable is transformed (log, square root, or the like) but  in the other it is not, then these models cannot be compared directly using the log-likelihoods of the fitted models. Fortunately it is possible to reformulate the log-likelihood of the transformed model and use the reformulated version for model comparisons. The details for doing this are discussed lecture 20.</p>
+<p>Information-theoretic approaches offer an alternative to significance testing and provide a way to extend log-likelhood comparisons to models with different numbers of parameters. There are a number of information-based criteria. I will mention three: AIC, AIC<sub>c</sub>, and BIC. In what follows I use the following notation. </p>
+<ul>
+  <li><i>&theta;</i> is the set (vector) of model parameters.</li>
+  <li><img src="../../images/lectures/lecture19/liklihood.gif" width="45" height="40" align="absmiddle"> is the likelihood of our model given the data when evaluated at the maximum likelihood estimate of <i>&theta;</i>, denoted here by <img src="../../images/lectures/lecture19/thetahat.gif" alt="theta hat" width="17" height="28" align="absmiddle">.</li>
+  <li><i>n</i> is the number of observations.</li>
+  <li><i>K</i> is the number of estimated parameters in our model.</li>
+</ul>
+<p>Using this notation the three information-theoretic criteria I mentioned are defined as follows. </p>
+<ul>
+  <li><b name="AIC"><a name="AIC"></a>AIC</b>: Akaike Information Criterion</li>
+</ul>
+<p align="center"><img src="../../images/lectures/lecture19/AIC.gif" width="198" height="40"></p>
+<ul>
+  <li><b name="AICc"><a name="AICc"></a>AIC<sub>c</sub></b>: corrected AIC for small samples (use when <img src="../../images/lectures/lecture19/AICccutoff.gif" width="70" height="26" align="absmiddle"> )</li>
+</ul>
+<p align="center"><img src="../../images/lectures/lecture19/AICc.gif" width="310" height="51"></p>
+<ul>
+  <li><b name="BIC"><a name="BIC"></a>BIC</b>: Bayesian Information Criterion (also called SIC for Schwarz Information Criterion), although there is very little that is Bayesian about it. </li>
+</ul>
+<p align="center"><img src="../../images/lectures/lecture19/BIC.gif" width="227" height="40"></p>
+<p>Better models are those that yield the smaller values of these statistics. Observe that all of these statistics involve the log-likelihood. Since the likelihood is the probability of obtaining the data under the given model it makes sense to choose a model that makes this probability as large as possible. Taking the log doesn't change anything, but putting the minus sign in front flips things around. Now instead of maximizing you need to minimize. The model with the smallest value of one of these statistics is best.</p>
+<p>All three statistics have the same first term but they differ in the remaining terms. Notice that in each case the terms being added to <img src="../../images/lectures/lecture19/twologlike.gif" width="96" height="40" align="absmiddle"> are positive. Thus these terms make the value of the corresponding statistic bigger which in turn makes it harder for that model to be chosen best. The terms being  added to <img src="../../images/lectures/lecture19/twologlike.gif" width="96" height="40" align="absmiddle">are called  penalty terms and it's often stated that the reason they are included is to prevent overfitting. Thus you'll often see it stated that AIC and BIC are more or less equivalent statistics differing only in that they use different &quot;penalty&quot; terms, 2<i>K</i> for AIC versus <img src="../../images/lectures/lecture19/klogn.gif" alt="klogn" width="62" height="27" align="absmiddle"><i> </i>for BIC. Because the BIC penalty term grows in magnitude more quickly than the AIC penalty term as <i>K</i> increases, BIC favors smaller models than does AIC. </p>
+<p>While it's useful to think of model building as a balance between improved fit  (increased log-likelihood) and parsimony (fewer parameters), treating the additional term in the formula for AIC as just a penalty term is really incorrect and reflects a complete lack of understanding of how AIC is derived. As we'll see the 2<i>K</i> term is an essential part of the definition of AIC and is more than just a penalty term.</p>
+<h2 align="left"><a name="theory" id="theory"></a>The theory behind AIC</h2>
+<p>Among the   information-theoretic criteria  AIC is the most popular and certainly the most used among biologists. AIC has had two primary champions, David Anderson and Ken Burnham both of Colorado State University. Anderson is a wildlife biologist and Burnham is a statistician. These men have been promoting AIC as part of a comprehensive program of model selection in the biological sciences. They have done so through </p>
+<ol>
+  <li>a series of articles (a partial list can be found at the <a href="lecture19.htm#references">end</a> of this document),</li>
+  <li>a book, <i>Model Selection and Multimodel Inference</i>, now in its second edition,  currently (as of October 2012) with over 11,000 citations in Science Citation Index, mostly in ecology journals, and</li>
+  <li> workshops and courses.</li>
+</ol>
+<p>Anderson and Burnham have been fairly successful in their mission. As an example, the <i>Journal of Wildlife Management</i> now actively promotes the use of AIC instead of significance testing for model selection  in the manuscripts it solicits. Most of the editors of the journal are well-versed in information-theoretic approaches to model selection and are promoters of it.</p>
+<p>The primary attraction of AIC over other methods of model selection is that it is not an ad hoc method but instead has a strong theoretical basis. Although the 2<em>K</em> in the AIC formula does serve as a penalty term by penalizing bigger models when the additional parameters  don't sufficiently increase the log-likelihood, it is actually much more than a mere penalty term. In what follows I  outline a bit of the theory that lies behind AIC. Additional details can be found in Burnham and Anderson (2002).</p>
+<h3><a name="kullback"></a>Kullback-Leibler information and AIC</h3>
+<p name="KL">The <span class="style31">Kullback-Leibler (K-L) information</span> between models <i>f</i> and <i>g </i>is defined for continuous distributions as follows.</p>
+<p align="center"> <img src="../../images/lectures/lecture19/KLinfo.gif" width="270" height="66"></p>
+<p>Here <i>f</i> and <i>g</i> are probability distributions. The verbal description of <i>I</i>(<i>f,</i> <i>g</i>) is that it represents the distance from model <i>g</i> to model <i>f</i>. Alternatively it is the information lost when using <i>g</i> to approximate <i>f</i>. Typically, <i>g</i> is taken to be an approximating model while <i>f</i> is taken to be the true state of nature. The quantity <i>&theta; </i>denotes the various parameters used in the specification of <i>g</i>. As a measure of distance, <i>I</i>(<i>f</i>, <i>g</i>) is a strange beast. Because of the asymmetry in the way <i>f</i> and <i>g</i> are treated in the integral, <i>I</i>(<i>f</i>, <i>g</i>) &ne; <i>I</i>(<i>g</i>, <i>f</i>). </p>
+<p>The form the K-L information takes for discrete probability models may be a bit more enlightening. Let the true state of nature be</p>
+<p align="center"><img src="../../images/lectures/lecture19/fdiscrete.gif" width="198" height="32" alt="f discrete"></p>
+<p>and the approximating model be </p>
+<p align="center"><img src="../../images/lectures/lecture19/gdiscrete.gif" width="197" height="32" alt="g discrete"></p>
+<p>The K-L information between models <i>f</i> and <i>g </i>is defined for discrete distributions to be</p>
+<p align="center"><img src="../../images/lectures/lecture19/Idiscrete.gif" width="200" height="63"></p>
+<p>Because the log of a quotient is the difference of logs, the K-L information is also given by</p>
+<p align="center"><img src="../../images/lectures/lecture19/Idiscrete2.gif" width="283" height="58"></p>
+<p>You may recognize that one of the two terms in this difference has the same form as <i>H</i>, the Shannon-Weiner diversity index, another information-based measure.</p>
+<p>The logarithm function plays a key role in any formulation of information. This is the case because while independent bits of information multiply on a probability scale, they need to add on an information scale.
+  Recall that for independent events <i>A</i> and <i>B</i>, the probability of observing both is the product of the individual probabilities.</p>
+<p align="center"><img src="../../images/lectures/lecture19/independentprob.gif" width="202" height="30" alt="independent probability"></p>
+<p>But if the events are independent then the information accrued in observing both should be additive.</p>
+<p align="center"><img src="../../images/lectures/lecture19/independentinfo.gif" width="198" height="30"></p>
+<p>Because the logarithm turn products into sums: log(<i>ab</i>) = log<i>a</i> + log<i>b</i>, it is the natural candidate for transforming probabilities into information.</p>
+<h3><b><a name="true"></a>The true state of nature drops out as a constant</b></h3>
+<p>Using properties of logarithms the integral form for <i>I</i>(<i>f</i>, <i>g</i>) can be written as a difference of integrals.</p>
+<p align="center"><img src="../../images/lectures/lecture19/KLinfodiff.gif" width="438" height="78"></p>
+<p>where in the last step I use the fact that the form of each integral is that of an expectation. Now suppose we have a second approximating model <i>h</i> for the true state of nature <i>f</i>. The information lost in using <i>h</i> to approximate <i>f </i>is given by the following.</p>
+<p align="center"><img src="../../images/lectures/lecture19/KLinfodiffh.gif" width="438" height="78"></p>
+<p>Observe that <img src="../../images/lectures/lecture19/expectedtruth.gif" alt="expected truth" width="127" height="33" align="absmiddle"> is a common term in each expression. If we want to compare model <i>g </i>to model <i>h</i> it makes sense to consider the difference <i>I</i>(<i>f</i>, <i>g</i>) &#150; <i>I</i>(<i>f</i>, <i>h</i>). If we do so then we find</p>
+<p align="center"><img src="../../images/lectures/lecture19/modeldiff.gif" width="488" height="128"></p>
+<p>Observe that <img src="../../images/lectures/lecture19/expectedtruth.gif" alt="expected truth" width="127" height="33" align="absmiddle"> has canceled out. Thus if our goal is to compare models, truth drops out! The two terms that remain in the difference are exactly of the same form and we are just comparing their relative magnitudes when we calculate their difference. Thus for a generic model <i>g</i> all we need to estimate is the following</p>
+<p align="center"><img src="../../images/lectures/lecture19/relativeKL.gif" width="158" height="38"></p>
+<p name="relative"><a name="relative"></a>This last expression is called <span class="style31">relative Kullback-Leibler information</span>. Its absolute magnitude has no meaning. It is only useful for measuring how far apart two approximating models are. Relative K-L information is measured on an interval scale, a scale without an absolute zero. The true absolute zero corresponds to truth and is no longer part of the expression. This interval-scale property will later carry over to AIC. </p>
+<h3><b><a name="Akaike"></a>Akaike's contribution</b></h3>
+<p>Hirotugu Akaike (Ah-KAH-ee-key), who died in 2009, observed in a classic paper in 1973 that there is one further problem in trying to estimate relative K-L information. In our approximating model we typically won't know the exact value of <i>&theta;.</i> Instead we will have to use an estimate <img src="../../images/lectures/lecture19/thetahat.gif" width="16" height="28" align="absbottom">. Since this estimate is likely to be in error, another layer of uncertainty is added to the mix. So Akaike suggested that  we should   calculate the average value of relative Kullback-Leibler information over all possible values of <img src="../../images/lectures/lecture19/thetahat.gif" width="16" height="28" align="absbottom"><i>.</i> In terms of expectation we might call this quantity <span class="style31">expected relative K-L information</span> and write it (suppressing the reference to <i>f</i>) as </p>
+<p align="center"><img src="../../images/lectures/lecture19/expectedrelativeKL.gif" width="200" height="46"></p>
+<p>The notation makes this expression look fairly intimidating but in fact Akaike found an unbiased estimator of it. The estimator is</p>
+<p align="center"><img src="../../images/lectures/lecture19/estexpinfo.gif" width="151" height="40"></p>
+<p>Here <img src="../../images/lectures/lecture19/loglikelihood.gif" alt="log-likelihood" width="117" height="40" align="absmiddle"> is the log-likelihood function for model <i>g</i> evaluated at the maximum likelihood estimate of the parameter set <i>&theta;. </i><i>K</i> is the number of parameters that are estimated in maximizing the likelihood. Strictly for historical reasons, Akaike chose to multiply this quantity by &#150;2. The resulting quantity has come to be known as Akaike's information criterion or AIC.</p>
+<p align="center"><img src="../../images/lectures/lecture19/AIC.gif" width="198" height="40"></p>
+<p>Models with smaller values of AIC are better models than models with larger values of AIC.  Because AIC estimates expected relative K-L information and, as explained above, the magnitude of relative K-L information is not interpretable, the magnitude of AIC also has no meaning. Fig. 1 illustrates this point. AIC is measured relative to numerical zero rather than  to the absolute zero, which in the figure corresponds to the true state of nature. Because its reference point is arbitrary, the absolute magnitude of AIC is not interpretable.</p>
+<table width="500" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><img src="../../images/lectures/lecture19/fig1.png" width="464" height="248" alt="fig 3"></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 1</strong> &nbsp;While the magnitude of K-L information is interpretable,  the magnitude of AIC tells us nothing about the absolute quality of a model. AIC only provides relative information about models. (<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/notes/lecture19&#32;fig1&#32;Rcode.txt">R code</a>)</td>
+  </tr>
+</table>
+<p>AIC is typically positive, although it can be negative. If the likelihood is constructed from a discrete probability model, the individual terms in the log-likelihood will be log probabilities. These are negative because probabilities are numbers between 0 and 1. AIC multiplies these terms by &ndash;2 and hence AIC will be positive for discrete probability models. In continuous probability models  the terms of the log-likelihood are log densities.  Because a probability density can exceed one AIC can be negative or positive.</p>
+<p><a name="AICc"></a>AIC is only an approximate estimate of expected relative K-L information an approximation that is only good when the number of observations is much greater than the number of estimated parameters. When this is not the case a correction is needed to AIC, called AIC<sub>c</sub>.</p>
+<p align="center"><img src="../../images/lectures/lecture19/AICc.gif" width="310" height="51"></p>
+<p>Here <i>n</i> is the number of observations. The basic recommendation is to use AIC<sub>c</sub> whenever <img src="../../images/lectures/lecture19/AICccutoff.gif" width="70" height="26" align="absmiddle">. Although  the expression for AIC<sub>c</sub> was derived  for normal models, it is routinely applied to other distributions as well.</p>
+<h3><a name="caveats"></a>Caveats with using AIC for model selection</h3>
+<p><strong><a name="caveat1"></a>Caveat 1</strong>. AIC can only be used to compare models that are fit using exactly the same set of observations. This fact can cause problems when fitting regression models to different sets of variables if there are missing values in the data. Consider the following data set consisting of five observations and three variables where one of the variables has a missing value (NA) for  observation 3.</p>
+<table width=250 border=1 align="center" cellpadding=2 cellspacing=2 frame=box rules=groups>
+  <colgroup>
+  </colgroup>
+  <thead>
+    <tr bgcolor="#F1D2D8">
+      <td valign="top" align="center">Observation</td>
+      <td valign="top" align="center"><em>y</em></td>
+      <td valign="top" align="center"><em>x</em><sub>1</sub></td>
+      <td valign="top" align="center"><em>x</em><sub>2</sub></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div align="center">1</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">&ndash;</div></td>
+    </tr>
+    <tr>
+      <td><div align="center">2</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">&ndash;</div></td>
+    </tr>
+    <tr>
+      <td><div align="center">3</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">NA</div></td>
+    </tr>
+    <tr>
+      <td><div align="center">4</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">&ndash;</div></td>
+    </tr>
+    <tr>
+      <td><div align="center">5</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">&ndash;</div></td>
+      <td><div align="center">&ndash;</div></td>
+    </tr>
+</table>
+<p>Most regression packages carry out  case-wise deletion so that observations with missing values in any of the variables that are used in  the model are deleted automatically. The <span class="style1">lm</span> and <span class="style1">glm</span> functions of R do this  without telling you. Thus in fitting the following three models to these data, the number of  observations used will vary.</p>
+<table width=250 border=1 align="center" cellpadding=2 cellspacing=2 frame=box rules=groups>
+  <colgroup>
+  </colgroup>
+  <thead>
+    <tr bgcolor="#F1D2D8">
+      <td><div align="center">Model</div></td>
+      <td><div align="center">Formula</div></td>
+      <td><div align="center"><em>n</em></div></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div align="center">1</div></td>
+      <td><div align="center"><em>y</em> ~ <em>x</em><sub>1</sub></div></td>
+      <td><div align="center">5</div></td>
+    </tr>
+    <tr>
+      <td><div align="center">2</div></td>
+      <td><div align="center"><em>y</em> ~ <em>x</em><sub>2</sub></div></td>
+      <td><div align="center">4</div></td>
+    </tr>
+    <tr>
+      <td><div align="center">3</div></td>
+      <td><div align="center"><em>y</em> ~ <em>x</em><sub>1</sub> + <em>x</em><sub>2</sub></div></td>
+      <td><div align="center">4</div></td>
+    </tr>
+</table>
+<p>Models 2 and 3, being fit to the same four observations, are comparable using AIC, but neither of these models can be compared to the AIC of Model 1 which is based on one additional observation. The solution is to delete observation 3 and fit all three models using only the four complete observations 1, 2, 4, and 5. If model 1 ranks best among these three models then  model 1 can be refit with observation 3  included.</p>
+<p><strong><a name="caveat2"></a>Caveat 2</strong>. The response variable must be the same in each model being compared. Monotonic transformations of the response alter the probability densities at individual points so that  the probabilities over  the corresponding intervals can remain the same.  The likelihood on the other hand only includes the densities at individual points. This means that the log-likelihoods and AICs of models with a transformed response, e.g. log <em>y</em>, cannot be directly compared to the log-likelihoods and AICs of models that are fit to the raw response, <em>y</em>.  Fortunately there are  ways around this problem as we'll see.</p>
+<h2><a name="using"></a>Using AIC on models for the slugs data</h2>
+<p>I reload the slugs data set and fit the six models we considered last time.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugs &lt;- read.table( 'http://www.bio.ic.ac.uk/research/mjcraw/statcomp/data/slugsurvey.txt', header=TRUE)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">glm.pois1 &lt;- glm(slugs~1, data=slugs, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  glm.pois2 &lt;- glm(slugs~field, data=slugs, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(MASS)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  glm.NB1 &lt;- glm.nb(slugs~1, data=slugs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  glm.NB2 &lt;- glm.nb(slugs~field, data=slugs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(gamlss)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  glm.NB3 &lt;- gamlss(slugs ~ 1, sigma.formula=~field, data=slugs, family=NBI)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  glm.NB4 &lt;- gamlss(slugs ~ field, sigma.formula=~field, data=slugs, family=NBI)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">LL.glm &lt;- sapply(list(glm.pois1, glm.pois2, glm.NB1, glm.NB2, glm.NB3, glm.NB4), logLik)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  k.glm &lt;- sapply(list(coef(glm.pois1), coef(glm.pois2), c(coef(glm.NB1), glm.NB1$theta), c(coef(glm.NB2), glm.NB2$theta), c(coef(glm.NB3), coef(glm.NB3, what='sigma')), c(coef(glm.NB4), coef(glm.NB4, what='sigma'))), length) </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">labels.glm &lt;- c('glm.pois1', 'glm.pois2', 'glm.NB1', 'glm.NB2', 'glm.NB3', 'glm.NB4')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  output.glm &lt;- data.frame(model = labels.glm, LL = LL.glm, k = k.glm)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> output.glm</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; model&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LL k<br>
+  1 glm.pois1 -176.8383 1<br>
+  2 glm.pois2 -171.1275 2<br>
+  3&nbsp;&nbsp; glm.NB1 -144.3980 2<br>
+  4&nbsp;&nbsp; glm.NB2 -142.6750 3<br>
+  5&nbsp;&nbsp; glm.NB3 -138.2398 3<br>
+6&nbsp;&nbsp; glm.NB4 -137.1253 4</span>
+<p><a name="RAIC" id="RAIC"></a>To calculate AIC we can use the <span class="style1">AIC</span> function of R. It is listable so we can just give it the names of the models as arguments.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(glm.pois1, glm.pois2, glm.NB1, glm.NB2, glm.NB3, glm.NB4)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  glm.pois1&nbsp; 1 355.6766<br>
+  glm.pois2&nbsp; 2 346.2551<br>
+  glm.NB1&nbsp;&nbsp;&nbsp; 2 292.7961<br>
+  glm.NB2&nbsp;&nbsp;&nbsp; 3 291.3500<br>
+  glm.NB3&nbsp;&nbsp;&nbsp; 3 282.4796<br>
+glm.NB4&nbsp;&nbsp;&nbsp; 4 </span><span class="style25">282.2505
+</span>
+<p>Notice that model with the lowest AIC is NB4. Recall that this is not the model we chose using significance testing. There we chose NB3, which to be fair has an AIC that is only slightly larger than that of the NB4. If we redo the likelihood ratio test comparing  models NB3 and NB4 to test H<sub>0</sub>: &theta;<sub>1</sub>= 0 we fail to reject the null hypothesis (<em>p</em> = 0.135).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LR.test(glm.NB3, glm.NB4)</div>
+<span class="style24">  &nbsp;Likelihood Ratio Test for nested GAMLSS models. <br>
+  &nbsp;(No check whether the models are nested is performed). <br>
+  &nbsp;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Null model: deviance= 276.4796 with&nbsp; 3 deg. of freedom <br>
+  &nbsp;Altenative model: deviance= 274.2505 with&nbsp; 4 deg. of freedom <br>
+  &nbsp;<br>
+&nbsp;LRT = 2.229016 with 1 deg. of freedom and p-value= </span><span class="style25">0.1354401
+</span>
+<p>AIC also prefers model NB2 over NB1. If we compare NB1 and NB2 using a likelihood ratio test to test H<sub>0</sub>: &beta;<sub>1</sub> = 0, we fail to reject the null hypothesis (<em>p</em> = 0.06) and thus should prefer the simpler model NB1.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(glm.NB1, glm.NB2, test='Chisq')</div>
+<span class="style24">Likelihood ratio tests of Negative Binomial Models</span>
+<p><span class="style24">Response: slugs<br>
+  &nbsp; Model&nbsp;&nbsp;&nbsp;&nbsp; theta Resid. df&nbsp;&nbsp;&nbsp; 2 x log-lik.&nbsp;&nbsp; Test&nbsp;&nbsp;&nbsp; df LR stat.&nbsp;&nbsp;&nbsp; Pr(Chi)<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 1 0.7155672&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -288.7961&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2 field 0.7859313&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -285.3500 1 vs 2&nbsp;&nbsp;&nbsp;&nbsp; 1 3.446124 0.06340028</span>
+<p>This is not unusual. Because of the arbitrariness of the &alpha; = 0.05 cut-off  AIC can prefer the more complicated model among two nested models even when a likelihood ratio test fails to find them significantly different. As a result the AIC-best model can contain some coefficients that are not significantly different from zero. The significance level at which  significance testing will choose the same model that AIC does will vary with the sample size. A general statement we can make is that AIC will always prefer the more complicated model among two nested models when the additional terms are significantly different from zero, but AIC can also prefer the more complicated model even when they're not (although in this case typically 0.05 &lt; <em>p</em> &lt; 0.15).</p>
+<h2><a name="galapagos" id="galapagos"></a>Fitting species area curves to the Galapagos Islands plant richness data set </h2>
+<p>Johnson and Raven (1973) provide data on plant species richness for 29 islands in the Galapagos Islands archipelago. Their paper was presented as a rebuttal to Hamilton et al. (1963) who claimed that a species-area effect is absent in the Galapagos Islands. Using an expanded data base, Johnson and Raven (1973) argued that the Galapagos Islands do exhibit a species-area effect. In their paper they considered only two forms for the species-area relationship:</p>
+<ol>
+  <li>a form in which species richness is linearly related to area, with normally distributed errors (Model 1 below), and</li>
+  <li>a form in which log-transformed species richness is linearly related to log-transformed area, with normally-distributed errors (Model 7 below).</li>
+</ol>
+<p>We revisit the analysis of Johnson and Raven but consider an expanded set of possible species-area relations using statistical methodology that was not available in 1973. We consider eight models. In the model descriptions that follow <em>S</em> denotes species richness on an island and <em>A</em> denotes the area of that island. </p>
+<h3> <a name="rawmodels"></a>Normal models with the raw response</h3>
+<ol>
+  <li>Linear model: <img src="../../images/lectures/lecture19/Snormal.gif" width="160" height="35" align="absmiddle"> with identity link such that <img src="../../images/lectures/lecture19/linear&#32;model.gif" width="135" height="30" align="absmiddle">.</li>
+  <li>Gleason model: <img src="../../images/lectures/lecture19/Snormal.gif" width="160" height="35" align="absmiddle"> with identity link such that <img src="../../images/lectures/lecture19/gleason.gif" width="166" height="30" align="absmiddle">.</li>
+  <li>nonlinear Arrhenius model: <img src="../../images/lectures/lecture19/Snormal.gif" width="160" height="35" align="absmiddle"> with identity link such that <img src="../../images/lectures/lecture19/arrhenius.gif" width="111" height="31" align="absmiddle">.</li>
+</ol>
+<h3><a name="countmodels"></a>Count models</h3>
+<ol start="4">
+  <li>Poisson GLM: <img src="../../images/lectures/lecture19/poisson.gif" width="128" height="30" align="absmiddle"> with log link such that <img src="../../images/lectures/lecture19/poissonlink.gif" width="201" height="30" align="absmiddle">.</li>
+  <li>Negative binomial GLM (NB-2): <img src="../../images/lectures/lecture19/negative&#32;binomial.gif" width="235" height="31" align="absmiddle"> with log link such that <img src="../../images/lectures/lecture19/NBlink.gif" width="195" height="30" align="absmiddle">.</li>
+  <li>Negative binomial GLM (NB-1): <img src="../../images/lectures/lecture19/negative&#32;binomial.gif" width="235" height="31" align="absmiddle"> with log link such that <img src="../../images/lectures/lecture19/NBlink.gif" width="195" height="30" align="absmiddle">.</li>
+</ol>
+<h3><a name="normmodels"></a>Normal models with a transformed response</h3>
+<ol start="7">
+  <li>Arrhenius model: <img src="../../images/lectures/lecture19/logSnormal.gif" width="188" height="35" align="absmiddle"> with identity link such that <img src="../../images/lectures/lecture19/logarrhenius.gif" width="195" height="30" align="absmiddle">.</li>
+  <li>Square root model: <img src="../../images/lectures/lecture19/sqrtnormal.gif" alt="square root normal" width="175" height="35" align="absmiddle">with identity link such that <img src="../../images/lectures/lecture19/meansqrt.gif" alt="mean square root" width="182" height="38" align="absmiddle"></li>
+</ol>
+<p>The data set included in Johnson and Raven (1973) was missing some elevation data. I found a corrected version of the data set with these values supplied at</p>
+<p align="center"><span class="style103">http://www.ibiblio.org/pub/academic/biology/ecology+evolution/teaching/weisberg/galapago.dat</span>. </p>
+<p>The cleaned up version of the data set, <a href="../../data/galapagos.txt">galapagos.txt</a>, is at our class web site. The file is space-delimited with the variable names appearing in the first row.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> gala &lt;- read.table( 'ecol 563/galapagos.txt', header=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">gala[1:4,]</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp; Island Species Endemics&nbsp; Area Elevation Nearest.dist Santacruz.dist Adjacent.isl.area<br>
+1&nbsp;&nbsp;&nbsp; Baltra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 58&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23 25.09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.84<br>
+2 Bartolome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21&nbsp; 1.24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 109&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 572.33<br>
+3&nbsp; Caldwell&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp; 0.21 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;114&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 58.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.78<br>
+4&nbsp; Champion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp; 0.10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 46&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 47.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;0.18</span>
+<h2><a name="raw"></a>Normal models with the raw response</h2>
+<h3><a name="model1"></a>Model 1: Linear Model</h3>
+<p>I fit a linear model to <span class="style8">Area</span> on the raw scale using the <span class="style33">lm</span> function. We can extract the log-likelihood of the fitted model with the <span class="style33">logLik</span> function and the AIC with the <span class="style33">AIC</span> function. </p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #linear model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.norm1 &lt;- lm(Species~Area, data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">AIC(out.norm1)</div>
+<span class="style141">[1] 349.1721</span>
+<p>I superimpose the fitted model on a scatter plot of the data.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(Species~Area, data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> abline(out.norm1, lty=2, col=2)</div>
+<p align="center"><img src="../../images/lectures/lecture19/fig2.png" width="420" height="305" alt="fig. 2"></p>
+<p align="center" class="styleArial1"><strong>Fig. 2</strong>&nbsp;&nbsp;&nbsp;Linear model for mean species richness as a function of area</p>
+<p>From the scatter plot alone we would conclude that this is a terrible fit. This is the typical hot dog on a stick plot where a regression line emerges from a cloud of points and runs out to a single influential point that almost single-handedly determines the slope. </p>
+<h3><a name="model2"></a>Model 2: Gleason Model</h3>
+<p>The second model, the Gleason model, uses log-transformed <span class="style8">Area</span> rather than <span class="style8">Area</span> as the predictor. Since the response in models 1 and 2 is the same, we can use the reported log-likelihood or AIC to compare the Gleason and linear models. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.norm2 &lt;- lm(Species~log(Area), data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">sapply(list(out.norm1, out.norm2), AIC)</div>
+<span class="style141"> [1] 349.1721 335.1547</span>
+<p>The AIC of the Gleason model is less than that of the linear <span class="style8">Area</span> model. I superimpose the fitted Gleason model on a scatter plot of the data.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(Species~log(Area), data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">abline(out.norm2, lty=2)</div>
+<p align="center"><img src="../../images/lectures/lecture19/fig3.png" width="420" height="307" alt="fig. 3"></p>
+<p align="center" class="styleArial1"><strong>Fig. 3&nbsp;</strong> Scatter plot of raw data showing the Gleason regression model</p>
+<p name="residuals"><a name="residuals"></a>This too is clearly a bad model.  Based on Fig. 3  the model underestimates species richness at low and high areas, and overestimates it at intermediate areas. Perhaps even more troubling the Gleason model predicts negative values for species richness even within the range of the data that were used to fit the model. When log(<span class="style8">Area</span>) drops below &ndash;2 species richness is predicted to be negative. This is obviously a nonsensical prediction. </p>
+<p name="residuals">Fig. 4 shows the residual plot with a lowess curve (a locally weighted smooth that reflects local patterns) superimposed. The <span class="style33">residuals</span> function is used to extract the residuals from a model object. As expected the lowess curve shows that there is still a pattern in the residuals unaccounted for by the model. The residuals are first positive, then negative, then positive which matches our interpretation of model fit based on Fig. 3.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(residuals(out.norm2)~log(Area), data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> lines(lowess(residuals(out.norm2)~log(gala$Area)), col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">abline(h=0, lty=2, col=4)</div>
+<br>
+<table width="500" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture19/fig3a.png" width="420" height="307" alt="fig 4"></div></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><p><strong>Fig. 4</strong> &nbsp;Residuals from the Gleason model plotted against the predictor log(Area) with a lowess curve superimposed</p></td>
+  </tr>
+</table>
+<h2><a name="count"></a>Count models</h2>
+<h3><a name="model3"></a>Model 4: Poisson model </h3>
+<p name="glm"><a name="glm"></a>I carry out Poisson regression with a log link using log(<span class="style8">Area</span>) as the predictor. Poisson regression can be carried out with the <span class="style33">glm</span> function by specifying <span class="style22">family=poisson</span>.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#Poisson and negative binomial models</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.pois &lt;- glm(Species~log(Area), data=gala, family=poisson)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sapply(list(out.norm1, out.norm2, out.pois1), AIC)</div>
+<span class="style141"> [1] 349.1721 335.1547 800.0266</span>
+<p>Because the Poisson model has one fewer parameter than the other models, we should use AIC rather than log-likelihood to compare the models. As we can see from the AIC  values the Poisson model is ranked last.</p>
+<h3><a name="model4" id="model4"></a>Model 5: Negative binomial model (NB-2)</h3>
+<p name="glmnb"><a name="mass" id="mass"></a>I carry out negative binomial regression with a log link using log(<span class="style8">Area</span>) as the predictor. The function for this is <span class="style33">glm.nb</span> from the <span class="style19">MASS</span> package. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(MASS)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.NB &lt;- glm.nb(Species~log(Area), data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.NB$theta</div>
+<span class="style141"> [1] 2.634311 </span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sapply(list(out.norm1, out.norm2, out.pois, out.NB), AIC)</div>
+<span class="style141"> [1] 349.1721 335.1547 323.7350 800.0266 273.9926</span>
+<p>The negative binomial model has yielded  the lowest AIC obtained thus far. On the other hand the Poisson model has yielded the worst. The value of &theta; suggests that there is a modest amount of overdispersion explaining perhaps why the Poisson model has such a low ranking. I plot the predicted means from the negative binomial model and the Poisson model on the same graph. Because both models by default use a log link we need to exponentiate the regression equation in order to recover the mean. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(Species~log(Area), data=gala)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out.pois)</div>
+<span class="style141"> (Intercept)&nbsp;&nbsp; log(Area) <br>
+&nbsp; 3.2409698&nbsp;&nbsp; 0.3429906 </span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">poisson.func &lt;- function(x) exp(coef(out.pois)[1]+coef(out.pois)[2]*x)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out.NB)</div>
+<span class="style141"> (Intercept)&nbsp;&nbsp; log(Area) <br>
+&nbsp; 3.1495864&nbsp;&nbsp; 0.3669952 </span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> NB.func &lt;- function(x) exp(coef(out.NB)[1]+coef(out.NB)[2]*x)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(poisson.func, add=T, col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(NB.func, add=T, col=4, lty=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> legend('topleft', c('Poisson', 'negative binomial'), col=c(2,4),  lty=c(1,2), cex=.9, bty='n')</div><br>
+<table width="500" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture19/fig6.png" width="420" height="305" alt="fig 6"></div></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><p><strong>Fig. 5</strong> &nbsp;Predicted means of regression models using  Poisson and negative binomial distributions for the response</p></td>
+  </tr>
+</table>
+<p> The two models displayed in Fig. 5 look very similar. How is it possible that the model ranked best using AIC looks nearly indistinguishable from the model ranked worst using AIC? Keep in mind that the difference in AIC here (800 versus 274) is gigantic. </p>
+<p>This apparent non sequitur illustrates the difference between assessing fit in the least squares approach and assessing fit from a maximum likelihood perspective. When we fit a probability model to data we are not trying to find some sort of best-fit curve in the same sense that least squares does. Instead we're trying to determine a plausible probability generating mechanism for the data. From this perspective a good model is one that could have generated the observed data. One way to assess model fit would be to use the model to  generate simulated data sets and ask if the observed data set looks like  the simulated data sets. This approach to model assessment is called predictive simulation and has been used previously in this course. </p>
+<p>The reason the Poisson model is rejected by AIC in favor of the negative binomial model is obviously not due to a difference in the predicted means. Rather it's because given the same means, a Poisson model cannot generate the data  we observed while the negative binomial model can. A major difference between the Poisson and negative binomial model is in their mean-variance relationships. A Poisson model assumes the mean and variance are equal, while a negative binomial model assumes that the variance is a quadratic function of the mean. Apparently the increasing spread in the data around the mean trajectory shown in Fig. 5 is more typical of a negative binomial distribution than it is of a Poisson distribution. </p>
+<h3><a name="model5" id="model"></a>Model 6: Negative binomial model (NB-1)</h3>
+<p name="glmnb"><a name="glmnb"></a>There is a second type of negative binomial model  called the NB-1 model by Cameron and Trivedi (1998). (They refer to the model that is fit by the <span class="style1">glm.nb</span> function as the NB-2 model.) These two models differ in how the mean and variance of the negative binomial distribution are related. In the NB-1 model the variance and mean are linearly related while in the NB-2 model they are quadratically related.</p>
+<p align="center" name="glmnb"><img src="../../images/lectures/lecture19/NB&#32;models.gif" width="215" height="63" alt="NB models"></p>
+<p name="glmnb"><a name="gamlss"></a>Why there are two different negative binomial models will be explained at a later time. Both the NB-1 model and the NB-2 model can be fit using the <span class="style1">gamlss</span> function from the <span class="style19">gamlss</span> package. Unfortunately the <span class="style19">gamlss</span> notation for these distributions is the opposite of everyone else's. The <span class="style19">gamlss</span> package reverses the numbering and refers to the NB-1 and NB-2 models as the NBII and NBI models respectively.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # fit NB models with gamlss</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(gamlss)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # quadratic mean variance relationship--same as glm.nb</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.gamliss1 &lt;- gamlss(Species~log(Area), data=gala, family=NBI)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(out.NB, out.gamliss1)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  out.NB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 273.9926<br>
+  out.gamliss1&nbsp; 3 273.9926</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # linear mean variance relationship</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.gamliss2 &lt;- gamlss(Species~log(Area), data=gala, family=NBII)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(out.NB, out.gamliss1, out.gamliss2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  out.NB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 273.9926<br>
+  out.gamliss1&nbsp; 3 273.9926<br>
+  out.gamliss2&nbsp; 3 277.8913</span>
+<p>So for these data the negative binomial with a quadratic variance-mean relationship has a lower AIC.</p>
+<h2 align="left"><a name="assessing"></a>Assessing the variance-mean relationship in data</h2>
+<p><a name="quantile"></a>Although using AIC we've rejected a linear variance-mean relationship in favor of a quadratic variance-mean relationship, it would be nice to have an independent verification of this result. We can obtain one by grouping the data using the values of a predictor, calculating the mean and variance of the response in each group, and plotting the result. The regressor we've been using in the model is log(<span class="style8">Area</span>). Because it's a continuous variable a sensible way to group its values is to use quantiles. We need enough groups to detect the relationship between the variance and the mean while leaving enough observations within each group to accurately calculate a variance. With 29 observations choosing quintiles will give us approximately six observations per group. The first argument to the <span class="style1">quantile</span> function is the variable and the second argument is a vector of the desired quantiles.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> quantile(log(gala$Area), seq(0,1,.2))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100% <br>
+-4.6051702 -1.5060647&nbsp; 0.2940422&nbsp; 2.8807906&nbsp; 4.9746404&nbsp; 8.4487687</span>
+<p><a name="cut"></a><a name="includelowest"></a>Next we classify observations by the quantile they fall into. The <span class="style1">cut</span> variable can be used for this purpose. The first argument to <span class="style1">cut</span> is the variable to be cut  and the second argument is a vector of cut points (in this case the quintiles including the minimum and maximum). By default the <span class="style1">cut</span> function constructs half-open intervals, (<em>a</em>, <em>b</em>], open on the left but closed on the right so that <em>a</em> &lt; <em>x</em> &le; <em>b</em>. To change the first interval so that it's closed on both ends I add the argument <span class="style22">include.lowest=TRUE</span>. This will force the minimum value of log(<span class="style8">Area</span>) to be included in one of the intervals.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.cut &lt;- cut(log(gala$Area), quantile(log(gala$Area), seq(0,1,.2)), include.lowest=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.cut</div>
+<span class="style24">  &nbsp;[1] (2.88,4.97]&nbsp;&nbsp; (-1.51,0.294] [-4.61,-1.51] [-4.61,-1.51] [-4.61,-1.51] (-1.51,0.294]<br>
+  &nbsp;[7] (0.294,2.88]&nbsp; [-4.61,-1.51] [-4.61,-1.51] (2.88,4.97]&nbsp;&nbsp; (4.97,8.45]&nbsp;&nbsp; (-1.51,0.294]<br>
+  [13] (-1.51,0.294] (0.294,2.88]&nbsp; (4.97,8.45]&nbsp;&nbsp; (2.88,4.97]&nbsp;&nbsp; [-4.61,-1.51] (2.88,4.97]&nbsp; <br>
+  [19] (2.88,4.97]&nbsp;&nbsp; (-1.51,0.294] (0.294,2.88]&nbsp; (4.97,8.45]&nbsp;&nbsp; (4.97,8.45]&nbsp;&nbsp; (4.97,8.45]&nbsp; <br>
+  [25] (2.88,4.97]&nbsp;&nbsp; (4.97,8.45]&nbsp;&nbsp; (0.294,2.88]&nbsp; (-1.51,0.294] (0.294,2.88] <br>
+  Levels: [-4.61,-1.51] (-1.51,0.294] (0.294,2.88] (2.88,4.97] (4.97,8.45]</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(out.cut)</div>
+<span class="style24">  out.cut<br>
+  [-4.61,-1.51] (-1.51,0.294]&nbsp; (0.294,2.88]&nbsp;&nbsp; (2.88,4.97]&nbsp;&nbsp; (4.97,8.45] <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 </span>
+<p>  <a name="var"></a>As hoped we have roughly equal numbers of observations in each group. 
+Next I calculate the mean and variance of species richness in each group using <span class="style1">tapply</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># use area groupings to calculate mean and variance of richness</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> out.m &lt;- tapply(gala$Species, out.cut, mean)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.v &lt;- tapply(gala$Species, out.cut, var)</div>
+<p><a name="Identity"></a>Finally I plot the variance against the mean, estimate a regression model, and superimpose the regression model on a scatter plot of the data. We can carry out squaring the predictor beforehand or do it within the regression formula by enclosing the arithmetic operation in the <span class="style1">I</span> function. Without the <span class="style1">I</span> function the arithmetic operation will be ignored.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # plot variance versus mean and superimpose quadratic fit</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(out.v~out.m, xlab='Mean', ylab='Variance')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.r &lt;- lm(out.v~out.m + I(out.m^2))</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out.r)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out.m&nbsp; I(out.m^2) <br>
+  381.7404970 -10.9289622&nbsp;&nbsp; 0.2067509 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> curve(coef(out.r)[1]+coef(out.r)[2]*x+coef(out.r)[3]*x^2, add=T, col=2)</div>
+<p>For comparison I add the linear relationship to the plot. As the plot indicates, the quadratic model appears to do a good job of approximating the observed pattern, better than the linear model. Of course with only five observations and four parameters (3 regression parameters and the variance) the AICc for the quadratic model is infinite suggesting that we are overfitting these data.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.r.linear &lt;- lm(out.v~out.m)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> abline(out.r.linear, col=4, lty=2)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> legend('topleft', c('linear','quadratic'), col=c(4,2), lty=c(2,1), bty='n', cex=.9)</div><br>
+<table width="500" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture19/fig7.png" width="460" height="310" alt="fig. 7"></div></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><p><strong>Fig. 6</strong> &nbsp;Variance-mean relationship of the response variable species richness.</p></td>
+  </tr>
+</table>
+<h2><a name="cited"></a>Cited References</h2>
+<ul>
+  <li>Burnham, K. P. and D. R. Anderson. 2002. <i>Model Selection and Multimodel Inference</i>. Springer-Verlag: New York.</li>
+  <li>Cameron, A. C. and P. K. Trivedi. 1998. <em>Regression Analysis of Count Data</em>. Cambridge University Press: Cambridge, UK.</li>
+  <li><font face="Times New Roman, Times, serif">Hamilton, Terrell H., Ira Rubinoff, Robert H. Barth, Jr., and Guy L. Bush. 1963. Species abundance: natural regulation of insular variation. <em>Science</em> <strong>142</strong>: 1575&ndash;1576.</font></li>
+  <li><font face="Times New Roman, Times, serif">Johnson, Michael P. and Peter H. Raven. 1973. Species number and endemism: The Galapagos archipelago revisited. <em>Science</em> <strong>179</strong>: 893&ndash;895. </font></li>
+</ul>
+<h2> <a name="references"></a>References on AIC</h2>
+<p>Note: a number of David Anderson's papers can be downloaded from his <a href="http://www.warnercnr.colostate.edu/%7Eanderson/sel_reprints.html">web site</a>.</p>
+<ul>
+  <li>Akaike, Hirotugu. 1973. Information theory and an extension of the maximum likelihood principle. <em>Proceedings of the 2nd International Symposium on Information Theory</em> (edited by B. N. Petrov and F. Csaki). Akademiai Kiado, Budapest. (Reproduced in S. Kotz and N. L. Johnson (editors), 1992, <em>Breakthroughs in Statistics</em>, New York: Springer-Verlag, pp. 610&ndash;624.)</li>
+  <li>Anderson, D. R., K. P. Burnham, and W. L. Thompson. 2000. Null Hypothesis Testing: Problems, Prevalence, and an Alternative. <em>Journal of Wildlife Management</em> <strong>64</strong>(4): 912&ndash;923. </li>
+  <li>Anderson, D. R. and K. P. Burnham. 2002. Avoiding pitfalls when using information-theoretic methods. <em>Journal of Wildlife Management</em> <strong>66</strong>(3): 912&ndash;918.</li>
+  <li>Anderson, D. R., K. P. Burnham, W. R. Gould, and S. Cherry. 2001. Concerns about finding effects that are actually spurious. <em>Wildlife Society Bulletin</em> <strong>29</strong>(1): 311&ndash;316.</li>
+  <li>Anderson, D. R. 2008. <em>Model Based Inference in the Life Sciences: A Primer of Evidence</em>. Springer-Verlag, New York. <span class="style131">This might be called Burnham and Anderson (2002) for dummies.</span></li>
+  <li>Burnham, K. P. and D. R. Anderson. 2001. Kullback-Leibler information as a basis for strong inference in ecological studies. <em>Wildlife Research</em> 28: 111&ndash;119.</li>
+  <li>Burnham, K. P. and D. R. Anderson. 2002. <i>Model Selection and Multimodel Inference</i>. Springer-Verlag, New York.</li>
+  <li>Burnham, K. P. and D. R. Anderson. 2004. Multimodel inference: understanding AIC and BIC in model selection. <em>Sociological Methods &amp; Research</em> <strong>33</strong>: 261&ndash;304. </li>
+  <li>Diniz, J. A. F., T. F. L. V. B. Rangel, and L. M. Bini. 2008. Model selection and information theory in geographical ecology. <em>Global Ecology and Biogeography </em><strong>17</strong>(4): 479&ndash;488. </li>
+  <li>Franklin, A. B., T. M. Shenk, D. R. Anderson, and K. P. Burnham. 2001. Statistical model selection: the alternative to null hypothesis testing. Pages 75&ndash;90 in T. M. Shenk and A. B. Franklin (editors), <em>Modeling in Natural Resource Management: Development, Interpretation, and Application</em>, Island Press, Washington, D. C.</li>
+  <li>Godinez-Dominquez, E. and J. Freire. 2003. Information-theoretic approach for selection of spatial and temporal models of community organization. <em>Marine Ecology Progress Series</em> <strong>253</strong>: 17&ndash;24. </li>
+  <li>Greaves, R. K., R. A. Sanderson, and S. P. Rushton. 2006. Predicting species occurrence using information-theoretic approaches and significance testing: An example of dormouse distribution in Cumbria, UK. <em>Biological Conservation </em><strong>130</strong>: 239&ndash;250.</li>
+  <li>Hobbs, N. T. and R. Hilborn. 2006. Alternatives to statistical hypothesis testing in ecology: a guide to self teaching. <em>Ecological Applications</em> <strong>16</strong>: 5&ndash;19. </li>
+  <li>Johnson, J. B. and Omland, K. S. 2004. Model selection in ecology and evolution. <em>Trends in Ecology and Evolution</em> <strong>19</strong>(2): 101&ndash;108. <span class="style111"></span></li>
+  <li>Kullback, S. and R. A. Leibler. 1951. On information and sufficiency.<em> Annals of Mathematical Statistics</em> <strong>22</strong>(1): 79&ndash;86. </li>
+  <li>Lukacs, P. M., W. L. Thompson, W. L. Kendall, W. R. Gould, P. F. Doherty, K. P. Burnham, and D. R. Anderson. 2007. Concerns regarding a call for pluralism of information theory and hypothesis testing. <em>Journal of Applied Ecology</em> <strong>44</strong>(2): 456&ndash;460.</li>
+  <li>Mazerolle, Marc J. 2006. Improving data analysis in herpetology: using Akaike's Information Criterion (AIC) to assess the strength of biological hypotheses. <em>Amphibia-Reptilia</em> <strong>27</strong>: 169&ndash;180.</li>
+  <li>Richards, S. A. 2008. Dealing with overdispersed count data in applied ecology. <em>Journal of Applied Ecology</em> <strong>45</strong>(1): 218&ndash;227. </li>
+  <li>Sileshi, G. 2006. Selecting the right statistical model for analysis of insect count data by using information theoretic measures. <em>Bulletin of Entomological Research</em> <strong>96</strong>: 479&ndash;488.</li>
+  <li>Wagenmakers, E. J. and S. Farrell. 2004. AIC model selection using Akaike weights. <em>Psychonomic Bulletin &amp; Review</em> <strong>11</strong>: 192&ndash;196. </li>
+  <li>Whittingham, M. J., P. A. Stephens, R. B. Bradbury, and R. P. Freckleton. 2006. Why do we still use stepwise modeling in ecology and behaviour. <em>Journal of Animal Ecology</em> <strong>75</strong>: 1182&ndash;1189. </li>
+</ul>
+<p>&hellip;and a few words from the critics</p>
+<ul>
+  <li>Guthery, F. S., L. A. Brennan, M. J. Peterson. and J. J. Lusk. 2005. Information theory in wildlife science: critique and viewpoint. <em>Journal of Wildlife Management </em><strong>69</strong>(2): 457&ndash;465.</li>
+  <li>Link, W. A. and R. J. Barker. 2005. Model weights and the foundations of multimodel inference. <em>Ecology</em> <strong>87</strong>: 2626&ndash;2635. </li>
+  <li>Richards, Shane A. 2005. Testing ecological theory using the information-theoretic approach: examples and cautionary results. <em>Ecology</em> <strong>86</strong>(10): 2805&ndash;2814. </li>
+  <li>Stephens, P. A., S.W. Buskirk, G. D. Hayward, C. M. del Rio. 2005. Information theory and hypothesis testing: a call for pluralism. <em>Journal of Applied Ecology</em> <strong>42</strong>(1): 4&ndash;12. </li>
+  <li>Ward, E. J. 2008. A review and comparison of four commonly used Bayesian and maximum likelihood model selection tools. <em>Ecological Modelling </em><strong>211</strong>(1&ndash;2): 1&ndash;10.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture19&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 31, 2012<br>
+      URL: <a href="lecture19.htm#lecture19" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture19.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

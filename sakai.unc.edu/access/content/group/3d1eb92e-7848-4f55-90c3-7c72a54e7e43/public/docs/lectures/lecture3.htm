@@ -1,0 +1,793 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 3&mdash;Wednesday, August 29, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	
+}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture3" id="lecture3"></a>Lecture 3&mdash;Wednesday, August 29, 2012</h1>
+<h3>Topics</h3>
+<ul>
+<li><a href="lecture3.htm#refitting">Refitting the tadpoles model</a></li>
+<li><a href="lecture3.htm#TypeI">Type I and Type II tests revisited</a></li>
+<li><a href="lecture3.htm#homogeneity">Homogeneity of variance</a>
+  <ul>
+    <li><a href="lecture3.htm#analytical">Analytical tests of homogeneity of variance</a>
+      <ul>
+        <li><a href="lecture3.htm#bartletttest">Bartlett's test</a></li>
+        <li><a href="lecture3.htm#flignertest">Fligner-Killeen test</a></li>
+        <li><a href="lecture3.htm#levenetest">Levene's test</a></li>
+      </ul>
+    </li>
+    <li><a href="lecture3.htm#normal">Normal probability plots</a></li>
+    <li><a href="lecture3.htm#modeling">Modeling variance heterogeneity with generalized least squares</a></li>
+  </ul>
+</li>
+<li><a href="lecture3.htm#predictive">Predictive simulation to assess model fit</a></li>
+<li><a href="lecture3.htm#cited">Cited references</a></li>
+<li><a href="lecture3.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture3.htm#bartletttest">bartlett.test</a> carries out a parametric homogeneity of variance test.</li>
+  <li><a href="lecture3.htm#catenate">c</a> the catenation function that turns the elements making up its arguments into a single vector.</li>
+  <li><a href="lecture3.htm#dataframe">data.frame</a> constructs a data frame from  arguments. The arguments are all vectors  of the same length, but they can be of different types. </li>
+  <li><a href="lecture3.htm#density">density</a> calculates the kernel density estimate of the distribution of a variable.</li>
+  <li><a href="lecture3.htm#densityplot">densityplot</a> (from <span class="style19">lattice</span> package) draws the kernel density estimate of the distribution of a variable separately (optionally) using the levels of a grouping variable.</li>
+  <li><a href="lecture3.htm#dotplot">dotplot</a> (from <span class="style19">lattice</span> package) produces dot plots, a minimal ink  alternative to bar plots.</li>
+  <li><a href="lecture3.htm#expandgrid">expand.grid</a> forms all possible combinations of the values of two or more vectors and arranges the results in a data frame.</li>
+  <li><a href="lecture3.htm#flignertest">fligner.test</a> carries out a nonparametric homogeneity of variance test.</li>
+  <li><a href="lecture3.htm#gls">gls</a> (from <span class="style19">nlme</span> package) obtains generalized least squares estimates of regression models.</li>
+  <li><a href="lecture3.htm#isna">is.na</a> is a logical function that returns TRUE if a value is missing (NA) and FALSE otherwise.</li>
+  <li><a href="lecture3.htm#length">length</a> counts the number of elements in a vector, both missing and non-missing.</li>
+  <li><a href="lecture3.htm#levels">levels</a> displays the unique values of  a factor variable with the reference level shown first. </li>
+  <li><a href="lecture3.htm#levenetest">leveneTest</a> (from <span class="style19">car</span> package) carries out a type of homogeneity of variance test using absolute deviations and medians rather than squared deviations and means. </li>
+  <li><a href="lecture3.htm#mad">mad</a> calculates the MAD statistic.</li>
+  <li><a href="lecture3.htm#names">names</a> extracts the names of the components of an R object.</li>
+  <li><a href="lecture3.htm#nrow">nrow</a> counts the number of rows in a data frame.</li>
+  <li><a href="lecture3.htm#paneldensity">panel.densityplot</a> (from <span class="style19">lattice</span> package) is the panel function version of <span class="style1">densityplot</span>.</li>
+  <li><a href="lecture3.htm#points">points</a> is a lower level graphics function that can be used to add points to the graph that is  currently active.</li>
+  <li><a href="lecture3.htm#qqplot">qqPlot</a> (from <span class="style19">car</span> package) produces a normal probability plot of studentized residuals along with a regression line and a confidence envelope.</li>
+  <li><a href="lecture3.htm#rep">rep</a> repeats a scalar or vector a specified number of time to create a new vector.</li>
+  <li><a href="lecture3.htm#residuals">residuals</a> extracts the residuals from a regression model.</li>
+  <li><a href="lecture3.htm#rnorm">rnorm</a> generates random values from a normal distribution with specified mean and standard deviation. When these are left unspecified it defaults to a standard normal distribution.</li>
+  <li><a href="lecture3.htm#sapply">sapply</a> is used to repeatedly apply a specified function to a vector or list of values one at a time.</li>
+  <li><a href="lecture3.htm#setseed">set.seed</a> is used to set the  seed for random number generators. By using <span class="style1">set.seed</span> we can generate the same &quot;random&quot; sample again.</li>
+  <li><a href="lecture3.htm#simulate">simulate</a> is used for predictive (Monte Carlo) simulation. The function <span class="style1">simulate</span> takes a regression model as its argument and generates data that are consistent with that regression model.</li>
+  <li><a href="lecture3.htm#table">table</a> tabulates the frequencies of the unique categories of a variable.</li>
+  <li><a href="lecture3.htm#unlist">unlist</a> takes the columns of a data frame (or the elements of a list) and stacks them in a single column starting with the first column.</li>
+  <li><a href="lecture3.htm#var">var</a> calculates the variance of a vector.</li>
+  <li><a href="lecture3.htm#varident">varIdent</a> (from <span class="style19">nlme</span> package) is one of the functions available for modeling the heteroscedasticity (unequal variances) of the residuals of a regression model. It is specified in the <span class="style22">weights</span> argument of <span class="style1">gls</span>.</li>
+  <li><a href="lecture3.htm#logicalnot">!</a> is the logical not operator in R.</li>
+  <li><a href="lecture3.htm#curly">{ }</a> delimits the contents of a user-defined function.  If a function has more than one line it  is required that  the lines  be enclosed by curly braces.</li>
+  <li><a href="lecture3.htm#logicalequals">==</a> is the logical equals sign in R. It is used in Boolean expressions such as <span class="style10">a==b</span> which evaluates to TRUE if a and b are identical, FALSE otherwise.</li>
+  <li><a href="lecture3.htm#dbrackets">[[ &nbsp;]]</a>, a double pair of brackets, is used for extracting elements from lists. A data frame is an example of a list in which each element has the same length.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture3.htm#leveneTest">center=</a> is an argument of <span class="style1">leveneTest</span> that specifies whether variability is measured with respect to the mean, <span class="style22">center=&quot;mean&quot;</span>, or the median, <span class="style22">center=&quot;median&quot;</span>.</li>
+  <li><a href="lecture3.htm#function">function()</a> is a keyword that signifies that what follows is a user-defined function. Typically the variables used in the function are listed inside the parentheses separated by commas. If the function has  no variables the  parentheses are still required but the contents are left blank.</li>
+  <li><a href="lecture3.htm#pch">pch</a>= stands for  &quot;print character&quot; and is used to designate the plotting symbol to be used in various plotting functions, such as <span class="style1">plot</span>, <span class="style1">points</span>, etc. </li>
+  <li><a href="lecture3.htm#main">main=</a> (argument to <span class="style1">plot</span> and other graphics functions) specifies a title for a graph.</li>
+  <li><a href="lecture3.htm#method">method=</a> (argument to <span class="style1">gls</span> of <span class="style19">nlme</span> package) is used to specify the estimation method to be used: <span class="style22">method='ML'</span> for maximum likelihood estimation or <span class="style22">method=&quot;REML&quot;</span> for restricted maximum likelihood estimation, the default.</li>
+  <li><a href="lecture3.htm#naaction">na.action=</a> (argument to <span class="style1">gls</span> of <span class="style19">nlme</span> package as well as other regression functions) is used to specify how missing values in the response or predictors are to be handled in regression models. We used <span class="style22">na.action=na.omit</span> in order to omit missing observations.</li>
+  <li><a href="lecture3.htm#panel">panel=</a> (argument to <span class="style41">densityplot</span>  and other <span class="style19">lattice</span> package functions) is used to create a user-defined panel function to describe what to draw in each panel of the panel graph.</li>
+  <li><a href="lecture3.htm#pch">pch=</a> (argument to <span class="style1">plot</span> and other graphics functions) specifies a numeric code that identifies the symbol type to be used in the plot.</li>
+  <li><a href="lecture3.htm#plotpoints">plot.points=</a> (argument to <span class="style41">densityplot</span> of <span class="style19"> lattice</span> package) can be used to turn on, the default, or turn off, <span class="style22">plot.points=F</span>, the display of a rug plot on the <em>x</em>-axis.</li>
+  <li><a href="lecture3.htm#rtype">type=</a> (argument of <span class="style1">residuals</span>) is used to specify the type of residuals desired. For <span class="style1">gls</span> objects we used <span class="style22">type='normalized'</span> to see the effect  a variance model had on the residuals.</li>
+  <li><a href="lecture3.htm#atype">type=</a> (argument of <span class="style1">anova</span> for <span class="style1">gls</span> objects) is used to specify Type I tests (<span class="style22">type='sequential'</span>) or Type II tests (<span class="style22">type='marginal'</span>).</li>
+  <li><a href="lecture3.htm#weights">weights=</a> (argument to <span class="style1">gls</span> and other regression functions) is used to provide unequal weighting of observations when fitting a regression model. We used it to specify a variance function for modeling the residual variance.</li>
+  <li><a href="lecture3.htm#xlab">xlab</a>= (argument to<span class="style1"> plot </span>and other graphics functions) specifies a label for the <em>x</em>-axis of a plot.</li>
+  <li><a href="lecture3.htm#xlim">xlim</a>= (argument to <span class="style1">plot</span> and other graphics functions) specifies the range of values to be displayed on the <em>x</em>-axis.</li>
+</ul>
+<h3>Additional R packages used </h3>
+<ul>
+  <li><a href="lecture3.htm#car">car</a> for the <span class="style1">Anova</span>, <span class="style1">leveneTest</span>, and <span class="style1">qqPlot</span> functions</li>
+  <li><a href="lecture3.htm#lattice">lattice</a> for the <span class="style1">dotplot</span> and <span class="style1">densityplot</span> functions</li>
+  <li><a href="lecture3.htm#nlme">nlme</a> for the <span class="style1">gls</span> function to estimate a regression model using generalized least squares</li>
+</ul>
+<h2><a name="refitting" id="refitting"></a>Refitting the tadpoles model</h2>
+<p>I reload the tadpoles data set and refit the analysis of variance model from last time.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">tadpoles &lt;- read.table(&quot;ecol 563/tadpoles.csv&quot;, header=T, sep=',')</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles$fac3 &lt;- factor(tadpoles$fac3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out1 &lt;- lm(response~fac1 + fac2 + fac3 + fac1:fac2 + fac1:fac3 + fac2:fac3 + fac1:fac2:fac3, data=tadpoles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out1)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: response<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq&nbsp; F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 18.4339&nbsp; 9.2169 151.7899 &lt; 2.2e-16 ***<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 1.5013&nbsp; 1.5013&nbsp; 24.7238 1.304e-06 ***<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 2.2771&nbsp; 2.2771&nbsp; 37.5007 3.984e-09 ***<br>
+  fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 0.3926&nbsp; 0.1963&nbsp;&nbsp; 3.2328&nbsp;&nbsp; 0.04127 *&nbsp; <br>
+  fac1:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 0.0838&nbsp; 0.0419&nbsp;&nbsp; 0.6900&nbsp;&nbsp; 0.50263&nbsp;&nbsp;&nbsp; <br>
+  fac2:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 0.3503&nbsp; 0.3503&nbsp;&nbsp; 5.7693&nbsp;&nbsp; 0.01711 *&nbsp; <br>
+  fac1:fac2:fac3&nbsp;&nbsp; 2&nbsp; 0.0695&nbsp; 0.0347&nbsp;&nbsp; 0.5723&nbsp;&nbsp; 0.56505&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 227 13.7838&nbsp; 0.0607&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(car)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Anova(out1)</div>
+<span class="style24">  Anova Table (Type II tests)</span>
+<p><span class="style24">Response: response<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sum Sq&nbsp; Df&nbsp; F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18.0783&nbsp;&nbsp; 2 148.8618 &lt; 2.2e-16 ***<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6498&nbsp;&nbsp; 1&nbsp; 27.1702 4.184e-07 ***<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2300&nbsp;&nbsp; 1&nbsp; 36.7243 5.609e-09 ***<br>
+  fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.2997&nbsp;&nbsp; 2&nbsp;&nbsp; 2.4681&nbsp;&nbsp; 0.08702 .&nbsp; <br>
+  fac1:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0550&nbsp;&nbsp; 2&nbsp;&nbsp; 0.4525&nbsp;&nbsp; 0.63659&nbsp;&nbsp;&nbsp; <br>
+  fac2:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.3503&nbsp;&nbsp; 1&nbsp;&nbsp; 5.7693&nbsp;&nbsp; 0.01711 *&nbsp; <br>
+  fac1:fac2:fac3&nbsp; 0.0695&nbsp;&nbsp; 2&nbsp;&nbsp; 0.5723&nbsp;&nbsp; 0.56505&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13.7838 227&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+
+<p>Based on the above output we chose to drop the three-factor interaction and the <span class="style10">fac1:fac3</span> two-factor interaction. Refitting the model without those terms yielded the following.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out2 &lt;- lm(response~fac1 + fac2 + fac3 + fac1:fac2&nbsp; + fac2:fac3, data=tadpoles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out2)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: response<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq&nbsp; F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 18.4339&nbsp; 9.2169 153.0824 &lt; 2.2e-16 ***<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 1.5013&nbsp; 1.5013&nbsp; 24.9343 1.169e-06 ***<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 2.2771&nbsp; 2.2771&nbsp; 37.8201 3.382e-09 ***<br>
+  fac1:fac2&nbsp;&nbsp; 2 &nbsp;0.3926&nbsp; 0.1963&nbsp;&nbsp; 3.2603&nbsp;&nbsp; 0.04015 *&nbsp; <br>
+  fac2:fac3&nbsp;&nbsp; 1&nbsp; 0.3792&nbsp; 0.3792&nbsp;&nbsp; 6.2973&nbsp;&nbsp; 0.01278 *&nbsp; <br>
+  Residuals 231 13.9083&nbsp; 0.0602&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Anova(out2)</div>
+ <span class="style24"> Anova Table (Type II tests)</span>
+<p><span class="style24">Response: response<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sum Sq&nbsp; Df&nbsp; F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18.0783&nbsp;&nbsp; 2 150.1294 &lt; 2.2e-16 ***<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6319&nbsp;&nbsp; 1&nbsp; 27.1043 4.258e-07 ***<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2300&nbsp;&nbsp; 1&nbsp; 37.0370 4.777e-09 ***<br>
+  fac1:fac2&nbsp; 0.3017&nbsp;&nbsp; 2&nbsp;&nbsp; 2.5057&nbsp;&nbsp; 0.08384 .&nbsp; <br>
+  fac2:fac3&nbsp; 0.3792&nbsp;&nbsp; 1&nbsp;&nbsp; 6.2973&nbsp;&nbsp; 0.01278 *&nbsp; <br>
+  Residuals 13.9083 231&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>At this point the Type I and Type II tests have a minor disagreement about the importance of the <span class="style10">fac1:fac2</span> interaction when we use the arbitrary cut-off of &alpha; = .05 for decision making. Because the primary research question involved the relationships between factor 1 and factor 2 we elected to retain both of these interactions and explore their substantive roles further through graphical displays of the model.</p>
+<h2><a name="TypeI" id="TypeI"></a>Type I versus Type II tests (revisited)</h2>
+<p>The <span class="style1">anova</span> function carries out Type I tests whereas the <span class="style1">Anova</span> function carries out Type II tests (by default). In Type I tests terms are tested in the order that they are shown in the output table. These tests generally make sense because the table has been sorted so that the main effects precede the two-factor interactions, which precede the three-factor interactions, etc. Type II tests are calculated according to the principle of marginality.  Each term is tested in the presence of all the others after first removing that term's higher-order relatives. Type II tests are especially useful when comparing terms of the same type (for instance the two-factor interactions) for which there is no natural way to order them. The <span class="style1">Anova</span> function also carries out something called Type III tests. These are &quot;term-added-last&quot; tests. They violate the principle of marginality and are rarely of interest. </p>
+<p><a name="table"></a>The Type I and Type II tests differ for this analysis of variance model because the treatment groups are unbalanced, i.e., there are different numbers of observations assigned to each treatment, some of which was due to random attrition during the course of the experiment. We can exhibit the imbalance by tabulating the data by treatment.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(tadpoles$treatment)</div>
+<span class="style24">CoD1 CoD2 CoS1 CoS2 NoD1 NoD2 NoS1 NoS2 RuD1 RuD2 RuS1 RuS2 <br>
+&nbsp; 23&nbsp;&nbsp; 18&nbsp;&nbsp; 24&nbsp;&nbsp; 24&nbsp;&nbsp; 19&nbsp;&nbsp; 24&nbsp;&nbsp; 22&nbsp;&nbsp; 24&nbsp;&nbsp; 20&nbsp;&nbsp; 24&nbsp;&nbsp; 24&nbsp;&nbsp; 24 </span>
+
+<p><a name="isna"></a><a name="logicalnot" id="logicalnot"></a>The <span class="style1">table</span> function lists the number of observations in the data frame that correspond to each treatment. Recall though that some of these observations have missing values (NA) for the response, so the above tabulation is overcounting the number of actual observations that are available. To get the correct count we need to remove those observations that having missing values for the response. The logical function <span class="style1">is.na</span> returns TRUE if the value of its argument is missing, FALSE otherwise. The logical &quot;Not&quot; operator of R is the exclamation point. So, <span class="style1">!is.na</span> returns TRUE if the value of its argument is not missing, FALSE if it is missing. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> !is.na(tadpoles$response)</div>
+<span class="style24">&nbsp; [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE<br>
+&nbsp;[13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE<br>
+&nbsp;[25] FALSE FALSE FALSE FALSE FALSE FALSE&nbsp; TRUE&nbsp; TRUE &nbsp;TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+&nbsp;[37]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+&nbsp;[49]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+&nbsp;[61]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+&nbsp;[73]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+&nbsp;[85]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+&nbsp;[97]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[109]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[121]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[133]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[145]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[157]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[169]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[181]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[193]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[205]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[217]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE &nbsp;TRUE&nbsp; TRUE<br>
+[229]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[241]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[253]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[265]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE FALSE</span>
+
+<p><a name="catenate"></a>We can use the above output to select the non-missing values of a variable. For instance, suppose we have a vector of length 10 that contains three missing values. The <span class="style1">c</span> function below is the catenation function that allows you to assemble a set of values into a single vector.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vec &lt;- c(1:4, NA, 6, NA, 8:9, NA)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vec</div>
+<span class="style24">&nbsp;[1]&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4 NA&nbsp; 6 NA&nbsp; 8&nbsp; 9 NA</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> !is.na(vec)</div>
+<span class="style24">&nbsp;[1]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE FALSE&nbsp; TRUE FALSE&nbsp; TRUE&nbsp; TRUE FALSE</span>
+<p>To select elements of a vector we use bracket notation much like we did last time for <a href="lecture2.htm#brackets">data frames</a>. Because R treats vectors as having a single dimension  no comma appears within the brackets to separate rows from columns.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vec[1:5]</div>
+<span class="style24">[1]&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4 NA</span>
+<p>Replacing numerical values  inside the brackets with a vector of TRUEs and FALSEs causes R to retain the elements of the vector that correspond to the TRUEs and discard the elements  that correspond  to the FALSEs.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vec[!is.na(vec)]</div>
+<span class="style24">[1] 1 2 3 4 6 8 9</span>
+<p> Using this we can get a count of the number of observations with non-missing values for the response variable as follows.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(tadpoles$treatment[!is.na(tadpoles$response)])</div>
+<span class="style24">CoD1 CoD2 CoS1 CoS2 NoD1 NoD2 NoS1 NoS2 RuD1 RuD2 RuS1 RuS2 <br>
+  &nbsp; 13&nbsp;&nbsp; 17&nbsp;&nbsp; 24&nbsp;&nbsp; 24&nbsp;&nbsp; 19&nbsp;&nbsp; 24&nbsp;&nbsp; 22&nbsp;&nbsp; 24&nbsp;&nbsp; 12&nbsp;&nbsp; 24&nbsp;&nbsp; 12&nbsp;&nbsp; 24 </span>
+
+<p>So the imbalance is fairly severe with some treatments having only half as many observations as others. This imbalance carries over to the individual factors.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(tadpoles$fac1[!is.na(tadpoles$response)])</div>
+<span class="style24">Co No Ru <br>
+  78 89 72 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(tadpoles$fac2[!is.na(tadpoles$response)])</div>
+<span class="style24">&nbsp; D&nbsp;&nbsp; S <br>
+  109 130 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(tadpoles$fac3[!is.na(tadpoles$response)])</div>
+<span class="style24">&nbsp; 1 &nbsp;&nbsp;2 <br>
+  102 137 </span>
+
+<p><a name="levels"></a>When the treatments in analysis of variance models are balanced, the Type I and Type II tests end up being the same. To demonstrate this I generate some random data using an experimental design modeled after the tadpoles experiment in which the twelve treatments have ten observations each. The <span class="style1">levels</span> function of R displays the unique values of a factor.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> levels(tadpoles$fac1)</div>
+<span class="style24">  [1] &quot;Co&quot; &quot;No&quot; &quot;Ru&quot;</span>
+
+<p><a name="expandgrid"></a>The <span class="style1">expand.grid</span> function of R takes the values of two or more categorical vectors and combines them in all possible ways. I use it to create the treatment design of the current experiment.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> junk &lt;- expand.grid(fac1=levels(tadpoles$fac1), fac2=levels(tadpoles$fac2), fac3=levels(tadpoles$fac3))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  junk
+</div>
+<span class="style24">  &nbsp;&nbsp; fac1 fac2 fac3<br>
+  1&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+  2&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+  3&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+  4&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  5&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  6&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  7&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+  8&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+  9&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+  10&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2<br>
+  11&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2<br>
+12&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2</span>
+<p><a name="rep"></a>The above display corresponds to one full replication of each treatment. For the final experiment we need to repeat each column of the <span class="style1">expand.grid</span> output  ten times.  The <span class="style1">rep</span> function of R can be used to replicate a vector a prescribed number of times. For instance, the call below repeats the vector <span class="style10">1:3</span> a total of four times.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rep(1:3,4)</div>
+<span class="style24">&nbsp;[1] 1 2 3 1 2 3 1 2 3 1 2 3</span>
+<p><a name="dataframe"></a><a name="rnorm"></a>To obtain  the response variable I randomly generate 120  values from a standard normal distribution using the <span class="style1">rnorm</span> function of R. To assemble things in a single data frame I use the <span class="style1">data.frame</span> function and provide meaningful names for each of the variables.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> junk2 &lt;- data.frame(fac1=rep(junk$fac1,10), fac2=rep(junk$fac2,10), fac3=rep(junk$fac3,10), y=rnorm(120))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> junk2[1:15,]</div>
+<span class="style24">  &nbsp;&nbsp; fac1 fac2 fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y<br>
+  1&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1&nbsp; 0.5499590<br>
+  2&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 -2.1923295<br>
+  3&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1&nbsp; 0.4604401<br>
+  4&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 -0.2256190<br>
+  5&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1&nbsp; 1.1820628<br>
+  6&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1&nbsp; 0.5391090<br>
+  7&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 -0.7230373<br>
+  8&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 -0.7915517<br>
+  9&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 -1.1208007<br>
+  10&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2&nbsp; 0.2031637<br>
+  11&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 -2.5749841<br>
+  12&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 -0.8625074<br>
+  13&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 -0.6887607<br>
+  14&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1&nbsp; 0.2874479<br>
+  15&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 -1.8288753</span>
+
+<p>Finally I fit a full three-factor analysis of variance model to these data and compare the Type I and Type II tests provided by the <span class="style1">anova</span> and <span class="style1">Anova</span> functions. Because the data are balanced (10 observations for each treatment combination), the reported tests are exactly the same.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mj &lt;- lm(y~fac1*fac2*fac3, data=junk2)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #Type I and Type II tests are the same</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">anova(mj)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: y<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp; <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 12.535&nbsp; 6.2675&nbsp; 5.9631 0.003496 **<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 3.110&nbsp; 3.1100&nbsp; 2.9590 0.088267 . <br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 0.037&nbsp; 0.0371&nbsp; 0.0353 0.851400&nbsp;&nbsp; <br>
+  fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 0.142&nbsp; 0.0709&nbsp; 0.0675 0.934775&nbsp;&nbsp; <br>
+  fac1:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 0.124&nbsp; 0.0618&nbsp; 0.0588 0.942930&nbsp;&nbsp; <br>
+  fac2:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 0.288&nbsp; 0.2878&nbsp; 0.2738 0.601833&nbsp;&nbsp; <br>
+  fac1:fac2:fac3&nbsp;&nbsp; 2&nbsp;&nbsp; 1.692&nbsp; 0.8460&nbsp; 0.8049 0.449779&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 108 113.514&nbsp; 1.0511&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Anova(mj)</div>
+<span class="style24">  Anova Table (Type II tests)</span>
+<p><span class="style24">Response: y<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sum Sq&nbsp; Df F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp; <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.535&nbsp;&nbsp; 2&nbsp; 5.9631 0.003496 **<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.110&nbsp;&nbsp; 1&nbsp; 2.9590 0.088267 . <br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.037&nbsp;&nbsp; 1&nbsp; 0.0353 0.851400&nbsp;&nbsp; <br>
+  fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.142&nbsp;&nbsp; 2&nbsp; 0.0675 0.934775&nbsp;&nbsp; <br>
+  fac1:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.124&nbsp;&nbsp; 2&nbsp; 0.0588 0.942930&nbsp;&nbsp; <br>
+  fac2:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.288&nbsp;&nbsp; 1&nbsp; 0.2738 0.601833&nbsp;&nbsp; <br>
+  fac1:fac2:fac3&nbsp;&nbsp; 1.692&nbsp;&nbsp; 2&nbsp; 0.8049 0.449779&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 113.514 108&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<h2><a name="homogeneity" id="homogeneity"></a>Homogeneity of variance</h2>
+<p>Last time we generated  box plots of the response variable separately by treatment.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">boxplot(response~treatment, data=tadpoles, horizontal=T, xlab='Mitotic activity', las=1) </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">treat.mean &lt;- tapply(tadpoles$response, tadpoles$treatment, mean, na.rm=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">points(treat.mean, 1:12, col=2, pch=8)</div>
+<p align="center"><img src="../../images/lectures/lecture3/fig6.png" width="440" height="320" alt="fig 8"></p>
+<p align="center" class="styleArial"><strong>Fig. 1</strong> &nbsp;Graphical summary of the results of the tadpole experiment</p>
+<p>Fig. 1 highlights a potential problem with these data. Notice how the variability across the groups varies. In particular look at the RuD1 group. Its interquartile width is two to five times greater than that of any other group. This could mean that  the treatment is affecting the variance in addition to the mean. It could also mean that a number of confounding factors have not been properly controlled for in this experiment thus introducing  heterogeneity in the groups. In either case the observed heterogeneity of group variances calls into question the constant variance assumption of our model. In the analysis of variance with a normal distribution for the response we assume that the mean response varies by treatment, but that the variance remains the same.</p>
+<p name="var"><a name="var"></a>We can get a better sense of how important all of this  is by calculating the variances in each group and displaying the results graphically. To do this I again use the <span class="style41">tapply</span> function from <a href="lecture2.htm#tapply">last time</a> but replacing R's <span class="style41">mean</span> function with its variance function, <span class="style41">var</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">treat.var &lt;- tapply(tadpoles$response, tadpoles$treatment, var, na.rm=T)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> treat.var</div>
+<span class="style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CoD1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CoD2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CoS1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CoS2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NoD1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NoD2 <br>
+    0.17377109 0.10411890 0.03035735 0.04444643 0.06847232 0.05939101 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NoS1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NoS2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RuD1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RuD2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RuS1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RuS2 <br>
+  0.03470042 0.04891929 0.13767742 0.04569661 0.07098516 0.02232698</span></p>
+<p name="lattice"><a name="lattice"></a>It's hard to judge patterns in a set of numbers such as this. A dot plot on the other hand provides a useful  graphical summary. Dot plots are  a nice alternative to  bar charts  because they avoid the visual distraction of the bars, which  really provide no additional information.   R has a  function called <span class="style41">dotplot</span> in the <span class="style19">lattice</span> package for creating dot plots. The <span class="style19">lattice</span> package provides a set of graphics routines that parallel what one can do with the base graphics package of R. Its raison d'etre is to produce conditioning graphs&mdash;multi-panel displays of how the relationship between two variables varies as the value of a third variable changes. We will use  conditioning graphs extensively when we study multilevel models later in the course, so this is a good time to begin experimenting with some of the capabilities of <span class="style19">lattice</span>.</p>
+<p name="library"><a name="library"></a>To use the functions in <span class="style19">lattice</span> for the first time in an R session, the package  needs to be loaded into memory. The <span class="style19">lattice</span> package is part of the standard R installation so we don't need to first install it from the CRAN site. As with all R packages <span class="style19">lattice</span> is loaded into memory with the <span class="style41">library</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(lattice)</div>
+<p name="dotplot"><a name="dotplot"></a><a name="names"></a><a name="xlab"></a>The <span class="style41">dotplot</span> function uses the formula conventions of <span class="style41">boxplot</span> in which the <em>y</em>-axis variable and <em>x</em>-axis variable are separated by a tilde, ~. In Fig. 2 I place the treatment categories on the <em>y</em>-axis and the group variances on the <em>x</em>-axis. I use the <span class="style41">names</span> function to get the treatment labels from the <span class="style101">treat.var</span> object created above. I use the <span class="style22">xlab</span> argument to  add a label to the <em>x</em>-axis .</p>
+
+  <div class="style23" style="padding-left: 30px; text-indent:-30px">dotplot(names(treat.var)~treat.var, xlab='Variance')</div>
+
+<p>As  Fig. 2a shows,   treatment group <span class="style8">RuD1</span> stands out from the rest. In addition the two <span class="style8">CoD</span> treatments that exhibited  outliers in the box plot of Fig. 1 also have large variances. </p>
+<table width="668" border="0" align="center" cellpadding="1" cellspacing="0">
+  <tr>
+    <td width="334">(a)&nbsp;&nbsp; <img src="../../images/lectures/lecture3/dotplot1.png" width="292" height="295" align="top"></td>
+    <td width="330">(b)&nbsp;&nbsp; <img src="../../images/lectures/lecture3/dotplot2.png" width="292" height="294" align="top"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" class="styleArial"><strong>Fig. 2 &nbsp;</strong>Dot plots of (a) group variances and (b) group MADs (median absolute deviations) </em></td>
+  </tr>
+</table>
+<p name="mad"><a name="mad"></a>To distinguish the cases of excessive intrinsic variability from those that are  outlier-induced, we can replace the sample variance  with a more robust measure, one that is less sensitive to extreme outliers. The MAD statistic, for median absolute deviation from the median, is one such measure and is calculated with the <span class="style41">mad</span> function in R. Recall that the sample variance is  the averaged squared deviation about the mean.</p>
+<p align="center"><img src="../../images/lectures/lecture3/var.gif" width="137" height="82" alt="var"></p>
+<p>Because the sample mean is sensitive to the presence of outliers and the squaring operation in this formula exacerbates the influence of large deviations, the sample variance is strongly affected by outliers. The MAD statistic replaces the sample mean with the sample median and squaring with taking the absolute value. As a result, outlying observations are less influential on the result.</p>
+<p align="center"><img src="../../images/lectures/lecture3/mad.gif" width="273" height="48" alt="mad"></p>
+<p><a name="mad"></a>I obtain the MAD of the response for each treatment group and display the results in a dot plot (Fig. 2b). </p>
+
+  <div class="style23" style="padding-left: 30px; text-indent:-30px">treat.mad &lt;- tapply(tadpoles$response, tadpoles$treatment, mad, na.rm=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dotplot(names(treat.mad)~treat.mad, xlab='MAD')</div>
+<p>Observe that the two <span class="style8">CoD</span> treatments with large variances do not have exceptionally large  MADs. This tells us that the outliers in these two groups were probably the cause of the large variances. The <span class="style8">RuD1</span> treatment still stands out. In addition the <span class="style8">NoD1</span> treatment group  has an unusually large MAD relative to the others.  From the box plots we see that the <span class="style8">NoD1</span> treatment group yielded the second largest interquartile width of the response among the groups.</p>
+<p>Based on Figs. 1 and 2 we should conclude that while there is  evidence that the group variances are not homogeneous, the problem is not pervasive. It appears that only one or two groups stand out as  intrinsically more variable than the rest. In two other groups with  large variances the cause appears to be the presence of one or two outlying observations. Variance heterogeneity due to outliers is easy to deal with. We just do the analysis twice, once with and once without the outliers, and see if our results change at all. If they do then we have to make a decision about what to do about the outliers. If the results don't change then the effect of the outliers is unimportant. </p>
+<p>Intrinsic variance heterogeneity on the other hand is a more complicated problem with which to deal. Still, the  boxplot display suggests that the variance heterogeneity is not having a large effect on the values of the means. If we were to rank groups based on treatment means or on treatment medians, we would get essentially the same ranking. </p>
+<h3><a name="analytical" id="analytical"></a>Analytical tests  of homogeneity of variance </h3>
+<p>While I find that graphical methods  for examining the assumption of homogeneity of variance are usually adequate, there do exist formal statistical tests of this assumption. In fact it was one of these tests that got the researcher who sent me these data worried about her analysis in the first place. The reason I prefer a graphical approach is that the formal tests tend to be overly sensitive to the problem. Bartlett's test, for instance, is known to yield spurious results if the data are  non-normal in distribution. </p>
+<p>But in a more general sense the problem with using these tests is that if you have enough data then these tests will always reject the null hypothesis of variance homogeneity. This follows from the fact that things are never exactly equal, a fact that will eventually be demonstrated with sufficient data. Thus when you use these tests not only do you have to hope that your groups really are homogeneous, but you also have to hope that you don't have too much data and hence too much power. What matters in the end is whether the differences are substantive rather than statistically significant. Because substantive differences in variance are best detected visually, this brings us back to examining the problem graphically.</p>
+<p>Still, it is common to see formal tests of homogeneity of variance for ANOVA models carried out in the literature, so I briefly outline what's available in R: Bartlett's test, the Fligner-Killeen test, and two versions of Levene's test. There are others. Each is a test of variance homogeneity hence a significant result from these tests suggests that the within-treatment variability varies by treatment.</p>
+<p><span class="style16"><strong><a name="bartletttest"></a></strong></span><strong>Bartlett's test</strong></p>
+<p>Bartlett's test is a parametric <em>k</em>-sample test of homogeneity of variances. It is apparently  fairly sensitive to the normality of the data. It uses formula notation, <em>y</em> ~ <em>x</em>, where <em>x</em> is a factor indicating the groups. </p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">bartlett.test(tadpoles$response~tadpoles$treatment)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bartlett test of homogeneity of variances</span>
+<p><span class="style24">data:&nbsp; tadpoles$response by tadpoles$treatment <br>
+  Bartlett's K-squared = 35.0428, df = 11, p-value = 0.0002438</span>
+  
+</p>
+<span class="style16"><strong><a name="flignertest"></a></strong></span><strong>Fligner-Killeen test</strong>
+<p>The Fligner-Killeen test is a nonparametric alternative to Bartlett's test. It has the same syntax.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">fligner.test(tadpoles$response~tadpoles$treatment)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp; Fligner-Killeen test of homogeneity of variances</span>
+<p><span class="style24">data:&nbsp; tadpoles$response by tadpoles$treatment <br>
+  Fligner-Killeen:med chi-squared = 21.1, df = 11, p-value = 0.03235</span>
+</p>
+<strong><a name="car"></a><a name="levenetest" id="levenetest"></a>Levene's test</strong>
+<p>Levene's test is a robust alternative and uses a MAD-like statistic. One implementation of Levene's test is found in the <span class="style19">car</span> package that we've used <a href="lecture2.htm#car">previously</a>. The function for doing Levene's test in the <span class="style19">car</span> package is <span class="style41">leveneTest</span> and it supports formula notation. It has an additional <span class="style22">center</span> argument that allows specification of  &quot;mean&quot; or &quot;median&quot;, the latter for the robust test. The default is <span class="style22">center=&quot;median&quot;</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> leveneTest(response~treatment, data=tadpoles)</div>
+<span class="style24">  Levene's Test for Homogeneity of Variance (center = median)<br>
+  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Df F value&nbsp; Pr(&gt;F)&nbsp; <br>
+  group&nbsp; 11&nbsp; 1.8332 0.04966 *<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 227&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> leveneTest(response~treatment, data=tadpoles, center=mean)</div>
+<span class="style24">  Levene's Test for Homogeneity of Variance (center = mean)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp; <br>
+  group&nbsp; 11&nbsp; 2.8547 0.001593 **<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 227&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+
+<p>Summarizing the results of these tests we find the following.</p>
+<table width="500"border="1" align="center" cellpadding=2 cellspacing=0 frame=box>
+  <tr bgcolor="#F1D2D8">
+    <td><strong>Homogeneity of Variance Test</strong></td>
+    <td><div align="center"><strong><em>p</em>-value</strong></div></td>
+  </tr>
+  <tr >
+    <td>Bartlett's test </td>
+    <td><div align="center">0.0002</div></td>
+  </tr>
+  <tr >
+    <td>Fligner-Killeen test </td>
+    <td><div align="center">0.0323</div></td>
+  </tr>
+  <tr>
+    <td>Levene's test I (mean)</td>
+    <td><div align="center">0.0016</div></td>
+  </tr>
+  <tr >
+    <td>Levene's test II (median) </td>
+    <td><div align="center">0.0497</div></td>
+  </tr>
+</table>
+<p>There is a little bit of ambiguity in the results. Non-parametric tests based on the median appear to downplay the differences in variability, while tests based on the mean seem to enhance them. This is more or less consistent with what we saw graphically in Fig. 2. </p>
+<h3><a name="normal"></a>Normal probability plots</h3>
+<p><a name="residuals"></a><a name="qqplot"></a>As a final assessment of variance heterogeneity we can look at a normal probability plot of the residuals. The response or raw residuals are the observed values of the response minus their  predicted means under the model. These are the default residuals produced by the <span class="style1">residuals</span> function of R or by specifying  <span class="style22">type='response'</span>. In a normal probability plot  residuals are plotted against the corresponding quantiles of a standard normal distribution. Marked deviations from linearity can indicate problems with one more assumptions of the model. The <span class="style1">qqPlot</span> function of the <span class="style19">car</span> package is especially nice for producing normal probability plots because it superimposes a 95% confidence band around the estimated linear relationship making it easy to assess fit (Fig. 3a).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">qqPlot(residuals(out2))</div><br>
+<table width="680" border="0" align="center" cellpadding="1" cellspacing="0">
+  <tr>
+    <td width="334">(a)&nbsp;<img src="../../images/lectures/lecture3/fig4a.png" alt="fig. 3a" width="290" height="240" align="texttop"></td>
+    <td width="330">(b)<img src="../../images/lectures/lecture3/fig4b.png" alt="fig. 3b" width="290" height="240" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" class="styleArial"><strong>Fig. 3 &nbsp;</strong>Normal quantile plot of the (a) raw response residuals and (b) studentized residuals</em></td>
+  </tr>
+</table>
+<p>Notice that there are a group of residuals lying outside the confidence bands at both ends of the distribution but on opposite sides creating an S-shaped pattern. This is referred to as a heavy-tailed residual pattern and indicates that the distribution of the residuals have longer upper and lower tails than what is predicted for a normal distribution. One easy way to generate a heavy-tailed pattern like this is to combine two normal distributions with the same mean but different variances, a simple case of variance heterogeneity. So, the residual pattern of the raw residuals agrees with the tests and graphs we examined above. If we just feed the <span class="style1">qqPlot</span> function an <span class="style1">lm</span> regression object, it plots the studentized residuals instead of the raw residuals. Studentized residuals are a standardized version of the raw residuals (Fig 3b).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">qqPlot(residuals(out2))</div>
+<p>When we use  studentized residuals much of the heavy-tailed pattern  disappears. Only three outliers are apparent.</p>
+<h3><a name="modeling"></a>Modeling variance heterogeneity with generalized least squares </h3>
+<p><a name="gls"></a><a name="nlme"></a>When the constant variance  or  independence assumptions of the residuals appears to be violated in a regression  model that assumes a normal probability distribution for the response, one solution is to include a model for the residuals. Generalized least squares, as its name implies, is a generalization of least squares that allows one to relax the constant variance assumption and/or allow the residuals to be correlated. The <span class="style19">nlme</span> package provides the <span class="style1">gls</span> function for this purpose. The <span class="style1">gls</span> function follows the syntax of <span class="style1">lm</span> but requires  a couple of additional options.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  library(nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.g &lt;- gls(response~fac1+fac2+fac3+fac1:fac2+fac2:fac3, data=tadpoles, na.action=na.omit, method='ML')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  anova(out.g)</div>
+<span class="style24">  Denom. DF: 231 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1 58241.35&nbsp; &lt;.0001<br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 147.96&nbsp; &lt;.0001<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 24.10&nbsp; &lt;.0001<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 36.55&nbsp; &lt;.0001<br>
+  fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3.15&nbsp; 0.0446<br>
+fac2:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 6.09&nbsp; 0.0143</span>
+<p><a name="naaction"></a><a name="method"></a>The new arguments are <span class="style22">na.action=na.omit</span> and <span class="style22">method=&quot;ML&quot;</span>. Unlike <span class="style1">lm</span>, the <span class="style1">gls</span> function does not automatically delete observations that have missing values for the response or any of the predictors in the model. The default action of <span class="style1">gls</span> is to fail if missing values are encountered. The argument <span class="style22">na.action=na.omit</span> causes observations with missing values to be dropped from the analysis. The option <span class="style22">method=&quot;ML&quot;</span> produces maximum likelihood estimates which are needed if we wish to compare <span class="style1">gls</span> models with different sets of predictors. To match the F-statistics from the <span class="style1">anova</span> function when applied to the <span class="style1">lm</span> model <span class="style10">out2</span> above, we would instead need to use the default method which is denoted 'REML'.</p>
+<p><a name="weights"></a><a name="varident"></a>To specify a variance model for the residuals we include the  <span class="style22">weights</span> argument along with a model for the variance. To allow each treatment group to have its own variance we enter the <span class="style22">weights</span> argument as follows: <span class="style11">weights=varIdent(form=~1|treatment)</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #let each treatment have its own variance</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.g1 &lt;- gls(response~fac1+fac2+fac3+fac1:fac2+fac2:fac3, data=tadpoles, na.action=na.omit, method='ML', weights=varIdent(form=~1|treatment))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  anova(out.g1)</div>
+<span class="style24">  Denom. DF: 231 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1 78797.09&nbsp; &lt;.0001<br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 228.26&nbsp; &lt;.0001<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 28.89&nbsp; &lt;.0001<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 58.90&nbsp; &lt;.0001<br>
+  fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 4.42&nbsp; 0.0131<br>
+fac2:fac3&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp; 5.29&nbsp; 0.0224</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  Anova(out.g1)</div>
+<span class="style24">Error in eval(expr, envir, enclos) : object 'response' not found</span>
+<p><a name="atype"></a>The <span class="style1">Anova</span> function doesn't have a method for <span class="style1">gls</span> objects and yields an error message. Instead the <span class="style1">anova</span> method for <span class="style1">gls</span> objects has an additional argument called <span class="style22">type</span> that allows one to specify Type I tests (<span class="style22">type=&quot;sequential&quot;</span>) or Type II tests (<span class="style22">type=&quot;marginal&quot;</span>)
+</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  anova(out.g1, type='sequential')</div>
+<span class="style24">  Denom. DF: 231 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1 78797.09&nbsp; &lt;.0001<br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 228.26&nbsp; &lt;.0001<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 28.89&nbsp; &lt;.0001<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 58.90&nbsp; &lt;.0001<br>
+  fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 4.42&nbsp; 0.0131<br>
+  fac2:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 5.29&nbsp; 0.0224</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out.g1, type='marginal')</div>
+<span class="style24"> Denom. DF: 231 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF&nbsp;&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1 1951.6627&nbsp; &lt;.0001<br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 29.5847&nbsp; &lt;.0001<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0.0435&nbsp; 0.8349<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 3.9362&nbsp; 0.0484<br>
+fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2.3115 &nbsp;</span><span class="style25">0.1014</span><span class="style24"><br>
+fac2:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 5.2891&nbsp; 0.0224</span>
+<p>The <em>p</em>-value for the <span class="style10">fac1:fac2</span> interaction is larger than it was before. If we use REML estimation instead the Type II test of the <span class="style10">fac1:fac2</span> interaction still fails to be statistically significant.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # REML estimation </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.g1a &lt;- gls(response~fac1+fac2+fac3+fac1:fac2+fac2:fac3, data=tadpoles, na.action=na.omit,&nbsp; weights=varIdent(form=~1|treatment))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out.g1a, type='marginal')</div>
+<span class="style24">  Denom. DF: 231 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF&nbsp;&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1 2011.1780&nbsp; &lt;.0001<br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 30.4048&nbsp; &lt;.0001<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0.0448&nbsp; 0.8326<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 4.0602&nbsp; 0.0451<br>
+fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2.3929&nbsp; </span><span class="style25">0.0936</span><span class="style24"><br>
+fac2:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 5.4718&nbsp; 0.0202</span>
+<p>The point estimates for the effects in the weighted versus unweighted analyses are different but not greatly so.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out.g1)</div>
+<span class="style24">  &nbsp;(Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac32 fac1No:fac2S <br>
+  &nbsp; 3.37373138&nbsp;&nbsp; 0.55243674&nbsp;&nbsp; 0.53412500&nbsp;&nbsp; 0.01727308&nbsp;&nbsp; 0.11697024&nbsp;&nbsp; 0.01679119 <br>
+  fac1Ru:fac2S&nbsp; fac2S:fac32 <br>
+  &nbsp; 0.15623626 &nbsp;&nbsp;0.16064042 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out.g)</div>
+<span class="style24">  &nbsp;(Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac32 fac1No:fac2S <br>
+  &nbsp; 3.38323831&nbsp;&nbsp; 0.54729873&nbsp;&nbsp; 0.53698650&nbsp;&nbsp; 0.01714866&nbsp;&nbsp; 0.10757945&nbsp;&nbsp; 0.01341375 <br>
+  fac1Ru:fac2S&nbsp; fac2S:fac32 <br>
+&nbsp; 0.16350360&nbsp;&nbsp; 0.16322994</span>
+<p>The modeled variance function for the residuals provided by <span class="style1">varIdent</span> is given by <img src="../../images/lectures/lecture3/varfunction.gif" alt="variance function" width="120" height="38" align="absmiddle"> where <em>i</em> denotes the treatment group. The estimates of &delta;<sub>i</sub> for each treatment are displayed in the summary output of the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.g1)</div>
+<span class="style24">Generalized least squares fit by maximum likelihood<br>
+&nbsp; Model: response ~ fac1 + fac2 + fac3 + fac1:fac2 + fac2:fac3 <br>
+&nbsp; Data: tadpoles <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BIC&nbsp;&nbsp; logLik<br>
+&nbsp; 2.888512 72.41778 18.55574</span>
+<p><span class="style25">Variance function:<br>
+  &nbsp;Structure: Different standard deviations per stratum<br>
+  &nbsp;Formula: ~1 | treatment <br>
+  &nbsp;Parameter estimates:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; CoD1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NoD1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NoS1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuD1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CoS1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuD2 <br>
+  1.0000000 0.6561063 0.6359648 0.4547943 0.8880739 0.4295989 0.3654052 0.5216573 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; CoD2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NoD2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NoS2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CoS2 <br>
+  0.7806614 0.5951819 0.5413518 0.5224996 
+</span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value&nbsp; Std.Error&nbsp; t-value p-value<br>
+  (Intercept)&nbsp; 3.373731 0.07507843 44.93610&nbsp; 0.0000<br>
+  fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.552437 0.07452406&nbsp; 7.41286&nbsp; 0.0000<br>
+  fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.534125 0.07604298&nbsp; 7.02399&nbsp; 0.0000<br>
+  fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.017273 0.08137390&nbsp; 0.21227&nbsp; 0.8321<br>
+  fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.116970 0.05796235&nbsp; 2.01804&nbsp; 0.0447<br>
+  fac1No:fac2S 0.016791 0.08487896&nbsp; 0.19783&nbsp; 0.8434<br>
+  fac1Ru:fac2S 0.156236 0.08740228&nbsp; 1.78755&nbsp; 0.0752<br>
+  fac2S:fac32&nbsp; 0.160640 0.06867040&nbsp; 2.33930&nbsp; 0.0202</span>
+<p><span class="style24">&nbsp;Correlation: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intr) fac1No fac1Ru fac2S&nbsp; fac32&nbsp; f1N:2S f1R:2S<br>
+  fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.766&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.645&nbsp; 0.710&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.923&nbsp; 0.706&nbsp; 0.595&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+  fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.527&nbsp; 0.071 -0.130&nbsp; 0.486&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  fac1No:fac2S&nbsp; 0.672 -0.878 -0.623 -0.728 -0.063&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  fac1Ru:fac2S&nbsp; 0.561 -0.617 -0.870 -0.590&nbsp; 0.113&nbsp; 0.648&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  fac2S:fac32&nbsp;&nbsp; 0.444 -0.060&nbsp; 0.110 -0.508 -0.844&nbsp; 0.045 -0.200</span>
+<p><span class="style24">Standardized residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Med&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -3.11585527 -0.59959599 -0.03483211&nbsp; 0.59692465&nbsp; 3.92245612 </span>
+<p><span class="style24">Residual standard error: 0.4012648 <br>
+  Degrees of freedom: 239 total; 231 residual<br>
+</span>
+<p>From the output we see that treatment group <span class="style8">CoD1</span> was assigned the largest variance and <span class="style8">RuS2</span> the smallest. This corresponds to what we saw in Fig. 2a. It also means that the variance estimates are being strongly influenced by the outlying values that we saw in Fig. 1.</p>
+<p><a name="rtype"></a>The <span class="style1">gls</span> function models the heterogeneity in the residuals; it doesn't remove it. To see if the variance model has been effective in capturing the variance heterogeneity we can examine a normal probability plot of the normalized residuals, obtained by specifying <span class="style22">type='normalized'</span> as an argument to <span class="style1">residuals</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> qqPlot(residuals(out.g1, type='normalized'))</div>
+<p align="center"><img src="../../images/lectures/lecture3/fig4.png" width="460" height="300" alt="fig 3"></p>
+<p align="center" class="styleArial"><strong>Fig. 4</strong> &nbsp;Normal quantile plot of the normalized residuals from generalized least squares</p>
+
+<p>While there is still some indication of a heavy tailed pattern, the plot is much improved over what it was for the raw residuals from the ordinary least squares model. Further documentation for the <span class="style1">gls</span> function can be found in <a href="lecture3.htm#Pinheiro">Pinheiro and Bates (2000)</a>, available as an e-book through the UNC library system.</p>
+<h2><a name="predictive"></a>Predictive simulation to assess model fit</h2>
+<p>An important step before using a statistical model for inference is to verify that the model provides an adequate fit to the data. For normal probability models there are many diagnostics based on the  residuals of the model, such as the normal probability plot above, that can be used for this purpose. When we turn to statistical models based on other probability distributions, residual analysis will prove to be less useful. To prepare ourselves for this we need a general method for assessing fit that can be applied to any statistical model. One such method is predictive simulation, also known as Monte Carlo simulation.</p>
+<p>The logic behind predictive simulation is that  the regression model coupled with the probability distribution for the response is treated as a data-generating mechanism, a protocol by which the data we observed might have arisen. In predictive simulation we use the fitted model to generate new data and then compare the data generated by the model (which by construction will be well-fit by the model) with the  data we actually collected. If the simulated data and the actual data strongly resemble each other, we take this as evidence that the model provides a good fit. In practice we adopt a Popperian approach and try to falsify the model. We search for characteristics of the data that are never or rarely seen in the simulations and/or features of the simulated data sets that don't match what we see in the data. Because the simulations are random we need to carry out this comparison a large number of times using many simulated data sets. To facilitate this we typically  look at the distributions of statistics calculated from the simulated data sets to see if the same statistic when calculated on the observed data looks like it could have come from this distribution.</p>
+<p>For regression models based on a normal distribution obtaining a Monte Carol simulation is fairly simple. Let <img src="../../images/lectures/lecture3/muhat.gif" alt="mu hat" width="22" height="35" align="absmiddle"> denote the estimated mean for observation <em>i </em>and let <img src="../../images/lectures/lecture3/sigmahat.gif" alt="sigma hat" width="20" height="25" align="absmiddle"> be the estimated standard deviation of the normal distribution based on the model. (Typically we estimate &sigma; using the square root of the reported mean squared error, which is the average sum of the squared deviations of the observed values from their mean.) We then use a function such as <span class="style1">rnorm</span> from R to generate a random value from a normal distribution with this mean and standard deviation. This is repeated for each observation yielding a single simulated data set. We then calculate some statistic from this simulated data set and then repeat this process, say 1000 times, to yield a simulation-based distribution of the statistic.</p>
+<p><a name="simulate"></a><a name="setseed"></a>R makes this easy by providing a function <span class="style1">simulate</span> that generates the simulated data sets automatically from a specified regression model. Because <span class="style1">simulate</span> does not have a method for <span class="style1">gls</span> objects, but does have a method for <span class="style1">lm</span> objects we will work with the analysis of variance model <span class="style10">out2</span> that we fit using <span class="style1">lm</span>. In order to make the results reproducible, I use the <span class="style1">set.seed</span> function to first set the seed for the random number generator. The argument for <span class="style1">set.seed</span> should be a positive integer. Choosing different values for this integer yields different random seeds and samples. This way we can generate the same set of &quot;random&quot; values again if desired. To generate six simulated data sets using the model <span class="style10">out2</span> we proceed as follows.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #six simulated data sets</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(25)
+</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # simulate six data sets using model out2</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">junk &lt;- simulate(out2, n=6)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # this generated a data frame</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(junk)</div>
+ <span class="style24"> [1] &quot;data.frame&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(junk)</div>
+<span class="style24">[1] 239&nbsp;&nbsp; 6</span>
+<p><a name="length"></a>The <span class="style1">simulate</span> function generates a data frame in which each simulated data set occupies a column. The rows correspond to the observations and appear in the same order as they do in the original data set. If we compare the reported dimensions of the simulated data frame to that of the original data set, we see that <span class="style1">simulate</span> has only returned values for observations that had non-missing values of the response. The <span class="style1">length</span> function counts the number of elements in a vector, including the missing elements.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(tadpoles)</div>
+<span class="style24">  [1] 270   5</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> length(tadpoles$response)</div>
+<span class="style24">[1] 270</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> length(tadpoles$response[!is.na(tadpoles$response)])</div>
+<span class="style24">[1] 239</span>
+<p>To illustrate how we might use the simulated data sets to assess fit, I take the data frame of simulated data and unstack the columns into one long vector. I then construct a second vector that identifies the simulation from which the observation comes. For that I use the <span class="style1">rep</span> function. We previously saw that when the first argument of <span class="style1">rep</span> is a vector and the second argument is a number (scalar) <em>n</em>, <span class="style1">rep</span> repeats the vector <em>n</em> times. If instead the second argument of <span class="style1">rep</span> is a vector, then <span class="style1">rep</span> matches up the two vector arguments and repeats the individual elements of the first vector the number of times indicated in the second vector. Here is an illustration of the two different ways of using <span class="style1">rep</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #repeat the entire vector 4 times</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rep(1:3,4)</div>
+<span class="style24">  &nbsp;[1] 1 2 3 1 2 3 1 2 3 1 2 3</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # repeat each component of the vector
+  4 times</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rep(1:3,c(4,4,4))</div>
+<span class="style24">&nbsp;[1] 1 1 1 1 2 2 2 2 3 3 3 3</span>
+<p>Rather than writing out the second vector as <span class="style10">c(4,4,4)</span> we could have instead used the <span class="style1">rep</span> function  to have created it.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rep(1:3, rep(4,3))</div>
+<span class="style24">&nbsp;[1] 1 1 1 1 2 2 2 2 3 3 3 3</span>
+<p><a name="nrow"></a>So, for example, the following use of <span class="style1">rep</span>  repeats the number of observations  produced by each simulation six times.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rep(nrow(junk),6)</div>
+<span class="style24">[1] 239 239 239 239 239 239</span>
+<p><a name="unlist"></a>Finally we use this to repeat each of the numbers one through six 239 times with: <span class="style10">rep(1:6,rep(nrow(junk),6))</span>. Putting this altogether we create a data frame in which the simulated values are in column 1 and the simulation number is in column 2. To stack the data frame columns from the simulation in a single column we use the <span class="style1">unlist</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.dat1 &lt;- data.frame(sims=unlist(junk), simnum = rep(1:6,rep(nrow(junk),6)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.dat1[1:8,]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sims simnum<br>
+  sim_11 3.886592&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  sim_12 3.992673&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  sim_13 4.033910&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  sim_14 4.201925&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  sim_15 4.175852&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  sim_16 3.580070&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  sim_17 4.060385&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+sim_18 3.604831&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</span>
+<p><a name="densityplot"></a><a name="plotpoints"></a>Next we compare the distribution of the simulated data with the observed data. A convenient way to compare distributions is with a kernel density plot, a smoothed version of a histogram. The <span class="style1">densityplot</span> function from the <span class="style19">lattice</span> package will produce multiple kernel density plots in a single panel graph. The syntax is <span class="style10">~x|grp</span> where <span class="style10">x</span> is the variable whose density plot we want and <span class="style10">grp</span> is the variable that identifies the different groups. The group variable should be a factor so that the panels are labeled properly. To prevent the raw data from also being displayed in a rug plot at the bottom of the graph we add the option <span class="style22">plot.points=F</span></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">densityplot(~sims|factor(simnum), data=my.dat1, plot.points=F)</div>
+<p align="center"><img src="../../images/lectures/lecture3/fig5.png" width="470" height="340" alt="fig. 5"></p>
+<p align="center" class="styleArial"><strong>Fig. 5</strong> &nbsp;Kernel density estimates of six different simulated data sets </p>
+<p><a name="panel"></a><a name="paneldensity"></a><a name="curly"></a><a name="function"></a>To compare the simulated data with the original data we need to superimpose a kernel density plot of the actual data on each of the panels. To do this we have to write a panel function, a function that tells <span class="style19">lattice</span> what to draw in each panel. User-defined panel functions are specified in a <span class="style22">panel</span> argument. The panel functions of <span class="style19">lattice</span> have their own names and typically start with the word panel followed by a period. The panel function for density plots is <span class="style1">panel.densityplot</span>. We need to invoke this function twice: once to draw the kernel density plot of a simulated data set and a second time to draw the kernel density plot of the observed data. The panel function itself starts with the keyword <span class="style22">function</span> followed by parentheses containing one or more variable names. The different lines comprising the panel function are enclosed by curly braces <span class="style1">{ }</span>. In the panel function shown below, the first line produces the kernel density estimate of the simulated data. The variable <em>x</em> represents the simulated values of a different group each time a new panel is drawn. The second line of the panel function produces the kernel density estimate of the observed data. This doesn't change from panel to panel.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># add kernel density of the raw data</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  densityplot(~sims|factor(simnum), data=my.dat1, panel=function(x) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.densityplot(x, plot.points=F)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.densityplot(tadpoles$response[!is.na(tadpoles$response)], plot.points=F, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">})</div>
+<table width="500" border="0" align="center" cellpadding="1" cellspacing="0">
+  <tr>
+    <td><img src="../../images/lectures/lecture3/fig5b.png" width="470" height="340" alt="fig. 5"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 6</strong> &nbsp;Kernel density estimates of the distributions of six different simulated data sets (<span class="style85">&mdash;</span>) compared with the kernel density estimate of the observed data distribution (<span class="style41">&mdash;</span>).</td>
+  </tr>
+</table>
+<p align="left">Based on Fig. 6 the simulated and observed data distributions look fairly close. Admittedly lumping the data into a single distribution is rather crude. The actual model assumes the data come from multiple normal distributions, one for each treatment, so it might be better to examine the fit separately by treatment. Collapsing the data as we did in Fig. 6 allows discrepancies in different treatments to cancel out.</p>
+<p align="left">In the box plots of Fig. 1 we saw that treatment <span class="style8">CoD1</span> has a couple of very extreme observations. It would be interesting to see if observations this extreme can ever be generated by the fitted model. If not, then we have some evidence of lack of fit, at least for this treatment. To simplify the calculations I first create a treatment vector and a response vector in which the observations that have missing values for the response have been removed.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">short.treatment &lt;- tadpoles$treatment[!is.na(tadpoles$response)]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">short.response &lt;- tadpoles$response[!is.na(tadpoles$response)]</div>
+<p align="left"><a name="logicalequals"></a>To select the values of the response that correspond to treatment <span class="style8">CoD1</span> we need a Boolean expression that evaluates to TRUE when the treatment is <span class="style8">CoD1</span>. The double equals symbol, <span class="style1">==</span>, is the logical equals sign in R and is used for this purpose. I use it to select the response values for treatment <span class="style8">CoD1</span> and then calculate their maximum.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #calculate maximum response in CoD1 treatment</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> short.response[short.treatment=='CoD1']</div>
+ <span class="style24"> &nbsp;[1] 4.166 3.247 3.289 3.195 3.431 3.180 3.140 3.301 3.253 3.155 3.119 3.250<br>
+  [13] 4.454</span>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">CoD1.max &lt;- max(short.response[short.treatment=='CoD1'])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> CoD1.max</div>
+<span class="style24">  [1] 4.454</span>
+<p align="left">To obtain a good estimate of the distribution of the maxima I generate 1000 simulated data sets based on  the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(30)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #obtain 1000 simulated data sets</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> junk &lt;- simulate(out2, n=1000)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> colnames(junk)[1:10]</div>
+<span class="style24">[1] &quot;sim_1&quot;  &quot;sim_2&quot;  &quot;sim_3&quot;  &quot;sim_4&quot;  &quot;sim_5&quot;  &quot;sim_6&quot;  &quot;sim_7&quot;  &quot;sim_8&quot; <br>
+[9] &quot;sim_9&quot;  &quot;sim_10&quot;</span>
+<p align="left"><a name="dbrackets" id="dbrackets"></a>To access the individual columns of the data frame that is produced we can specify the entries by name, by column number, or by using a double brackets notation, <span class="style1">[[ ]]</span>, sometimes called list notation.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> junk$sim_1[1:10]</div>
+<span class="style24">  &nbsp;[1] 3.067068 4.015563 3.972882 4.413356 4.548569 3.730040 4.127993 3.914197<br>
+  &nbsp;[9] 3.936501 4.168237</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">junk[,1][1:10]</div>
+<span class="style24">  &nbsp;[1] 3.067068 4.015563 3.972882 4.413356 4.548569 3.730040 4.127993 3.914197<br>
+  &nbsp;[9] 3.936501 4.168237</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">junk[[1]][1:10]</div>
+<span class="style24">  &nbsp;[1] 3.067068 4.015563 3.972882 4.413356 4.548569 3.730040 4.127993 3.914197<br>
+  &nbsp;[9] 3.936501 4.168237</span>
+<p>To obtain the maximum value of the  responses for a particular simulation we need to select those values and then take their maximum. The following line of code calculates the maximum of treatment <span class="style8">CoD1</span> for the first simulation.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #maximum response for CoD1 treatment in simulation 1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(junk[,1][short.treatment=='CoD1'])</div>
+<span class="style24">[1] 3.523762</span>
+<p align="left"><a name="sapply"></a>To do this separately for each column, not just column 1 we just need to loop over all the columns. A vectorized version of looping is carried out by the <span class="style1">sapply</span> function of R. In the call below I create a generic function, indicated by the keyword <span class="style1">function(x)</span>, in which<em> x</em> plays the role of the column number. The first argument of <span class="style1">sapply</span> is the set of values that <em>x</em> is permitted to take, in this case the 1000 different column numbers.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #obtain maximum for CoD1 treatment in each simulation</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sim.max &lt;- sapply(1:1000, function(x) max(junk[,x][short.treatment=='CoD1']))</div>
+<p align="left">The variable <span class="style10">sim.max</span> contains the maximum response values for treatment <span class="style8">CoD1</span> from each of the 1000 simulated data sets. If we take the maximum of the simulation maxima we see that the observed maximum for this treatment exceeds the maximum of all 1000 of the simulated data sets. Thus we have evidence that the model cannot generate a value this large for treatment <span class="style8">CoD1</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #the maximum simulated maximum is less than the actual maximum</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> max(sim.max)</div>
+<span class="style24">  [1] 4.281896</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> CoD1.max</div>
+<span class="style24">[1] 4.454</span>
+<p align="left"><a name="density"></a>To get a sense of how badly the model is doing at recreating this data value, we can graph the distribution of the simulated maxima and see where in this distribution the actual maximum lies. This time I use the <span class="style1">density</span> function from base R to calculate the kernel density estimate of the maxima and then use the <span class="style1">plot</span> function to draw it.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#graph the density</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(density(sim.max))</div><br>
+<table width="500" border="0" cellpadding="1" align="center" cellspacing="0">
+    <tr>
+      <td><img src="../../images/lectures/lecture3/fig7.png" width="460" height="335" alt="fig. 7"></td>
+    </tr>
+    <tr>
+      <td  class="styleArial" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 7</strong> &nbsp;Distribution of simulated maxima for treatment CoD1</td>
+    </tr>
+</table>
+
+<p align="left"><a name="xlim"></a>To make room for the actual maximum I need to extend the <em>x</em>-axis to include the actual maximum. For this I use the <span class="style22">xlim</span> argument followed by a vector that lists the minimum value to plot followed by the maximum value to plot. For the minimum I take the minimum of the simulated values. For the maximum I take the maximum of the simulated values and the observed maximum.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> c(min(sim.max), max(c(sim.max,CoD1.max)))</div>
+<span class="style24">[1] 3.43426 4.45400</span>
+<p align="left"><a name="main"></a>I use the <span class="style22">xlab</span> argument to add a more appropriate label for the <em>x</em>-axis and I use the <span class="style22">main</span> argument of <span class="style1">plot</span> to change the title.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(density(sim.max), xlim=c(min(sim.max), max(c(sim.max,CoD1.max))), xlab='Maximum', main='Distribution of maxima for treatment CoD1')</div>
+<p align="left"><a name="pch"></a><a name="points"></a>The <span class="style1">plot</span> function is what's called a higher-level graphics function. It by default erases the current graphics window and creates a new graph. There are lower-level graphics functions in R that can be used to add things to the graph that is currently displayed in the active graphics window. One such function is <span class="style1">points</span> which plots points based on their  the <em>x</em>- and <em>y</em>-coordinates. I want to plot the observed maximum on the <em>x</em>-axis so I specify the <em>y</em>-coordinate as 0. I use an asterisk for the print character, <span class="style22">pch=8</span>, and color it red, <span class="style22">col=2</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#add actual maximum</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(CoD1.max, 0, col=2, pch=8)</div><br>
+<table width="500" border="0" align="center" cellpadding="1" cellspacing="0">
+  <tr>
+    <td><img src="../../images/lectures/lecture3/fig8.png" width="460" height="335" alt="fig. 8"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 8</strong> &nbsp;Distribution of simulated maxima for treatment CoD1 with the observed maximum (<span class="style1"><img src="../../images/lectures/lecture3/star.gif" alt="star" width="15" height="18" align="absmiddle"></span>) overlain.</td>
+  </tr>
+</table>
+<p align="left">From the graph we see that the observed maximum is a long way away from distribution of simulated maxima. If we were to write our own predictive simulation function and use it on <span class="style10">out.g1</span>, the generalized least squares model with a variance model for the residuals, this problem goes away. The observed maximum of the <span class="style8">CoD1</span> treatment group is regularly obtained by the <span class="style1">gls</span> model (details not shown).</p>
+<h2><a name="cited"></a>Cited references</h2>
+<p><a name="Pinheiro"></a>Pinheiro, J. C. &amp; Bates, D. M. (2000) <em>Mixed-Effects Models in S and S-Plus</em>. (Springer-Verlag, New York).</p>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture3&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 3, 2012<br>
+      URL: <a href="lecture3.htm#lecture3" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture3.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

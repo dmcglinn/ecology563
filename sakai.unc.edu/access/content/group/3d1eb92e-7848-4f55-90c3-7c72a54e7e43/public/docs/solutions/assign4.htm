@@ -1,0 +1,654 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 4&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign4" id="assign4"></a>Assignment 4&mdash;Solution</h1>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> poplars &lt;- read.table(ecol 563/poplars.txt', header=T)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> poplars[1:8,]</div>
+
+<span class="style24">  &nbsp; weight trt block&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K<br>
+  1&nbsp;&nbsp; 13.9&nbsp;&nbsp; O&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; absent absent absent&nbsp; absent<br>
+  2&nbsp;&nbsp; 14.3&nbsp;&nbsp; O&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; absent absent absent&nbsp; absent<br>
+  3&nbsp;&nbsp; 15.8&nbsp;&nbsp; O&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp; absent absent absent&nbsp; absent<br>
+  4&nbsp;&nbsp; 14.2&nbsp;&nbsp; P&nbsp;&nbsp;&nbsp;&nbsp; 1 present absent absent&nbsp; absent<br>
+  5&nbsp;&nbsp; 22.8&nbsp;&nbsp; P&nbsp;&nbsp;&nbsp;&nbsp; 2 present absent absent&nbsp; absent<br>
+  6&nbsp;&nbsp; 22.1&nbsp;&nbsp; P&nbsp;&nbsp;&nbsp;&nbsp; 3 present absent absent&nbsp; absent<br>
+  7&nbsp;&nbsp; 14.7&nbsp; PK&nbsp;&nbsp;&nbsp;&nbsp; 1 present absent absent present<br>
+  8&nbsp;&nbsp; 12.8&nbsp; PK&nbsp;&nbsp;&nbsp;&nbsp; 2 present absent absent present</span>
+<h2>Question 1 </h2>
+<h3><strong>Method 1</strong></h3>
+<p>Following the hint I use the <span class="style4">strsplit</span> function to split the elements of the <span class="style81">trt</span> variable into individual components. For the <span class="style22">split</span> argument I enter two quotes with nothing between them.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.sp &lt;- strsplit(as.character(poplars$trt), split=&quot;&quot;)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.sp[1:8]</div>
+<span class="style24">[[1]]<br>
+[1] &quot;O&quot;</span>
+<p><span class="style24">[[2]]<br>
+  [1] &quot;O&quot;</span>
+<p><span class="style24">[[3]]<br>
+  [1] &quot;O&quot;</span>
+<p><span class="style24">[[4]]<br>
+  [1] &quot;P&quot;</span>
+<p><span class="style24">[[5]]<br>
+  [1] &quot;P&quot;</span>
+<p><span class="style24">[[6]]<br>
+  [1] &quot;P&quot;</span>
+<p><span class="style24">[[7]]<br>
+  [1] &quot;P&quot; &quot;K&quot;</span>
+<p><span class="style24">[[8]]<br>
+  [1] &quot;P&quot; &quot;K&quot;</span>
+<p>The object that <span class="style4">strsplit</span> creates is called a list. Lists are a generalization of data frames in which the individual components can have different lengths as well as be different kinds of objects. To access an individual element of a list we need to use the double bracket notation.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.sp[[8]]</div>
+<span class="style24">  [1] &quot;P&quot; &quot;K&quot;</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.sp[[8]][2]</div>
+<span class="style24">[1] &quot;K&quot;</span>
+<p>If we use the intersection operator,<span class="style4"> %in%</span>, to determine if the character 'L' is in the list we get an uninformative answer.<br>
+</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> 'L' %in% out.sp</div>
+<span class="style24">[1] TRUE</span>
+<p>It just tells us that <span class="style1">'L'</span> was found somewhere in the list, not where it was found. To determine the locations of <span class="style1">'L'</span> we need to operate on each element of the list separately. The <span class="style4">sapply</span> function will do that for us. If we make the list, <span class="style81">out.sp</span>, the first argument of <span class="style4">sapply</span> then the function we specify in the second argument will be applied to each element of <span class="style81">out.sp</span> separately. The function we need is the following: <span class="style1">function(x) 'L' %in% x</span>. Each time a different element of the list is inserted as the variable <em>x</em>.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> sapply(out.sp, function(x) 'L' %in% x)</div>
+ <span class="style24"> &nbsp;[1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE<br>
+  [15] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+  [29]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[43]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE</span>
+<p>A second way of obtaining the same result is to make the 1:48 the first argument of <span class="style4">sapply</span> (where 48 is the number of elements in the list). Then the function becomes: f<span class="style1">unction(x) 'L' %in% out.sp[[x]]</span>. This time the numbers 1 through 48 will be inserted sequentially for<em> x</em> and the corresponding element of the list will be tested to see if <span class="style1">'L'</span> is an element.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> sapply(1:48, function(x) 'L' %in% out.sp[[x]])</div>
+<span class="style24">  &nbsp;[1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE<br>
+  [15] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+  [29]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE<br>
+[43]&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE&nbsp; TRUE</span>
+<p>With this output we can use the <span class="style4">ifelse</span> function to conditionally assign the values <span class="style81">'present'</span> or <span class="style81">'absent'</span> to a new variable as follows.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">ifelse(sapply(out.sp, function(x) 'L' %in% x), 'present', 'absent')</div>
+<span class="style24">  &nbsp;[1] &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot; <br>
+  &nbsp;[9] &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot; <br>
+  [17] &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot; &nbsp;&quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot; <br>
+  [25] &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot;<br>
+  [33] &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot;<br>
+[41] &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot;</span>
+<p>We repeat this for the three remaining factors assigning the results to a variable.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">poplars$L &lt;- ifelse(sapply(out.sp, function(x) 'L' %in% x), 'present', 'absent')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">poplars$N &lt;- ifelse(sapply(out.sp, function(x) 'N' %in% x), 'present', 'absent')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  poplars$P &lt;- ifelse(sapply(out.sp, function(x) 'P' %in% x), 'present', 'absent')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  poplars$K &lt;- ifelse(sapply(out.sp, function(x) 'K' %in% x), 'present', 'absent')</div>
+
+<h3>Method 2</h3>
+<p>R has a number of search and replace functions. One of these is <span class="style4">grep.</span> The <span class="style4">grep</span> function takes a string to search for as its first argument and the object to search as the second argument. If the second argument is a vector <span class="style4">grep</span> gives us the index numbers of the entries in the vector where the string was found.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">grep('L',poplars$trt)</div>
+<span class="style24">&nbsp;[1] 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48</span>
+<p>We can use this as follows. First we create a new character variable all of whose values are <span class="style81">'absent'</span>.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> poplars$L &lt;- 'absent'</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> poplars$L</div>
+<span class="style24">&nbsp;[1] &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot;<br>
+[10] &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot;<br>
+[19] &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot;<br>
+[28] &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot;<br>
+[37] &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot; &quot;absent&quot;<br>
+[46] &quot;absent&quot; &quot;absent&quot; &quot;absent&quot;</span>
+<p>Next we change the entries whose indices were returned by <span class="style4">grep</span> to <span class="style81">'present'</span>.</p>
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> poplars$L[grep('L',poplars$trt)] &lt;- 'present'</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> poplars$L</div>
+<span class="style24">  &nbsp;[1] &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot; <br>
+  &nbsp;[9] &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot; <br>
+  [17] &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot;&nbsp; &quot;absent&quot; <br>
+  [25] &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot;<br>
+  [33] &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot;<br>
+  [41] &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot; &quot;present&quot;</span>
+
+<p>Finally we convert the result to a factor.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> poplars$L &lt;- factor(poplars$L)</div>
+<p> To create the other factor variables we repeat these three steps for 'N', 'P', and 'K'. </p>
+<h2>Question 2 </h2>
+<h3>Checking for block &times; treatment interaction</h3>
+<p>The design is a randomized block design with no replication of treatment within block. Although we can't formally test for a block &times; treatment interaction we can examine the patterns graphically. I use the <span class="style4">interaction.plot</span> function to plot the treatment means separately by block to see if there are any obvious patterns.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> interaction.plot(poplars$trt, poplars$block, poplars$weight, axes=F)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> axis(1,at=1:16, labels=levels(poplars$trt), cex.axis=.7)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> axis(2)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> box()</div>
+<p align="center"><img src="../../images/assignments/assignment4/fig1.png" width="635" height="310" alt="fig. 1"></p>
+<p align="center" class="styleArial"><strong>Fig. 1</strong> &nbsp;Interaction plot of the block &times; treatment effects</p>
+<p>With 16 treatments perfect parallelism of the profiles is difficult to achieve. Fig. 1 shows some crisscrossing of the profiles indicating the effects are not the same across blocks. There are clearly some issues here but with only three blocks it's difficult to determine how serious to take this. Some of the crisscrossing is just random noise and/or involve treatments or effects that are not significant. The one positive thing one can assert is that the basic pattern of treatment effects (which ones have large effects and which ones have small effects on the response) appears to be more or less consistent in the three blocks.</p>
+<p>With only three blocks we don't have much power to carry out a formal test for specific kinds of interaction. We can carry out the Tukey test for non-additivity as follows.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">out0 &lt;- lm(weight ~ factor(block)+trt, data=poplars)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> coef(out0)</div>
+<span class="style24">&nbsp;&nbsp; (Intercept) factor(block)2 factor(block)3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtLK <br>
+&nbsp;&nbsp;&nbsp; 15.6000000&nbsp;&nbsp;&nbsp;&nbsp; -0.3437500&nbsp;&nbsp; &nbsp;&nbsp;-4.6562500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.9333333&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.3333333 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtLN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtLNK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtLNP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtLNPK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtLP <br>
+&nbsp;&nbsp;&nbsp; 33.6000000&nbsp;&nbsp;&nbsp;&nbsp; 30.2333333&nbsp;&nbsp;&nbsp;&nbsp; 41.0000000&nbsp;&nbsp;&nbsp;&nbsp; 41.2000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.3000000 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtLPK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtNK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtNP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trtNPK <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 6.0000000&nbsp;&nbsp;&nbsp;&nbsp; 22.9333333&nbsp;&nbsp;&nbsp;&nbsp; 13.7333333&nbsp;&nbsp;&nbsp;&nbsp; 24.6333333&nbsp;&nbsp;&nbsp;&nbsp; 27.4333333 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trtPK <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 0.7333333&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.7666667&nbsp;&nbsp;&nbsp;&nbsp; -0.3333333 </span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> blockcoefs &lt;- c(1,coef(out0)[2:3])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> treatcoefs &lt;- c(1, coef(out0)[4:18])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> ab &lt;- rep(blockcoefs,16)*rep(treatcoefs,each=3)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Tukey test</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out0a &lt;- update(out0,.~.+ab)</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(out0a)</div>
+<span class="style24">  Analysis of Variance Table</span>
+<p><span class="style24">Response: weight<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(block)&nbsp; 2&nbsp;&nbsp; 215.4&nbsp; 107.72&nbsp; 1.5932&nbsp;&nbsp; 0.2205&nbsp;&nbsp;&nbsp; <br>
+  trt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15 10310.1&nbsp; 687.34 10.1658 8.07e-08 ***<br>
+  ab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 61.9&nbsp;&nbsp; 61.89&nbsp; 0.9154&nbsp;&nbsp; </span><span class="style25">0.3466&nbsp;</span><span class="style24">&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp; 29&nbsp; 1960.8&nbsp;&nbsp; 67.61&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>So, the product term is not significant. We can reject the presence of a multiplicative interaction between block and treatment effects.</p>
+<h3>Fitting the randomized block design model</h3>
+<p>I start by fitting the fixed effects version of the randomized block design including the four-factor interaction of the factors L, N, P, and K.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- lm(weight~factor(block)+L*P*N*K, data=poplars) </div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(out1)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: weight<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq&nbsp; F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(block)&nbsp; 2&nbsp; 215.4&nbsp;&nbsp; 107.7&nbsp;&nbsp; 1.5978 0.219094&nbsp;&nbsp;&nbsp; <br>
+  L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 884.9&nbsp;&nbsp; 884.9&nbsp; 13.1254 0.001064 ** <br>
+  P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 354.8&nbsp;&nbsp; 354.8&nbsp;&nbsp; 5.2623 0.028968 *&nbsp; <br>
+  N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 8350.3&nbsp; 8350.3 123.8513 3.58e-12 ***<br>
+  K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 43.9&nbsp;&nbsp;&nbsp; 43.9&nbsp;&nbsp; 0.6510 0.426106&nbsp;&nbsp;&nbsp; <br>
+  L:P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; 2.0&nbsp; &nbsp;0.0303 0.863014&nbsp;&nbsp;&nbsp; <br>
+  L:N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 395.0&nbsp;&nbsp; 395.0&nbsp;&nbsp; 5.8590 0.021761 *&nbsp; <br>
+  P:N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 108.3&nbsp;&nbsp; 108.3&nbsp;&nbsp; 1.6063 0.214763&nbsp;&nbsp;&nbsp; <br>
+  L:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 23.4&nbsp;&nbsp;&nbsp; 23.4&nbsp;&nbsp; 0.3468 0.560354&nbsp;&nbsp;&nbsp; <br>
+  P:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 20.7&nbsp;&nbsp;&nbsp; 20.7&nbsp;&nbsp; 0.3066 0.583876&nbsp;&nbsp;&nbsp; <br>
+  N:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; &nbsp;2.8&nbsp;&nbsp;&nbsp;&nbsp; 2.8&nbsp;&nbsp; 0.0409 0.841163&nbsp;&nbsp;&nbsp; <br>
+  L:P:N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1.3&nbsp;&nbsp;&nbsp;&nbsp; 1.3&nbsp;&nbsp; 0.0193 0.890482&nbsp;&nbsp;&nbsp; <br>
+  L:P:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1.4&nbsp;&nbsp;&nbsp;&nbsp; 1.4&nbsp;&nbsp; 0.0213 0.884976&nbsp;&nbsp;&nbsp; <br>
+  L:N:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 4.1&nbsp;&nbsp;&nbsp;&nbsp; 4.1&nbsp;&nbsp; 0.0614 0.805936&nbsp;&nbsp;&nbsp; <br>
+  P:N:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 79.8&nbsp;&nbsp;&nbsp; 79.8&nbsp;&nbsp; 1.1840 0.285216&nbsp;&nbsp;&nbsp; <br>
+  L:P:N:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 37.3&nbsp;&nbsp;&nbsp; 37.3&nbsp;&nbsp; 0.5529 0.462924&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp; 30 2022.7&nbsp;&nbsp;&nbsp; 67.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>For comparison I fit a model using the <span class="style19">nlme</span> package in which blocks are treated as random.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> library(nlme)</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> lme.model &lt;- lme(weight~L*P*N*K, random=~1|block, data=poplars) </div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(lme.model)</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30 403.4235&nbsp; &lt;.0001<br>
+  L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp; 13.1254&nbsp; 0.0011<br>
+  P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 5.2623&nbsp; 0.0290<br>
+  N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30 123.8513&nbsp; &lt;.0001<br>
+  K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 0.6510&nbsp; 0.4261<br>
+  L:P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 0.0303&nbsp; 0.8630<br>
+  L:N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 5.8590&nbsp; 0.0218<br>
+  P:N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 1.6063&nbsp; 0.2148<br>
+  L:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 0.3468&nbsp; 0.5604<br>
+  P:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 0.3066&nbsp; 0.5839<br>
+  N:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 0.0409&nbsp; 0.8412<br>
+  L:P:N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 0.0193&nbsp; 0.8905<br>
+  L:P:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 0.0213&nbsp; 0.8850<br>
+  L:N:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 0.0614&nbsp; 0.8059<br>
+  P:N:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 1.1840&nbsp; 0.2852<br>
+L:P:N:K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp; 0.5529&nbsp; 0.4629</span>
+<p>The results are identical. Based on the ANOVA table we can drop the four-factor and all the three-factor interactions. It appears that the only significant two-factor interaction is the L:N interaction. (Note: The reported test of blocks in the <span class="style4">lm</span> output is not appropriate. The  error term in the model is the block &times; treatment interaction and isn't an appropriate measure of background variability for testing the block effect. In any case, we should retain the block term in the model because it is part of the experimental design.)</p>
+<p>Because the data are balanced the order we fit the terms doesn't matter, so I drop all the non-significant 2-factor interactions too.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> lme.model1 &lt;- lme(weight~L*N+P+K, random=~1|block, data=poplars) </div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(lme.model1)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 40 403.4236&nbsp; &lt;.0001<br>
+  L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 40&nbsp; 15.3649&nbsp; 0.0003<br>
+  N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 40 144.9839&nbsp; &lt;.0001<br>
+  P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp; 6.1602&nbsp; 0.0174<br>
+  K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp; 0.7621&nbsp; 0.3879<br>
+L:N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp; 6.8587&nbsp; 0.0124</span>
+<p>The main effect of K is not significant so I drop it  leaving  the following model.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> lme.model2 &lt;- lme(weight~L*N+P, random=~1|block, data=poplars)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">anova(lme.model2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 41 403.4236&nbsp; &lt;.0001<br>
+  L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 41&nbsp; 15.4546&nbsp; 0.0003<br>
+  N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 41 145.8301&nbsp; &lt;.0001<br>
+  P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp; 6.1962&nbsp; 0.0170<br>
+L:N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp; 6.8988&nbsp; 0.0121</span>
+<h2>Question 3</h2>
+<p>I examine the summary table of the final model.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> summary(lme.model2)</div>
+<span class="style24">Linear mixed-effects model fit by REML<br>
+&nbsp;Data: poplars <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BIC&nbsp;&nbsp;&nbsp; logLik<br>
+&nbsp; 323.7645 336.0929 -154.8823</span>
+<p><span class="style24">Random effects:<br>
+  &nbsp;Formula: ~1 | block<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept) Residual<br>
+  StdDev:&nbsp;&nbsp;&nbsp; 1.775939 7.567076</span>
+<p><span class="style24">Fixed effects: weight ~ L * N + P <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value Std.Error DF&nbsp; t-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.75625&nbsp; 2.648767 41 4.815919&nbsp; 0.0000<br>
+  Lpresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.85000&nbsp; 3.089246 41 0.922555&nbsp; 0.3616<br>
+  Npresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20.64167&nbsp; 3.089246 41 6.681782&nbsp; 0.0000<br>
+  Ppresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.43750&nbsp; 2.184427 41 2.489212&nbsp; 0.0170<br>
+  Lpresent:Npresent 11.47500&nbsp; 4.368853 41 2.626547&nbsp; 0.0121</span>
+<p>In the final model there is a significant main effect due to P and a significant interaction between L and N. The effect of each nutrient is to increase new growth. P  increases growth by 5.4 g. L alone increases growth by 2.8 g, N alone increases growth by 20.6 g. The combination of L and N together increase growth by an additional 11.5 g over what each of these soil additives contributes alone.</p>
+<h2>Question 4</h2>
+<p>Because there is a significant two-factor interaction between L and N, the graph we construct should focus on explicating the nature of that interaction. Because there is only a main effect of P, the effect of P will only be to shift the two-factor interaction vertically. Thus it makes sense to display the results of the experiment as a panel graph in which each panel shows a different level of P while the panel itself displays the interaction between L and N. </p>
+<p>I begin by constructing a data frame that contains the four different ways of combining the levels of L and N.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g &lt;- expand.grid(L=levels(poplars$L), N=levels(poplars$N))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N<br>
+  1&nbsp; absent&nbsp; absent<br>
+  2 present&nbsp; absent<br>
+  3&nbsp; absent present<br>
+4 present present</span>
+<p>I next write a function to generate the regressors of the regression model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fixef(lme.model2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lpresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Npresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ppresent <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.75625&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.85000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20.64167&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.43750 <br>
+  Lpresent:Npresent <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.47500 </span>
+ 
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # write a function to return values of the regressors for choices of L, N, and P</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cvec &lt;- function(L,N,P) c(1, L=='present', N=='present', P=='present', (L=='present')*(N=='present'))</div>
+<p>I next write a second function that applies the <span class="style81">cvec</span> function to the matrix <span class="style81">g</span> that contains the various ways of combining the levels of L and N for a specific value of P to produce a matrix of the values of the model regressors. I generate two matrices: one for the case when P is absent and the other for when P is present.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # make function to obtain regressors for all combinations of L and N for a specific P</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat &lt;- function(P) t(apply(g, 1, function(x) cvec(x[1], x[2], P)))</div>
+
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # construct regressors when P = 'absent'</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat1 &lt;- cmat('absent')</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # construct regressors when P = 'present'</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat2 &lt;- cmat('present')</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat1</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L N&nbsp;&nbsp; L<br>
+  [1,] 1 0 0 0 0<br>
+  [2,] 1 1 0 0 0<br>
+  [3,] 1 0 1 0 0<br>
+  [4,] 1 1 1 0 1</span>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat2</div>
+  <span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L N&nbsp;&nbsp; L<br>
+  [1,] 1 0 0 1 0<br>
+  [2,] 1 1 0 1 0<br>
+  [3,] 1 0 1 1 0<br>
+  [4,] 1 1 1 1 1</span>
+
+<p>To calculate difference-adjusted confidence intervals we need the function from <a href="../lectures/lecture8.htm#confidence">lecture 8</a>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">ci.func2 &lt;- function(rowvals, glm.vmat) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> nor.func1a &lt;- function(alpha,  sig) 1-<span class="style39">pnorm</span>(-<span class="style39">qnorm</span>(1-alpha/2) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*%c (1,-1))) - <span class="style39">pnorm</span>(<span class="style39">qnorm</span>(1-alpha/2) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*% c(1,-1)), lower.tail=F)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> nor.func2 &lt;- function(a,sigma) nor.func1a(a,sigma)-.95</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> n &lt;- length(rowvals)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> xvec1b &lt;- numeric(n*(n-1)/2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> vmat &lt;- glm.vmat[rowvals,rowvals]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> ind &lt;- 1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> for(i in 1:(n-1)) {</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px"> for(j in (i+1):n){</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px"> sig &lt;- vmat[c(i,j), c(i,j)]</div>
+<div class="style15" style="padding-left: 120px; text-indent:-30px"> #solve for alpha</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px"> xvec1b[ind] &lt;- uniroot(function(x) nor.func2(x, sig), c(.001,.999))$root</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px"> ind &lt;- ind+1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> }}</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> 1-xvec1b</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>Technically this function is only appropriate for large samples. For small samples the normal approximation is suspect and we should probably use a <em>t</em>-distribution. Recall though that there is an <a href="../lectures/lecture6.htm#pvalue">issue</a> with how to correctly calculate  degrees of freedom in mixed effects models. The <span class="style4">lme</span> function does return the degrees of freedom it uses for its tests. They're contained in the <span class="style81">$fixDF$X</span> component of the model.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # degrees of freedom are located in the $fixDF$X component</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lme.model2$fixDF$X</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lpresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Npresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ppresent <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41 <br>
+  Lpresent:Npresent <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41 </span>
+
+<p>If we compare the normal quantile to the quantile of a <em>t</em>-distribution with 41 degrees of freedom we see that there is a noticeable difference.<br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # choosing t or normal makes a small difference here</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> qnorm(.025)</div>
+<span class="style24">  [1] -1.959964</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> qt(.025,41)</div>
+<span class="style24">[1] -2.019541</span>
+<p>To use these we'd have to replace the <span class="style4">qnorm</span> and <span class="style4">pnorm</span> functions in <span class="style81">ci.func2</span> with <span class="style4">qt</span> and <span class="style4">pt</span> and add an argument that specifies the degrees of freedom. The effect that using the normal<em> </em>distribution rather than the  <em>t</em>-distribution will have on the confidence intervals is that our intervals based on the normal distribution will be about 0.15 units too short.</p>
+<p>I obtain the variance-covariance matrices of the means separately for the two different values of P.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat1 &lt;- cmat1 %*% vcov(lme.model2) %*% t(cmat1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">vmat2 &lt;- cmat2 %*% vcov(lme.model2) %*% t(cmat2)</div>
+
+<p>I run the <span class="style81">ci.func2</span> function and find that a 75% confidence interval should be used for the difference-adjusted confidence levels.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain difference-adjusted confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func2(1:4,vmat1)</div>
+ <span class="style24"> [1] 0.746944 0.746944 0.746944 0.746944 0.746944 0.746944</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func2(1:4,vmat2)</div>
+<span class="style24">[1] 0.746944 0.746944 0.746944 0.746944 0.746944 0.746944</span>
+<p>I modify the <span class="style81">make.data</span> function from <a href="../lectures/lecture8.htm#make">lecture 8</a> to generate a data frame of means, standard errors, and confidence intervals. The changes are highlighted.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # rewrite the make.data function from lecture 9 to work here</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> make.data &lt;- function(P,model) {</div>
+  <div class="style15" style="padding-left: 60px; text-indent:-30px"> #variance-covariance matrix of the means</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> vmat &lt;- <span class="style39">cmat(P)</span> %*% vcov(model) %*% t(<span class="style39">cmat(P)</span>)</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # difference-adjusted confidence levels</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> vals1 &lt;- ci.func2(1:4, as.matrix(vmat))</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # levels of lh and n, means, and standard errors</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> part1 &lt;- data.frame(<span class="style39">g</span>,
+   est=as.vector(<span class="style39">cmat(P)</span>%*%fixef(model)), se=sqrt(diag(vmat)))</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # 95% intervals</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> part1$low95 &lt;- part1$est + qnorm(.025)*part1$se</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> part1$up95 &lt;- part1$est + qnorm(.975)*part1$se</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # difference-adjusted intervals</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> part1$low85 &lt;- part1$est + qnorm((1-min(vals1))/2)*part1$se</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> part1$up85 &lt;- part1$est + qnorm(1-(1-min(vals1))/2)*part1$se</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # add value of P</div>
+ <div class="style39" style="padding-left: 60px; text-indent:-30px"> part1$P &lt;- P</div>
+  <div class="style15" style="padding-left: 60px; text-indent:-30px"> # return value of function</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> part1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+<p>I generate the results separately for the two values of P and combine the results into a single data frame.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # generate data for the graph</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part0a &lt;- make.data('absent',lme.model2)</div>
+  <div class="style23" style="padding-left: 30px; text-indent:-30px"> part0b &lt;- make.data('present',lme.model2)</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # combine into a single data frame</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals &lt;- rbind(part0a,part0b)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95&nbsp;&nbsp;&nbsp; low85&nbsp;&nbsp;&nbsp;&nbsp; up85&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P<br>
+  1&nbsp; absent&nbsp; absent 12.75625 2.648767&nbsp; 7.564761 17.94774&nbsp; 9.72882 15.78368&nbsp; absent<br>
+  2 present&nbsp; absent 15.60625 2.648767 10.414761 20.79774 12.57882 18.63368&nbsp; absent<br>
+  3&nbsp; absent present 33.39792 2.648767 28.206428 38.58941 30.37049 36.42535&nbsp; absent<br>
+  4 present present 47.72292 2.648767 42.531428 52.91441 44.69549 50.75035&nbsp; absent<br>
+  5&nbsp; absent&nbsp; absent 18.19375 2.648767 13.002261 23.38524 15.16632 21.22118 present<br>
+  6 present&nbsp; absent 21.04375 2.648767 15.852261 26.23524 18.01632 24.07118 present<br>
+  7&nbsp; absent present 38.83542 2.648767 33.643928 44.02691 35.80799 41.86285 present<br>
+8 present present 53.16042 2.648767 47.968928 58.35191 50.13299 56.18785 present</span>
+<p>The only change we need to make to the groups panel function is in the panel function that produces the grid lines.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># group panel function</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.panel &lt;- function(x, y, subscripts, col, pch, group.number, ...) {</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">#subset variables for the current panel</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">low95 &lt;- fac.vals$low95[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">up95 &lt;- fac.vals$up95[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">low85 &lt;- fac.vals$low85[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">up85 &lt;- fac.vals$up85[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">myjitter &lt;- c(-.05,.05)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">col2 &lt;- c('tomato','grey60')</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">#95% confidence interval</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.arrows(x+myjitter[group.number], low95, x+myjitter[group.number], up95, angle=90,
+  code=3, length=.05, col=col)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">#difference-adjusted confidence interval</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.segments(x+myjitter[group.number], low85, x+myjitter[group.number], up85,
+  col=col2[group.number], lineend=1, lwd=5)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># connect means with line segments </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.lines(x+myjitter[group.number], y, col=col)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># add point estimates for the means </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x+myjitter[group.number], y, col='white', pch=16)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x+myjitter[group.number], y, col=col, pch=pch, ...)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># grid lines </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.abline(<span class="style39">h=seq(0,70,2)</span>, col='lightgrey', lty=3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>The prepanel function needs no changes.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># prepanel function to set limits for panels</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> prepanel.ci2 &lt;- function(x, y, ly, uy, subscripts, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">list(ylim=range(y, uy[subscripts], ly[subscripts], finite=T))}</div>
+<p>The changes I made to the <span class="style4">xyplot</span> call are highlighted.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(est~<span class="style39">L</span>|<span class="style39">factor(P, level=c('absent','present'), labels=paste('P = ', c('absent','present'), sep=''))</span>, xlab =<span class="style39">'L'</span>, ylab='Estimated mean', groups=<span class="style39">N</span>, data=fac.vals, col=c(2,1), pch=c(1,16), prepanel=prepanel.ci2, ly=fac.vals$low95, uy=fac.vals$up95, layout=<span class="style39">c(2,1)</span>, panel.groups=my.panel, panel=&quot;panel.superpose&quot;, key=list(x=<span class="style39">.05</span>, y=<span class="style39">.82</span>, corner=c(0,0), points=list(pch=c(16,1), col=1:2, cex=.9), text=list(c(<span class="style39">'N = 1','N = 0'</span>), cex=.8)))</div>
+
+<p align="center"><img src="../../images/assignments/assignment4/fig2.png" width="445" height="350" alt="fig. 2"></p>
+<p align="center" class="styleArial"><strong>Fig. 2</strong> &nbsp;Interaction plot with 75% difference-adjusted confidence intervals</p>
+<p>To verify that the graph is correct we can compare the inferences we would draw from the graph to what is shown to the summary table of  the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(lme.model2)</div>
+<span class="style24">  Linear mixed-effects model fit by REML<br>
+  &nbsp;Data: poplars <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BIC&nbsp;&nbsp;&nbsp; logLik<br>
+&nbsp; 323.7645 336.0929 -154.8823</span>
+<p><span class="style24">Random effects:<br>
+  &nbsp;Formula: ~1 | block<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept) Residual<br>
+  StdDev:&nbsp;&nbsp;&nbsp; 1.775939 7.567076</span>
+<p><span class="style24">Fixed effects: weight ~ L * N + P <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value Std.Error DF&nbsp; t-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.75625&nbsp; 2.648767 41 4.815919&nbsp; 0.0000<br>
+  Lpresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.85000&nbsp; 3.089246 41 0.922555&nbsp; 0.3616<br>
+  Npresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20.64167&nbsp; 3.089246 41 6.681782&nbsp; 0.0000<br>
+  Ppresent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.43750&nbsp; 2.184427 41 2.489212&nbsp; 0.0170<br>
+  Lpresent:Npresent 11.47500&nbsp; 4.368853 41 2.626547&nbsp; 0.0121<br>
+</span>
+<ol>
+  <li>The L effect (when N = 0) is not significant (p = 0.36).  This correctly corresponds to the overlapping 75% confidence intervals of the N = 0 profile.</li>
+  <li>The N effect (when L = 0) is significant (p &lt; .0001) and this corresponds to the non-overlapping 75% confidence intervals of the two N profiles when L = 0.</li>
+  <li>The L:N interaction is significant (p = 0.01). This is not directly visible from the graph but if we were to translate the N = 0 profile so that it overlaps the N = 1 profiles, the two 75% confidence intervals for L = 1  would fail to overlap.</li>
+  <li>The P effect is significant (p = 0.01). When we examine the graph we see that the corresponding 75% difference-adjusted interval pairs in the two P panels overlap. Thus the choice of a 75% interval does not allow us to draw correct conclusions when we compare observations across panels.</li>
+</ol>
+<p>If we wish to present a panel graph in which the reader is allowed to make all pairwise comparisons then we'll need to find the appropriate confidence levels using all eight means. I recreate the <span class="style81">g</span> matrix of unique predictor combinations, the corresponding  matrix of regressor values <span class="style81">cmat</span>, and calculate the difference-adjusted confidence levels.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g &lt;- expand.grid(L=levels(poplars$L), N=levels(poplars$N), P=levels(poplars$P))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P<br>
+  1&nbsp; absent&nbsp; absent&nbsp; absent<br>
+  2 present&nbsp; absent&nbsp; absent<br>
+  3&nbsp; absent present&nbsp; absent<br>
+  4 present present&nbsp; absent<br>
+  5&nbsp; absent&nbsp; absent present<br>
+  6 present&nbsp; absent present<br>
+  7&nbsp; absent present present<br>
+  8 present present present</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain values of the regressors for each of the 8 means</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat &lt;- t(apply(g, 1, function(x) cvec(x[1], x[2], x[3])))</div>
+  <div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L N P L<br>
+  [1,] 1 0 0 0 0<br>
+  [2,] 1 1 0 0 0<br>
+  [3,] 1 0 1 0 0<br>
+  [4,] 1 1 1 0 1<br>
+  [5,] 1 0 0 1 0<br>
+  [6,] 1 1 0 1 0<br>
+  [7,] 1 0 1 1 0<br>
+  [8,] 1 1 1 1 1</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain the variance-covariance matrix of the means</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat &lt;- cmat %*% vcov(lme.model2) %*% t(cmat)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># obtain difference-adjusted confidence levels</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # we see they fall into three categories: .58, .75, .84</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func2(1:8, vmat)</div>
+<span class="style24">  &nbsp;[1] 0.7469440 0.7469440 0.7469440 0.5810168 0.8384114 0.8384114 0.8384114 0.7469440<br>
+  &nbsp;[9] 0.7469440 0.8384114 0.5810168 0.8384114 0.8384114 0.7469440 0.8384114 0.8384114<br>
+  [17] 0.5810168 0.8384114 0.8384114 0.8384114 0.8384114 0.5810168 0.7469440 0.7469440<br>
+[25] 0.7469440 0.7469440 0.7469440 0.7469440</span>
+<p>Three different confidence levels are shown. The 0.75 level should be used to compare means in the same panel. The 0.58 level should be used to compare means in different panels (different values of P) that have the same values of L and N. The 0.84 level should be used to compare means in different panels (different values of P) in which one or both of the levels of L and N are different. </p>
+<p>Because the graph we're constructing is just a tool for summarizing the model it may not be necessary to use all three confidence levels. I redo the interaction plot using 84% confidence levels to see if they're needed or whether the 75% intervals would suffice. I redo the the <span class="style81">make.data</span> function for this purpose.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> make.data4 &lt;- function(<span class="style39">vals1</span>,model) {</div>
+  <div class="style15" style="padding-left: 60px; text-indent:-30px"> #variance-covariance matrix of the means</div>
+  <div class="style10" style="padding-left: 60px; text-indent:-30px"> vmat &lt;- <span class="style39">cmat</span> %*% vcov(model) %*% t(<span class="style39">cmat</span>)</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # levels of lh and n, means, and standard errors</div>
+  <div class="style10" style="padding-left: 60px; text-indent:-30px"> part1 &lt;- data.frame(g, 
+  est=as.vector(<span class="style39">cmat</span>%*%fixef(model)), se=sqrt(diag(vmat)))</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # 95% intervals</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> part1$low95 &lt;- part1$est + qnorm(.025)*part1$se</div>
+ <div class="style10" style="padding-left: 60px; text-indent:-30px"> part1$up95 &lt;- part1$est + qnorm(.975)*part1$se</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # difference-adjusted intervals</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> part1$low85 &lt;- part1$est + qnorm((1-min(vals1))/2)*part1$se</div>
+  <div class="style10" style="padding-left: 60px; text-indent:-30px"> part1$up85 &lt;- part1$est + qnorm(1-(1-min(vals1))/2)*part1$se</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # return value of function</div>
+  <div class="style10" style="padding-left: 60px; text-indent:-30px"> part1</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> }</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # redo using .84 for the difference-adjusted confidence intervals</div>
+  <div class="style10" style="padding-left: 30px; text-indent:-30px"> fac.vals &lt;- make.data4(.84,lme.model2)</div>
+  <div class="style10" style="padding-left: 30px; text-indent:-30px"> fac.vals</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95&nbsp;&nbsp;&nbsp;&nbsp; low85&nbsp;&nbsp;&nbsp;&nbsp; up85<br>
+  1&nbsp; absent&nbsp; absent&nbsp; absent 12.75625 2.648767&nbsp; 7.564761 17.94774&nbsp; 9.034542 16.47796<br>
+  2 present&nbsp; absent&nbsp; absent 15.60625 2.648767 10.414761 20.79774 11.884542 19.32796<br>
+  3&nbsp; absent present&nbsp; absent 33.39792 2.648767 28.206428 38.58941 29.676209 37.11962<br>
+  4 present present&nbsp; absent 47.72292 2.648767 42.531428 52.91441 44.001209 51.44462<br>
+  5&nbsp; absent&nbsp; absent present 18.19375 2.648767 13.002261 23.38524 14.472042 21.91546<br>
+  6 present&nbsp; absent present 21.04375 2.648767 15.852261 26.23524 17.322042 24.76546<br>
+  7&nbsp; absent present present 38.83542 2.648767 33.643928 44.02691 35.113709 42.55712<br>
+  8 present present present 53.16042 2.648767 47.968928 58.35191 49.438709 56.88212</span>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> xyplot(est~L|factor(P, level=c('absent','present'), 
+   labels=paste('P = ', c('absent', 'present'), sep='')), 
+   xlab ='L', ylab='Estimated mean', groups=N, data=fac.vals, 
+   col=c(2,1), pch=c(1,16), prepanel=prepanel.ci2, ly=fac.vals$low95, 
+   uy=fac.vals$up95, layout=c(2,1), panel.groups=my.panel, panel=&quot;panel.superpose&quot;,
+   key=list(x=.05, y=.82, corner=c(0,0), points=list(pch=c(16,1), col=1:2, cex=.9), 
+ text=list(c('N = 1','N = 0'), cex=.8)))</div>
+<p align="center"><img src="../../images/assignments/assignment4/fig2.png" width="445" height="350" alt="fig. 2"></p>
+<p align="center" class="styleArial"><strong>Fig. 3</strong> &nbsp;Interaction plot with 84% difference-adjusted confidence intervals</p>
+<p>If we make the cross-panel comparisons permitted by these intervals we see that all the pairwise comparisons are significant. This is the same conclusion we would have drawn by using the shorter 75% intervals, therefore we don't need to show both. The 75% intervals are sufficient for drawing the correct inferences.</p>
+<p>Finally I examine the 58% intervals. This time I add them to Fig. 2 so that the 95% , 75%, and 58% intervals are all shown. I redo the <span class="style81">make.data</span> function so that all three intervals are created. I also modify the group panels function to add these new intervals for each group.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # rewrite make.data function so that it returns two difference-adjusted intervals</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> make.data5 &lt;- function(vals1, vals2, model) {</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> #variance-covariance matrix of the means</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> vmat &lt;- cmat %*% vcov(model) %*% t(cmat)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # levels of lh and n, means, and standard errors</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> part1 &lt;- data.frame(g, 
+est = as.vector(cmat%*%fixef(model)), se=sqrt(diag(vmat)))</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # 95% intervals</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> part1$low95 &lt;- part1$est + qnorm(.025)*part1$se</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> part1$up95 &lt;- part1$est + qnorm(.975)*part1$se</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # difference-adjusted intervals</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> part1$low85 &lt;- part1$est + qnorm((1-min(vals1))/2)*part1$se</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> part1$up85 &lt;- part1$est + qnorm(1-(1-min(vals1))/2)*part1$se</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> <span class="style39">part1$low58 &lt;- part1$est + qnorm((1-min(vals2))/2)*part1$se</span></div>
+<div class="style39" style="padding-left: 60px; text-indent:-30px"> part1$up58 &lt;- part1$est + qnorm(1-(1-min(vals2))/2)*part1$se</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # return value of function</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> part1</div>
+  <div class="style10" style="padding-left: 30px; text-indent:-30px"> }</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain data</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> fac.vals &lt;- make.data5(.75,.58,lme.model2)</div>
+
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # rewrite group panels function so that it draws two difference-adjusted intervals</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px">  <span class="style39">my.panel2</span> &lt;- function(x, y, subscripts, col, pch, group.number, ...) {</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> #subset variables for the current panel</div>
+ <div class="style10" style="padding-left: 60px; text-indent:-30px"> low95 &lt;- fac.vals$low95[subscripts]</div>
+  <div class="style10" style="padding-left: 60px; text-indent:-30px"> up95 &lt;- fac.vals$up95[subscripts]</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> low85 &lt;- fac.vals$low85[subscripts]</div>
+ <div class="style10" style="padding-left: 60px; text-indent:-30px"> up85 &lt;- fac.vals$up85[subscripts]</div>
+ <div class="style10" style="padding-left: 60px; text-indent:-30px"> <span class="style39">low58 &lt;- fac.vals$low58[subscripts]</span></div>
+ <div class="style39" style="padding-left: 60px; text-indent:-30px"> up58 &lt;- fac.vals$up58[subscripts]</div>
+ <div class="style10" style="padding-left: 60px; text-indent:-30px"> myjitter &lt;- c(-.05,.05)</div>
+ <div class="style10" style="padding-left: 60px; text-indent:-30px"> col2 &lt;- c('tomato','grey60')</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> #95% confidence interval</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> panel.arrows(x+myjitter[group.number], low95, x+myjitter[group.number], up95, angle=90, code=3, length=.05, col=col)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> #difference-adjusted confidence interval</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> panel.segments(x+myjitter[group.number], low85, x+myjitter[group.number], up85, col=col2[group.number], lineend=1, lwd=5)</div>
+<div class="style39" style="padding-left: 60px; text-indent:-30px"> panel.segments(x+myjitter[group.number], low58, x+myjitter[group.number], up58, col='dodgerblue1', lineend=1, lwd=8)</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # connect means with line segments</div>
+ <div class="style10" style="padding-left: 60px; text-indent:-30px"> panel.lines(x+myjitter[group.number], y, col=col)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # add point estimates for the means</div>
+ <div class="style10" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x+myjitter[group.number], y, col='white', pch=16)</div>
+  <div class="style10" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x+myjitter[group.number], y, col=col, pch=pch, ...)</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # grid lines</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> panel.abline(h=seq(0,70,2), col='lightgrey', lty=3)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> }</div>
+
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # generate graph</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  xyplot(est~L|factor(P, level=c('absent','present'), <br>
+  labels=paste('P = ', c('absent','present'), sep='')), 
+  xlab ='L', ylab='Estimated mean', groups=N, data=fac.vals, 
+  col=c(2,1), pch=c(1,16), prepanel=prepanel.ci2, ly=fac.vals$low95, 
+  uy=fac.vals$up95, layout=c(2,1), panel.groups=<span class="style39">my.panel2</span>, panel=&quot;panel.superpose&quot;,
+   key=list(x=.05, y=.82, corner=c(0,0), points=list(pch=c(16,1), col=1:2, cex=.9), 
+   text=list(c('N = 1','N = 0'), cex=.8)))</div>
+<p align="center"><img src="../../images/assignments/assignment4/fig4.png" width="445" height="350" alt="fig. 4"></p>
+<p align="center" class="styleArial"><strong>Fig. 4</strong> &nbsp;Interaction plot with 58% and 75% difference-adjusted confidence intervals</p>
+<p>The 58% intervals of means with the same values of L and N but different values of P do not overlap, which is correct. If we were to use the 58% intervals, rather than the 75% intervals, to make comparisons within the same panel we see that we would draw the same conclusions as we do with the 75% intervals. Therefore we don't need both of them. I redraw the graph using only 58% difference-adjusted confidence intervals.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">fac.vals &lt;- make.data4(.58,lme.model2)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> xyplot(est~L|factor(P, level=c('absent','present'), 
+  + labels=paste('P = ', c('absent','present'), sep='')), 
+  + xlab ='L', ylab='Estimated mean', groups=N, data=fac.vals, 
+  + col=c(2,1), pch=c(1,16), prepanel=prepanel.ci2, ly=fac.vals$low95, 
+  + uy=fac.vals$up95, layout=c(2,1), panel.groups=<span class="style39">my.panel</span>, panel=&quot;panel.superpose&quot;,
+  + key=list(x=.05, y=.82, corner=c(0,0), points=list(pch=c(16,1), col=1:2, cex=.9), 
++ text=list(c('N = 1','N = 0'), cex=.8)))</div>
+<p align="center"><img src="../../images/assignments/assignment4/fig5.png" width="445" height="350" alt="fig. 5"></p>
+<p align="center" class="styleArial"><strong>Fig. 5</strong> &nbsp;Interaction plot with 58% difference-adjusted confidence intervals</p>
+<p><br>
+</p>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment4/hw4scores.png" width="350" height="235" alt="hw4 scores"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 10, 2012<br>
+      URL: <a href="assign4.htm#assign4">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign4.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

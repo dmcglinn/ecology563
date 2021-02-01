@@ -1,0 +1,665 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 17&mdash;Monday, October 22, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture17" id="lecture17"></a>Lecture 17&mdash;Monday, October 22, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture17.htm#discussion">Discussion of HW 6</a></li>
+  <li><a href="lecture17.htm#rcode">Fitting a Poisson model to the slugs data: R code from lecture 16</a></li>
+  <li><a href="lecture17.htm#goodness">A simulation-based test of the Poisson model when there are  multiple populations</a> </li>
+  <li><a href="lecture17.htm#visualizing">Visualizing a three-dimensional log-likelihood</a>
+    <ul>
+      <li><a href="lecture17.htm#persp">Producing the surface graph in base graphics: the persp function</a></li>
+      <li><a href="lecture17.htm#wireframe">Producing the surface graph in lattice: the wireframe function</a></li>
+    </ul>
+  <a href="lecture17.htm#NBassess"></a></li>
+  <li><a href="lecture17.htm#estimating">Estimating a separate means negative binomial regression model</a> </li>
+<li><a href="lecture17.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+<li><a href="lecture17.htm#asvector">as.vector</a> converts its argument to a vector.</li>
+<li><a href="lecture17.htm#matrix">matrix</a> is used to convert a vector into a matrix. By default the matrix is filled column by column.</li>
+<li><a href="lecture17.htm#persp">persp</a> is the 3-dimensional surface plotting function of R. </li>
+  <li><a href="lecture17.htm#replicate">replicate</a> repeats an operation, function, or a sequence operations a specified number of times.</li>
+  <li><a href="lecture17.htm#rmultinom">rmultinom</a> generates random observations from a multinomial distribution.</li>
+  <li><a href="lecture17.htm#trans3d">trans3d</a> obtains the coordinates of a point in the two-dimensional projection of  a 3-D surface that was generated by <span class="style1">persp</span>.</li>
+  <li><a href="lecture17.htm#wireframe">wireframe</a> is the <span class="style191">lattice</span> package equivalent to the base graphics function <span class="style1">persp</span>. It is used to produce 3-dimensional surface plots.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture17.htm#drape">colorkey</a>= (argument to <strong class="style1">wireframe</strong>) takes on values TRUE or FALSE. Setting it to FALSE suppresses the display of the color code key generated when the <span class="style22">drape</span> argument is set to TRUE. </li>
+  <li><a href="lecture17.htm#drape">drape</a>= (argument to <strong class="style1">wireframe</strong>) takes on values TRUE or FALSE and can be used to add color shading to a surface plot. </li>
+  <li><a href="lecture17.htm#matrix">nrow</a>= (argument to <span class="style1">matrix</span>) specifies the number of rows of the matrix. </li>
+  <li><a href="lecture17.htm#parsettings">par.settings</a>= (argument to <strong class="style1">wireframe</strong> and other <span class="style19">lattice</span> functions) used for changing default lattice parameter settings for the current graph only. </li>
+  <li><a href="lecture17.htm#phi">phi</a>= (argument to <strong class="style1">persp</strong>) is used to change the viewing direction.  In spherical coordinates  phi is the  co-latitude.</li>
+  <li><a href="lecture17.htm#scales">scales</a>= (argument to <strong class="style1">wireframe</strong> and other <span class="style19">lattice</span> functions) can be used, e.g., to display tick marks on the axes.</li>
+  <li><a href="lecture17.htm#screen">screen</a>= (argument to <strong class="style1">wireframe</strong>) can be used to specify a different viewing direction of the surface plot.</li>
+  <li><a href="lecture17.htm#phi">theta</a>= (argument to <strong class="style1">persp</strong>) is used to change the viewing direction. In spherical coordinates theta is the azimuthal direction.</li>
+  <li><a href="lecture17.htm#ticktype">ticktype</a>= (argument to <strong class="style1">persp</strong>) adds tick marks to 3-D surface plots. </li>
+</ul>
+<h3>R packages used</h3>
+<ul>
+  <li><a href="lecture17.htm#lattice">lattice</a> for lattice graphics functions.</li>
+  <li><a href="lecture17.htm#mass">MASS</a> for the <span class="style1">glm.nb</span> function.</li>
+</ul>
+<h2 align="left"><a name="discussion"></a>Discussion of HW 6</h2>
+<p align="left">See <a href="../solutions/assign6.htm">HW 6 solutions</a>.</p>
+<h2 align="left"><a name="rcode"></a>Fitting a Poisson model to the slugs data: R code from lecture 16</h2>
+<p>I reload the slugs data set from <a href="lecture16.htm#Crawley">lecture 16</a> and refit both the common means and separate means Poisson regression models.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#read in slug data set</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugs &lt;- read.table( 'http://www.bio.ic.ac.uk/research/mjcraw/statcomp/data/slugsurvey.txt', header=T)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#tabulate data by field type</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugtable &lt;- data.frame(table(slugs$slugs, slugs$field))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># create numeric version of count categories</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugtable$Var1.num &lt;- as.numeric(as.character(slugtable$Var1))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># separate means Poisson log-likelihood</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">pois2.LL &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">mu &lt;- p[1] + p[2]*(slugs$field==&quot;Rookery&quot;)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">LL &lt;- sum(log(dpois(slugs$slugs, lambda=mu)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># negative log-likelihood</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">negpois2.LL &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">-pois2.LL(p)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># obtain MLEs using nlm function</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois2 &lt;- nlm(negpois2.LL, c(1.2,1))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># use glm to obtain estimates</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out2 &lt;- glm(slugs~field, data=slugs, family=poisson)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># predicted means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugtable$mu &lt;- predict(out2, type='response', newdata=data.frame(field=slugtable$Var2))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># Poisson probabilities</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$p &lt;- dpois(slugtable$Var1.num, lambda=slugtable$mu)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># add tail probabilities</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$p2 &lt;- dpois(as.numeric(as.character(slugtable$Var1)), lambda=slugtable$mu) + (slugtable$Var1==10) * ppois(as.numeric(as.character(slugtable$Var1)), lambda=slugtable$mu, lower.tail=F)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # count the number of observations in each field</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">n &lt;- table(slugs$field)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # calculate predicted counts under Poisson model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$exp &lt;- slugtable$p2 * n[as.numeric(slugtable$Var2)]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># add predicted counts to the bar plot of the observed counts</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> <a name="lattice"></a>library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(Freq~Var1.num|Var2, data=slugtable, xlab='Count category',
+panel=function(x, y, subscripts) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x, y, type='h', lineend=1, col='grey', lwd=10)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.points(x, slugtable$exp[subscripts], pch=16, cex=.6, col=1, type='o')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">})</div>
+<p align="center" name="barplot"><img src="../../images/lectures/lecture17/fig1.png" width="530" height="300" alt="fig. 1"><br>
+<span class="styleArial"><strong>Fig. 1</strong> &nbsp;Bar plots with the superimposed predictions from a separate means Poisson model.</span></p>
+<h2><a name="goodness"></a>A simulation-based test of the Poisson model when there are  multiple populations</h2>
+<p>There are 22 count categories displayed in Fig. 1. Of these only six of the predicted Poisson counts  exceed five. So 73% of the expected counts are smaller than five which is far greater than the <a href="lecture15.htm#pearson">20% value</a> that is recommended in order for the chi-squared distribution of the Pearson statistic to hold. It's pretty clear that trying to  meet this criterion here by merging categories would completely distort the  distribution. Thus taking a simulation-based approach is  the only reasonable option.</p>
+<p>To assess the overall fit of the model we need to consider the  fit in both field types simultaneously. This is not possible to do with the simulation-based goodness of fit test  as implemented by <span class="style1">chisq.test</span> because this function requires a single model probability vector whose elements sum to one. Instead we have two probability vectors, one for each field type. We could multiply the probabilities by one-half and concatenate the results to meet the &quot;sum to one&quot; criterion, but then the simulated results will not fully correspond to the way the experiment was designed. In the experiment 40 slugs were obtained from each habitat type so  the sample size of 40 is fixed by design and is not a random quantity. What we need here is a conditional test. Conditional on there being 40 rocks in each field type how likely is it to obtain the observed count distribution if two  Poisson models with different rate parameters were truly generating the distributions? A simulation-based test of this is possible  but we'll need to construct it ourselves.</p>
+<p>The basic idea behind the simulation-based test is that once we obtain the predicted probabilities for individual categories, including lumping the tail probability into a single category, we essentially have separate multinomial distributions (the multivariate generalization of the binomial distribution) for each field type. Using the model probabilities and a random number function we can generate new count frequencies separately by habitat, compare them to the expected counts, and calculate the Pearson statistic using all 22 categories at once. Doing this repeatedly yields  a null distribution for the Pearson statistic, a set of reasonable values of the Pearson statistic  when the model is known to fit. We then examine where the observed value of the Pearson statistic falls in this distribution to determine how similar it is to  a typical model result. This is exactly what the <span class="style1">chisq.test</span> function does when there is a single population. </p>
+<p>I segregate the predicted probabilities by field type into the components of a list object.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># split probabilities by field type</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slug.p &lt;- split(slugtable$p2, slugtable$Var2)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slug.p</div>
+
+  <span  class="style24">$Nursery<br>
+  &nbsp;[1] 2.794310e-01 3.562745e-01 2.271250e-01 9.652812e-02 3.076834e-02 7.845926e-03<br>
+  &nbsp;[7] 1.667259e-03 3.036794e-04 4.839890e-05 6.856511e-06 9.874605e-07</span>
+<p><span  class="style24">$Rookery<br>
+  &nbsp;[1] 0.1027969084 0.2338629667 0.2660191246 0.2017311695 0.1147346027 0.0522042442<br>
+  &nbsp;[7] 0.0197941093 0.0064330855 0.0018294087 0.0004624339 0.0001319466</span>
+<p>We've discussed lists <a href="lecture3.htm#dbrackets">before</a>. They generalize data frames and matrices in that the different components can have different sizes and be of different types. In the above example  we have a list consisting of two components each of which is a vector of length 11. To access portions of a list we need to use single bracket notation, [ ]. To access an individual component of a list we need to use double bracket notation, [[ ]].</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slug.p[1]</div>
+ <span  class="style24">$Nursery<br>
+&nbsp;[1] 2.794310e-01 3.562745e-01 2.271250e-01 9.652812e-02 3.076834e-02 7.845926e-03<br>
+&nbsp;[7] 1.667259e-03 3.036794e-04 4.839890e-05 6.856511e-06 9.874605e-07</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(slug.p[1])</div>
+ <span  class="style24">  [1] &quot;list&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slug.p[[1]]</div>
+ <span  class="style24">  &nbsp;[1] 2.794310e-01 3.562745e-01 2.271250e-01 9.652812e-02 3.076834e-02 7.845926e-03<br>
+  &nbsp;[7] 1.667259e-03 3.036794e-04 4.839890e-05 6.856511e-06 9.874605e-07</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(slug.p[[1]])</div>
+  <span  class="style24"> [1] &quot;numeric&quot;</span>
+
+<p>So although <span class="style8">slug.p[1]</span> and <span class="style8">slug.p[[1]]</span> return the same elements of the bigger list, <span class="style8">slug.p[1]</span> is still a list, this time with one element, a vector. On the other hand <span class="style8">slug.p[[1]]</span> is a vector, the object that is the first component of the list <span class="style8">slug.p</span>. One use for the single bracket notation  is to extract portions of a list. This is not possible to do with the double bracket notation.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slug.p[1:2]</div>
+ <span  class="style24">$Nursery<br>
+&nbsp;[1] 2.794310e-01 3.562745e-01 2.271250e-01 9.652812e-02 3.076834e-02 7.845926e-03<br>
+&nbsp;[7] 1.667259e-03 3.036794e-04 4.839890e-05 6.856511e-06 9.874605e-07</span>
+<p> <span  class="style24">$Rookery<br>
+  &nbsp;[1] 0.1027969084 0.2338629667 0.2660191246 0.2017311695 0.1147346027 0.0522042442<br>
+  &nbsp;[7] 0.0197941093 0.0064330855 0.0018294087 0.0004624339 0.0001319466</span>
+<p>Next I   tabulate the number of observations by <span class="style8">field</span> type and save the result.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #number of observations per field</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n &lt;- table(slugs$field)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">n</div>
+<span  class="style141">Nursery Rookery <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;40 </span>
+<p><a name="rmultinom" id="rmultinom"></a>The first step in the simulation-based test is to generate random data using the model. The <span class="style1">rmultinom</span> function generates observations from a categorical variable based on the specified probabilities of each category. The output of <span class="style1">rmultinom</span> is a vector recording the simulated counts for each category. The help screen for <span class="style1">rmultinom</span> is shown in Fig. 2. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">?rmultinom</div>
+<p align="center"><img src="../../images/lectures/lecture17/rmultinom.png" width="586" height="365" alt="rmultinom"></p>
+<p align="center" class="styleArial"><strong>Fig. 2</strong> &nbsp;Portions of the rmultinom help screen </p>
+<p>The first argument <span class="style22">n</span> is the number of realizations from the multinomial distribution we want. The second argument <span class="style22">size</span> is the total number of counts that should be allocated to the various categories, and the third argument <span class="style22">prob</span> is a vector of probabilities  of the categories. So, the  call below generates a single a realization of 40 observations using the estimated Poisson probabilities  for field = 'Nursery'.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # simulate data for field=Nursery</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rmultinom(1, size=n[1], prob=slug.p[[1]])</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+  &nbsp;[1,]&nbsp;&nbsp;&nbsp; 8<br>
+  &nbsp;[2,]&nbsp;&nbsp; 17<br>
+  &nbsp;[3,]&nbsp;&nbsp;&nbsp; 9<br>
+  &nbsp;[4,]&nbsp;&nbsp;&nbsp; 4<br>
+  &nbsp;[5,]&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;[6,]&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[7,]&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;[8,]&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[9,]&nbsp;&nbsp;&nbsp; 0<br>
+  [10,]&nbsp;&nbsp;&nbsp; 0<br>
+[11,]&nbsp;&nbsp;&nbsp; 0</span>
+<p>Similarly we can obtain 40 observations using the  Poisson probabilities for the 'Rookery' field type.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # simulate data for field=Rookery</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rmultinom(1, size=n[2], prob=slug.p[[2]])</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+  &nbsp;[1,]&nbsp;&nbsp;&nbsp; 3<br>
+  &nbsp;[2,]&nbsp;&nbsp; 14<br>
+  &nbsp;[3,]&nbsp;&nbsp; 10<br>
+  &nbsp;[4,]&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;[5,]&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;[6,]&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[7,]&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;[8,]&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[9,]&nbsp;&nbsp;&nbsp; 0<br>
+  [10,]&nbsp;&nbsp;&nbsp; 0<br>
+  [11,]&nbsp;&nbsp;&nbsp; 0  &nbsp;</span>
+<p>We can obtain both of these at once using <span class="style1">sapply</span> to generate all 80 observations (40 from each field type). For each field referenced by <em>x</em> <span class="style1">rmultinom</span> draws a single multinomial sample of size 40, <span class="style8">n[x]</span>, based on the probabilities contained in the vector <span class="style8">slug.p[[x]]</span>. Here <em>x</em> indicates the field type, <em>x</em> = 1 or 2. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(10)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sapply(1:2, function(x) rmultinom(1, n[x], slug.p[[x]]))</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1] [,2]<br>
+&nbsp;[1,]&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 3<br>
+&nbsp;[2,]&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 8<br>
+&nbsp;[3,]&nbsp;&nbsp; 10&nbsp;&nbsp; 10<br>
+&nbsp;[4,]&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 9<br>
+&nbsp;[5,]&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 6<br>
+&nbsp;[6,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 2<br>
+&nbsp;[7,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+&nbsp;[8,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+&nbsp;[9,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+[10,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+[11,]&nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp;0</span>
+<p><a name="asvector"></a>Each  column corresponds to a multinomial realization from one of the field types. I stack these two columns using the <span class="style1">as.vector</span> function so in the end I have a single vector.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(10)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.obs &lt;- as.vector(sapply(1:2, function(x) rmultinom(1, n[x], slug.p[[x]])))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.obs</div>
+<span  class="style24">[1] 11 13 10  4  2  0  0  0  0  0  0  3  8 10  9  6  2  1  1  0  0  0</span>
+<p>We next use the simulated data as if they were the observed data and we calculate the Pearson goodness of fit statistic comparing the simulated data O<sub>i</sub> against the expected counts E<sub>i</sub>. The Pearson statistic for these data takes the following form.</p>
+<p align="center"><img src="../../images/lectures/lecture17/pearsonstat.gif" width="157" height="65" alt="pearson"></p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # calculate Pearson statistic using both field results</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum((out.obs-slugtable$exp)^2/slugtable$exp)</div>
+<span  class="style24">[1] 4.460758</span>
+<p>The result  should be a typical value of a Pearson statistic when the model actually fits the data. To get a full sense of what such typical values look like we need to repeat these steps enough times to get a good estimate of the null distribution of Pearson statistics. So, I construct a function that contains these two lines of code. Although the function has no arguments we still need to include the parentheses in the definition of the function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># write things as a function that can be replicated</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  myfunc &lt;- function() {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  out.obs &lt;- as.vector(sapply(1:2, function(x) rmultinom(1, size=n[x], prob=slug.p[[x]])))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  sum((out.obs-slugtable$exp)^2/slugtable$exp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p><a name="replicate"></a>To get a reasonable null distribution of Pearson statistics I carry this out 9,999 times using the <span class="style1">replicate</span> function. The first argument of replicate is the number of replications; the second argument contains the steps to replicate, in this case the steps contained in the function created above. Notice that in using the function we need to include the parentheses with nothing inside them. I first set the random seed explicitly with the <span class="style1">set.seed</span> function so that I can reproduce the results if needed.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># Now do this 9999 times to yield 10,000 Pearson statistics</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(23) </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sim.data &lt;- replicate(9999, myfunc())</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(sim.data)</div>
+<span  class="style24">[1] 3656.468</span>
+<p>Finally we need to calculate the Pearson statistic using the observed data and then append the result to the vector of simulated Pearson statistics for a total of 10,000 Pearson statistics.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">actual &lt;- sum((slugtable$Freq-slugtable$exp)^2/slugtable$exp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> actual</div>
+<span  class="style24">[1] 25515.36</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># add actual value to the list of simulated Pearson statistics</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pearson &lt;- c(sim.data, actual)</div>
+<p>The <em>p</em>-value of the simulation-based test is defined as  the total number of Pearson statistics that are as large or larger than the observed Pearson statistic divided by the total number of simulations.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pval &lt;- sum(pearson&gt;=actual)/length(pearson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pval</div>
+<span  class="style24">[1] 1e-04</span>
+<p>Our <em>p</em>-value is 1 out of 10,000 telling us that the observed value of the Pearson statistic was  larger than any of the simulated values. We already knew this because the actual value was 25,515.36 while the largest Pearson statistic from the simulated values is 3,656.468. The null hypothesis of the Pearson goodness of fit test is the following.</p>
+<blockquote>
+  <p>H<sub>0</sub>: fit is adequate<br>
+    H<sub>1</sub>: fit is inadequate </p>
+</blockquote>
+<p>Thus we  reject the null hypothesis and  conclude there is a significant lack of fit. It's interesting to find out what's driving the lack of fit. To do that we can examine the individual terms being summed together to form the actual Pearson statistic.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round((slugtable$Freq-slugtable$exp)^2/slugtable$exp,3)</div>
+<span  class="style24">&nbsp; Nursery&nbsp;&nbsp; Nursery&nbsp;&nbsp; Nursery&nbsp;&nbsp; Nursery&nbsp;&nbsp; Nursery&nbsp;&nbsp; Nursery&nbsp;&nbsp; Nursery&nbsp;&nbsp; Nursery&nbsp;&nbsp; Nursery <br>
+  &nbsp;&nbsp; 17.094&nbsp;&nbsp;&nbsp;&nbsp; 6.005&nbsp;&nbsp;&nbsp;&nbsp; 5.525&nbsp;&nbsp;&nbsp;&nbsp; 0.897&nbsp;&nbsp;&nbsp;&nbsp; 0.481&nbsp;&nbsp;&nbsp;&nbsp; 1.500&nbsp;&nbsp;&nbsp; 13.061&nbsp;&nbsp;&nbsp; 80.336&nbsp;&nbsp;&nbsp;&nbsp; 0.002 <br>
+  &nbsp; Nursery&nbsp;&nbsp; </span><span class="style25">Nursery</span><span  class="style24">&nbsp;&nbsp; Rookery&nbsp;&nbsp; Rookery&nbsp;&nbsp; Rookery&nbsp;&nbsp; Rookery&nbsp;&nbsp; Rookery&nbsp;&nbsp; Rookery&nbsp;&nbsp; Rookery <br>
+  &nbsp; &nbsp;&nbsp;0.000 </span><span class="style25">25315.468</span><span  class="style24">&nbsp;&nbsp;&nbsp;&nbsp; 5.811&nbsp;&nbsp;&nbsp;&nbsp; 0.013&nbsp;&nbsp;&nbsp;&nbsp; 0.655&nbsp;&nbsp;&nbsp;&nbsp; 1.167&nbsp;&nbsp;&nbsp;&nbsp; 1.461&nbsp;&nbsp;&nbsp;&nbsp; 1.750&nbsp;&nbsp;&nbsp;&nbsp; 0.055 <br>
+  &nbsp; Rookery&nbsp;&nbsp; Rookery&nbsp;&nbsp; Rookery&nbsp;&nbsp; Rookery <br>
+  &nbsp;&nbsp;&nbsp; 0.257&nbsp;&nbsp;&nbsp; 11.739&nbsp;&nbsp;&nbsp; 52.080&nbsp;&nbsp;&nbsp;&nbsp; 0.005</span>
+  <p align="left">The 11th observation is clearly driving much of the lack of fit. This is the category X = 10 for the nursery slugs.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$Freq[11]</div>
+<span  class="style24">    [1] 1</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$exp[11]</div>
+<span  class="style24"> &nbsp;&nbsp;&nbsp;&nbsp; Nursery <br>
+   3.949842e-05</span>
+<p>From the expected counts we see that under the Poisson model we would expect to see a value of 10 or larger in a sample of size 40  only once every 25,000 times. So either we observed a very rare event or the Poisson model doesn't fit. (In truth, a number of the other expected counts also clearly fail to match the observed data.)
+</p>
+<h2><a name="visualizing"></a>Visualizing a three-dimensional log-likelihood</h2>
+<p><a name="expandgrid"></a>Because the likelihood of the separate means Poisson model is a function of two variables, we need three dimensions to effectively display it. Just as we need a sequence of values to plot a curve in two-dimensions, we need a two-dimensional grid of values to plot a surface. R provides a number of functions for generating a grid of which <span class="style41">expand.grid</span> is perhaps the most useful. The <span class="style41">expand.grid</span> function takes as its arguments two vectors and then generates all possible combinations of the components of these two vectors. </p>
+<p>For the separate means Poisson model the log-likelihood function was called <span class="style8">pois2.LL</span> and is a function of a single vector parameter <strong>p</strong>. We minimized the negative log-likelihood and obtained the following results.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois2 &lt;- nlm(negpois2.LL, c(1.2,1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois2</div>
+<span class="style24">$minimum<br>
+[1] 171.1275</span>
+<p><span class="style24">$estimate<br>
+  [1] 1.2749997 0.9999997</span>
+<p><span class="style24">$gradient<br>
+  [1]&nbsp; 1.125723e-05 -1.506351e-06</span>
+<p><span class="style24">$code<br>
+  [1] 1</span>
+<p><span class="style24">$iterations<br>
+  [1] 8</span>
+<p>Because the reported MLEs are b0 = 1.275 and b1 = 1, I use <span class="style1">expand.grid</span> to obtain ordered pairs of values in the vicinity of these values.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#generating a grid of points in the plane near MLE</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g &lt;- expand.grid(b0=seq(0.5,2,.05), b1=seq(0.5,2,.05))</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g[1:8,]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp; b0&nbsp; b1<br>
+  1 0.50 0.5<br>
+  2 0.55 0.5<br>
+  3 0.60 0.5<br>
+  4 0.65 0.5<br>
+  5 0.70 0.5<br>
+  6 0.75 0.5<br>
+  7 0.80 0.5<br>
+  8 0.85 0.5</span>
+<p><a name="apply"></a>Next we need to evaluate the log-likelihood function on the points listed in each row of the matrix <span class="style8">g</span>.  Because <span class="style8">pois2.LL</span>  takes a vector-valued argument we can use the <span class="style41">apply</span> function  and apply <span class="style8">pois2.LL</span> to the output from <span class="style41">expand.grid</span> one row at a time. The first argument of <span class="style41">apply</span> is the matrix to which the function should be applied, the second argument is either 1 or 2 indicating rows or columns of the matrix, and the third argument is the function written in such a way that it can accept a vector as input.<br>
+</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#create and append the z-coordinate, the log-likelihood</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">g$z &lt;- apply(g, 1, pois2.LL)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dim(g)</div>
+<span class="style24">[1] 961&nbsp;&nbsp; 3</span>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g[1:4,]</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp; b0&nbsp; b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; z<br>
+  1 0.50 0.5 -211.6685<br>
+  2 0.55 0.5 -206.3678<br>
+  3 0.60 0.5 -201.6968<br>
+4 0.65 0.5 -197.5696</span>
+<h3><b><a name="persp"></a></b>Producing the surface graph in base graphics: the persp function</h3>
+<p>The <span class="style41">persp</span> function of R can be used to make a serviceable surface graph. A portion of the help screen for <span class="style1">persp</span> is shown in Fig. 3. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">?persp</div>
+<p align="center"><img src="../../images/lectures/lecture17/fig8.png" width="523" height="383"></p>
+<p align="center"><img src="../../images/lectures/lecture17/fig9.png" width="527" height="58"></p>
+<p align="center" class="styleArial"><strong>Fig. 3</strong> &nbsp;Portions of persp help screen </p>
+<p name="matrix"><a name="matrix"></a>Observe that <span class="style41">persp</span> expects the <em>z</em>-coordinates to be arranged in a matrix whose dimensions match the dimensions of the grid we've created. The  rows of the matrix should correspond to the <em>x</em>-values and the columns to the <em>y</em>-values. We can obtain this format using the <span class="style41">matrix</span> command. The first argument to <span class="style41">matrix</span> is the vector that is to be converted to a matrix. I use the <span class="style22">nrow=</span> argument to specify how many distinct <em>x</em>-values there  are (equal to the number of rows in the matrix). By default the matrix function fills the matrix one column at a time, which is what we want for our data. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># we construct a matrix of z-values to match the grid</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">z.matrix &lt;- matrix(g$z, nrow=length(seq(0.5,2,.05)))</div>
+<p>I next create the 3-dimensional plot. The <span class="style41">persp</span> function does not support mathematical characters.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">persp(seq(0.5,2,.05), seq(0.5,2,.05), z.matrix, xlab=&quot;b0&quot;, ylab=&quot;b1&quot;, zlab=&quot;log-likelihood&quot;)</div>
+<p name="ticktype"><a name="ticktype"></a>By default tick marks are not displayed. I can add them with the <span class="style22">ticktype='detailed'</span> argument. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#add ticks using ticktype option</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> persp(seq(0.5,2,.05), seq(0.5,2,.05), z.matrix, xlab=&quot;b0&quot;, ylab=&quot;b1&quot;, zlab=&quot;log-likelihood&quot;, ticktype=&quot;detailed&quot;)</div>
+<p name="phi"><a name="phi"></a>The spatial orientation of the graph can be changed by specifying values for the viewing angle arguments <span class="style22">theta=</span> and <span class="style22">phi=</span>. The finished result is shown in Fig. 4. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#change viewing position</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">persp(seq(0.5,2,.05), seq(0.5,2,.05), z.matrix, xlab=&quot;b0&quot;, ylab=&quot;b1&quot;, zlab=&quot;log-likelihood&quot;, ticktype='detailed', theta=30, phi=30)</div>
+<p align="center"><img src="../../images/lectures/lecture17/fig2.png" width="340" height="345" alt="fig. 2"></p>
+<p align="center" class="styleArial"><strong>Fig. 4</strong>&nbsp;&nbsp;3-D plot of log-likelihood using persp</p>
+<p><a name="trans3d"></a>We can add the location of the maximum likelihood estimate to the surface. For this we need to use the <span class="style1">trans3d</span> function that converts the three-dimensional coordinates of the point to a 2-dimensional representation that is consistent with what was used to produce the figure. The general syntax is <span class="style8">trans3d(x, y, z, persp.object)</span>, so we first need to assign the output of <span class="style1">persp</span> to an object. The <em>x</em>- and <em>y</em>-coordinates of the MLE are contained in the <span class="style8">$estimate</span> component of the <span class="style1">nlm</span> output while the <em>z</em>-coordinate is the negative of the <span class="style8">$minimum</span> component of the <span class="style1">nlm</span> output</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.persp &lt;- persp(seq(0.5,2,.05), seq(0.5,2,.05), z.matrix, xlab=&quot;b0&quot;, ylab=&quot;b1&quot;, zlab=&quot;log-likelihood&quot;, ticktype='detailed', theta=30, phi=30)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> trans3d(out.pois2$estimate[1], out.pois2$estimate[2], -out.pois2$minimum, out.persp)</div>
+<span class="style24">$x<br>
+[1] -0.0464403</span>
+<p><span class="style24">$y<br>
+  [1] 0.2406278</span>
+<p>We can now use the <span class="style1">points</span> function to add this location to the graph.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">points(trans3d(out.pois2$estimate[1], out.pois2$estimate[2], -out.pois2$minimum, out.persp), pch=16, col=2, cex=1.5)</div>
+<p align="center"><img src="../../images/lectures/lecture17/fig3.png" width="340" height="345" alt="fig. 3"></p>
+<p align="center" class="styleArial"><strong>Fig. 5</strong>&nbsp;&nbsp;3-D plot of log-likelihood showing MLE</p>
+<h3><a name="wireframe"></a>Producing the surface graph in lattice: the wireframe function</h3>
+<p name="wireframe">The lattice graph equivalent to <span class="style41">persp</span> is a function called <span class="style41">wireframe</span>. First we need to load the <span class="style41">lattice</span> package.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lattice)</div>
+<p>Unlike <span class="style41">persp</span>, <span class="style41">wireframe</span> expects the <em>z</em>-coordinates to fill a vector, not a matrix. To plot the surface we need to use formula notation in which the variable of <em>z</em>-coordinates is on the left side of the formula followed by the formula symbol, ~, followed by the variables defining the <em>x</em>- and <em>y</em>-coordinates separated by an asterisk. The <span class="style41">wireframe</span> function has a data argument so I don't need to reference the data frame as part of the variable names in the formula.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#wireframe just takes ordinary vectors</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> wireframe(z~b0*b1, data=g)</div>
+<p name="screen"><span class="style191"><a name="screen"></a></span>The <span class="style22">screen</span> argument can be used to change the view point.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#can also get different viewpoint</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> wireframe(z~b0*b1, data=g, screen = list(z = 20, x = -70, y = 3))</div>
+<p name="scales"><a name="scales"></a>Unlike <span class="style41">persp</span>, the <span class="style41">wireframe</span> function does support math symbols so we can use subscripts in the axis labels. To get tick marks to display we need to use the <span class="style22">scales=</span> argument in the manner shown below. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#add tick marks and nice labels</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> wireframe(z~b0*b1, data=g, xlab=expression(b[0]), ylab=expression(b[1]), zlab=&quot;log-likelihood&quot;, scales = list(arrows = FALSE))</div>
+<p name="returncode"><a name="returncode"></a>To get the <em>z</em>-label to display without running off the screen I use the return code <span class="style22">\n</span> inside the text string to tell R  to start a new line at this point. Note: this is why in the <span class="style41">read.table</span> command path names were specified with forward slashes <span class="style22">/</span> or double backslashes <span class="style22">\\</span>. Single backslashes are reserved for specifying special formatting within text strings. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#split z-axis name</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> wireframe(z~b0*b1, data=g, xlab=expression(b[0]), ylab=expression(b[1]), zlab=&quot;log\nlikelihood&quot;, scales = list(arrows = FALSE))</div>
+<p name="drape"><a name="drape"></a>To obtain color shading of the surface include <span class="style22">drape=TRUE</span>. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#add color with drape argument</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> wireframe(z~b0*b1, data=g, xlab=expression(b[0]), ylab=expression(b[1]), zlab=&quot;log\nlikelihood&quot;, scales = list(arrows = FALSE), drape=TRUE)</div>
+<p><a name="parsettings"></a>Finally I reduce the font size of the <em>z</em>-axis label and <em>z</em>-axis tick marks in order that the entire label can be displayed. I do this with the <span class="style22">par.settings=</span> argument that allows general graphic settings to be set in lattice graphs. I also suppress the color key with <b  class="style22">colorkey=FALSE</b>. The final result is  shown in Fig. 6. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">wireframe(z~b0*b1, data=g, xlab=expression(b[0]), ylab=expression(b[1]), zlab=&quot;log-\nlikelihood&quot;, scales = list(arrows = FALSE), drape=TRUE, colorkey=FALSE, par.settings=list(par.zlab.text=list(cex=.85), axis.text=list(cex=.85)))</div>
+<p align="center"><img src="../../images/lectures/lecture17/fig4.png" width="364" height="364" alt="fig. 4"></p>
+<p align="center" class="styleArial"><strong>Fig. 6</strong>&nbsp;&nbsp;3-D plot using wireframe</p>
+<p>It is possible to add points to a wireframe graphic but for that we would need to write our own panel function making use of the <span class="style1">panel.3dwire</span> and <span class="style1">panel.3dscatter</span> panel functions.</p>
+<h2><a name="estimating"></a>Estimating a separate means negative binomial regression model</h2>
+<p>I begin by fitting two negative binomial models that are completely analogous to the two Poisson models fit in <a href="lecture16.htm#MLE">lecture 16</a>: a common means and a separate means negative binomial regression model. The  major modification we need to make is to replace <span class="style1">dpois</span> in the negative log-likelihood functions with <span class="style1">dnbinom</span>. The <span class="style1">dnbinom</span> function has two arguments, <span class="style22">mu</span> and <span class="style22">size</span>. <span class="style22">mu</span> is the mean and <span class="style22">size</span> is what we've been calling &theta;, the dispersion parameter. So I add a line that identifies the variable <span class="style101">theta</span> as one of the components of the parameter vector <span class="style101">p</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># model 1: common mean NB model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> negNB.LL &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> mu &lt;- p[1]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> theta &lt;- p[2]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> LL &lt;- sum(log(dnbinom(slugs$slugs, mu=mu, size=theta)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> -LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># model 2: separate means NB model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> negNB.LL1 &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> mu &lt;- p[1] + p[2]*(slugs$field==&quot;Rookery&quot;)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> theta &lt;- p[3]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> LL &lt;- sum(log(dnbinom(slugs$slugs, mu=mu, size=theta)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> -LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>Our two models are the following.</p>
+<blockquote>
+  <p><strong>Model 1</strong>: &mu; = &beta;<sub>0</sub><br>
+    <strong>Model 2</strong>: &mu; = &beta;<sub>0</sub> + &beta;<sub>1</sub>*(field='Rookery') </p>
+</blockquote>
+<p>The first model is a two-parameter model (the intercept plus the size parameter) while the second is a three-parameter model (the two regression parameters plus the size parameter). To obtain the MLEs we have to provide initial values for the parameters. For the parameters for the mean I use values close to the Poisson estimates.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># estimate parameters for each model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB1 &lt;- nlm(negNB.LL, c(2,1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.NB2 &lt;- nlm(negNB.LL1, c(2,1,1))</div>
+<p><a name="nblrtest"></a>These two models are nested in that <span class="style22">out.NB2</span> contains one additional parameter&mdash;the coefficient of the field type dummy variable that causes the mean to be different in the two field types. By comparing these two models with a likelihood ratio test we can test whether the negative binomial means are the same in the two field types, i.e., H<sub>0</sub> : &beta;<sub>1</sub> = 0.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">LRstat &lt;- 2*(out.NB1$minimum - out.NB2$minimum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(LRstat,df=1)</div>
+<span class="style24">[1] 0.06340028</span>
+<p>The test statistic is not significant at the &alpha; = .05 level. Contrary to what we found with Poisson regression, we don't find evidence that the means are different when we assume the response has a negative binomial distribution. To obtain the Wald test we need to refit the model and extract the Hessian. The inverse of the Hessian matrix is the variance-covariance matrix of the parameter estimates. (See <a href="lecture13.htm#review">lecture 13</a>.) The square root of the second diagonal entry of this matrix is the standard error of the field effect.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB2 &lt;- nlm(negNB.LL1, c(2,1,1), hessian=T)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB2$hessian</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,3]<br>
+[1,] 1.647361e+01 4.5137168681 8.693703e-04<br>
+[2,] 4.513717e+00 4.5138108362 2.131628e-04<br>
+[3,] 8.693703e-04 0.0002131628 1.989505e+01</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sqrt(solve(out.NB2$hessian)[2,2])</div>
+<span class="style24">[1] 0.5524047</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># z-statistic 
+</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> zstat &lt;- out.NB2$estimate[2]/sqrt(solve(out.NB2$hessian)[2,2])</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># two-tailed p-value: 2*P(Z &gt; zstat)
+</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 2*(1-pnorm(zstat))</div>
+<span class="style24">[1] 0.07025445</span>
+
+<p><a name="mass"></a>As is typically the case, the Wald test and likelihood ratio test yield different p-values although in this case not substantively different conclusions.
+We can fit these same two models using the <span class="style1">glm.nb</span> function from the <span class="style19">MASS</span> package.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(MASS)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> glm.NB1 &lt;- glm.nb(slugs~1, data=slugs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> glm.NB2 &lt;- glm.nb(slugs~field, data=slugs)</div>
+<p>The <span class="style1">glm.nb</span> function uses a log link so the coefficients aren't directly comparable to the estimates we obtained with <span class="style1">nlm</span> without first back-transforming the means (the means, not the individual coefficient estimates).</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Model 1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB1$estimate</div>
+<span class="style24">  [1] 1.7749990 0.7155664</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(glm.NB1))</div>
+<span class="style24">  (Intercept) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.775 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> glm.NB1$theta</div>
+<span class="style24">  [1] 0.7155672</span><br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Model 2</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB2$estimate</div>
+<span class="style24">  [1] 1.2749995 0.9999998 0.7859310</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Nursery mean</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB2$estimate[1]</div>
+
+<span class="style24">  [1] 1.275</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(glm.NB2)[1])</div>
+<span class="style24">  (Intercept) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.275</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Model 2: Rookery mean</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB2$estimate[1]+out.NB2$estimate[2]</div>
+<span class="style24">  [1] 2.274999</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(glm.NB2)[1]+coef(glm.NB2)[2])</div>
+<span class="style24">  (Intercept) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.275 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> glm.NB2$theta</div>
+<span class="style24">[1] 0.7859313</span>
+<p>The likelihood ratio test for two nested models  tests whether the values of the parameters found in the bigger model but not found in the smaller model are different from zero. To carry out a likelihood-ratio test of the field effect we can use the <span class="style1">anova</span> function to compare the two nested <span class="style1">glm.nb</span> models, model 1 and model 2. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(glm.NB1, glm.NB2, test='Chisq')</div>
+<span class="style24">Likelihood ratio tests of Negative Binomial Models</span>
+<p><span class="style24">Response: slugs<br>
+  &nbsp; Model&nbsp;&nbsp;&nbsp;&nbsp; theta Resid. df&nbsp;&nbsp;&nbsp; 2 x log-lik.&nbsp;&nbsp; Test&nbsp;&nbsp;&nbsp; df LR stat.&nbsp;&nbsp;&nbsp; Pr(Chi)<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 1 0.7155672&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -288.7961&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2 field 0.7859313&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -285.3500 1 vs 2&nbsp;&nbsp;&nbsp;&nbsp; 1 3.446124 </span><span class="style25">0.06340028
+  </span>
+<p>The Wald test of the field effect appears in the summary table of the model.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(glm.NB2)$coefficients,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 0.243&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.227&nbsp;&nbsp; 1.071&nbsp;&nbsp;&nbsp; 0.284<br>
+  fieldRookery&nbsp;&nbsp;&nbsp; 0.579&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.307&nbsp;&nbsp; 1.886&nbsp;&nbsp;&nbsp; </span><span class="style25">0.059
+  </span>
+<p>Notice that the Wald test does not match the <span class="style1">nlm</span> results above. That's because we're using a log link and the rookery effect estimate we've obtained is on a log scale. To match the <span class="style1">nlm</span> results we can refit the <span class="style1">glm.nb</span> model specifying an identity link.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> glm.NB2a &lt;- glm.nb(slugs~field, data=slugs, link=identity)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(glm.NB2a)$coefficients,3)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)<br>
+(Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1.275&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.289&nbsp;&nbsp;&nbsp; 4.41&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
+fieldRookery&nbsp;&nbsp;&nbsp; 1.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.552&nbsp;&nbsp;&nbsp; 1.81&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">0.07</span>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture17&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 23, 2012<br>
+      URL: <a href="lecture17.htm#lecture17" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture17.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

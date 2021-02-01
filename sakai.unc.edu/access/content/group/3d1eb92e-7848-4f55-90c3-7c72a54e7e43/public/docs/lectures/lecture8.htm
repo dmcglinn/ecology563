@@ -1,0 +1,528 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 8&mdash;Wednesday, September 19, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture8" id="lecture4"></a>Lecture 8&mdash;Wednesday, September 19, 2012</h1>
+<h3>Topics</h3>
+<ul>
+<li><a href="lecture8.htm#obtaining">Obtaining the variance-covariance matrix for means</a>
+  <ul>
+    <li><a href="lecture8.htm#shortcut">A shortcut for obtaining the variance-covariance matrix of the means</a></li>
+    <li><a href="lecture8.htm#effects">Using the  estimates of the effects to obtain the variance-covariance matrix of the means</a></li>
+  </ul>
+</li>
+<li><a href="lecture8.htm#confidence">Calculating difference-adjusted confidence intervals for the treatment means</a></li>
+<li><a href="lecture8.htm#creating">Creating an interaction plot using the lattice package</a>
+  <ul>
+    <li><a href="lecture8.htm#group">Group panel function</a></li>
+    <li><a href="lecture8.htm#prepanel">Prepanel function</a></li>
+    <li><a href="lecture8.htm#drawing">Drawing the graph</a></li>
+    <li><a href="lecture8.htm#adding">Adding a key</a></li>
+    <li><a href="lecture8.htm#latticeextra">Improving the display with the latticeExtra package</a></li>
+  </ul>
+</li>
+  <li><a href="lecture8.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture8.htm#panelsuperpose">panel.superpose</a> (from <span class="style191">lattice</span>) is the panel function used with groups to indicate that individual groups are to be distinguished within panels. It can be used with a user-specified <span class="style22">panel.groups</span> function for customized displays.</li>
+  <li><a href="lecture8.htm#latticeextra">useOuterStrips</a> (from <span class="style19">latticeExtra</span>) can be used to place panels  on the left edge and the top edge of panel graphs.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+<li><a href="lecture8.htm#groupnumber">group.number</a> is a key word available in <span class="style191">lattice</span> for identifying the observations that are being used in the current group.</li>
+  <li><a href="lecture8.htm#group">groups=</a> (argument to <span class="style19">lattice</span> functions) defines the grouping variable in <span class="style19">lattice</span> graphs. Grouping variables affect the display in a single panel while  conditioning variables  affect the display in different panels.</li>
+  <li><a href="lecture8.htm#prepanel">prepanel</a>= (argument to <span class="style1">xyplot</span>) identifies a user-defined prepanel function that  determines the <em>x</em>- and/or <em>y</em>-limits for individual panels.</li>
+</ul>
+<h3>Additional R packages used </h3>
+<ul>
+  <li><a href="lecture8.htm#lattice">lattice</a> for the <span class="style1">xyplot</span> function.</li>
+  <li><a href="lecture8.htm#latticeextra">latticeExtra</a> for the <span class="style1">useOuterStrips </span>function.</li>
+  <li><a href="lecture8.htm#lme4">lme4</a> for the <span class="style1">lmer</span> function.</li>
+</ul>
+<h2><a name="obtaining" id="refitting4"></a>Obtaining the variance-covariance matrix for means</h2>
+<p><a name="lme4"></a>I refit the model we ended with last time: a 4-factor model consisting of a two-factor interaction, two additional main effects, and crossed random effects that describe variability across blocks and species.  </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> nitro &lt;- read.csv(ecol 563/nitro.csv')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod3.lmer &lt;- lmer(pN^2 ~ factor(lh)*factor(n) + factor(func) + factor(p) + (1|block) + (1|phy), data=nitro[nitro$tag!=444,])</div>
+
+<p>The goal today is to produce a single graph that summarizes the treatment structure of this experiment. The centerpiece for the graphical display will be a depiction of the two-factor interaction between <span class="style8">lh</span> and <span class="style8">n</span> separately for different levels of <span class="style8">func</span> and <span class="style8">p</span>. The main effects of <span class="style8">func</span> and <span class="style8">p</span> will serve to shift this interaction vertically along the <em>y</em>-axis yielding four identical two-factor interaction diagrams. Because the main effects of <span class="style8">func</span> and <span class="style8">p</span> are statistically significant the individual means on different two-factor interactions diagrams will be significantly different from each other. Thus in constructing the graph we can focus on pairwise differences between the means on a single interaction diagram. To summarize the pairwise differences we'll superimpose difference-adjusted confidence intervals for individual means on top of the interaction diagram. To do this we'll need to obtain the variance-covariance matrix of the means.</p>
+<h3><a name="shortcut"></a>A shortcut for obtaining the variance-covariance matrix of the means</h3>
+<p>The <span class="style1">vcov</span> function when applied to a model returns the variance-covariance matrix of the parameter estimates. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vcov(mod3.lmer)</div>
+<span class="style24">  6 x 6 Matrix of class &quot;dpoMatrix&quot;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,5]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,6]<br>
+  [1,]&nbsp; 1.9346509 -0.453938419 -0.4390415812 -0.1886031778 -0.23563174&nbsp; 0.425476994<br>
+  [2,] -0.4539384&nbsp; 0.886624290&nbsp; 0.4517868719 -0.0076226170&nbsp; 0.05107698 -0.825869604<br>
+  [3,] -0.4390416&nbsp; 0.451786872&nbsp; 0.7211081354 -0.0006052021&nbsp; 0.05602064 -0.711296357<br>
+  [4,] -0.1886032 -0.007622617 -0.0006052021&nbsp; 0.3760469051&nbsp; 0.00216406&nbsp; 0.005892231<br>
+  [5,] -0.2356317&nbsp; 0.051076985&nbsp; 0.0560206445&nbsp; 0.0021640597&nbsp; 0.39716929 -0.030612977<br>
+[6,]&nbsp; 0.4254770 -0.825869604 -0.7112963573&nbsp; 0.0058922311 -0.03061298&nbsp; 1.613440076</span>
+<p>The parameter estimates here are effect estimates, not individual treatment means. For certain models it is possible to force R to reparameterize the model so that it returns cell means rather than effect estimates. It is not possible to do this with the model currently under consideration, but if the model were slightly simpler we could. Suppose the final model consisted only of the two factor interaction between <span class="style8">lh</span> and <span class="style8">n</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod4.lmer &lt;- lmer(pN^2 ~ factor(lh)*factor(n) + (1|block) + (1|phy), data=nitro[nitro$tag!=444,])</div>
+<p>If we replace the term <span class="style8">factor(lh)*factor(n)</span> with  the expression <span class="style8">factor(lh):factor(n)-1</span>, the parameters that R returns are the treatment means.  This expression appears to fit a model with an interaction but without main effects and an intercept. Rather than fit such a silly model R instead estimates each category of the interaction term separately replacing the intercept and main effects with the separate category estimates. We still get four parameters but now instead of obtaining a mean and three effect estimates we obtain four treatment means.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod4a.lmer &lt;- lmer(pN^2 ~ <span class="style39">factor(lh):factor(n)-1</span> + (1|block) + (1|phy), data=nitro[nitro$tag!=444,])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fixef(mod4a.lmer)</div>
+<span class="style24">  factor(lh)EA:factor(n)0 factor(lh)NP:factor(n)0 factor(lh)EA:factor(n)1 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15.06911&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.82419&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21.12087 <br>
+  factor(lh)NP:factor(n)1 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15.36462 </span>
+  <p>The <span class="style1">vcov</span> function applied to this model yields the variance-covariance matrix of the means.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">vcov(mod4a.lmer)</div>
+<span class="style24">  4 x 4 Matrix of class &quot;dpoMatrix&quot;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp; [,2]&nbsp;&nbsp;&nbsp;&nbsp; [,3]&nbsp;&nbsp;&nbsp;&nbsp; [,4]<br>
+  [1,] 2.007396 1.522721 1.546673 1.526800<br>
+  [2,] 1.522721 2.035577 1.565918 1.613134<br>
+  [3,] 1.546673 1.565918 1.893979 1.577494<br>
+[4,] 1.526800 1.613134 1.577494 2.221533</span>
+<p>If our model consisted of only a single factor, say <span class="style8">lh</span>, then removing the intercept from this model would cause R to estimate the treatment means at both levels of <span class="style8">lh</span>. <br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># effect estimates </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod5.lmer &lt;- lmer(pN^2 ~ factor(lh) + (1|block) + (1|phy), data=nitro[nitro$tag!=444,])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fixef(mod5.lmer) </div>
+<span class="style24">&nbsp;(Intercept) factor(lh)NP <br>
+&nbsp;&nbsp; 18.509550&nbsp;&nbsp;&nbsp; -4.965262 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># remove intercept to get category mean estimates </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod5a.lmer &lt;- lmer(pN^2 ~ factor(lh)<span class="style39">-1</span> + (1|block) + (1|phy), data=nitro[nitro$tag!=444,])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fixef(mod5a.lmer)</div>
+<span class="style24">factor(lh)EA factor(lh)NP <br>
+&nbsp;&nbsp;&nbsp; 18.50955&nbsp;&nbsp;&nbsp;&nbsp; 13.54429 </span>
+<p>The <span class="style1">vcov</span> function applied to this model yields the variance-covariance matrix of the means.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">vcov(mod5a.lmer) </div>
+<span class="style24">2 x 2 Matrix of class &quot;dpoMatrix&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp; [,2]<br>
+[1,] 2.100850 1.833949<br>
+[2,] 1.833949 2.258722</span>
+<h3><a name="effects"></a>Using the  estimates of the effects to obtain the variance-covariance matrix of the means</h3>
+<p>The shortcut method won't work for the current model because it is too complicated. We'll need to construct a contrast matrix C such that when multiplied by the vector of regression parameter estimates it returns the treatment means for the treatments of interest. We've done this previously and the same approach will work here. The only difference is that we're working with a model estimated by <span class="style1">lmer</span> rather than by <span class="style1">lm</span>. We need to write a function that generates the values of the dummy variables in the same order as the coefficients estimated by <span class="style1">lmer</span>. To see this order I examine the names of the coefficient estimates and construct a function whose arguments are the values of the four factors.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">fixef(mod3.lmer)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; factor(lh)NP&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factor(n)1 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.980958&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.046807&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.309203 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; factor(func)mock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; factor(p)1 factor(lh)NP:factor(n)1 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.974241&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.875379&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -3.613860 </span>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">cmat2 &lt;- function(lh,n,func,p) c(1, lh=='NP', n==1, func=='mock', p==1, (lh=='NP')*(n==1))</div>
+
+<p>I construct a matrix that contains all the possible combinations of the values of <span class="style8">lh</span> and <span class="style8">n</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g &lt;- expand.grid(lh=levels(nitro$lh), n=0:1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g</div>
+<span class="style24">  &nbsp; lh n<br>
+  1 EA 0<br>
+  2 NP 0<br>
+  3 EA 1<br>
+4 NP 1</span>
+<p>I specify the values <span class="style8">func = 'inoc'</span> and <span class="style8">p = 0</span> and evaluate the function separately on the rows of this matrix by using the <span class="style1">apply</span> function. Because <span class="style1">apply</span> extracts each row of the matrix as a vector (each a vector of length 2) I reformulate the function <span class="style8">cmat2</span> as a generic function in which the first two arguments are elements 1 and 2 of a vector. <br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> apply(g,1, function(x) cmat2(x[1], x[2], 'inoc', 0))</div>
+<span class="style24">  &nbsp;&nbsp; [,1] [,2] [,3] [,4]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  lh&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  n&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+lh&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1</span>
+<p>The contrast matrix we need is the transpose of this matrix.<br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # transpose result</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> t(apply(g,1, function(x) cmat2(x[1],x[2],'inoc',0)))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lh n&nbsp;&nbsp;&nbsp;&nbsp; lh<br>
+  [1,] 1&nbsp; 0 0 0 0&nbsp; 0<br>
+  [2,] 1&nbsp; 1 0 0 0&nbsp; 0<br>
+  [3,] 1&nbsp; 0 1 0 0&nbsp; 0<br>
+[4,] 1&nbsp; 1 1 0 0&nbsp; 1</span>
+<p>Finally I set this up as a function with arguments <span class="style8">func</span> and <span class="style8">p</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat3 &lt;- function(func,p) t(apply(g, 1, function(x) cmat2(x[1], x[2], func, p)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat3('inoc',0)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lh n&nbsp;&nbsp;&nbsp;&nbsp; lh<br>
+  [1,] 1&nbsp; 0 0 0 0&nbsp; 0<br>
+  [2,] 1&nbsp; 1 0 0 0&nbsp; 0<br>
+  [3,] 1&nbsp; 0 1 0 0&nbsp; 0<br>
+[4,] 1&nbsp; 1 1 0 0&nbsp; 1</span>
+<p> I use the function to calculate the treatment means and the variance-covariance matrix of the means for <span class="style8">func = 'inoc'</span> and <span class="style8">p = 0</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #obtain estimates of the means</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">ests &lt;- cmat3('inoc',0) %*% fixef(mod3.lmer)</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> #obtain the variance-covariance matrix of the means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat &lt;- cmat3('inoc',0) %*% vcov(mod3.lmer) %*% t(cmat3('inoc',0))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ests</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+  [1,] 12.98096<br>
+  [2,] 10.93415<br>
+  [3,] 19.29016<br>
+  [4,] 13.62949</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat</div>
+<span class="style24">  4 x 4 Matrix of class &quot;dgeMatrix&quot;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp; [,2]&nbsp;&nbsp;&nbsp;&nbsp; [,3]&nbsp;&nbsp;&nbsp;&nbsp; [,4]<br>
+  [1,] 1.934651 1.480712 1.495609 1.467148<br>
+  [2,] 1.480712 1.913398 1.493458 1.525751<br>
+  [3,] 1.495609 1.493458 1.777676 1.489705<br>
+[4,] 1.467148 1.525751 1.489705 2.050059</span>
+<h2><a name="confidence"></a>Calculating difference-adjusted confidence intervals for the treatment means</h2>
+<p>To obtain the confidence level for the precision-based confidence intervals we need to modify the function we used previously. That function used a <em>t</em>-distribution with the residual degrees of freedom from the model as the multiplier. As was discussed in <a href="lecture6.htm#pvalue">lecture 6</a>  the determination of degrees of freedom in mixed effects models is problematic. Instead we'll assume that a normal distribution is an adequate substitute. I replace the occurrences of <span class="style1">qt</span> and <span class="style1">pt</span> with <span class="style1">qnorm</span> and <span class="style1">pnorm</span> respectively and remove the degrees of freedom argument. I also eliminate the second argument of the <span class="style8">ci.func</span> function. This was the fitted regression model, which was used only to extract the degrees of freedom for the <em>t</em>-distribution.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">ci.func2 &lt;- function(rowvals, glm.vmat) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  nor.func1a &lt;- function(alpha,  sig) 1-<span class="style39">pnorm</span>(-<span class="style39">qnorm</span>(1-alpha/2) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*%c (1,-1))) - <span class="style39">pnorm</span>(<span class="style39">qnorm</span>(1-alpha/2) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*% c(1,-1)), lower.tail=F)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  nor.func2 &lt;- function(a,sigma) nor.func1a(a,sigma)-.95</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  n &lt;- length(rowvals)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  xvec1b &lt;- numeric(n*(n-1)/2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  vmat &lt;- glm.vmat[rowvals,rowvals]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  ind &lt;- 1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  for(i in 1:(n-1)) {</div>
+ <div class="style23" style="padding-left: 90px; text-indent:-30px"> for(j in (i+1):n){</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  sig &lt;- vmat[c(i,j), c(i,j)]</div>
+<div class="style15" style="padding-left: 120px; text-indent:-30px">  #solve for alpha</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  xvec1b[ind] &lt;- uniroot(function(x) nor.func2(x, sig), c(.001,.999))$root</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  ind &lt;- ind+1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  }}</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  1-xvec1b</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>We have four means so the first argument to this function is <span class="style8">1:4</span>. If I use the function on the variance-covariance matrix <span class="style8">vmat</span> we calculated above R issues an error message.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func2(1:4, vmat)</div>
+<span class="style24">  Error in pnorm(q, mean, sd, lower.tail, log.p) : <br>
+&nbsp; Non-numeric argument to mathematical function</span>
+<p>The problem appears to be that the <span class="style1">pnorm</span> and <span class="style1">qnorm</span> functions don't recognize the class of <span class="style8">vmat</span>, <span class="style10">&quot;dgeMatrix&quot;</span>, that it inherited from the <span class="style19">lme4</span> package. If I use the <span class="style1">as.matrix</span> function to change the class of <span class="style8">vmat</span> to <span class="style10">&quot;matrix&quot;</span>  the function works.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(vmat)</div>
+ <span class="style24">  [1] &quot;dgeMatrix&quot;<br>
+  attr(,&quot;package&quot;)<br>
+  [1] &quot;Matrix&quot;</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # we need to change the class to type matrix</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(as.matrix(vmat))</div>
+ <span class="style24">  [1] &quot;matrix&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">ci.func2(1:4, as.matrix(vmat))</div>
+<span class="style24">[1] 0.4941076 0.4587715 0.5233151 0.4550982 0.4938757 0.4861521</span>
+<p>When I try the function on a different variance-covariance matrix obtained with different choices for <span class="style8">func</span> and <span class="style8">p</span>, I get slightly different results.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat1 &lt;- cmat3('inoc',1) %*% vcov(mod3.lmer) %*% t(cmat3('inoc',1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func2(1:4, as.matrix(vmat1))</div>
+<span class="style24">[1] 0.4966934 0.4606688 0.5232543 0.4515150 0.4882857 0.4799260</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat2 &lt;- cmat3('mock',0) %*% vcov(mod3.lmer) %*% t(cmat3('mock',0))</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func2(1:4, as.matrix(vmat2))</div>
+ <span class="style24"> [1] 0.4950842 0.4589653 0.5236987 0.4561144 0.4950836 0.4865980</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat3 &lt;- cmat3('mock',1) %*% vcov(mod3.lmer) %*% t(cmat3('mock',1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func2(1:4,as.matrix(vmat3))</div>
+<span class="style24">[1] 0.4971857 0.4603868 0.5231534 0.4520464 0.4890052 0.4798944</span>
+<p>These differences are probably not large enough to matter but I elect to obtain separate confidence levels for each of the combinations of <span class="style8">func</span> and <span class="style8">p</span> anyway. To this end I write a function that obtains the difference-adjusted confidence levels, calculates the 95% and difference-adjusted confidence intervals, and assembles them along with the means and the appropriate labels in a data frame. In the function I use the lowest difference-adjusted confidence level that was obtained for all the comparisons. It turns out that if we repeat this using the largest calculated confidence level   the conclusions we would draw from the graph don't change.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"><a name="make"></a>make.data &lt;- function(func,p,model) {</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">#variance-covariance matrix of the means</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  vmat &lt;- cmat3(func,p) %*% vcov(model) %*% t(cmat3(func,p))</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # difference-adjusted confidence levels
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  vals1 &lt;- ci.func2(1:4, as.matrix(vmat))</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # levels of lh and n, means, and standard errors
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  part1 &lt;- data.frame(lh=c('EA','NP','EA','NP'), n=c(0,0,1,1), </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  est=as.vector(cmat3(func,p)%*%fixef(model)), se=sqrt(diag(vmat)))</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # 95% intervals
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  part1$low95 &lt;- part1$est + qnorm(.025)*part1$se</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  part1$up95 &lt;- part1$est + qnorm(.975)*part1$se</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # difference-adjusted intervals</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  part1$low85 &lt;- part1$est + qnorm((1-min(vals1))/2)*part1$se</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  part1$up85 &lt;- part1$est + qnorm(1-(1-min(vals1))/2)*part1$se</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # add value of func and p
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  part1$func &lt;- func</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  part1$p &lt;- p</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # return value of function
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  part1</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+<p>Finally I use the function separately for the four different combinations of <span class="style8">func</span> and <span class="style8">p</span> and assemble the results in a single data frame.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part0a &lt;- make.data('inoc', 0, mod3.lmer)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part0b &lt;- make.data('inoc', 1, mod3.lmer)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part0c &lt;- make.data('mock', 0, mod3.lmer)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> part0d &lt;- make.data('mock', 1, mod3.lmer)</div>
+ 
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # assemble results in single matrix</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals &lt;- rbind(part0a, part0b, part0c, part0d)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals</div>
+<span class="style24">  &nbsp;&nbsp; lh n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95&nbsp;&nbsp;&nbsp; low85&nbsp;&nbsp;&nbsp;&nbsp; up85 func p<br>
+  1&nbsp; EA 0 12.98096 1.390917 10.254810 15.70711 12.13887 13.82304 inoc 0<br>
+  2&nbsp; NP 0 10.93415 1.383256&nbsp; 8.223018 13.64528 10.09670 11.77160 inoc 0<br>
+  3&nbsp; EA 1 19.29016 1.333295 16.676950 21.90337 18.48296 20.09736 inoc 0<br>
+  4&nbsp; NP 1 13.62949 1.431803 10.823212 16.43578 12.76266 14.49633 inoc 0<br>
+  5&nbsp; EA 0 14.85634 1.364022 12.182903 17.52977 14.03788 15.67479 inoc 1<br>
+  6&nbsp; NP 0 12.80953 1.393362 10.078590 15.54047 11.97347 13.64559 inoc 1<br>
+  7&nbsp; EA 1 21.16554 1.347451 18.524585 23.80649 20.35703 21.97405 inoc 1<br>
+  8&nbsp; NP 1 15.50487 1.459087 12.645115 18.36463 14.62937 16.38037 inoc 1<br>
+  9&nbsp; EA 0 14.95520 1.390500 12.229868 17.68053 14.11124 15.79916 mock 0<br>
+  10 NP 0 12.90839 1.377314 10.208906 15.60788 12.07243 13.74435 mock 0<br>
+  11 EA 1 21.26440 1.332406 18.652934 23.87587 20.45570 22.07310 mock 0<br>
+  12 NP 1 15.60373 1.429765 12.801446 18.40602 14.73594 16.47153 mock 0<br>
+  13 EA 0 16.83058 1.365183 14.154868 19.50629 16.01034 17.65082 mock 1<br>
+  14 NP 0 14.78377 1.389022 12.061338 17.50620 13.94921 15.61834 mock 1<br>
+  15 EA 1 23.13978 1.348177 20.497403 25.78216 22.32976 23.94981 mock 1<br>
+16 NP 1 17.47911 1.458572 14.620366 20.33786 16.60276 18.35547 mock 1</span>
+<h2><a name="creating" id="creating"></a>Creating an interaction plot using the lattice package</h2>
+<p><a name="lattice"></a><a href="lecture4.htm#interaction">Previously</a> we created an interaction plot using base graphics. Here I illustrate doing the same  using the <span class="style19">lattice</span> package. While we could do something similar to what we did before where we subsetted the data and first drew one profile then the other, it is far more efficient to use the <span class="style22">groups</span> argument in <span class="style19">lattice</span>. We've use it previously to obtain different colors and symbol types when plotting different groups. We can do more elaborate things separately by group if we create our own group panel function.</p>
+<h3><a name="group"></a>Group panel function</h3>
+<p><a name="panelsuperpose" id="panelsuperpose"></a><a name="panelgroups"></a>When the <span class="style22">groups</span> argument is included <span class="style19">lattice</span> calls a specific panel function called <span class="style1">panel.superpose</span>. The <span class="style1">panel.superpose</span> function in turn calls  something called a <span class="style22">panel.groups</span> function that by default is <span class="style1">panel.xyplot</span> in which the points are colored separately by group. To draw the error bars we will need to create our own customized <span class="style22">panel.groups</span> function. Here's the function I created followed by an explanation of the various parts of the code.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># group panel function</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  my.panel &lt;- function(x, y, subscripts, col, pch, group.number, ...) {</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">#subset variables for the current panel</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">low95 &lt;- fac.vals$low95[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">up95 &lt;- fac.vals$up95[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">low85 &lt;- fac.vals$low85[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">up85 &lt;- fac.vals$up85[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">myjitter &lt;- c(-.05,.05)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">col2 &lt;- c('tomato','grey60')</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">#95% confidence interval</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.arrows(x+myjitter[group.number], low95, x+myjitter[group.number], up95, angle=90,
+code=3, length=.05, col=col)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">#difference-adjusted confidence interval</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.segments(x+myjitter[group.number], low85, x+myjitter[group.number], up85,
+col=col2[group.number], lineend=1, lwd=5)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># connect means with line segments
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.lines(x+myjitter[group.number], y, col=col)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># add point estimates for the means
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x+myjitter[group.number], y, col='white', pch=16)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x+myjitter[group.number], y, col=col, pch=pch, ...)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># grid lines
+</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.abline(h=seq(10,26,2), col='lightgrey', lty=3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p> <a name="groupnumber"></a>I pass to the group panel function the colors and plot characters I want it to use for the groups (the <span class="style8">col</span> and <span class="style8">pch</span> arguments in the function definition). The <span class="style22">subscripts</span> argument was explained <a href="lecture7.htm#subscripts">previously</a> and will be used to get the correct observations for use in the current panel for variables that were not included in the original function call. Notice the <span class="style10">...</span> notation that appears in a couple of places. It's used so that  any additional arguments that <span class="style19">lattice</span> would normally need in displaying groups  get passed to the appropriate functions. One new argument is <span class="style22">group.number</span>. It records the number of the group currently being drawn. It will have the value 1 or 2 here because there are only two groups.</p>
+<p>The first four lines of the function use the <span class="style22">subscripts</span> variable to select the confidence bounds that are appropriate for the panel currently being drawn. When the panel function is called upon to draw a panel the variable <span class="style8">subscripts</span> identifies the observations whose   values of  <span class="style8">func</span> and <span class="style8">p</span>  (the variables that defines the panels) are being used for the current panel. So, in the above code the expressions <span class="style8">fac.vals$low95[subscripts]</span> and <span class="style8">fac.vals$up95[subscripts]</span> extract a vector of lower 95% endpoints and a vector of upper 95% endpoints corresponding to the level of the conditioning variable <span class="style10"></span> that is currently being plotted. This is also the role the notation <em>x</em> and <em>y</em> have in the function. By default each time a panel is drawn the correct set of <span class="style8">lh</span> and <span class="style8">est</span> values (the <em>x</em> and <em>y</em> variables) are selected. Because <span class="style8">low95</span>, <span class="style8">up95</span> , <span class="style8">low85</span>, and <span class="style8">up85</span> are not part of the original function call we have to extract the correct set of observations  for the panel ourselves.</p>
+<p>The <span class="style8">myjitter</span> variable denotes the amount I want to shift the error bars for the two profiles. The <span class="style8">col2</span> variable contains the colors for the difference-adjusted confidence intervals. The <span class="style1">panel.arrows</span> and <span class="style1">panel.segments</span> functions are just the <span class="style19">lattice</span> version of the <span class="style1">arrows</span> and <span class="style1">segments</span> functions of base graphics. Notice how I use the <span class="style8">group.number</span> variable to select the correct value for <span class="style8">myjiitter</span> and the correct color for the difference-adjusted error bars for the current group being plotted. </p>
+<h3><a name="prepanel"></a>Prepanel function</h3>
+<p>Ordinarily <span class="style19">lattice</span> uses the variables in the main function call to determine the appropriate <em>x</em>-limits and <em>y</em>-limits of the graph. We've previously overridden this choice by specifying the <span class="style22">xlim</span> and <span class="style22">ylim</span> arguments, which forces the limits in all the panels to be the same. If we would like the limits to potentially vary between panels we can supply a prepanel function in which we pass to it those variables that are needed to calculate the correct limits. Below is a prepanel function that uses the values of the variables <span class="style8">y</span>, <span class="style8">ly</span>, and <span class="style8">uy</span> to reset the limits on the <em>y</em>-axis. Its return value is the new setting of <span class="style22">ylim</span> for the panel currently being drawn. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># prepanel function to set limits for panels</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  prepanel.ci2 &lt;- function(x, y, ly, uy, subscripts, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">list(ylim=range(y, uy[subscripts], ly[subscripts], finite=T))}</div>
+<p>In the function call I will specify <span class="style8">uy</span> and <span class="style8">ly</span> to be the variables containing the upper 95% and lower 95% confidence bounds.</p>
+<h3><a name="drawing"></a>Drawing the graph</h3>
+<p>The call to <span class="style19">lattice</span> to produce the graph is shown below.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(lattice)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # two-factor interaction plot using lattice and group panel function</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  xyplot(est~lh|func+factor(p, level=0:1, labels=paste('P = ', 0:1, sep='')),
+  xlab ='lh', ylab='Estimated mean', groups=factor(n), data=fac.vals, col=c(2,1),
+  pch=c(1,16), prepanel=prepanel.ci2, ly=fac.vals$low95, uy=fac.vals$up95, 
+layout=c(2,2), panel.groups=my.panel, panel=&quot;panel.superpose&quot;)</div>
+<ul>
+  <li>The summation expression after the vertical bar defines the panels. In this case <span class="style22">func+factor(p, level=0:1, labels=paste('P = ', 0:1, sep=''))</span> will cause the panels to be defined by all combinations of the levels of <span class="style8">func</span> and <span class="style8">p</span>.</li>
+  <li>In the conditioning expression I explicitly declare <span class="style8">p</span> to be a factor in order to create more informative labels for the factor levels: <span class="style8">&quot;P = 0&quot;</span> and <span class="style8">&quot;P = 1&quot;</span>.</li>
+  <li><span class="style22">groups = factor(n)</span> declares the levels of <span class="style8">n</span> as defining the groups.</li>
+  <li><span class="style22">col=c(2,1)</span> and <span class="style22">pch=c(1,16)</span> are the values that will be passed to the group panel function for use when drawing the groups.</li>
+  <li><span class="style22"><a name="prepanel"></a>prepanel=prepanel.ci2</span> identifies the function <span class="style8">prepanel.ci2</span> as the panel function that should be used.</li>
+  <li><span class="style22">ly=fac.vals$low95</span> and <span class="style22">uy=fac.vals$up95</span> are the two values required by the prepanel function we wrote.</li>
+  <li><span class="style22"><a name="layout"></a>layout=c(2,2)</span> causes the panels to be arranged in two columns and two rows.</li>
+  <li><span class="style22">panel.groups=my.panel</span> identifies the group panel function that we created.</li>
+  <li><span class="style22">panel=&quot;</span><span class="style1">panel.superpose</span><span class="style22">&quot;</span> calls the default panel function that will then call the <span class="style22">panel.groups</span> function. If there were any panel features that we wanted to add that did not vary by groups we could have written our own panel function and specified it here.</li>
+</ul>
+<table width="630" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture8/fig1.png" width="600" height="405" alt="fig. 1"></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Two-factor interaction panel graph produced by lattice</td>
+  </tr>
+</table>
+<h3><a name="adding" id="adding"></a>Adding a key</h3>
+<p>The use of the <span class="style22">key</span> argument was explained in <a href="lecture7.htm#key">lecture 7</a>. I redo the previous graph but this time add a legend.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># add a key to the graph</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  xyplot(est~lh|func+factor(p, level=0:1, labels=paste('P = ', 0:1, sep='')),
+  xlab ='lh', ylab='Estimated mean', groups=factor(n), data=fac.vals, col=c(2,1),
+  pch=c(1,16), prepanel=prepanel.ci2, ly=fac.vals$low95, uy=fac.vals$up95, 
+  layout=c(2,2), panel.groups=my.panel, panel=&quot;panel.superpose&quot;,
+  key=list(x=.87, y=.82, corner=c(0,0), points=list(pch=c(16,1), col=1:2, cex=.9),
+text=list(c('n = 1','n = 0'), cex=.8)))</div>
+<br>
+<table width="630" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture8/fig2.png" width="590" height="405" alt="fig. 2"></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Two-factor interaction panel graph with a legend</td>
+  </tr>
+</table>
+<h3><a name="latticeextra"></a>Improving the display with the latticeExtra package</h3>
+<p>The <span class="style19">latticeExtra</span> package adds some additional features to the <span class="style19">lattice</span> package. One of those features is to allow panel strips on both the sides and tops of the panels. This is possible when the conditioning variable is  written as a sum of two factors as it is  here. Lattice graphs can be saved as objects that can then be manipulated with functions from <span class="style19">latticeExtra</span>. The <span class="style1">useOuterStrips</span> function from the <span class="style19">latticeExtra</span> package will put panel strips on the left and on the top of  the graph.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mygraph &lt;- 
+  xyplot(est~lh|func+factor(p, level=0:1, labels=paste('P = ', 0:1, sep='')),
+  xlab ='lh', ylab='Estimated mean', groups=factor(n), data=fac.vals, col=c(2,1),
+  pch=c(1,16), prepanel=prepanel.ci2, ly=fac.vals$low95, uy=fac.vals$up95, 
+  layout=c(2,2), panel.groups=my.panel, panel=&quot;panel.superpose&quot;,
+  key=list(x=.87,y=.88, corner=c(0,0), points=list(pch=c(16,1), col=1:2, cex=.9),
+  text=list(c('n = 1','n = 0'), cex=.8)))
+</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # load the latticeExtra package and redo graph</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  library(latticeExtra)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # put strips on left and on top</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">useOuterStrips(mygraph)</div><br>
+<table width="630" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture8/fig3.png" width="600" height="405" alt="fig. 3"></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;&nbsp;Lattice graph modified by the useOuterStrips function of the latticeExtra package</td>
+  </tr>
+</table>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture8&#32;Rcode.html">here</a>. </p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 25, 2012<br>
+      URL: <a href="lecture8.htm#lecture8" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture8.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

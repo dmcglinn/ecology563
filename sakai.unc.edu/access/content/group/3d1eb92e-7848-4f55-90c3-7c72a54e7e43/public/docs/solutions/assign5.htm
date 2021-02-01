@@ -1,0 +1,450 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 5&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign5" id="assign5"></a>Assignment 5&mdash;Solution</h1>
+<h2>Question 1 </h2>
+<p>I save the .csv version of the file to my hard disk and read it into R. I then retain only those observations that have non-missing values for both <span class="style81">Brain_Mass</span> and <span class="style81">Body_Mass</span>.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">mammals &lt;- read.csv('ecol 563/brainbody.csv')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> names(mammals)</div>
+<span class="style24">  &nbsp;[1] &quot;Updated_Species_Name&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Species_Name&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;[3] &quot;Species_Order&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Brain_Volume&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;[5] &quot;Brain_Volume_Standard_Deviation&quot; &quot;Brain_Mass&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;[7] &quot;Brain_Mass_Standard_Deviation&quot;&nbsp;&nbsp; &quot;Body_Mass&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;[9] &quot;Body_Mass_Standard_Deviation&quot;&nbsp;&nbsp;&nbsp; &quot;Sex&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [11] &quot;No_Individuals&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Age_Class&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [13] &quot;Source&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Notes&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> dim(mammals)</div>
+<span class="style24">  [1] 1998&nbsp;&nbsp; 14</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> mammals2 &lt;- mammals[!is.na(mammals$Brain_Mass) &amp; !is.na(mammals$Body_Mass),]</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> dim(mammals2)</div>
+ <span class="style24"> [1] 1818&nbsp;&nbsp; 14</span>
+ 
+
+<h2>Question 2</h2>
+<p>I tabulate the occurrences of the various orders in the data frame.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(mammals2$Species_Order)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp; Afrosoricida&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora&nbsp; Cetartiodactyla Cetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chiroptera <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 173&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 164&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 59 <br>
+  &nbsp; Dasyuromorphia&nbsp; Didelphimorphia&nbsp;&nbsp;&nbsp; Diprotodontia&nbsp;&nbsp; Erinaceomorpha&nbsp;&nbsp;&nbsp;&nbsp; Eulipotyphla <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 124&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 44 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hyracoidea&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lagomorpha&nbsp;&nbsp;&nbsp; Macroscelidea&nbsp;&nbsp; Microbiotheria Notoryctemorphia <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 <br>
+  Paucituberculata&nbsp; Peramelemorphia&nbsp;&nbsp; Perissodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proboscidea <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 622&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scandentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sirenia&nbsp;&nbsp;&nbsp; Tubulidentata&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Xenarthra <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 409&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 27</span>
+<p>There is a typo in Cetartiodactyla; one individual was recorded with a  trailing space. We can fix that in a number of ways.</p>
+<p><strong>Method 1</strong>: Using <span class="style4">ifelse</span></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mammals2$Species_Order &lt;- ifelse(mammals2$Species_Order == 'Cetartiodactyla ', 'Cetartiodactyla', as.character(mammals2$Species_Order))</div>
+
+<p><strong>Method 2</strong>: Using <span class="style4">grep</span></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> grep('Cetartiodactyla ', mammals2$Species_Order)</div>
+<span class="style24">[1] 1727</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mammals2$Species_Order[1727] &lt;- 'Cetartiodactyla'</div>
+<p><strong>Method 3</strong>: Using <span class="style4">sub</span></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mammals2$Species_Order &lt;- sub('Cetartiodactyla ', 'Cetartiodactyla', mammals2$Species_Order)</div>
+<p><strong>Method 4</strong>: Using <span class="style4">trim</span></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(gdata)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mammals2$Species_Order &lt;- trim(mammals2$Species_Order)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">table(mammals2$Species_Order)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp; Afrosoricida&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora&nbsp; Cetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chiroptera&nbsp;&nbsp; Dasyuromorphia <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 173&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 165&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 51 <br>
+&nbsp;Didelphimorphia&nbsp;&nbsp;&nbsp; Diprotodontia&nbsp;&nbsp; Erinaceomorpha&nbsp;&nbsp;&nbsp;&nbsp; Eulipotyphla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hyracoidea <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 124&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lagomorpha&nbsp;&nbsp;&nbsp; Macroscelidea&nbsp;&nbsp; Microbiotheria Notoryctemorphia Paucituberculata <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 <br>
+&nbsp;Peramelemorphia&nbsp;&nbsp; Perissodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proboscidea&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 622&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 409 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scandentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sirenia&nbsp;&nbsp;&nbsp; Tubulidentata&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Xenarthra <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 27</span>
+<p>Next we identify the four most abundant orders, extract their names, and use them to subset the data frame.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> first.four &lt;- sort(table(mammals2$Species_Order), decreasing=T)[1:4]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> first.four</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora Cetartiodactyla <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 622&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 409&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 173&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 165 </span>
+  <div class="style15" style="padding-left: 30px; text-indent:-30px"># use the intersection operator to subset the data</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mammals3 &lt;- mammals2[mammals2$Species_Order %in% names(first.four), ]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(mammals3)</div>
+ <span class="style24"> [1] 1369&nbsp;&nbsp; 14</span>
+<h2>Question 3</h2>
+<p>To obtain summary statistics by species I use the <span class="style4">tapply</span> function. (See <a href="../lectures/lecture2.htm#tapply">lecture 2</a>.) The first argument to <span class="style4">tapply</span> is the variable we wish to summarize, the second argument is the grouping variable (<span class="style81">Species_Name</span>), and the last argument is the function we wish to apply separately by <span class="style81">Species_Name</span>. Following the hint I first remove the &quot;ghost&quot; species levels by redeclaring the <span class="style81">Species_Name</span> as a factor in the reduced data set.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># remove ghost species levels</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mammals3$Species_Name &lt;- factor(mammals3$Species_Name)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># calculate species means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mean.body &lt;- tapply(mammals3$Body_Mass, mammals3$Species_Name, mean)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mean.brain &lt;- tapply(mammals3$Brain_Mass, mammals3$Species_Name, mean)</div>
+<p>To obtain the order for each species we can use <span class="style4">tapply</span> again this time using   the function given in the hint to this problem. The <span class="style4">tapply</span> function selects vectors of <span class="style81">Species_Order</span> separately by <span class="style81">Species_Name</span> and the function <span class="style81">function(x) as.character(x[1])</span> then takes the first element from this vector.
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sp.order &lt;- tapply(mammals3$Species_Order, mammals3$Species_Name, function(x) as.character(x[1]))</div>
+<p>A vector of species names can be create the same way. Alternatively we can get them using the <span class="style4">names</span> function on any of the three vectors just created.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sp.name &lt;- names(mean.body)</div>
+<p>I assemble everything in a data frame.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> brainbody &lt;- data.frame(body=mean.body, brain=mean.brain, sp.order=sp.order, species=sp.name)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> brainbody[1:12,]</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; body&nbsp;&nbsp; brain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sp.order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; species<br>
+  Acinonyx jubatus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22200.0&nbsp;&nbsp; 2.449&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acinonyx jubatus<br>
+  Acomys cahirinus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 44.0&nbsp;&nbsp; 0.760&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Acomys cahirinus<br>
+  Acomys wilsonii&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18.5&nbsp;&nbsp; 0.580&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acomys wilsonii<br>
+  Aepyceros melanus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 47735.0 162.000 Cetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aepyceros melanus<br>
+  Aeromys tephromelas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1189.0&nbsp; 10.340&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp; Aeromys tephromelas<br>
+  Aethomys chrysophilus&nbsp;&nbsp;&nbsp;&nbsp; 117.0&nbsp;&nbsp; 1.250&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp; Aethomys chrysophilus<br>
+  Aethomys hindei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 146.3&nbsp;&nbsp; 1.420&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aethomys hindei<br>
+  Aethomys namaquensis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79.4&nbsp;&nbsp; 0.890&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp; Aethomys namaquensis<br>
+  Ailuropoda melanoleuca&nbsp; 37500.0 226.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora Ailuropoda melanoleuca<br>
+  Ailurus fulgens&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5590.0&nbsp; 46.800&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ailurus fulgens<br>
+  Alactaga saliens&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 102.0&nbsp;&nbsp; 2.100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alactaga saliens<br>
+Alcelaphus buselaphus&nbsp; 134090.0 275.000 Cetartiodactyla&nbsp; Alcelaphus buselaphus</span>
+<p>Notice that we didn't need to create the species column because the species names appear as the row names of the data frame. To eliminate the row names I just set them to NULL.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rownames(brainbody) &lt;- NULL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> brainbody[1:12,]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; body&nbsp;&nbsp; brain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sp.order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; species<br>
+  1&nbsp;&nbsp; 22200.0&nbsp;&nbsp; 2.449&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acinonyx jubatus<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 44.0&nbsp;&nbsp; 0.760&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acomys cahirinus<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18.5&nbsp;&nbsp; 0.580&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acomys wilsonii<br>
+  4&nbsp;&nbsp; 47735.0 162.000 Cetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aepyceros melanus<br>
+  5&nbsp;&nbsp;&nbsp; 1189.0&nbsp; 10.340&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp; Aeromys tephromelas<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; 117.0&nbsp;&nbsp; 1.250&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp; Aethomys chrysophilus<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 146.3&nbsp;&nbsp; 1.420&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aethomys hindei<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79.4&nbsp;&nbsp; 0.890&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp; Aethomys namaquensis<br>
+  9&nbsp;&nbsp; 37500.0 226.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora Ailuropoda melanoleuca<br>
+  10&nbsp;&nbsp; 5590.0&nbsp; 46.800&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ailurus fulgens<br>
+  11&nbsp;&nbsp;&nbsp; 102.0&nbsp;&nbsp; 2.100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alactaga saliens<br>
+12 134090.0 275.000 Cetartiodactyla&nbsp; Alcelaphus buselaphus</span>
+<h2>Question 4</h2>
+<p>As the background to this problem explained, we can fit the allometric equation by carrying out a regression of log(brain mass) on log(body mass). The slope of the corresponding line is the allometric exponent. The way to determine if the same regression line works for each of four different orders is by fitting  a single model in which log(body mass) interacts with species order. A test of the interaction term in this model is a test of whether the slopes are the same for the four orders. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> brainbody$sp.order &lt;- factor(brainbody$sp.order)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- lm(log(brain) ~ log(body)*sp.order, data=brainbody)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out1)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: log(brain)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq&nbsp;&nbsp;&nbsp; F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  log(body)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 3214.5&nbsp; 3214.5 13099.2084 &lt; 2.2e-16 ***<br>
+  sp.order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp; 158.6&nbsp;&nbsp;&nbsp; 52.9&nbsp;&nbsp; 215.4475 &lt; 2.2e-16 ***<br>
+  log(body):sp.order&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 5.7&nbsp;&nbsp;&nbsp;&nbsp; 1.9&nbsp;&nbsp;&nbsp;&nbsp; 7.7145&nbsp; 4.51e-05 ***<br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 670&nbsp; 164.4&nbsp;&nbsp;&nbsp;&nbsp; 0.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>Because the interaction term log(body mass) &times; order is significant (<em>p</em> &lt; .001) we conclude that the allometric exponents differ among the four mammalian orders being examined.</p>
+<h2>Question 5</h2>
+<p>With four groups there are six possible pairwise comparisons of the slopes we can carry out. If we examine the summary table of the model we obtain three of those comparisons for free.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(out1)$coefficients,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.348&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.232&nbsp; -5.803&nbsp;&nbsp;&nbsp; 0.000<br>
+  log(body)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.603&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.023&nbsp; 26.315&nbsp;&nbsp;&nbsp; 0.000<br>
+  sp.orderCetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.172&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.460&nbsp;&nbsp; 0.374&nbsp;&nbsp;&nbsp; 0.709<br>
+  sp.orderPrimates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.652&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.311&nbsp; -2.097&nbsp;&nbsp;&nbsp; 0.036<br>
+  sp.orderRodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-1.198&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.249&nbsp; -4.815&nbsp;&nbsp;&nbsp; 0.000<br>
+  log(body):sp.orderCetartiodactyla&nbsp;&nbsp;&nbsp; 0.013&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.042&nbsp;&nbsp; 0.312&nbsp;&nbsp;&nbsp; 0.755<br>
+  log(body):sp.orderPrimates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.162&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.035&nbsp;&nbsp; 4.593&nbsp;&nbsp;&nbsp; 0.000<br>
+log(body):sp.orderRodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.058&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.029&nbsp;&nbsp; 1.990&nbsp;&nbsp;&nbsp; 0.047</span>
+<p>The above table compares Carnivora against the other three orders. To obtain the other three comparisons we can choose a different reference group for order. I run the regression two more times, the first time making Cetartiodactyla the reference group and the second time Primates.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # make Cetartiodactyla the reference group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> brainbody$order2 &lt;- factor(brainbody$sp.order, levels=levels(brainbody$sp.order)[c(2:4,1)])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out1a &lt;- lm(log(brain) ~ log(body)*order2, data=brainbody)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(out1a)$coefficients,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estimate Std. Error t value Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.176&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.397&nbsp; -2.966&nbsp;&nbsp;&nbsp; 0.003<br>
+  log(body)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.616&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.035&nbsp; 17.784&nbsp;&nbsp;&nbsp; 0.000<br>
+  order2Primates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.824&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.447&nbsp; -1.842&nbsp;&nbsp;&nbsp; 0.066<br>
+  order2Rodentia&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-1.369&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.407&nbsp; -3.369&nbsp;&nbsp;&nbsp; 0.001<br>
+  order2Carnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.172&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.460&nbsp; -0.374&nbsp;&nbsp;&nbsp; 0.709<br>
+  log(body):order2Primates&nbsp;&nbsp;&nbsp;&nbsp; 0.149&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.044&nbsp;&nbsp; 3.400&nbsp;&nbsp;&nbsp; 0.001<br>
+  log(body):order2Rodentia&nbsp;&nbsp;&nbsp;&nbsp; 0.045&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.039&nbsp;&nbsp; 1.146&nbsp;&nbsp;&nbsp; 0.252<br>
+  log(body):order2Carnivora&nbsp;&nbsp; -0.013&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.042&nbsp; -0.312&nbsp;&nbsp;&nbsp; 0.755</span>
+  <div class="style15" style="padding-left: 30px; text-indent:-30px">  # make Primates  the reference group</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> brainbody$order2 &lt;- factor(brainbody$sp.order, levels=levels(brainbody$sp.order)[c(3:4,1:2)])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out1a &lt;- lm(log(brain) ~ log(body)*order2, data=brainbody)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(out1a)$coefficients,3)</div>
+<span class="style24">  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estimate Std. Error t value Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.207&nbsp; -9.668&nbsp;&nbsp;&nbsp; 0.000<br>
+  log(body)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.765&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.027&nbsp; 28.603&nbsp;&nbsp;&nbsp; 0.000<br>
+  order2Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.545&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.225 &nbsp;-2.421&nbsp;&nbsp;&nbsp; 0.016<br>
+  order2Carnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.652&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.311&nbsp;&nbsp; 2.097&nbsp;&nbsp;&nbsp; 0.036<br>
+  order2Cetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.824&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.447&nbsp;&nbsp; 1.842&nbsp;&nbsp;&nbsp; 0.066<br>
+  log(body):order2Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.104&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.032&nbsp; -3.257&nbsp;&nbsp;&nbsp; 0.001<br>
+  log(body):order2Carnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;-0.162&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.035&nbsp; -4.593&nbsp;&nbsp;&nbsp; 0.000<br>
+log(body):order2Cetartiodactyla&nbsp;&nbsp; -0.149&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.044&nbsp; -3.400&nbsp;&nbsp;&nbsp; 0.001</span>
+<p>Looking at the output we see that the allometric exponent of primates is different from each of the other three orders (<em>p</em> &lt; .001). Among the other comparisons we find rodents and carnivores are significantly different (<em>p</em> = .047), but Cetartiodactyla is not significantly different from rodents or carnivores. </p>
+<h3>Graphical summary&mdash;dynamite plot</h3>
+<p>I summarize the results with a dynamite plot using the code from <a href="../lectures/lecture5.htm#dynamite">lecture 5</a>. I begin by calculating the allometric exponent for each order and its standard error.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # contrast matrix to obtain slopes</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">cmat &lt;- rbind(c(0,1,0,0,0,0,0,0), c(0,1,0,0,0,1,0,0), c(0,1,0,0,0,0,1,0), c(0,1,0,0,0,0,0,1))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # allometric exponents</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">my.means.unsort &lt;- as.vector(cmat %*% coef(out1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">names(my.means.unsort) &lt;- levels(brainbody$sp.order)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # standard errors</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">se.mean &lt;- sqrt(diag(cmat%*%vcov(out1)%*%t(cmat)))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # put things in increasing mean order</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">my.means &lt;- sort(my.means.unsort)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> se.mean.sort &lt;- se.mean[order(my.means.unsort)]</div><div class="style23" style="padding-left: 30px; text-indent:-30px"> my.means</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora Cetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primates <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6034166&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6163946&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6609356&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.7652427</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # results of pairwise comparisons</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> diffs &lt;- c('a','ab','b','c')</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # rescale things for the plot</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  dat1 &lt;- my.means-.5</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # create bar plot and save coordinates of bars</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  bp &lt;- barplot(dat1, axes=F, ylim=c(0,.35), names.arg=names(my.means), cex.names=0.8, ylab='Allometric exponent', xlab='Order',col='lightblue')</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # add correct labels on y-axis (because of rescaling)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  axis(2, at=seq(0,.3,.1), labels=seq(0,.3,.1)+.5)</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # add handles to dynamite plot</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  arrows(x0=bp, y0=dat1, x1=bp, y1=dat1+se.mean.sort, angle=90, length=0.1)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # add labels to the handles</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">text(bp, dat1+se.mean.sort, diffs, pos=3, cex=.9)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment5/fig0.png" width="445" height="300" alt="fig. 1"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Dynamite graph showing the pairwise comparisons of the allometric exponents by order. (No correction for multiple testing was made.)</td>
+  </tr>
+</table>
+<h3>Graphical summary&mdash;confidence intervals</h3>
+<p>A more elegant way of summarizing things is is by plotting 95% confidence intervals for the allometric exponents by mammalian order along with suitable difference-adjusted confidence intervals. The easiest way to obtain the individual slopes is to fit a reparameterized version of the model in which the individual intercepts and slopes are returned for the four mammalian orders. The details of this were explained in <a href="../lectures/lecture8.htm#shortcut">lecture 8</a>. The reparameterization needed for the current model is the following.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out2 &lt;- lm(log(brain) ~ log(body):sp.order + sp.order-1, data=brainbody)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(out2)$coefficients,3)</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)<br>
+  sp.orderCarnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.348&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.232&nbsp; -5.803&nbsp;&nbsp;&nbsp; 0.000<br>
+  sp.orderCetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.176&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.397&nbsp; -2.966&nbsp;&nbsp;&nbsp; 0.003<br>
+  sp.orderPrimates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.207&nbsp; -9.668&nbsp;&nbsp;&nbsp; 0.000<br>
+  sp.orderRodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-2.546&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.089 -28.586&nbsp;&nbsp;&nbsp; 0.000<br>
+  log(body):sp.orderCarnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.603&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.023&nbsp; 26.315&nbsp;&nbsp;&nbsp; 0.000<br>
+  log(body):sp.orderCetartiodactyla&nbsp;&nbsp;&nbsp; 0.616&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.035&nbsp; 17.784&nbsp;&nbsp;&nbsp; 0.000<br>
+  log(body):sp.orderPrimates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.765&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.027&nbsp; 28.603&nbsp;&nbsp;&nbsp; 0.000<br>
+log(body):sp.orderRodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.661&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.018&nbsp; 37.561&nbsp;&nbsp;&nbsp; 0.000</span>
+<p>The slopes appear in rows 5 through 8 of the output. To obtain the 95% confidence intervals we can use the <span class="style4">confint</span> function on the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> confint(out2)</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp;&nbsp; 97.5 %<br>
+  sp.orderCarnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.8041545 -0.8919669<br>
+  sp.orderCetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.9551127 -0.3974975<br>
+  sp.orderPrimates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-2.4066510 -1.5941133<br>
+  sp.orderRodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.7206716 -2.3709385<br>
+  log(body):sp.orderCarnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.5583916&nbsp; 0.6484416<br>
+  log(body):sp.orderCetartiodactyla&nbsp; 0.5483393&nbsp; 0.6844499<br>
+  log(body):sp.orderPrimates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.7127109&nbsp; 0.8177745<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6263849&nbsp; 0.6954863</span>
+ <p>To obtain the difference-adjusted confidence levels we need the <span class="style81">ci.func</span> function from <a href="../lectures/lecture5.htm#difference">lecture 5</a>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># function to calculate difference-adjusted confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func &lt;- function(rowvals, lm.model, glm.vmat) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> nor.func1a &lt;- function(alpha, model, sig) 1-pt(-qt(1-alpha/2, model$df.residual) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*%c (1,-1)), model$df.residual) - pt(qt(1-alpha/2, model$df.residual) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*% c(1,-1)), model$df.residual, lower.tail=F)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  nor.func2 &lt;- function(a,model,sigma) nor.func1a(a,model,sigma)-.95</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  n &lt;- length(rowvals)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> xvec1b &lt;- numeric(n*(n-1)/2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  vmat &lt;- glm.vmat[rowvals,rowvals]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  ind &lt;- 1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  for(i in 1:(n-1)) {</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  for(j in (i+1):n){</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  sig &lt;- vmat[c(i,j), c(i,j)]</div>
+<div class="style15" style="padding-left: 120px; text-indent:-30px">  #solve for alpha</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  xvec1b[ind] &lt;- uniroot(function(x) nor.func2(x, lm.model, sig), c(.001,.999))$root</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px"> ind &lt;- ind+1</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  }}</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  1-xvec1b</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>The variances and covariances of the slopes occupy rows 5 through 8 and columns 5 through 8 of the variance-covariance matrix of the model.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> vals1 &lt;- ci.func(1:4, out2, vcov(out2)[5:8,5:8])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">vals1</div>
+<span class="style24">[1] 0.8429977 0.8357554 0.8381188 0.8379638 0.8554106 0.8432272</span>
+<p>Although the confidence levels don't vary much the little bit of variability that is shown does make a difference because the <em>p</em>-value for testing that the slopes of carnivores and rodents are equal is very close to 0.05. The confidence level for this comparison is the third element of <span class="style81">vals1</span>. I begin with the highest reported confidence level and obtain the corresponding confidence intervals using the <span class="style4">confint</span> function.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> confint(out2, level=vals1[5])[5:8,]</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.23 %&nbsp;&nbsp; 92.77 %<br>
+log(body):sp.orderCarnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.5699234 </span><span class="style25">0.6369098</span><span class="style24"><br>
+  log(body):sp.orderCetartiodactyla 0.5657697 0.6670196<br>
+  log(body):sp.orderPrimates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.7261653 0.8043201<br>
+log(body):sp.orderRodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">0.6352340</span><span class="style24"> 0.6866371</span>
+<p>With this choice the interval for Primates doesn't overlap any of the others. But notice that the intervals for carnivores and rodents overlap. We know from the summary table of the original model that these two orders are just barely significantly different. Of course we're using the wrong difference-adjusted level for this comparison. I redo the calculations using the correct confidence level for this comparison.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> confint(out2, level=vals1[3])[5:8,]</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.09 %&nbsp;&nbsp; 91.91 %<br>
+log(body):sp.orderCarnivora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.5713061 </span><span class="style25">0.6355271</span><span class="style24"><br>
+  log(body):sp.orderCetartiodactyla 0.5678596 0.6649296<br>
+  log(body):sp.orderPrimates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.7277786 0.8027068<br>
+log(body):sp.orderRodentia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">0.6362950</span><span class="style24"> 0.6855761</span>
+<p>Now the two intervals don't overlap. Because the conclusions for the rest of the comparisons remain the same, I use this level to calculate the difference-adjusted confidence intervals. I assemble everything in a data frame.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out838 &lt;- confint(out2,level=vals1[3])[5:8,]</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px">out95 &lt;- confint(out2,level=.95)[5:8,]</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> newdata &lt;- data.frame(var.labels=levels(brainbody$sp.order), ests=coef(out2)[5:8], out95, out838)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> names(newdata)[3:6] &lt;- c('low95', 'up95', 'low83', 'up83')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> rownames(newdata)&lt;-NULL</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> newdata</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var.labels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95&nbsp;&nbsp;&nbsp;&nbsp; low83&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up83<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carnivora 0.6034166 0.5583916 0.6484416 0.5713061 0.6355271<br>
+  2 Cetartiodactyla 0.6163946 0.5483393 0.6844499 0.5678596 0.6649296<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primates 0.7652427 0.7127109 0.8177745 0.7277786 0.8027068<br>
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rodentia 0.6609356 0.6263849 0.6954863 0.6362950 0.6855761</span>
+<p>I modify the code from <a href="../lectures/lecture4.htm#effectlattice">lecture 4</a> (for plotting effect estimates from regression models) for use here. </p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">prepanel.ci &lt;- function(x, y, lx, ux, subscripts, ...){</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">list(xlim=range(x, ux[subscripts], lx[subscripts], finite=T))}</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">dotplot(var.labels~ests, data=newdata, lx=newdata$low95, ux=newdata$up95, xlab='Allometric exponent', prepanel=prepanel.ci, panel=function(x,y){</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.dotplot(x, y, col='white', cex=.01)</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.arrows(newdata$low95, as.numeric(y), newdata$up95, as.numeric(y), col=&quot;dodgerblue4&quot;, angle=90,length=.05, code=3)</div>
+ <div class="style10" style="padding-left: 60px; text-indent:-30px"> panel.segments(newdata$low83, as.numeric(y), newdata$up83, as.numeric(y), col=&quot;dodgerblue1&quot;, lwd=5, lineend=1)</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, pch=16, cex=1, col='white')</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, pch=1, cex=1.1, col='dodgerblue')</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=seq(0.54,0.84,.02), col='grey70', lty=3)</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> })</div><br>
+<table width="600" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment5/fig1.png" width="465" height="340" alt="fig. 1"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;95% confidence intervals and difference-adjusted (83.8%) confidence intervals for the allometric exponents of four mammalian orders. The difference-adjusted intervals can be used to make pairwise comparisons among the orders.</td>
+  </tr>
+</table>
+<h2>Question 6</h2>
+<p>I use <span class="style4">tapply</span> and the <span class="style4">range</span> function to obtain the ranges of the log body mass  for each of the four mammalian orders.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.r &lt;- tapply(log(brainbody$body), brainbody$sp.order, range)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.r</div>
+<span class="style24">$Carnivora<br>
+[1]&nbsp; 4.838924 14.511902</span>
+<p><span class="style24">$Cetartiodactyla<br>
+  [1]&nbsp; 7.599401 17.876970</span>
+<p><span class="style24">$Primates<br>
+  [1]&nbsp; 3.988984 11.656124</span>
+<p><span class="style24">$Rodentia<br>
+  [1] 1.856298 9.806426</span>
+<p>The output  is a list. To extract the minimum value for Primates, e.g., I can write: <span class="style1">out.r[[3]][1]</span> because Primates are the third element in the list and the minimum is the first element of the Primate vector. To generate the plot of the regression lines restricting the ranges to the data for the separate orders I use the <span class="style4">curve</span> function. The coefficient vector of the model is the following.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> coef(out1)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log(body) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.34806072&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.60341658 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sp.orderCetartiodactyla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sp.orderPrimates <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;0.17175561&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.65232139 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sp.orderRodentia log(body):sp.orderCetartiodactyla <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.19774436&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.01297802 <br>
+  &nbsp;&nbsp;&nbsp; log(body):sp.orderPrimates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log(body):sp.orderRodentia <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.16182611&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.05751898 </span>
+<p>The equation of the regression line for carnivores is </p>
+<p align="center"><span class="style1">coef(out1)[1] + coef(out1)[2] * x</span>. </p>
+<p>For the three remaining orders the equation of the regression line takes the following form.</p>
+<p align="center" class="style1">coef(out1)[1]+coef(out1)[y]+(coef(out1)[2]+coef(out1)[y+3])*x</p>
+<p>where <em>y</em> is either 3, 4, or 5. Based on this I can write a function that draws the curve for Cetartiodactyla, Primates, and Rodentia.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">mycurve &lt;- function(y) curve(coef(out1)[1] + coef(out1)[y] + (coef(out1)[2] + coef(out1)[y+3])*x, from=out.r[[y-1]][1], to=out.r[[y-1]][2], col=mycol[y-1], lty=2, add=T)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">plot(log(brain)~log(body), data=brainbody, xlab=expression(log('body mass')), ylab=expression(log('brain mass')), col=c('grey50', 'pink2', 'lightgreen', 'dodgerblue1')[as.numeric(sp.order)], cex=.5)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># colors for lines</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">mycol &lt;- c(1,2,'seagreen',4)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # draw Carnivora line
+</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  curve(coef(out1)[1] + coef(out1)[2]*x, from=out.r[[1]][1], to=out.r[[1]][2], col=mycol[1], lty=2, add=T)</div>
+  
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # draw remaining lines: assign output of sapply to an object to suppress printing</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  junk &lt;- sapply(3:5, mycurve)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  legend('topleft', levels(brainbody$order), pch=1, col=c('grey50', 'pink2', 'lightgreen', 'dodgerblue1'), lty=2, bty='n')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">identify(log(brainbody$body), log(brainbody$brain), brainbody$species, cex=.8)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment5/fig2.png" width="460" height="330" alt="fig. 2"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;&nbsp;Plot of the allometric relationship between brain mass and body mass on a log-log scale.</td>
+  </tr>
+</table>
+<h2>Question 7</h2>
+<p>I used the <span class="style4">identify</span> function to add the names of the outlier species to the graph of Question 6. They are <em>Acinonyx jubatus</em> and <em>Capricornis crispus</em>.<br>
+</p>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment5/hw5scores.png" width="340" height="230" alt="hw5 scores"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 6, 2012<br>
+      URL: <a href="assign5.htm#assign5">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign5.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

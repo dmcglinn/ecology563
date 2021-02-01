@@ -1,0 +1,724 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 5&mdash;Monday, September 10, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture5" id="lecture4"></a>Lecture 5&mdash;Monday, September 10, 2012</h1>
+<h3>Topics</h3>
+<ul>
+<li><a href="lecture5.htm#discussion">Discussion of Assignment 1</a></li>
+<li><a href="lecture5.htm#producing">Creating an interaction graph with confidence intervals for the mean</a></li>
+<li><a href="lecture5.htm#interpreting">Interpreting  95% confidence intervals in an interaction plot</a></li>
+<li><a href="lecture5.htm#difference">Difference-adjusted confidence intervals</a> </li>
+<li><a href="lecture5.htm#adding">Adding difference-adjusted confidence intervals to an interaction plot</a>
+  <ul>
+  <li><a href="lecture5.htm#sibship2">Creating the interaction plot for sibship 2</a></li>
+    </ul>
+</li>
+<li><a href="lecture5.htm#dynamite">Dynamite plots</a></li>
+<li><a href="lecture5.htm#cited">Cited references</a></li>
+<li><a href="lecture5.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture5.htm#barplot">barplot</a> produces a bar plot.</li>
+  <li><a href="lecture5.htm#cbind">cbind</a> appends vectors and matrices together by their columns creating a new object with  the same number of rows.</li>
+  <li><a href="lecture5.htm#nchar">nchar</a> counts the number of character elements of a text string.</li>
+  <li><a href="lecture5.htm#order">order</a> returns the indices of the elements of a vector that would sort the elements of that vector.</li>
+  <li><a href="lecture5.htm#pairwise">pairwise.t.test</a> carries out a sequence of independent samples t-tests for a group of means.</li>
+  <li><a href="lecture5.htm#seq">seq</a> generates a vector of equally spaced elements.</li>
+  <li><a href="lecture5.htm#sort">sort</a> places the elements of a vector in sorted order.</li>
+  <li><a href="lecture5.htm#substr">substr</a> extracts contiguous text from character strings.</li>
+  <li><a href="lecture5.htm#text">text</a> places text at specified locations in the active graph.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture5.htm#confidence">confidence.level</a>= (argument to <span class="style1">effect</span> function) specifies the level for confidence intervals.</li>
+  <li><a href="lecture5.htm#level">level=</a> (argument to <span class="style1">predict</span>) specifies the level for confidence intervals.</li>
+  <li><a href="lecture5.htm#lwd">lty=</a> (argument to graphics functions) controls the type of line displayed.</li>
+  <li><a href="lecture5.htm#lwd">lwd=</a> (argument to graphics functions) controls the thickness of lines and line segments.</li>
+  <li><a href="lecture5.htm#namesarg">names.arg=</a> (argument to <span class="style1">barplot</span>) specifies the names that <span class="style1">barplot</span> places below individual bars in a bar plot.</li>
+  <li><a href="lecture5.htm#text">pos=</a> (argument to <span class="style1">text</span>) specifies the position of the text relative to the specified coordinates: 1, 2, 3, and 4 for below, to the left, above, and to the right of the coordinates.</li>
+</ul>
+<h3>Additional R packages used </h3>
+<ul>
+  <li><a href="lecture5.htm#confidence">effects</a> for the <span class="style1">effect</span> function.</li>
+</ul>
+<h2><a name="discussion" id="refitting4"></a>Discussion of Assignment 1</h2>
+<p>See  <a href="../solutions/assign1.htm">Assignment 1 solutions</a>.</p>
+<h2><a name="producing" id="refitting2"></a>Creating an interaction graph with confidence intervals for the mean</h2>
+<p>I reload the tadpoles data set and refit the analysis of variance models from last time. I then reproduce the graph of the two-way interaction between <span class="style8">fac1</span> and <span class="style8">fac2</span>. For an explanation of the code see <a href="lecture4.htm">lecture 4</a>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">tadpoles &lt;- read.table(&quot;ecol 563/tadpoles.csv&quot;, header=T, sep=',')</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles$fac3 &lt;- factor(tadpoles$fac3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out1 &lt;- lm(response~fac1 + fac2 + fac3 + fac1:fac2 + fac1:fac3 + fac2:fac3 + fac1:fac2:fac3, data=tadpoles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out2 &lt;- lm(response~fac1 + fac2 + fac3 + fac1:fac2 + fac2:fac3, data=tadpoles)</div><br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #calculate means and their confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myvec &lt;- function(fac1, fac2, fac3) c(1, fac1=='No', fac1=='Ru', fac2=='S', fac3==2, (fac1=='No')*(fac2=='S'), (fac1=='Ru')*(fac2=='S'), (fac2=='S')*(fac3==2))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals2 &lt;- expand.grid(fac1=c('Co','No','Ru'), fac2=c('D','S'), fac3=1:2)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #contrast matrix</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat &lt;- t(apply(fac.vals2, 1, function(x) myvec(x[1],x[2],x[3])))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #treatment means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ests &lt;- cmat%*%coef(out2)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #variance-covariance matrix of treatment means</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> <a name="vmat"></a>vmat &lt;- cmat %*% vcov(out2) %*% t(cmat)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # std errs of means</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> se &lt;- sqrt(diag(vmat))</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # 95% confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> low95 &lt;- ests + qt(.025,out2$df.residual)*se</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> up95 &lt;- ests + qt(.975,out2$df.residual)*se</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #assemble results in data frame</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> results.mine &lt;- data.frame(fac.vals2, ests, se, low95, up95)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results.mine$fac1.num &lt;- as.numeric(results.mine$fac1)</div><br>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #sibship 1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(c(.8,3.2), range(results.mine[,c(&quot;up95&quot;, &quot;low95&quot;)]), type='n', xlab=&quot;Hormonal treatment&quot;, ylab='Mean mitotic activity', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">axis(1, at=1:3, labels=levels(results.mine$fac1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">axis(2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">box()</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">results.mine.sub1 &lt;- results.mine[results.mine$fac3==1,]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #first food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='D',]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#amount of shift</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- -.05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1, pch=16)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#second food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='S',]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- .05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=16, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2, pch=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, 'Sibship 1', cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">legend('topleft',c('Detritus','Shrimp'), col=1:2, pch=c(16,1), cex=.8, pt.cex=.9, title=expression(bold('Food Type')), bty='n')</div><br>
+<p align="center"><a name="fig1"></a><img src="../../images/lectures/lecture5/fig1.png" width="350" height="270" alt="fig. 10"></p>
+<p align="center" class="styleArial"><strong>Fig. 1&nbsp;</strong>&nbsp;Mean profile plot for sibship 1</p>
+<h2><a name="interpreting" id="interpreting"></a>Interpreting 95% confidence intervals in an interaction plot</h2>
+<p>We've discussed interaction plots like Fig. 1  <a href="lecture2.htm#int2">previously</a>. The only new additions are the 95% confidence intervals for the means. A 95% confidence interval  denotes a set of likely values for the treatment mean in the population that generated our sample. With a 95% confidence interval we can be 95% confident that our interval has captured the true population value of the mean. </p>
+<p>A popular alternative to displaying 95% confidence intervals is to just display &plusmn; 1 standard error. This choice is  popular predominantly because it yields a shorter interval than a 95% confidence interval. As a result a naive reader thinks the results are more precise than they are while a more sophisticated reader is forced  to go through the mental gymnastics of multiplying the standard errors by an appropriate multiplier to obtain a  confidence interval.  Another reason  &plusmn;1 stan dared error displays  are sometimes preferred is because of the  confusion that using confidence intervals can cause. Consider again Fig. 1. Except for the two <span class="style8">Co</span> 95% confidence intervals which are obviously distinct from both the  <span class="style8">No</span> and  <span class="style8">Ru</span> 95% confidence intervals, all the remaining ways we could pair up the six means in Fig. 1 lead to 95% confidence intervals that overlap. In particular notice that the 95% confidence intervals of the two <span class="style8">Ru</span> treatment means overlap. This may seem surprising because we know from the summary table that  the food treatment (<span class="style8">fac2</span>)  effect significantly deviates from additivity when <span class="style8">fac1</span> = <span class="style8">'Ru'</span>. The summary table of the model is shown below in which with this particular significant interaction effect is highlighted.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(out2)$coefficients,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 3.383&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.052&nbsp; 64.499&nbsp;&nbsp;&nbsp; 0.000<br>
+  fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.547&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.058&nbsp;&nbsp; 9.376&nbsp;&nbsp;&nbsp; 0.000<br>
+  fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.537&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.061&nbsp;&nbsp; 8.825&nbsp;&nbsp;&nbsp; 0.000<br>
+  fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.067&nbsp;&nbsp; 0.256&nbsp;&nbsp;&nbsp; 0.798<br>
+  fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.108&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.048&nbsp;&nbsp; 2.234&nbsp;&nbsp;&nbsp; 0.026<br>
+  fac1No:fac2S&nbsp;&nbsp;&nbsp; 0.013&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.077&nbsp;&nbsp; 0.174&nbsp;&nbsp;&nbsp; 0.862<br>
+fac1Ru:fac2S&nbsp;&nbsp;&nbsp; 0.164&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.082&nbsp;&nbsp; 2.000&nbsp;&nbsp;&nbsp; </span><span class="style25">0.047</span><span class="style24"><br>
+fac2S:fac32&nbsp;&nbsp;&nbsp;&nbsp; 0.163&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.065&nbsp;&nbsp; 2.509&nbsp;&nbsp;&nbsp; 0.013</span>
+<p>The analysis of variance model that corresponds to the coefficient estimates in the table above is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture5/regeqn.gif" width="667" height="75" alt="reg eqn"></p>
+<p>For sibship 1 the terms involving <span class="style8">fac3</span> drop out and we're left with the following.</p>
+<p align="center"><img src="../../images/lectures/lecture5/regeqn2.gif" width="470" height="75" alt="reg eqn 2"></p>
+<p>According to the model the difference between the two <span class="style8">Ru</span> treatments for sibship 1 (shrimp diet minus detritus diet) is given by &beta;<sub>3</sub> + &beta;<sub>6</sub>. From the summary table the point estimates of both &beta;<sub>3</sub>  and &beta;<sub>6</sub> are greater than zero. Furthermore  &beta;<sub>6</sub> is significantly greater than zero. Therefore it follows that the <span class="style8">Ru</span> treatment mean when the diet is shrimp (<span class="style8">fac2</span> = <span class="style8">'S'</span>) is significantly greater than the <span class="style8">Ru</span> mean when the diet is detritus (<span class="style8">fac2</span> = <span class="style8">'D'</span>) at &alpha; = .05. Why is this not reflected in the 95% confidence interval shown in Fig. 1?</p>
+<p>You should recall from your elementary statistics course that a one-sample &alpha;-level significance test that tests  whether the true value of a parameter is equal to zero is equivalent to determining if zero is in the (1 &ndash; &alpha;)%-level confidence interval for that parameter. Similarly a test of whether the difference in two means is equal to zero is equivalent to determining if zero is in the (1 &ndash; &alpha;)%-level confidence interval for the mean difference. But determining if the confidence interval of the difference of two means includes zero   is <u>not</u> equivalent to  deciding whether the individual  confidence intervals of the two means overlap. While it is always true that if the  confidence intervals of two parameters do not overlap then the parameters are  significantly different, the converse is not true. It is incorrect to assume that two parameters are not significantly different just because their individual 95% confidence intervals overlap. </p>
+<p> Fig. 2 shows the individual normal-based 95% confidence intervals for two means. ( The notation &quot;<span class="style8">se</span>&quot; in Fig. 2 denotes standard error.)</p>
+<p align="center"><img src="../../images/lectures/lecture5/fig2c.png" width="550" height="120" alt="fgi. 2"></p>
+<p align="center" class="styleArial"><strong>Fig. 2</strong> &nbsp;Non-overlapping 95% normal-based confidence intervals for two means</p>
+<p>In the picture <img src="../../images/lectures/lecture5/xbarinequal.gif" alt="xbar inequality" width="58" height="35" align="absmiddle"> and in general the two confidence intervals will fail to overlap if the lower 95% confidence limit of the larger mean exceeds the upper 95% confidence limit of the smaller mean.</p>
+<table summary="multivariate likelihood and number." class="eq">
+  <tr>
+<td> <p align="center"><img src="../../images/lectures/lecture5/twointervals.gif" width="303" height="115" alt="two intervals"></p> </td>
+<th>(1) </th>
+</tr>
+</table>
+<p>On the other hand, the 95% confidence interval for the difference of two independent means is given by the following expression. (See any elementary statistics text for a derivation.)</p>
+<p align="center"><img src="../../images/lectures/lecture5/diffconfi.gif" width="617" height="65"></p>
+<p>This 95% confidence interval will fail to include zero (and be strictly positive) if the lower limit is positive.</p>
+<table summary="multivariate likelihood and number." class="eq">
+<tr>
+<td> <p align="center"><img src="../../images/lectures/lecture5/diffconfiinequal.gif" width="348" height="105"></p> </td>
+<th>(2) </th>
+</tr>
+</table>
+<p>Observe that the term being multiplied by 1.96 is different in the final lines of eqns (1) and (2). In eqn (1) it is the sum of the standard errors. In eqn (2) it is the square root of the sum of the squares of the standard errors. Because the the sum of two positive numbers always exceeds the square root of the sum of squares of those two numbers, </p>
+<p align="center"><img src="../../images/lectures/lecture5/lemma.gif" width="517" height="52" alt="lemma"></p>
+<p>it follows that</p>
+<p align="center"><img src="../../images/lectures/lecture5/seinequal.gif" width="327" height="53" alt="standard error inequality"></p>
+<p>Therefore if the difference between  two means that are not significantly different is increased (everything else being held constant), the confidence interval for their difference  will stop containing zero   before  the two individual confidence  intervals stop overlapping.</p>
+<h2><a name="difference"></a>Difference-adjusted confidence intervals</h2>
+<p>Because of this lack of equivalence  using individual confidence intervals to carry out a two-sample hypothesis test leads to overly conservative results. We will fail to reject the null hypothesis  too often. The individual 95% confidence intervals can overlap even when a hypothesis test for the difference would conclude that the parameter values are significantly different at &alpha; = .05.  The bottom line is that error bar displays of individual parameter estimates based on 95% confidence intervals cannot reliably be used to assess the statistical significance of  differences between pairs of  parameters. This issue is  well-known  and has been discussed frequently in the applied literature (<a href="lecture5.htm#cumming">Cumming 2009</a>, <a href="lecture5.htm#schenker">Schenker and Gentleman 2001</a>).</p>
+<p>There is a solution to this &quot;problem&quot;. We just need to choose a confidence level for the individual confidence intervals so that a non-overlapping pairs of confidence intervals does indicate statistically significant differences at &alpha; = .05. Finding the value for this confidence level is just a problem in algebra. For independent parameters with roughly the same standard errors, the correct normal-based confidence level is 83.5%  (<a href="lecture5.htm#goldstein">Goldstein and Healy 1995</a>, <a href="lecture5.htm#payton">Payton et al. 2000, 2003</a>). The more general case of possibly correlated parameters has been discussed by <a href="lecture5.htm#afshartous">Afshartous and Preston (2010)</a>. For a derivation of the general result see their paper or see my explanation at the following <a href="https://sakai.unc.edu/access/content/group/2842013b-58f5-4453-aa8d-3e01bacbfc3d/public/Ecol562_Spring2012/docs/lectures/lecture6.htm#theoretical"> web site</a>.</p>
+<p>The psychologist <a href="http://seriousstats.wordpress.com/2012/06/21/confidence-intervals-with-tiers/">Thom Baguley</a> has called these new confidence intervals &quot;difference-adjusted confidence intervals&quot;. He recommends producing diagrams for  parameters that show both their difference-adjusted confidence intervals as well as  95% confidence intervals. He refers to these diagrams as two-tiered displays (<a href="lecture5.htm#Baguley">Baguley 2012a, 2012b</a>). The following function, <span class="style8">ci.func</span>, calculates the difference-adjusted confidence levels needed to make comparisons between a set of possibly correlated means where analysis of variance   was carried out using the <span class="style1">lm</span> function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># function to calculate difference-adjusted confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func &lt;- function(rowvals, lm.model, glm.vmat) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> nor.func1a &lt;- function(alpha, model, sig) 1-pt(-qt(1-alpha/2, model$df.residual) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*%c (1,-1)), model$df.residual) - pt(qt(1-alpha/2, model$df.residual) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*% c(1,-1)), model$df.residual, lower.tail=F)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  nor.func2 &lt;- function(a,model,sigma) nor.func1a(a,model,sigma)-.95</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  n &lt;- length(rowvals)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> xvec1b &lt;- numeric(n*(n-1)/2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  vmat &lt;- glm.vmat[rowvals,rowvals]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  ind &lt;- 1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  for(i in 1:(n-1)) {</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  for(j in (i+1):n){</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  sig &lt;- vmat[c(i,j), c(i,j)]</div>
+<div class="style15" style="padding-left: 120px; text-indent:-30px">  #solve for alpha</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  xvec1b[ind] &lt;- uniroot(function(x) nor.func2(x, lm.model, sig), c(.001,.999))$root</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px"> ind &lt;- ind+1</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  }}</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  1-xvec1b</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>The <span class="style8">ci.func</span> function requires three inputs:</p>
+<ol>
+  <li>The vector 1:<em>n</em> where <em>n</em> is the number of means being compared</li>
+  <li>The name of the <span class="style1">lm</span> object that contains the estimated analysis of variance model.</li>
+  <li>The variance-covariance matrix of the <em>n</em> means being compared</li>
+</ol>
+<p>As an illustration in the analysis of variance problem we've been considering there are twelve means, the final <span class="style1">lm</span> model was called <span class="style8">out2</span>, and we <a href="lecture5.htm#vmat">previously</a> created <span class="style8">vmat</span>, the variance-covariance matrix for the means. The following call to<span class="style8"> ci.func</span> returns the difference-adjusted confidence levels needed for  the 66 different pairwise comparisons between the means.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func(1:12, out2, vmat)</div>
+
+<span class="style24">
+&nbsp;[1] 0.7557282 0.7478099 0.8378421 0.8372399 0.8351857 0.6472930 0.8814099 0.8710937 0.8378421<br>
+[10] 0.8377497 0.8369402 0.7355839 0.8356254 0.8353756 0.8354773 0.8789031 0.7118236 0.8737951<br>
+[19] 0.8356254 0.8355841 0.8352713 0.8376375 0.8370585 0.8351494 0.8809514 0.8880105 0.6763009<br>
+[28] 0.8376375 0.8375484 0.8367716 0.7616431 0.7572021 0.8366178 0.8351460 0.8352397 0.6982728<br>
+[37] 0.8812142 0.8679364 0.7546114 0.8361737 0.8350890 0.8351244 0.8837162 0.6907152 0.8683282<br>
+[46] 0.8351006 0.8363257 0.8360214 0.8879769 0.8859777 0.6415844 0.7851825 0.7996714 0.8366178<br>
+[55] 0.8365483 0.8359619 0.7915143 0.8351460 0.8351328 0.8350908 0.8352397 0.8352180 0.8350942<br>
+[64] 0.7671156 0.7927713 0.7950208</span>
+<p>The above output is a bit daunting. Let's simplify the situation by looking  at only the six means being displayed in the mean profile plot of <a href="lecture5.htm#fig1">Fig. 1</a>. These are the means corresponding to sibship 1 and listed in order are the following.
+</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals2[1:6,]</div>
+<span class="style24"> &nbsp; fac1 fac2 fac3<br>
+1&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+2&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+3&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+4&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+5&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+6&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1</span>
+<p>To obtain the difference-adjusted confidence levels   this time we need just the first six rows and first six columns of <span class="style8">vmat</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func(1:6, out2, vmat[1:6,1:6])</div>
+<span class="style24">&nbsp;[1] 0.7557282 0.7478099 0.8378421 0.8372399 0.8351857 0.7355839 0.8356254 0.8353756 0.8354773<br>
+[10] 0.8376375 0.8370585 0.8351494 0.7616431 0.7572021 0.7546114</span>
+<p>The output displays the 15 possible comparisons of the means taken two at time starting with mean 1 (<span class="style8">CoD1</span>) pitted against means 2, 3, 4 and 5, then mean 2 (<span class="style8">NoD1</span>) pitted against means 3, 4, and 5, etc. Fig. 3 reorganizes the output from <span class="style8">ci.func</span> and displays the confidence levels according to the means that are being compared.
+</p>
+<p align="center"><img src="../../images/lectures/lecture5/fig3.png" width="400" height="340" alt="fig. 3"></p>
+<p align="center" class="styleArial"><strong>Fig. 3&nbsp;</strong>&nbsp;Confidence levels for pairwise mean comparisons</p>
+<p>Notice that the displayed confidence levels fall into two groups, nine values that are close to 0.835 and six values that are close to 0.75. The six values around 0.75 all involve comparisons between treatments that have different hormonal levels (<span class="style8">fac1</span>) but the same  food level (<span class="style8">fac2</span>). In <a href="lecture5.htm#fig1">Fig. 1</a> these are comparisons between means that lie on the same food profile. The nine confidence levels around 0.835 are comparisons between means that lie on  different food profiles. This suggests a way to proceed. We need to add two more confidence bands to Fig. 1 one with confidence level 75% for comparing means within a profile and the second one with confidence level 83.5% for comparing means on different profiles.</p>
+<p>If <span class="style8">CL</span> = 1 &ndash; &alpha; is the confidence level, then &alpha; = 1 &ndash;<span class="style8"> CL</span>. Thus the quantiles for our confidence interval are &alpha;/2 = (1 &ndash;<span class="style8">CL</span>)/2 and 1 &ndash; &alpha;/2 = 1 &ndash; (1 &ndash;<span class="style8">CL</span>)/2.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">low75 &lt;- ests + qt((1-.75)/2,out2$df.residual)*se</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  up75 &lt;- ests + qt(1-(1-.75)/2,out2$df.residual)*se</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  low83 &lt;- ests + qt((1-.835)/2,out2$df.residual)*se</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">up83 &lt;- ests + qt(1-(1-.835)/2,out2$df.residual)*se</div>
+<p><a name="level"></a>Alternatively we can use the <span class="style22">level</span> argument of the <span class="style1">predict</span> function and obtain the confidence intervals from <span class="style1">predict</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals2$fac3 &lt;- factor(fac.vals2$fac3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.75 &lt;- predict(out2, newdata=fac.vals2[1:6,], se.fit=T, interval=&quot;confidence&quot;, level=.75)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.83 &lt;- predict(out2, newdata=fac.vals2[1:6,], se.fit=T, interval=&quot;confidence&quot;, level=.835)</div>
+<p><a name="confidence"></a>Or, we can use the <span class="style22">confidence.level</span> argument of the <span class="style1">effect</span> function in the same way.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(effects)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">effect.75 &lt;- effect('fac1:fac2', out2, given.values=c(fac32=0), confidence.level=0.75)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">effect.83 &lt;- effect('fac1:fac2', out2, given.values=c(fac32=1), confidence.level=0.835)</div>
+
+<p><a name="cbind"></a>I add these confidence limits as new columns in our results matrix. The <span class="style1">cbind</span> function combines data frames and vectors by column to produce a new data frame.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # add new confidence limits to the data frame</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results.mine &lt;- cbind(results.mine, low75, up75, low83, up83)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results.mine</div>
+
+
+  <span class="style24">  &nbsp;&nbsp; fac1 fac2 fac3&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95 fac1.num&nbsp;&nbsp;&nbsp; low75&nbsp;&nbsp;&nbsp;&nbsp; up75&nbsp;&nbsp;&nbsp; low83&nbsp;&nbsp;&nbsp;&nbsp; up83<br>
+  1&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.383238 0.05245374 3.279889 3.486587&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 3.322746 3.443731 3.310177 3.456299<br>
+  2&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.930537 0.04606953 3.839767 4.021307&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;2 3.877407 3.983667 3.866368 3.994706<br>
+  3&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.920225 0.05198867 3.817792 4.022657&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 3.860269 3.980181 3.847812 3.992638<br>
+  4&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.400387 0.04162371 3.318376 3.482398&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 3.352384 3.448389 3.342411 3.458363<br>
+  5&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S &nbsp;&nbsp;&nbsp;1 3.961099 0.04277330 3.876824 4.045375&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 3.911771 4.010428 3.901522 4.020677<br>
+  6&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 4.100877 0.05022518 4.001919 4.199835&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 4.042955 4.158799 4.030920 4.170834<br>
+  7&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 3.490818 0.04941952 3.393447 3.588188&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 3.433825 3.547811 3.421983 3.559652<br>
+  8&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.038116 0.04304455 3.953306 4.122927&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 3.988475 4.087758 3.978161 4.098072<br>
+  9&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.027804 0.04393244 3.941245 4.114364&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 3.977139 4.078469 3.966612 4.088996<br>
+  10&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 3.671196 0.04162371 3.589186 3.753207&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 3.623194 3.719199 3.613220 3.729173<br>
+  11&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.231909 0.04178987 4.149571 4.314247&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 4.183715 4.280103 4.173701 4.290116<br>
+  12&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.371686 0.04341654 4.286143 4.457229&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 4.321616 4.421757 4.311213 4.432160</span> 
+<h2><a name="adding"></a>Adding difference-adjusted confidence intervals to an interaction plot</h2>
+<p><a name="lwd"></a>To add the difference-adjusted confidence intervals to the interaction plot we  use the <span class="style1">segments</span> function in which each new error bar is given a different thickness (using the <span class="style22">lwd=</span> argument) and a different color. I also change some of the original plotting symbols and use different line types for the two mean profiles. Fig. 4 shows the symbol types, numeric colors, and line types that are available in R. In addition to the 8 numeric colors R provides over 600 named colors as well as colors represented by both hexadecimal and RGB notation. To see a full list of the available colors go to <a href="http://research.stowers-institute.org/efg/R/Color/Chart/index.htm">http://research.stowers-institute.org/efg/R/Color/Chart/index.htm</a>.</p>
+<table width="650" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top">(a) &nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture2/symbols.png" width="197" height="186" align="texttop"></td>
+    <td  valign="top">(b)&nbsp;&nbsp;&nbsp; <img src="../../images/lectures/lecture5/colors2.png" alt="colors" width="115" height="187" align="texttop"></td>
+    <td  valign="top">(c) &nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture5/lty.png" alt="lty" width="120" height="187" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="styleArial"><strong>Fig. 4</strong> &nbsp;&nbsp;(a) R plotting characters, pch =, (b) numeric color codes, col =, and (c) line types, lty =.</td>
+  </tr>
+</table>
+<p>The modified interaction plot code is shown below. Text highlighted in <span class="style40">blue</span> indicates additions or modifications to the code that was used to produce Fig. 1.</p>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  par(lend=1)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(c(.8,3.2), range(results.mine[<span class="style40">results.mine$fac3==1</span>, c(&quot;up95&quot;, &quot;low95&quot;)]), type='n', xlab=&quot;Hormonal treatment&quot;, ylab='Mean mitotic activity', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  axis(1, at=1:3, labels=levels(results.mine$fac1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  axis(2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  box()</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  results.mine.sub1 &lt;- results.mine[results.mine$fac3==1,]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #first food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='D',]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #amount of shift</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- -.05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=2)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#difference-adjusted confidence intervals</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  segments(cur.dat$fac1.num+myjitter, cur.dat$low83, cur.dat$fac1.num+myjitter, cur.dat$up83, col='red4', lwd=5)</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  segments(cur.dat$fac1.num+myjitter, cur.dat$low75, cur.dat$fac1.num+myjitter, cur.dat$up75, col='lightpink3', lwd=8)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2)</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=15, cex=1.2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2, <span class="style40">pch=22</span>, cex=1.2)</div><br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #second food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='S',]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  myjitter &lt;- .05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=4)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#difference-adjusted confidence intervals</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px"> segments(cur.dat$fac1.num+myjitter, cur.dat$low83, cur.dat$fac1.num+myjitter, cur.dat$up83, col='dodgerblue4', lwd=5)</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  segments(cur.dat$fac1.num+myjitter, cur.dat$low75, cur.dat$fac1.num+myjitter, cur.dat$up75, col='lightblue', lwd=8)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  lines(cur.dat$fac1.num+myjitter, cur.dat$ests, <span class="style40">col=4, lty=2</span>)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=16, cex=1.2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, <span class="style40">col=4</span>, pch=1, cex=1.2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  mtext(side=3, line=.5, 'Sibship 1', cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  legend('topleft',c('Detritus','Shrimp'), <span class="style40">col=c(2,4), pch=c(22,1)</span>, cex=.9, pt.cex=1, <span class="style40">lty=c(1,2),</span> title=expression(bold('Food Type')), bty='n')</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # add grid lines to graph</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  abline(h=seq(3.3,4.5,.05), col='grey70', lty=3)</div>
+<p><a name="seq"></a>The last line  adds a system of horizontal grid lines to facilitate comparing  the different error bars from different means. The <span class="style1">seq</span> function generates a vector of values at a specified distance apart. Thus <span class="style10">seq(3.3, 4.5, .05)</span> creates a vector of values that start at 3.3, end at 4.5, and that are .05 units apart.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # the seq function generates a vector of equally spaced values</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> seq(3.3,4.5,.05)</div>
+<span class="style24">&nbsp;[1] 3.30 3.35 3.40 3.45 3.50 3.55 3.60 3.65 3.70 3.75 3.80 3.85 3.90 3.95 4.00 4.05 4.10<br>
+[18] 4.15 4.20 4.25 4.30 4.35 4.40 4.45 4.50</span>
+<p>Fig. 5 shows the plot.</p>
+<p align="center"><img src="../../images/lectures/lecture5/fig5.png" width="490" height="450" alt="fig. 5"></p>
+<p align="center" class="styleArial"><strong>Fig. 5&nbsp;</strong>&nbsp;Mean profile plot with 75% and 83.5% difference-adjusted confidence intervals</p>
+<p>The thickest, shortest bars (75% intervals) are for comparing means on the same profile while the middle-length skinnier bars (83% intervals) are for  comparing means on different profiles. If we compare the means on the red (<span class="style8">Detritus</span>) profile it's clear that we will reach the same conclusions regardless of which of the two intervals we use. This is also true for the blue (<span class="style8">Shrimp</span>) profile. The only close call is in comparing <span class="style8">'No'</span> versus <span class="style8">'Ru'</span> on the same profile but even here neither the 73% nor  the 83.5% intervals overlap. When we compare  means on different profiles we are supposed to use the longer 83.5% intervals, but again it doesn't matter. Even when comparing the two <span class="style8">'Ru'</span>  means we see that although the 95% intervals overlap, neither the 83.5% nor the 73% intervals do.</p>
+<p>The bottom line is that in Fig. 5 we don't really need all three intervals to draw correct inferences. We can just display one of the 75% and 83.5% intervals of our choosing. (Remember this is just a graphical attempt to summarize the results of the experiment. The 75% and 83.5% intervals have no intrinsic interest beyond this.) Fig. 6 repeats the display of Fig. 5 but this time only shows 95% and 83.5% confidence intervals.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># add difference-adjusted cis to the graph</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  par(lend=1)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(c(.8,3.2), range(results.mine[<span class="style40">results.mine$fac3==1</span>, c(&quot;up95&quot;, &quot;low95&quot;)]), type='n', xlab=&quot;Hormonal treatment&quot;, ylab='Mean mitotic activity', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  axis(1, at=1:3, labels=levels(results.mine$fac1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  axis(2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  box()</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  results.mine.sub1 &lt;- results.mine[results.mine$fac3==1,]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #first food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='D',]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #amount of shift</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- -.05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=2)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#difference-adjusted confidence intervals</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  segments(cur.dat$fac1.num+myjitter, cur.dat$low83, cur.dat$fac1.num+myjitter, cur.dat$up83, col='red4', lwd=5)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2)</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=15, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2, <span class="style40">pch=22</span>, cex=1.1)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #second food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='S',]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  myjitter &lt;- .05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=4)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#difference-adjusted confidence intervals</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px"> segments(cur.dat$fac1.num+myjitter, cur.dat$low83, cur.dat$fac1.num+myjitter, cur.dat$up83, col='dodgerblue4', lwd=5)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  lines(cur.dat$fac1.num+myjitter, cur.dat$ests, <span class="style40">col=4, lty=2</span>)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=16, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, <span class="style40">col=4</span>, pch=1, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  mtext(side=3, line=.5, 'Sibship 1', cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  legend('topleft',c('Detritus','Shrimp'), <span class="style40">col=c(2,4), pch=c(22,1)</span>, cex=.9, pt.cex=1, <span class="style40">lty=c(1,2),</span> title=expression(bold('Food Type')), bty='n')</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # add grid lines to graph</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  abline(h=seq(3.3,4.5,.05), col='grey70', lty=3)</div>
+<p align="center"><img src="../../images/lectures/lecture5/fig6.png" width="490" height="450" alt="fig. 5"></p>
+<p align="center" class="styleArial"><strong>Fig. 6&nbsp;</strong>&nbsp;Mean profile plot with only 83.5% difference-adjusted confidence intervals</p>
+<h3><a name="sibship2"></a>The interaction plot for sibship 2</h3>
+<p>Turning to sibship 2, its means occupy positions 7 through 12 of the results matrix. Once  again there are six means but this time we need to extract the entries from rows 7 through 12 and columns 7 through 12 of the variance-covariance matrix.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # confidence levels for the second set of means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func(1:6, out2, vmat[7:12,7:12])</div>
+<span class="style24">  &nbsp;[1] 0.7851825 0.7996714 0.8366178 0.8365483 0.8359619 0.7915143 0.8351460 0.8351328<br>
+&nbsp;[9] 0.8350908 0.8352397 0.8352180 0.8350942 0.7671156 0.7927713 0.7950208</span>
+<p>The pattern is similar to what we saw for sibship 1, two sets of confidence levels that vary depending upon whether the comparison is between means on the same  mean profile (confidence level 0.77 to 0.80) or between means on different profiles (confidence level 0.835). If you examine Fig. 9 from <a href="lecture4.htm#fig2">lecture 4</a>, the interaction plot for sibship 2, you  will see that none of  95% confidence intervals overlap for any of the comparisons of means on different mean profiles. If the 95% intervals fail to overlap, then the 83.5% intervals (being shorter) will also fail to overlap. Thus we need only consider the confidence levels for the within profile comparisons. The code below plots 79% difference-adjusted confidence intervals for the sibship 2 means.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> low79 &lt;- ests + qt((1-.79)/2,out2$df.residual)*se</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">
+   up79 &lt;- ests + qt(1-(1-.79)/2,out2$df.residual)*se</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">results.mine &lt;- cbind(results.mine,low79,up79)</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"># add difference-adjusted cis to the graph</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  par(lend=1)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(c(.8,3.2), range(results.mine[<span class="style40">results.mine$fac3==2</span>, c(&quot;up95&quot;, &quot;low95&quot;)]), type='n', xlab=&quot;Hormonal treatment&quot;, ylab='Mean mitotic activity', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  axis(1, at=1:3, labels=levels(results.mine$fac1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  axis(2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  box()</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  results.mine.sub1 &lt;- results.mine[<span class="style40">results.mine$fac3==2</span>,]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #first food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='D',]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #amount of shift</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- -.05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=2)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#difference-adjusted confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  segments(cur.dat$fac1.num+myjitter, <span class="style40">cur.dat$low79</span>, cur.dat$fac1.num+myjitter, <span class="style40">cur.dat$up79</span>, col='red4', lwd=5)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=15, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2, pch=22, cex=1.1)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  #second food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='S',]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  myjitter &lt;- .05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=4)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#difference-adjusted confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> segments(cur.dat$fac1.num+myjitter, <span class="style40">cur.dat$low79</span>, cur.dat$fac1.num+myjitter, <span class="style40">cur.dat$up79</span>, col='dodgerblue4', lwd=5)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=4, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=16, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=4, pch=1, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  mtext(side=3, line=.5, <span class="style40">'Sibship 2'</span>, cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  legend('topleft',c('Detritus','Shrimp'), col=c(2,4), pch=c(22,1), cex=.9, pt.cex=1, lty=c(1,2), title=expression(bold('Food Type')), bty='n')</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # add grid lines to graph</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  abline(h=seq(3.4,4.5,.05), col='grey70', lty=3)</div>
+<p align="center"><img src="../../images/lectures/lecture5/fig7.png" width="490" height="450" alt="fig. 5"></p>
+<p align="center" class="styleArial"><strong>Fig. 7&nbsp;</strong>&nbsp;Mean profile plot with  79% difference-adjusted and 95% confidence intervals for sibship 2</p>
+<p>This time we see that all the treatments are significantly different from each other except hormonal treatments <span class="style8">'No'</span> and <span class="style8">'Ru'</span> when the food is &quot;<span class="style8">Detritus</span>&quot;. The difference-adjusted intervals are needed for comparing hormonal treatments <span class="style8">'No'</span> and <span class="style8">'Ru'</span> on the shrimp profile and technically these same treatments  on the detritus profile.</p>
+<h2><a name="dynamite"></a>Dynamite plots</h2>
+<p>In the   ecological and biological literature whenever analysis of variance is the primary mode of analysis one typically sees another kind of graphical summary different from what we've discussed so far: the dreaded dynamite plot. Typically dynamite plots are constructed to summarize a post hoc analysis in which, having carried out an analysis of variance, it was felt necessary to then make all possible pairwise comparisons of treatment means. A dynamite plot is just a bar plot (the blasting box) in which the heights of the bars represent the means and typically an error bar is shown sticking out of the top of each bar (the plunger of the blasting box). The plunger is usually chosen to represent one standard error of the mean. Labels are often place on the error bars to identify the treatments that are not significantly different from each other. The term &quot;dynamite plot&quot; stems from the graphic's resemblance to a blasting box and from the fact that by choosing to summarize your work with such a graphic  you've exploded your credibility as a serious scientist. For some of the criticisms of dynamite plots see  <a href="lecture5.htm#magnusson">Magnusson 2000</a> or pp. 7&ndash;11 of <a href="lecture5.htm#donahue">Donahue 2010</a>.</p>
+<p><a name="pairwise"></a> I illustrate constructing a dynamite plot from scratch but without too much commentary about the code. I start with a function I found on the web. It takes the output from the function <span class="style1">pairwise.t.test</span>, which produces a set of <em>p</em>-values for all pairwise comparisons between a group of means, and generates a matrix of zeros (not different) and ones (different) from this. It then arranges the results in increasing mean order. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">p.table = function(x, g, p.adjust.method = &quot;none&quot;, ..., level = 0.05) { </div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">## fill out p-value table </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">p = pairwise.t.test(x, g, p.adjust.method, ...)$p.value </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">p[is.na(p)] = 0 </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">p = rbind(0, cbind(p, 0)) </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">p = p + t(p) </div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">## 0 = no difference, 1 = difference </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">p = 1 * (p &lt;= level) </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">diag(p) = 0 </div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">## get means and find their order </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">m = tapply(x, g, mean) </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">o = order(m) </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">p = p[o, o] </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">dimnames(p) = list(names(m[o]), names(m[o])) </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">cbind(mean = m[o], p) </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>The function fails to sort the means correctly if there are any missing values for the response so we need to remove the missing values from the tadpoles data frame first.</p>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # remove missing values first</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  tadpoles2 &lt;- tadpoles[!is.na(tadpoles$response),]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.ptable &lt;- p.table(tadpoles2$response, tadpoles2$treatment)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.ptable </div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean CoS1 CoD1 CoD2 CoS2 NoD1 RuD1 NoS1 RuD2 NoD2 RuS1 NoS2 RuS2<br>
+CoS1 3.366042&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+CoD1 3.398462&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+CoD2 3.479176&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+CoS2 3.705542&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+NoD1 3.910263&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp; &nbsp;&nbsp;</span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+RuD1 3.935833&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+NoS1 3.973682&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+RuD2 4.020000&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;1<br>
+NoD2 4.054167&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+RuS1 4.146500&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+NoS2 4.220375&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+RuS2 4.348875&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style395">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0</span>
+<p>The zeros indicate means that are not significantly different; the ones indicate pairs of means that are significantly different. By default no correction has been made for multiple testing. (Recall that each time a test is conducted at &alpha; = .05 there is a 5% chance of rejecting the null hypothesis when in fact the null hypothesis is true. The more tests you carry out the more likely it is that you will declare a chance result to be statistically significant.)</p>
+<p>The next steps could be automated but I'll just do them by hand. Locate the first zero in each row (highlighted in the output above) and assign it a letter. First zeros in a row that occupy  the same column should be assigned the same letter. Each time you have to jump to the right to a new column to find the first zero in a row, choose a different letter.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.ptable[,2:ncol(out.ptable)]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; CoS1 CoD1 CoD2 CoS2 NoD1 RuD1 NoS1 RuD2 NoD2 RuS1 NoS2 RuS2<br>
+CoS1&nbsp;&nbsp;&nbsp; </span><span class="style26">a</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  CoD1&nbsp;&nbsp;&nbsp; </span><span class="style26">a</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  CoD2&nbsp;&nbsp;&nbsp; </span><span class="style26">a</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  CoS2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">b</span><span class="style24">&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  NoD1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  RuD1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  NoS1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  RuD2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  NoD2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  RuS1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">d</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  NoS2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">e</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+RuS2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">f</span><span class="style24">&nbsp;&nbsp;&nbsp; 0</span>
+  <p>Highlight the diagonal elements of the matrix only in those columns in which a letter also appears somewhere.</p>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; CoS1 CoD1 CoD2 CoS2 NoD1 RuD1 NoS1 RuD2 NoD2 RuS1 NoS2 RuS2<br>
+CoS1&nbsp;&nbsp;&nbsp; </span><span class="style27">a</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  CoD1&nbsp;&nbsp;&nbsp; </span><span class="style26">a</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  CoD2&nbsp;&nbsp;&nbsp; </span><span class="style26">a</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  CoS2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style27">b</span><span class="style24">&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  NoD1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style27">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  RuD1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  NoS1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; </span><span class="style27">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  RuD2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  NoD2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  RuS1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">d</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; </span><span class="style27">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  NoS2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">e</span><span class="style24">&nbsp;&nbsp;&nbsp; </span><span class="style27">0</span><span class="style24">&nbsp;&nbsp;&nbsp; 0<br>
+RuS2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">f</span><span class="style24">&nbsp;&nbsp;&nbsp; 0</span>
+  <p>If  the highlighted entry is a zero assign it the letter that appears in that column. Fill in that same letter for any zeros that occur below the highlighted entry.</p><span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; CoS1 CoD1 CoD2 CoS2 NoD1 RuD1 NoS1 RuD2 NoD2 RuS1 NoS2 RuS2<br>
+CoS1&nbsp;&nbsp;&nbsp; </span><span class="style27">a</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  CoD1&nbsp;&nbsp;&nbsp; </span><span class="style26">a</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  CoD2&nbsp;&nbsp;&nbsp; </span><span class="style26">a</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  CoS2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style27">b</span><span class="style24">&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  NoD1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style27">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  RuD1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  NoS1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; </span><span class="style27">d</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  RuD2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; </span><span class="style26">d</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  NoD2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">c</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; </span><span class="style26">d</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  RuS1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">d</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; </span><span class="style27">e</span><span class="style24">&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  NoS2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">e</span><span class="style24">&nbsp;&nbsp;&nbsp; </span><span class="style27">f</span><span class="style24">&nbsp;&nbsp;&nbsp; 0<br>
+RuS2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; </span><span class="style26">f</span><span class="style24">&nbsp;&nbsp;&nbsp; 0</span>
+<p>Finally record all the letters that appear in each row of the matrix and assemble the results as a single vector with one entry per row. Means that share a common letter are not significantly different from each other (at &alpha; = .05 but after having conducted 66 tests).</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #classify means into groups based on pairwise diffs table</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> diffs &lt;- c('a', 'a', 'a', 'b', 'c', 'c', 'cd', 'cd', 'cd', 'de', 'ef', 'f')</div>
+<p>Next we need to obtain the means and the standard errors of the means for each of the treatments. We could calculate treatment means and standard errors directly using one of the three methods described in <a href="lecture4.htm#obtaining">lecture 4</a> but it's also possible to trick the <span class="style1">lm</span> function to return these values for us. I illustrate the trick here. If we fit the ordinary regression model with the factor variable <span class="style8">treatment</span> as a predictor we obtain the following.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out0 &lt;- lm(response ~ treatment, data=tadpoles2)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out0)</div>
+<span class="style24">  &nbsp; (Intercept) treatmentCoD2 treatmentCoS1 treatmentCoS2 treatmentNoD1 treatmentNoD2 treatmentNoS1 <br>
+  &nbsp;&nbsp; 3.39846153&nbsp;&nbsp;&nbsp; 0.08071494&nbsp;&nbsp; -0.03241986&nbsp;&nbsp;&nbsp; 0.30708014&nbsp;&nbsp;&nbsp; 0.51180160&nbsp;&nbsp;&nbsp; 0.65570514&nbsp;&nbsp;&nbsp; 0.57522029 <br>
+  treatmentNoS2 treatmentRuD1 treatmentRuD2 treatmentRuS1 treatmentRuS2 <br>
+&nbsp;&nbsp; 0.82191347&nbsp;&nbsp;&nbsp; 0.53737180&nbsp;&nbsp;&nbsp; 0.62153847&nbsp;&nbsp;&nbsp; 0.74803846&nbsp;&nbsp;&nbsp; 0.95041347</span>
+<p>As we've seen the intercept represents the mean of the reference group treatment, <span class="style8">CoD1</span>, and the others are  effect estimates for the remaining treatments&mdash;deviations from the reference group. If  we fit  the following model instead we obtain the individual treatment means.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out0a &lt;- lm(response ~ treatment-1, data=tadpoles2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">coef(out0a)</div>
+<span class="style24"> treatmentCoD1 treatmentCoD2 treatmentCoS1 treatmentCoS2 treatmentNoD1 treatmentNoD2 treatmentNoS1 <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 3.398462&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.479176&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.366042&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.705542&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.910263&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.054167&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.973682 <br>
+  treatmentNoS2 treatmentRuD1 treatmentRuD2 treatmentRuS1 treatmentRuS2 <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 4.220375&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.935833&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.020000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.146500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.348875</span>
+<p> The notation <span class="style10">~ treatment-1</span> removes the intercept from the model which causes R to return an estimate for each of the 12 treatment levels rather than an estimate for the intercept plus eleven effect estimates. Note: we can obtain the same 12 treatment means by fitting a  model with a three-factor interaction but without any of the two-factor interactions, main effects, or an intercept. The displayed order is slightly different.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out0b &lt;- lm(response ~ fac1:fac2:fac3-1, data=tadpoles2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out0b)</div>
+<span class="style24">  fac1Co:fac2D:fac31 fac1No:fac2D:fac31 fac1Ru:fac2D:fac31 fac1Co:fac2S:fac31 fac1No:fac2S:fac31 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.398462&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.910263&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.935833&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.366042&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.973682 <br>
+  fac1Ru:fac2S:fac31 fac1Co:fac2D:fac32 fac1No:fac2D:fac32 fac1Ru:fac2D:fac32 fac1Co:fac2S:fac32 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.146500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.479176&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.054167&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.020000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.705542 <br>
+  fac1No:fac2S:fac32 fac1Ru:fac2S:fac32 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.220375&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.348875</span>
+
+<p>The standard errors of the means are contained in the summary table.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> se.mean &lt;- summary(out0a)$coefficients[,2]</div>
+<p><a name="sort"></a>In the  standard dynamite display the means are sorted  in increasing order, just like they were ordered in the pairwise comparison table output above. For that we can use the <span class="style1">sort</span> function. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> my.means &lt;- sort(coef(out0a))</div>
+
+<p><a name="order"></a>We  need the standard errors sorted in the same order. For that we can use the <span class="style1">order</span> function. The <span class="style1">order</span> function returns the numeric position of the elements of a vector that when used as indices would sort the elements in increasing order.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> order(coef(out0a))</div>
+<span class="style24">&nbsp;[1]&nbsp; 3&nbsp; 1&nbsp; 2&nbsp; 4&nbsp; 5&nbsp; 9&nbsp; 7 10&nbsp; 6 11&nbsp; 8 12</span>
+<p>We then use this vector as the set of indices in the standard error vector to sort the elements in mean sorted order.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # sort std errs in same order as the means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> se.mean.sort &lt;- se.mean[order(coef(out0a))]</div>
+<p><a name="barplot"></a>I use the <span class="style1">barplot</span> function of R to create the display. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dat1 &lt;- my.means-3</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # create bar plot and save coordinates of bars</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">bp &lt;- barplot(dat1, axes=F, ylim=c(0,1.6), names.arg=substr(names(my.means), 10, nchar(names(my.means))), cex.names=0.8, ylab='Mean mitotic activity', xlab='Treatment')</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # add correct labels on y-axis (because of rescaling)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> axis(2, at=seq(0,1.4,.2), labels=seq(0,1.4,.2)+3)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # add handles to dynamite plot</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> arrows(x0=bp, y0=dat1, x1=bp, y1=dat1+se.mean.sort, angle=90, length=0.1)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # add labels to the handles</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> text(bp, dat1+se.mean.sort, diffs, pos=3, cex=.9)</div>
+<ol>
+  <li>First I subtract 3 from the means and place the origin of the graph at <em>y</em> = 3. Because of the scale of the graph if I don't do this  the standard errors are barely visible.</li>
+  <li>I assign the output of <span class="style1">barplot</span> to an object. The <span class="style1">barplot</span> object contains the <em>x</em>-coordinates of the center of the bars, which we'll need for plotting the plungers of the blasting boxes.</li>
+  <li>I use <span class="style22">axes=F</span> to suppress the <em>y</em>-axis labels on the tick marks. Otherwise R would display the rescaled mean values rather than the original values.</li>
+  <li><a name="namesarg"></a>The argument <span class="style22">names.arg</span> in <span class="style1">barplot</span> specifies labels for the bars. The names of the treatments are contained in the names used for the elements of the <span class="style8">my.means</span> vector.</li>
+</ol>
+  <blockquote>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">
+
+   names(my.means)
+
+</div>
+
+  <span class="style24">&nbsp;[1] &quot;treatmentCoS1&quot; &quot;treatmentCoD1&quot; &quot;treatmentCoD2&quot; &quot;treatmentCoS2&quot; &quot;treatmentNoD1&quot; &quot;treatmentRuD1&quot;<br>
+    &nbsp;[7] &quot;treatmentNoS1&quot; &quot;treatmentRuD2&quot; &quot;treatmentNoD2&quot; &quot;treatmentRuS1&quot; &quot;treatmentNoS2&quot; &quot;treatmentRuS2&quot;</span>
+ </blockquote> <blockquote>
+  <p><a name="substr"></a><a name="nchar"></a>I use the <span class="style1">substr</span> function to extract just that portion of the name that corresponds to the treatment. The call <span class="style10">substr(x,m,n)</span> extracts the characters in <em>x</em> starting at position <em>m</em> and ending at position <em>n</em>. Because each name begins with the string &quot;treatment&quot;  the actual treatment name starts at character position 10 and then extends to the end of the character string which is position 13. So, <span class="style10">substr(names(my.means), 10, 13)</span> would select these values. In general though the names could have varying lengths. A more flexible approach is to use the <span class="style1">nchar</span> function to count the number of characters in each text string.</p>
+</blockquote>
+<blockquote>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px">
+   
+     nchar(names(my.means))
+  
+ </div>
+ 
+   <span class="style24">&nbsp;[1] 13 13 13 13 13 13 13 13 13 13 13 13</span>
+   
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px">
+
+     substr(names(my.means), 10, nchar(names(my.means)))
+
+</div>
+
+   <span class="style24">&nbsp;[1] &quot;CoS1&quot; &quot;CoD1&quot; &quot;CoD2&quot; &quot;CoS2&quot; &quot;NoD1&quot; &quot;RuD1&quot; &quot;NoS1&quot; &quot;RuD2&quot; &quot;NoD2&quot; &quot;RuS1&quot; &quot;NoS2&quot; &quot;RuS2&quot;</span>
+
+</blockquote>
+<ol start="5">
+  <li>I use <span class="style1">axis</span> to add the correct numeric labels, the plotted values + 3, to the <em>y</em>-axis.</li>
+  <li>The <span class="style1">arrows</span> function by default puts an arrow only on one end. I start the arrow at the top of the bar and extend it out a distance equal to the standard error.</li>
+  <li><a name="text"></a>I use the <span class="style1">text</span> function to place the group assignment of each mean  at the end of the error bar. The first two arguments to <span class="style1">text</span> are the coordinates of the text and the third argument is the text value itself. The argument <span class="style22">pos</span> takes values 1, 2, 3, and 4. These correspond to a position below, left, above, and to the right of the specified coordinates.</li>
+</ol>
+<p align="center"><img src="../../images/lectures/lecture5/fig8.png" width="510" height="270" alt="fig. 8"></p>
+<p align="center" class="styleArial"><strong>Fig. 8&nbsp;</strong>&nbsp;Dynamite plot for the tadpole experiment</p>
+<p>The major criticism of the dynamite plot as a graph is that it is lame. Why bother with the bars? Why not just  plot a point at the bar end rather than the whole bar? The bar itself obscures the lower end of the error bar (sometimes both ends of the plunger are shown in a dynamite plot) making it difficult to compare the means. What purpose are the error bars  supposed to serve? They can't be used to compare means directly because for that we would need to multiply them by an appropriate constant. Furthermore we've already told the reader which means are different from the rest by including group labels at the top of the bars.</p>
+<p>I find it  instructive to compare Fig. 8 with Figs. 6 and 7. Figs. 6 and 7 contain all the information contained in Fig. 8 (the difference-adjusted confidence intervals allow one to carry out any pairwise comparison of interest) but the organization is much more informative. Not only do we see which means differ but we also see  how the factors that comprise the treatments  directly and together affect the mean response.</p>
+<h2><a name="cited"></a>Cited references</h2>
+<ul>
+  <li><a name="afshartous"></a>Afshartous, D. and R. A. Preston. 2010. Confidence intervals for dependent data: Equating non-overlap with statistical significance. <em>Computational Statistics and Data Analysis</em> <strong>54</strong>: 2296&ndash;2305.</li>
+  <li><a name="Baguley"></a>Baguley, T. 2012a. Calculating and graphing within-subject confidence intervals for ANOVA. <em>Behavior Research Methods</em>  <strong>44</strong>: 158&ndash;175.</li>
+  <li>Baguley, T. 2012b. <em>Serious stats: A guide to advanced statistics for the behavioral sciences</em>. Basingstoke: Palgrave.</li>
+  <li><a name="cumming"></a>Cumming, G. 2009. Inference by eye: Reading the overlap of independent confidence intervals. <em>Statistics in Medicine</em> <strong>28</strong>: 205&ndash;220.</li>
+  <li><a name="donahue"></a>Donahue, R. M. J. 2010. Fundamental Statistics Concepts in Presenting Data: Principles for Constructing Better Graphics. Version 1.6 <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf</a></li>
+  <li><a name="goldstein"></a>Goldstein, H. and Healy, M. 1995. The graphical presentation of a collection of means. <em>Journal of the Royal Statistical Society, Series A</em> <strong>159</strong>: 175&ndash;177.</li>
+  <li><a name="magnusson"></a>Magnusson, W. E. 2000. Error bars: are they the king's clothes? <em>Bulletin of the Ecological Society of America</em> <strong>81</strong>: 147&ndash;150. <a href="http://www.esajournals.org/doi/pdf/10.1890/0012-9623(2000)081[147%3AC]2.0.CO;2">http://www.esajournals.org/doi/pdf/10.1890/0012-9623%282000%29081%5B147%3AC%5D2.0.CO%3B2</a></li>
+  <li><a name="payton"></a>Payton M. E., Miller, A. E. , and Raun, W. R. 2000. Testing statistical hypotheses using standard error bars and confidence intervals. <em>Communications in Soil Science and Plant Analysis</em> <strong>31</strong>: 547&ndash;552.</li>
+  <li> Payton, M. E., Greenstone, M. H., and Schenker N. 2003. Overlapping confidence intervals or standard error intervals: What do they mean in terms of statistical significance? 6pp. <em>Journal of Insect Science</em> <strong>3</strong>: 34.</li>
+  <li><a name="schenker"></a>Schenker, N. and J. F. Gentleman. 2001. On judging the significance of differences by examining overlap between confidence intervals. <em>The American Statistician</em>. <strong>55</strong>: 182&ndash;186.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture5&#32;Rcode.html">here</a>. Additional R code that was used to produce some of the figures in this document appears <a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/notes/lecture5alt&#32;Rcode.txt">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 16, 2012<br>
+      URL: <a href="lecture5.htm#lecture5" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture5.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

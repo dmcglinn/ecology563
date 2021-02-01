@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>R code for lecture 6</title>
+</head>
+
+<body>
+
+<h2 align="center">R Code for Lecture 6 (Wednesday, September 12, 2012)</h2>
+<div style="overflow:auto;"><div class="geshifilter">
+  <pre class="r geshifilter-R" style="font-family:monospace;">plants <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/read.table"><span style="color: #003399; font-weight: bold;">read.table</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;ecol 563/jimsonweed.txt&quot;</span><span style="color: #339933;">,</span> header=T<span style="color: #339933;">,</span> sep=<span style="color: #0000ff;">'<span style="color: #000099; font-weight: bold;">\t</span>'</span><span style="color: #009900;">&#41;</span>
+plants<span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">12</span><span style="color: #339933;">,</span><span style="color: #009900;">&#93;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># display layout of experiment</span>
+<a href="http://inside-r.org/r-doc/base/library"><span style="color: #003399; font-weight: bold;">library</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/lattice"><span style="">lattice</span></a><span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/lattice/dotplot"><span style="color: #003399; font-weight: bold;">dotplot</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/r-doc/base/factor"><span style="color: #003399; font-weight: bold;">factor</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/POT"><span style="">pot</span></a><span style="color: #009900;">&#41;</span><span style="">~</span>lw.rat<span style="color: #339933;">,</span> groups=type<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=plants<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/lattice/dotplot"><span style="color: #003399; font-weight: bold;">dotplot</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/r-doc/base/factor"><span style="color: #003399; font-weight: bold;">factor</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/POT"><span style="">pot</span></a><span style="color: #009900;">&#41;</span><span style="">~</span>lw.rat<span style="color: #339933;">,</span> groups=type<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=plants<span style="color: #339933;">,</span> auto.key=T<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># fit randomized block design</span>
+mod1 <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/lm"><span style="color: #003399; font-weight: bold;">lm</span></a><span style="color: #009900;">&#40;</span>lw.rat<span style="">~</span><a href="http://inside-r.org/r-doc/base/factor"><span style="color: #003399; font-weight: bold;">factor</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/POT"><span style="">pot</span></a><span style="color: #009900;">&#41;</span><span style="">+</span>type<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=plants<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>mod1<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/base/summary"><span style="color: #003399; font-weight: bold;">summary</span></a><span style="color: #009900;">&#40;</span>mod1<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># Model ignoring blocks: compare MSE</span> to blocks model
+mod0 <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/lm"><span style="color: #003399; font-weight: bold;">lm</span></a><span style="color: #009900;">&#40;</span>lw.rat<span style="">~</span>type<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=plants<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/base/summary"><span style="color: #003399; font-weight: bold;">summary</span></a><span style="color: #009900;">&#40;</span>mod0<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># test for a treatment by block interaction</span>
+mod2 <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/lm"><span style="color: #003399; font-weight: bold;">lm</span></a><span style="color: #009900;">&#40;</span>lw.rat<span style="">~</span><a href="http://inside-r.org/r-doc/base/factor"><span style="color: #003399; font-weight: bold;">factor</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/POT"><span style="">pot</span></a><span style="color: #009900;">&#41;</span><span style="">*</span>type<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=plants<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>mod2<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># to predict the mean treatment we also need to know the block</span>
+<a href="http://inside-r.org/r-doc/stats/predict"><span style="color: #003399; font-weight: bold;">predict</span></a><span style="color: #009900;">&#40;</span>mod1<span style="color: #339933;">, </span>newdata=<a href="http://inside-r.org/r-doc/base/data.frame"><span style="color: #003399; font-weight: bold;">data.frame</span></a><span style="color: #009900;">&#40;</span>type=<a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'G'</span><span style="color: #339933;">,</span><span style="color: #0000ff;">'N'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># generate all unique combinations of pot and type</span>
+<span style="color: #666666; font-style: italic;"># type comes first to match the order of the data in data set</span>
+newdata<span style=""> &lt;- </span><a href="http://inside-r.org/r-doc/base/expand.grid"><span style="color: #003399; font-weight: bold;">expand.grid</span></a><span style="color: #009900;">&#40;</span>type=<a href="http://inside-r.org/r-doc/base/levels"><span style="color: #003399; font-weight: bold;">levels</span></a><span style="color: #009900;">&#40;</span>plants<span style="">$</span>type<span style="color: #009900;">&#41;</span><span style="color: #339933;">, </span><a href="http://inside-r.org/packages/cran/POT"><span style="">pot</span></a>=<a href="http://inside-r.org/r-doc/base/unique"><span style="color: #003399; font-weight: bold;">unique</span></a><span style="color: #009900;">&#40;</span>plants<span style="">$</span>pot<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;
+</span>out.p &lt;- <a href="http://inside-r.org/r-doc/stats/predict"><span style="color: #003399; font-weight: bold;">predict</span></a><span style="color: #009900;">&#40;</span>mod1<span style="color: #339933;">, </span>newdata=newdata<span style="color: #009900;">&#41;</span><span style=""></span>
+out.p
+<a href="http://inside-r.org/r-doc/base/cbind"><span style="color: #003399; font-weight: bold;">cbind</span></a><span style="color: #009900;">&#40;</span>newdata<span style="color: #339933;">, </span>out.p<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># treat blocks as random: using nlme package</span>
+<a href="http://inside-r.org/r-doc/base/library"><span style="color: #003399; font-weight: bold;">library</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/r-doc/nlme/nlme"><span style="color: #003399; font-weight: bold;">nlme</span></a><span style="color: #009900;">&#41;</span>
+mod2.lme <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/nlme/lme"><span style="color: #003399; font-weight: bold;">lme</span></a><span style="color: #009900;">&#40;</span>lw.rat<span style="">~</span>type<span style="color: #339933;">,</span> <a href="http://inside-r.org/packages/cran/random"><span style="">random</span></a>=<span style="">~</span><span style="color: #cc66cc;">1</span><span style="">|</span>pot<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=plants<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># compare random blocks with fixed blocks model</span>
+<a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>mod1<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>mod2.lme<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/base/summary"><span style="color: #003399; font-weight: bold;">summary</span></a><span style="color: #009900;">&#40;</span>mod2.lme<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/coef"><span style="color: #003399; font-weight: bold;">coef</span></a><span style="color: #009900;">&#40;</span>mod1<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># extract fixed effects estimates with fixef</span>
+<a href="http://inside-r.org/r-doc/nlme/fixef"><span style="color: #003399; font-weight: bold;">fixef</span></a><span style="color: #009900;">&#40;</span>mod2.lme<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># extract random effects predictions with ranef</span>
+<a href="http://inside-r.org/r-doc/nlme/ranef"><span style="color: #003399; font-weight: bold;">ranef</span></a><span style="color: #009900;">&#40;</span>mod2.lme<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># coef combines random effects and fixed effects</span>
+<a href="http://inside-r.org/r-doc/stats/coef"><span style="color: #003399; font-weight: bold;">coef</span></a><span style="color: #009900;">&#40;</span>mod2.lme<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># the predict function uses both fixed effects and random effects by default</span>
+<a href="http://inside-r.org/r-doc/stats/predict"><span style="color: #003399; font-weight: bold;">predict</span></a><span style="color: #009900;">&#40;</span>mod2.lme<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">10</span><span style="color: #009900;">&#93;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># specifying level=0 gets predictions using just the fixed effects</span>
+<a href="http://inside-r.org/r-doc/stats/predict"><span style="color: #003399; font-weight: bold;">predict</span></a><span style="color: #009900;">&#40;</span>mod2.lme<span style="color: #339933;">,</span> level=<span style="color: #cc66cc;">0</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">10</span><span style="color: #009900;">&#93;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># treat blocks as random: using lme4 package</span>
+<a href="http://inside-r.org/r-doc/base/library"><span style="color: #003399; font-weight: bold;">library</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/lme4"><span style="">lme4</span></a><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># to avoid function conflicts unload nlme from memory</span>
+<a href="http://inside-r.org/r-doc/base/detach"><span style="color: #003399; font-weight: bold;">detach</span></a><span style="color: #009900;">&#40;</span>package<span style="">:</span><a href="http://inside-r.org/r-doc/nlme/nlme"><span style="color: #003399; font-weight: bold;">nlme</span></a><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># fit randomized block design</span>
+mod2.lmer <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">lmer</span><span style="color: #009900;">&#40;</span>lw.rat<span style="">~</span>type<span style="">+</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">1</span><span style="">|</span>pot<span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=plants<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># lmer does not return p-values</span>
+<a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>mod2.lmer<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/base/summary"><span style="color: #003399; font-weight: bold;">summary</span></a><span style="color: #009900;">&#40;</span>mod2.lmer<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># The F-statistic is in the ANOVA table</span>
+<a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>mod2.lmer<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#91;</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">4</span><span style="color: #009900;">&#93;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># use a parametric bootstrap to obtain a p-value</span>
+<span style="color: #666666; font-style: italic;"># fit a model to the data without type as a predictor</span>
+mod1.lmer &lt;- <span style="color: #003399; font-weight: bold;">lmer</span><span style="color: #009900;">&#40;</span>lw.rat<span style="">~</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">1</span><span style="">|</span>pot<span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=plants<span style="color: #009900;">&#41;</span><span style=""></span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># start Monte Carlo simulation--1000 simulations</span>
+nrep <span style="">&lt;-</span> <span style="color: #cc66cc;">1000</span>
+<span style="color: #666666; font-style: italic;">#initialize storage vector</span>
+Fstat <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/base/numeric"><span style="color: #003399; font-weight: bold;">numeric</span></a><span style="color: #009900;">&#40;</span>nrep<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># loop to carry out simulations</span>
+<span style="color: #000000; font-weight: bold;">for</span><span style="color: #009900;">&#40;</span>i <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #cc66cc;">1</span><span style="">:</span>nrep<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+ <span style="color: #666666; font-style: italic;"># simulate data from model in which type has no effect</span>
+ rmath <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/base/unlist"><span style="color: #003399; font-weight: bold;">unlist</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/r-doc/stats/simulate"><span style="color: #003399; font-weight: bold;">simulate</span></a><span style="color: #009900;">&#40;</span>mod1.lmer<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+ <span style="color: #666666; font-style: italic;"># estimate type model to these data</span>
+ rmod <span style="">&lt;-</span><span style="color: #003399; font-weight: bold;"> lmer</span><span style="color: #009900;">&#40;</span>rmath<span style="">~</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">1</span><span style="">|</span>pot<span style="color: #009900;">&#41;</span><span style="">+</span>type<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=plants<span style="color: #009900;">&#41;</span>
+ <span style="color: #666666; font-style: italic;"># extract statistic</span>
+ Fstat<span style="color: #009900;">&#91;</span>i<span style="color: #009900;">&#93;</span> <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>rmod<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">4</span><span style="color: #009900;">&#93;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<a href="http://inside-r.org/r-doc/base/max"><span style="color: #003399; font-weight: bold;">max</span></a><span style="color: #009900;">&#40;</span>Fstat<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># null distribution of F-statistic</span>
+<a href="http://inside-r.org/r-doc/graphics/hist"><span style="color: #003399; font-weight: bold;">hist</span></a><span style="color: #009900;">&#40;</span>Fstat<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># p-value of actual F-statistic</span>
+<span style="color: #cc66cc;">1</span><span style="">/</span><span style="color: #cc66cc;">1001</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># Bayesian estimation using MCMC</span>
+out.mc <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">mcmcsamp</span><span style="color: #009900;">&#40;</span>mod2.lmer<span style="color: #339933;">,</span> n=<span style="color: #cc66cc;">10000</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># this creates an S4 object</span>
+<a href="http://inside-r.org/r-doc/methods/slotNames"><span style="color: #003399; font-weight: bold;">slotNames</span></a><span style="color: #009900;">&#40;</span>out.mc<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># convert to a data frame</span>
+<a href="http://inside-r.org/packages/cran/ff"><span style="">ff</span></a> <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/base/as.data.frame"><span style="color: #003399; font-weight: bold;">as.data.frame</span></a><span style="color: #009900;">&#40;</span>out.mc<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/utils/head"><span style="color: #003399; font-weight: bold;">head</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/ff"><span style="">ff</span></a><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># posterior distribution of the treatment effect</span>
+<a href="http://inside-r.org/r-doc/graphics/hist"><span style="color: #003399; font-weight: bold;">hist</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/ff"><span style="">ff</span></a><span style="">$</span>typeN<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># mean of the posterior distribution</span>
+<a href="http://inside-r.org/r-doc/base/apply"><span style="color: #003399; font-weight: bold;">apply</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/ff"><span style="">ff</span></a><span style="color: #339933;">,</span><span style="color: #cc66cc;"> 2</span><span style="color: #339933;">, </span><a href="http://inside-r.org/r-doc/base/mean"><span style="color: #003399; font-weight: bold;">mean</span></a><span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/nlme/fixef"><span style="color: #003399; font-weight: bold;">fixef</span></a><span style="color: #009900;">&#40;</span>mod2.lmer<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># 95% credible interval for treatment effect using percentile method</span>
+<a href="http://inside-r.org/r-doc/base/apply"><span style="color: #003399; font-weight: bold;">apply</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/ff"><span style="">ff</span></a><span style="color: #339933;">,</span><span style="color: #cc66cc;"> 2</span><span style="color: #339933;">, </span><a href="http://inside-r.org/r-doc/base/function"><span style="color: #003399; font-weight: bold;">function</span></a><span style="color: #009900;">&#40;</span>x<span style="color: #009900;">&#41;</span> <a href="http://inside-r.org/r-doc/stats/quantile"><span style="color: #003399; font-weight: bold;">quantile</span></a><span style="color: #009900;">&#40;</span>x<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">.025</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">.975</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># 95% higest probability density interval</span>
+<span style="color: #003399; font-weight: bold;">HPDinterval</span><span style="color: #009900;">&#40;</span>out.mc<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># obtain posterior distributions of the treatment means</span>
+mean.post <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/base/data.frame"><span style="color: #003399; font-weight: bold;">data.frame</span></a><span style="color: #009900;">&#40;</span>mean.g=<a href="http://inside-r.org/packages/cran/ff"><span style="">ff</span></a><span style="color: #009900;">&#91;</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> mean.n=<a href="http://inside-r.org/packages/cran/ff"><span style="">ff</span></a><span style="color: #009900;">&#91;</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1</span><span style="color: #009900;">&#93;</span><span style="">+</span><a href="http://inside-r.org/packages/cran/ff"><span style="">ff</span></a><span style="color: #009900;">&#91;</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">2</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+mean.post<span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">10</span><span style="color: #339933;">,</span><span style="color: #009900;">&#93;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># obtain 95% credible intervals for the individual treatment means</span>
+<a href="http://inside-r.org/r-doc/base/apply"><span style="color: #003399; font-weight: bold;">apply</span></a><span style="color: #009900;">&#40;</span>mean.post<span style="color: #339933;">, </span><span style="color: #cc66cc;">2</span><span style="color: #339933;">, </span><a href="http://inside-r.org/r-doc/base/function"><span style="color: #003399; font-weight: bold;">function</span></a><span style="color: #009900;">&#40;</span>x<span style="color: #009900;">&#41;</span> <a href="http://inside-r.org/r-doc/stats/quantile"><span style="color: #003399; font-weight: bold;">quantile</span></a><span style="color: #009900;">&#40;</span>x<span style="color: #339933;">, </span><a href="http://inside-r.org/r-doc/base/c"><span style="color: #003399; font-weight: bold;">c</span></a><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">.025</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">.975</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span></pre></div></div><p><a href="http://www.inside-r.org/pretty-r" title="Created by Pretty R at inside-R.org">Created by Pretty R at inside-R.org</a></p>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 9</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style22 {color: #663366; font-weight: bold; }
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style36 {font-size: larger}
+
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+.border-side {
+  border-left: solid 1px black;
+}
+.border-bottom {
+  border-bottom: solid 1px black;
+} 
+
+td, th {
+  border-left: solid 1px black;
+} 
+
+.no-border {
+  border-left: none;
+} 
+
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"> <a name="assign9" id="assign9"></a>Assignment 9 </h1>
+<h2>Due Date </h2>
+
+  <p>Friday, November 9, 2012</p>
+
+<h2>Data Source </h2>
+
+  <p>The data for this assignment is <a href="../../data/birdbeetles.txt">birdbeetles.txt</a>,  a tab-delimited text file.  </p>
+  <h2>Background</h2>
+  <p>These data are taken from Carroll (1998) who took the species data from Pearson and Cassola (1992). Pearson and Cassola (1992) subdivided the Indian subcontinent into geographic units using a grid consisting of 61 squares, each 275 by 275 km on a side. When this was not possible because the grid cells fell along the coast or  along international borders, squares were established that had areas approximately equal  to the other squares. Within each grid cell the numbers of tiger beetle species (<span class="style8">beetles</span>) and  non-aquatic and non-marine breeding bird species (<span class="style8">birds</span>) were determined based on published accounts. The altitudinal relief (<span class="style8">relief</span>) of each square was determined from topographic maps. The variables <span class="style8">latitude</span> and <span class="style8">longitude</span> in the data frame correspond to the geographic centers of the grid cells.</p>
+<p>Previous research on the use of bioindicators on the Indian subcontinent suggest that tiger beetle diversity is a useful bioindicator of the number of bird species. Altitudinal relief is also known to correlate with bird diversity. The goal of this exercise is to obtain the best model that relates bird species richness to both tiger beetle richness and altitudinal relief.</p>
+<h2 align="left">Questions</h2>
+<ol>
+  <li>To model bird species richness as a function of tiger beetle richness and altitudinal relief, fit all of the standard regression models that are commonly used for count data.  Your models should include the following.  </li>
+  <ul>
+    <li>ordinary normal model</li>
+    <li>Poisson model</li>
+    <li>negative binomial model (NB-2)</li>
+    <li>negative binomial model (NB-1)</li>
+    <li>lognormal model</li>
+    <li>square root normal model</li>
+  </ul>
+  <li>Compare the six models and choose the &quot;best&quot;. Explain why you chose the model you did. Summarize your work with a table listing the models, their log-likelihoods, number of estimated parameters, and their AIC.</li>
+  <li>Write down the equation for predicted bird richness from your final model. Interpret what the coefficients of the two predictors represent. For example, if beetle richness increases by one unit how does that affect the predicted bird richness? What summary measure of bird is richness is being predicted by your final model?</li>
+  <li>Display your best model as a three-dimensional surface plot. Add the raw data to this plot.  To provide perspective drop a perpendicular from each plotted point to the regression surface. Color code the plotted points so that points lying above the surface are red and points lying below the surface are blue.</li>
+  <li>Check the  goodness of fit of your final model. <span class="style8">(Additional hint added 11/6/12.)</span></li>
+  <li>Plot the geographic coordinates of the grid cells. Using your final model, color code the plotted points so that observations with positive model residuals are colored red and observations with negative model residuals are colored blue. Does the plot suggest any potential problems with your final model? What?</li>
+</ol>
+<h2>Hints</h2>
+<ol>
+  <li>Here's the kind of graph I'm looking for in Question 4.</li>
+</ol>
+<p align="center"><img src="../../images/assignments/assignment9/fig1.png" width="320" height="320" alt="fig. 1"></p>
+<ol start="2">
+  <li>For assessing goodness of fit  follow the protocol outlined in lecture 21. There are 61 grid cells so trying to display them all as a single page of panel graphs can produce an awfully busy graph. Using the <span class="style22">layout</span> argument of <span class="style1">xyplot</span> we can select  a subset of the panels to appear on a single page thus causing the entire panel graph to appear on multiple pages.
+    <ol type="a">
+    <li> In Mac OS X  under the <span class="style8">Quartz</span> menu the <span class="style8">Forward</span> and <span class="style8">Back</span> commands  allow you to move back and forth in the current window to see the different pages.</li>
+    <li>In Windows when the graph window in R is selected a History menu will appear at the top of R window. If you choose <span class="style8">History &gt; Recording</span> the graphs you create from that point on will be stored as multiple pages in the graph window. To navigate to these pages use the <span class="style8">PgUp</span> and <span class="style8">PgDn</span> keys on the keyboard. You can then save each of the individual pages of the multi-page panel graph.</li>
+    </ol>
+  </li>
+</ol>
+<blockquote>
+  <p>Issuing the command <span class="style1">par(ask=T)</span> before you create the lattice graph will force R to wait for the <span class="style8">&lt;Enter&gt;</span> key to be pressed before displaying the next graph. This allows you to display multi-page graphs one page at a time. In Mac OS X  the currently displayed graph can also be  saved. </p>
+</blockquote>
+<h2>Cited references</h2>
+<ul>
+  <li>Carroll, Steven S. 1998. Modelling abiotic indicators when obtaining spatial predictions of species richness. <em>Environmental and Ecological Statistics</em> <strong>5</strong>: 257&ndash;276.</li>
+  <li>Pearson, D. L. and F. Cassola. 1992. World-wide species richness patterns of tiger beetles (Coleoptera: Cicindelidae): Indicator taxon for biodiversity and conservation studies. <em>Conservation Biology</em> <strong>6</strong>: 376&ndash;391.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 6, 2012<br>
+      URL: <a href="assign9.htm#assign9" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/assign9.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

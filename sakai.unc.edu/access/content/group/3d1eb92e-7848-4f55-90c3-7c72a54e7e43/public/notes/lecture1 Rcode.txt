@@ -1,0 +1,94 @@
+###### Simple linear regression ######
+
+#generate data for example
+set.seed(10)
+x1<-runif(90)
+x2<-rbinom(90,10,.5)
+x3<-rgamma(90,.1,.1)
+#organize predictors in data frame
+mydata<-data.frame(x1,x2,x3)
+
+#create noise
+epsilon<-rnorm(90,0,3)
+
+#generate response: additive model plus noise, intercept=0 
+mydata$y<-2*x1+x2+3*x3+epsilon
+
+#simple linear regression with x1 as predictor
+lm(y~x1,data=mydata)->out0
+out0<-lm(y~x1,data=mydata)
+summary(out0)
+
+#plot regression line and mean line
+plot(y~x1,data=mydata)
+abline(h=mean(mydata$y),col='pink',lwd=3)
+abline(out0,lty=2)
+
+#simple linear regression with x3 as a predictor
+out1<-lm(y~x3,data=mydata)
+#graph regression line and mean line
+plot(y~x3,data=mydata)
+abline(h=mean(mydata$y),col='pink',lwd=3)
+abline(out1)
+summary(out1)
+
+#remove outlier in x3 space
+mydata1<-mydata[mydata$x3<25,]
+dim(mydata)
+dim(mydata1)
+
+#refit model to reduced data
+out1a<-lm(y~x3,data=mydata1)
+
+#display both regression lines on same plot
+plot(y~x3,data=mydata1)
+#regression line without outlier
+abline(out1a)
+abline(h=mean(mydata1$y),col=2,lwd=2)
+#regression line with outlier
+abline(out1,col=2,lty=2)
+
+#compare coefficient estimates--nearly identical
+coef(out1)
+coef(out1a)
+#observe R-squared is now much lower
+#outlier contributed a lot to initial variance and was fit perfectly
+summary(out1a)
+
+#interpreting R-squared from graph
+#compare variation about mean line to variation about regression line
+#the reduction is R-squared
+plot(y~x3,data=mydata)
+abline(out1)
+abline(h=mean(mydata$y),col=2,lwd=2)
+
+### Multiple regression model with all three predictors ###
+
+out2<-lm(y~x1+x2+x3,data=mydata)
+#interpret coefficient estimates and t-statistics
+summary(out2)
+
+#adding interactions--3-factor and all 2-factor
+out3<-lm(y~x1+x2+x3+x1:x2+x2:x3+x1:x3+x1:x2:x3,data=mydata)
+summary(out3)
+#drop 3-factor: only two-factor interactions plus main effects
+out3a<-lm(y~x1+x2+x3+x1:x2+x2:x3+x1:x3,data=mydata)
+summary(out3a)
+
+#test all 2-factor interactions simultaneously
+anova(out2,out3a)
+summary(out2)
+#standard deviation of response--ignoring predictors
+sd(mydata$y)
+# 11.79407
+#residual standard error--also in output
+summary(out2)$sigma
+#[1] 3.516956
+
+#approximate R-squared using variance from summary output
+ (11.79407^2-3.516956^2)/11.79407^2
+
+#exact R-squared calculation using sums of squares
+SStotal<-sum((mydata$y-mean(mydata$y))^2)
+SSE<-sum(out2$residual^2)
+1-SSE/SStotal

@@ -1,0 +1,711 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 10&mdash;Wednesday, September 26, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture10" id="lecture4"></a>Lecture 10&mdash;Wednesday, September 26, 2012</h1>
+<h3>Topics </h3>
+<ul>
+<li><a href="lecture10.htm#experimental">Experimental designs with different-sized experimental units</a></li>
+<li><a href="lecture10.htm#analysis">Analysis of split plot designs</a>
+  <ul>
+    <li><a href="lecture10.htm#classical">Classical analysis of variance for split plot designs</a></li>
+    <li><a href="lecture10.htm#fitting">Fitting the split plot design without blocks</a></li>
+  </ul>
+</li>
+  <li><a href="lecture10.htm#mixed">Analyzing a split plot design as a mixed effects model</a></li>
+  <li><a href="lecture10.htm#graphing">Graphing  the  results of the analysis of a split plot design</a>
+    <ul>
+      <li><a href="lecture10.htm#density">Graphing the irrigation &times; density two-factor interaction</a></li>
+      <li><a href="lecture10.htm#fertilizer">Graphing the irrigation &times; fertilizer two-factor interaction</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture10.htm#cited">Cited references</a></li>
+  <li><a href="lecture10.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture10.htm#aov">aov</a> estimates split plot design models (and analysis of variance models) in the special case of where the treatments are balanced.</li>
+  <li><a href="lecture10.htm#with">with</a> provides a data argument for functions that don't have one. It creates a local environment so that variables can be specified without also specifying the data frame as part of the variable name.</li>
+</ul>
+<h3>R packages used</h3>
+<ul>
+  <li><a href="lecture10.htm#lattice">lattice</a> for the <span class="style1">xyplot</span> function.</li>
+  <li><a href="lecture10.htm#latticeextra">latticeExtra</a> for the <span class="style1">useOuterStrips</span> function.</li>
+  <li><a href="lecture10.htm#lme4">lme4</a> for the <span class="style1">lmer</span> function.</li>
+  <li><a href="lecture10.htm#nlme">nlme</a> for the <span class="style1">lme</span> function.</li>
+</ul>
+<h2><a name="experimental" id="experimental"></a>Experimental designs with different-sized experimental units</h2>
+<p> Consider an experiment in which we wish to test the effects of two factors on the growth of plants: factor 1 with levels A and B and factor 2 with levels H and L. These two factors combined in all possible ways yield four treatments: AH, AL, BH, and BL. There are eight potted plants available for use as subjects in the experiment.</p>
+<p>Fig. 1 shows one  experimental design we could use, a completely randomized design (CRD). The four treatment combinations, AH, AL, BH, and BL, are randomly assigned to the eight plants so that  each treatment combination is assigned to two plants.</p>
+<div align="center">
+  <table width="650" border="0" cellpadding="5">
+    <tr>
+      <td><div align="center"><img src="../../images/lectures/lecture10/crd.png" width="560" height="150" alt="crd"></div></td>
+    </tr>
+    <tr>
+      <td colspan="3" class="styleArial1" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;A completely randomized design (CRD) with two factors: factor 1 with levels A and B, factor 2 with levels H and L.</td>
+    </tr>
+  </table></div>
+<p align="left">Suppose the potted plants were obtained from cuttings. Four cuttings have been obtained from one parent and four from another. Because we think that the genetics of the parent might affect the results we want to ensure that the progeny from a single parent receives all four treatments. This leads us to carry out a restricted randomization in which the four treatments are randomly assigned to the progeny from parent 1 and then separately randomly assigned to the progeny from parent 2. The result is a completely randomized block design (CRBD) in which the parent of the plants defines the blocks (Fig. 2).</p>
+<div align="center">
+  <table width="650" border="0" cellpadding="5">
+    <tr>
+      <td><div align="center"><img src="../../images/lectures/lecture10/rcbd.png" width="600" height="220" alt="rcb"></div></td>
+    </tr>
+    <tr>
+      <td colspan="3" class="styleArial1" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;A completely randomized block design (RCBD) with two factors each with two levels. The four treatments resulting from all combinations of the factors were randomly assigned to plants separately by block.</td>
+    </tr>
+  </table></div>
+<p>Suppose factor 1 is temperature with levels A and B. In order to control temperature we place the plants in terrariums but we only have four terrariums not the eight that would be necessary to use in either the completely randomized design or the completely randomized block design. We choose to place two plants in each terrarium. We then randomly assign one plant level H of factor 2 and the other plant level L of factor 2. Of the four terrariums two are randomly assigned level A of factor 1 and the other two terrariums are assigned level B of factor 1. Fig. 3 shows the resulting design.</p>
+<div align="center">
+  <table width="650" border="0" cellpadding="5">
+    <tr>
+      <td><div align="center"><img src="../../images/lectures/lecture10/split.png" width="600" height="200" alt="split"></div></td>
+    </tr>
+    <tr>
+      <td colspan="3" class="styleArial1" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;&nbsp;A split plot design with four whole plots (terrariums) with two split plots (plants) per terrarium. Factor 1 with levels A and B is the whole plot treatment while factor 2 with levels H and L is the split plot treatment.</td>
+    </tr>
+</table></div>
+<p>Design 3 is an example of what's called a split plot design. By definition  an experimental unit is the object to which a treatment is randomly applied. What distinguishes the split plot design is that it has two different-sized experimental units each with its own randomization of treatments to experimental units. There is a set of larger units to which one of the factors is randomly assigned. The larger units in turn contains  smaller units that are randomly assigned the second factor. Using the language of the split plot design we can describe Fig. 3 as follows.</p>
+<ul>
+  <li>The four terrariums are randomly assigned the levels of factor 1 such that two terrariums received level A and two terrariums received level B. The terrariums are called the whole plot units of the split plot design and factor 1 is called the whole plot treatment. Because there are only four terrariums we have a sample size of four for assessing the effect of factor 1 alone. </li>
+  <li>Within each terrarium the  individual plants are randomly assigned separately to the two levels of factor 2. The individual plants are called the split plot units and factor 2 is the called the split plot treatment. Because there are eight plants  we have a sample size of eight for assessing the effect of factor 2 alone.</li>
+</ul>
+<p>Because of the different sample sizes that are available at each level of this design, the statistical power for finding a treatment effect is less for whole plot units than it is for split plot units. A proper statistical analysis of the split plot design should reflect this by using different degrees of freedom when testing whole plot treatments than when testing split plot treatments. In addition when assessing treatment effects at different levels our measure of the background variability should also be different. For split plots the background variability is the variability among plants. For the test of the whole plot treatments we have to account for variability among plants as well as variability among whole plots. The classical approach to analyzing a split plot design produces multiple ANOVA tables. For the split plot design in Fig. 3 we would have an ANOVA table for the whole plot factor and a second ANOVA table for testing the split plot factor and the interaction between the whole plot and split plot factors.</p>
+<p>Split plot designs were originally developed in agriculture  hence the use of the &quot;plot&quot; terminology. In agriculture there are often treatments such as irrigation or method of plowing that can only be applied to large fields. There are other treatments, such as fertilizer or seed type, that can be applied to much smaller fields. A split plot design can have any number of sizes of experimental units. As a result there are  split plot designs (2 levels), split-split plot designs (3 levels), and more. </p>
+<p> Split plot designs are commonly used in all sorts of biological applications and it's important that you be able to recognize them in your own research and in the research of others. If you analyze a split plot design as if it were a completely randomized design you will be claiming more power than you actually have for assessing the effect of the  whole plot treatment. Said differently you would be claiming that you had a greater number of replications of the whole plot treatment than you actually did, a mistake that is called pseudoreplication (Hurlbert 1984). A good way to recognize a split plot design is to ask yourself the following question about the design. &quot;If I were to make a mistake in the application of  a single treatment to an experimental unit, how many observations would be affected?&quot; If the answer to this question is more than one, you don't have a completely randomized  design. For instance in Fig. 3 if a single application of  a single level of factor 2 was messed up only a single potted plant would be affected. On the other hand if a single application of a level of factor 1 was messed up only a single terrarium would be affected but that would in turn lead to two observations (potted plants) being affected.</p>
+<h2><a name="analysis"></a>Analysis of split plot designs</h2>
+<p>To illustrate the analysis of designs with different-sized experimental units I consider the case of a split-split plot design arranged in blocks. This example appears in Crawley (2002), p. 345. In a split-split plot design there are three different sizes of experimental units and three levels at which treatments are randomly applied. </p>
+<ol>
+  <li>The experiment consisted of four blocks in which all of the treatment combinations appear. So each block is a complete replication of the treatment structure.</li>
+  <li>Each block was split in half: one half was irrigated, one half was not. This was found to be necessary because of the logistics of watering plots. These half blocks are the whole plots  and irrigation is the whole plot treatment. There are eight whole plots (2 per block) in the experiment.</li>
+  <li>Each whole plot was divided into three rows in which seeds were sewn at three different densities. The rows are the split plots and seed density is the split plot treatment. There were 24 split plots (six per block) in the experiment.</li>
+  <li>Each row (split plot) was divided into three smaller plots to which fertilizer was applied by hand. The fertilizer treatments were N (nitrogen) alone, P (phosphorus) alone, and N + P. (This is not a two-factor design of N and P because there was no treatment in which both N and P were absent.) These smaller plots are the split split plots and fertilizer is the split split plot treatment. There were 72 split split plots (18 per block) in the experiment.</li>
+</ol>
+<p>Fig. 4 shows one of the four blocks from the experiment with the basic layout of the treatment applications. </p>
+<div align="center">
+  <table width="600" border="0" cellpadding="5">
+    <tr>
+      <td><div align="center"><img src="../../images/lectures/lecture10/fig4.png" width="550" height="300" alt="fig. 4"></div></td>
+    </tr>
+    <tr>
+      <td colspan="3" class="styleArial1" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 4</strong> &nbsp;&nbsp;One block of the split-split plot design described in the text. The other three blocks (not shown) are replicates of the block shown here.</td>
+    </tr>
+</table></div>
+<p> In this design the &ldquo;size&rdquo; of the experimental unit varies, both the physical size of the units and  the number of replicates there are for some treatments versus others. We have 2 &times; 3 &times; 3 = 18 treatment combinations replicated four times for a total of  72 experimental units. The first thing to recognize is that this is not a full factorial design with a single level of randomization. For instance, for this to be a factorial design we would need to have 72 fields to which the irrigation treatment was randomly applied (at one of its two levels), but we  only have 8, two per block. Notice that if we were to mess up one application of the irrigation treatment it would affect nine experimental units, not just one. The bottom line is that if we were to analyze this as a factorial design  pretending that <em>n</em> = 72 for the irrigation treatment  when in fact <em>n</em> = 8, we would be guilty of pseudoreplication.</p>
+<h3><a name="classical"></a>Classical analysis of variance for split plot designs</h3>
+<p>I read in the data from Crawley's web site. The first 12 lines of the file contain a portion of the results from the first block, block A.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sp &lt;- read.delim('http://www.bio.ic.ac.uk/research/mjcraw/statcomp/data/splityield.txt')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sp[1:12,]</div>
+<span class="style24">  &nbsp;&nbsp; yield block irrigation density fertilizer<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; 95&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P<br>
+  3&nbsp;&nbsp;&nbsp; 107&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; 89&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 81&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P<br>
+  9&nbsp;&nbsp; &nbsp;&nbsp;93&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP<br>
+  10&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; irrigated&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N<br>
+  11&nbsp;&nbsp;&nbsp; 87&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; irrigated&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P<br>
+12&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; irrigated&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP</span>
+<p>Because block, irrigation, density, and fertilizer have character-labeled categories, they have all be converted to factors by R. The treatments are perfectly balanced in this experiment with four observations  each.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(sp$irrigation, sp$density, sp$fertilizer)</div>
+<span class="style24">, ,&nbsp; = N</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;high low medium<br>
+  &nbsp; control&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4<br>
+  &nbsp; irrigated&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</span>
+<p><span class="style24">, ,&nbsp; = NP</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; high low medium<br>
+  &nbsp; control&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4<br>
+  &nbsp; irrigated&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</span>
+<p><span class="style24">, ,&nbsp; = P</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; high low medium<br>
+  &nbsp; control&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4<br>
+  &nbsp; irrigated&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</span>
+<p><a name="aov"></a>Because the treatments are balanced we can use the classical analysis of a split plot design. In the classical analysis the overall ANOVA table is decomposed into ANOVA subtables that test the treatments that are specific to that level using a measure of background variability that is specific to that level. Degrees of freedom for the reported <em>F</em>-tests are calculated using specific rules.<strong> </strong>The function in R that can be used to carry out the classical analysis of variance for a split plot design is the <span class="style1">aov</span> function. <strong>NB: the classical analysis is only appropriate if the treatments are  perfectly balanced!</strong></p>
+<p>The main argument of <span class="style1">aov</span> is a  regression formula  that also includes a term that defines the plot structure of the design. The plots need to be listed in decreasing size starting with the whole plot unit. In the current design there is an additional structural variable, <span class="style8">block</span>, that contains pairs of whole plots so we start with that. The following specification correctly describes the current example.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out0 &lt;- aov(yield~irrigation*density*fertilizer + Error(block/irrigation/density), data=sp)</div>
+<p>The term <span class="style8">Error(block/irrigation/density)</span> describes the design structure. The first term <span class="style8">block</span> identifies the randomized block design, the four blocks that replicate the entire split plot design. The variable <span class="style8">irrigation</span> is a treatment but it also identifies the two different whole plot units within each block. Finally the variable <span class="style8">density</span> is the split plot treatment but it also identifies the three split plot units within each whole plot unit. To see the ANOVA tables produced by <span class="style1">aov</span> we need to use the <span class="style1">summary</span> function (not the <span class="style1">anova</span> function).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">summary(out0)</div>
+<span class="style24">Error: block<br>
+  </span><span class="style25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value Pr(&gt;F)<br>
+  Residuals&nbsp; 3&nbsp; 194.4&nbsp;&nbsp; 64.81</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<p><span class="style25">Error: block:irrigation<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value Pr(&gt;F)&nbsp; <br>
+  irrigation&nbsp; 1&nbsp;&nbsp; 8278&nbsp;&nbsp;&nbsp; 8278&nbsp;&nbsp; 17.59 0.0247 *<br>
+  Residuals&nbsp;&nbsp; 3&nbsp;&nbsp; 1412&nbsp;&nbsp;&nbsp;&nbsp; 471&nbsp;</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style25b">Error: block:irrigation:density<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value Pr(&gt;F)&nbsp; <br>
+  density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 1758&nbsp;&nbsp; 879.2&nbsp;&nbsp; 3.784 0.0532 .<br>
+  irrigation:density&nbsp; 2&nbsp;&nbsp; 2747&nbsp; 1373.5&nbsp;&nbsp; 5.912 0.0163 *<br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp; 2788&nbsp;&nbsp; 232.3</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style25a">Error: Within<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1977.4&nbsp;&nbsp; 988.7&nbsp; 11.449 0.000142 ***<br>
+  irrigation:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 953.4&nbsp;&nbsp; 476.7&nbsp;&nbsp; 5.520 0.008108 ** <br>
+  density:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 304.9&nbsp;&nbsp;&nbsp; 76.2&nbsp;&nbsp; 0.883 0.484053&nbsp;&nbsp;&nbsp; <br>
+  irrigation:density:fertilizer&nbsp; 4&nbsp; 234.7&nbsp;&nbsp;&nbsp; 58.7&nbsp;&nbsp; 0.680 0.610667&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36 3108.8&nbsp;&nbsp;&nbsp; 86.4&nbsp;&nbsp;</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>The <span class="style1">aov</span> function has broken the analysis up into three ANOVA tables corresponding to the three levels of the design. The whole plot analysis has the block sum of squares listed in a separate section. Notice that it doesn't have an <em>F</em>-statistic because there is no replication of treatments withing blocks and so no proper measure of error for blocks. Below I combine these two tables and add a Total line.</p>
+<p class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value Pr(&gt;F)<br> 
+  block &nbsp;&nbsp;&nbsp;&nbsp;
+ 3&nbsp; 194.4&nbsp;&nbsp; 64.81&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+  irrigation 1&nbsp;&nbsp; 8278&nbsp;&nbsp;&nbsp; 8278&nbsp;&nbsp; 17.59 0.0247 *<br>
+Residuals&nbsp; 3&nbsp;&nbsp; 1412&nbsp;&nbsp;&nbsp;&nbsp; 471&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;9884</p>
+<p>This is just the ANOVA table for an ordinary randomized blocks design. The reported residual sum of squares is actually the <span class="style8">block</span> &times; <span class="style8">irrigation</span> interaction term (because there is no replication of treatment within blocks to generate a real error term.) If we add up the listed degrees of freedom for block, whole plot treatment, and error we get 3 + 1 + 3  = 7 =  8 &ndash;&nbsp;1, the number of whole plot replicates minus one. This is just the usual <em>n</em> &ndash;&nbsp;1 degrees of freedom for the total sum of squares (the minus one corresponding to the overall mean). </p>
+<p>The second ANOVA table is the split plot ANOVA table. The sum of the degrees of freedom in this table is 2 + 2 + 12 = 16 that when added to  the 7 degrees of freedom from the whole plot analysis gives us 23 = 24 &ndash; 1 where 24 is the number of split plot replicates. </p>
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value Pr(&gt;F)&nbsp; <br>
+density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 1758&nbsp;&nbsp; 879.2&nbsp;&nbsp; 3.784 0.0532 .<br>
+irrigation:density&nbsp; 2&nbsp;&nbsp; 2747&nbsp; 1373.5&nbsp;&nbsp; 5.912 0.0163 *<br>
+Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp; 2788&nbsp;&nbsp; 232.3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>The last table is the split-split plot analysis. The total degrees of freedom shown in the table is 2 + 2 + 4 + 4 + 36 = 48. If we add to this the 16 degrees of freedom from the split plot analysis and the 7 degrees of freedom from the whole plot analysis we get 48 + 16 + 7 = 71 = 72 &ndash;&nbsp;1 where 72 is the total number of plots in the analysis.</p>
+<p class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1977.4&nbsp;&nbsp; 988.7&nbsp; 11.449 0.000142 ***<br>
+irrigation:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 953.4&nbsp;&nbsp; 476.7&nbsp;&nbsp; 5.520 0.008108 ** <br>
+density:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 304.9&nbsp;&nbsp;&nbsp; 76.2&nbsp;&nbsp; 0.883 0.484053&nbsp;&nbsp;&nbsp; <br>
+irrigation:density:fertilizer&nbsp; 4&nbsp; 234.7&nbsp;&nbsp;&nbsp; 58.7&nbsp;&nbsp; 0.680 0.610667&nbsp;&nbsp;&nbsp; <br>
+Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36 3108.8&nbsp;&nbsp;&nbsp; 86.4&nbsp;&nbsp;&nbsp;</p>
+<p>Based on  the output there are significant interactions between <span class="style8">irrigation</span> and <span class="style8">fertilizer</span> as well as between <span class="style8">irrigation</span> and <span class="style8">density</span>, but not between <span class="style8">density</span> and <span class="style8">fertilizer</span>. We can try to confirm these results by producing crude interaction plots  where we average over the remaining variables and blocks. First I redefine the order of the levels of the <span class="style8">density</span> variable to match their natural order.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sp$density &lt;- factor(sp$density, levels=c('low','medium','high'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> levels(sp$density)</div>
+<span class="style24">[1] &quot;low&quot;    &quot;medium&quot; &quot;high&quot; </span>
+<p><a name="with"></a>To generate the plots with <span class="style1">interaction.plot</span> I  use the <span class="style1">with</span> function to avoid having to specify the data frame with each variable. The <span class="style1">with</span> function effectively supplies a data argument for functions that don't have one.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">with(sp, interaction.plot(density, fertilizer, yield))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(expression(&quot;fertilizer&quot;%*%&quot;density interaction&quot;), side=3, line=.25)</div>
+<p align="center"><img src="../../images/lectures/lecture10/fig5a.png" width="510" height="275" alt="fig. 5a"></p>
+<p align="center" class="styleArial1"><strong>Fig. 5&nbsp;</strong>&nbsp;Plot of the fertilizer &times; density two-factor interaction</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> with(sp, interaction.plot(fertilizer, irrigation, yield))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(expression(&quot;fertilizer&quot;%*%&quot;irrigation interaction&quot;), side=3, line=.25)</div>
+<p align="center"><img src="../../images/lectures/lecture10/fig5b.png" width="510" height="275" alt="fig. 5b"></p>
+<p align="center" class="styleArial1"><strong>Fig. 6&nbsp;</strong>&nbsp;Plot of the fertilizer &times; irrigation two-factor interaction</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> with(sp, interaction.plot(density, irrigation, yield))</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(expression(&quot;density&quot;%*%&quot;irrigation interaction&quot;), side=3, line=.25)
+</div>
+<p align="center"><img src="../../images/lectures/lecture10/fig5c.png" width="510" height="275" alt="fig. 5c"></p>
+<p align="center" class="styleArial1"><strong>Fig. 7&nbsp;</strong>&nbsp;Plot of the density &times; irrigation two-factor interaction</p>
+<p>The fertilizer profiles for varying <span class="style8">density</span> levels in Fig. 5 are roughly parallel. The <span class="style8">irrigation</span> profiles for varying levels of <span class="style8">fertilizer</span> and for varying levels of <span class="style8">density</span> seem far from parallel.</p>
+<h3><a name="fitting"></a>Fitting the split plot design without blocks</h3>
+<p>If this had not been a randomized blocks design then we would have needed a variable that identifies the different whole plots. To illustrate such an analysis I first create a variable to identify the eight whole plots.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sp$wp &lt;- rep(1:8, each=9)</div>
+<p>The plot variables are the new whole plot variable, <span class="style8">wp</span>, and the split plot variable within the whole plots that is identified by the levels of <span class="style8">density</span>. Thus the  error term is specified as <span class="style8">Error(factor(wp)/density</span>. (Note: the <span class="style1">aov</span> function requires all categorical variables with numeric levels to be declared as factors wherever they appear in the model.) When we fit this model the only change in the output occurs in the first ANOVA table where we now have the analysis of a completely randomized design with <em>n</em> = 8 instead of a randomized block design.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out0k &lt;- aov(yield~irrigation*density*fertilizer + Error(factor(wp)/density), data=sp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out0k)</div>
+<span class="style25">Error: factor(wp)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp; Pr(&gt;F)&nbsp;&nbsp; <br>
+  irrigation&nbsp; 1&nbsp;&nbsp; 8278&nbsp;&nbsp;&nbsp; 8278&nbsp;&nbsp; 30.92 0.00143 **<br>
+  Residuals&nbsp;&nbsp; 6&nbsp;&nbsp; 1606&nbsp;&nbsp;&nbsp;&nbsp; 268&nbsp;</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Error: factor(wp):density<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value Pr(&gt;F)&nbsp; <br>
+  density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 1758&nbsp;&nbsp; 879.2&nbsp;&nbsp; 3.784 0.0532 .<br>
+  irrigation:density&nbsp; 2&nbsp;&nbsp; 2747&nbsp; 1373.5&nbsp;&nbsp; 5.912 0.0163 *<br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp; 2788&nbsp;&nbsp; 232.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Error: Within<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1977.4&nbsp;&nbsp; 988.7&nbsp; 11.449 0.000142 ***<br>
+  irrigation:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 953.4&nbsp;&nbsp; 476.7&nbsp;&nbsp; 5.520 0.008108 ** <br>
+  density:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 304.9&nbsp;&nbsp;&nbsp; 76.2&nbsp;&nbsp; 0.883 0.484053&nbsp;&nbsp;&nbsp; <br>
+  irrigation:density:fertilizer &nbsp;4&nbsp; 234.7&nbsp;&nbsp;&nbsp; 58.7&nbsp;&nbsp; 0.680 0.610667&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36 3108.8&nbsp;&nbsp;&nbsp; 86.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<h2><a name="mixed"></a>Analyzing a split plot design as a mixed effects model</h2>
+<p>A major limitation of  the <span class="style1">aov</span> function and the classical approach to analyzing split plot designs is that it is restricted to perfectly balanced data. If there is any imbalance either by design or due to attrition  the sum of squares decomposition of the classical approach breaks down. A more flexible approach that yields the correct analysis with balanced data but also works with unbalanced data is to estimate things using a mixed effects model. Each level of the split plot hierarchy (except the first) gets assigned its own random effect. In the current problem where we have split plots nested in whole plots nested in blocks we end up with three sets of random effects for the three levels of this hierarchy.</p>
+<p>For observation <em>l</em> from split plot <em>k</em> in whole plot <em>j </em>of block <em>i</em> we can write down the following expression for the yield <em>y</em><sub>ijk</sub>.</p>
+<p align="center"><img src="../../images/lectures/lecture10/mixed.gif" width="245" height="37" alt="mean"></p>
+<p>where</p>
+<p align="center"><img src="../../images/lectures/lecture10/distributions.gif" width="353" height="80" alt="random"></p>
+<p>The term &mu;<sub>ijk</sub> is the cell mean, shorthand notation for the treatment structure of the model. Here the treatment structure includes an intercept, the main effects of <span class="style8">fertilizer</span>, <span class="style8">density</span>, and <span class="style8">irrigation</span>, the three two-factor interactions between them, and their three-factor interaction. <em>u</em><sub>0i</sub> is the random block effect, <em>v</em><sub>0j</sub> is the random whole plot effect, <em>w</em><sub>0k</sub> is the random split plot effect, and &epsilon;<sub>ijkl</sub> is the random error.</p>
+<p><a name="nlme"></a>To fit this model using the <span class="style19">nlme</span> package we can write the grouping variable using the same notation that was used in <span class="style1">aov</span> for expressing the nesting of the levels. So we write the following: <span class="style10">random = ~1|block/irrigation/density</span>. The ANOVA table is identical to what we obtained with <span class="style1">aov</span> except that it is not organized as a series of subtables corresponding to the different levels of the design.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out0a &lt;- lme(yield~irrigation*density*fertilizer, random=~1|block/irrigation/density, data=sp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out0a)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp;&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 36 2674.6296&nbsp; &lt;.0001<br>
+  irrigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 30.9207&nbsp; 0.0115<br>
+  density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 3.7842&nbsp; 0.0532<br>
+  fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp; 11.4493&nbsp; 0.0001<br>
+  irrigation:density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 5.9119&nbsp; 0.0163<br>
+  irrigation:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp; 5.5204&nbsp; 0.0081<br>
+  density:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp; 0.8826&nbsp; 0.4841<br>
+irrigation:density:fertilizer&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp; 0.6795&nbsp; 0.6107</span>
+<p>Notice how the reported denominator degrees of freedom (<span class="style8">denDF</span>) changes for the different variables depending on the level of the variable (whole plot, split plot, or split split plot). This indicates that we've specified the model correctly. <a name="lme4"></a>The same notation for the grouping variable works when fitting the model using the <span class="style19">lme4</span> package.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">detach(package:nlme)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lme4)
+</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out0c &lt;- lmer(yield~irrigation*density*fertilizer + (1|block/irrigation/density), data=sp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out0c)</div>
+<span class="style24">  Analysis of Variance Table<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value<br>
+  irrigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2670.19 2670.19 30.9206<br>
+  density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 653.58&nbsp; 326.79&nbsp; 3.7842<br>
+  fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1977.44&nbsp; 988.72 11.4493<br>
+  irrigation:density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1021.07&nbsp; 510.53&nbsp; 5.9119<br>
+  irrigation:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 953.44&nbsp; 476.72&nbsp; 5.5204<br>
+  density:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 304.89&nbsp;&nbsp; 76.22&nbsp; 0.8826<br>
+irrigation:density:fertilizer&nbsp; 4&nbsp; 234.72&nbsp;&nbsp; 58.68&nbsp; 0.6795</span>
+<p>When fitting these models I sometimes find it easier to think in terms of variables that uniquely define the individual structural units rather than to use the nesting of the treatments to define grouping levels. Below I create variables that identify the whole plot and split  plot units in terms of the set of treatments that they receive.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sp$wp1 &lt;- paste(sp$block, sp$irrigation, sep='.')</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> sp$sp1 &lt;- paste(sp$block, sp$irrigation, sp$density, sep='.')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sp[1:12,]</div>
+<span class="style24">   &nbsp;&nbsp; yield block irrigation density fertilizer wp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wp1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sp1<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 1&nbsp;&nbsp; A.control&nbsp;&nbsp;&nbsp; A.control.low<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; 95&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; &nbsp;low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp; 1&nbsp;&nbsp; A.control&nbsp;&nbsp;&nbsp; A.control.low<br>
+  3&nbsp;&nbsp;&nbsp; 107&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP&nbsp; 1&nbsp;&nbsp; A.control&nbsp;&nbsp;&nbsp; A.control.low<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 1&nbsp;&nbsp; A.control A.control.medium<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; 89&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp; 1&nbsp;&nbsp; A.control A.control.medium<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP&nbsp; 1&nbsp;&nbsp; A.control A.control.medium<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 81&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 1&nbsp;&nbsp; A.control&nbsp;&nbsp; A.control.high<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp; 1&nbsp;&nbsp; A.control&nbsp;&nbsp; A.control.high<br>
+  9 &nbsp;&nbsp;&nbsp;&nbsp;93&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP&nbsp; 1&nbsp;&nbsp; A.control&nbsp;&nbsp; A.control.high<br>
+  10&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; irrigated&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 2 A.irrigated&nbsp; A.irrigated.low<br>
+  11&nbsp;&nbsp;&nbsp; 87&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; irrigated&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp; 2 A.irrigated&nbsp; A.irrigated.low<br>
+12&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; irrigated&nbsp; &nbsp;&nbsp;&nbsp;low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP&nbsp; 2 A.irrigated&nbsp; A.irrigated.low</span>
+<p>For the <span class="style19">nlme</span> package regardless of whether we use unique identifiers for each level or  nested levels  that only identify a unique level when we also reference its containing unit, the exact same nested notation will work when fitting the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">detach(package:lme4)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out0b &lt;- lme(yield~irrigation*density*fertilizer, random=~1|block/wp1/sp1, data=sp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out0b)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp;&nbsp; F-value p-value<br>
+(Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 36 2674.6305&nbsp; &lt;.0001<br>
+irrigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 30.9207&nbsp; 0.0115<br>
+density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 3.7842&nbsp; 0.0532<br>
+fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp; 11.4493&nbsp; 0.0001<br>
+irrigation:density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 5.9119&nbsp; 0.0163<br>
+irrigation:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp; 5.5204&nbsp; 0.0081<br>
+density:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp; 0.8826&nbsp; 0.4841<br>
+irrigation:density:fertilizer&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp; 0.6795&nbsp; 0.6107</span>
+<p>For the <span class="style19">lme4</span> package when the units at the different levels are uniquely identified we need to split them into individual terms. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">detach(package:nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(lme4)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> out0d &lt;- lmer(yield~irrigation*density*fertilizer + (1|block) + (1|wp1) + (1|sp1), data=sp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  anova(out0d)</div>
+<span class="style24">  Analysis of Variance Table<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value<br>
+  irrigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2670.19 2670.19 30.9206<br>
+  density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 653.58&nbsp; 326.79&nbsp; 3.7842<br>
+  fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1977.44&nbsp; 988.72 11.4493<br>
+  irrigation:density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1021.07&nbsp; 510.53&nbsp; 5.9119<br>
+  irrigation:fertilizer&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp; 953.44&nbsp; 476.72&nbsp; 5.5204<br>
+  density:fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 304.89&nbsp;&nbsp; 76.22&nbsp; 0.8826<br>
+irrigation:density:fertilizer&nbsp; 4&nbsp; 234.72&nbsp;&nbsp; 58.68&nbsp; 0.6795</span>
+<h2><a name="graphing"></a>Graphing the  results of the analysis of a split plot design</h2>
+<p>I drop the non-significant three-factor interaction and the two-factor interaction between <span class="style8">density</span> and <span class="style8">fertilizer</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">detach(package:lme4)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  library(nlme)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> out1a &lt;- update(out0a, .~. - irrigation:density:fertilizer - density:fertilizer)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out1a)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp;&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 44 2674.6035&nbsp; &lt;.0001<br>
+  irrigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 30.9204&nbsp; 0.0115<br>
+  density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 3.7842&nbsp; 0.0532<br>
+  fertilizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 44&nbsp;&nbsp; 11.9239&nbsp; 0.0001<br>
+  irrigation:density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 5.9119&nbsp; 0.0163<br>
+  irrigation:fertilizer&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 44&nbsp;&nbsp;&nbsp; 5.7492&nbsp; 0.0061</span>
+<h3><a name="density"></a>Graphing the irrigation &times; density two-factor interaction</h3>
+<p><a name="lattice"></a>Because our data set is small it makes sense to display all of the data along with the summary statistics for the model. With small data sets displaying only error bars for the means tends to obfuscate rather than explicate things (Magnusson 2000, Donahue 2010). I start by plotting the yield against <span class="style8">density</span> separately by <span class="style8">fertilizer</span> and <span class="style8">irrigation</span> in a panel graph. I place the <span class="style8">density</span> variable on the <em>x</em>-axis because <span class="style8">density</span> is ordinal and we should take advantage of that order. I use a <span class="style22">groups</span> argument to include the results from different blocks in the same panel. I add <span class="style22">type='o'</span> so that the observations from the same block but at different densities are connected by line segments.<br>
+</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(yield~density|fertilizer + irrigation, data=sp, groups=block, type='o')</div>
+<br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture10/fig8.png" width="470" height="330" alt="fig. 8"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 8</strong> &nbsp;&nbsp;Panel graph showing the raw data from the split-split design with blocks.</td>
+  </tr>
+</table>
+<p>To add the predicted means to this graph we will need to write our own panel function. To that end I first write a simple panel function that duplicates the graph of Fig. 8. I remove the colors for the groups because there is no need to identify the individual blocks.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(yield~density|fertilizer + irrigation, data=sp, groups=block, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x, y, subscripts, groups, col='grey70', ...)})</div>
+<br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture10/fig9.png" width="470" height="330" alt="Fig. 9"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 9</strong> &nbsp;&nbsp;Panel graph showing the raw data from the split-split design with blocks.</td>
+  </tr>
+</table>
+<p>I obtain predictions of the marginal means from the <span class="style1">lme</span> model using the <span class="style1">predict</span> function with the <span class="style22">level=0</span> argument.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sp$pred &lt;- predict(out1a,level=0)</div>
+<p>I add the <span class="style22">subscripts</span> argument to the panel function and then plot the means with the <span class="style1">panel.xyplot</span> function using <span class="style22">subscripts</span> to select only those predicted means that should appear in the panel currently being drawn.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  xyplot(yield~density|fertilizer + irrigation, data=sp, groups=block, type='o', panel=function(x, y, <span class="style39">subscripts</span>, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x, y, <span class="style39">subscripts</span>, groups, col='grey70', ...)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"><span class="style39">panel.xyplot(x, sp$pred[subscripts], col=2, pch=8, type='o')</span>})</div>
+<br>
+                <table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture10/fig10.png" width="470" height="330" alt="Fig. 10"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 60px; text-indent:-60px"><strong>Fig. 10</strong> &nbsp;&nbsp; Panel graph showing the raw data from the split-split design with blocks along with marginal means. Means are being recycled in plot.</td>
+  </tr>
+</table>
+<p>Clearly something went wrong. The line segments connecting the means cross back to connect the last mean with the first. To see what went wrong I extract the observations that are being used in the first panel for which <span class="style8">fertilizer = 'N'</span> and <span class="style8">irrigation = 'control'</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sp[sp$fertilizer=='N' &amp; sp$irrigation=='control', c(1:6,9)]</div>
+<span class="style24">  &nbsp;&nbsp; yield block irrigation density fertilizer wp&nbsp;&nbsp;&nbsp;&nbsp; pred<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 1 86.91667<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 1 92.75000<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 81&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 1 82.08333<br>
+  19&nbsp;&nbsp;&nbsp; 83&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 3 86.91667<br>
+  22&nbsp;&nbsp;&nbsp; 98&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 3 92.75000<br>
+  25&nbsp;&nbsp;&nbsp; 74&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;N&nbsp; 3 82.08333<br>
+  37&nbsp;&nbsp;&nbsp; 85&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 5 86.91667<br>
+  40&nbsp;&nbsp; 112&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 5 92.75000<br>
+  43&nbsp;&nbsp;&nbsp; 82&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 5 82.08333<br>
+  55&nbsp;&nbsp;&nbsp; 86&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 7 86.91667<br>
+  58&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 7 92.75000<br>
+61&nbsp;&nbsp;&nbsp; 85&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 7 82.08333</span>
+<p>Now we can see what's going wrong. When we plotted the predicted means we plotted the entire last column because all four blocks are used in this panel. But after the third mean we just start recycling values again. What we need to do is only plot the first three means and stop. We can accomplish this by adding <span class="style10">[1:3]</span> after the both the <em>x</em>- and <em>y</em>-variables of <span class="style1">panel.xyplot</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(yield~density|fertilizer + irrigation, data=sp, groups=block, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x, y, subscripts, groups, col='grey70', ...)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x<span class="style39">[1:3]</span>, sp$pred[subscripts]<span class="style39">[1:3]</span>, col=2, pch=8, type='o')})</div>
+<br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture10/fig11.png" width="470" height="330" alt="Fig. 11"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 60px; text-indent:-60px"><strong>Fig. 11</strong> &nbsp;&nbsp;Panel graph showing the raw data from the split-split design with blocks along with marginal means.</td>
+  </tr>
+</table>
+
+<p><a name="latticeextra"></a>Finally I assign the graph to an object and use the <span class="style1">useOuterStrips</span> function from the <span class="style19">latticeExtra</span> package to place panel labels on the left and on the top.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(yield~density|fertilizer + irrigation, data=sp, groups=block, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">panel.superpose(x, y, subscripts, groups, col='grey70', ...)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">panel.xyplot(x[1:3], sp$pred[subscripts][1:3], col=2, pch=8, type='o')}) -&gt; g1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(latticeExtra)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  useOuterStrips(g1)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture10/fig12.png" width="470" height="330" alt="Fig. 12"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 60px; text-indent:-60px"><strong>Fig. 12</strong> &nbsp; Panel graph showing the raw data from the split-split design with blocks along with marginal means.</td>
+  </tr>
+</table>
+
+<p>Let's compare the  graph to the summary table to verify that everything makes sense.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(out1a)$tTable,4)</div>
+<p class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value Std.Error DF t-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 86.9167&nbsp;&nbsp;&nbsp; 4.9950 44 17.4007&nbsp; 0.0000<br>
+  irrigationirrigated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.9444&nbsp;&nbsp;&nbsp; 7.0640&nbsp; 3 -0.2753&nbsp; 0.8010<br>
+  densitymedium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.8333&nbsp; &nbsp;&nbsp;6.2227 12&nbsp; 0.9374&nbsp; 0.3670<br>
+  densityhigh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -4.8333&nbsp;&nbsp;&nbsp; 6.2227 12 -0.7767&nbsp; 0.4524<br>
+  fertilizerP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.9167&nbsp;&nbsp;&nbsp; 3.7175 44&nbsp; 0.2466&nbsp; 0.8064<br>
+  fertilizerNP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.3333&nbsp;&nbsp;&nbsp; 3.7175 44&nbsp; 1.1657&nbsp; 0.2500<br>
+  irrigationirrigated:densitymedium 10.0833&nbsp;&nbsp;&nbsp; 8.8002 12&nbsp; 1.1458&nbsp; 0.2742<br>
+  irrigationirrigated:densityhigh&nbsp;&nbsp; 29.7500&nbsp;&nbsp;&nbsp; 8.8002 12&nbsp; 3.3806&nbsp; 0.0055<br>
+  irrigationirrigated:fertilizerP&nbsp;&nbsp; 13.5000&nbsp;&nbsp;&nbsp; 5.2573 44&nbsp; 2.5678&nbsp; 0.0137<br>
+  irrigationirrigated:fertilizerNP&nbsp; 16.8333&nbsp;&nbsp;&nbsp; 5.2573 44&nbsp; 3.2019&nbsp; 0.0025
+  &nbsp;</p>
+<p>The <span class="style8">density</span> main effects in the summary table correspond to <span class="style8">irrigation = 'control'</span> and <span class="style8">fertilizer = 'N'</span>. As we can see there is no <span class="style8">density</span> effect for this <span class="style8">irrigation</span> level. The yield at medium <span class="style8">density</span> is not significantly different (albeit slightly higher) than the yield at low <span class="style8">density</span>  (<em>p</em> = 0.37). Similarly the yield at high <span class="style8">density</span> is not significantly different from the yield at low <span class="style8">density</span> (<em>p</em> = 0.45). This is represented in the graph by  the fairly flat mean profiles in the bottom row of  panels. The <span class="style8">irrigation</span> main effect corresponds to <span class="style8">density = 'low'</span> and <span class="style8">fertilizer = 'N'</span>. The fact that it is not significant (<em>p</em> = 0.80) indicates that the mean yields at <span class="style8">density = 'low'</span> are roughly the same regardless of whether  the plot was irrigated. The interaction effects of <span class="style8">irrigation</span> and <span class="style8">density</span> correspond to deviations from the additive model at <span class="style8">density = 'medium'</span> and <span class="style8">density = 'low'</span>. Both terms in the summary table are positive and statistically significant with the effect at high <span class="style8">density</span> nearly triple the effect at medium <span class="style8">density</span>. In the graph this corresponds to a steep climb in yield from <span class="style8">density = 'low'</span> to <span class="style8">density = 'medium'</span> and then to <span class="style8">density = 'high'</span> in the top row of panels. This is quite a contrast from the flat mean profile we would expect under the additive model without  interaction (bottom row of panels). The basic conclusion is the obvious one, there is no effect of seed <span class="style8">density</span> on yield unless the plants are also irrigated. </p>
+<h3><a name="fertilizer"></a>Graphing the  irrigation &times; fertilizer two-factor interaction</h3>
+<p>To visualize the <span class="style8">irrigation</span> &times; <span class="style8">fertilizer</span> interaction I swap <span class="style8">density</span> for <span class="style8">fertilizer</span> in the <span class="style1">xyplot</span> code.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(yield~fertilizer|density + irrigation, data=sp, groups=block, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x ,y, subscripts, groups, col='grey70', ...)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x[1:3], sp$pred[subscripts][1:3], col=2, pch=8, type='o')})</div>
+<br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture10/fig13.png" width="470" height="330" alt="Fig. 13"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 60px; text-indent:-60px"><strong>Fig. 13</strong> &nbsp; Panel graph showing the raw data from the split-split design with blocks along with marginal means. Means are plotted in the wrong fertilizer order.</td>
+  </tr>
+</table>
+
+<p>As we can see something went wrong with the graph. The individual points are being connected in the wrong order. If we examine a bit of the data frame being plotted we can see what went wrong.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sp[1:12,c(1:6,9)]</div>
+<span class="style24">  &nbsp;&nbsp; yield block irrigation density fertilizer wp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pred<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 1&nbsp; 86.91667<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; 95&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp; 1&nbsp; 87.83333<br>
+  3&nbsp;&nbsp;&nbsp; 107&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP&nbsp; 1&nbsp; 91.25000<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 1&nbsp; 92.75000<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; 89&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp; 1&nbsp; 93.66667<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp; medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP&nbsp; 1&nbsp; 97.08333<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 81&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 1&nbsp; 82.08333<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp; 1&nbsp; 83.00000<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp; 93&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp; control&nbsp;&nbsp;&nbsp; high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP&nbsp; 1&nbsp; 86.41667<br>
+  10&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; irrigated&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp; 2 &nbsp;84.97222<br>
+  11&nbsp;&nbsp;&nbsp; 87&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; irrigated&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp; 2&nbsp; 99.38889<br>
+12&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; irrigated&nbsp;&nbsp;&nbsp;&nbsp; low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NP&nbsp; 2 106.13889</span>
+<p><span class="style1">xyplot</span> plots the points in the order it encounters them in the data frame. Because <span class="style8">fertilizer</span> appears in the order 'N', 'P', 'NP', that's the order the points are plotted. This causes a problem because <span class="style8">fertilizer</span> is a factor whose levels are 'N', 'NP', and 'P' so that's how they are listed on the <em>x</em>-axis. We can either sort the data frame to match the order on the <em>x</em>-axis or we can change the order of the levels of <span class="style8">fertilizer</span>. I choose the latter.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sp$fertilizer &lt;- factor(sp$fertilizer, levels=c('N','P','NP'))</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(yield~fertilizer|density+ irrigation, data=sp, groups=block, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x, y, subscripts, groups, col='grey70', ...)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x[1:3], sp$pred[subscripts][1:3], col=2, pch=8, type='o')})</div>
+<br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture10/fig14.png" width="470" height="330" alt="Fig. 14"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 60px; text-indent:-60px"><strong>Fig. 14</strong> &nbsp; Panel graph showing the raw data from the split-split design with blocks along with marginal means.</td>
+  </tr>
+</table>
+<p>Lastly I save the graph as an object and use the <span class="style1">useOuterStrips</span> function from the <span class="style19">latticeExtra</span> package to place panels on the left and on the top.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(yield~fertilizer|density + irrigation, data=sp, groups=block, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x, y, subscripts, groups, col='grey70', ...)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x[1:3], sp$pred[subscripts][1:3], col=2, pch=8, type='o')}) -&gt; mygraph</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">useOuterStrips(mygraph)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture10/fig15.png" width="470" height="330" alt="Fig. 15"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 60px; text-indent:-60px"><strong>Fig. 15</strong> &nbsp; Panel graph showing the raw data from the split-split design with blocks along with marginal means.</td>
+  </tr>
+</table>
+<p>Let's compare the  graph to the summary table to verify that everything makes sense.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(out1a)$tTable,4)</div>
+<p class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value Std.Error DF t-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 86.9167&nbsp;&nbsp;&nbsp; 4.9950 44 17.4007&nbsp; 0.0000<br>
+  irrigationirrigated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.9444&nbsp;&nbsp;&nbsp; 7.0640&nbsp; 3 -0.2753&nbsp; 0.8010<br>
+  densitymedium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.8333&nbsp; &nbsp;&nbsp;6.2227 12&nbsp; 0.9374&nbsp; 0.3670<br>
+  densityhigh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -4.8333&nbsp;&nbsp;&nbsp; 6.2227 12 -0.7767&nbsp; 0.4524<br>
+  fertilizerP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.9167&nbsp;&nbsp;&nbsp; 3.7175 44&nbsp; 0.2466&nbsp; 0.8064<br>
+  fertilizerNP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.3333&nbsp;&nbsp;&nbsp; 3.7175 44&nbsp; 1.1657&nbsp; 0.2500<br>
+  irrigationirrigated:densitymedium 10.0833&nbsp;&nbsp;&nbsp; 8.8002 12&nbsp; 1.1458&nbsp; 0.2742<br>
+  irrigationirrigated:densityhigh&nbsp;&nbsp; 29.7500&nbsp;&nbsp;&nbsp; 8.8002 12&nbsp; 3.3806&nbsp; 0.0055<br>
+  irrigationirrigated:fertilizerP&nbsp;&nbsp; 13.5000&nbsp;&nbsp;&nbsp; 5.2573 44&nbsp; 2.5678&nbsp; 0.0137<br>
+  irrigationirrigated:fertilizerNP&nbsp; 16.8333&nbsp;&nbsp;&nbsp; 5.2573 44&nbsp; 3.2019&nbsp; 0.0025
+  &nbsp;</p>
+<p>The <span class="style8">fertilizer</span> main effects in the summary table correspond to <span class="style8">irrigation = 'control'</span> and <span class="style8">density = 'low'</span>. As we can see there is no <span class="style8">fertilizer</span> effect for this combination of <span class="style8"></span> levels. The yield at <span class="style8">fertilizer = 'P'</span> is not significantly different (albeit slightly higher) than the yield at <span class="style8">fertilizer = 'N'</span> (<em>p</em> = 0.81). Similarly the yield at <span class="style8">fertilizer = 'NP'</span> is not significantly different from the yield at <span class="style8">fertilizer = 'N'</span> (<em>p</em> = 0.25). This corresponds to the fairly flat mean profiles in the bottom row of the panel graph. The <span class="style8">irrigation</span> main effect corresponds to <span class="style8">fertilizer = 'N'</span> and <span class="style8">density = 'low'</span>. The fact that it is not significant (<em>p</em> = 0.80) indicates that the yields are roughly the same regardless of whether  the plots were irrigated. The interaction effects of <span class="style8">irrigation</span> and <span class="style8">fertilizer</span> correspond to deviations from additive model at <span class="style8">fertilizer = 'P' </span>and <span class="style8">fertilizer = 'NP'</span>. In the summary table both terms are positive and statistically significant with the effect at <span class="style8">fertilizer = 'NP'</span> being slightly larger than the effect at <span class="style8">fertilizer = 'P'</span>. In the graph this corresponds to a nearly constant increase in yield from <span class="style8">fertilizer = 'N'</span> to <span class="style8">fertilizer = 'P'</span> and then to <span class="style8">fertilizer = 'NP'</span>. This is quite a contrast from the flat mean profile we would expect under the additive model with no interaction (lower row of panels). The basic conclusion is fairly obvious, there is no effect of fertilizer on yield unless the plants are irrigated.</p>
+<h2><a name="cited" id="cited"></a>Cited references</h2>
+<ul>
+  <li>Crawley, Michael J. 2002. <i>Statistical Computing: An Introduction to 
+    Data Analysis Using S-Plus</i>. Wiley, New York.</li>
+  <li><a name="donahue"></a>Donahue, R. M. J. 2010. Fundamental Statistics Concepts in Presenting Data: Principles for Constructing Better Graphics. Version 1.6 <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf</a></li>
+  <li>Hurlbert, Stuart H. 1984. Pseudoreplication and the design of ecological field experiments. <em>Ecological Monographs</em> <strong>54</strong>: 187&ndash;211.</li>
+  <li><a name="magnusson"></a>Magnusson, W. E. 2000. Error bars: are they the king's clothes? <em>Bulletin of the Ecological Society of America</em> <strong>81</strong>: 147&ndash;150. <a href="http://www.esajournals.org/doi/pdf/10.1890/0012-9623(2000)081[147%3AC]2.0.CO;2">http://www.esajournals.org/doi/pdf/10.1890/0012-9623%282000%29081%5B147%3AC%5D2.0.CO%3B2</a></li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture10&#32;Rcode.html">here</a>. </p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 6, 2012<br>
+      URL: <a href="lecture10.htm#lecture10" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture10.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

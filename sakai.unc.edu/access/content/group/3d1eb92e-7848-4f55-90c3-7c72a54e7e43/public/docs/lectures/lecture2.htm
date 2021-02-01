@@ -1,0 +1,867 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 2&mdash;Monday, August 27, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	
+}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture2" id="lecture2"></a>Lecture 2&mdash;Monday, August 27, 2012</h1>
+<h3>Topics</h3>
+<ul>
+<li><a href="lecture2.htm#description">Description of the data</a></li>
+<li><a href="lecture2.htm#readdata">Data entry</a>  </li>
+<li><a href="lecture2.htm#local">Reading data from a local file on your computer</a>
+  <ul>
+    <li><a href="lecture2.htm#pathwin">Path name conventions in Windows</a></li>
+    <li><a href="lecture2.htm#pathmac">Path name conventions in Mac OS X</a></li>
+    <li><a href="lecture2.htm#extensions">File name extensions</a></li>
+    <li><a href="lecture2.htm#locating">Specifying a file's location interactively</a></li>
+    <li><a href="lecture2.htm#specifying">Some ways to determine  the full path name to a file</a></li>
+    <li><a href="lecture2.htm#shortcut">Shortcut functions for reading in data: read.csv and read.delim</a></li>
+    </ul>
+</li>
+<li><a href="lecture2.htm#web">Reading in a text file  directly from the web</a>
+  <ul>
+    <li><a href="lecture2.htm#downloading">Downloading a new package from the CRAN site</a>
+      <ul>
+        <li><a href="lecture2.htm#win2">Windows</a></li>
+        <li><a href="lecture2.htm#mac2">Mac OSX</a></li>
+      </ul>
+    </li>
+    <li><a href="lecture2.htm#using">Using the RCurl package</a></li>
+  </ul>
+</li>
+<li><a href="lecture2.htm#fixing">Fixing mistakes and retrieving the command history</a>
+  <ul>
+    <li><a href="lecture2.htm#win1">Windows OS</a></li>
+    <li><a href="lecture2.htm#mac1">Mac OS X</a></li>
+    </ul>
+</li>
+<li><a href="lecture2.htm#getting">Getting information about data frames</a></li>
+<li><a href="lecture2.htm#factors">Factors in R</a></li>
+<li><a href="lecture2.htm#fitting">Fitting  ANOVA models: one-way or three-way?</a></li>
+<li><a href="lecture2.htm#TypeI">Type I and Type II tests</a></li>
+<li><a href="lecture2.htm#simplifying">Simplifying the model</a></li>
+<li><a href="lecture2.htm#twofactor">Graphical examination of  the two-factor interactions</a>
+  <ul>
+    <li><a href="lecture2.htm#int2">Examining the fac1 &times; fac2 interaction</a></li>
+    <li><a href="lecture2.htm#int3">Examining the fac2 &times; fac3 interaction</a></li>
+  </ul>
+</li>
+<li><a href="lecture2.htm#graphical">Graphical examination of the three-factor interaction</a> 
+  <ul>
+    <li><a href="lecture2.htm#drawing">Creating  a three-factor interaction diagram using the effects package</a></li>
+    <li><a href="lecture2.htm#alternative">Alternative displays of the same three-factor interaction</a></li>
+    </ul>
+</li>
+<li><a href="lecture2.htm#final">The final model</a></li>
+<li><a href="lecture2.htm#homogeneity">Model assumptions: homogeneity of variance</a></li>
+<li><a href="lecture2.htm#cited">Cited references</a></li>
+<li><a href="lecture2.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture2.htm#anova">anova</a> when applied to a model object created by the <span class="style1">lm</span> function, produces an analysis of variance table with the usual F-statistic for testing various effects. The reported F-tests  are variables-added-in-order tests, also called Type I tests.</li>
+  <li><a href="lecture2.htm#car">Anova</a> (<span class="style19">car</span> package) produces an analysis of variance table of  Type II tests.</li>
+  <li><a href="lecture2.htm#boxplot">boxplot</a> produces a single box plot of a continuous variable  or side-by-side box plots of a  continuous variable stratified by a grouping variable. </li>
+  <li><a href="lecture2.htm#choosecranmirror">chooseCRANmirror</a> can be used to change the current CRAN mirror site to another location.</li>
+  <li><a href="lecture2.htm#class">class</a> returns the class attribute of an R object.</li>
+  <li><a href="lecture2.htm#contrasts">contrasts</a> displays the coding scheme used by R for a factor.</li>
+  <li><a href="lecture2.htm#dim">dim</a> returns the number of rows and columns of a data frame.</li>
+  <li><a href="lecture2.htm#effect">effect</a> (<span class="style19">effects</span> package) creates an effect object that contains the estimates of the means and standard errors of treatments in an ANOVA model</li>
+  <li><a href="lecture2.htm#factor">factor</a> declares a variable to be a factor. The unique values of the variable become the levels of the factor and by default they are ordered in numerical or alphabetical order. Dummy contrasts are set up for the categories.</li>
+  <li><a href="lecture2.htm#filechoose">file.choose</a> can be used in the <span class="style1">read.table</span> function to permit files to be located interactively.</li>
+  <li><a href="lecture2.htm#geturl">getURL</a> (<span class="style191">RCurl</span> package) can be used to bring a text file into R from a web site. The contents of the file are brought in as a single long character string. We used it to read a file from a secure web site, one that had the https:// designation.</li>
+  <li><a href="lecture2.htm#getwd">getwd</a> is short for &quot;get working directory&quot; and displays the path of the current working directory to which R will read and write files.</li>
+  <li><a href="lecture2.htm#head">head</a> displays the first six observations of a data frame.</li>
+  <li><a href="lecture2.htm#history">history</a> is a function that works on Windows operating systems to open up a history window that lists previously issued commands. For example, history(50) would display  the last 50 commands issued. There is a 512 line default limit to what is saved, although this value can be changed. </li>
+  <li><a href="lecture2.htm#library">library</a> loads an R package into memory.</li>
+  <li><a href="lecture2.htm#lm">lm</a> is the linear model function in R for fitting ordinary regression models and analysis of variance.</li>
+  <li><a href="lecture2.htm#mean">mean</a> calculates the mean of a variable. </li>
+  <li><a href="lecture2.htm#names">names</a> displays names of the variables in a data frame.</li>
+  <li><a href="lecture2.htm#plot">plot</a> was used to create interaction plots using the output from the <span class="style1">effect</span> function.</li>
+  <li><a href="lecture2.htm#points">points</a> is a low-level graphics command that adds individual points to the currently active plot.</li>
+  <li><a href="lecture2.htm#shortcut">read.csv</a> reads in text data from an external file in which the fields are comma-delimited. It essentially is <span class="style1">read.table</span> with the <span class="style16">sep=','</span> and <span class="style16">header=T</span> arguments already supplied.</li>
+  <li><a href="lecture2.htm#shortcut">read.delim</a> reads in text data from an external file in which the fields are tab-delimited. It essentially is <span class="style1">read.table</span> with the <span class="style16">sep='\t'</span> and <span class="style16">header=T</span> arguments already supplied.</li>
+  <li><a href="lecture2.htm#readtable">read.table</a> reads in text data from an external file of any format. </li>
+  <li><a href="lecture2.htm#source">source</a> is used to load and execute a file of R commands from an external text file.</li>
+  <li><a href="lecture2.htm#summary">summary</a> displays the parameter estimates and summary statistics of a linear model.</li>
+  <li><a href="lecture2.htm#head">tail</a> displays the last six observations of a data frame.</li>
+  <li><a href="lecture2.htm#tapply">tapply</a> stands for &quot;table apply&quot;. It is used to apply a function (3rd argument) to a variable (1st argument) separately for each group specified by the second argument.</li>
+  <li><a href="lecture2.htm#textconnection">textConnection</a> makes a character vector, such as one created by <span class="style41">getURL</span>, look like a connection, allowing R routines that operate on connections to also operate on character vectors. We used it to convert the output from the <span class="style41">getURL</span> function into a form that <span class="style41">read.table</span> could understand.</li>
+  <li><a href="lecture2.htm#update">update</a> is used to add or subtract terms from a previously fit model. </li>
+  <li><a href="lecture2.htm#tilde">~</a> is the formula symbol and is used in defining expressions in R for model fitting. We used it in <span class="style1">boxplot</span> and <span class="style1">lm</span>. </li>
+  <li><a href="lecture2.htm#update">.~.</a> is used with the <span class="style1">update</span> function to denote the current model. </li>
+  <li><a href="lecture2.htm#star">*</a> in linear models is used as a shortcut notation to form all main effects and interactions involving a set of variables, e.g., y~var1*var2 is a shortcut for writing y~var1 + var2 + var1:var2</li>
+  <li><a href="lecture2.htm#caret">^n</a> in linear models is used as a shortcut notation to form all main effects and interactions involving a set of variables up to degree n, e.g., y~(var1+var2+var3)^2 is a shortcut for writing y~var1 + var2 + var3 + var1:var2 + var1:var3 + var2:var3, a model with all main effects and all two-factor interactions between the three variables var1, var2, and var3.</li>
+  <li><a href="lecture2.htm#colon">:</a> in linear models is used to denote an interaction between two variables, e.g., var1:var2. Also can be used to generate a sequence of numbers as in 1:6.</li>
+  <li><a href="lecture2.htm#comment">#</a> indicates that a given line of code is a comment and should be ignored by the R compiler.</li>
+  <li><a href="lecture2.htm#assignment">&lt;-</a> is the assignment operator in R. It is the  less than symbol followed by a dash, representing a left pointing arrow. The arrow points in the direction of assignment. One may also use the equals sign, =, for a left assignment. </li>
+  <li><a href="lecture2.htm#assignment">-&gt;</a> is the alternate assignment operator in R. It is a dash followed by a greater than symbol, representing a right pointing arrow. The arrow points in the direction of assignment.</li>
+  <li><a href="lecture2.htm#brackets">[ &nbsp;]</a>, a pair of brackets, is used for specifying elements of vectors or portions of data frames and matrices.</li>
+  <li><a href="lecture2.htm#dollar">$</a> is the list notation symbol that can be used to reference columns of a data frame by  the name assigned to that column, as in <span class="style10">tadpoles$fac1</span>.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+<li><a href="lecture2.htm#col">col</a>= (argument to many graphics functions) specifies the color to use in plotting points and/or line segments. </li>
+  <li><a href="lecture2.htm#header">header</a>= (argument to <span class="style1">read.table</span>) takes on values TRUE or FALSE, indicates whether the first line of a text file should be treated as containing  variable names (TRUE) or not (FALSE).</li>
+  <li><a href="lecture2.htm#horizontal">horizontal</a>= (argument to <span class="style1">boxplot</span>) when set to TRUE causes box plots to be drawn horizontally. </li>
+  <li><a href="lecture2.htm#las">las</a>= (argument for many graphics text functions) controls the orientation of printed text. We chose las=1 to display horizontal tick mark labels.</li>
+  <li><a href="lecture2.htm#pch">pch</a>= stands for  plot character and is used to designate the plotting symbol to be used in various plotting functions, such as <span class="style1">plot</span>, <span class="style1">points</span>, etc. </li>
+  <li><a href="lecture2.htm#multiline">multiline</a>= (argument to<span class="style1"> plot.eff</span> of <span class="style19">effects</span> package) is set to T or F. If TRUE then different profiles corresponding to the levels of the <span class="style17">z.var</span> factor are displayed in the same panel.</li>
+  <li><a href="lecture2.htm#narm">na.rm</a>= (argument to <span class="style1">mean</span> and many other statistical functions) is set to TRUE or FALSE to indicate whether missing values should be removed (TRUE) before performing calculations. If set to FALSE and there are missing value then the function returns NA as its value. </li>
+  <li><a href="lecture2.htm#sep">sep</a>= (argument to <span class="style1">read.table</span>) specifies the character that is used to separate fields in the text file. For example, <span class="style17">sep=',' </span>indicates that the entries are separated by commas while <span class="style17">sep='\t'</span> indicates that the entries are separated by tabs.</li>
+  <li><a href="lecture2.htm#ssl">ssl.verifyhost=</a> (argument to <span class="style41">getURL</span>  of <span class="style19">RCurl</span> package) can be used to turn host name verification off by setting <span class="style22">ssl.verifyhost=FALSE</span>.</li>
+  <li><a href="lecture2.htm#ssl">ssl.verifypeer=</a> (argument to <span class="style41">getURL</span> of <span class="style19"> RCurl</span> package) can be used to turn peer name verification off by setting <span class="style22">ssl.verifypeer=FALSE</span>.</li>
+  <li><a href="lecture2.htm#xlab">xlab</a>= (argument of all plotting functions) a user-specified value to be used as the label for the <em>x</em>-axis, e.g., <span class="style10">xlab=&quot;Mitotic activity&quot;</span></li>
+  <li><a href="lecture2.htm#xvar">x.var</a>= (argument to<span class="style1"> plot.eff </span>of <span class="style19">effects</span> package) name of factor to display on <em>x</em>-axis, e.g.,<span class="style10"> x.var=&quot;fac1&quot;</span></li>
+  <li><a href="lecture2.htm#zvar">z.var</a>= (argument to <span class="style1">plot.eff </span>of <span class="style19">effects</span> package) name of factor that identifies the different profiles, e.g.,<span class="style10"> z.var=&quot;fac2&quot;</span></li>
+</ul>
+<h3>Additional R packages used </h3>
+<ul>
+  <li><a href="lecture2.htm#car">car</a> for the <span class="style1">Anova</span> function</li>
+  <li><a href="lecture2.htm#effects">effects</a> for the <span class="style1">effect</span> function and its <span class="style1">plot.eff </span>method to generate plots of interaction effects.</li>
+  <li><a href="lecture2.htm#using">RCurl</a> for the <span class="style41">getURL</span> function. The <span class="style191">RCurl</span> package provides an R-interface to the libcurl library that provides HTTP facilities. This allows one to download files from Web servers, post forms, use HTTPS (the secure HTTP), use persistent connections, upload files, use binary content, handle redirects, and password authentication.</li>
+</ul>
+<h2><a name="description"></a>Description of the data</h2>
+<p>The data are drawn from  an  experiment  in which a continuous response was measured for twelve treatment groups that were constructed by combining the levels of three categorical factors. Typically such an experiment is analyzed as a three-factor analysis of variance (ANOVA). Here's a description  of the variables as supplied to me by the researcher.</p>
+
+
+  <blockquote>
+    <p class="styleArial"><strong>Response</strong>: The response variable is mitotic activity in the intestine of my tadpoles after I fed them certain diets. I measured it using an antibody against phosphorylated histone (DNA histones are phosphorylated during mitosis), and basically it gives me a measure of how well the tadpoles are assimilating the diet that I feed them. </p>
+    <p class="styleArial"><strong>Factor 1</strong> (Co, No and Ru) is a hormonal manipulation. In a previous experiment I found that these tadpoles exhibited more mitotic activity when fed shrimp (their native diet) and less when fed detritus. I was trying to figure out whether the reduction in mitotic activity on detritus was related to stress hormones. Co = CORT, or corticosterone, No = None, or control and Ru = Ru486, which is a CORT antagonist. So the thought was that if the depression of mitotic activity in detritus-fed tadpoles was alleviated by Ru486, or the elevated mitotic activity in shrimp-fed tadpoles was depressed by CORT, then stress hormones may be the proximate cause of diet-induced differences in these tadpoles. </p>
+    <p class="styleArial"><strong>Factor 2</strong> is the diet. D = Detritus and S = Shrimp. Most tadpoles eat detritus, this species has evolved a novel diet of shrimp and other tadpoles. </p>
+    <p class="styleArial"><strong>Factor 3</strong> is family. I used two sibships for this experiment, and, as I unfortunately found out, one of the families performed about as well on detritus as it did on shrimp (contrary to all other experiments I've done). So, there appears to be family variation for shrimp assimilation.</p>
+</blockquote>
+<h2><a name="readdata"></a>Data entry</h2>
+<p>When R is launched the R Console window appears in which R commands can be entered. In the Windows operating system to move around within a command line to correct mistakes you need to use the left and right arrow keys on the keyboard rather than the mouse. The home and end keys can be used to move to the beginning and end of the current line.  Previously issued commands can be recalled with the up arrow key. Choose <span class="styleArial">Help &gt; Console</span> from the menu (Windows OS) for additional details. These same keyboard manipulations work with R for Mac OS X but in addition the mouse can be used to move around within the same command line.</p>
+<p>Today's data set is <a href="../../data/tadpoles.csv">tadpoles.csv</a>. It is a comma-delimited text file. For purposes of this exercise you can download the file to your own computer and then read it into R or read it into R directly from the web site. I illustrate both methods.</p>
+<h2><a name="local"></a>Reading data from a local file on your computer into R</h2>
+<p>To read your own data into R from Excel, say, you would first need to create an appropriate text file. While there exist R packages  for reading Excel files  directly (on Windows machines),  for most purposes it is preferable to use Excel to create a text file of your data and read in the text file instead. To create a text file from an Excel worksheet you would first choose <span class="styleArial">File &gt; Save As...</span> from the file menu. In the <span class="styleArial">Save As</span> window that appears change the Save as type option at the bottom of the window to <span class="styleArial">Text (tab delimited) (*txt)</span> or <span class="styleArial">CSV (Comma delimited) (*.csv)</span>. Fig. 1 shows both of these options with the comma-delimited option highlighted.</p>
+<p align="center"><img src="../../images/lectures/lecture2/excelmenu.jpg" width="596" height="84">  
+<p align="center" class="styleArial"><strong>Fig. 1</strong> &nbsp;Choosing the file format when saving files in Excel</p>
+<p>The data set <a href="../../data/tadpoles.csv">tadpoles.csv</a> was created in this fashion. Here's a portion of what that file looks like when opened with a text editor.</p>
+<p class="style10">response,treatment,fac1,fac2,fac3<br>
+  ,RuS1,Ru,S,1<br>
+  ,RuS1,Ru,S,1<br>
+  ,RuS1,Ru,S,1<br>
+,RuS1,Ru,S,1</p>
+<p>The first row of the file contains the variable names separated by commas. The data values begin in row 2. The values of the variable &quot;response&quot; are missing for the first few observations so the first entry in these lines is a comma. One of the reasons for saving Excel files in a delimited format is so that missing observations are accounted for properly.</p>
+<p><a name="readtable"></a>Save the <a href="../../data/tadpoles.csv">tadpoles.csv</a> file to a folder on your computer. This could be a specified folder that you've designated for work related to this class. Keep track of the full path name to the location of this file on your computer so that you can locate it again. The basic way to read  data into R from a text file is to use the <span class="style1">read.table</span> function. R uses standard mathematical notation <em>f</em>(<em>x</em>,<em>y</em>,<em>z</em>) to specify functions and their arguments, so parentheses are always required with functions but for some functions it is not always necessary to specify  arguments.</p>
+<p>The structure of the current data file is such that we only need to specify three arguments. </p>
+<ol>
+  <li>The first argument is the location of this file with the complete path enclosed in quotes. You may use single or double quotes for this, but you must not mix the two types as part of the same argument.</li>
+  <li><a name="header"></a>The argument <span class="style17">header=TRUE</span> is needed to indicate that the  names of  variables appear in the first line  of the file.</li>
+  <li><a name="sep"></a>The argument <span class="style17">sep=',' </span>is needed to indicate that observations in this file are separated by commas.</li>
+</ol>
+<p><span class="style1"><a name="assignment"></a></span>The <span class="style1">read.table</span> function processes the external data file and creates an R object called a data frame which by default is then printed to the screen. To be able to retain function output we need to explicitly assign the output  to a named R object using the assignment operator (also called the assignment arrow). The assignment arrow is constructed from two keyboard characters and is either a left-pointing arrow, <span class="style1">&lt;-</span> , or a right-pointing arrow, <span class="style1">-&gt;</span>. The arrow points in the direction of the assignment.</p>
+<ul>
+  <li>If we use <span class="style1">&lt;-</span> then the named object appears first, followed by the arrow, followed by the calculation that produces the output. The syntax is <span class="style10">named_object &lt;- calculation</span>. </li>
+  <li>If we use <span class="style1">-&gt;</span> then the calculation should appear first, then <span class="style1">-&gt;</span>, followed by the variable that is to get assigned the result of the calculation. The syntax is <span class="style10">calculation -&gt; named_object.</span></li>
+</ul>
+<p>Note: The <span class="style1">&lt;-</span> can be replaced with an <span class="style1">=</span> sign. The equal sign always assigns the result of the calculation on the right to the variable on the left of the equal sign. Thus it cannot be used to replace <span class="style1">-&gt;</span>. </p>
+<p>The following line reads in the data file from the specified location on my computer and stores the result in an object called <span class="style8">tadpoles</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">tadpoles &lt;- read.table('C:/Users/jmweiss/Documents/ecol 563/tadpoles.csv', header=T, sep=',')</div>
+<h3><strong><a name="pathwin" id="pathwin"></a>Path names for files in Windows</strong></h3>
+        
+              <p>Windows uses a single back slash, \, to separate the folders in the path name of a file. This representation is not allowed in R. You should replace each back slash with a  forward slash, as in the URLs of web sites, or with double back slashes. For example, if the file <span class="style10">tadpoles.txt</span> is located on the C: drive in the folder ecol 563 of the Documents folder on my hard drive, I would  specify the path name to this file using forward slashes as follows.</p>
+<p> <span class="style10">'C:/Users/jmweiss/Documents/ecol 563/tadpoles.csv'</span> </p>
+              <p>Using double back slashes it would be the following.</p>
+<p><span class="style10">'C:\\Users\\jmweiss\\Documents\\ecol 563\\tadpoles.csv'</span>, </p>
+              <p>You must <u>not use</u>  the single backslashes that Windows conventionally uses as in <span class="style10">'C:\Users\jmweiss\Documents\ecol 563\tadpoles.csv'</span>. The single backslash is used within character strings to denote special characters in R and modifies how text enclosed in quotes will print to the screen. </p>
+              <h3><strong><a name="pathmac"></a>Path names for files in Mac OS X</strong></h3>
+<p>In Mac OS X the file name syntax is  a little different. Suppose I have the file in a folder I call ecol563 in the Documents folder on my hard disk. The correct file designation for me would be: </p>
+              <p><span class="style10">'/Users/jackweiss/Documents/ecol563/tadpoles.csv'</span>. </p>
+<p>You can see the path name for a file by clicking on the folder name at the top of its window while holding down the command (apple) key. In specifying the path in R it is not necessary to include any details about the path for any folder in the hierarchy that is above the Users folder.</p>
+<p> Mac OS X also supports file drag and drop. For instance, you can type <span class="style10">read.table(&quot;&quot;, header=T, sep=',')</span> leaving out the file name, drag the icon of the data file from its source folder to the R console window, and release it when the cursor lies between the quotation marks. The file name with the complete correct path designation will appear between the quotation marks. Make sure there are no extra spaces inside the quotes before you press the return key.</p>
+        
+<h3><a name="extensions"></a>File name extensions</h3>
+<p>Remember that the files created by programs such as Excel, Notepad, Textedit, etc.  have extensions associated with them by default. You will not see those extensions if your operating system is configured so that file extensions are made invisible, but they are still there. Typically they will be .txt (for space-delimited or tab-delimited files), .dat (sometimes for tab-delimited files), and .csv (for comma-delimited files). If you get an error message such as 'No such file or directory' with the <span class="style1">read.table</span> function it may be because you did not include the extension in the file name. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># I forgot to include the file extension .csv</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">tadpoles &lt;- read.table('/Users/jmweiss/Documents/ecol 563/tadpoles', header=T, sep=',')</div>
+<span class="style24">  Error in file(file, &quot;rt&quot;) : cannot open the connection<br>
+  In addition: Warning message:<br>
+  In file(file, &quot;rt&quot;) :<br>
+&nbsp; cannot open file '/Users/jmweiss/Documents/ecol 563/tadpoles': No such file or directory</span>
+<p>Anytime you get an error message resembling the one shown above, it means you've made an error in specifying the name or location of the file. R treats any line that begins with a <a name="comment"></a><span class="style1">#</span> symbol as a comment and ignores it. I will occasionally mix comments in with the code to annotate what's being done. They will be colored <span class="style15">green</span> with a shaded background. </p>
+<p>A problem with some  operating systems is that the details of the file hierarchy are  concealed from the user so that a file's exact address may be unclear. Here are a couple of work-arounds if that is the case.</p>
+<h3><a name="locating"></a><strong>Specifying a file's location interactively</strong>
+</h3>
+<p><a name="filechoose"></a>You don't have to know the location of the file to read it into R. You can use the<span class="style1"> file.choose</span> function for the file location in <span class="style1">read.table</span>. This will bring up a &quot;File Choose&quot; window within which you can  then navigate to the file.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #locate file interactively </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles &lt;- read.table(file.choose(), header=T, sep=',')</div>
+<p>I don't recommend this as a regular option. Ideally you want to save all of the R commands used for an analysis in a text file so that you can easily repeat the analysis when needed. Having to negotiate through a file selection window each time is silly, particularly when at a future date you may not even remember the name of the data file you used in the analysis. I recommend hard-wiring the file location in.</p>
+<div class="figureR">
+  <p align="center"><img src="../../images/lectures/lecture2/sourcemenu.png" width="212" height="262" alt="source menu">
+  <p align="center"> <strong>Fig. 2</strong> &nbsp;Source file&hellip; in File  menu</p>
+</div>
+<h3><strong><a name="specifying"></a>Some ways to determine   the full path name to  a file</strong>
+</h3>
+<p>Depending on the operating system you're using the full path to files in special folders may not be explicitly shown (e.g., in older versions of Windows). In this case you can use R to show you the path name of your file. Use Notepad to create a text file with a single calculation line in it, say the mathematical expression 2+2. Save this file in the same folder containing your data. For instance, I save it as the file <span class="style10">arithmetic.txt</span>. </p>
+<p><a name="source"></a>Next within R choose <span class="styleArial">File &gt; Source File &hellip;</span> (Fig. 2) from the menu, navigate to the folder that contains the file you just created, change the file type in the drop-down menu to <span class="styleArial">All files (*.*)</span>, and select it. R will display the entire path name of the file it is sourcing in the console window.</p>
+<span class="style24">source(&quot;C:\\Users\\jmweiss\\Documents\\ecol 563\\arithmetic.txt&quot;)</span>
+<p>Now all that's left to do is to copy this line (or use the up arrow on the keyboard to navigate to it), change the function name from <span class="style1">source</span> to <span class="style1">read.table</span>, change <span class="style10">arithmetic.txt</span> to the file name of the data set, and add the additional arguments<span class="style17"> header = T</span> and <span class="style17">sep=','</span>.</p>
+<p><a name="getwd"></a>Another thing that may help is to determine the folder that R is using as the current working directory. The working directory is the folder that R uses by default for reading and writing files. The <span class="style1">getwd</span> function of R returns the location of the working directory.</p>
+<span class="style23">getwd()</span><br>
+<span class="style24">&quot;C:/Users/jmweiss/Documents&quot;</span>
+<p>If the data file of interest happens to lie inside the Documents folder then just complete the rest of the path name. In fact because the Documents folder is the default working directory, you don't really need to give the full path to the file. You can start instead with the first folder inside the Documents folder that contains the file.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">tadpoles &lt;- read.table(&quot;ecol 563/tadpoles.csv&quot;, header=T, sep=',')</div>
+<h3><a name="shortcut"></a>Shortcut functions for reading in data: read.csv and read.delim</h3>
+<p>The <span class="style1">read.table</span> function is a general function that can be used to read in text files with various delimiters depending on the value that you specify in the <span class="style17">sep</span> argument. As we've seen <span class="style17">sep=','</span> is used for comma-delimited files. To read in a tab-delimited file we would need to enter <span class="style17">sep='\t'</span>. If you leave off  the <span class="style17">sep</span> argument entirely R assumes the values in the file are separated by spaces. </p>
+<p>R also provides functions specific for comma-delimited and tab-delimited files: <span class="style1">read.csv</span> for comma-delimited files and <span class="style1">read.delim</span> for tab-delimited files. Both of these functions expect that the variable names appear in row 1 of the file so the <span class="style17">header=T</span> argument can be left off also. To read in the tadpoles file using <span class="style1">read.csv</span> we can do the following.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">tadpoles &lt;- read.csv(&quot;ecol 563/tadpoles.csv&quot;)</div>
+<h2><a name="web" id="web"></a>Reading in a text file  directly from the web</h2>
+<p>The <span class="style41">read.table</span> function can also be used to read in files from the web. For this the first argument of <span class="style41">read.table</span> is the URL of the file, where the entire URL is enclosed  in quotes. This will work for files located on web sites whose URL begins with 'http://'. Unfortunately the Sakai site where the class files are stored is a secure site whose URL  begins with &quot;https://&quot;. Reading in public files from such sites is a two-step process in R that requires the use of the <span class="style41">getURL</span> function that is contained in the <span class="style191">RCurl</span> package. The <span class="style191">RCurl</span> package is not part of the standard installation of R so we'll first need to download it from the CRAN site and install it into our copy of R. This process needs to be  done only once.</p>
+<h3><a name="downloading"></a>Downloading a new package from the CRAN site</h3>
+<p class="style161"><a name="win2"></a>Windows OS</p>
+<p>On Windows downloading and installing a new R package  is a three-step process.</p>
+<ol>
+  <li>Choose <span class="styleArial">Install Packages</span> from the <span class="styleArial">Packages</span> menu (Fig. 3a).</li>
+  <li>Choose a mirror site for the download (Fig. 3b). </li>
+  <li>Select the desired package from the list of packages that appears and click the <span class="styleArial">OK</span> button (Fig. 3c). </li>
+</ol>
+<table width="722" border="0" align="center" cellpadding="1" cellspacing="0">
+  <tr>
+    <td width="255" valign="top">(a) <img src="../../images/lectures/lecture2/pkg1a.png" alt="" width="226" height="124" align="top"></td>
+    <td width="221" valign="top"><div align="left">(b) <img src="../../images/lectures/lecture2/cranbiga.png" alt="CRAN" width="158" height="470" align="texttop"></div></td>
+    <td width="240" valign="top">(c) <img src="../../images/lectures/lecture2/menubiga.png" alt="menu" width="197" height="418" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="styleArial"><strong>Fig. 3</strong> &nbsp;Windows OS: Installing an R package from the CRAN site on the web </td>
+  </tr>
+</table>
+<p>The desired package will be downloaded along with any additional packages  it requires. </p>
+<p class="style161"><a name="mac2"></a>Mac OS X</p>
+<p>Choose <span class="styleArial">Package Installer</span> from the <span class="styleArial">Packages &amp; Data </span>menu (Fig. 4a). In the window that appears (Fig. 4b)  enter <span class="style1011">RCurl</span> in the <span class="styleArial">Package Search box</span> and press the return key on the keyboard to search for the <span class="style1911">RCurl</span> package. It should eventually appear in the Package column along with its version number. Click the <span class="styleArial">Install Dependencies</span> check box so that if the package depends on any other packages these will be downloaded also. Finally, highlight the desired package in the list (sometimes multiple packages appear) and  click <span class="styleArial">Install Selected</span> to download the package to the R libraries folder.</p>
+<table  border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td width="240" valign="top">(a) <img src="../../images/lectures/lecture2/mac1a.png" alt="mac1" width="196" height="96" align="texttop"></td>
+    <td width="520">(b) <img src="../../images/lectures/lecture2/macinstallera.png" alt="installer" width="484" height="377" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="styleArial"><strong>Fig. 4</strong> &nbsp;Mac OS X: Installing an R package from the CRAN site.</td>
+  </tr>
+</table>
+<p><a name="choosecranmirror"></a>If the package fails to turn up when searching for  it, the  CRAN mirror you're using doesn't have the appropriate version of the package  for your installed version of R. In that case you can try changing the mirror by entering <span class="style11">chooseCRANmirror()</span> at the R command prompt in the console, choosing a different mirror site in the pop-up menu that appears, and repeating the above protocol to try to install the package again from the new site.</p>
+<h3><a name="using" id="using"></a>Using the RCurl package</h3>
+<p><a name="library"></a>The package is now installed into your version of R but it hasn't been loaded into memory yet. That can be done with the <span class="style12">library</span> function.</p>
+<div class="style102" style="padding-left: 30px; text-indent:-30px">library(RCurl)</div>
+<p><a name="geturl"></a>The next step is to bring the text file into R from the web site with the <span class="style41">getURL</span> function from the <span class="style191">RCurl</span> package. This brings the contents of the file into R as a single long character string. In the command shown below I enclose the URL of the <span class="styleArial">tadpoles.csv</span> data set from the Sakai web site in quotes and make it the first argument of <span class="style41">getURL</span>. (I obtained the URL by right-clicking on the file and choosing &quot;copy link location&quot; from the context menu that appears.)</p>
+<div class="style102" style="padding-left: 30px; text-indent:-30px">myfile &lt;- getURL(&quot;https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/data/tadpoles.csv&quot;)</div>
+<p>The above function call works on my Mac, but on Windows I get the following error message.</p>
+<span class="style24">Error in function (type, msg, asError = TRUE)  : <br>
+SSL certificate problem, verify that the CA cert is OK. Details:<br>
+error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed</span>
+<p><a name="ssl"></a>I was able to fix this by adding two additional arguments to <span class="style41">getURL</span>, <span class="style11">ssl.verifyhost=F</span> and <span class="style11">ssl.verifypeer=F</span>.</p>
+<div class="style102" style="padding-left: 30px; text-indent:-30px">myfile &lt;- getURL(&quot;https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/data/tadpoles.csv&quot;, ssl.verifyhost=F, ssl.verifypeer=F)</div>
+<p><a name="textconnection"></a>Finally we need to convert the output from <span class="style41">getURL</span> into a usable format. The function <span class="style41">textConnection</span> will do this and the output from it can then be used as the first argument of <span class="style41">read.table</span>.</p>
+<div class="style102" style="padding-left: 30px; text-indent:-30px">tadpoles &lt;- read.table(textConnection(myfile), header=T)</div>
+<h2><a name="fixing"></a>Fixing mistakes and retrieving the command history</h2>
+<p>If you accidentally hit the <span class="styleArial">return</span> key before you finished typing a line, R will present you with a <span class="style17">+</span> prompt indicating that it is waiting for more information. At this point you can just finish the line and then hit <span class="styleArial">return</span> again. In line below I pressed the <span class="styleArial">return</span> key before closing the parenthesis on the <span class="style1">read.table</span> function.</p>
+<p class="style10"><span class="style17">&gt;</span> tadpoles &lt;- read.table('ecol 563/tadpoles.csv', header=T, sep=','<br>
+<span class="style17">+</span> )</p>
+<p>Alternatively you can press the <span class="styleArial">esc</span> key to cancel the command altogether. Then you can then use the up arrow key, &uarr;, to move back to that line and finish it or fix any errors that you made.</p>
+<p>Previously issued commands are stored in a history buffer. Accessing it is done differently in Windows and Mac OS X.</p>
+<p class="style16"><a name="win1"></a>Windows</p>
+<p><a name="history"></a>Old commands can be viewed by opening the history window. The command to do this is <span class="style1">history(<em>n</em>)</span> where <em>n</em> is the number of old command lines you wish to see.  The following will retrieve the last 50 lines and display them in a separate window.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">history(50)</div>
+<p>Eventually the history buffer gets filled and the old commands are lost, so you should issue this command frequently if you want to record your work. I usually paste the commands from the history window into a Notepad or Word document where I remove the mistakes and add comments. The  contents of the history window can also be saved to a file by choosing <span class="styleArial">File &gt; Save to File ...</span> from the menu when the R History window is the active window.</p>
+<p class="style16"><a name="mac1"></a>Mac OS X</p>
+<p>In Mac OS X the command history is displayed by clicking the history icon  <img src="../../images/lectures/lecture2/history2.png" alt="history" width="28" height="24" align="absmiddle"> that appears in the tool bar at the top of the console window. This causes the list of old commands to appear on the right side of the console. A button at the bottom of this window can be used to save the entire history to a file.</p>
+<h2><a name="getting"></a>Getting information about   data frames </h2>
+        <p>The object <span class="style10">tadpoles</span> created above with the <span class="style1">read.table</span> function is called a data frame. Data frames look like matrices but the elements of data frames can be mixtures of character and numeric data. More formally  data frames are tightly coupled collections of variables that share many of the properties of matrices and of lists (another R data structure). Data frames are the fundamental data structures for most of R's modeling functions.</p>
+        <p name="dim"><a name="dim"></a>The <span class="style1">dim</span> function is used to determine the dimensions of a data frame. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dim(tadpoles)</div>
+<span class="style24">[1] 270&nbsp;&nbsp; 5</span>
+          <p><a name="head"></a>The displayed output from <span class="style1">dim</span> is a vector with two components (the number of rows followed by the number of columns). From the output we see that there are 270 rows and 5 columns. We can view the beginning and the end of data frames with the <span class="style1">head</span> and <span class="style1">tail</span> functions of R.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> head(tadpoles)</div>
+<span class="style24">   &nbsp; response treatment fac1 fac2 fac3<br>
+            1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+            2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+            3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+            4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+            5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp; &nbsp;Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+            6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">tail(tadpoles)</div>
+<span class="style24">   &nbsp;&nbsp;&nbsp; response treatment fac1 fac2 fac3<br>
+            265&nbsp;&nbsp;&nbsp; 3.075&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CoD2&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+            266&nbsp;&nbsp;&nbsp; 3.341&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CoD2&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+            267&nbsp;&nbsp;&nbsp; 3.300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CoD2&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+            268&nbsp;&nbsp;&nbsp; 2.915&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CoD2&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+            269&nbsp;&nbsp;&nbsp; 3.257&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CoD2&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+          270&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CoD2&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2</span>
+<p><a name="brackets"></a>Notice that the missing values in the original file have been replaced by the entry NA which stands for &quot;not available&quot;. More generally we can access specific rows and columns of a data frame using bracket notation. To view the first six rows, denoted 1:6, and all columns I enter</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles[1:6,]</div>
+<span class="style24">   &nbsp; response treatment fac1 fac2 fac3<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1</span>
+<p id="dataframe" name="dataframe">To see only specific columns we need to enter those column numbers after the comma inside the brackets. To see only columns 1:2 of the first six rows the following will work.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles[1:6,1:2]</div>
+<span class="style24">   &nbsp; response treatment<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RuS1</span>
+<p>To see all the values of the variable &quot;response&quot; we can access it by specifying column 1 of the data frame or by specifying the name of the column. To see all the observations I don't enter anything in the row position in front of the comma.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles[,1]</div>
+<span class="style24">   &nbsp; [1]&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA<br>
+  &nbsp;[14]&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA<br>
+  &nbsp;[27]&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA 4.166 4.429 3.655 4.137 4.080 4.529 4.396 4.091 4.282<br>
+  &nbsp;[40] 4.029 4.102 4.309 3.719 4.272 4.172 3.886 3.474 3.888 3.878 3.939 3.718 3.875<br>
+  &nbsp;[53] 3.635 4.170 3.735 3.720 4.193 4.155 4.263 3.610 3.516 4.196 4.144 3.921 3.675<br>
+  &nbsp;[66] 3.942 4.355 4.232 3.941 4.018 3.967 4.220 4.057 4.417 4.237 4.291 4.296 4.192<br>
+  &nbsp;[79] 4.109 3.995 3.488 3.639 3.589 3.607 3.370 3.356 3.333 3.254 3.312 3.470 3.385<br>
+  &nbsp;[92] 3.435 3.435 3.249 3.240 3.368 3.860 3.849 3.913 3.850 4.053 4.063 3.847 4.020<br>
+  [105] 3.976 3.896 4.008 3.474 3.386 3.351 2.907 3.187 3.509 3.418 3.539 3.420 3.210<br>
+  [118] 3.408 3.552 3.201 3.247 3.289 3.195 3.431 3.180 3.140 3.301 3.253 3.155 3.119<br>
+  [131] 3.250 4.454 4.370 4.079 4.567 4.483 4.192 4.073 4.350 4.289 4.258 4.391 4.555<br>
+  [144] 4.227 4.312 4.112 4.153 4.211 4.025 3.977 4.278 4.388 3.890 3.758 4.184 3.599<br>
+  [157] 3.711 3.375 3.622 3.315 3.473 3.820 3.548 3.428 3.502 3.572 3.497 4.395 4.448<br>
+  [170] 4.229 4.433 4.262 4.460 4.445 4.511 4.330 4.341 4.473 4.523 4.084 4.178 4.148<br>
+  [183] 3.955 3.747 4.035 4.112 4.078 4.318 4.169 4.134 3.895 3.848 3.964 4.550 3.897<br>
+  [196] 4.493 3.796 3.901 3.992 4.458 3.947 3.916 3.524 4.245 3.959 4.134 4.292 4.069<br>
+  [209] 3.986 4.570 4.473 4.202 4.126 4.146 4.269 4.226 4.022 4.328 3.838 3.725 4.061<br>
+  [222] 3.997 4.140 3.861 4.102 3.732 4.018 3.769 3.537 3.869 3.740 3.707 3.619 3.787<br>
+  [235] 3.606 3.627 3.522 3.767 3.611 4.491 4.483 4.429 4.411 4.603 4.141 4.185 4.117<br>
+  [248] 4.265 4.304 4.151 4.187 3.561 3.707 3.603 3.565 3.686 3.762 3.853 3.830 3.623<br>
+  [261] 3.728 3.623 3.789 3.281 3.075 3.341 3.300 2.915 3.257&nbsp;&nbsp;&nbsp; NA</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles[,&quot;response&quot;]</div>
+<span class="style24">   &nbsp; [1]&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA<br>
+  &nbsp;[14]&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA<br>
+  &nbsp;[27]&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp; &nbsp;NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA 4.166 4.429 3.655 4.137 4.080 4.529 4.396 4.091 4.282<br>
+  &nbsp;[40] 4.029 4.102 4.309 3.719 4.272 4.172 3.886 3.474 3.888 3.878 3.939 3.718 3.875<br>
+  &nbsp;[53] 3.635 4.170 3.735 3.720 4.193 4.155 4.263 3.610 3.516 4.196 4.144 3.921 3.675<br>
+  &nbsp;[66] 3.942 4.355 4.232 3.941 4.018 3.967 4.220 4.057 4.417 4.237 4.291 4.296 4.192<br>
+  &nbsp;[79] 4.109 3.995 3.488 3.639 3.589 3.607 3.370 3.356 3.333 3.254 3.312 3.470 3.385<br>
+  &nbsp;[92] 3.435 3.435 3.249 3.240 3.368 3.860 3.849 3.913 3.850 4.053 4.063 3.847 4.020<br>
+  [105] 3.976 3.896 4.008 3.474 3.386 3.351 2.907 3.187 3.509 3.418 3.539 3.420 3.210<br>
+  [118] 3.408 3.552 3.201 3.247 3.289 3.195 3.431 3.180 3.140 3.301 3.253 3.155 3.119<br>
+  [131] 3.250 4.454 4.370 4.079 4.567 4.483 4.192 4.073 4.350 4.289 4.258 4.391 4.555<br>
+  [144] 4.227 4.312 4.112 4.153 4.211 4.025 3.977 4.278 4.388 3.890 3.758 4.184 3.599<br>
+  [157] 3.711 3.375 3.622 3.315 3.473 3.820 3.548 3.428 3.502 3.572 3.497 4.395 4.448<br>
+  [170] 4.229 4.433 4.262 4.460 4.445 4.511 4.330 4.341 4.473 4.523 4.084 4.178 4.148<br>
+  [183] 3.955 3.747 4.035 4.112 4.078 4.318 4.169 4.134 3.895 3.848 3.964 4.550 3.897<br>
+  [196] 4.493 3.796 3.901 3.992 4.458 3.947 3.916 3.524 4.245 3.959 4.134 4.292 4.069<br>
+  [209] 3.986 4.570 4.473 4.202 4.126 4.146 4.269 4.226 4.022 4.328 3.838 3.725 4.061<br>
+  [222] 3.997 4.140 3.861 4.102 3.732 4.018 3.769 3.537 3.869 3.740 3.707 3.619 3.787<br>
+  [235] 3.606 3.627 3.522 3.767 3.611 4.491 4.483 4.429 4.411 4.603 4.141 4.185 4.117<br>
+  [248] 4.265 4.304 4.151 4.187 3.561 3.707 3.603 3.565 3.686 3.762 3.853 3.830 3.623<br>
+  [261] 3.728 3.623 3.789 3.281 3.075 3.341 3.300 2.915 3.257&nbsp;&nbsp;&nbsp; NA<br>
+</span>
+<p><a name="dollar"></a>Variables can also be accessed from a data frame by using what's called list notation. For this we specify the name of the data frame, <span class="style10">tadpoles</span>, followed by a dollar sign, <span class="style1">$</span>, followed by the variable name.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles$response</div>
+<span class="style24">   &nbsp; [1]&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA<br>
+  &nbsp;[14]&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA<br>
+  &nbsp;[27]&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp; NA 4.166 4.429 3.655 4.137 4.080 4.529 4.396 4.091 4.282<br>
+  &nbsp;[40] 4.029 4.102 4.309 3.719 4.272 4.172 3.886 3.474 3.888 3.878 3.939 3.718 3.875<br>
+  &nbsp;[53] 3.635 4.170 3.735 3.720 4.193 4.155 4.263 3.610 3.516 4.196 4.144 3.921 3.675<br>
+  &nbsp;[66] 3.942 4.355 4.232 3.941 4.018 3.967 4.220 4.057 4.417 4.237 4.291 4.296 4.192<br>
+  &nbsp;[79] 4.109 3.995 3.488 3.639 3.589 3.607 3.370 3.356 3.333 3.254 3.312 3.470 3.385<br>
+  &nbsp;[92] 3.435 3.435 3.249 3.240 3.368 3.860 3.849 3.913 3.850 4.053 4.063 3.847 4.020<br>
+  [105] 3.976 3.896 4.008 3.474 3.386 3.351 2.907 3.187 3.509 3.418 3.539 3.420 3.210<br>
+  [118] 3.408 3.552 3.201 3.247 3.289 3.195 3.431 3.180 3.140 3.301 3.253 3.155 3.119<br>
+  [131] 3.250 4.454 4.370 4.079 4.567 4.483 4.192 4.073 4.350 4.289 4.258 4.391 4.555<br>
+  [144] 4.227 4.312 4.112 4.153 4.211 4.025 3.977 4.278 4.388 3.890 3.758 4.184 3.599<br>
+  [157] 3.711 3.375 3.622 3.315 3.473 3.820 3.548 3.428 3.502 3.572 3.497 4.395 4.448<br>
+  [170] 4.229 4.433 4.262 4.460 4.445 4.511 4.330 4.341 4.473 4.523 4.084 4.178 4.148<br>
+  [183] 3.955 3.747 4.035 4.112 4.078 4.318 4.169 4.134 3.895 3.848 3.964 4.550 3.897<br>
+  [196] 4.493 3.796 3.901 3.992 4.458 3.947 3.916 3.524 4.245 3.959 4.134 4.292 4.069<br>
+  [209] 3.986 4.570 4.473 4.202 4.126 4.146 4.269 4.226 4.022 4.328 3.838 3.725 4.061<br>
+  [222] 3.997 4.140 3.861 4.102 3.732 4.018 3.769 3.537 3.869 3.740 3.707 3.619 3.787<br>
+  [235] 3.606 3.627 3.522 3.767 3.611 4.491 4.483 4.429 4.411 4.603 4.141 4.185 4.117<br>
+  [248] 4.265 4.304 4.151 4.187 3.561 3.707 3.603 3.565 3.686 3.762 3.853 3.830 3.623<br>
+  [261] 3.728 3.623 3.789 3.281 3.075 3.341 3.300 2.915 3.257&nbsp;&nbsp;&nbsp; NA</span>
+
+
+<h2><a name="factors" id="factors"></a>Factors in R</h2>
+<p><a name="names"></a>The <span class="style1">names</span> function displays the names of the variables contained in a data frame. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(tadpoles)</div>
+<span class="style24">  [1] &quot;response&quot;&nbsp; &quot;treatment&quot; &quot;fac1&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fac2&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fac3&quot;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<p><a name="class"></a>Objects in R have a class attribute that can be extracted with the <span class="style1">class</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(tadpoles$response)</div>
+<span class="style24">   [1] &quot;numeric&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(tadpoles$treatment)</div>
+<span class="style24"> [1] &quot;factor&quot;</span>
+<p><a name="contrasts"></a>The variable &quot;response&quot; is identified as numeric variable while &quot;treatment&quot; is a factor. In the raw data file the &quot;treatment&quot; field consisted of character data. When R reads in a character variable it assumes that you plan to use the variable in  regression models and so has converted it to a factor. It still has its original  values but R has also created a set of dummy variables corresponding to the distinct values of the character variable. You can view the default coding system R has used with the <span class="style1">contrasts</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> contrasts(tadpoles$treatment)</div>
+<span class="style24">   &nbsp;&nbsp;&nbsp;&nbsp; CoD2 CoS1 CoS2 NoD1 NoD2 NoS1 NoS2 RuD1 RuD2 RuS1 RuS2<br>
+  CoD1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  CoD2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  CoS1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  CoS2&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  NoD1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp; &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  NoD2&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  NoS1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  NoS2&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  RuD1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  RuD2&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  RuS1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0<br>
+  RuS2&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1</span>
+</p>
+<p>Because there are 12 different treatments R has created 11 dummy variables. It ordered the values of the character variable alphabetically and made the alphabetically first character value the reference level, in this case <span class="style8">CoD1</span>. The dummy variables are the columns shown in the output. Each indicates one of the remaining 11 levels. Similarly the variables <span class="style10">fac1</span> and <span class="style10">fac2</span> were converted to factors with associated dummy coding schemes.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(tadpoles$fac1)</div>
+<span class="style24">   [1] &quot;factor&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> contrasts(tadpoles$fac1)</div>
+<span class="style24">   &nbsp;&nbsp; No Ru<br>
+  Co&nbsp; 0&nbsp; 0<br>
+  No&nbsp; 1&nbsp; 0<br>
+  Ru&nbsp; 0&nbsp; 1</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(tadpoles$fac2)</div>
+<span class="style24">   [1] &quot;factor&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> contrasts(tadpoles$fac2)</div>
+ <span class="style24">  &nbsp; S<br>
+  D 0<br>
+S 1</span>
+<p name="contrasts">Here we see that the columns labeled <span class="styleArial">No</span> and <span class="styleArial">Ru</span>  are the dummy variables that indicate the <span class="styleArial">No</span> and <span class="styleArial">Ru</span> categories respectively. Recall from the researcher's description of the experiment that &quot;<span class="styleArial">No</span>&quot; is the control level of factor 1. Given this we might prefer to have &quot;<span class="styleArial">No</span>&quot; as the reference level. To accomplish this we would need to use the <span class="style1">factor</span> function with the <span class="style17">levels</span> argument in which we list the levels in the order we want specifying the reference level  first.</p>
+<p>If we examine the variable <span class="style10">fac3</span>, R tells us it's an integer variable. R has not converted it into a factor because the categories of this variable are numbers.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> class(tadpoles$fac3)</div>
+<span class="style24"> [1] &quot;integer&quot;</span>
+<p><a name="factor"></a>To convert this variable into a factor explicitly we can use the <span class="style1">factor</span> function. In the line below I create a new variable in the tadpoles data frame called <span class="style10">fac.f</span> that is the factor version of <span class="style10">fac3</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles$fac3.f &lt;- factor(tadpoles$fac3)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> contrasts(tadpoles$fac3.f)</div>
+<span class="style24">   &nbsp; 2<br>
+  1 0<br>
+  2 1</span>
+<p>Alternatively, we could just overwrite the old variable and replace it with its factor version.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles$fac3 &lt;- factor(tadpoles$fac3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> contrasts(tadpoles$fac3)</div>
+<span class="style24">  &nbsp; 2<br>
+  1 0<br>
+  2 1</span>
+</p>
+<h2><a name="fitting"></a>Fitting ANOVA models: one-way or three-way?</h2>
+<p name="lm"><a name="lm"></a>One way to analyze these data is with a one-way analysis variance in which we parameterize the 12-category treatment variable with 11 dummy regressors. This is called the cell means model. Because analysis of variance is simply regression with dummy variables we can fit this model with <span class="style1">lm</span>, the ordinary linear regression function of R. <span class="style1">lm</span>  stands for &quot;linear model&quot;. The  model can be fit as follows. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out0 &lt;- lm(response~treatment, data=tadpoles)</div>
+<p name="lm"><a name="tilde" id="tilde"></a>All regression models in R are fit using formula notation. To the left of the <span class="style10">~</span> is the response variable. To the right of the <span class="style10">~</span> is the linear model containing the predictors. The required notation is the response variable, followed the formula symbol ~, followed by the predictors separated by + signs if there is more than one. Because the variable treatment is of class factor, R will supply the eleven dummy variables required to fit the regression model for us.</p>
+<p name="lm">A second way to analyze the data is to  make use of the fact that the 12 treatments really are made up of three factors combined in all possible ways and carry out what's called a three-factor analysis of variance. With three factors  the full three-factor analysis of variance includes the three main effects, the three two-factor interactions, and the single three-factor interaction. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out1 &lt;- lm(response~fac1 + fac2 + fac3 + fac1:fac2 + fac1:fac3 + fac2:fac3 + fac1:fac2:fac3, data=tadpoles)</div>
+
+
+  <p> <a name="colon"></a>The terms separated by colons are interactions. Thus, e.g., <span class="style10">fac1:fac2 </span>is the two-factor interaction between <span class="style10">fac1</span> and <span class="style10">fac2</span>, and <span class="style10">fac1:fac2:fac3</span> is the three-factor interaction. Different predictors are separated by + symbols.</p>
+  <p><a name="star"></a>R supports simpler notation for fitting this model. The notation <span class="style10">fac1*fac2*fac3</span> is shortcut notation for a three-factor interaction plus all the terms to which it is marginal.</p>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">out1 &lt;- lm(response~fac1*fac2*fac3, data=tadpoles)</div>
+<p><a name="caret"></a>A second shortcut notation for fitting all combinations of <span class="style10">fac1</span>, <span class="style10">fac2</span>, and <span class="style10">fac3</span> up to a three-factor interaction is the following.</p>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">out1 &lt;- lm(response~(fac1+fac2+fac3)^3, data=tadpoles)</div>
+<p>The cell means (one-way ANOVA) model and the full factorial (three-way ANOVA) model are identical except for their parameterizations. This is apparent when we look at the <span class="style1">summary</span> output from these two models.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">summary(out0)</div>
+<span class="style24">Call:<br>
+  lm(formula = response ~ factor(treatment))</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -0.6594 -0.1382 -0.0095&nbsp; 0.1240&nbsp; 1.0555 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.39846&nbsp;&nbsp;&nbsp; 0.06834&nbsp; 49.726&nbsp; &lt; 2e-16 ***<br>
+  factor(treatment)CoD2&nbsp; 0.08071&nbsp;&nbsp;&nbsp; 0.09079&nbsp;&nbsp; 0.889 0.374927&nbsp;&nbsp;&nbsp; <br>
+  factor(treatment)CoS1 -0.03242&nbsp;&nbsp;&nbsp; 0.08486&nbsp; -0.382 0.702785&nbsp;&nbsp;&nbsp; <br>
+  factor(treatment)CoS2&nbsp; 0.30708&nbsp;&nbsp;&nbsp; 0.08486&nbsp;&nbsp; 3.619 0.000365 ***<br>
+  factor(treatment)NoD1&nbsp; 0.51180&nbsp;&nbsp;&nbsp; 0.08869&nbsp;&nbsp; 5.770 2.58e-08 ***<br>
+  factor(treatment)NoD2&nbsp; 0.65571&nbsp;&nbsp;&nbsp; 0.08486&nbsp;&nbsp; 7.727 3.52e-13 ***<br>
+  factor(treatment)NoS1&nbsp; 0.57522&nbsp;&nbsp;&nbsp; 0.08620&nbsp;&nbsp; 6.673 1.90e-10 ***<br>
+  factor(treatment)NoS2&nbsp; 0.82191&nbsp;&nbsp;&nbsp; 0.08486&nbsp;&nbsp; 9.686&nbsp; &lt; 2e-16 ***<br>
+  factor(treatment)RuD1&nbsp; 0.53737&nbsp;&nbsp;&nbsp; 0.09865&nbsp;&nbsp; 5.447 1.33e-07 ***<br>
+  factor(treatment)RuD2&nbsp; 0.62154&nbsp;&nbsp;&nbsp; 0.08486&nbsp;&nbsp; 7.324 4.15e-12 ***<br>
+  factor(treatment)RuS1&nbsp; 0.74804&nbsp;&nbsp;&nbsp; 0.09865&nbsp;&nbsp; 7.583 8.58e-13 ***<br>
+  factor(treatment)RuS2&nbsp; 0.95041&nbsp;&nbsp;&nbsp; 0.08486&nbsp; 11.200&nbsp; &lt; 2e-16 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: <span class="style25">0.2464 on 227 degrees of freedom</span><br>
+  &nbsp; (31 observations deleted due to missingness)<br>
+  Multiple R-squared: <span class="style25">0.6264,</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: 0.6083 <br>
+  F-statistic:&nbsp; <span class="style25">34.6 on 11 and 227 DF</span>,&nbsp; p-value: &lt; <span class="style25">2.2e-16</span> </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">summary(out1)</div>
+<span class="style24">Call:<br>
+  lm(formula = response ~ fac1 * fac2 * fac3)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -0.6594 -0.1382 -0.0095&nbsp; 0.1240&nbsp; 1.0555 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.398462&nbsp;&nbsp; 0.068344&nbsp; 49.726&nbsp; &lt; 2e-16 ***<br>
+  fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.511802&nbsp;&nbsp; 0.088695&nbsp;&nbsp; 5.770 2.58e-08 ***<br>
+  fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.537372&nbsp;&nbsp; 0.098646&nbsp;&nbsp; 5.447 1.33e-07 ***<br>
+  fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.032420&nbsp;&nbsp; 0.084859&nbsp; -0.382 &nbsp;&nbsp;0.7028&nbsp;&nbsp;&nbsp; <br>
+  fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.080715&nbsp;&nbsp; 0.090790&nbsp;&nbsp; 0.889&nbsp;&nbsp; 0.3749&nbsp;&nbsp;&nbsp; <br>
+  fac1No:fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.095839&nbsp;&nbsp; 0.114704&nbsp;&nbsp; 0.836&nbsp;&nbsp; 0.4043&nbsp;&nbsp;&nbsp; <br>
+  fac1Ru:fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.243087&nbsp;&nbsp; 0.131610&nbsp;&nbsp; 1.847&nbsp;&nbsp; 0.0660 .&nbsp; <br>
+  fac1No:fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.063189&nbsp;&nbsp; 0.118189&nbsp;&nbsp; 0.535&nbsp;&nbsp; 0.5934&nbsp;&nbsp;&nbsp; <br>
+  fac1Ru:fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.003452&nbsp;&nbsp; 0.125829&nbsp;&nbsp; 0.027&nbsp;&nbsp; 0.9781&nbsp;&nbsp;&nbsp; <br>
+  fac2S:fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.258785&nbsp;&nbsp; 0.115338&nbsp;&nbsp; 2.244&nbsp;&nbsp; 0.0258 *&nbsp; <br>
+  fac1No:fac2S:fac32 -0.155995&nbsp;&nbsp; 0.155945&nbsp; -1.000&nbsp;&nbsp; 0.3182&nbsp;&nbsp;&nbsp; <br>
+  fac1Ru:fac2S:fac32 -0.140577&nbsp;&nbsp; 0.168770&nbsp; -0.833&nbsp;&nbsp; 0.4057&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: <span class="style25">0.2464 on 227 degrees of freedom</span><br>
+  &nbsp; (31 observations deleted due to missingness)<br>
+  Multiple R-squared: <span class="style25">0.6264</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: 0.6083 <br>
+  F-statistic:&nbsp; <span class="style25">34.6 on 11 and 227 DF,</span> &nbsp;p-value: &lt; <span class="style25">2.2e-16</span> </span>
+<p>Observe that all of the summary statistics reported at the bottom of the output are the same for the two models. Although each model uses 12 parameters to describe the outcome, the parameter estimates are different. The problem with the cell means model is that it is overly complicated. The summary output of the cell means model allows one to test whether individual treatment means are different from the reference group treatment mean (CoD1). Of the 11 tests reported, nine of them are statistically significant. Now, if these were the only tests we were interested in then the one-way model has been a success. But with 12 treatments there are 66 (= 12 &times; 11 &divide; 2) possible pairwise comparisons we can make. The task of summarizing all these tests is an organizational mess. Furthermore by carrying out so many tests each at significance level &alpha; = .05, we are guaranteed  that some of these tests (on average 66 &times; .05 = 3.3) will yield significant results just by chance, i.e., we'll reject the null hypothesis when in fact the null hypothesis is true.</p>
+<p>It's almost never a good strategy to fit the cell means model first. If the treatments possess a structure then it makes sense to take advantage of it. When treatments are constructed by combining factors in all possible ways, analyzing it as a factorial design instead allows us to tease apart the independent effects of the individual factors (main effects) as well as the synergistic effects (interactions) if present. The advantage of the factorial design is that it helps us understand the reasons why the means show the pattern they do.  Furthermore if it turns out that the individual factors affect the response in a simple fashion,  we will be able to parsimoniously describe the response with fewer than twelve parameters. In the end it will still be possible  to obtain the individual treatment means if they are desired. On the other hand, if it turns out that the three-factor interaction is statistically significant, then nothing will have been gained (or lost) by analyzing the data with a three-way ANOVA model. In that case the treatment differences fail to exhibit a  pattern in terms of their component factors.</p>
+<h2><a name="TypeI" id="TypeI"></a>Type I and Type II tests</h2>
+<p name="anova"><a name="anova"></a>When analyzing categorical regression models it is necessary to distinguish the categorical variables themselves (the predictors) from the dummy variables (regressors) that we use to represent them in the regression model. The regressors that correspond to a single categorical variable or effect are a unit that is sometimes referred to as a construct (Polissar and Diehr 1982). To simplify the regression model, we try to drop constructs, not individual dummy regressors. R's <span class="style1">anova</span> function allows us to examine the statistical significance of the individual model constructs. When dealing with an experiment in which the experimental units have been randomly assigned to treatments the full interaction model is the right place to begin the analysis.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">anova(out1)</div>
+<span class="style24">Analysis of Variance Table</span></p>
+<p class="style24">Response: response<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Df &nbsp;Sum Sq Mean Sq &nbsp;F value &nbsp;&nbsp;&nbsp;Pr(&gt;F) <br>
+    fac1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 18.4339 &nbsp;9.2169 151.7899 &lt; 2.2e-16 ***<br>
+    fac2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 &nbsp;1.5013 &nbsp;1.5013 &nbsp;24.7238 1.304e-06 ***<br>
+    fac3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 &nbsp;2.2771 &nbsp;2.2771 &nbsp;37.5007 3.984e-09 ***<br>
+    fac1:fac2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 &nbsp;0.3926 &nbsp;0.1963 &nbsp;&nbsp;3.2328 &nbsp;&nbsp;0.04127 * <br>
+    fac1:fac3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 &nbsp;0.0838 &nbsp;0.0419 &nbsp;&nbsp;0.6900 &nbsp;&nbsp;0.50263 <br>
+    fac2:fac3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 &nbsp;0.3503 &nbsp;0.3503 &nbsp;&nbsp;5.7693 &nbsp;&nbsp;0.01711 * <br>
+    fac1:fac2:fac3 &nbsp;&nbsp;2 &nbsp;0.0695 &nbsp;0.0347 &nbsp;&nbsp;0.5723 &nbsp;&nbsp;0.56505 <br>
+    Residuals &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;227 13.7838 &nbsp;0.0607 <br>
+    ---<br>
+    Signif. codes: 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </p>
+<p>The last column reports <em>p</em>-values for the F-statistics (labeled <span class="style10">F value</span> in the output). Each test is a sequential test. It tests whether the effect in a given row is statistically significant when added to a model that already contains all the terms listed above it  in the table. For the test to make sense it must adhere to the <a href="lecture1.htm#interactions">principle of marginality</a>, something that the <span class="style1">anova</span> function does. (According to the principle of marginality models with two-factor interactions must include all the component main effect terms that make up the interactions. Furthermore if a three-factor interaction is in the model then the three two-factor interactions and three main effects  to which the three-factor interaction is marginal must also be in the model.) </p>
+<p>The important conclusion that we can draw from the <span class="style1">anova</span> output above is that the three-factor interaction is <u>not</u> statistically significant (as seen from the p-value p = 0.565 in the row labeled <span class="style10">fac1:fac2:fac3</span>). Because the tests are carried out sequentially and knowing that the three-factor interaction is not significant, it is legitimate to examine the tests of two-factor interactions that appear in the table. From the output it appears that the <span class="style10">fac1:fac3</span> interaction is not significant, but the the remaining two are. We need to be careful though. In unbalanced designs (unequal numbers of observations per treatment) such as this one, context matters. In a sequential ANOVA table changing the order in which the terms are listed will lead to different results when the design is  unbalanced.</p>
+<p><a name="car"></a>Sequential tests such as those produced by the <span class="style1">anova</span> function are called Type I tests. Type II tests (carried out by the <span class="style1">Anova</span> function of the <span class="style19">car</span> package) are generally considered preferable with unbalanced data. The <span class="style19">car</span> package is not part of the standard R installation so it must first be downloaded from the CRAN site, a process that was described for the <span class="style19">RCurl</span> package <a href="lecture2.htm#downloading">above</a>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(car)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Anova(out1)</div>
+<span class="style24">Anova Table (Type II tests)</span>
+<p><span class="style24">Response: response<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sum Sq&nbsp; Df&nbsp; F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18.0783&nbsp;&nbsp; 2 148.8618 &lt; 2.2e-16 ***<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6498&nbsp;&nbsp; 1&nbsp; 27.1702 4.184e-07 ***<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2300&nbsp;&nbsp; 1&nbsp; 36.7243 5.609e-09 ***<br>
+  fac1:fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.2997&nbsp;&nbsp; 2&nbsp;&nbsp; 2.4681&nbsp;&nbsp; 0.08702 .&nbsp; <br>
+  fac1:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0550&nbsp;&nbsp; 2&nbsp;&nbsp; 0.4525&nbsp;&nbsp; 0.63659&nbsp;&nbsp;&nbsp; <br>
+  fac2:fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.3503&nbsp;&nbsp; 1&nbsp;&nbsp; 5.7693&nbsp;&nbsp; 0.01711 *&nbsp; <br>
+  fac1:fac2:fac3&nbsp; 0.0695&nbsp;&nbsp; 2&nbsp;&nbsp; 0.5723&nbsp;&nbsp; 0.56505&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13.7838 227&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 <br>
+</span>
+<p>The last two tests reported by <span class="style1">anova</span> and <span class="style1">Anova</span> are the same, but the remaining tests are different. <span class="style1">Anova</span> tests a term in a model after first removing any terms that the term of interest is marginal to. A marginal term is one that is properly contain in another. For instance, the main effect <span class="style10">fac2</span> is contained in the terms<span class="style10"> fac1:fac2</span>, <span class="style10">fac2:fac3</span>, and <span class="style10">fac1:fac2:fac3</span>. In the <span class="style1">Anova</span> function the Type II test of <span class="style10">fac2</span>  involves a model in which these  three terms have been removed. As a result we compare the following two models.</p>
+<p class="style10">tadpoles ~ fac1 + fac3 + fac1:fac3 + fac2<br>
+  tadpoles ~ fac1 + fac3 + fac1:fac3
+</p>
+<p>except that we use as our measure of the background variation the residual sum of squares of the three-factor interaction model <span class="style10">out1</span>. On the other hand the Type I test of <span class="style10">fac2</span> from the <span class="style1">anova</span> function would compare the following two models.</p>
+<p class="style10">tadpoles ~ fac1 + fac2<br>
+tadpoles ~ fac1</p>
+<p>once again using the residual error of the three-factor interaction model as a measure of background variation. </p>
+<p>The Type I and Type II tests of the term <span class="style10">fac1:fac3</span> differ in that the Type II test only excludes the three-factor interaction from the models it compares (<span class="style10">fac1:fac2:fac3</span> is marginal to <span class="style10">fac1:fac3</span>), while the Type I test, because of the way the terms were listed in the model formula, excludes the three-factor interaction and the <span class="style10">fac2:fac3</span> two-factor interaction. Because neither the Type I or Type II tests find <span class="style10">fac1:fac3</span> to be statistically significant, we feel confident that we can drop it along with the three-factor interaction.</p>
+<h2><a name="simplifying"></a>Simplifying the model</h2>
+<p>Based on our analysis above it appears we can drop the <span class="style10">fac1:fac2:fac3</span> three-factor interaction and the the <span class="style10">fac2:fac3</span> two-factor interaction. To do that we can use the long form of the model formula and omit those terms.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out2 &lt;- lm(response~fac1 + fac2 + fac3 + fac1:fac2 + fac2:fac3, data=tadpoles)</div>
+<p><a name="update"></a>Alternatively, we can use the <span class="style1">update</span> function. With the <span class="style1">update</span> function we just subtract off the terms we want to remove from the full model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out2 &lt;- update(out1, .~. - fac1:fac2:fac3 - fac1:fac3)</div>
+<p>The first argument is the model we want to update. The second argument begins with <span class="style10">.~.</span> which is a surrogate for the  formula of model <span class="style10">out1</span> from which we then subtract off the two terms shown.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out2)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: response<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq&nbsp; F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 18.4339&nbsp; 9.2169 153.0824 &lt; 2.2e-16 ***<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 1.5013&nbsp; 1.5013&nbsp; 24.9343 1.169e-06 ***<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 2.2771&nbsp; 2.2771&nbsp; 37.8201 3.382e-09 ***<br>
+  fac1:fac2&nbsp;&nbsp; 2&nbsp; 0.3926&nbsp; 0.1963&nbsp;&nbsp; 3.2603&nbsp;&nbsp; 0.04015 *&nbsp; <br>
+  fac2:fac3&nbsp;&nbsp; 1&nbsp; 0.3792&nbsp; 0.3792&nbsp;&nbsp; 6.2973&nbsp;&nbsp; 0.01278 *&nbsp; <br>
+  Residuals 231 13.9083&nbsp; 0.0602&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Anova(out2)</div>
+<span class="style24">  Anova Table (Type II tests)</span>
+<p><span class="style24">Response: response<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sum Sq&nbsp; Df&nbsp; F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18.0783&nbsp;&nbsp; 2 150.1294 &lt; 2.2e-16 ***<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6319&nbsp;&nbsp; 1&nbsp; 27.1043 4.258e-07 ***<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2300&nbsp;&nbsp; 1&nbsp; 37.0370 4.777e-09 ***<br>
+  fac1:fac2&nbsp; 0.3017&nbsp;&nbsp; 2&nbsp;&nbsp; 2.5057&nbsp;&nbsp; 0.08384 .&nbsp; <br>
+  fac2:fac3&nbsp; 0.3792&nbsp;&nbsp; 1&nbsp;&nbsp; 6.2973&nbsp;&nbsp; 0.01278 *&nbsp; <br>
+  Residuals 13.9083 231&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 <br>
+</span>
+<p>The Type I and Type II tests disagree about the importance of the <span class="style10">fac1:fac2</span> interaction. The sequential Type I test which tests <span class="style10">fac1:fac2</span> in a model without the <span class="style10">fac2:fac3</span> interaction finds it to be significant (p = 0.04) while the Type II tests which does include the <span class="style10">fac2:fac3</span> in the reference model finds it to be not significant (p = 0.08). Of course the difference between these two p-values is rather small and the only reason we're having a discussion is because we've arbitrarily chosen &alpha; = .05 as the cut-off for statistical significance. Given that <span class="style10">fac1</span> is the factor of primary interest to the researcher, we should probably examine the interaction <span class="style10">fac1:fac2</span> further before deciding what to do about it.</p>
+<h2><a name="twofactor"></a>Graphical examination of the two-factor interactions</h2>
+<p><a name="effects"></a>Interactions can be examined graphically in a mean profile plot or what's sometimes called an interaction plot. These were discussed briefly in <a href="lecture1.htm#interaction">lecture 1</a>. The <span class="style19">effects</span> package of R makes the generation of such a plot fairly easy. The <span class="style19">effects</span> package is not part of the standard R installation and it must first be downloaded from the CRAN site on the web. <a name="library"></a>Before using the <span class="style19">effects</span> package the first time in a session it needs to be loaded into memory with the <span class="style1">library</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(effects)</div>
+<p><a name="effect" id="effect"></a>The function we need is called <span class="style1">effect</span>. It takes two required arguments:</p>
+<ul>
+  <li> the desired effect to plot in quotes,</li>
+  <li> followed by the name of the model in which the effect was estimated.</li>
+</ul>
+<p><a name="multiline"></a><a name="plot"></a>We then plot the output from <span class="style1">effect</span> using the R <span class="style1">plot</span> function. I add the option <span class="style17">multiline=T</span> to get separate mean profiles displayed in the same panel.</p>
+<h3><strong><a name="int2" id="int2"></a>Examining the fac1 &times; fac2 interaction</strong></h3>
+<p>Given the ambiguity of the results from the Type I and Type II  tests it makes sense to examine the graphical evidence for a two-factor interaction between <span class="style10">fac1</span> and <span class="style10">fac2</span>. There are two different ways that the two-factor interaction can be displayed and I present both. <a name="xvar"></a><a name="zvar"></a>The <span class="style1">plot</span> method for an <span class="style1">effect</span> object allows the use of two additional keywords, <span class="style17">x.var=</span> and <span class="style17">z.var=</span>, that alter the factors displayed on the <em>x</em>-axis and the factor used to define the different profiles, respectively. Using these arguments I create an additional view of the two-factor interaction. Fig 5a displays <span class="style10">fac1</span> on the <em>x</em>-axis and uses <span class="style10">fac2</span> to distinguish the different profiles while Fig. 5b displays <span class="style10">fac2</span> on the <em>x</em>-axis and uses <span class="style10">fac3</span> to define the different profiles. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(effect('fac1:fac2', out2), multiline=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(effect('fac1:fac2', out2), multiline=T, x.var='fac2', z.var='fac1')</div>
+<br>
+<table width="730" border="0" align="center">
+  <tr>
+    <td scope="col">(a) <img src="../../images/lectures/lecture2/fac1fac2plota.png" alt="fac1 x fac2" width="295" height="345" align="texttop"></td>
+    <td scope="col">(b) <img src="../../images/lectures/lecture2/fac1fac2plotb.png" alt="fac1 x fac2" width="295" height="345" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial"><strong>Fig. 5</strong> &nbsp;Two  alternate graphical displays of  the fac1 &times; fac2 two-factor interaction</td>
+  </tr>
+</table>
+<p>What both graphs reveal is that if <span class="style10">fac1</span> only consisted of  the first two levels &quot;Co&quot; and &quot;No&quot;, then there would clearly be no two-factor interaction to speak of. When restricted to just these two levels, the profiles are parallel. It's only when the third level &quot;Ru&quot; is included does the lack of parallelism become an issue. </p>
+<p>The magnitudes of the effects shown in these plots are worth considering. Recall that &quot;No&quot; is the control group. So when the treatment &quot;Co&quot; is applied, the mean response decreases by 0.5 units regardless of the level of <span class="style10">fac2</span> (Fig. 5b). On the other  hand when &quot;Ru&quot; is applied , the response  remains unchanged when <span class="style10">fac2</span> is at level &quot;D&quot;. But if <span class="style10">fac2</span> is at level &quot;S&quot; the response increases by about 0.15 units. Observe that  this &quot;S&quot; effect for &quot;Ru&quot; is about one third the magnitude of the &quot;Co&quot; effect. Given the large size difference in the effects, this raises the question of whether an effect so small is of much consequence.</p>
+<p name="summary"><a name="summary"></a>We can get additional insight by looking at the <span class="style41">summary</span> table of a model containing the <span class="style101">fac1:fac2</span> interaction.</p>
+<p class="style23">summary(out2)</p>
+<p class="style24">Call:<br>
+  lm(formula = response ~ fac1 + fac2 + fac3 + fac1:fac2 + fac2:fac3)</p>
+<p class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Min &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1Q &nbsp;&nbsp;Median &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3Q &nbsp;&nbsp;&nbsp;&nbsp;Max <br>
+  -0.67091 -0.13746 -0.01539 0.11680 1.07076 </p>
+<p class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estimate Std. Error t value Pr(&gt;|t|) <br>
+  (Intercept) &nbsp;&nbsp;3.38324 &nbsp;&nbsp;&nbsp;0.05245 &nbsp;64.499 &lt; 2e-16 ***<br>
+  fac1No &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.54730 &nbsp;&nbsp;&nbsp;0.05837 &nbsp;&nbsp;9.376 &lt; 2e-16 ***<br>
+  fac1Ru &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.53699 &nbsp;&nbsp;&nbsp;0.06085 &nbsp;&nbsp;8.825 2.76e-16 ***<br>
+  fac2S &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.01715 &nbsp;&nbsp;&nbsp;0.06696 &nbsp;&nbsp;0.256 &nbsp;&nbsp;0.7981 <br>
+  fac32 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.10758 &nbsp;&nbsp;&nbsp;0.04815 &nbsp;&nbsp;2.234 &nbsp;&nbsp;0.0264 * <br>
+  <span class="style20">fac1No:fac2S &nbsp;0.01341 &nbsp;&nbsp;&nbsp;0.07728 &nbsp;&nbsp;0.174 &nbsp;&nbsp;0.8623 <br>
+    fac1Ru:fac2S &nbsp;0.16350 &nbsp;&nbsp;&nbsp;0.08175 &nbsp;&nbsp;2.000 &nbsp;&nbsp;0.0467 * </span><br>
+  fac2S:fac32 &nbsp;&nbsp;0.16323 &nbsp;&nbsp;&nbsp;0.06505 &nbsp;&nbsp;2.509 &nbsp;&nbsp;0.0128 * <br>
+  ---<br>
+  Signif. codes: 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </p>
+<p class="style24">Residual standard error: 0.2454 on 231 degrees of freedom<br>
+  Multiple R-Squared: 0.623, Adjusted R-squared: 0.6116 <br>
+  F-statistic: 54.53 on 7 and 231 DF, p-value: &lt; 2.2e-16 </p>
+<p> The two lines I've colored in red contain estimates of the two dummy variables associated with the <span class="style101">fac1:fac2</span> interaction. Both of these dummy variable estimates are interpretable in terms of what is shown in Fig. 5. </p>
+<ul>
+  <li>The dummy variable coefficient labeled <span class="style101">fac1No:fac2S </span>estimates the difference in distance between the two profile lines of Fig. 5a when <span class="style101">fac1</span> is at level &quot;Co&quot; compared with when <span class="style101">fac1</span> is at level &quot;No&quot;. From Fig. 5a the profiles are parallel here and the two distances are about the same making their difference approximately 0. The hypothesis test in the table for <span class="style101">fac1No:fac2S</span> is a test of whether the difference in distances between the profiles for these two levels is equal to zero. The reported <em>p</em>-value is large so we do not reject this hypothesis, a result that is consistent with what we see in the graph.</li>
+  <li> The dummy variable coefficient labeled <span class="style101">fac1Ru:fac2S</span> estimates the difference in distance between the two profile lines of Fig. 5a when <span class="style101">fac1</span> is at level &quot;Co&quot; versus when <span class="style101">fac1</span> is at level &quot;Ru&quot;. From Fig. 5a the profiles are not parallel here and the two distances appear to be different. The hypothesis test in the table for <span class="style101">fac1No:fac2S</span> is a test of whether the difference in distances is equal to zero. The estimated difference in the table is 0.16 (close to our eyeball graphical estimate of 0.15) and the reported <em>p</em>-value is relatively small (<em>p</em> = 0.047). We would just be able to reject this hypothesis at &alpha; = .05. </li>
+</ul>
+<h3><strong><a name="int3" id="int3"></a>Examining the fac2 &times; fac3 interaction</strong></h3>
+<p>The output from  model <span class="style10">out2</span> tells us that we should not drop the <span class="style101">fac2:fac3</span> interaction. (It was the last term added and it is significant at the &alpha; = .05 level, <em>p</em> = 0.013.) On the other hand what if we did choose to drop the <span class="style101">fac1:fac2 </span>interaction? This is model <span class="style101">out3</span> below.  The ANOVA table  finds the <span class="style101">fac1:fac2</span> interaction to be highly significant. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out3 &lt;- update(out2, .~. - fac1:fac2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out3)</div>
+
+<span class="style24">Analysis of Variance Table</span>
+</p>
+<p class="style24">Response: response<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Df &nbsp;Sum Sq Mean Sq &nbsp;F value&nbsp;&nbsp;&nbsp; Pr(&gt;F) <br>
+  fac1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 18.4339 &nbsp;9.2169 151.1291 &lt; 2.2e-16 ***<br>
+  fac2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;1.5013 &nbsp;1.5013 &nbsp;24.6162 1.350e-06 ***<br>
+  fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;2.2771 &nbsp;2.2771 &nbsp;37.3375 4.137e-09 ***<br>
+  fac2:fac3 &nbsp;&nbsp;1 &nbsp;0.4700 &nbsp;0.4700 &nbsp;&nbsp;7.7069 &nbsp;<span class="style25">0.005948</span> ** <br>
+  Residuals 233 14.2100 &nbsp;0.0610 <br>
+  ---<br>
+  Signif. codes: 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </p>
+<p>So regardless of our decision about <span class="style101">fac1:fac2</span>, we should definitely retain the two-factor interaction <span class="style101">fac2:fac3</span>. I examine this interaction graphically using both possible ways of displaying it.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(effect('fac2:fac3', out2), multiline=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(effect('fac2:fac3', out2), multiline=T, x.var='fac3', z.var='fac2')</div>
+<br>
+<table width="730" border="0" align="center">
+  <tr>
+    <td scope="col">(a) <img src="../../images/lectures/lecture2/fac2fac3plota.png" alt="fac1 x fac2" width="295" height="345" align="texttop"></td>
+    <td scope="col">(b) <img src="../../images/lectures/lecture2/fac2fac3plotb.png" alt="fac1 x fac2" width="295" height="345" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial"><strong>Fig. 6</strong> &nbsp;The two graphical displays of  the fac2 &times; fac3 two-factor interaction</td>
+  </tr>
+</table>
+<p>The lack of parallelism of the mean profiles is apparent in both plots.</p>
+<h2><a name="graphical"></a>Graphical examination of the three-factor interaction </h2>
+<p><a name="effects"></a>The substantive meaning of a three-factor interaction can be assessed by examining  plots of the two-factor interaction for two of the variables contained in the interaction at fixed values of the third variable. Because there are three factors involved, there are multiple ways to display the three-factor interaction plot. </p>
+<h3><a name="drawing"></a>Creating  a three-factor interaction diagram using the effects package</h3>
+<p>For the first plot I let the <span class="style1">effect</span> function choose the default display.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(effect('fac1:fac2:fac3', out1), multiline=T)</div>
+<p align="center"><img src="../../images/lectures/lecture2/threefac1.png" width="405" height="310" alt="three factor interaction"></p>
+        <p align="center" class="styleArial"><strong>Fig. 7</strong> &nbsp;Plot of the 3-factor interaction</p>
+<p>Each panel is a plot of the same two-factor interaction plot, in this case the interaction between <span class="style10">fac1</span> and <span class="style10">fac2</span>. The left panel shows this two-factor interaction when <span class="style10">fac3</span> = 1 while the right panel shows the same two-factor interaction when <span class="style10">fac3</span> = 2. If the nature of the two-factor interaction is different in these two panels then we have graphical evidence for the presence of a three-factor interaction. For example, if we saw evidence of a two-factor interaction in one panel but not in the other, then the nature of the two-factor interaction changes with the level of <span class="style10">fac3</span> indicating that a three-factor interaction is probably present. Note that it's the pattern of the two-factor interaction that we're concerned with, not whether the two graphs are identical. If there are other two-factor interactions occurring between the variables, then it is unlikely that the two graphs will  look the same.</p>
+<p>So what do we learn from Fig. 7? I would argue that we get essentially the same pattern in both panels. If <span class="style10">fac1</span> consisted only of levels Co and No we would fail to find evidence of a <span class="style10">fac1</span> &times; <span class="style10">fac2</span> interaction in either of the panels. In both panels the red and black profiles are roughly parallel. But when we add level Ru to the mix the profiles are no longer parallel. In both panels we see that the mean profiles diverge as we move from level No to level Ru. Both panels show roughly the same pattern so <span class="style10">fac3</span> has failed to modify the nature of the two-factor interaction we're observing. Graphically then we do not find evidence of a three-factor interaction. </p>
+<h3><a name="alternative"></a>Alternative displays of the same three-factor interaction</h3>
+<p>This is not the only three-factor interaction plot we could construct from these data. Currently <span class="style10">fac1</span> is plotted on the <em>x</em>-axis, <span class="style10">fac2</span> identifies the profiles, and <span class="style10">fac3</span> defines the panels. These three assignments can be permuted in 2 &times; 2 &times; 2 = 6 different ways yielding six different ways of displaying the same three-factor interaction. Each version shows the same three-factor interaction but from a different  perspective. All six plots should agree with each other but sometimes it is easier to draw conclusions from one plot than from another. </p>
+<p>Using the arguments <span class="style17">x.var</span> and <span class="style17">z.var</span> I create two additional views of the three-factor interaction, one that uses the <span class="style10">fac1:fac3</span> two-factor interaction (Fig. 8a) and the other  the <span class="style10">fac2:fac3</span> two-factor interaction (Fig. 8b). I start by creating the <span class="style1">effect</span> object  and saving it as <span class="style10">out2.eff</span>, then I plot it using different settings for <span class="style17">x.var</span> and <span class="style17">z.var</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out1.eff &lt;- effect('fac1:fac2:fac3', out1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  plot(out1.eff, multiline=T, x.var=&quot;fac1&quot;, z.var=&quot;fac3&quot;)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(out1.eff, multiline=T, x.var=&quot;fac2&quot;, z.var=&quot;fac3&quot;)</div>
+<br>
+<table width="730" border="0" align="center">
+  <tr>
+    <td scope="col">(a) <img src="../../images/lectures/lecture2/threefac2.png" alt="three factor 2" width="333" height="345" align="texttop"></td>
+    <td scope="col">(b) <img src="../../images/lectures/lecture2/threefac3.png" alt="three factor 3" width="320" height="345" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial"><div align="center"><strong>Fig. 8</strong> &nbsp;Two additional graphical displays of  the same three-factor interaction shown in Fig. 7</div></td>
+  </tr>
+</table>
+<p>Fig 8a is more ambiguous than Fig. 7 was. If we look at the right panel of Fig. 8a when <span class="style10">fac2</span> = 'S', we see that the two <span class="style10">fac3</span> profiles are perfectly parallel. So there is clearly no evidence of a <span class="style10">fac1</span> &times; <span class="style10">fac3</span> interaction here. If we look at the left panel of Fig. 8a when <span class="style10">fac2</span> = 'D', the <span class="style10">fac3</span> profiles are not perfectly parallel (at least in the second half), but they're darn close. So this one is a tougher call but there is certainly no dramatic evidence of a <span class="style10">fac1</span> &times; <span class="style10">fac3</span> interaction. Because <span class="style10">fac2</span> does not markedly affect the nature of the <span class="style10">fac1</span> &times; <span class="style10">fac3</span> interaction, we fail to find strong evidence of a three-factor interaction.</p>
+<p>In Fig. 8b we see that the <span class="style10">fac2</span> profiles are not perfectly parallel in any of the panels. While it is the case that the lack of parallelism is most pronounced when <span class="style10">fac1</span> = Co, it never goes away. Thus there is evidence of the same <span class="style10">fac2</span> &times; <span class="style10">fac3</span> interaction in each panel. Because this interaction is not markedly affected by <span class="style10">fac1</span>, we fail to find evidence of a three-factor interaction using this plot either.</p>
+<h2><a name="final"></a>The final model</h2>
+<p>So we have two legitimate choices for the final model.</p>
+<p><span class="style16">Choice 1</span> is a model that includes a two-factor interaction between factors 2 and 3 and only a main effect for factor 1. </p>
+<p style="padding-left: 30px; text-indent:-30px"><strong>Rationale</strong>: We tested for a three-factor interaction, <span class="style101">fac1:fac2:fac3</span>, and found it to be not statistically significant (<em>p</em> = 0.56). We then examined a model with all three two-factor interactions and sequentially dropped any two-factor interaction not significant at &alpha; = .05, starting with the least significant. Thus we dropped the <span class="style101">fac1:fac2</span> interaction <em>p</em> = 0.635, followed by the <span class="style101">fac1:fac3</span> interaction (<em>p</em> = 0.084). Examination of the <span class="style101">fac1:fac3</span> interaction revealed that the effect was entirely due  to level &quot;Ru&quot; of factor 1 having a larger effect than expected when factor 3 was at level &quot;S&quot;. This effect was much smaller though than the main effect of level &quot;No&quot; and thus was not considered large enough to be of interest. The remaining two-factor interaction was highly significant (<em>p</em> = 0.006) as was the main effect of factor 1 (<em>p</em> &lt; 0.001).</p>
+<p><span class="style16">Choice 2</span> is a model that includes  a two-factor interaction between factors 2 and 3 and a two-factor interaction between factors 1 and 3. </p>
+<p style="padding-left: 30px; text-indent:-30px"> <strong>Rationale</strong>: We tested for a three-factor interaction, <span class="style101">fac1:fac2:fac3</span>, and found it to be not statistically significant (<em>p</em> = 0.56). We then switched to a main effects model and found that when we sequentially added two-factor interactions in the order <span class="style101">fac1:fac3</span>, <span class="style101">fac2:fac3</span>, and <span class="style101">fac1:fac2</span> that <span class="style101">fac1:fac3</span> was statistically significant (<em>p</em> = 0.040), <span class="style101">fac2:fac3</span> was statistically significant (<em>p</em> = 0.013), but that <span class="style101">fac1:fac2</span> was not (<em>p</em> = 0.635). I would argue that the rationale given here for this choice is pretty weak but the choice could be supported if the <span class="style101">fac1:fac2</span> interaction had some special biological interest.</p>
+<h2><a name="homogeneity" id="homogeneity"></a>Model assumptions: homogeneity of variance</h2>
+<p>In the basic analysis of variance we assume that </p>
+<p align="center"><img src="../../images/lectures/lecture2/anovadist.gif" width="128" height="35" alt="anova distribution"></p>
+<p>where <em>i</em> denotes the treatment, <em>j</em> an experimental unit assigned to that treatment, and <em>y</em> is the response. So each observation has a normal distribution in which the mean, &mu;<sub>i</sub>, varies by treatment <em>i</em>, but the variance, &sigma;<sup>2</sup>, is the same for each observation. This is called the constant variance or homogeneity of variance assumption.</p>
+<p name="boxplot"><a name="boxplot"></a>A convenient graphical way to compare the distributions of groups side by side is the box plot. We look first at the default display and then modify it incrementally to increase its information content. Here's the default box plot display we get of the distribution of the response variable for each treatment. The basic syntax for the <span class="style1">boxplot</span> function in R is to specify the response variable followed by a tilde, <span class="style1">~</span>, which is the formula symbol in R, followed by the grouping variable. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">boxplot(response~treatment, data=tadpoles)</div>
+<p align="center" class="style10"><img src="../../images/lectures/lecture2/fig4.png" width="370" height="220"></p>
+<p align="center" class="styleArial"><strong>Fig. 9 </strong>&nbsp;Box plot  of experiment results </p>
+<p>The boxes themselves display the locations of the middle 50% of the data. The top and bottom edges are the first and third quartiles, Q1 and Q3, respectively. The horizontal line in each box is the location of the median. The whiskers on the boxes extend out to the smallest and largest values within the inner fences. The inner fences are given by Q1 &ndash; 1.5 &times; IQ, Q3 + 1.5 &times; IQ, where IQ is the interquartile width, Q3 &ndash; Q1. The small circles denote individual observations that lie beyond the inner fences.</p>
+<p>One problem with this display is that there is not enough room to show all of the treatment labels  on the <em>x</em>-axis. By default R suppresses the printing of some of the labels if they interfere with each other. One solution is to switch the <em>x</em>- and <em>y</em>-axes here so that the treatments  appear on the <em>y</em>-axis, and then rotate the labels so that they are horizontal. Given that our final analysis will be a comparison of treatment means it would useful to add the mean of each group to the boxplot. With both the mean and median of each group visible we can also examine each distribution for skewness by seeing whether or not the median and mean occur at roughly the same place.</p>
+<p>The <span class="style1">boxplot</span> function is an example of a higher level graphics function in R. By default, each call to <span class="style1">boxplot</span> opens up a new graphics window and erases the current display. R also provides lower level graphics functions that can be used to add information to plots that are currently being displayed. One of those lower level functions is <span class="style1">points</span> (to add additional plotted points to a display) which we can use to add the means to the display.</p>
+<p name="tapply"><a name="tapply"></a><a name="mean"></a>First we need to obtain the mean response of each treatment group. This can be obtained with the <span class="style1">tapply</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">treat.mean &lt;- tapply(tadpoles$response, tadpoles$treatment, mean, na.rm=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> treat.mean</div>
+<p class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;CoD1 &nbsp;&nbsp;&nbsp;&nbsp;CoD2 &nbsp;&nbsp;&nbsp;&nbsp;CoS1 &nbsp;&nbsp;&nbsp;&nbsp;CoS2 &nbsp;&nbsp;&nbsp;&nbsp;NoD1 &nbsp;&nbsp;&nbsp;&nbsp;NoD2 &nbsp;&nbsp;&nbsp;&nbsp;NoS1&nbsp;&nbsp;&nbsp;&nbsp; NoS2 <br>
+  3.398462 3.479176 3.366042 3.705542 3.910263 4.054167 3.973682 4.220375 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;RuD1 &nbsp;&nbsp;&nbsp;&nbsp;RuD2 &nbsp;&nbsp;&nbsp;&nbsp;RuS1&nbsp;&nbsp;&nbsp;&nbsp; RuS2 <br>
+  3.935833 4.020000 4.146500 4.348875 </p>
+<ul>
+  <li>The first argument to <span class="style1">tapply</span> is the variable whose mean we want, in this case <span class="style10">tadpoles$response</span>. </li>
+  <li>The second argument is the stratification variable, in this case <span class="style10">tadpoles$treatment</span>. It identifies the groups whose different response means we want.</li>
+  <li>The third argument is the function to be applied to the first argument, <span class="style1">mean</span> in this case.</li>
+  <li><a name="narm"></a>Following the function we can include any additional arguments that need to be passed to the function. If there are any missing values in a group, <span class="style1">mean</span> by default returns a value of missing, NA, for that group. To avoid this I add the argument <span class="style17">na.rm=T</span> which causes R to remove the missing values before calculating the mean.</li>
+</ul>
+<p>If we leave off the <span class="style17">na.rm=T</span> argument we get the missing code NA for some of the treatment groups.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tapply(tadpoles$response, tadpoles$treatment, mean)</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp; CoD1&nbsp;&nbsp;&nbsp;&nbsp; CoD2&nbsp;&nbsp;&nbsp;&nbsp; CoS1&nbsp;&nbsp;&nbsp;&nbsp; CoS2&nbsp;&nbsp;&nbsp;&nbsp; NoD1&nbsp;&nbsp;&nbsp;&nbsp; NoD2&nbsp;&nbsp;&nbsp;&nbsp; NoS1&nbsp;&nbsp;&nbsp;&nbsp; NoS2&nbsp;&nbsp;&nbsp;&nbsp; RuD1 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA 3.366042 3.705542 3.910263 4.054167 3.973682 4.220375&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA <br>
+&nbsp;&nbsp;&nbsp; RuD2&nbsp;&nbsp;&nbsp;&nbsp; RuS1&nbsp;&nbsp;&nbsp;&nbsp; RuS2 <br>
+4.020000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA 4.348875</span>
+<p><a name="horizontal"></a><a name="xlab"></a><a name="las"></a>Next I produce the boxplot, but I transpose the boxes with the <span class="style17">horizontal=T</span> option. The <span class="style17">xlab=</span> argument adds a label for the <em>x</em>-axis. The option <span class="style17">las=1</span> makes the labels at the tick marks horizontal.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">boxplot(response~treatment, data=tadpoles, horizontal=T, xlab='Mitotic activity', las=1) </div>
+<p name="points"><a name="col"></a><a name="points"></a><a name="pch"></a>Next I use the <span class="style1">points</span> function  to add the treatment means. Unlike <span class="style1">boxplot</span>, <span class="style1">points</span> does not support the tilde notation. Instead we have to enter the <em>x</em>-coordinates followed by the <em>y</em>-coordinates of the points separated by commas. The <em>y</em>-coordinates of the boxes (after rotation) are just the numeric values of the treatment factor, which are the numbers 1 through 12. I use an asterisk,<span class="style17"> pch=8</span>, to denote the means and color them red, <span class="style17">col=2</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">points(treat.mean, 1:12, pch=8, col=2)</div>
+<p align="center"><img src="../../images/lectures/lecture2/fig6.png" width="440" height="320" alt="fig 8"></p>
+<p align="center" class="styleArial"><strong>Fig. 10</strong> &nbsp;Graphical summary of the results of the tadpole experiment</p>
+<p>Fig. 10 highlights a potential problem with these data. Notice how the variability across the groups varies. In particular look at the RuD1 group. Its interquartile width is two to five times greater than that of any other group. This could mean that  the treatment is affecting the variance in addition to the mean. It could also mean that a number of confounding factors have not been properly controlled for in this experiment thus introducing  heterogeneity in the groups. In either case the observed heterogeneity of group variances calls into question the constant variance assumption. </p>
+<p>Solutions to this problem are to use a distribution (other than the normal) in which the variance is allowed to vary. Another solution is to keep the normal distribution but to use generalized least squares (GLS) rather than ordinary least squares (OLS) to estimate the model. In GLS we can  include an additional model for the variance. We'll revisit this issue later in the course.</p>
+<h2><a name="cited"></a>Cited references</h2>
+<p>Polissar, Lincoln and Paula Diehr. 1982. Regression analysis in health services research: the use of dummy variables. <em>Medical Care</em> <strong>20</strong>(9): 959&ndash;966.</p>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture2&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--Aug 28, 2012<br>
+      URL: <a href="lecture2.htm#lecture2" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture2.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

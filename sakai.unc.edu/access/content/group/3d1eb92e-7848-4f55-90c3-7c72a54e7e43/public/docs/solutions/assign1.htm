@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 1&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign1" id="assign1"></a>Assignment 1&mdash; Solution</h1>
+<h2>Question 1 </h2>
+<p>I read in the data, convert Density to a factor, and fit a two-factor analysis of variance model with Eggs as the response and Season, Density, and their interaction as predictors.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">quinn &lt;- read.csv( 'ecol 563/quinn1.csv')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> quinn$Density &lt;- factor(quinn$Density)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- lm(Eggs ~ Density*Season, data=quinn)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(out1) </div>
+
+  <span class="style24">  Analysis of Variance Table</span>
+<p><span class="style24">Response: Eggs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  Density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 4.0019&nbsp; 2.0010&nbsp; 13.984 0.0007325 ***<br>
+  Season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 17.1483 17.1483 119.845 1.336e-07 ***<br>
+  Density:Season&nbsp; 2&nbsp; 1.6907&nbsp; 0.8454&nbsp;&nbsp; 5.908 </span><span class="style25">0.0163632</span><span class="style24"> *&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp; 1.7170&nbsp; 0.1431&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>Based on the output we see that there is a significant interaction between Density and Season. This means that the effect of Density on egg count varies with Season (and vice versa). We can examine the summary table to try to understand the nature of this interaction.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> summary(out1)</div>
+<span class="style24">Call:<br>
+  lm(formula = Eggs ~ Density * Season, data = quinn)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -0.61133 -0.16167 -0.04217&nbsp; 0.09892&nbsp; 0.55567 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1113333&nbsp; 0.2183934&nbsp;&nbsp; 5.089 0.000267 ***<br>
+  Density12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.0003333&nbsp; 0.3088549&nbsp; -0.001 0.999157&nbsp;&nbsp;&nbsp; <br>
+  Density24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.4166667&nbsp; 0.3088549&nbsp; -1.349 0.202221&nbsp;&nbsp;&nbsp; <br>
+  Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.7753333&nbsp; 0.3088549&nbsp;&nbsp; 8.986 1.12e-06 ***<br>
+  Density12:Seasonsummer -0.9996667&nbsp; 0.4367868&nbsp; -2.289 0.041029 *&nbsp; <br>
+  Density24:Seasonsummer -1.4700000&nbsp; 0.4367868&nbsp; -3.365 0.005617 ** <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 0.3783 on 12 degrees of freedom<br>
+  Multiple R-squared: 0.9301,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: 0.9009 <br>
+  F-statistic: 31.93 on 5 and 12 DF,&nbsp; p-value: 1.561e-06</span>
+<p>From the output it appears that there is no Density effect in spring (the Density12 and Density24 coefficients are not significantly different from zero) but there is a Density effect in summer (the two interaction terms are significant). We'll explore this issue further in Question 3.</p>
+<p>Some people examined the issue of variance homogeneity. For that we need to create a variable that identifies the individual treatments. This can be accomplished with the paste function that concatenates the character values of two variables. I then plot the Egg counts against the new treatment variable in a dot plot.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">quinn$trt &lt;- factor(paste(quinn$Season, quinn$Density, sep='.'))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  plot(as.numeric(trt)~Eggs, data=quinn, ylim=c(.5,6.5), type='n', axes=F, ylab='') </div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">axis(1)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">axis(2, at=1:6, rep(c(6,12,24),2))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">box()</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">mtext('Spring', at=2, side=2, line=2.5, cex=1.1)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">mtext('Summer', at=5, side=2, line=2.5, cex=1.1)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">abline(h=1:6, lty=3, col='grey70')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">points(quinn$Eggs, jitter(as.numeric(quinn$trt), a=.15), pch=16, col='dodgerblue1')</div><br>
+
+<p align="center"><img src="../../images/assignments/assignment1/fig1.png" width="460" height="270" alt="fig. 1"> </p>
+<p align="center" class="styleArial"><strong>Fig. 1</strong> &nbsp;Dot plot of the response variable separately by treatment</p>
+<p>While there are some differences in variability across treatment we  only have three observations per treatment, not enough to obtain a reliable estimate of variability. We can test for variance heterogeneity but we won't have much power. Given how unreliable our variance estimates are I just report the results from the robust  tests, Fligner's and Levene's tests, below. Neither test statistic is close to being statistically significant.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> leveneTest(quinn$Eggs~quinn$trt)</div>
+<span class="style24">Levene's Test for Homogeneity of Variance (center = median)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df F value Pr(&gt;F)<br>
+group&nbsp; 5&nbsp; 0.8504 0.5403<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fligner.test(quinn$Eggs~quinn$trt)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fligner-Killeen test of homogeneity of variances</span>
+<p><span class="style24">data:&nbsp; quinn$Eggs by quinn$trt <br>
+Fligner-Killeen:med chi-squared = 4.1871, df = 5, p-value = 0.5228</span>
+<h2>Question 2 </h2>
+<p>To display the two-factor interaction we have a choice. We can plot Density on the <em>x</em>-axis and show separate profiles for each Season, or we can plot Season on the <em>x</em>-axis and shows separate profiles for each Density. Generally it's useful to do both, but because Density is an ordinal variable it makes more sense to plot Density on the <em>x</em>-axis so we  take advantage of the natural order of the three Density categories.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">library(effects)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> plot(effect('Density:Season', out1), multiline=T)</div>
+
+<p align="center"><img src="../../images/assignments/assignment1/fig2.png" width="465" height="330" alt="fig. 2"></p>
+<p align="center" class="styleArial"><strong>Fig. 2</strong> &nbsp;Plot of the significant two-factor interaction between Season and Density</p>
+<p align="left">The interaction apparently derives from the fact that there is a much stronger negative effect of Density on egg count in the summer than there is in the spring.</p>
+<h2>Question 3 </h2>
+<p>Because Density has three levels it was entered into the analysis of variance model as two dummy variables. Season with two levels was entered as a single variable. The default definitions used by R are the following.</p>
+<p align="center"><img src="../../images/assignments/assignment1/x1.gif" alt="x1" width="205" height="75" align="absmiddle">,&nbsp;<img src="../../images/assignments/assignment1/x2.gif" alt="x2" width="207" height="75" align="absmiddle">,&nbsp;<img src="../../images/assignments/assignment1/z.gif" alt="z" width="252" height="75" align="absmiddle"></p>
+<p>The regression model corresponding to the two-factor interaction model is the following.</p>
+<p align="center"><img src="../../images/assignments/assignment1/regressioneqn.gif" width="330" height="35" alt="regression eqn"></p>
+<p>The coefficient summary table for the model generated by R is shown below.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(summary(out1)$coefficients,4)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1113&nbsp;&nbsp;&nbsp;&nbsp; 0.2184&nbsp; 5.0887&nbsp;&nbsp; 0.0003<br>
+  Density12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.0003&nbsp;&nbsp;&nbsp;&nbsp; 0.3089 -0.0011&nbsp;&nbsp; 0.9992<br>
+  Density24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.4167&nbsp;&nbsp;&nbsp;&nbsp; 0.3089 -1.3491&nbsp;&nbsp; 0.2022<br>
+  Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.7753&nbsp;&nbsp;&nbsp;&nbsp; 0.3089&nbsp; 8.9859&nbsp;&nbsp; 0.0000<br>
+  Density12:Seasonsummer&nbsp; -0.9997&nbsp;&nbsp;&nbsp;&nbsp; 0.4368 -2.2887&nbsp;&nbsp; 0.0410<br>
+Density24:Seasonsummer&nbsp; -1.4700&nbsp;&nbsp;&nbsp;&nbsp; 0.4368 -3.3655&nbsp;&nbsp; 0.0056</span>
+<p>Using the regression equation and the estimates reported in the summary table we can draw the following conclusions.</p>
+<ol>
+  <li>When the Density = 6 and Season = 'Spring', <em>x</em><sub>1</sub> = <em>x</em><sub>2</sub> = <em>z</em> = 0. So, our regression model is &mu; = &beta;<sub>0</sub>. Thus the intercept, 1.11, corresponds to the mean egg count in Spring when the Density is 6.</li>
+  <li>When Season = 'Spring', <em>z</em> = 0, and the regression equation is the following: <img src="../../images/assignments/assignment1/model2.gif" alt="Spring model" width="160" height="35" align="absmiddle">. This yields the following estimates of the mean egg count at the three different densities</li>
+</ol>
+
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=300 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 1 &nbsp;</strong> Regression model when Season = 'Spring'<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="449" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+    <colgroup>
+    </colgroup>
+    <colgroup></colgroup>
+    <colgroup span=2></colgroup>
+    <colgroup></colgroup>
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td align="center" width="60" scope="col">Season</td>
+        <td align="center" width="60" scope="col">Density</td>
+        <td align="center" width="44" scope="col"><em>x</em><sub>1</sub></td>
+        <td align="center" width="44" scope="col"><em>x</em><sub>2</sub></td>
+        <td align="center" width="209" scope="col"><img src="../../images/assignments/assignment1/model2.gif" width="160" height="35" alt="Spring model"></td>
+      </tr>
+    </thead>
+    <tr>
+    <tbody>
+      <tr>
+        <td align="center">Spring</td>
+        <td align="center">6</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center"><sub><img src="../../images/assignments/assignment1/mua.gif" width="25" height="27" alt="muA"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">Spring</td>
+        <td align="center">12</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center"><sub><img src="../../images/assignments/assignment1/mub.gif" width="62" height="27" alt="muB"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">Spring</td>
+        <td align="center">24</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center"><img src="../../images/assignments/assignment1/regdummy3.gif" width="63" height="27" alt="regdummy3"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<blockquote>
+  <p>From the summary table &beta;<sub>1</sub> = &ndash;0.0003 and &beta;<sub>2</sub> = &ndash;0.4167. Both of these effects are negative so mean egg count  decreases  as Density increases. On the other hand the summary table reports that neither of these effects are statistically significant. Thus the mean egg count in Spring when density is 12 is not significantly different from what it was when Density is 6. Similarly the mean egg count when density is 24 is not significantly different from what it was when Density = 6.</p>
+</blockquote>
+<ol start="3">
+  <li>When Density = 6 and Season = 'Spring', <em>x</em><sub>1</sub> = <em>x</em><sub>2</sub> = 0 and <em>z</em> = 1. Thus the regression model is <img src="../../images/assignments/assignment1/density6model.gif" alt="density 6 model" width="102" height="35" align="absmiddle">. We have the following estimates of the mean egg count in Spring and Summer when Density = 6.</li>
+</ol>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=300 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 2 &nbsp;</strong> Regression model when Density = 6<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="399" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+    <colgroup>
+    </colgroup>
+    <colgroup>    </colgroup>
+        <colgroup>    </colgroup>
+            <colgroup>    </colgroup>
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td align="center" width="60" scope="col">Season</td>
+        <td align="center" width="60" scope="col">Density</td>
+        <td align="center" width="44" scope="col"><em>z</em><sub></sub></td>
+        <td align="center" width="209" scope="col"><img src="../../images/assignments/assignment1/density6model.gif" width="102" height="35" alt="density 6 model"></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">Spring</td>
+        <td align="center">6</td>
+        <td align="center">0</td>
+        <td align="center"><sub><img src="../../images/assignments/assignment1/mua.gif" width="25" height="27" alt="muA"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">Summer</td>
+        <td align="center">6</td>
+        <td align="center">1</td>
+        <td align="center"><sub><img src="../../images/assignments/assignment1/muc.gif" width="60" height="35" alt="summer"></sub></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<blockquote>
+  <p>The parameter &beta;<sub>3</sub> represents the difference in mean egg counts, Summer &ndash; Spring. From the summary table we see that &beta;<sub>3</sub> = 2.7753 and it is significantly different from zero. Thus we conclude that the mean egg count is significantly higher in Summer than in Spring when Density = 6.<br>
+  </p>
+</blockquote>
+<ol start="4">
+  <li>The interaction terms are a bit more involved to explain. Table 3  compares the coefficients from an additive model (a model without the interaction terms)  with those from the interaction model when Season = 'Summer'.</li>
+</ol>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=300 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 3 &nbsp;</strong> Regression model when Season = 'Summer'<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="449" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+    <colgroup>
+    </colgroup>
+
+    <colgroup></colgroup>
+    <colgroup span=3></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td align="center"valign="middle"  width="60" scope="col">Season</td>
+        <td align="center" valign="middle" width="60" scope="col">Density</td>
+        <td align="center" valign="middle" width="44" scope="col"><em>x</em><sub>1</sub></td>
+        <td align="center" valign="middle" width="44" scope="col"><em>x</em><sub>2</sub></td>
+        <td align="center" valign="middle" width="44" scope="col"><em>z</em></td>
+        <td align="center" valign="middle" width="209" scope="col">Additive model</td>
+        <td align="center" valign="middle" width="209" scope="col">Interaction model</td>
+      </tr>
+    </thead>
+    <tr>
+    <tbody>
+      <tr>
+        <td align="center">Summer</td>
+        <td align="center">6</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center"><sub><img src="../../images/assignments/assignment1/muc.gif" width="60" height="35" alt="summer"></sub></td>
+        <td align="center"><sub><img src="../../images/assignments/assignment1/muc.gif" width="60" height="35" alt="summer"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">Summer</td>
+        <td align="center">12</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center"><img src="../../images/assignments/assignment1/muc12.gif" width="95" height="35"></td>
+        <td align="center"><img src="../../images/assignments/assignment1/muc12int.gif" alt="" width="132" height="35"></td>
+      </tr>
+      <tr>
+        <td align="center">Summer</td>
+        <td align="center">24</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+        <td align="center"><img src="../../images/assignments/assignment1/muc24.gif" width="95" height="35"></td>
+        <td align="center"><img src="../../images/assignments/assignment1/muc24int.gif" width="130" height="35"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<blockquote>
+  <p>Fig. 3 graphically contrasts the predictions of the additive model (one with only the main effects of Season and Density) to the interaction model. Because the reported estimates of the parameters &beta;<sub>4</sub> and &beta;<sub>5</sub> are  negative,  the interaction model summer profile lies below the additive model summer profile.</p>
+</blockquote>
+<p align="center"><img src="../../images/assignments/assignment1/fig3.png" width="460" height="270" alt="fig. 3"></p>
+<p align="center" class="styleArial"><strong>Fig. 3</strong> &nbsp;Contrasting the additive and interaction models for Season and Density</p>
+<blockquote>
+  <p>In the additive model the mean profiles for Spring and Summer are parallel. The regression coefficients &beta;<sub>4</sub> and &beta;<sub>5</sub> in the interaction model are the deviations from additivity (and hence parallelism). The fact that these effects are estimated to be negative (&ndash;1.00 and &ndash;1.47) and  statistically significant indicates that the Season effect is significantly reduced when Density is  12 or 24 than what it is when Density is  6.  When density = 6 there is a very large season effect of &beta;<sub>3</sub> = 2.775. When density = 12 the season effect is not as large (2.7753 &ndash; 0.9997 = 1.776). When density = 24 the season effect is even smaller (2.7753 &ndash; 1.47 = 1.31). These effects of density on the season effect are statistically significant. </p>
+  <p>So we have two interpretations of the interaction. One interpretation is that Density has a marked negative effect on mean egg count in the Summer, but not in Spring. The other interpretation is that the increase in egg count from spring to summer that we see when density is 6 gets significantly reduced when density = 12 and even more so when density = 24.</p>
+</blockquote>
+<h2>Question 4 </h2>
+<p>I obtain 1000 simulations from the two-factor interaction model. </p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> set.seed(20)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> junk &lt;- simulate(out1, n=1000)</div>
+
+<p>Following the hint I take the minimum of the simulations.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> min(junk)</div>
+<span class="style24">[1] -0.4771207</span>
+<p>The simulations returned  a negative value. Given that the response variable is  egg count, a positive whole number,  a negative value is an unreasonable prediction. The simulations produced by the simulate function are organized as columns. I count up the number of simulations that produced one or more negative values.  I use the apply function to sum up the number of negative values in each column. I then tabulate the results.
+</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> table(apply(junk, 2, function(x) sum(x&lt;0)))</div>
+<span class="style24">&nbsp; 0&nbsp;&nbsp; 1&nbsp;&nbsp; 2 <br>
+  890 107&nbsp;&nbsp; 3</span>
+<p>So 107 simulations yielded a single negative value (out of 18) while three yielded two negative values. Thus 11% of the simulations returned one or more silly values. We can count up the number of negative values and divide by the total number of simulated observations to obtain the overall percentage of silly values.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> sum(junk&lt;0)/(nrow(junk)*ncol(junk))</div>
+<span class="style24">[1] 0.006277778</span>
+<p>So, about 0.6% of the simulated values are negative, not a large number, but still indicating that perhaps the model is formulated  incorrectly. We'll investigate this further later in the course after we have added more statistical tools to our arsenal.</p>
+<h3>R code used to produce Fig. 3</h3>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">out1a &lt;- lm(Eggs ~ Density:Season-1, data=quinn)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  plot(c(.5,3.4),range(coef(out1a))+c(-.1,.1), type='n',axes=F, xlab='Density', ylab='Egg count')</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> axis(2)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  axis(1, at=1:3, labels=c(6,12,24))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  box()</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  points(1:3, coef(out1a)[1:3], pch=16, col='dodgerblue1')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  lines(1:3, coef(out1a)[1:3], col='dodgerblue1')</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> lines(1:3, coef(out1a)[4:6], col='pink')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">points(1:3, coef(out1a)[4:6], col='red', pch=16)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">points(1:3, coef(out1a)[1:3]+coef(out1)[4], col=2)</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> lines(1:3, coef(out1a)[1:3]+coef(out1)[4], col=2, lty=2)</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> arrows(2, coef(out1a)[5]+.1, 2, coef(out1a)[2]+coef(out1)[4]-.1, code=3, angle=45, length=.08)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  arrows(3, coef(out1a)[6]+.1, 3, coef(out1a)[3]+coef(out1)[4]-.1, code=3, angle=45, length=.08)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">text(2, coef(out1a)[5]-coef(out1)[5]/2, pos=4, expression(beta[4]))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  text(3, coef(out1a)[6]-coef(out1)[6]/2, pos=4, expression(beta[5]))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">text(1, coef(out1)[1]+coef(out1)[4]/2, pos=2, expression(beta[3]))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  arrows(1, coef(out1)[1]+.1, 1, coef(out1)[1]+coef(out1)[4]-.1, code=3, angle=45, length=.08)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">text(1, coef(out1a)[4], 'Summer', pos=2, col='red')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  text(1, coef(out1a)[1], 'Spring', pos=2, col='dodgerblue1')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">text(3, coef(out1a)[3]+coef(out1)[4], 'additive\n model', pos=4, cex=.8, col='seagreen4')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> text(3, coef(out1a)[6], 'interaction\n  model', pos=4, cex=.8, col='seagreen4')</div>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment1/hw1scores.png" width="350" height="185" alt="hw1 scores"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 9, 2012<br>
+      URL: <a href="assign1.htm#assign1">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign1.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

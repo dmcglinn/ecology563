@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 5</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style22 {color: #663366; font-weight: bold; }
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"> <a name="assign5" id="assign5"></a>Assignment 5 </h1>
+<h2>Due Date </h2>
+
+  <p>Friday, October 5, 2012</p>
+
+<h2>Data Source </h2>
+
+  <p>The data for this assignment can be found at the the <a href="http://homopan.wayne.edu/brainbodydb/brainbody_list.php">Brain and Body Mass of Mammals Database</a> web site. This web site contains a database of the brain and body masses of 1,998 mammalian species compiled from the literature.</p>
+  <h2>Background</h2>
+  <p>Allometry is the study of how biological processes scale with body size. The subject  was pioneered by the mathematical biologist D'Arcy Thompson  in the early 20th century. A common model used in allometric analysis is the so-called allometric equation, the power law relationship</p>
+  <p align="center"><img src="../../images/assignments/assignment5/allometric.gif" width="63" height="32" alt="allometric eqn"></p>
+  <p>with parameters <em>k</em> and <em>a</em>. Here <em>a</em> is called the scaling or allometric exponent and <em>k</em> is called the allometric coefficient. Typically this equation is fit to data by first log transforming the equation to yield</p>
+  <p align="center"><img src="../../images/assignments/assignment5/logeqn.gif" width="170" height="60" alt="log allometric"></p>
+  <p>and then using ordinary linear regression (or  a version of what's called Type II regression) to estimate the parameters. One of the most widely cited allometric analyses is that of Jerison (1983) who looked at the relationship between brain weight and body weight across a  range of vertebrates species. Jerison argued that at  higher taxonomic  levels the allometric exponent is  roughly the same for different taxonomic groups so that differences in the log of the allometric coefficient can be used to distinguish different organizational grades in brain architecture. In this assignment you will investigate  this idea by comparing the allometric exponents of four different orders of mammals.</p>
+<h2 align="left">Questions</h2>
+<ol>
+  <li>Go to the <a href="http://homopan.wayne.edu/brainbodydb/brainbody_list.php">Brain and Body Mass of Mammals Database</a> and download the entire mammal database that is available there. Read the file into R.</li>
+  <li>Tabulate the number of observations by mammalian order (<span class="styleArial">Species_Order</span>) to determine which four orders in the database have the greatest number of observations. Subset your data frame so that only those four orders of mammals are represented (discarding the rest).</li>
+  <li>If you table a table of the species (<span class="styleArial">Species_Name</span>) counts you'll notice that some species have multiple representatives in the data base. (One species is represented 76 times!) Allometric studies have found that the magnitude of the allometric exponent decreases with taxonomic rank and approaches zero at the species level. (Thus there is no relationship between brain weight and body weight among individuals within a species.) Thus we probably should use summary statistics  rather than the raw data for those species that have multiple representatives in the database.
+    <ol type="a">
+      <li>Obtain the mean body weight for each species in your reduced database from Question 2.</li>
+      <li>Obtain the mean brain weight for each species in your reduced database.</li>
+      <li>Obtain the  species names and the species orders that correspond to the  means you calculated in (a) and (b).</li>
+      <li>Organize your four new variables in a single data frame.</li>
+    </ol>
+  </li>
+  <li>Carry out a formal statistical test to determine whether the allometric exponents of the brain weight to body weight relationship differ among the four mammalian orders in your data frame of means.</li>
+  <li>If you determine that the exponents are different, determine the mammalian orders
+for which the allometric exponents are significantly different and the orders for which  they are not.</li>
+  <li>Graph log mean brain weight against log mean body weight for all the observations in your  database of means. Clearly differentiate the mammalian orders in your plot. Superimpose the four estimated regression equations for the four mammalian orders. </li>
+  <li>There are at least two observations that look like they're mistakes. Identify the species corresponding to those observations. </li>
+</ol>
+<h2>Hints</h2>
+
+  <ol>
+    <li>To simplify your life start by removing those observations in the original database that have missing values for brain mass or body mass.</li>
+    <li>After creating your reduced database consisting of the four mammalian orders, you should redeclare <span class="styleArial">Species_Name</span> to be a factor. This will remove the ghost species names, the levels of the original <span class="styleArial">Species_Name</span> variable that no longer have any observations.</li>
+    <li>Depending on the format you chose for downloading your original file from the mammal database, you may find that you have two orders called Cetartiodactyla. One version has a space at the end of the name. You will need to combine these two orders into a single order. There are many ways to accomplish this.
+      <ol type="a">
+        <li>You could use the <span class="style1">ifelse</span> function on the <span class="styleArial">Species_Order</span> variable checking to see if it is equal to <span class="style8">'Cetartiodactyla '</span>. If TRUE assign it the correct value. If FALSE assign it its current value. The current value should be placed inside the <span class="style1">as.character</span> function to prevent <span class="style1">ifelse</span> from extracting the numeric attribute of the factor.</li>
+        <li>Use the <span class="style1">grep</span> function mentioned in class yesterday to locate the offending observation and change the <span class="styleArial">Species_Order</span> of that case specifically.</li>
+        <li>Use the <span class="style1">sub</span> function (see the <span class="style1">grep</span> help page) to replace the any space in <span class="styleArial">Species_Order</span> with nothing. </li>
+        <li>Use the <span class="style1">trim</span> function from the <span class="style9">gdata</span> package to remove trailing spaces.</li>
+      </ol>
+    </li>
+    <li>In Question #3 there is a special R function (from a family of related functions) that we've used a few times that would be useful here.</li>
+    <li>In Question #3 a  useful generic function to use to select the taxonomic order of  the unique  observations that comprise your  data frame of means is the following: <span class="style10">function(x) as.character(x[1])</span>. It selects the first value from a vector and returns its character representation.</li>
+    <li>When you superimpose the regression lines in Question 6 be sure that you only draw each line over the range of the data that corresponds to that mammalian order. There are various ways to do this depending on  the function you use to draw the lines.</li>
+    <li>The <span class="style1">identify</span> function can be used to identify points in a scatter plot. It has three relevant arguments. The first argument is the <em>x</em>-variable in the currently active plot, the second argument is the <em>y</em>-variable in the currently active plot, and the third argument is the variable that contains the labels that you would like to use to label the points. Click near a point you want to identify and the corresponding label will appear at that location. To terminate the identification process on a PC right-click anywhere in the graph and choose <span class="style8">Stop</span> from the menu that appears. On a Mac or a PC pressing the <span class="style8">esc</span> key will also terminate the identification process. </li>
+  </ol>
+<h2>Cited references</h2>
+<ul>
+  <li>Jerison, H. F. 1983. The evolution of the mammalian brain as an information-processing system. pp. 113&ndash;146 IN Eisenberg, J. F. &amp; Kleiman, D. G. (Ed.), <em>Advances in the Study of Mammalian Behavior</em> (Spec. Publ. Amer. Soc. Mamm. 7). Pittsburgh: American Society of Mammalogists. </li>
+  <li>Thompson, D'Arcy W. 1992. <em>On Growth and Form</em> (Canto ed.). Cambridge: Cambridge University Press.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 2, 2012<br>
+      URL: <a href="assign5.htm#assign5" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/assign5.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

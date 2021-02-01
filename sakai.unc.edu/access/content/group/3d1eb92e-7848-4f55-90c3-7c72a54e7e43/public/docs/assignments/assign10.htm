@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 10</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style22 {color: #663366; font-weight: bold; }
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style36 {font-size: larger}
+
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+.border-side {
+  border-left: solid 1px black;
+}
+.border-bottom {
+  border-bottom: solid 1px black;
+} 
+
+td, th {
+  border-left: solid 1px black;
+} 
+
+.no-border {
+  border-left: none;
+} 
+.style21 {	color: #990099;
+	font-weight: bold;
+}
+.style231 {color: #990033; font-weight: bold; }
+
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"> <a name="assign10" id="assign10"></a>Assignment 10 </h1>
+<h2>Due Date </h2>
+
+  <p>Friday, November 16, 2012</p>
+
+<h2>Data Source </h2>
+
+  <p>The data for this assignment is <a href="../../data/bycatch.csv">bycatch.csv</a>,  a comma-delimited text file.  </p>
+  <h2>Background</h2>
+  <p>These data are  Example 3.3 of Manly (2001), pp. 96&ndash;100, who obtained the data from Baird (1996). Manly describes the data as follows.</p>
+  <blockquote>
+    <p class="styleArial">The accidental capture of marine mammals and birds in commercial fishing operations is of considerable concern in many fisheries around the world. This example concerns one such situation, which is of catches of the common dolphin (<em>Delphinus delphis</em>) and the bottlenose dolphin (<em>Tursiops truncatus</em>) in the Taranaki Bight trawl fishery for jack mackerel (<em>Trachurus declivus</em>, <em>T. novaezalandiae</em>, and <em>T. murphyi</em>) off the west coast of New Zealand.</p>
+    <p class="styleArial">The New Zealand Ministry of Fisheries puts official observers on about 10% of fishing vessels to monitor dolphin bycatch ... Data were collected by these observers for the six fishing seasons 1989/90 to 1994/95 ...The table shows the number of observed trawls (Tows) and the number of dolphins accidentally killed (Bycatch) categorised by eight conditions for each fishing year: the fishing area (the northern or southern Taranaki Bight), by the gear type (bottom or midwater), by the time (day or night). Excluding five cases where there were no observed trawls, this gives 43 observations on the bycatch under different conditions, in different years.</p>
+  </blockquote>
+<h2 align="left">Questions</h2>
+<ol>
+  <li>Manly (2001) fits a Poisson regression model to these data in which he includes season, area, gear type, and time of day as factors in a main effects model. He fits the model in such a way  that the response variable, Bycatch, can be interpreted as a bycatch rate, the number of dolphins killed per tow. Fit this model.</li>
+  <li>Obtain the estimates of the area, gear type, and time effects. Interpret what these estimates represent in practical terms. For instance, how do the bycatch rates compare for night versus day, south versus north, mid-water versus bottom?</li>
+<li>Manly (2001), p. 100, states the following: &quot;All effects are highly significant in terms of the reduction in the deviance that is obtained by adding them into the model, and the final model gives a good fit to the data (chi-squared = 42.08 with 34 degrees of freedom, p = 0.161).&quot; Is Manly right? Why or why not?</li>
+<li>Examine the summary table. Do you see anything unusual in what's reported there to suggest that maybe there is a problem with this model? What?</li>
+<li>In light of the problem you saw in question 4, refit the model but this time treat Season as a random effect rather than a fixed effect.</li>
+<li>Carry out a goodness of fit test for the random effects model. What observations appear to be poorly described by the model?</li>
+<li>Examine the Pearson residuals. Verify that these same observations have the largest Pearson residuals.<br>
+</li>
+  <li>Refit the model of question 5 but this time treat log(tows) as a covariate rather than an offset. 
+    <ol type="a">
+      <li>Cite two pieces of statistical evidence that suggest that log(tows) is better treated as a covariate than as an offset.</li>
+      <li>Check the fit of this model  the same way you did for the model in Question 6. Has the fit improved?  </li>
+    </ol>
+  </li>
+</ol>
+<h2>Hint</h2>
+<ol>
+  <li>In Question 3 you should find that you match Manly's reported deviance, degrees of freedom, and <em>p</em>-value. So what I'm asking here is whether the goodness of fit test he's conducting is valid for these data and this model.</li>
+  <li>In Question 6 a  goodness of fit test such as the one you carried out in Assignment 9 would be appropriate. The <span class="style1">predict</span> function does not work with <span class="style1">lmer</span> objects, but the <span class="style1">fitted</span> function does. The <span class="style1">fitted</span> function applied to an <span class="style1">lmer</span> model returns the conditional mean, i.e., the mean calculated using the  regression model that includes the fixed effects, offset, and the random effects. See <a href="../lectures/lecture7.htm#fitted">lecture 7</a>.</li>
+  <li><strong>Extra credit</strong>: The answer to Question 8a turns out to be  somewhat ambiguous. I can actually find two pieces of statistical evidence that support treating log(tows) as a covariate but also one piece of statistical evidence that says it doesn't matter, log(tows) could just as well be treated as an offset. Extra credit if you can find all three of the pieces of evidence that I'm referring to  here.</li>
+</ol>
+<h2>Cited references</h2>
+<ul>
+  <li>Baird, S. J. 1996. Nonfish Species and Fisheries Interactions Working Group Report, May 1996. New Zealand Fisheries Assessment Working Group Report 96/1. Ministry of Fisheries, Wellington, New Zealand.</li>
+  <li>Manly, B. F. J. 2001. <em> Statistics for Environmental Science and Management</em>. Chapman &amp; Hall/CRC Press: Boca Raton, FL.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 14, 2012<br>
+      URL: <a href="assign10.htm#assign10" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/assign10.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

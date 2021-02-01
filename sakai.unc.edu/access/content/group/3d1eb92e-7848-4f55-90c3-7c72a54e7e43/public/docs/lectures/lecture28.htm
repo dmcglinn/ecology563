@@ -1,0 +1,760 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 28&mdash;Monday, December 3, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+.style1012 {	font-family: "Courier New", Courier, mono
+}
+.style1012 {font-family: "Courier New", Courier, mono}
+.style221 {color: #339966;
+	font-weight: bold;
+}
+.style29 {font-family: "Courier New", Courier, mono}
+.style30 {color: #333399;
+	font-weight: bold;
+}
+.style28 {color: #CC0000; font-weight: bold; }
+.style411 {	color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #009900;  font-weight: bold; font-family: "Courier New", Courier, mono;}
+.style5 {	color: #CC0000;
+	font-weight: bold;
+}
+span.GramE {mso-style-name:"";
+	mso-gram-e:yes;}
+span.SpellE {mso-style-name:"";
+	mso-spl-e:yes;}
+.style331 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style391 {font-family: "Courier New", Courier, mono; font-weight: bold; color: #339933}
+.style42 {color: #CCCCCC}
+.style42 {color: #CC0000;
+	font-weight: bold;
+}
+.style401 {color: #CC0000}
+.style2311 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style261 {font-family: "Courier New", Courier, mono}
+.style371 {color: #FF0000;
+	font-weight: bold;
+}
+.style4011 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style421 {color: #0000FF; font-weight: bold; }
+.style44 {font-family: "Courier New", Courier, mono; color: #000000; font-size: smaller; }
+.style332 {color: #0000FF; font-family: "Courier New", Courier, mono; font-size: small;
+background-color:#F0F0F0;
+}
+.style332 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style91 {	color: #333399;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture28" id="lecture28"></a>Lecture 28&mdash;Monday, December 3, 2012</h1>
+<h3>Topics</h3>
+<ul>
+  
+  <li><a href="lecture28.htm#fitting">Fitting the models from last time</a></li>
+  <li><a href="lecture28.htm#obtaining">Confidence intervals for probabilities from a logistic regression model</a>
+    <ul>
+      <li><a href="lecture28.htm#wald">Wald-type confidence intervals for probabilities</a></li>
+      <li><a href="lecture28.htm#profile">Profile likelihood confidence intervals for probabilities</a></li>
+      <li><a href="lecture28.htm#graphing">Graphing the  probabilities and their confidence intervals</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture28.htm#plotting">Plotting a logit model with a single continuous predictor</a></li>
+  <li><a href="lecture28.htm#odds">Graphs of (log) odds ratios</a></li>
+<li><a href="lecture28.htm#mixed">Mixed effects logistic regression models</a></li>
+  <li><a href="lecture28.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture28.htm#pipe">pipe </a>can be used to open up a channel for reading in data from the clipboard (Mac OS X).</li>
+</ul>
+<h2 align="left"><a name="fitting"></a>Fitting the models from last time</h2>
+<p align="left">I reload the wells data set, collapse the landscape categories, and fit the final models from last time.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">wells &lt;- read.csv(&quot;ecol 563/wells.txt&quot;)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out1 &lt;- glm(cbind(y, n-y)~ land.use + sewer, data=wells, family=binomial)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  wells$land.use2 &lt;- factor(ifelse(wells$land.use %in% c('agri','undev'), 'rural', 
+  as.character(wells$land.use)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  wells$land.use3 &lt;- factor(ifelse(wells$land.use2 %in% c('inst','recr','resL','resM','trans'), 
+  'mixed', as.character(wells$land.use2)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  wells$land.use4 &lt;- factor(ifelse(wells$land.use3 %in% c('resH','comm','indus'),
+  'high.use', as.character(wells$land.use3)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out2d &lt;- glm(cbind(y,n-y)~land.use4+sewer, data=wells, family=binomial)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out2i &lt;- glm(cbind(y,n-y)~land.use4+sewer+nitrate, data=wells, family=binomial)</div>
+<h2><a name="obtaining"></a>Confidence intervals for probabilities from a logistic regression model</h2>
+<p>The logistic regression model with dummy variables for sewer (<em>z</em>)  and land use  (<em>w</em><sub>1</sub> and <em>w</em><sub>2</sub>) is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture28/logit.gif" width="342" height="55" alt="logit"></p>
+<p>The usual convention in generalized linear models is to use the Greek letter &eta; to denote the linear predictor in a model. </p>
+<p align="center"><img src="../../images/lectures/lecture28/eta.gif" width="217" height="27" alt="eta"></p>
+<p>Letting &eta; denote the linear predictor in the model, I solve the logistic regression equation for <em>p</em>, the probability of contamination.</p>
+<p align="center"><img src="../../images/lectures/lecture28/probability.gif" width="298" height="238" alt="probability"></p>
+<p>The function of &eta; on the right hand side of  the last expression is  the inverse logit. It's also called the logistic function. Suppose we want a point estimate for the probability of contamination for  a well in a mixed land use area in which sewers are present. This corresponds to <em>w</em><sub>1</sub> = 1, <em>w</em><sub>2</sub> = 0, and <em>z</em> = 1 in our model. Thus &eta; is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture28/etaexample.gif" width="132" height="27" alt="eta example"></p>
+<p>The inverse logit of this expression is the desired probability.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> inv.logit &lt;- function(eta) exp(eta)/(1+exp(eta))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> inv.logit(coef(out2d)[1] + coef(out2d)[2] + coef(out2d)[4])</div>
+<span class="style141">  (Intercept) <br>
+&nbsp;&nbsp; 0.225459</span>
+<p>If all we need are the predicted probabilities associated with individual observations we don't need to do this calculation ourselves. The <span class="style1">predict</span> function with <span class="style22">type='response'</span> when applied to a logistic regression model returns probabilities. We can even include the <span class="style22">se.fit = T</span> option to obtain standard errors of the probabilities.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> phat &lt;- predict(out2d, type='response', se.fit=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> phat </div>
+
+<span class="style141">$fit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 <br>
+0.041926959 0.009287411 0.041926959 0.009287411 0.225459017 0.058695598 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 <br>
+0.225459017 0.058695598 0.454018448 0.151200397 0.225459017 0.058695598 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18 <br>
+0.225459017 0.058695598 0.225459017 0.058695598 0.454018448 0.151200397 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20 <br>
+0.454018448 0.151200397 </span>
+<p><span class="style141">$se.fit<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 <br>
+  0.029363994 0.006720644 0.029363994 0.006720644 0.033727179 0.014394246 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 <br>
+  0.033727179 0.014394246 0.039023551 0.038406497 0.033727179 0.014394246 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18 <br>
+  0.033727179 0.014394246 0.033727179 0.014394246 0.039023551 0.038406497 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20 <br>
+  0.039023551 0.038406497 </span>
+<p>If we could assume that the probabilities are normally distributed then we could use the output from <span class="style1">predict</span> to obtain 95% normal-based confidence intervals for the probabilities with the usual formula: </p>
+<p align="center"><img src="../../images/lectures/lecture28/phat.gif" width="157" height="38" alt="phat"></p>
+<p>The general guideline for when this formula is appropriate was mentioned <a href="lecture26.htm#np">previously</a>. Typically we need both <img src="../../images/lectures/lecture28/np.gif" alt="np" width="53" height="28" align="absmiddle"> and <img src="../../images/lectures/lecture28/npq.gif" alt="nq" width="95" height="38" align="absmiddle">. Checking this for these data we find</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">sum(wells$n*(1-phat$fit)&gt;5 &amp; wells$n*phat$fit&gt;5)</div>
+<span class="style141">[1] 8</span>
+<p>So only 8 of the 20 wells satisfy this criterion. Thus the normal approximation is suspect here. We can see that there is a problem  if we use this formula to calculate a confidence interval for the first observation.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> phat$fit[1] + c(qnorm(.025), qnorm(.975))*phat$se.fit[1]</div>
+<span class="style141">[1] -0.01562541&nbsp; 0.09947933</span>
+<p>The interval  has a negative left hand endpoint so negative probabilities are included in the confidence interval. This is clearly silly.</p>
+
+<p>A better approach is to parallel what we did to obtain confidence intervals for <a href="lecture27.htm#confidence">odds ratios</a>. Because maximum likelihood estimates have an asymptotic normal distribution, so  do linear combinations of maximum likelihood estimates. So we start by obtaining a 95% confidence interval for the linear combination &eta; (on the logit scale). We then apply the inverse logit function separately to the endpoints of the interval to obtain a confidence interval for the probability. To obtain the confidence intervals on the logit scale we have two choices: we can construct  Wald-type confidence intervals or  profile likelihood confidence intervals.</p>
+<h3><a name="wald"></a>Wald-type confidence intervals for probabilities</h3>
+<p>We start by creating a data frame containing all possible combinations of <span class="style8">sewer</span> and <span class="style8">land.use4</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> new.dat &lt;- expand.grid(land.use4=levels(wells$land.use4), sewer=levels(wells$sewer))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> new.dat</div>
+<span class="style141">&nbsp; land.use4 sewer<br>
+1&nbsp; high.use&nbsp;&nbsp;&nbsp; no<br>
+2&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp; no<br>
+3&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp; no<br>
+4&nbsp; high.use&nbsp;&nbsp; yes<br>
+5&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp; yes<br>
+6&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp; yes<br>
+</span>
+<p>Next we use this in the <span class="style22">newdata</span> argument of <span class="style1">predict</span> to obtain the predicted logits and their standard errors and add them to the data frame.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.p &lt;- predict(out2d, se.fit=T, newdata=new.dat)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.p</div>
+<span class="style141">$fit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 <br>
+-1.7252170 -2.7749018 -4.6697646 -0.1844474 -1.2341322 -3.1289950 </span>
+<p><span class="style141">$se.fit<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 <br>
+  0.2992586 0.2605273 0.7304131 0.1574256 0.1931381 0.7310097 </span>
+<p><span class="style141">$residual.scale<br>
+  [1] 1</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # create data frame of logits, standard errors, and categories</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> new.dat2 &lt;- data.frame(new.dat, logit=out.p$fit, se=out.p$se)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> new.dat2</div>
+<span class="style141">  &nbsp; land.use4 sewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; logit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se<br>
+  1&nbsp; high.use&nbsp;&nbsp;&nbsp; no -1.7252170 0.2992586<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp; no -2.7749018 0.2605273<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp; no -4.6697646 0.7304131<br>
+  4&nbsp; high.use&nbsp;&nbsp; yes -0.1844474 0.1574256<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp; yes -1.2341322 0.1931381<br>
+6&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp; yes -3.1289950 0.7310097</span>
+<p>Next we calculate normal-based 95% confidence intervals for the predicted logits.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">new.dat2$low95 &lt;- new.dat2$logit + qnorm(.025)*new.dat2$se</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  new.dat2$up95 &lt;- new.dat2$logit + qnorm(.975)*new.dat2$se</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  new.dat2</div>
+<span class="style141">&nbsp; land.use4 sewer&nbsp;&nbsp;&nbsp;&nbsp; logit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+  1&nbsp; high.use&nbsp;&nbsp;&nbsp; no -1.725217 0.299259 -2.311753 -1.138681<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; mixed &nbsp;&nbsp;&nbsp;no -2.774902 0.260527 -3.285526 -2.264278<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp; no -4.669765 0.730413 -6.101348 -3.238181<br>
+  4&nbsp; high.use&nbsp;&nbsp; yes -0.184447 0.157426 -0.492996&nbsp; 0.124101<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp; yes -1.234132 0.193138 -1.612676 -0.855588<br>
+6&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp; yes -3.128995 0.731010 -4.561748 -1.696242</span>
+<p>Finally we apply the inverse logit function to the logit column and the columns containing the endpoints of the confidence intervals.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">inv.logit &lt;- function(eta) exp(eta)/(1+exp(eta))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">apply(new.dat2[,c(3,5:6)], 2, inv.logit)</div>
+<span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; logit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+  1 0.15120040 0.09015424 0.2425626<br>
+  2 0.05869560 0.03607108 0.0941250<br>
+  3 0.00928741 0.00223484 0.0377539<br>
+  4 0.45401845 0.37918808 0.5309855<br>
+  5 0.22545902 0.16621743 0.2982619<br>
+  6 0.04192696 0.01033585 0.1549567</span>
+<p>Assembling  everything in a data frame yields the following.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> p.dat &lt;- data.frame(new.dat2[,1:2], apply(new.dat2[,c(3,5:6)], 2, inv.logit))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> p.dat</div>
+<span class="style141">&nbsp; land.use4 sewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; logit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+  1&nbsp; high.use&nbsp;&nbsp;&nbsp; no 0.15120040 0.09015424 0.2425626<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp; no 0.05869560 0.03607108 0.0941250<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp; no 0.00928741 0.00223484 0.0377539<br>
+  4&nbsp; high.use&nbsp;&nbsp; yes 0.45401845 0.37918808 0.5309855<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp; yes 0.22545902 0.16621743 0.2982619<br>
+6&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp; yes 0.04192696 0.01033585 0.1549567</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> names(p.dat)[3] &lt;- 'prob'</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> p.dat</div>
+<span class="style141">&nbsp; land.use4 sewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+  1&nbsp; high.use&nbsp;&nbsp;&nbsp; no 0.15120040 0.09015424 0.2425626<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp; no 0.05869560 0.03607108 0.0941250<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp; no 0.00928741 0.00223484 0.0377539<br>
+  4&nbsp; high.use&nbsp;&nbsp; yes 0.45401845 0.37918808 0.5309855<br>
+  5&nbsp;&nbsp; &nbsp;&nbsp;mixed&nbsp;&nbsp; yes 0.22545902 0.16621743 0.2982619<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp; yes 0.04192696 0.01033585 0.1549567
+</span><h3><a name="profile"></a>Profile likelihood confidence intervals for probabilities</h3>
+<p>The function <span class="style1">confint</span> calculates profile likelihood confidence intervals for the parameters estimated by a <span class="style1">glm</span> model. To make use of it here we need to reparameterize the <span class="style1">glm</span> model so that the returned parameter estimates correspond to individual categories of sewer and land use, rather than effects. We can accomplish this in two stages. First we obtain the logits for the three <span class="style8">land.use4</span> categories when <span class="style8">sewer = 'no'</span> by refitting the model without an intercept.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d1 &lt;- glm(cbind(y,n-y)~land.use4+sewer-1, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2d1)</div>
+<span class="style141">land.use4high.use&nbsp;&nbsp;&nbsp; land.use4mixed&nbsp;&nbsp;&nbsp; land.use4rural&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.725217&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.774902&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -4.669765&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.540770 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain confidence intervals</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">out.c1 &lt;- confint(out2d1)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">out.c1</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp; 97.5 %<br>
+  land.use4high.use -2.3386647 -1.160706<br>
+  land.use4mixed&nbsp;&nbsp;&nbsp; -3.3206147 -2.294385<br>
+  land.use4rural&nbsp;&nbsp;&nbsp; -6.4933077 -3.481457<br>
+  seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.9950944&nbsp; 2.130452</span>
+<p>To get the predicted land use logits when <span class="style8">sewer = 'yes'</span> we redefine the levels of the  sewer factor so that  <span class="style8">sewer = 'yes'</span> is the reference group and then refit the model  without an intercept. <br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # define new sewer factor with sewer=yes the reference group</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells$sewer2 &lt;- factor(wells$sewer, levels=rev(levels(wells$sewer)))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> levels(wells$sewer)</div>
+<span class="style141">  [1] &quot;no&quot;&nbsp; &quot;yes&quot;</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> levels(wells$sewer2)</div>
+<span class="style141">  [1] &quot;yes&quot; &quot;no&quot; </span>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # refit model using new sewer variable</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d2 &lt;- glm(cbind(y,n-y)~land.use4+sewer2-1, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2d2)</div>
+<span class="style141">  land.use4high.use&nbsp;&nbsp;&nbsp; land.use4mixed&nbsp;&nbsp;&nbsp; land.use4rural&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sewer2no <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.1844474&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.2341322&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -3.1289950&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.5407697 </span>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.c2 &lt;- confint(out2d2)</div>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.c2 </div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5 %&nbsp;&nbsp;&nbsp;&nbsp; 97.5 %<br>
+  land.use4high.use -0.4952175&nbsp; 0.1230656<br>
+  land.use4mixed&nbsp;&nbsp;&nbsp; -1.6247168 -0.8657053<br>
+  land.use4rural&nbsp;&nbsp;&nbsp; -4.9519386 -1.9329523<br>
+  sewer2no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.1304522 -0.9950944<br>
+</span>
+<p>Finally we assemble the logits and confidence intervals in a matrix and add the land use and sewer identifiers.</p>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # collect results in a matrix</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.profile &lt;- data.frame(est=c(coef(out2d1)[1:3], coef(out2d2)[1:3]), rbind(out.c1[1:3,], out.c2[1:3,]))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain probabilities</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> p.dat.profile &lt;- data.frame(new.dat, inv.logit(out.profile))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> names(p.dat.profile)[3:5] &lt;- c('prob', 'low95', 'up95')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> p.dat.profile</div>
+<span class="style141">  &nbsp; land.use4 sewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+  1&nbsp; high.use&nbsp;&nbsp;&nbsp; no 0.151200397 0.087970986 0.23853896<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp; no 0.058695598 0.034870716 0.09158910<br>
+  3&nbsp;&nbsp;&nbsp; &nbsp;rural&nbsp;&nbsp;&nbsp; no 0.009287411 0.001511247 0.02984448<br>
+  4&nbsp; high.use&nbsp;&nbsp; yes 0.454018448 0.378665237 0.53072762<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp; yes 0.225459017 0.164555398 0.29614872<br>
+6&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp; yes 0.041926959 0.007020060 0.12642417</span>
+<h3><a name="graphing"></a>Graphing the  probabilities and their confidence intervals</h3>
+<p>We start by creating a unique identifier for each combined sewer and land use category. The numeric version of this variable  defines the tick marks on the <em>y</em>-axis of the plot.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  p.dat$both &lt;- factor(paste(p.dat$sewer, p.dat$land.use4, sep='.'))</div>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  p.dat$num &lt;- as.numeric(p.dat$both)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  p.dat</div>
+<span class="style141">
+  &nbsp; land.use4 sewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; both num<br>
+  1&nbsp; high.use&nbsp;&nbsp;&nbsp; no 0.151200397 0.090154244 0.2425626&nbsp; no.high.use&nbsp;&nbsp; 1<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp; no 0.058695598 0.036071083 0.0941250&nbsp;&nbsp;&nbsp;&nbsp; no.mixed&nbsp;&nbsp; 2<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp; no 0.009287411 0.002234841 0.0377539&nbsp;&nbsp;&nbsp;&nbsp; no.rural&nbsp;&nbsp; 3<br>
+  4&nbsp; high.use&nbsp;&nbsp; yes 0.454018448 0.379188080 0.5309855 yes.high.use&nbsp;&nbsp; 4<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp; yes 0.225459017 0.166217426 0.2982619&nbsp;&nbsp;&nbsp; yes.mixed&nbsp;&nbsp; 5<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp; yes 0.041926959 0.010335845 0.1549567&nbsp;&nbsp;&nbsp; yes.rural&nbsp;&nbsp; 6</span>
+<p>  The rest of the code for this is very much like what we used in <a href="lecture4.htm#effectbase">lecture 4</a> for a similar graph.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">oldmar &lt;- par(&quot;mar&quot;)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> par(mar=c(4.1,8.1,1.1,1.1))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  plot(num~prob, data=p.dat, xlab='Probability of contamination', ylab='', xlim=c(0, 0.55), ylim=c(0.75,6.25), type='n', axes=F)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  axis(1)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  axis(2, at=1:6, labels=rep(c('high use', 'mixed use', 'rural'),2), las=2, cex.axis=.9)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  box()</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  par(lend=1)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  segments(p.dat$low95, p.dat$num, p.dat$up95, p.dat$num, col='dodgerblue1', lwd=4)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  points(p.dat$prob, p.dat$num, pch='|', lwd=1, cex=1.25, col='dodgerblue4')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  mtext(side=2, at=c(2,5), text=c('Sewers absent','Sewers present'), line=5.5, cex=1.2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  abline(h=3.5, lty=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">par(mar=oldmar)</div><br>
+<table width="530" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><img src="../../images/lectures/lecture28/fig1.png" width="500" height="360" alt="fig. 1"></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 1</strong> &nbsp;Estimated sewer and land use category probabilities along with 95% confidence intervals</td>
+  </tr>
+</table>
+<p>This is analogous to the interaction plots we did for a two-factor ANOVA. Notice that the probability profiles are not parallel on a probability scale even though there is no interaction between sewer and land use in the model. This happens because even though on a logit scale we have an additive model in sewer and land use type, the inverse logit is a nonlinear transformation from the logit scale to the probability scale.</p>
+<h2><a name="plotting"></a>Plotting a logit model with a single continuous predictor </h2>
+<p>If there are continuous predictors in a model then we can't produce diagrams of probabilities such as Fig. 1  unless we choose specific values for the continuous predictors  (the mean is often a good choice). If after stratifying the continuous predictors by the categorical predictors there is no overlap in the range of the continuous predictors   then this approach is not appropriate. It doesn't make sense to obtain a predicted probability for a value of a predictor if that value doesn't occur within the range of the data for a particular category. </p>
+<p>Consider the model we fit that contained <span class="style8">land.use4</span>, <span class="style8">sewer</span>, and <span class="style8">nitrate</span>. When we stratify the continuous variable <span class="style8">nitrate</span> by the categorical variables <span class="style8">land.use4</span> and <span class="style8">sewer</span>, we see that the nitrate values in the <span class="style8">land.use4 = 'rural'</span> and <span class="style8">sewer = 'yes'</span> category only overlap two of the other five categories.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # there are no common values of nitrate for all six categories</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> tapply(wells$nitrate, list(wells$land.use4, wells$sewer), max)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; no yes<br>
+  high.use 4.2 5.2<br>
+  mixed &nbsp;&nbsp;&nbsp;3.5 4.0<br>
+  rural&nbsp;&nbsp;&nbsp; 7.0 1.0</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> tapply(wells$nitrate, list(wells$land.use4, wells$sewer), min)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; no yes<br>
+  high.use 1.1 3.7<br>
+  mixed&nbsp;&nbsp;&nbsp; 0.9 1.6<br>
+rural&nbsp;&nbsp;&nbsp; 0.8 0.9</span>
+<p>When there is a single continuous predictor in a logistic regression model there is another way of summarizing the results&mdash;plot  the fitted model against the continuous variable on a probability scale. Combinations of levels of categorical variables in the model correspond to separate logistic curves. When there are two or more continuous variables in the model then plotting the model on a probability scale is not possible unless we are willing to plot the probability as a function of one of the continuous variables while holding  the other continuous variables fixed at some values. Three-dimensional graphs and contour plots are often difficult to interpret in logistic regression.</p>
+<p>I plot the model <span class="style8">out2i</span> that contains the continuous predictor <span class="style8">nitrate</span> and the categorical predictors <span class="style8">land.use4</span> with three levels and <span class="style8">sewer</span> with two levels. The categorical variables combine to yield six different logit curves as functions of nitrate. I construct a function for the fitted logistic regression model that returns the value of the logit as a function of nitrate and the three dummy variables in the model.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2i)</div>
+<span class="style141"> &nbsp;&nbsp; (Intercept) land.use4mixed land.use4rural&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nitrate <br>
+&nbsp;&nbsp;&nbsp; -2.6565063&nbsp;&nbsp;&nbsp;&nbsp; -0.7293304&nbsp;&nbsp;&nbsp;&nbsp; -2.8422741&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2309213&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.2707348 </span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # regression function</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">logit.mod &lt;- function(mixed, rural, sewer,x) coef(out2i)[1] + coef(out2i)[2]*mixed + coef(out2i)[3]*rural + coef(out2i)[4]*sewer + coef(out2i)[5]*x</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> logit.mod(0,0,0,3)</div>
+<span class="style141">(Intercept) <br>
+&nbsp; -1.844302 </span>
+<p>Using the inverse logit function we can construct a function that returns probabilities as a function of nitrate and the three dummy variables in the model.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">inv.logit &lt;- function(eta) exp(eta)/(1+exp(eta))</div>
+
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # probability function</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> inv.logit(logit.mod(0, 0, 0, 3))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<span class="style141">  (Intercept) <br>
+&nbsp; 0.1365433</span>
+<p>Finally I determine the overall range of the continuous variable in the data set as well as separately by category and use this in determining the domain for  each  curve.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # graph over the range of the data</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> range(wells$nitrate)</div>
+<span class="style141">  [1] 0.8 7.0</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.range &lt;- tapply(wells$nitrate, list(wells$land.use4, wells$sewer), range)</div>
+<p>I use the individual ranges to restrict the  <span class="style13">curve</span> function so that the curve is only drawn over an interval of nitrate values that were actually observed for that category.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(c(0.8,7),c(0,0.65), xlab='Nitrate concentration', ylab='Probability of contamination', type='n')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  curve(inv.logit(logit.mod(0,0,0,x)), add=T, xlim=out.range[1,]$no , lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  curve(inv.logit(logit.mod(1,0,0,x)), add=T, col=2, xlim=out.range[2,]$no, lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  curve(inv.logit(logit.mod(0,1,0,x)), add=T, col=3, xlim=out.range[3,]$no, lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  curve(inv.logit(logit.mod(0,0,1,x)), add=T, lty=2, xlim=out.range[1,]$yes, lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  curve(inv.logit(logit.mod(1,0,1,x)), add=T, col=2, lty=2, xlim=out.range[2,]$yes, lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  curve(inv.logit(logit.mod(0,1,1,x)), add=T, col=3, lty=2, xlim=out.range[3,]$yes, lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">legend('topleft', rep(c('high use', 'mixed use', 'rural'),2), col=rep(1:3,2), lty=rep(1:2,each=3), lwd=2, cex=.9, bty='n', ncol=2, title='Sewers absent     &nbsp;&nbsp;&nbsp;&nbsp;Sewers present')</div>
+<br>
+<table width="530" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><img src="../../images/lectures/lecture28/fig2.png" width="460" height="355" alt="Fig. 2"></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 2</strong> &nbsp;Plot of the individual predicted logistic functions (inverse logits) as a function of nitrate concentration separately by land use category and sewer</td>
+  </tr>
+</table>
+<p>We would need to extend the curves beyond the range of the data to see the  sigmoid shape that  characterizes  the logistic function.<br>
+</p>
+
+<h2><a name="odds"></a>Graphs of (log) odds ratios</h2>
+<p>A useful way to graphically display the summary table of the model is to plot  odds ratios (or log odds ratios) corresponding to the various terms in the model along with their confidence intervals. This can be done with both categorical and continuous variables although with continuous variables we will need to choose an appropriate increment in order to make the display comparable with the rest. </p>
+<p>To optimize the use of space in the graph, it is useful when possible to arrange the coding of factors so that all of the log odds ratios have the same sign. For the current model we can accomplish this by reordering the <span class="style8">land.use4</span> factor so that the &quot;rural&quot; category is the reference group.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">
+  wells$land.use4a &lt;- factor(wells$land.use4, levels=rev(levels(wells$land.use4)))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  out2m &lt;- glm(cbind(y,n-y) ~ land.use4a + sewer + nitrate, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  coef(out2m)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp; land.use4amixed land.use4ahigh.use&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nitrate <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -5.4987804&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1129438&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.8422741&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2309213&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.2707348</span>
+<p>Next we obtain the confidence intervals on the logit scale and assemble things in a data frame.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">out.conf &lt;- confint(out2m)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.conf</div>
+<span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp;&nbsp; 97.5 %<br>
+(Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -7.69928241 -3.9704879<br>
+land.use4amixed&nbsp;&nbsp;&nbsp;&nbsp; 0.79433505&nbsp; 4.0561107<br>
+land.use4ahigh.use&nbsp; 1.56133569&nbsp; 4.7241666<br>
+seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.59782220&nbsp; 1.8862507<br>
+nitrate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.01944393&nbsp; 0.5413637</span>
+<br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # log odds ratios and confidence intervals</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.mod &lt;- data.frame(var=1:4, est=coef(out2m)[2:5], out.conf[2:5,])</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.mod</div>
+<span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est&nbsp;&nbsp;&nbsp;&nbsp; X2.5..&nbsp;&nbsp; X97.5..<br>
+land.use4amixed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.1129438 0.79433505 4.0561107<br>
+land.use4ahigh.use&nbsp;&nbsp; 2 2.8422741 1.56133569 4.7241666<br>
+seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 1.2309213 0.59782220 1.8862507<br>
+nitrate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 0.2707348 0.01944393 0.5413637</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> names(out.mod)[3:4] &lt;- c('low95', 'up95')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.mod</div>
+<span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+land.use4amixed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.1129438 0.79433505 4.0561107<br>
+land.use4ahigh.use&nbsp;&nbsp; 2 2.8422741 1.56133569 4.7241666<br>
+seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 1.2309213 0.59782220 1.8862507<br>
+nitrate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 0.2707348 0.01944393 0.5413637</span>
+<p>The variable <span class="style8">var</span> denotes the locations on the <em>y</em>-axis for the individual confidence intervals. In constructing labels for the log odds ratios I use the escape character, <span class="style8">\n</span>, inside the text string to force the labels to break over two lines.<br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # create labels for log odds ratios</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  mylabs &lt;- c('land use:\nmixed use vs rural', 'land use:\nhigh use vs rural','sewer:\nyes vs no', 'nitrate:\n1 mg/l increase')</div>
+<p>The rest of the code resembles work we've done previously. A prepanel function is used  to ensure that the <em>x</em>-limits of the graph are determined from the confidence intervals, not from the point estimates of the log odds ratios.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">
+  # prepanel function</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  myprepanel.ci &lt;- function(x,y,lx,ux,subscripts,...){</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px">  list(xlim=range(x, ux[subscripts], lx[subscripts], finite=T,...))}</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  library(lattice)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  xyplot(factor(var, labels=mylabs)~est, xlab='Log odds ratio', ylab='', lx=out.mod$low95, ux=out.mod$up95, data=out.mod, prepanel=myprepanel.ci, panel=function(x,y){</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px">  panel.segments(out.mod$low95, y, out.mod$up95, y, lwd=5, col='dodgerblue1', lineend=1)</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, pch='|', cex=1.75, col='dodgerblue4', lwd=2)</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=0, lty=2, col=2)})</div>
+<br>
+<table width="530" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><img src="../../images/lectures/lecture28/fig3.png" width="500" height="345" alt="fig. 3"></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 3</strong> &nbsp;Log odds ratios and 95% confidence intervals corresponding to all of the individual estimated effects. </td>
+  </tr>
+</table>
+<p>It's generally a better choice to display odds ratios than log odds ratios because they're more interpretable. For this problem I chose log odds ratios because the confidence intervals for the odds ratios are so wide for the two land use effects that they would swamp the rest of the graph making  it difficult to even see the remaining estimates.</p>
+<h2><a name="mixed"></a>Mixed effects logistic regression models</h2>
+<p>Consider the following data set that contains the results of a binomial experiment with a two-level treatment that was administered in blocks.</p>
+<span class="style141">Block_Number Treatment killed<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</span>
+<p><a name="pipe"></a>The last column reports the number of crabs killed in a total of 6 trials for two different treatments numbered 1 and 2. The treatments are arranged in 16 blocks, so we can presume that the observations coming from the same block are more similar to each other than they are to observations from different blocks. We can copy the displayed data to the clipboard and read the data directly into R. The syntax for doing this is different for Windows and Mac OS X.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># read data from clipboard: Windows OS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  crabs &lt;- read.table('clipboard', header=T)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # read data in from clipboard: Mac OS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  crabs &lt;- read.table(pipe(&quot;pbpaste&quot;), header=T)
+</div>
+<p>One way to analyze a randomized block design is to  treat the blocks as fixed effects and include them in a logistic regression model as a factor.
+</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># fixed effects randomized block design</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- glm(cbind(killed,6-killed)~factor(Treatment) + factor(Block_Number), data=crabs, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out1)</div>
+<span class="style141">Call:<br>
+  glm(formula = cbind(killed, 6 - killed) ~ factor(Treatment) + <br>
+  &nbsp;&nbsp;&nbsp; factor(Block_Number), family = binomial, data = crabs)</span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -3.09746&nbsp; -0.93741&nbsp; -0.00829&nbsp;&nbsp; 1.33889&nbsp;&nbsp; 3.09746&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.421e+00&nbsp; 7.907e-01&nbsp;&nbsp; 1.797&nbsp; 0.07241 . <br>
+  factor(Treatment)2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.050e-01&nbsp; 3.420e-01&nbsp;&nbsp; 1.184&nbsp; </span><span class="style25">0.23629</span><span class="style141">&nbsp;&nbsp; <br>
+  factor(Block_Number)2&nbsp;&nbsp; 7.918e-01&nbsp; 1.303e+00&nbsp;&nbsp; 0.608&nbsp; 0.54336&nbsp;&nbsp; <br>
+  factor(Block_Number)3&nbsp; -1.623e+00&nbsp; 9.699e-01&nbsp; -1.674&nbsp; 0.09423 . <br>
+  factor(Block_Number)4&nbsp; -1.708e-15&nbsp; 1.099e+00&nbsp;&nbsp; 0.000&nbsp; 1.00000&nbsp;&nbsp; <br>
+  factor(Block_Number)5&nbsp; -1.623e+00&nbsp; 9.699e-01&nbsp; -1.674&nbsp; 0.09423 . <br>
+  factor(Block_Number)6&nbsp; -1.623e+00&nbsp; 9.699e-01&nbsp; -1.674&nbsp; 0.09423 . <br>
+  factor(Block_Number)7&nbsp; -1.283e+00&nbsp; 9.747e-01&nbsp; -1.317&nbsp; 0.18799&nbsp;&nbsp; <br>
+  factor(Block_Number)8&nbsp; -5.142e-01&nbsp; 1.025e+00&nbsp; -0.502&nbsp; 0.61598&nbsp;&nbsp; <br>
+  factor(Block_Number)9&nbsp; -4.038e+00&nbsp; 1.304e+00&nbsp; -3.097&nbsp; 0.00196 **<br>
+  factor(Block_Number)10&nbsp; 1.275e-10&nbsp; 1.099e+00&nbsp;&nbsp; 0.000&nbsp; 1.00000&nbsp;&nbsp; <br>
+  factor(Block_Number)11 -4.038e+00&nbsp; 1.304e+00&nbsp; -3.097&nbsp; 0.00196 **<br>
+  factor(Block_Number)12 -1.623e+00&nbsp; 9.699e-01&nbsp; -1.674&nbsp; 0.09423 . <br>
+  factor(Block_Number)13 -2.323e+00&nbsp; 9.915e-01&nbsp; -2.343&nbsp; 0.01912 * <br>
+  factor(Block_Number)14 -2.732e+00&nbsp; 1.026e+00&nbsp; -2.663&nbsp; 0.00776 **<br>
+  factor(Block_Number)15 -5.142e-01&nbsp; 1.025e+00&nbsp; -0.502&nbsp; 0.61600&nbsp;&nbsp; <br>
+  factor(Block_Number)16 -9.231e-01&nbsp; 9.909e-01&nbsp; -0.932&nbsp; 0.35157&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for binomial family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 155.692&nbsp; on 31&nbsp; degrees of freedom<br>
+  Residual deviance:&nbsp; 97.612&nbsp; on 15&nbsp; degrees of freedom<br>
+  AIC: 164.58</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 4</span>
+ 
+<p>While the fixed effects model has successfully tested for a treatment effect (and found it to be not significant), we're left with a mess of uninteresting block effects to sort through. Furthermore if we want to estimate the probability that a particular treatment kills a crab, we can only do so for individual blocks. For instance an inverse logit applied to the intercept in the current model yields the probability that treatment 1 kills crabs, but only in block 1. </p>
+<p>The solution to this as we saw in <a href="lecture6.htm">lecture 6</a> is to treat blocks as a random effect in which we view the individual blocks as  deviations from an average block, which hopefully represents the average in the population from which the blocks were drawn. The <span class="style1">lmer</span> function of the <span class="style19">lme4</span> package will fit a random intercepts model with a binomial response.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # random effects randomized block design</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out1.lmer &lt;- lmer(cbind(killed,6-killed)~factor(Treatment) + (1|Block_Number), data=crabs, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out1.lmer)</div>
+<span class="style141">Generalized linear mixed model fit by the Laplace approximation <br>
+Formula: cbind(killed, 6 - killed) ~ factor(Treatment) + (1 | Block_Number) <br>
+&nbsp;&nbsp; Data: crabs <br>
+&nbsp;AIC&nbsp;&nbsp; BIC logLik deviance<br>
+&nbsp;141 145.4&nbsp; -67.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 135<br>
+Random effects:<br>
+&nbsp;Groups&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variance Std.Dev.<br>
+&nbsp;Block_Number (Intercept) 1.1445&nbsp;&nbsp; 1.0698&nbsp; <br>
+Number of obs: 32, groups: Block_Number, 16</span>
+<p><span class="style141">Fixed effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.08411&nbsp;&nbsp;&nbsp; 0.34819&nbsp;&nbsp; 0.242&nbsp;&nbsp;&nbsp; 0.809<br>
+  factor(Treatment)2&nbsp; 0.36983&nbsp;&nbsp;&nbsp; 0.31710&nbsp;&nbsp; 1.166&nbsp;&nbsp;&nbsp; </span><span class="style25">0.244</span>
+<p><span class="style141">Correlation of Fixed Effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intr)<br>
+  fctr(Trtm)2 -0.446</span>
+<p>As before we fail to find a difference in the two treatments. Unlike the fixed effects model where the intercept represented the log odds of death for treatment 1 in block 1 now it represents the log odds of death for treatment 1 for an average block. Note: to say that a log odds of death is not significantly different from zero is equivalent to saying that the probability of death is not different from 0.5. <br>
+</p>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture28&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--December 5, 2012<br>
+      URL: <a href="lecture28.htm#lecture28" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture28.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

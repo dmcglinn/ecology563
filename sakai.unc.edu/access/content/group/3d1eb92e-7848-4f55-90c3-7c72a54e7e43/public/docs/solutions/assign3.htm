@@ -1,0 +1,400 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 3&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign3" id="assign3"></a>Assignment 3&mdash; Solution</h1>
+<h2>Question 1 </h2>
+<p>I read in the data, convert <span class="style81">Density</span> to a factor, and fit the two-factor analysis of variance model with <span class="style81">Eggs</span> as the response and <span class="style81">Season</span>, <span class="style81">Density</span>, and their interaction as predictors as in Assignment 1.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">quinn &lt;- read.csv( 'ecol 563/quinn1.csv')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> quinn$Density &lt;- factor(quinn$Density)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- lm(Eggs ~ Density*Season, data=quinn)</div>
+
+<p>I next obtain the data frame of means and 95% confidence intervals that we constructed in <a href="../assignments/assign2.htm#Q2">Assignment 2</a>. The easiest way to obtain the means is to trick R into giving them to us by fitting the following model in which we remove the intercept and include only the interaction term. Alternatively you can use the <span class="style4">predict</span> function as was shown in the <a href="../assignments/assign2.htm#Q2p">Assignment 2 solutions</a>.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out1a &lt;- lm(Eggs ~ Density:Season-1, data=quinn)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> coef(out1a)</div>
+<span class="style24"> &nbsp;Density6:Seasonspring Density12:Seasonspring Density24:Seasonspring <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1113333&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;1.1110000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6946667 <br>
+&nbsp;Density6:Seasonsummer Density12:Seasonsummer Density24:Seasonsummer <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.8866667&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.8866667&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.0000000 </span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fac.vals &lt;- expand.grid(Density=c(6,12,24), Season=c('spring','summer'))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fac.vals</div>
+<span class="style24"> &nbsp; Density Season<br>
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 spring<br>
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 spring<br>
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24 spring<br>
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 summer<br>
+5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 summer<br>
+6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24 summer</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fac.vals$Density &lt;- factor(fac.vals$Density)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> part1 &lt;- data.frame(fac.vals, ests=coef(out1a), se=summary(out1a)$coefficients[,2], low95=confint(out1a)[,1], up95=confint(out1a)[,2])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">part1</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Density Season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+Density6:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 spring 1.1113333 0.2183934 0.6354950 1.587172<br>
+Density12:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 spring 1.1110000 0.2183934 0.6351616 1.586838<br>
+Density24:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24 spring 0.6946667 0.2183934 0.2188283 1.170505<br>
+Density6:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 summer 3.8866667 0.2183934 3.4108283 4.362505<br>
+Density12:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 summer 2.8866667 0.2183934 2.4108283 3.362505<br>
+Density24:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24 summer 2.0000000 0.2183934 1.5241616 2.475838</span>
+<p>The only new part of this problem is to obtain the difference-adjusted confidence levels so that we can make pairwise comparisons between the means. For that we need the <span class="style81">ci.func</span> function that was provided you in <a href="../lectures/lecture5.htm#difference">lecture 5</a>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># function to calculate difference-adjusted confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func &lt;- function(rowvals, lm.model, glm.vmat) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> nor.func1a &lt;- function(alpha, model, sig) 1-pt(-qt(1-alpha/2, model$df.residual) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*%c (1,-1)), model$df.residual) - pt(qt(1-alpha/2, model$df.residual) * sum(sqrt(diag(sig))) / sqrt(c(1,-1) %*% sig %*% c(1,-1)), model$df.residual, lower.tail=F)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  nor.func2 &lt;- function(a,model,sigma) nor.func1a(a,model,sigma)-.95</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  n &lt;- length(rowvals)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> xvec1b &lt;- numeric(n*(n-1)/2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  vmat &lt;- glm.vmat[rowvals,rowvals]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  ind &lt;- 1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  for(i in 1:(n-1)) {</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  for(j in (i+1):n){</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  sig &lt;- vmat[c(i,j), c(i,j)]</div>
+<div class="style15" style="padding-left: 120px; text-indent:-30px">  #solve for alpha</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  xvec1b[ind] &lt;- uniroot(function(x) nor.func2(x, lm.model, sig), c(.001,.999))$root</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px"> ind &lt;- ind+1</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  }}</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  1-xvec1b</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>To use this function we need the variance covariance matrix of the means. Using the shortcut approach above I can obtain it by applying <span class="style4">vcov</span> to my model of cell means.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat &lt;- vcov(out1a)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">round(vmat,3)</div>
+  <span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Density6:Seasonspring Density12:Seasonspring Density24:Seasonspring<br>
+  Density6:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.048&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+  Density12:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.048&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+  Density24:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.048<br>
+  Density6:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+  Density12:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+  Density24:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Density6:Seasonsummer Density12:Seasonsummer Density24:Seasonsummer<br>
+  Density6:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+  Density12:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+  Density24:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+  Density6:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.048&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+  Density12:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.048&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.000<br>
+Density24:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.048</span>
+<p>If instead we use the original model with the effect estimates then we have to obtain the variance-covariance matrix by matrix multiplication.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cvec &lt;- function(density,season) c(1,density==12, density==24, season=='summer', (density==12)*(season=='summer'), (density==24)*(season=='summer'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g &lt;- expand.grid(Density=c(6,12,24), Season=c('spring', 'summer'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat &lt;- t(apply(g, 1, function(x) cvec(x[1], x[2])))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Density Density Season Density Density<br>
+[1,] 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+[2,] 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+[3,] 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+[4,] 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+[5,] 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+[6,] 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat1 &lt;- cmat %*% vcov(out1)%*%t(cmat)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(vmat1,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp; [,2]&nbsp; [,3]&nbsp; [,4]&nbsp; [,5]&nbsp; [,6]<br>
+  [1,] 0.048 0.000 0.000 0.000 0.000 0.000<br>
+  [2,] 0.000 0.048 0.000 0.000 0.000 0.000<br>
+  [3,] 0.000 0.000 0.048 0.000 0.000 0.000<br>
+  [4,] 0.000 0.000 0.000 0.048 0.000 0.000<br>
+  [5,] 0.000 0.000 0.000 0.000 0.048 0.000<br>
+  [6,] 0.000 0.000 0.000 0.000 0.000 0.048</span>
+<p>Using either approach we get the same answer. We need a confidence level of 85% for all the pairwise comparisons.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func(1:6,out1,vmat1)</div>
+<span class="style24">  &nbsp;[1] 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702<br>
+  &nbsp;[9] 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ci.func(1:6,out1a,vmat)</div>
+<span class="style24">  &nbsp;[1] 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702<br>
+&nbsp;[9] 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702 0.8506702</span>
+<p>I add 85% confidence intervals to data frame of means.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> part1$low85 &lt;- part1$ests+qt((1-.85)/2, out1$df.residual) * part1$se</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> part1$up85 &lt;- part1$ests+qt(1-(1-.85)/2, out1$df.residual) * part1$se</div>
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> part1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part1</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Density Season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95&nbsp;&nbsp;&nbsp;&nbsp; low85&nbsp;&nbsp;&nbsp;&nbsp; up85<br>
+    Density6:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 spring 1.1113333 0.2183934 0.6354950 1.587172 0.7754538 1.447213<br>
+    Density12:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 spring 1.1110000 0.2183934 0.6351616 1.586838 0.7751204 1.446880<br>
+    Density24:Seasonspring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24 spring 0.6946667 0.2183934 0.2188283 1.170505 0.3587871 1.030546<br>
+    Density6:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 summer 3.8866667 0.2183934 3.4108283 4.362505 3.5507871 4.222546<br>
+    Density12:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 summer 2.8866667 0.2183934 2.4108283 3.362505 2.5507871 3.222546<br>
+  Density24:Seasonsummer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24 summer 2.0000000 0.2183934 1.5241616 2.475838 1.6641204 2.335880</span>
+<p>I now just repeat the graph from Question 3 of <a href="assign2.htm#Q3">Assignment 2</a>. The only change is that I add error bars corresponding to the 85% confidence intervals. The changes are highlighted below.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">part1$density.num &lt;- as.numeric(part1$Density)</div>
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px">results.mine &lt;- part1</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">par(lend=1)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">plot(c(.8,3.2), range(results.mine[,c(&quot;up95&quot;, &quot;low95&quot;)]), type='n', xlab=&quot;Density&quot;, ylab='Mean egg count', axes=F)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  axis(1, at=1:3, labels=levels(results.mine$Density))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  axis(2)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  box()</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # Spring</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  cur.dat &lt;- results.mine[results.mine$Season=='spring',]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">   myjitter &lt;- 0</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  arrows(cur.dat$density.num+myjitter, cur.dat$low95, cur.dat$density.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=1)</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  segments(cur.dat$density.num+myjitter, cur.dat$low85, cur.dat$density.num+myjitter, cur.dat$up85,  col='grey70', lwd=3)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  lines(cur.dat$density.num+myjitter, cur.dat$ests, col=1)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$density.num+myjitter, cur.dat$ests, col=1, pch=16)</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # Summer</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  cur.dat &lt;- results.mine[results.mine$Season=='summer',]</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">   myjitter &lt;- 0</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  arrows(cur.dat$density.num+myjitter, cur.dat$low95, cur.dat$density.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=2)</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">  segments(cur.dat$density.num+myjitter, cur.dat$low85, cur.dat$density.num+myjitter, cur.dat$up85,  col='pink2', lwd=3)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  lines(cur.dat$density.num+myjitter, cur.dat$ests, col=2)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  points(cur.dat$density.num+myjitter, cur.dat$ests, col='white', pch=16, cex=1.1)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">points(cur.dat$density.num+myjitter, cur.dat$ests, col=2, pch=1)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">legend('topright', c('Spring','Summer'), col=1:2, pch=c(16,1), cex=.8, pt.cex=.9, title=expression(bold('Season')), bty='n')</div>
+<div class="style39" style="padding-left: 30px; text-indent:-30px">abline(h=seq(0,4.5,.5), lty=3, col='grey70')</div>
+
+
+<p align="center"><img src="../../images/assignments/assignment3/fig1.png" width="385" height="300" alt="fig. 1"></p>
+<p align="center" class="styleArial"><strong>Fig. 1</strong> &nbsp;Interaction plot with difference-adjusted confidence intervals</p>
+<p>Based on the display we see that none of the mean egg counts at different densities in Spring are significantly differnet from each other. But in summer the mean egg counts at the three densities are all different from each other. Of course we already knew the spring means and summer means were different because the 95% confidence intervals didn't overlap.</p>
+<h2>Question 2</h2>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> pines &lt;- read.delim('ecol 563/pines.txt')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> pines[1:8,]</div>
+<span class="style24">  &nbsp; diam species location<br>
+  1&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  2&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  3&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  4&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  5&nbsp;&nbsp; 21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  6&nbsp;&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  7&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+8&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</span>
+<h3>Part a</h3>
+<p>From the description we should probably treat this as a randomized block design in which location defines the block and species is the treatment. Because we have multiple individuals of the same species at each location we are able to test for a treatment &times; block interaction.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- lm(diam~factor(location)*species, data=pines)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(out1)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: diam<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp; <br>
+  factor(location)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp; 68.05&nbsp; 22.683&nbsp; 1.2726 0.294392&nbsp;&nbsp; <br>
+  species&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 284.93 142.467&nbsp; 7.9925 0.001009 **<br>
+  factor(location):species&nbsp; 6 157.60&nbsp; 26.267&nbsp; 1.4736 0.207343&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48 855.60&nbsp; 17.825&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>The interaction is not significant so we can fit the standard randomized block design model.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">out2 &lt;- lm(diam~factor(location)+species, data=pines)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(out2)</div>
+<span class="style24">  Analysis of Variance Table</span>
+<p><span class="style24">Response: diam<br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Df&nbsp; Sum Sq Mean Sq F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp; <br>
+  factor(location)&nbsp; 3&nbsp;&nbsp; 68.05&nbsp; 22.683&nbsp; 1.2089 0.315317&nbsp;&nbsp; <br>
+  species&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 284.93 142.467&nbsp; 7.5930 0.001242 **<br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 54 1013.20&nbsp; 18.763&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>We find the species effect is significant. To see which species differ we can examine the summary table.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(summary(out2)$coefficients,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19.167&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.370&nbsp; 13.993&nbsp;&nbsp;&nbsp; 0.000<br>
+  factor(location)2&nbsp;&nbsp;&nbsp; 1.400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.582&nbsp;&nbsp; 0.885&nbsp;&nbsp;&nbsp; 0.380<br>
+  factor(location)3&nbsp;&nbsp;&nbsp; 2.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.582&nbsp;&nbsp; 1.264&nbsp;&nbsp;&nbsp; 0.211<br>
+  factor(location)4&nbsp;&nbsp; -0.667&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.582&nbsp; -0.421&nbsp;&nbsp;&nbsp; 0.675<br>
+speciesB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.370&nbsp;&nbsp; 2.336&nbsp;&nbsp;&nbsp; </span><span class="style25">0.023</span><span class="style24"><br>
+speciesC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.370&nbsp; -1.533&nbsp;&nbsp;&nbsp; 0.131</span>
+<p>So, species A and B are significantly different but species A and C are not. Because the mean diameter of species B exceeds A whereas the mean diameter of species C is less than A, it's pretty clear that species B is also different from species C. To test this formally we can refit the model choosing a different species as the reference group. I choose species B as the reference group</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out2a &lt;- lm(diam~factor(location) + factor(species, levels=c('B','A','C')), data=pines)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(summary(out2a)$coefficients,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22.367&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.370&nbsp; 16.329&nbsp;&nbsp;&nbsp; 0.000<br>
+  factor(location)2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.582&nbsp;&nbsp; 0.885&nbsp;&nbsp;&nbsp; 0.380<br>
+  factor(location)3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.582&nbsp;&nbsp; 1.264&nbsp;&nbsp;&nbsp; 0.211<br>
+  factor(location)4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.667&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.582&nbsp; -0.421&nbsp;&nbsp;&nbsp; 0.675<br>
+factor(species, levels = c(&quot;B&quot;, &quot;A&quot;, &quot;C&quot;))A&nbsp;&nbsp; -3.200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.370&nbsp; -2.336&nbsp;&nbsp;&nbsp; </span><span class="style25">0.023</span><span class="style24"><br>
+factor(species, levels = c(&quot;B&quot;, &quot;A&quot;, &quot;C&quot;))C&nbsp;&nbsp; -5.300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.370&nbsp; -3.869&nbsp;&nbsp;&nbsp; </span><span class="style25">0.000
+</span>
+<p>Now we see that species C is significantly different from species B also.</p>
+<p>Note: In a randomized block design one generally does not test for a block effect. In most situations the reported <em>F</em>-statistic for the block effect does not  truly have an <em>F</em>-distribution so the reported <em>p</em>-value is incorrect. Even when the <em>F</em>-distribution of the statistic holds  we are forced to make the additional assumption that the individuals were randomly assigned to blocks, which is usually not the case. The larger point is that blocks are a part of the  design structure of the experiment; they are not part of the treatment structure. Thus blocks should be retained regardless of what the significance tests suggest. For further discussion on this point see <a href="../lectures/lecture7.htm#randomized">lecture 7</a>.</p>
+<h3>Part b</h3>
+<p>In the fixed effects version of the randomized block design while we can estimate species differences but we can only estimate the mean diameters of individual species for specific blocks. To get around this we can treat block as a random effect in which case the regression model is formulated for the average individual of each species. In the mixed effects model the block effects (random effects) represent deviations from that average. </p>
+<h4 class="styleArial2">Method 1: Using the nlme package plus hand calculations</h4>
+<p>We can calculate the confidence intervals for the means by hand as follows. I first fit the model using <span class="style4">lme</span>.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out2.lme &lt;- lme(diam~species, random=~1|location, data=pines)</div>
+<p>The degrees of freedom we need for the <em>t</em>-distribution are contained in the <span class="style81">fixDF</span> component of the model in a term labeled <span class="style81">X</span>.<br>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> names(out2.lme)</div>
+<span class="style24">  &nbsp;[1] &quot;modelStruct&quot;&nbsp; &quot;dims&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;contrasts&quot;&nbsp;&nbsp;&nbsp; &quot;coefficients&quot; &quot;varFix&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;sigma&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;[7] &quot;apVar&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;logLik&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;numIter&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;groups&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;call&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;terms&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [13] &quot;method&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fitted&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;residuals&quot;&nbsp;&nbsp;&nbsp; &quot;fixDF&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;na.action&quot;&nbsp;&nbsp;&nbsp; &quot;data&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out2.lme$fixDF</div>
+<span class="style25">  $X<br>
+  (Intercept)&nbsp;&nbsp;&nbsp; speciesB&nbsp;&nbsp;&nbsp; speciesC <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 54 </span>
+<p><span class="style24">$terms<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; species <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 54 </span>
+<p><span class="style24">attr(,&quot;assign&quot;)<br>
+  attr(,&quot;assign&quot;)$`(Intercept)`<br>
+  [1] 1</span>
+<p><span class="style24">attr(,&quot;assign&quot;)$species<br>
+  [1] 2 3</span>
+<p><span class="style24">attr(,&quot;varFixFact&quot;)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,2]&nbsp;&nbsp;&nbsp;&nbsp; [,3]<br>
+  [1,] 0.6148623&nbsp; 0.0000000&nbsp; 0.00000<br>
+  [2,] 0.3954213 -1.1862640&nbsp; 0.00000<br>
+  [3,] 0.6848898 -0.6848898 -1.36978</span>
+<p>Next I construct a vector that can be used to construct the terms of the regression model.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fixef(out2.lme)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp; speciesB&nbsp;&nbsp;&nbsp; speciesC <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19.85&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.10</span>
+  <br>
+<p>  To get the contrast matrix I <span class="style4">sapply</span> this function on a vector of species names. I then use the contrast matrix to obtain the means and  standard errors of the means in the usual fashion.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> cmat &lt;- t(sapply(c('A','B','C'), cvec))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> est &lt;- cmat %*% fixef(out2.lme)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> se &lt;- sqrt(diag(cmat %*% vcov(out2.lme) %*% t(cmat)))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> low95 &lt;- est + qt(.025, out2.lme$fixDF$X)*se</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> up95 &lt;- est + qt(.975, out2.lme$fixDF$X)*se</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> data.frame(est, low95, up95)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp; est&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+  A 19.85 17.84163 21.85837<br>
+  B 23.05 21.04163 25.05837<br>
+  C 17.75 15.74163 19.75837</span>
+<h3 class="styleArial2">Method 2: Using the nlme package and the intervals function</h3>
+<p>If we fit the random effects model without the intercept term, <span class="style4">lme</span>  returns the mean diameter for each species. We can then obtain 95% confidence intervals for the treatment means by using the <span class="style4">intervals</span> function.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out2a.lme &lt;- lme(diam~species-1, random=~1|location, data=pines)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> intervals(out2a.lme, which=&quot;fixed&quot;)</div>
+<span class="style24">Approximate 95% confidence intervals</span>
+<p><span class="style24">&nbsp;Fixed effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp; est.&nbsp;&nbsp;&nbsp; upper<br>
+  speciesA 17.84163 19.85 21.85837<br>
+  speciesB 21.04163 23.05 25.05837<br>
+  speciesC 15.74163 17.75 19.75837<br>
+  attr(,&quot;label&quot;)<br>
+  [1] &quot;Fixed effects:&quot;</span>
+<h3 class="styleArial2">Method 3: Using the lmer package and obtaining means via MCMC sampling</h3>
+<p>Using the <span class="style19">lme4</span> package we can generate Bayesian samples from  the posterior distributions of the parameters in the model. These can then be used to construct the means and their confidence (credible) intervals.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> detach(package:nlme)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out2.lmer &lt;- lmer(diam~species+ (1|location), data=pines)</div>
+<p>Obtain 10,000 samples from the posterior distribution of each parameter.<br>
+ 
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out2.mc &lt;- mcmcsamp(out2.lmer, n=10000)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> mc.dat &lt;- as.data.frame(out2.mc)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> names(mc.dat)</div>
+ <span class="style24"> [1] &quot;(Intercept)&quot; &quot;speciesB&quot;&nbsp;&nbsp;&nbsp; &quot;speciesC&quot;&nbsp;&nbsp;&nbsp; &quot;ST1&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;sigma&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<p>To obtain the posterior distributions of the means we just have to construct the means from their effect estimates. The mean of species A is the intercept in the model which is column 1, the mean of species B is the intercept plus the species B effect (column 1 plus column 2), and the mean of species C is the intercept plus the species C effect (column 1 plus column 3).</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> new.dat &lt;- data.frame(mc.dat[,1], mc.dat[,1] + mc.dat[,2], mc.dat[,1] + mc.dat[,3])</div>
+<p>Finally I obtain the .025 and .975 quantiles of each column of <span class="style81">new.dat</span> to obtain the 95% percentile credible intervals for the means. For a point estimate of the mean I can take either the mean or the median of the individual posterior distributions.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> apply(new.dat, 2, function(x) quantile(x,c(.025,.975)))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mc.dat...1. mc.dat...1....mc.dat...2. mc.dat...1....mc.dat...3.<br>
+  2.5%&nbsp;&nbsp;&nbsp;&nbsp; 17.34762&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20.51541&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15.24718<br>
+  97.5%&nbsp;&nbsp;&nbsp; 22.35942&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25.57697&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20.28810</span>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> out.95 &lt;- apply(new.dat, 2, function(x) quantile(x, c(.025,.975)))</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> out.mean &lt;- apply(new.dat, 2, mean)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.median &lt;- apply(new.dat, 2, median)</div>
+  <div class="style10" style="padding-left: 30px; text-indent:-30px"> results &lt;- data.frame(species=c('A','B','C'), mean=out.mean, out.95, median=out.median)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> rownames(results) &lt;- NULL</div>
+
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> results</div>
+<span class="style24">  &nbsp; species&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp;&nbsp; X2.5.&nbsp;&nbsp; X97.5.&nbsp;&nbsp; median<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A 19.82780 17.34762 22.35942 19.81285<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B 23.06143 20.51541 25.57697 23.05437<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C 17.75208 15.24718 20.28810 17.74412</span><br>
+
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment3/hw3scores.png" width="330" height="220" alt="hw3 scores"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 27, 2012<br>
+      URL: <a href="assign3.htm#assign3">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign3.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

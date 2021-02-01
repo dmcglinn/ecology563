@@ -1,0 +1,906 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 4&mdash;Wednesday, September 5, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	
+}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture4" id="lecture4"></a>Lecture 4&mdash;Wednesday, September 5, 2012</h1>
+<h3>Topics</h3>
+<ul>
+<li><a href="lecture4.htm#refitting">Graphical displays of analysis of variance models</a></li>
+<li><a href="lecture4.htm#parameters">Obtaining parameter estimates, standard errors, and confidence intervals</a></li>
+<li><a href="lecture4.htm#summary">Graphical display of the summary table</a>
+  <ul>
+  <li><a href="lecture4.htm#effectlattice">Effects graphs using the lattice package</a></li>
+    <li><a href="lecture4.htm#effectbase">Effects graphs using base graphics</a></li>
+  </ul>
+</li>
+<li><a href="lecture4.htm#obtaining">Obtaining the treatment means and their confidence intervals</a>
+  <ul>
+  <li><a href="lecture4.htm#meaneffects">Using the effects package</a></li>
+    <li><a href="lecture4.htm#meanpredict">Using the predict function</a></li>
+    <li><a href="lecture4.htm#meanmatrix">Using matrix multiplication</a></li>
+    </ul>
+</li>
+<li><a href="lecture4.htm#interaction">Interaction plots
+  with confidence intervals</a><a href="lecture4.htm#basemeans"></a> </li>
+<li><a href="lecture4.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture4.htm#box">abline</a> is a low-level graphics command that adds vertical lines (<span class="style22">v=</span> ), horizontal lines (<span class="style22">h=</span> ), or regression lines to a plot.</li>
+  
+  <li><a href="lecture4.htm#apply">apply</a> is used to apply functions to the rows or columns of a matrix.</li>
+  <li><a href="lecture4.htm#arrows">arrows</a> draws an arrow between a pair of points on a plot.</li>
+  <li><a href="lecture4.htm#asnumeric">as.numeric</a> converts its argument to numeric data. We used it to obtain the numeric levels of a factor.</li>
+  <li><a href="lecture4.htm#axis">axis</a> is a low-level graphics function for customizing the features of the axes of the currently displayed graph. Its first argument, 1, 2, 3, or 4, specifies the location of the axis: bottom, left, top, or right. </li>
+  <li><a href="lecture4.htm#legend">bold</a> when used in combination with <span class="style1">expression</span> can be used to display  text  in bold face</li>
+  <li><a href="lecture4.htm#box">box</a> is a low-level graphics command that draws a box around a plot.</li>
+  <li><a href="lecture4.htm#coef">coef</a> extracts the regression coefficients from an <span class="style1">lm</span> object.</li>
+  <li><a href="lecture4.htm#confint">confint</a> calculates confidence intervals for the regression parameters of an <span class="style1">lm</span> object.</li>
+  <li><a href="lecture4.htm#dataframe">data.frame</a> constructs a data frame from a collection of vectors of the same length (or matrices with the same number of rows).</li>
+  <li><a href="lecture4.htm#diag">diag</a> extracts the diagonal entries from a matrix.</li>
+  <li><a href="lecture4.htm#dotchart">dotchart</a> is a base graphics function for producing dot plots.</li>
+  <li><a href="lecture4.htm#dotchart">dotplot</a> is a graphics function from the <span class="style191">lattice</span> package for producing dot plots.</li>
+  <li><a href="lecture4.htm#legend">expression</a> defines an R expression and is typically used to add mathematical text expressions to graphs.</li>
+  <li><a href="lecture4.htm#panel">function</a> is a keyword that begins the definition of a user-defined function. </li>
+  <li><a href="lecture4.htm#grid">grid</a> is a low-level graphics command that adds a grid of horizontal and/or vertical lines to a plot.</li>
+  <li><a href="lecture4.htm#legend">legend</a> is a low-level graphics command that adds a legend to a base graphics plot.</li>
+  <li><a href="lecture4.htm#lines">lines</a> is a low-level graphics command that draws lines between plotted points on the currently active plot.</li>
+  <li><a href="lecture4.htm#scales">list</a> concatenates objects of diverse types together as a single object.</li>
+  <li><a href="lecture4.htm#mtext">mtext</a> is a low-level graphics command that can be used to add text to any one of the four margins of a graph.</li>
+  <li><a href="lecture4.htm#dataframe">names</a> extracts the names of the elements comprising an object.</li>
+  <li><a href="lecture4.htm#panel">panel.abline</a> (from <span class="style191">lattice</span>) is the panel function that draws vertical lines (<span class="style22">v=</span> ), horizontal lines (<span class="style22">h=</span> ), or regression lines.</li>
+  <li><a href="lecture4.htm#paneldotplot">panel.dotplot</a> (from <span class="style191">lattice</span>) is the panel function that produces a dot plot.</li>
+  <li><a href="lecture4.htm#panel">panel.segments</a> (from <span class="style191">lattice</span>) is the panel function that connects a pair of points with a line segment.</li>
+  <li><a href="lecture4.htm#panel">panel.xyplot</a> (from <span class="style191">lattice</span>) is the panel function that plots points.</li>
+  <li><a href="lecture4.htm#par">par</a> sets global graphics parameters for base graphics.</li>
+  <li><a href="lecture4.htm#lines">points</a> is a low-level graphics command that adds individual points to the currently active plot.</li>
+  <li><a href="lecture4.htm#predict">predict</a> is used to obtain predictions (means) from a regression model for specified values of the predictors. It can also return standard errors and confidence intervals for those predictions.</li>
+  <li><a href="lecture4.htm#qnorm">qnorm</a> is the quantile function of a normal distribution.</li>
+  <li><a href="lecture4.htm#qt">qt</a> is the quantile function of a <em>t</em>-distribution.</li>
+  <li><a href="lecture4.htm#axes">range</a> calculates the minimum and maximum values of its argument and returns the result as a vector. </li>
+  <li><a href="lecture4.htm#rbind">rbind</a> appends  one data frame or matrix to another. The rows of the second data frame are placed after the rows of the first data frame. The column names in the two data frames must match.</li>
+  <li><a href="lecture4.htm#box">segments</a> connects a pair of points with a line segment.</li>
+  <li><a href="lecture4.htm#sqrt">sqrt</a> is the square root function.</li>
+  <li><a href="lecture4.htm#tfunc">t</a> is the transpose function. It swaps the rows and columns of a matrix. </li>
+  <li><a href="lecture4.htm#vcov">vcov</a> when applied to a regression model (<span class="style1">lm</span> object) returns the variance-covariance matrix of the parameter estimates.</li>
+  <li><a href="lecture4.htm#matrixmult">%*%</a> is the matrix multiplication operator in R.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture4.htm#arrows">angle</a>= (argument to <span class="style1">arrows</span> function) specifies the angle of arrowhead edge; <span class="style22">angle=90</span> is the appropriate setting for error bars. </li>
+  <li><a href="lecture4.htm#axis">at</a>= (argument to <span class="style1">axis</span>) is used to specify the locations of tick marks.</li>
+  <li><a href="lecture4.htm#axes">axes</a>= (argument to <span class="style1">plot</span> and other base graphics functions) can be used to prevent the <em>x</em>-axis and <em>y</em>-axis with their default settings from being drawn (by specifying <span class="style22">axes=F</span>).</li>
+  <li><a href="lecture4.htm#panelabline">cex</a>= (argument to many graphics functions) specifies the amount of character expansion to be used for plotting symbols, <span class="style22">cex=1</span> is the default.</li>
+  <li><a href="lecture4.htm#arrows">code</a>= (argument to <span class="style1">arrows</span> function) specifies the type of arrow to draw; <span class="style22">code=3</span> places arrowheads on both ends.</li>
+  <li><a href="lecture4.htm#given">given.values=</a> (argument to the <span class="style1">effect</span> function of the <span class="style19">effects</span> package) is used to specify values of model predictors that aren't part of the specified effect. Without this <span class="style1">effect</span> uses the mean of the remaining predictors.</li>
+  <li><a href="lecture4.htm#predict">interval=</a> (argument to <span class="style1">predict</span> function) specifies the type of prediction interval desired, e.g., <span class="style22">interval=&quot;confidence&quot;</span>.</li>
+  <li><a href="lecture4.htm#axis">labels</a>= (argument to <span class="style1">axis</span> and <span class="style1">factor</span>) specifies a vector of values to appear at the tick mark locations specified by <span class="style22">at=</span> in <span class="style1">axis</span> OR the <a href="lecture4.htm#labels">labels</a> for the levels defined by the <span class="style1">factor</span> function. </li>
+  <li><a href="lecture4.htm#axis">las</a>= (argument for many graphics text functions) controls the orientation of printed text. We chose <span class="style22">las=2</span> to display tick mark labels perpendicular to the axis on which they occur.</li>
+  <li><a href="lecture4.htm#lend">lend</a>= (argument to <span class="style1">par</span> function) specifies the terminal ends of line segments; <span class="style22">lend=1</span> yields butted ends.</li>
+  <li><a href="lecture4.htm#arrows">length</a>= (argument to <span class="style1">arrows</span> function) specifies the size of the arrowhead.</li>
+  <li><a href="lecture4.htm#lineend">lineend=</a> (argument to <span class="style1">panel.segments</span> function of <span class="style19">lattice</span>) specifies the endpoint of line segments; <span class="style22">lineend=1</span> yields butted ends.</li>
+  <li><a href="lecture4.htm#panelabline">lty</a>= (argument to many plot functions) specifies the type of line to draw. Specifying <span class="style22">lty=1</span> yields a solid line, <span class="style22">lty=2</span> is a dashed line, and <span class="style22">lty=3</span> is a dotted line.</li>
+  <li><a href="lecture4.htm#par">mar</a>= (argument to <span class="style1">par</span> function) specifies the width of the four outer margins of plots in line units.</li>
+  <li><a href="lecture4.htm#mfrow">mfrow</a>= (argument to <span class="style1">par</span> function) specifies the arrangement of graphs in the graphics window for base graphics. For instance, <span class="style22">mfrow=c(1,2)</span> arranges the graphs in one row and two columns.</li>
+  <li><a href="lecture4.htm#predict">newdata=</a> (argument to <span class="style1">predict</span> function) specifies the values of the predictors at which to obtain predictions of a regression model.</li>
+  <li><a href="lecture4.htm#panel">panel</a>= (argument to <span class="style1">xyplot</span>) used to define a panel function that describes what is to be plotted in each panel.</li>
+  <li><a href="lecture4.htm#panelabline">pch</a>= stands for &quot;print character&quot; and is used to designate the plotting symbol to be used in various plotting functions: <span class="style1">plot</span>, <span class="style1">points</span>, etc. </li>
+  <li><a href="lecture4.htm#legend">pt.cex</a>= defines the size of plotting symbols in legends (overriding the value of <span class="style22">cex</span>).</li>
+  <li><a href="lecture4.htm#scales">scales</a>= (argument to <span class="style1021">xyplot</span> and other <span class="style191">lattice</span> functions) defines characteristics of the axis&mdash;the number of tick marks, position and labels of the ticks, etc.</li>
+  <li><a href="lecture4.htm#predict">se.fit=</a> (argument to <span class="style1">predict</span> function) when set to <span class="style22">TRUE</span> causes <span class="style1">predict</span> to return the standard error of the predictions.</li>
+  <li><a href="lecture4.htm#axes">type</a>= (argument to most  plotting functions) indicates the type of graphical display to produce. We used <span class="style22">type='n'</span> (where 'n' stands for 'nothing) to suppress the plotting of any data. Another option is <span class="style22">type='b'</span> to plot both points and line segments connecting those points. </li>
+  <li><a href="lecture4.htm#dotchart">xlab=</a> (argument of all plotting functions) specifies the label for the <em>x</em>-axis.</li>
+  <li><a href="lecture4.htm#panelabline">xlim</a>= (argument of all plotting functions) a vector of length 2 that specifies the minimum and maximum values to display on the <em>x</em>-axis. </li>
+  <li><a href="lecture4.htm#ylab">ylab=</a> (argument of all plotting functions) specifies the label for the <em>y</em>-axis.</li>
+</ul>
+<h3>Additional R packages used </h3>
+<ul>
+  <li><a href="lecture4.htm#meaneffects">effects</a> for the <span class="style1">effect</span> function and its <span class="style1">plot.eff </span>method to generate plots of interaction effects.</li>
+  <li><a href="lecture4.htm#lattice">lattice</a> for panel graphics functions.</li>
+</ul>
+<h2><a name="refitting" id="refitting"></a>Graphical displays of analysis of variance models</h2>
+<p>I reload the tadpoles data set and refit the analysis of variance models from last time.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">tadpoles &lt;- read.table(&quot;ecol 563/tadpoles.csv&quot;, header=T, sep=',')</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> tadpoles$fac3 &lt;- factor(tadpoles$fac3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out1 &lt;- lm(response~fac1 + fac2 + fac3 + fac1:fac2 + fac1:fac3 + fac2:fac3 + fac1:fac2:fac3, data=tadpoles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out2 &lt;- lm(response~fac1 + fac2 + fac3 + fac1:fac2 + fac2:fac3, data=tadpoles)</div>
+
+
+<p>We will use the second of these models, <span class="style10">out2</span>, to illustrate how to generate graphical displays of  ANOVA models. R has three major graphics packages: base graphics, <span class="style19">lattice</span>, and <span class="style19">ggplot2</span>. The last one is a relatively new R package that is based on Leland Wilkinson's (of SYSTAT fame) &quot;grammar of graphics&quot;. Today we  focus on  using base graphics and <span class="style19">lattice</span> to summarize ANOVA models. The plots we consider are graphs of effect estimates with error bars and interaction plots with error bars. </p>
+<h2><a name="parameters" id="parameters"></a>Obtaining parameter estimates, standard errors, and confidence intervals</h2>
+<p>ANOVA models are regression models in which all the regressors are dummy variables. This means that the regression coefficients are multiplying terms that  either have value zero or one. Hence all the regression coefficients are measured on the scale  and either represent means or deviations from means. Thus  it makes sense to present  the coefficient estimates together in the same graph. When confidence intervals are also included  the  magnitudes of the different effects can be compared and their relative importance assessed.</p>
+<p><a name="coef"></a>The  coefficient estimates of a regression model can be extracted with the <span class="style1">coef</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out2)</div>
+<span class="style24"> &nbsp;(Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac32 fac1No:fac2S fac1Ru:fac2S <br>
+&nbsp; 3.38323831&nbsp;&nbsp; 0.54729873&nbsp;&nbsp; 0.53698650&nbsp;&nbsp; 0.01714866&nbsp;&nbsp; 0.10757945&nbsp;&nbsp; 0.01341375&nbsp;&nbsp; 0.16350360 <br>
+&nbsp;fac2S:fac32 <br>
+&nbsp; 0.16322994 </span>
+<p>The intercept is the mean of the reference group while the rest of the terms correspond to effects, i.e., deviations from means. To ensure that we're only comparing effects I remove the intercept from the list of estimates to plot.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ests &lt;- coef(out2)[2:8]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">ests</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac32 fac1No:fac2S fac1Ru:fac2S&nbsp; fac2S:fac32 <br>
+&nbsp; 0.54729873 &nbsp;&nbsp;0.53698650&nbsp;&nbsp; 0.01714866&nbsp;&nbsp; 0.10757945&nbsp;&nbsp; 0.01341375&nbsp;&nbsp; 0.16350360&nbsp;&nbsp; 0.16322994</span>
+<p><a name="vcov"></a>To obtain the standard errors of these estimates we can  extract them from the summary table of the model. They are found in column 2 of the <span class="style9">$coefficients</span> component of the <span class="style1">summary</span> object.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out2)$coefficients</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error&nbsp;&nbsp;&nbsp; t value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pr(&gt;|t|)<br>
+(Intercept)&nbsp; 3.38323831 0.05245374 64.4994720 1.024057e-149<br>
+fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.54729873 0.05837246&nbsp; 9.3759750&nbsp; 6.582616e-18<br>
+fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.53698650 0.06084917&nbsp; 8.8248782&nbsp; 2.755469e-16<br>
+fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.01714866 0.06696214&nbsp; 0.2560949&nbsp; 7.981054e-01<br>
+fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.10757945 0.04814860&nbsp; 2.2343214&nbsp; 2.641948e-02<br>
+fac1No:fac2S 0.01341375 0.07727544&nbsp; 0.1735836&nbsp; 8.623448e-01<br>
+fac1Ru:fac2S 0.16350360 0.08174704&nbsp; 2.0001164&nbsp; 4.665860e-02<br>
+fac2S:fac32&nbsp; 0.16322994 0.06504617&nbsp; 2.5094473&nbsp; 1.277781e-02</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> std.errs &lt;- summary(out2)$coefficients[,2]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> std.errs</div>
+<span class="style24"> &nbsp;(Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac32 fac1No:fac2S fac1Ru:fac2S <br>
+&nbsp; 0.05245374&nbsp;&nbsp; 0.05837246&nbsp;&nbsp; 0.06084917&nbsp;&nbsp; 0.06696214&nbsp;&nbsp; 0.04814860&nbsp;&nbsp; 0.07727544&nbsp;&nbsp; 0.08174704 <br>
+&nbsp;fac2S:fac32 <br>
+&nbsp; 0.06504617 </span>
+<p>As was the case with the estimates I remove the intercept from the vector of standard errors.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> std.errs &lt;- std.errs[2:8]</div>
+<p><a name="vcov"></a><a name="diag" id="diag"></a><a name="sqrt"></a>Alternatively we can  extract the standard errors from the variance-covariance matrix of the parameter estimates obtained with the <span class="style1">vcov</span> function. The variances lie on the diagonal which we can extract with the <span class="style1">diag</span> function. The standard errors are then obtained by taking their square roots with the <span class="style1">sqrt</span> function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#using variance-covariance matrix</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> vcov(out2)</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac32&nbsp; fac1No:fac2S<br>
+(Intercept)&nbsp;&nbsp; 0.002751394 -2.018169e-03 -0.0018755968 -0.002751394 -1.313697e-03&nbsp; 2.018169e-03<br>
+fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.002018169&nbsp; 3.407344e-03&nbsp; 0.0020049896&nbsp; 0.002018169&nbsp; 1.976835e-05 -3.407344e-03<br>
+fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.001875597&nbsp; 2.004990e-03&nbsp; 0.0037026214&nbsp; 0.001875597 -2.318288e-04 -2.004990e-03<br>
+fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.002751394&nbsp; 2.018169e-03&nbsp; 0.0018755968&nbsp; 0.004483928&nbsp; 1.313697e-03 -3.251732e-03<br>
+fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.001313697&nbsp; 1.976835e-05 -0.0002318288&nbsp; 0.001313697&nbsp; 2.318288e-03 -1.976835e-05<br>
+fac1No:fac2S&nbsp; 0.002018169 -3.407344e-03 -0.0020049896 -0.003251732 -1.976835e-05&nbsp; 5.971493e-03<br>
+fac1Ru:fac2S&nbsp; 0.001875597 -2.004990e-03 -0.0037026214 -0.002970558&nbsp; 2.318288e-04&nbsp; 3.266274e-03<br>
+fac2S:fac32&nbsp;&nbsp; 0.001313697 -1.976835e-05&nbsp; 0.0002318288 -0.002270055 -2.318288e-03 -2.181245e-05<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fac1Ru:fac2S&nbsp;&nbsp; fac2S:fac32<br>
+(Intercept)&nbsp;&nbsp; 0.0018755968&nbsp; 1.313697e-03<br>
+fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.0020049896 -1.976835e-05<br>
+fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.0037026214&nbsp; 2.318288e-04<br>
+fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.0029705578 -2.270055e-03<br>
+fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0002318288 -2.318288e-03<br>
+fac1No:fac2S &nbsp;0.0032662738 -2.181245e-05<br>
+fac1Ru:fac2S&nbsp; 0.0066825785 -5.506149e-04<br>
+fac2S:fac32&nbsp; -0.0005506149&nbsp; 4.231005e-03</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sqrt(diag(vcov(out2)))</div>
+<span class="style24"> &nbsp;(Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac32 fac1No:fac2S fac1Ru:fac2S <br>
+&nbsp; 0.05245374&nbsp;&nbsp; 0.05837246&nbsp;&nbsp; 0.06084917&nbsp;&nbsp; 0.06696214&nbsp;&nbsp; 0.04814860&nbsp;&nbsp; 0.07727544&nbsp;&nbsp; 0.08174704 <br>
+&nbsp;fac2S:fac32 <br>
+&nbsp; 0.06504617</span>
+<p>Using the estimates and their standard errors I next  obtain  95% confidence intervals of the effects. Technically we should use a <em>t</em>-distribution for this, but the sample size used in our analysis is so large that the relative difference between using a <em>t</em>-distribution or a normal distribution is trivial. The degrees of freedom for the <em>t</em>-distribution are obtained in the <span class="style9">$df.residual</span> component of the model object.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(out2)</div>
+<span class="style24">  &nbsp;[1] &quot;coefficients&quot;&nbsp; &quot;residuals&quot;&nbsp;&nbsp;&nbsp;&nbsp; &quot;effects&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;rank&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fitted.values&quot;<br>
+  &nbsp;[6] &quot;assign&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;qr&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;df.residual&quot;&nbsp;&nbsp; &quot;na.action&quot;&nbsp;&nbsp;&nbsp;&nbsp; &quot;contrasts&quot;&nbsp;&nbsp;&nbsp; <br>
+  [11] &quot;xlevels&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;call&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;terms&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;model&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out2$df.residual</div>
+<span class="style24">[1] 231</span>
+<p><a name="qt"></a><a name="qnorm"></a>To construct 95% confidence intervals we need the .025 and .975 quantiles of a <em>t</em>-distribution with 231 degrees of freedom. The  <em>t</em> quantile function in R is <span class="style1">qt</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> c(qt(.025,out2$df.residual), qt(.975,out2$df.residual))</div>
+<span class="style24">[1] -1.970287&nbsp; 1.970287</span>
+<p>These are barely different from the corresponding normal quantiles obtained with <span class="style1">qnorm</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> c(qnorm(.025),qnorm(.975))</div>
+<span class="style24">[1] -1.959964&nbsp; 1.959964</span>
+<p>A (1 &ndash; &alpha;)% confidence interval is obtained in the usual fashion.</p>
+<p align="center"><img src="../../images/lectures/lecture4/confint.gif" width="252" height="47" alt="confident interval"></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">low95 &lt;- ests + qt(.025,out2$df.residual)*std.errs</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> up95 &lt;- ests + qt(.975,out2$df.residual)*std.errs</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<p><a name="confint"></a>R provides easier ways of obtaining confidence intervals than calculating them by hand. The <span class="style1">confint</span> function when applied to an <span class="style1">lm</span> object returns confidence intervals (95% by default) for all the regression parameters in the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> confint(out2)</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp; 97.5 %<br>
+  (Intercept)&nbsp;&nbsp; 3.279889409 3.4865872<br>
+  fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.432288251 0.6623092<br>
+  fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.417096197 0.6568768<br>
+  fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.114785940 0.1490833<br>
+  fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.012712904 0.2024460<br>
+  fac1No:fac2S -0.138841019 0.1656685<br>
+  fac1Ru:fac2S&nbsp; 0.002438494 0.3245687<br>
+fac2S:fac32&nbsp;&nbsp; 0.035070334 0.2913895</span>
+<p>These match what we calculated by hand.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cbind(low95, up95)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+  fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.432288251 0.6623092<br>
+  fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.417096197 0.6568768<br>
+  fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.114785940 0.1490833<br>
+  fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.012712904 0.2024460<br>
+  fac1No:fac2S -0.138841019 0.1656685<br>
+  fac1Ru:fac2S&nbsp; 0.002438494 0.3245687<br>
+fac2S:fac32&nbsp;&nbsp; 0.035070334 0.2913895</span>
+<p><a name="dataframe"></a>Finally I assemble everything in a data frame. We will need a column of labels for the effects. These can be obtained with the <span class="style1">names</span> function which  extracts the labels from the vector of coefficient estimates. At the same time I make the result a factor and specify the desire3d order of the factor levels explicitly with the <span class="style16">levels</span> argument of <span class="style1">factor</span>. This prevents the <span class="style1">data.frame</span> function of R from putting the levels in alphabetical order.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">new.data &lt;- data.frame(var.labels=factor(names(ests), levels=names(ests)), ests, low95, up95)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> new.data</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var.labels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+  fac1No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1No 0.54729873&nbsp; 0.432288251 0.6623092<br>
+  fac1Ru&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1Ru 0.53698650&nbsp; 0.417096197 0.6568768<br>
+  fac2S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;fac2S 0.01714866 -0.114785940 0.1490833<br>
+  fac32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac32 0.10757945&nbsp; 0.012712904 0.2024460<br>
+  fac1No:fac2S fac1No:fac2S 0.01341375 -0.138841019 0.1656685<br>
+  fac1Ru:fac2S fac1Ru:fac2S 0.16350360&nbsp; 0.002438494 0.3245687<br>
+  fac2S:fac32&nbsp;&nbsp; fac2S:fac32 0.16322994&nbsp; 0.035070334 0.2913895</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> levels(new.data$var.labels)</div>
+<span class="style24">  [1] &quot;fac1No&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fac1Ru&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fac2S&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fac32&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fac1No:fac2S&quot;<br>
+[6] &quot;fac1Ru:fac2S&quot; &quot;fac2S:fac32&quot;</span>
+<h2><a name="summary"></a>Graphical display of the summary table</h2>
+<p><a name="dotchart"></a>To display and compare simple point estimates such as means we can use a dot plot. A bare-bones dot plot can be obtained with the <span class="style1">dotchart</span> function of base graphics or the <span class="style1">dotplot</span> function of <span class="style19">lattice</span>. The syntax is slightly different for the two functions as shown below.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dotchart(new.data$ests, labels=new.data$var.labels, xlab='ests')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dotplot(var.labels~ests, data=new.data)</div>
+<br>
+<table width="680" border="0" align="center" cellpadding="5">
+  <tr valign="top">
+    <td scope="col">(a) <img src="../../images/lectures/lecture4/fig1a.png" alt="fig. 1a" width="300" height="260" align="texttop"></td>
+    <td scope="col">(b) <img src="../../images/lectures/lecture4/fig1b.png" alt="fig. 1b" width="300" height="260" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 1&nbsp;</strong>&nbsp;Default dot plots as generated by (a) the dotchart function of base graphics and (b) the dotplot function of lattice</td>
+  </tr>
+</table>
+<p>We will want  to add error bars to these displays. I illustrate how to do this  for lattice and base graphics separately.</p>
+<h3><a name="effectlattice" id="effectlattice"></a><a name="lattice"></a>Effects  graphs using the lattice package</h3>
+<p> <span class="style1"><a name="panel" id="panel"></a></span>Lattice graphs are generated with a single line of code. Each lattice plotting function has a default panel function that identifies the features that will be displayed in the graph. If you want additional features beyond the default you will need to construct your own panel function. The panel function must identify everything that is to be plotted including what you would otherwise get by default. When using your own panel function it doesn't really matter what basic lattice plot function you use because the default panel function for that plot function is ignored anyway. </p>
+<p>Panel functions can be created with the keyword <span class="style22">panel=function(x,y)</span> followed by a pair of curly braces<span class="style22"> { }</span>. Special lattice panel graphing functions are then listed on separate lines within the curly braces. Each panel graphing function adds a specific feature to the graph. Typically the names of these functions begin with the word <span class="style8">panel</span> followed by the operation they are to perform, e.g., <span class="style1">panel.xyplot</span>, <span class="style1">panel.lines</span>,<span class="style1"> panel.points</span>, etc., although recently <span class="style19">lattice</span> has  been moving away from this convention.</p>
+<p><a name="panelabline" id="panelabline"></a>The following lattice call uses a panel function to plot the point estimates with <span class="style1">panel.xyplot</span>, add a vertical line at 0 with <span class="style1">panel.abline</span>, and add the 95% confidence intervals with <span class="style1">panel.segments</span>. The <span class="style22">xlim</span> argument is needed to make enough room for the error bars. For this I use the minimum value of the lower 95% intervals and the maximum of the 95% confidence intervals to define the plot range. I subtract and add .02 to these values to increase this range a little bit. The <em>x</em> and <em>y</em> that appear in the  declaration of the panel function correspond to the <em>x</em> and <em>y</em>-variables in the original <span class="style1">dotplot</span> call, in this case <span class="style8">ests</span> and <span class="style8">var.labels</span> respectively.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dotplot(var.labels~ests, data=new.data, xlim=c(min(new.data$low95)-.02, max(new.data$up95)+.02), panel=function(x,y){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x, y, pch=16, cex=1)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.abline(v=0, col=2, lty=2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.segments(new.data$low95, as.numeric(y), new.data$up95, as.numeric(y))})</div>
+<ul>
+  <li><span class="style1">panel.xyplot</span> plots the points using filled circles, <span class="style10">pch=16</span>. The argument <span class="style22">cex</span> stands for &quot;character expansion&quot; and is the magnification ratio for changing the size of what's being plotted. The choice <span class="style10">cex=1</span> is the default size.</li>
+  <li><span class="style1">panel.abline</span> draws a vertical line at 0, <span class="style10">v=0</span>, using a dashed line, <span class="style10">lty=2</span>, colored red, <span class="style10">col=2</span>.</li>
+  <li><a name="asnumeric"></a>The syntax for <span class="style1">panel.segments </span>is <span class="style10">panel.segments(x1,y1,x2,y2)</span> where (x1, y1) and (x2, y2) are the two endpoints of the line segment to be drawn. Here the <em>y</em>-coordinate corresponds to the factor variable <span class="style10">var.labels</span>. Because the <span class="style1"> panel.segments</span> function  expects a number, not a factor, to plot, I convert the factor to a number with the <span class="style1">as.numeric</span> function, <span class="style10">as.numeric(y)</span>. Fig. 2 shows the result.</li>
+</ul>
+<p align="center"><img src="../../images/lectures/lecture4/fig2.png" width="390" height="280" alt="fig. 2"></p>
+<p align="center" class="styleArial"><strong>Fig. 2&nbsp;</strong>&nbsp;Dot plot with error bars (95% confidence intervals)</p>
+<p ><a name="paneldotplot"></a>I redo the graph with  the following improvements.</p>
+<ol>
+  <li>Lattice uses a default color for the points that turns out to be  <span class="style22">col=&quot;#0080ff&quot;</span> in hex notation. We can make the confidence intervals this same color by including this as an argument to the <span class="style1">panel.segments</span> function.</li>
+  <li><a name="lineend"></a>Although it's not obvious from Fig. 2, the default way that R draws line segments is to place a round cap at the end. The presence of the cap causes the line segment to extend beyond  the coordinates that we specified. This is a problem with confidence intervals if we want to  use them for hypothesis testing by determining if they cross the zero line. To override this behavior we can add the argument <span class="style22">lineend=1</span> in <span class="style1">panel.segments</span> to obtained &quot;butted&quot; endpoints: line segments without caps.</li>
+  <li>As another cosmetic improvement we can add grid lines like those of Fig. 1. The <span class="style1">panel.dotplot</span> function adds grid lines by default so I could use this function first and let the rest of the function calls cover up what it plots. I color the points that <span class="style1">panel.dotplot</span> produces 'white' and make them small. </li>
+  <li> I also improve the labeling on the <em>y</em>-axis. I replace the  hybrid names created by R that combines the factor name and the level with names that just specify the levels. I also take advantage of the mathematical typesetting abilities of R to include the multiplication symbol of arithmetic, &times;, in the interaction terms. This is denoted %*% in R and requires the use of the <span class="style1">expression</span> function. To see other examples of mathematical typesetting in R enter  <span class="style10">demo(plotmath)</span> at the command prompt in the console window. The R code and the  mathematical expression it produces are shown in the graphics window.</li>
+</ol>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#formatted labels</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mylabs&lt;-c('Normal', 'Ru486', 'Shrimp', 'Sibship2', expression('Normal' %*% 'Shrimp'), expression('Ru486' %*% 'Shrimp'), expression('Shrimp' %*% 'Sibship2'))</div>
+<p><a name="scales"></a>To  use  these labels in the <span class="style1">dotplot</span> function we need to include the <span class="style22">scales</span> argument. The basic format of <span class="style22">scales</span> is </p>
+<span class="style10">scales=list(x=list( ), y = list( ))</span>
+<p>where <em>x</em> and <em>y</em> denote the <em>x</em>- and <em>y</em>-axes and we specify   the features we want to modify on the respective axes inside the <span class="style1">list</span> function separated by commas. For instance, the following will cause the <em>y</em>-axis tick marks to be labeled using the new labels. By not specifying  the <em>x</em>-axis I keep the default settings.</p>
+<span class="style10">scales=list(y=list(at=1:7, labels=mylabs))</span>
+<p>Here's the complete function call.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dotplot(var.labels~ests,data=new.data, xlim=c(min(new.data$low95)-.02, max(new.data$up95)+.02), xlab='Estimated effect', panel=function(x,y){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.dotplot(x, y, col='white', cex=.01)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.segments(new.data$low95, as.numeric(y), new.data$up95, as.numeric(y), col=&quot;#0080ff&quot;)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x, y, pch=16, cex=1)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.abline(v=0, col=2, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> },  scales=list(y=list(at=1:7, labels=mylabs)))</div>
+<p align="center"><img src="../../images/lectures/lecture4/fig3.png" width="390" height="280" alt="fig. 3"></p>
+<p align="center"><span class="styleArial"><strong>Fig. 3&nbsp;</strong>&nbsp;An &quot;improved&quot; version of Fig. 2</span></p>
+<p>So what do we learn from  Fig. 3?</p>
+<ol>
+  <li>The effects graph is a graphical representation of the coefficient summary table for the model (minus the intercept term). Using Fig. 3 we can visually carry out  significance tests at &alpha; = .05  by determining if the displayed confidence intervals intersect the red dashed vertical line at 0. </li>
+  <li>We can use Fig. 3 to assess the relative importance of the various effects in the model. This is especially useful if an appropriate reference group was chosen. In the current model the reference group is  hormone treatment = corticosterone, diet = detritus, and sibship = 1. It probably would have made more sense to have made hormone treatment = normal  the reference group because it serves as the control  in this experiment. Putting that aside for the moment we can observe the following from Fig. 3.
+    <ol type="i">
+      <li>The hormone treatment alone produces the biggest change in the response. Both normal and Ru486 have roughly the same effect relative to the reference group corticosterone. Because normal is the control group it tells us that Ru486 has essentially no effect while corticosterone has a very large negative effect.</li>
+      <li>There is no diet effect unless it is  combined with  Ru486. In this case switching to the shrimp diet has a weak positive effect,  enough of an effect to make the Ru486 treatment  significantly different from the corticosterone group.</li>
+      <li>For tadpoles given a shrimp diet the increased response  that is obtained by switching to Ru486 is of the same order of magnitude as the effect gained by switching from sibship 1 to sibship 2. This implies that the diet &times; Ru486 effect is no larger than  effects attributable to ordinary background genetic variation.</li>
+    </ol>
+  </li>
+  <li>If desired, we can also use  the graph to estimate the effect attributable to any treatment combination of interest just by adding the corresponding displayed effects. For example, for a tadpole with sibship=1, diet=detritus, and hormone=Ru486 the effect is given by the single labeled estimate  Ru486. For a tadpole with sibship=1, diet=shrimp, hormone=Ru486 we would need to add together the displayed effects for Ru486, Shrimp, and Ru486 &times; Shrimp. If  we want the treatment mean  instead of the effect we have to add the effect just obtained to the model intercept value  which is 3.38.</li>
+</ol>
+<h3><a name="effectbase" id="effectbase"></a>Effects graphs using base graphics</h3>
+<p>With base graphics a minimal plot is created using a higher-level graphics command; we then add to that plot using lower level graphics commands. the basic strategy is to build the graph incrementally with multiple function calls. This contrasts with <span class="style19">lattice</span> where we create the entire graph all at once. The individual function calls in base graphics correspond exactly to the different panel functions we used in generating the <span class="style19">lattice</span> graph, so almost everything we did there carries over.</p>
+<p>The lower level graphics functions of base graphics  that we will use require the numeric values of the seven effect categories for plotting, so I create a new variable that numbers them 1 through 7.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">new.data$num.labels &lt;- 1:7</div>
+<p><a name="axes"></a><a name="ylab"></a>When the goal is to build a modular graph, I generally use the first higher-level graphics command  only to set up axis limits and labels, while   generating the rest of the graph using lower-level graphics commands. Here I use the <span class="style1">plot</span> function to set up the <em>y</em>-limits and <em>x</em>-limits explicitly and define labels for the axes. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(range(new.data[,2:4]), c(1-.3,7+.3), type='n', xlab='Effect estimates', ylab='', axes=F)</div>
+<ul>
+  <li>In the  first argument I use the <span class="style1">range</span> function to return the minimum and maximum <em>x</em>-limits (using  the numerical columns of the data frame). The second argument sets the limits for the <em>y</em>-axis. I set these limits so that they are just beyond the plotted endpoints of 1 and 7 in order to add a little buffer around the display. </li>
+</ul>
+<blockquote>
+  <p><span class="style10"> range(new.data[,2:4])</span><br>
+    <span class="style24"> [1] -0.1380433  0.6617067</span><br>
+    <span class="style10"> c(1-.3,7+.3)</span><br>
+    <span class="style24">[1] 0.7 7.3</span> </p>
+</blockquote>
+<ul>
+  <li>The result is that we have only two pairs of points to plot. By specifying <span class="style22">type='n' </span>, 'n' for nothing,  I suppress the display of any points, so we end up only defining the <em>x</em>- and <em>y</em>-limits of the plot.</li>
+  <li>The <span class="style22">ylab=''</span> argument, with nothing between the two single quotes, suppresses the printing of a label on the <em>y</em>-axis. </li>
+  <li>The <span class="style22">axes=F</span> argument prevents the display of the <em>x</em>- and the <em>y</em>-axes. I include it because I want to add my own labels to the <em>y</em>-axis.</li>
+</ul>
+<p><a name="axis"></a>The <span class="style1">axis</span> functions are used to add axes to an existing plot. The first argument of <span class="style1">axis</span> is the desired axis. The axes are numbered 1 (bottom), 2 (left), 3 (top), and 4 (right). If you want to use default settings for the axis just enter the number and nothing more. To specify locations and labels for tick marks, add the <span class="style22">at=</span> and <span class="style22">labels=</span> argument just as was done in the <span class="style22">scales</span> argument of <span class="style19">lattice</span> graphs.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">axis(1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">axis(2, at=1:7, labels=mylabs, las=2, cex.axis=.8)</div>
+<p>I specify <span class="style22">las=2</span> to rotate the labels so that they are perpendicular to the axis. The <span class="style22">cex.axis=.8</span> option reduces the size of the labels to 80% of the default size. When we look at the graph this generates we see there is a problem (Fig. 4).</p>
+<p align="center"><img src="../../images/lectures/lecture4/fig7.png" width="420" height="250" alt="fig 7"></p>
+<p align="center"><span class="styleArial"><strong>Fig. 4&nbsp;</strong>&nbsp;Graph with default margin settings</span></p>
+<p><a name="par"></a>The left margin is not wide enough to accommodate the labels so they are being truncated. We need to expand the left margin beyond its default value. Margins are set with the <span class="style22">mar</span> argument of the <span class="style1">par</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(&quot;mar&quot;)</div>
+<span class="style24">[1] 5.1 4.1 4.1 2.1</span>
+<p>The reported values are in line units and are given in the order bottom, left, top, right. I try doubling the left margin, but first I save the original settings so they can be restored later.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(&quot;mar&quot;) -&gt; oldmar</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mar=c(5.1,8.1,4.1,2.1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(range(new.data[,2:4]), c(1-.3,7+.3), type='n', xlab='Effect estimates', ylab='', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> axis(1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> axis(2, at=1:7, labels=mylabs, las=2, cex.axis=.8)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">box()</div>
+<p><a name="box"></a><a name="lend"></a>The <span class="style1">box</span> function with no arguments connects the axes and draws a box around the graph. Generating the rest of the graph is easy. I take the various panel functions from the previous section and remove the lead word &quot;panel.&quot;. The <span class="style1">segments</span> function draws the confidence intervals, <span class="style1">points</span> adds the point estimate, and <span class="style1">abline</span> draws a vertical line at zero. Where an <em>x</em> or a <em>y</em> appear as the arguments in the lattice panel functions I replace them with the actual variable names. To obtain the &quot;butted&quot; ends on line segments requires the use of the <span class="style1">par</span> function again this time to set the option <span class="style22">lend=1</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(lend=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">segments(new.data$low95, new.data$num.labels, new.data$up95, new.data$num.labels, col=&quot;#0080ff&quot;)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(new.data$ests, new.data$num.labels, pch=16, cex=1, col=&quot;#0080ff&quot;) </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">abline(v=0, lty=2, col=2)</div>
+<p align="center"><img src="../../images/lectures/lecture4/fig8.png" width="375" height="240" alt="fig. 5"></p>
+<p align="center"><span class="styleArial"><strong>Fig. 5&nbsp;</strong>Effects graph using base graphics</span></p>
+<p><a name="grid"></a>We can add grid lines, if desired, with the <span class="style1">grid</span> function. The call needed here is</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">grid(nx=NA, ny=NULL)</div>
+<p>The arguments <span class="style22">nx</span> and <span class="style22">ny</span> denote the number of grid lines perpendicular to the <em>x</em>- and <em>y</em>-axes respectively. If we specify <span class="style22">nx=NA</span> we get no grid lines. If we specify <span class="style22">nx=NULL</span> we get grid lines at the tick marks. Below I redo the entire graph drawing the grid lines first so they don't overwrite what has already been plotted. I then reset the margins to their default values.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(range(new.data[,2:4]), c(1-.3,7+.3), type='n', xlab='Effect estimates', ylab='', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> axis(1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> axis(2, at=1:7, labels=mylabs, las=2, cex.axis=.8)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> box()</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> grid(nx=NA, ny=NULL)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> segments(new.data$low95, new.data$num.labels, new.data$up95, new.data$num.labels, col=&quot;#0080ff&quot;)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(new.data$ests, new.data$num.labels, pch=16, cex=1, col=&quot;#0080ff&quot;)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">abline(v=0, lty=2, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mar=oldmar)</div>
+<p align="center"><img src="../../images/lectures/lecture4/fig9.png" width="375" height="240" alt="fig. 6"></p>
+<p align="center"><span class="styleArial"><strong>Fig. 6&nbsp;</strong>&nbsp;Effects graph with grid lines using base graphics</span></p>
+<h2><a name="obtaining" id="obtaining"></a>Obtaining the treatment means and their confidence intervals</h2>
+<h3><a name="meaneffects" id="meaneffects"></a>Using the effects package</h3>
+<p><a name="given"></a>The treatment means based from an analysis of variance model  can be extracted with the <span class="style1">effect</span> function from the <span class="style19">effects</span> package. In the call below I request the treatment means needed to display the <span class="style8">fac1:fac2</span> interaction. In the first call the <span class="style8">fac3</span> variable is set at its first level, <span class="style8">fac32=0</span>, using the <span class="style22">given.values</span> argument. In the second run I request the same treatment means at the second level of <span class="style8">fac3</span>. Notice that <span class="style22">given.values</span> expects a value for the dummy variable in the model using the name that appears in the summary table of the model, not a value for the original factor. Therefore I specify <span class="style8">fac32=0</span> and <span class="style8">fac32=1</span> rather than <span class="style8">fac3=1</span> and <span class="style8">fac3=2</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(effects)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">effect1a &lt;- effect('fac1:fac2', out2, given.values=c(fac32=0))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">effect1b &lt;- effect('fac1:fac2', out2, given.values=c(fac32=1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">names(effect1a)</div>
+<span class="style24"> &nbsp;[1] &quot;term&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;formula&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;response&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;variables&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;[5] &quot;fit&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;x&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;model.matrix&quot;&nbsp;&nbsp;&nbsp;&nbsp; &quot;data&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;[9] &quot;discrepancy&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;se&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;lower&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;upper&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+[13] &quot;confidence.level&quot; &quot;transformation&quot;</span>
+<p>The component <span class="style9">$x</span> identifies the levels of the factors that were used to obtain the estimated means, standard errors, and confidence interval endpoints.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">effect1a$x</div>
+<span class="style24"> &nbsp; fac1 fac2<br>
+1&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D<br>
+2&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D<br>
+3&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D<br>
+4&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S<br>
+5&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S<br>
+6&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S</span>
+<p>The components <span class="style9">$fit</span>, <span class="style9">$se</span>, <span class="style9">$lower</span>, and <span class="style9">$upper</span> contain the estimates, standard errors, and lower and upper endpoints of the 95% confidence intervals.</p>
+<p> <a name="rbind"></a>I assemble the output from the two <span class="style1">effect</span> calls in separate data frames, one for each  level of <span class="style8"> fac3</span>. In each data frame I add one more variable to indicate the level of <span class="style8"> fac3</span>, <span class="style10">fac3=1</span> or <span class="style10">fac3=2</span>. Finally I use the <span class="style1">rbind</span> function  (bind by rows) to append one  data frame to the other.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">part1 &lt;- data.frame(effect1a$x, fac3=1, ests=effect1a$fit, se=effect1a$se, low95=effect1a$lower, up95=effect1a$upper)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part1</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp; fac1 fac2 fac3&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+2401&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.383238 0.05245374 3.279889 3.486587<br>
+2411&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.930537 0.04606953 3.839767 4.021307<br>
+2421&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.920225 0.05198867 3.817792 4.022657<br>
+2431&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.400387 0.04162371 3.318376 3.482398<br>
+2441&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.961099 0.04277330 3.876824 4.045375<br>
+2451&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 4.100877 0.05022518 4.001919 4.199835</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part2 &lt;- data.frame(effect1b$x, fac3=2, ests=effect1b$fit, se=effect1b$se, low95=effect1b$lower, up95=effect1b$upper)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part.eff &lt;- rbind(part1, part2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> part.eff </div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1 fac2 fac3&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+2401&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.383238 0.05245374 3.279889 3.486587<br>
+2411&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.930537 0.04606953 3.839767 4.021307<br>
+2421&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D &nbsp;&nbsp;&nbsp;1 3.920225 0.05198867 3.817792 4.022657<br>
+2431&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.400387 0.04162371 3.318376 3.482398<br>
+2441&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.961099 0.04277330 3.876824 4.045375<br>
+2451&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 4.100877 0.05022518 4.001919 4.199835<br>
+24011&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 3.490818 0.04941952 3.393447 3.588188<br>
+24111&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.038116 0.04304455 3.953306 4.122927<br>
+24211&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.027804 0.04393244 3.941245 4.114364<br>
+24311&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 3.671196 0.04162371 3.589186 3.753207<br>
+24411&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.231909 0.04178987 4.149571 4.314247<br>
+24511&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.371686 0.04341654 4.286143 4.457229</span>
+<h3><a name="meanpredict" id="meanpredict"></a>Using the predict function</h3>
+<p>The <span class="style1">predict</span> function can also be used to obtain estimates from regression models. I start by creating a data frame that contains the desired values of the predictors by using the <span class="style1">expand.grid</span> function to generate observations representing the levels of <span class="style8">fac1</span>, <span class="style8">fac2</span>, and <span class="style8">fac3</span> in all possible combinations.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals2 &lt;- expand.grid(fac1=c('Co','No','Ru'), fac2=c('D','S'), fac3=1:2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals2</div>
+<span class="style24">  &nbsp;&nbsp; fac1 fac2 fac3<br>
+  1&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+  2&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+  3&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+  4&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  5&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  6&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  7&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+  8&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+  9&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+  10&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2<br>
+  11&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2<br>
+  12&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2</span>
+ 
+<p><a name="predict"></a>The first argument of the <span class="style1">predict</span> function is the regression model. The <span class="style22">newdata</span> argument specifies the data frame that contains the observations whose predictions we desire. I add the additional arguments <span class="style22">se.fit=T</span> to get standard errors and <span class="style22">interval=&quot;confidence&quot;</span> to get confidence intervals. Because <span class="style8">fac3</span> is currently a numeric variable in the <span class="style22">newdata</span> data frame, the <span class="style1">predict</span> function returns an error message.</p>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #we need to convert fac3 to a factor or we get an error message</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.p &lt;- predict(out2, newdata=fac.vals2, se.fit=T, interval=&quot;confidence&quot;)</div>
+<span class="style24">  Error: variable 'fac3' was fitted with type &quot;factor&quot; but type &quot;numeric&quot; was supplied<br>
+  In addition: Warning message:<br>
+  In model.frame.default(Terms, newdata, na.action = na.action, xlev = object$xlevels) :<br>
+  &nbsp; variable 'fac3' is not a factor</span>
+<p>I declare <span class="style8">fac3</span> to be a factor and try <span class="style1">predict</span> again.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals2$fac3 &lt;- factor(fac.vals2$fac3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.p &lt;- predict(out2, newdata=fac.vals2, se.fit=T, interval=&quot;confidence&quot;)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(out.p)</div>
+<span class="style24">  [1] &quot;fit&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;se.fit&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;df&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;residual.scale&quot;</span>
+<p>The <span class="style9">$fit</span> component of the <span class="style1">predict</span> object contains the estimate of the mean and the confidence interval. The <span class="style9">$se.fit</span> component contains the standard errors.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #estimated means and CIs</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.p$fit</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lwr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; upr<br>
+  1&nbsp; 3.383238 3.279889 3.486587<br>
+  2&nbsp; 3.930537 3.839767 4.021307<br>
+  3&nbsp; 3.920225 3.817792 4.022657<br>
+  4&nbsp; 3.400387 3.318376 3.482398<br>
+  5&nbsp; 3.961099 3.876824 4.045375<br>
+  6&nbsp; 4.100877 4.001919 4.199835<br>
+  7&nbsp; 3.490818 3.393447 3.588188<br>
+  8&nbsp; 4.038116 3.953306 4.122927<br>
+  9&nbsp; 4.027804 3.941245 4.114364<br>
+  10 3.671196 3.589186 3.753207<br>
+  11 4.231909 4.149571 4.314247<br>
+  12 4.371686 4.286143 4.457229</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #standard error of means</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> out.p$se.fit</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 <br>
+  0.05245374 0.04606953 0.05198867 0.04162371 0.04277330 0.05022518 0.04941952 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 <br>
+  0.04304455 0.04393244 0.04162371 0.04178987 0.04341654 </span>
+<p>I assemble the results in a data frame and then rename columns 4 through 7 to match the names we used above.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results.pred &lt;- data.frame(fac.vals2, out.p$fit, out.p$se.fit)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results.pred</div>
+<span class="style24">  &nbsp;&nbsp; fac1 fac2 fac3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lwr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; upr out.p.se.fit<br>
+  1&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.383238 3.279889 3.486587&nbsp;&nbsp; 0.05245374<br>
+  2&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.930537 3.839767 4.021307&nbsp;&nbsp; 0.04606953<br>
+  3&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.920225 3.817792 4.022657&nbsp;&nbsp; 0.05198867<br>
+  4&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.400387 3.318376 3.482398&nbsp;&nbsp; 0.04162371<br>
+  5&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.961099 3.876824 4.045375&nbsp;&nbsp; 0.04277330<br>
+  6&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 4.100877 4.001919 4.199835&nbsp; &nbsp;0.05022518<br>
+  7&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 3.490818 3.393447 3.588188&nbsp;&nbsp; 0.04941952<br>
+  8&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.038116 3.953306 4.122927&nbsp;&nbsp; 0.04304455<br>
+  9&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.027804 3.941245 4.114364&nbsp;&nbsp; 0.04393244<br>
+  10&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 3.671196 3.589186 3.753207&nbsp;&nbsp; 0.04162371<br>
+  11&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.231909 4.149571 4.314247&nbsp;&nbsp; 0.04178987<br>
+  12&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.371686 4.286143 4.457229&nbsp;&nbsp; 0.04341654</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #rename columns 4 through 7</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(results.pred)[4:7] &lt;- c('ests', 'low95', 'up95', 'se')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results.pred</div>
+<span class="style24">  &nbsp;&nbsp; fac1 fac2 fac3&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se<br>
+  1&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.383238 3.279889 3.486587 0.05245374<br>
+  2&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.930537 3.839767 4.021307 0.04606953<br>
+  3&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.920225 3.817792 4.022657 0.05198867<br>
+  4&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.400387 3.318376 3.482398 0.04162371<br>
+  5&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.961099 3.876824 4.045375 0.04277330<br>
+  6&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 4.100877 4.001919 4.199835 0.05022518<br>
+  7&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 3.490818 3.393447 3.588188 0.04941952<br>
+  8&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.038116 3.953306 4.122927 0.04304455<br>
+  9&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.027804 3.941245 4.114364 0.04393244<br>
+  10&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp; &nbsp;2 3.671196 3.589186 3.753207 0.04162371<br>
+  11&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.231909 4.149571 4.314247 0.04178987<br>
+  12&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.371686 4.286143 4.457229 0.04341654</span>
+<h3><a name="meanmatrix" id="meanmatrix"></a>Using matrix multiplication</h3>
+<p>The regression equation can be viewed as a vector dot product between a vector of values for the dummy variables and a vector of coefficient estimates. The dummy variables in the current model are defined as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture4/x1.gif" alt="x1" width="188" height="75" align="absmiddle">, <img src="../../images/lectures/lecture4/x2.gif" alt="x2" width="187" height="75" align="absmiddle">, <img src="../../images/lectures/lecture4/z.gif" alt="z" width="165" height="75" align="absmiddle">, <img src="../../images/lectures/lecture4/w.gif" alt="w" width="168" height="75" align="absmiddle"></p>
+<p>Using these  our final regression model <span class="style8">out2</span> with two two-factor interactions can be written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture4/dotproduct.gif" width="523" height="103" alt="dot product"></p>
+<p>where the  vector <strong>c</strong> is a vector of zeros and ones and <strong>&beta;</strong> is the parameter vector whose estimates are obtained with <span class="style10">coef(out2)</span>. I write a function, <span class="style8">myvec</span>, to calculate the vector <strong>c</strong> as a function of the values of <span class="style8">fac1</span>, <span class="style8">fac2</span>, and <span class="style8">fac3</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #function to create dummy vector </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myvec &lt;- function(fac1, fac2, fac3) c(1, fac1=='No', fac1=='Ru', fac2=='S', fac3==2, (fac1=='No')*(fac2=='S'), (fac1=='Ru')*(fac2=='S'), (fac2=='S')*(fac3==2))</div>
+<p>By plugging in values for <span class="style8">fac1</span>, <span class="style8">fac2</span>, and <span class="style8">fac3</span> I obtain different values for the vector <strong>c</strong>.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myvec('Co','D',1)</div>
+ <span class="style24"> [1] 1 0 0 0 0 0 0 0</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myvec('Co','S',1)</div>
+ <span class="style24"> [1] 1 0 0 1 0 0 0 0</span>
+<p><a name="matrixmult"></a>To obtain treatment means I form the dot product between the vector <strong>c</strong> and the coefficient vector <span class="style10">coef(out2)</span>. The dot product is obtained via matrix multiplication in R using the matrix multiplication operator <span class="style1">%*%</span>.</p>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # means for different treatments</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myvec('Co','D',1) %*% coef(out2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+  [1,] 3.383238</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myvec('No','S',1) %*% coef(out2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+  [1,] 3.961099</span>
+<p>The matrix <span class="style8">fac.vals2</span> that was created above contains all the possible combinations of the values of <span class="style8">fac1</span>, <span class="style8">fac2</span>, and <span class="style8">fac3</span>. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fac.vals2</div>
+<span class="style24">  &nbsp;&nbsp; fac1 fac2 fac3<br>
+  1&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+  2&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+  3&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1<br>
+  4&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  5&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  6&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1<br>
+  7&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+  8&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+  9&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2<br>
+  10&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2<br>
+  11&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2<br>
+  12&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2</span>
+<p><a name="apply"></a>To obtain all possible <strong>c</strong> vectors I just need to evaluate the function <span class="style8">myvec</span> on each row of this matrix separately. The <span class="style1">apply</span> function of R is an easy way to do this. The <span class="style1">apply</span> function takes three arguments.</p>
+<ol>
+  <li>First argument: the matrix to act on</li>
+  <li>Second argument: the number 1 or 2. The number 1 signifies that we want to act on the rows of the matrix. The number 2 signifies that we want to act on the columns of the matrix.</li>
+  <li>Third argument: the function that should be applied to the rows or columns of the matrix.The function needs to be defined so that it has a single argument.</li>
+</ol>
+<p>The function <span class="style8">myvec</span> currently takes three arguments. We need to rewrite it so that it has a single argument <span class="style8">x</span> with  components labeled <span class="style8">x[1], x[2], x[3]</span>. I do this on the fly using the generic function, <span class="style10">function(x) myvec(x[1],x[2],x[3])</span> when I invoke the <span class="style1">apply</span> function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #obtain dummy vectors for each treatment</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> apply(fac.vals2, 1, function(x) myvec(x[1],x[2],x[3]))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp; &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  fac1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  fac1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  fac2&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  fac3&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  fac1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  fac1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  fac2&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1</span>
+<p><a name="tfunc"></a>The results of applying <span class="style8">myvec</span> to the different rows of <span class="style8">fac.vals2</span> appear as the columns in the output of <span class="style1">apply</span>. To arrange the result in the same manner as the original matrix, I transpose it using R's <span class="style1">t</span> function.</p>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #make dummy vectors the rows of a matrix</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> t(apply(fac.vals2, 1, function(x) myvec(x[1],x[2],x[3])))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1 fac1 fac2 fac3 fac1 fac1 fac2<br>
+  &nbsp;[1,] 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[2,] 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[3,] 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[4,] 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[5,] 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[6,] 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[7,] 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[8,] 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[9,] 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [10,] 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  [11,] 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  [12,] 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1</span>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #contrast matrix</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cmat &lt;- t(apply(fac.vals2, 1, function(x) myvec(x[1],x[2],x[3])))</div>
+
+<p>To obtain the treatment means for all eight treatments we form the matrix product <strong>C&beta;</strong> where <strong>C</strong> is the matrix <span class="style8">cmat</span> just created.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #treatment means</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ests &lt;- cmat%*%coef(out2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ests</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+  &nbsp;[1,] 3.383238<br>
+  &nbsp;[2,] 3.930537<br>
+  &nbsp;[3,] 3.920225<br>
+  &nbsp;[4,] 3.400387<br>
+  &nbsp;[5,] 3.961099<br>
+  &nbsp;[6,] 4.100877<br>
+  &nbsp;[7,] 3.490818<br>
+  &nbsp;[8,] 4.038116<br>
+  &nbsp;[9,] 4.027804<br>
+  [10,] 3.671196<br>
+  [11,] 4.231909<br>
+  [12,] 4.371686</span>
+
+<p><a name="sandwich"></a>Algebraically it turns out that the variance-covariance matrix of the means can be obtained with the matrix product <img src="../../images/lectures/lecture4/matrixsandwich.gif" alt="variance" width="65" height="37" align="absmiddle">, where <strong>&Sigma;</strong><sub>&beta;</sub> is the variance covariance matrix of the parameter estimates obtained with <span class="style10">vcov(out2)</span>. The second appearance of <strong>C</strong> in the product is the matrix transpose of the first. To obtain the standard errors of the means we extract the diagonal of the final matrix and take its square root.</p>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #variance-covariance matrix of treatment means</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> vmat &lt;- cmat %*% vcov(out2) %*% t(cmat)</div>
+  <div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(vmat)</div>
+<span class="style24">  [1] 12 12</span>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # std errs of means</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> se &lt;- sqrt(diag(vmat))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> se</div>
+<span class="style24">  &nbsp;[1] 0.05245374 0.04606953 0.05198867 0.04162371 0.04277330 0.05022518 0.04941952<br>
+  &nbsp;[8] 0.04304455 0.04393244 0.04162371 0.04178987 0.04341654</span>
+
+<p>The 95% confidence intervals for the mean can now be obtained in the usual fashion in which we use the residual degrees of freedom from the model for the degrees of freedom of the <em>t</em>-distribution.</p>
+
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # 95% confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> low95 &lt;- ests + qt(.025,out2$df.residual)*se</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> up95 &lt;- ests + qt(.975,out2$df.residual)*se</div>
+
+<p>I assemble the results in a data frame.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #assemble results in data frame</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> results.mine &lt;- data.frame(fac.vals2, ests, se, low95, up95)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results.mine</div>
+<span class="style24">  &nbsp;&nbsp; fac1 fac2 fac3&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+  1&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.383238 0.05245374 3.279889 3.486587<br>
+  2&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.930537 0.04606953 3.839767 4.021307<br>
+  3&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.920225 0.05198867 3.817792 4.022657<br>
+  4&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.400387 0.04162371 3.318376 3.482398<br>
+  5&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.961099 0.04277330 3.876824 4.045375<br>
+  6&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 4.100877 0.05022518 4.001919 4.199835<br>
+  7&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 3.490818 0.04941952 3.393447 3.588188<br>
+  8&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.038116 0.04304455 3.953306 4.122927<br>
+  9&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.027804 0.04393244 3.941245 4.114364<br>
+  10&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 3.671196 0.04162371 3.589186 3.753207<br>
+  11&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.231909 0.04178987 4.149571 4.314247<br>
+  12&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.371686 0.04341654 4.286143 4.457229</span>
+<h2><a name="interaction" id="interaction"></a>Interaction plots with confidence intervals</h2>
+<p>I illustrate plotting the <span class="style8">fac1</span> &times; <span class="style8">fac2</span> interaction separately for different levels of <span class="style8">fac3</span>. Each graph will consist of the mean profiles of <span class="style8">fac1</span> separately by the levels of <span class="style8">fac2</span> for a single value of <span class="style8">fac3</span>. This yields two graphs, one for each value of <span class="style8">fac3</span>. The goal is to produce the following two graphs, here generated using the <span class="style19">effects</span> package, but with confidence intervals displayed for each of the means.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(effect1a, multiline=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> plot(effect1b, multiline=T)</div>
+<br>
+<table width="670" border="0" align="center" cellpadding="5">
+  <tr valign="top">
+    <td scope="col">(a) <img src="../../images/lectures/lecture4/fig10a.png" alt="fig 7a" width="290" height="270" align="texttop"></td>
+    <td scope="col">(b) <img src="../../images/lectures/lecture4/fig10b.png" alt="fig. 7b" width="290" height="270" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 7&nbsp;</strong>&nbsp;Interaction plots of the fac1:fac2 interaction as produced by the effects package</td>
+  </tr>
+</table>
+<p> Because <span class="style8">fac1</span> is to appear on the <em>x</em>-axis I need the numerical values of the three factor levels. I obtain them by using the <span class="style1">as.numeric</span> function on the factor variable.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results.mine$fac1.num &lt;- as.numeric(results.mine$fac1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> results.mine</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fac1 fac2 fac3&nbsp;&nbsp;&nbsp;&nbsp; ests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp; up95 fac1.num<br>
+2401&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.383238 0.05245374 3.279889 3.486587&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+2411&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.930537 0.04606953 3.839767 4.021307&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+2421&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 1 3.920225 0.05198867 3.817792 4.022657&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+2431&nbsp;&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.400387 0.04162371 3.318376 3.482398&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+2441&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 3.961099 0.04277330 3.876824 4.045375&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+2451&nbsp;&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 1 4.100877 0.05022518 4.001919 4.199835&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+24011&nbsp;&nbsp; Co&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 3.490818 0.04941952 3.393447 3.588188&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+24111&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.038116 0.04304455 3.953306 4.122927&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+24211&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; 2 4.027804 0.04393244 3.941245 4.114364&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+24311&nbsp;&nbsp; Co&nbsp; &nbsp;&nbsp;S&nbsp;&nbsp;&nbsp; 2 3.671196 0.04162371 3.589186 3.753207&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+24411&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.231909 0.04178987 4.149571 4.314247&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+24511&nbsp;&nbsp; Ru&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; 2 4.371686 0.04341654 4.286143 4.457229&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</span>
+<p>As I did with the effects graph, I start by setting up the graph but plotting nothing. I use the minimum of the <span class="style8">low95</span> values and the maximum of the <span class="style8">up95</span> values to establish the <em>y</em>-limits. The plotted <em>x</em>-values are numbered 1, 2, 3, so I set the <em>x</em>-limits to begin just  a little before 1 and to end just a little after 3. I then use the <span class="style1">axis</span> function to add labels to the tick marks on the <em>x</em>-axis. I use the <span class="style1">levels</span> function to extract the labels from the factor variable <span class="style8">fac1</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(c(.8,3.2), range(results.mine[,c(&quot;up95&quot;, &quot;low95&quot;)]), type='n', xlab=&quot;Hormonal treatment&quot;, ylab='Mean mitotic activity', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> axis(1, at=1:3, labels=levels(results.mine$fac1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> axis(2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">box()</div>
+<p>Next I subset the rows of the data frame so that we first plot only the means corresponding to <span class="style10">fac3 = 1</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">results.mine.sub1 &lt;- results.mine[results.mine$fac3==1,]</div>
+<p>I want to draw the mean profile for each diet (<span class="style8">fac2</span>) group separately. So I  subset the data again by the first diet, <span class="style10">fac2 = 'D'</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#first food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='D',]</div>
+<p>To prevent the error bars of the two mean profiles from lying on top of each other I shift one profile a little bit to the left and the other profile a little bit to the right. The variable <span class="style10">myjitter</span> contains the amount of the shift for the first profile.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #amount of shift</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- -.05</div>
+<p><a name="arrows"></a>The <span class="style1">arrows</span> function is used to draw the confidence intervals. Its basic syntax is the same as the <span class="style1">segments</span> function from before but it supports the additional arguments <span class="style22">angle</span>, <span class="style22">code</span>, and <span class="style22">length</span>. </p>
+<ul>
+  <li>The <span class="style22">angle</span> argument controls the shape of the arrowhead; <span class="style22">angle=</span>90 yields flat ends.</li>
+  <li>The <span class="style22">code</span> argument determines where the arrowheads should appear; <span class="style22">code=</span>3 puts arrowheads on both ends.</li>
+  <li>The <span class="style22">length</span> argument controls the length of the arrowhead. This will typically need adjustment but for these data <span class="style22">length=</span>.05 works well.</li>
+</ul>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=1)</div>
+<p><a name="lines"></a>I follow this up with the <span class="style1">lines</span> function to draw the mean profile and the <span class="style1">points</span> function to plot the estimates at the middle of the confidence intervals. They each use the same syntax, <em>x</em>-variable followed by the <em>y</em>-variable. Just like the confidence intervals each has to shifted the same amount.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1, pch=16)</div>
+<p>I next repeat these  same lines of code for the second diet, <span class="style10">fac2 = 'S'</span>,  with the following changes.</p>
+<ul>
+  <li> I change the subsetting level so I select observations for which <span class="style10">fac2 = 'S'</span>.</li>
+  <li>I use a positive value of <span class="style8">myjitter</span> so that the points and error bars are moved slightly to the right.</li>
+  <li>I change the color of the profile to red, <span class="style22">col=</span>2, and change the symbol type to open circles, <span class="style22">pch=</span>1. First I plot the points using filled white circles, <span class="style22">col=</span>'white' and <span class="style22">pch=</span>16, to cover up the drawn lines. Then I add red open circles on top.</li>
+</ul>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#second food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='S',]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- .05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=16, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2, pch=1)</div>
+<p><a name="mtext"></a>Finally I add a small header on top of the graph with the <span class="style1">mtext</span> (for margin text) function to indicate  the level of <span class="style8">fac3</span> that was plotted, <span class="style10">fac3</span> = 1.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, 'Sibship 1', cex=.9)</div>
+<p><a name="legend"></a>Lastly I add a legend to identify which diet corresponds to which mean profile.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">legend('topleft', c('Detritus','Shrimp'), col=1:2, pch=c(16,1), cex=.8, pt.cex=.9, title=expression(bold('Food Type')), bty='n')</div>
+<ul>
+  <li>The first argument of <span class="style1">legend</span> is the location of the legend in the plot. The nine allowable key words that identify the position are <span class="style22">&quot;bottomright&quot;</span>, <span class="style22">&quot;bottom&quot;</span>, <span class="style22">&quot;bottomleft&quot;</span>, <span class="style22">&quot;left&quot;</span>, <span class="style22">&quot;topleft&quot;</span>, <span class="style22">&quot;top&quot;</span>, <span class="style22">&quot;topright&quot;</span>, <span class="style22">&quot;right&quot;</span> and <span class="style22">&quot;center&quot;</span>. It is also possible to specify the location of the legend by explicitly giving the <em>x</em>- and <em>y</em>-coordinates of the top left corner of the legend.</li>
+  <li>The second argument of <span class="style1">legend</span> is the vector of text labels that are to appear in the legend.</li>
+  <li>I specify the remaining arguments by name. They include the colors, <span class="style22">col</span>, and symbols, <span class="style22">pch</span>, used in the plot. These are listed in an  order that corresponds to the order of the text labels.</li>
+  <li>The <span class="style22">cex</span> argument controls the size of text and symbols in the legend. It is possible to make the text and symbols different sizes in the legend. The argument <span class="style22">pt.cex</span> can be used to control the symbol size in which case <span class="style22">cex</span> controls the size of everything else.</li>
+  <li>I add a title to the legend with the <span class="style22">title</span> argument. I make the title bold face by  using a mathematical expression and  the <span class="style1">bold</span> function.</li>
+  <li>The argument <span class="style22">bty='n'</span> suppresses the drawing of a box around the legend.</li>
+</ul>
+<p align="center"><img src="../../images/lectures/lecture4/fig10.png" width="350" height="270" alt="fig. 10"></p>
+<p align="center"><span class="styleArial"><strong>Fig. 8&nbsp;</strong>&nbsp;Mean profile plot for sibship 1</span></p>
+<p>To plot the mean profiles for sibship 2 I make only three changes to the code listed above.</p>
+<ol>
+  <li>I subset the original data frame so sibship 2 (<span class="style10">fac3=2</span>) is selected instead of sibship 1.</li>
+  <li>I change the header on top of the graph to indicate that sibship 2 was plotted.</li>
+  <li>I drop the legend because it already appears in the first graph.</li>
+</ol>
+<p>Notice that in the initial <span class="style1">plot</span> function I use all of the data to set the <em>y</em>-limits, not just the data for  sibship 2. This ensures that the scale is the same in both graphs.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(c(.8,3.2), range(results.mine[,c(&quot;up95&quot;, &quot;low95&quot;)]), type='n', xlab=&quot;Hormonal treatment&quot;, ylab='Mean mitotic activity', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> axis(1, at=1:3, labels=levels(results.mine$fac1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> axis(2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">box()</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">results.mine.sub1 &lt;- results.mine[results.mine$fac3==2,]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #first food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='D',]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#amount of shift</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">myjitter &lt;- -.05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1, pch=16)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#second food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='S',]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">myjitter &lt;- .05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=16, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2, pch=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"><a name="fig2"></a>mtext(side=3, line=.5, 'Sibship 2', cex=.9)</div>
+<p align="center"><img src="../../images/lectures/lecture4/fig11.png" width="350" height="270" alt="fig. 9"></p>
+<p align="center"><span class="styleArial"><strong>Fig. 9&nbsp;</strong>&nbsp;Mean profile plot for sibship 2</span></p>
+<p><a name="mfrow"></a>Finally I display both plots in the same graphics window side by side. For this I use the <span class="style22">mfrow</span> argument of <span class="style1">par</span> to divide the graphics window into one row and two columns.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,2))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #sibship 1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(c(.8,3.2), range(results.mine[,c(&quot;up95&quot;, &quot;low95&quot;)]), type='n', xlab=&quot;Hormonal treatment&quot;, ylab='Mean mitotic activity', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">axis(1, at=1:3, labels=levels(results.mine$fac1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">axis(2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">box()</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">results.mine.sub1 &lt;- results.mine[results.mine$fac3==1,]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #first food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='D',]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#amount of shift</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- -.05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1, pch=16)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#second food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='S',]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- .05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=16, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2, pch=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, 'Sibship 1', cex=.9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">legend('topleft',c('Detritus','Shrimp'), col=1:2, pch=c(16,1), cex=.8, pt.cex=.9, title=expression(bold('Food Type')), bty='n')</div><br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #sibship 2</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(c(.8,3.2), range(results.mine[,c(&quot;up95&quot;, &quot;low95&quot;)]), type='n', xlab=&quot;Hormonal treatment&quot;, ylab='Mean mitotic activity', axes=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">axis(1, at=1:3, labels=levels(results.mine$fac1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">axis(2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">box()</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">results.mine.sub1 &lt;- results.mine[results.mine$fac3==2,]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #first food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='D',]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#amount of shift</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- -.05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=1, pch=16)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#second food group</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> cur.dat &lt;- results.mine.sub1[results.mine.sub1$fac2=='S',]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myjitter &lt;- .05</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> arrows(cur.dat$fac1.num+myjitter, cur.dat$low95, cur.dat$fac1.num+myjitter, cur.dat$up95, angle=90, code=3, length=.05, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lines(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col='white', pch=16, cex=1.1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(cur.dat$fac1.num+myjitter, cur.dat$ests, col=2, pch=1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, 'Sibship 2', cex=.9)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#reset the graphics window</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,1))</div>
+<p align="center"><img src="../../images/lectures/lecture4/fig12.png" width="460" height="285" alt="fig. 10"></p>
+<p align="center"><span class="styleArial"><strong>Fig. 10&nbsp;</strong>&nbsp;Mean profile plots for the tadpole experiment</span></p>
+<p>Notice that although we have explicitly plotted only the <span class="style8">fac1 &times; fac2</span> interaction, both interactions are clearly on display. The <span class="style8">fac1 &times; fac2</span> interaction is obvious because in each panel the red and black profiles are not parallel, but we also can see evidence of the <span class="style8">fac2 &times; fac3</span> interaction. If <span class="style8">fac3</span> was a purely additive effect then the right panel would be identical to the left panel except for the fact that the profiles would be shifted up or down (the main effect of <span class="style8">fac3</span>). Instead what we see is that the two diet profiles (<span class="style8">fac2</span>) are further apart in the right panel (sibship 2) than in the left panel (sibship 1). Thus sibship (<span class="style8">fac3</span>) is modifying the effect of diet. It has modified it sufficiently that now in the left panel the diet effect is significantly different from zero at all three hormonal treatments (the confidence intervals fail to overlap).</p>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture4&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 9, 2012<br>
+      URL: <a href="lecture4.htm#lecture4" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture4.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Final Exam&mdash;Part 2</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+background-color:#F0F0F0;
+}
+
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.style12 {	font-family: Arial, Helvetica, sans-serif;
+}
+.style16 {font-weight: bold; color: #993333; }
+.style13 {font-weight: bold; color: #008000; }
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="finalpart1" id="finalpart1"></a>Final Exam&mdash;Part 2</h1>
+<h3>Due Date </h3>
+<p>Monday, December 10, 2012</p>
+<h3>Instructions</h3>
+<p align="left">Same rules and policies apply to this &quot;exam&quot; as apply to ordinary assignments.</p>
+<h3>Data Source </h3>
+<p>The data for this assignment are contained in <a href="../../data/moths.csv">moths.csv</a>,  a comma-delimited text file. They appear as Table 12 in Bishop (1971).</p>
+<h3>Background</h3>
+<p>The phenomenon of industrial melanism is one of the textbook examples of natural selection in action. The relative prevalence of two natural color morphs of the moth <em>Biston betularia</em> in England has changed over time apparently in response to industrial air pollution. The dark morph flourishes in polluted areas where tree trunks are darkened by soot while the light morph flourishes in less polluted areas where tree trunks are lighter. Bishop (1971) investigated a naturally occurring cline of <em>Biston betularia</em> extending from industrial Liverpool (most polluted) to the rural countryside of North Wales (least polluted). One of the analyses he carried out is the subject of this exam question.</p>
+<p>Bishop selected seven woodlands (<span class="style12">Location</span>) at varying distances (<span class="style12">Distance</span>) from Liverpool (in km). He describes his experimental protocol as follows, p. 224&ndash;225.</p>
+<blockquote>
+  <p class="styleArial">In June and early July 1966 and 1967, eight trees (occasionally sixteen) were selected at random at each of several localities every day. Equal numbers of frozen typical and <em>carbonaria</em> moths were glued to these in life-like positions. It was assumed that these moths would be subject to predation by birds in the manner observed by Kettlewell (1955). The moths were placed on a different aspect of the tree-trunks each day at heights of from 0.5 to 2. m. The position of each moth was noted and after 24 hrs a record was made as to whether or not it had been removed (or preyed upon). Remaining moths were then detached and the process was repeated with fresh moths on a different random series of trees. The long duration of the experiment meant that predation occurred over a range of weather conditions.</p>
+</blockquote>
+<p>Unfortunately the raw data are unavailable. Instead we have the results summarized by site for each <span class="style12">Morph</span>. The variable <span class="style12">Num_moths</span> records how many total moths  of a particular <span class="style12">Morph</span> were exposed to predation at a particular site and the variable <span class="style12">Num_removed</span> records the number of these individuals that was removed presumably by predators. The question of interest is whether the predation rate varies with  the distance from Liverpool and, more importantly, whether this relationship is different for the two color morphs.</p>
+<h3>Questions</h3>
+<ol>
+  <li>A single regression model involving the predictors <span class="style12">Distance</span> and <span class="style12">Morph</span> can answer the researcher's question of interest. Write down that regression model in generic form. What I want here is the expression that would appear on right side of a regression equation written out as a sum of parameters times predictors. </li>
+</ol>
+<blockquote class="styleArial2">
+  <p><span class="style13">Hint 1</span>: I'm looking for an expression of the form &beta;<sub>0</sub> + &beta;<sub>1</sub><em>x</em> + &hellip;, where you should include as many terms as are needed to describe the basic outlines of the experiment and answer the researcher's question. Be sure to identify what the variables in your expression represent.<br>
+    <span class="style13">Hint 2</span>: I'm not asking you to include the complications discussed in Question 6 at this point.<br>
+  </p>
+</blockquote>
+<ol start="2">
+  <li> Using the expression you've written as your answer to Question 1, state a null hypothesis in terms of model parameters that directly tests whether the relationship between predation rate and distance is the same for the two morphs.</li>
+  <li>Given the nature of the response variable, fit an appropriate regression model that addresses the researcher's primary question.</li>
+  <li>Test the overall fit of the model of Question 3 using an appropriate goodness of fit test. Verify that the test is appropriate.</li>
+  <li>There's a structural characteristic of these data that we've been ignoring that may be acting to make the data heterogeneous. The structure is represented by a variable in the data set. What am I talking about?</li>
+  <li>Refit your model from Question 3 but this time also account for the structure of the data. In reference to this structure, which variable in your model is a level-1 variable and which variable is a level-2 variable?</li>
+  <li>The statistical evidence for this structure turns out to be very weak. Demonstrate this  either by carrying out a formal statistical test or by citing  relevant statistics. (Note: We'll continue to use the model with structure in the remaining questions anyway.)</li>
+</ol>
+<blockquote class="styleArial2">
+  <p><span class="style13">Hint 1</span>: Unfortunately, the log-likelihood reported by the <span class="style4">lmer</span> function for non-normal models is not comparable to the log-likelihood reported by the <span class="style4">glm</span> function. But it is the case that the deviances reported by <span class="style4">lmer</span> and <span class="style4">glm</span> are comparable. So, to compare these two models you can use their deviances. You can use the <span class="style4">deviance</span> function to extract it.<br>
+    <span class="style13">Hint 2</span>: If you elect to carry out a statistical test using the deviances you need to be aware that in the hypothesis test you're carrying out, H<sub>0</sub>: &tau;<sup>2</sup> = 0, zero is a boundary value for &tau;<sup>2</sup>. The usual distribution of the likelihood ratio statistic is incorrect for boundary values. The  <em>p</em>-value adjustment that we used for testing H<sub>0</sub>: &theta; = 0 in a negative binomial model (<a href="../lectures/lecture18.htm#testing">lecture 18</a>) is the same adjustment you need to carry out here.<br>
+  <span class="style13">Hint 3</span>: If you prefer to use AIC to compare the models then you'll need to compute the correct log-likelihood of the <span class="style4">lmer</span> model. This is not hard to do using the <a href="../lectures/lecture22.htm#statistical">definition of the deviance</a>. Here is an outline of the necessary steps.</p>
+  <ol type="a">
+    <li>Use the <span class="style4">glm</span> model to find the log-likelihood of the saturated model. 
+      <ol type="i">
+        <li>You can do this by using the reported deviance and log-likelihood of the <span class="style4">glm</span> model along with the  equation that defines the deviance. Just solve for the log-likelihood of the saturated model in this equation. </li>
+        <li>Alternatively use <span class="style4">glm</span> to fit the saturated model and extract the log-likelihood from the saturated model.</li>
+      </ol>
+    </li>
+    <li>Having obtained the log-likelihood of the saturated model and knowing the deviance of the <span class="style4">lmer</span> model,  calculate the log-likelihood of the <span class="style4">lmer</span> model using the equation that defines the deviance.</li>
+    <li>Use this log-likelihood in the formula for AIC to calculate the AIC of the <span class="style4">lmer</span> model.</li></ol></blockquote>
+<ol start="8">
+  <li>Using the model from question 6, compute a statistic that compares the odds of being removed 50 km away from Liverpool to the odds of being removed in Liverpool (0 km away). Calculate this statistic separately for the dark and light morphs and interpret your results.</li>
+  <li>Using the model from question 6, produce a graph that summarizes the  results of the analysis as follows.
+    <ol type="a">
+      <li>Plot the empirical proportions (the observed proportions of moths eaten) as a function of distance. Distinguish the plotted values by their Morph type.</li>
+      <li>Plot the predicted probability of being eaten as a function of distance using only the fixed effect estimates from your model. Display these as curves superimposed on your scatter plot of empirical probabilities.</li>
+      <li>Plot the predicted probability of being eaten as a function of distance using both the fixed effect estimates and the random effect predictions. Plot these as points  being sure to distinguish them from the points you plotted in (a). </li>
+      <li>Label your diagram appropriately using a coherent set of colors and symbol types.</li>
+    </ol>
+  </li>
+  <li>It was mentioned in the background section above that the data we are using are tabulated versions of the raw data from each location for each morph. The actual observations are the number of moths removed out of a fixed total on separate trees at a given location. The results for individual trees were then combined to yield the data we used for this analysis. Which of the four basic assumptions of the probability model that we've been using is the one that is most likely to be (but not necessarily) violated by combining data in this fashion?</li>
+  <li><strong>Alternate analysis 1</strong>.  Offer an argument that treating the <u>proportion</u> of moths removed (<span class="style12">Num_removed</span>/<span class="style12">Num_moths</span>) as being normally distributed is not an unreasonable assumption for these data. (Carry out a calculation that justifies using the normal distribution to approximate the binomial distribution for these data.) Redo the analysis of Question 6 but this time  analyze the proportions rather than the counts and assume that the proportions have a normal distribution. What do you conclude from the analysis?</li>
+  <li><strong>Alternate analysis 2</strong>. At each distance calculate the difference in the proportion of moths removed, dark morph proportion minus light morph proportion. Regress these differences in proportions against distance from Liverpool. Compare your results to what you obtained in Question 11. (Look especially at the summary tables.) What do you conclude?<br>
+  </li>
+</ol>
+<h2>Cited references</h2>
+<ul>
+  <li>Bishop, J. A. 1972. An experimental study of the cline of industrial melanism in <em>Biston betularia</em> [Lepidoptera] between urban Liverpool and rural North Wales. <em>Journal of Animal Ecology</em> <strong>41</strong>: 209&ndash;243.</li>
+  <li>Kettlewell, H. B. D. 1955. Selection experiments on industrial melanism in the Lepidoptera. <em>Heredity</em> <strong>9</strong>: 323&ndash;342.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--December 3, 2012<br>
+      URL: <a href="finalpart2.htm#finalpart2" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/finalpart2.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 8</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style22 {color: #663366; font-weight: bold; }
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style36 {font-size: larger}
+
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+.border-side {
+  border-left: solid 1px black;
+}
+.border-bottom {
+  border-bottom: solid 1px black;
+} 
+
+td, th {
+  border-left: solid 1px black;
+} 
+
+.no-border {
+  border-left: none;
+} 
+
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"> <a name="assign8" id="assign8"></a>Assignment 8 </h1>
+<h2>Due Date </h2>
+
+  <p>Friday, November 2, 2012</p>
+
+<h2>Data Source </h2>
+
+  <p>The data for this assignment is <a href="../../data/Stirrett.txt">Stirrett.txt</a>,  a tab-delimited text file.  </p>
+  <h2>Background</h2>
+  <p>These data are taken from Skirrett et al. (1937) and are reproduced in Beall (1940) and Evans (1953). The object is to determine the effect of fungus (<em>Beauveria Bassiana</em>) spore treatment on the control of European corn borer, <em>Pyrausta nubilalis</em>. The four different treatment  that were used are described below. The reported applications of fungal spores are in grams per acre.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td valign=top  class="styleArial no-border" style="padding-left: 72px; text-indent:-62px" ><strong>Table 1 &nbsp;</strong> Characterization of the four treatments<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+  <table width="600" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td  align="center" scope="col" ><strong>Treatment </strong></td>
+        <td  align="center" scope="col" ><strong>Application on July 8</strong></td>
+        <td  align="center" scope="col" ><strong>Application on July 19 </strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td><div align="center">0</div></td>
+        <td><div align="center">0</div></td>
+      </tr>
+      <tr >
+        <td bordercolor="#CCCCCC"><div align="center">2</div></td>
+        <td><div align="center">0</div></td>
+        <td><div align="center">40</div></td>
+      </tr>
+      <tr>
+        <td bordercolor="#CCCCCC"><div align="center">3</div></td>
+        <td><div align="center">40</div></td>
+        <td><div align="center">0</div></td>
+      </tr>
+      <tr >
+        <td bordercolor="#CCCCCC"><div align="center">4</div></td>
+        <td><div align="center">40</div></td>
+        <td><div align="center">40</div></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>The first treatment occurred at the beginning of the period of oviposition while the second treatment was administered at the height of the period of oviposition. Eggs were allowed to hatch and the larva allowed to grow to full size. What is recorded are the number of borers that were found on a unit area occupied by a hill of corn. For each treatment 120 hills of corn were examined. The table below records the number of hills exhibiting different levels of infestation (first column) under the the four different treatment regimes (columns 2 through 5).</p>
+<div align="center">
+  <table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td valign=top  class="styleArial no-border" style="padding-left: 72px; text-indent:-62px" ><strong>Table 2 &nbsp;</strong> Frequency of borers under four treatment regimes<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+  <table width="600" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+
+    <thead>
+      <tr  bgcolor="#F1D2D8" class="border-bottom">
+        <td rowspan="2" align="center" scope="col"><strong>Number  of borers per hill of corn </strong></td>
+        <td colspan="4" align="center"  scope="col"><strong>Frequency</strong></td>
+      </tr>
+      <tr  bgcolor="#F1D2D8">
+        <td  align="center" scope="col" ><strong>Treatment 1</strong></td>
+        <td  align="center" scope="col" ><strong>Treatment 2</strong></td>
+        <td  align="center" scope="col" ><strong>Treatment 3</strong></td>
+        <td  align="center" scope="col" ><strong>Treatment 4</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td align="center">0</td>
+        <td bordercolor="#CCCCCC"><div align="center">19</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">24</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">43</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">47</div></td>
+      </tr>
+      <tr >
+        <td align="center">1</td>
+        <td bordercolor="#CCCCCC"><div align="center">12</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">16</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">35</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">23</div></td>
+      </tr>
+      <tr>
+        <td align="center">2</td>
+        <td bordercolor="#CCCCCC"><div align="center">18</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">16</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">17</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">27</div></td>
+      </tr>
+      <tr >
+        <td align="center">3</td>
+        <td bordercolor="#CCCCCC"><div align="center">18</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">18</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">11</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">9</div></td>
+      </tr>
+      <tr >
+        <td align="center">4</td>
+        <td bordercolor="#CCCCCC"><div align="center">11</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">15</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">5</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">7</div></td>
+      </tr>
+      <tr >
+        <td align="center">5</td>
+        <td bordercolor="#CCCCCC"><div align="center">12</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">9</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">4</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">3</div></td>
+      </tr>
+      <tr >
+        <td align="center">6</td>
+        <td bordercolor="#CCCCCC"><div align="center">7</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">6</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+      </tr>
+      <tr >
+        <td align="center">7</td>
+        <td bordercolor="#CCCCCC"><div align="center">8</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">5</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">2</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+      </tr>
+      <tr >
+        <td align="center">8</td>
+        <td bordercolor="#CCCCCC"><div align="center">4</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">3</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">2</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">0</div></td>
+      </tr>
+      <tr >
+        <td align="center">9</td>
+        <td bordercolor="#CCCCCC"><div align="center">4</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">4</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">0</div></td>
+      </tr>
+      <tr >
+        <td align="center">10</td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">3</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+      </tr>
+      <tr >
+        <td align="center">11</td>
+        <td bordercolor="#CCCCCC"><div align="center">0</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">0</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+      </tr>
+      <tr >
+        <td align="center">12</td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF"><div align="center">&mdash;</div></td>
+      </tr>
+      <tr >
+        <td align="center">13</td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+      </tr>
+      <tr >
+        <td bordercolor="#CCCCCC"><div align="center">15</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+      </tr>
+      <tr >
+        <td bordercolor="#CCCCCC"><div align="center">17</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+      </tr>
+      <tr >
+        <td bordercolor="#CCCCCC"><div align="center">19</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+      </tr>
+      <tr >
+        <td bordercolor="#CCCCCC"><div align="center">26</div></td>
+        <td bordercolor="#CCCCCC"><div align="center">1</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+        <td bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="center">&mdash;</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 align="left">Questions</h2>
+<ol>
+  <li>Fit a model or models appropriate for these data that allow you to test for  the effect and the timing of the fungal spore treatment on borer populations. Find the simplest model that is supported by the data.</li>
+  <li>Carry out both a graphical and an analytical goodness of fit test for the most parsimonious model that you found for these data. </li>
+  <li>Graphically compare the fit of the model in Question 2 to the fit of a second model that allows each treatment to have an unconstrained mean.</li>
+</ol>
+<h2>Hints</h2>
+<p>Notice that after count category 13 there are gaps in the observed frequencies for Treatment 1. You will need to deal with these gaps when constructing the goodness of fit test. Here's a &quot;clever&quot; way to introduce 0 values into a sequence of integers with gaps. To illustrate it I begin by generating some data in which the count category variable <span class="style8">x</span> has gaps. The values <span class="style8">x</span> = 8, 11, 13, and 14 were not recorded. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(10)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mydata &lt;- data.frame(x=c(0:7,9,10,12,15), y=rnbinom(12,mu=5,size=1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mydata</div>
+<span  class="style24">   &nbsp;&nbsp;&nbsp; x&nbsp; y<br>
+    1&nbsp;&nbsp; 0&nbsp; 2<br>
+    2&nbsp;&nbsp; 1&nbsp; 3<br>
+    3&nbsp;&nbsp; 2 &nbsp;0<br>
+    4&nbsp;&nbsp; 3&nbsp; 2<br>
+    5&nbsp;&nbsp; 4&nbsp; 3<br>
+    6&nbsp;&nbsp; 5&nbsp; 3<br>
+    7&nbsp;&nbsp; 6&nbsp; 9<br>
+    8&nbsp;&nbsp; 7&nbsp; 0<br>
+    9&nbsp;&nbsp; 9 11<br>
+    10 10&nbsp; 8<br>
+    11 12&nbsp; 1<br>
+  12 15&nbsp; 1</span>
+  <p>I next create a data frame with a single column. The column is given the name <span class="style8">x</span>, the same name as the count category variable in the data frame <span class="style8">mydata</span>. Unlike <span class="style8">mydata$x</span> this <span class="style8">x</span> has all of the intermediate values from 0 through 15.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> junk &lt;- data.frame(x=0:15)</div>
+  <p>Next I <span class="style1">merge</span> this new data frame with <span class="style8">mydata</span> using the <span class="style22">all=T</span> argument. This option causes all observations from both data frames to be included in the merge even those observations that do not match. The matching is carried out using variables with have same namse in the two data frames, in this case the variable <span class="style8">x</span>.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mydata2 &lt;- merge(mydata, junk, all=T)</div>
+  <p>When we examine the  merged data frame we see it contains all the values of <span class="style8">x</span> from 0 to 15. The variable <span class="style8">y</span> from <span class="style8">mydata</span>  has missing values for the new observations.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mydata2</div>
+<span  class="style24">   &nbsp;&nbsp;&nbsp; x&nbsp; y<br>
+    1&nbsp;&nbsp; 0&nbsp; 2<br>
+    2&nbsp;&nbsp; 1&nbsp; 3<br>
+    3&nbsp;&nbsp; 2&nbsp; 0<br>
+    4&nbsp;&nbsp; 3&nbsp; 2<br>
+    5&nbsp;&nbsp; 4&nbsp; 3<br>
+    6&nbsp;&nbsp; 5&nbsp; 3<br>
+    7&nbsp;&nbsp; 6&nbsp; 9<br>
+    8&nbsp;&nbsp; 7&nbsp; 0<br>
+    9&nbsp;&nbsp; 8 NA<br>
+    10&nbsp; 9 11<br>
+    11 10&nbsp; 8<br>
+    12 11 NA<br>
+    13 12&nbsp; 1<br>
+    14 13 NA<br>
+    15 14 NA<br>
+  16 15&nbsp; 1</span>
+  <p>Finally I assign zeros to the values of <span class="style8">y</span> that are missing.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mydata2$y &lt;- ifelse(is.na(mydata2$y), 0, mydata2$y)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> mydata2</div>
+<span  class="style24">   &nbsp;&nbsp;&nbsp; x&nbsp; y<br>
+    1&nbsp;&nbsp; 0&nbsp; 2<br>
+    2&nbsp;&nbsp; 1&nbsp; 3<br>
+    3&nbsp;&nbsp; 2&nbsp; 0<br>
+    4&nbsp;&nbsp; 3&nbsp; 2<br>
+    5&nbsp;&nbsp; 4&nbsp; 3<br>
+    6&nbsp;&nbsp; 5&nbsp; 3<br>
+    7&nbsp;&nbsp; 6&nbsp; 9<br>
+    8&nbsp;&nbsp; 7&nbsp; 0<br>
+    9&nbsp;&nbsp; 8&nbsp; 0<br>
+    10&nbsp; 9 11<br>
+    11 10&nbsp; 8<br>
+    12 11&nbsp; 0<br>
+    13 12&nbsp; 1<br>
+    14 13&nbsp; 0<br>
+    15 14&nbsp; 0<br>
+  16 15&nbsp; 1</span>
+<h2>Cited references</h2>
+<ul>
+  <li>Beall, Geoffrey. 1940. The fit and significance of contagious distributions when applied to observations on larval insects. <em>Ecology</em> <strong>21</strong>: 460&ndash;474.</li>
+  <li>Evans, D. A. 1953. Experimental evidence concerning contagious distributions in ecology. <em>Biometrika</em> <strong>40</strong>: 186&ndash;211.</li>
+  <li>Stirrett, G. M., Beall, G. and Timonin, M.  1937. A field experiment on the control of the European corn borer,<em> Pyrausta nublilali</em>s Hubn. by <em>Beauveria bassiana </em>Vuill. <em>Scient. Agrlic</em>. <strong>17</strong>: 587&ndash;591.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 25, 2012<br>
+      URL: <a href="assign8.htm#assign8" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/assign8.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

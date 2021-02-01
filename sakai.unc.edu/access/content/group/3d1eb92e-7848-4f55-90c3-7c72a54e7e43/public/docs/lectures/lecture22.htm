@@ -1,0 +1,865 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 22&mdash;Wednesday, November 7, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+.style1012 {	font-family: "Courier New", Courier, mono
+}
+.style1012 {font-family: "Courier New", Courier, mono}
+.style221 {color: #339966;
+	font-weight: bold;
+}
+.style29 {font-family: "Courier New", Courier, mono}
+.style30 {color: #333399;
+	font-weight: bold;
+}
+.style28 {color: #CC0000; font-weight: bold; }
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture22" id="lecture22"></a>Lecture 22&mdash;Wednesday, November 7, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture22.htm#viewing">Viewing and creating multi-page graphs</a></li>
+  <li><a href="lecture22.htm#goodness">The residual deviance as a goodness of fit statistic in Poisson regression</a>
+    <ul>
+      <li><a href="lecture22.htm#statistical">A goodness of fit test based on the residual deviance</a></li>
+      <li><a href="lecture22.htm#devianceresidual">Deviance residuals and the residual deviance</a></li>
+      <li><a href="lecture22.htm#problems">Problems with using the residual deviance as a goodness of fit test</a></li>
+      <li><a href="lecture22.htm#pearson">The Pearson deviance</a></li>
+      <li><a href="lecture22.htm#overdispersion">Residual deviance and overdispersion</a></li>
+      <li><a href="lecture22.htm#analysisofdeviance">Analysis of deviance</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture22.htm#count">Count regression models for rates and densities</a>
+    <ul>
+      <li><a href="lecture22.htm#anova">A basic Poisson count model&mdash;ANOVA</a></li>
+      <li><a href="lecture22.htm#ancova">A  Poisson count model with area as a covariate&mdash;ANCOVA</a></li>
+      <li><a href="lecture22.htm#offset">Using an offset in count  regression models</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture22.htm#fitting">Fitting a Poisson random intercepts model in R</a></li>
+  <li><a href="lecture22.htm#ranlike">The likelihood of a Poisson random intercepts model</a>
+    <ul>
+      <li><a href="lecture22.htm#cluster">Likelihood of the data at the cluster level</a></li>
+      <li><a href="lecture22.htm#joint">Joint distribution of the data and random effects</a></li>
+      <li><a href="lecture22.htm#marginal">Obtaining the  marginal likelihood of the data</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture22.htm#obtaining">Obtaining the correct log-likelihood of the Poisson random intercepts model</a></li>
+  <li><a href="lecture22.htm#cited">Cited references</a></li>
+  <li><a href="lecture22.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture22.htm#offsetfunc">offset</a> when applied to a predictor in a regression model fixes the coefficient of the predictor in the model preventing it from being estimated.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture22.htm#ask">ask=</a> (argument to <span class="style1">par</span>) when set to TRUE causes R to pause before displaying the next graph. Useful for displaying multi-page graphs one page at a time.</li>
+  <li><a href="lecture22.htm#narm">na.rm</a>= (argument to <span class="style1">mean</span>) when set to TRUE causes  the mean to be calculated using only the non-missing cases.</li>
+  <li><a href="lecture22.htm#offsetfunc">offset=</a> (argument to <span class="style1">glm</span>)  specifies a variable to use as an offset in a regression model.</li>
+  <li><a href="lecture22.htm#type">type</a>= (argument to <span class="style1">residuals</span>) specifies the type of residual desired. For <span class="style1">glm</span> objects two of the choices are <span class="style22">type='deviance' </span>and <span class="style22">type='pearson'</span>.</li>
+</ul>
+<h3>R packages used</h3>
+<ul>
+  <li><a href="lecture22.htm#lattice">lattice</a> for lattice graphics.</li>
+  <li><a href="lecture22.htm#lme4">lme4</a> for the <span class="style1">lmer</span> function.</li>
+  <li><a href="lecture22.htm#MASS">MASS</a> for the <span class="style1">glm.nb</span> function.</li>
+</ul>
+<h2><a name="viewing" id="viewing"></a>Viewing and creating multi-page graphs</h2>
+<p>Last time we created a lattice graph with 29 panels. This approaches the practical limit on the number of panels that can be reasonably displayed on a single page. We can spread a panel graph across multiple pages by specifying a value for the <span class="style22">layout</span> argument  that corresponds to a subset of the panels. The code below recreates the goodness of fit panel graph from last time but specifies that only 16 panels should be displayed on the same page.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># read in galapagos flora data</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> gala &lt;- read.table('ecol 563/galapagos.txt', header=T)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # fit NB-2 model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> <a name="MASS"></a>library(MASS)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB2 &lt;- glm.nb(Species~log(Area), data=gala)</div>
+
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # calculations for graph
+</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">gala$mu &lt;- fitted(out.NB2)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> gala$z &lt;- dnbinom(gala$Species, mu=fitted(out.NB2), size=out.NB2$theta)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.p &lt;- lapply(1:29, function(x) dnbinom(0:1000, mu=fitted(out.NB2)[x], size=out.NB2$theta))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  gala$ux &lt;- sapply(1:29, function(x) max((0:1000)[out.p[[x]]&gt;1e-5]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  gala$lx &lt;- rep(0, 29)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  gala$uy &lt;- sapply(out.p, max)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  gala$ly &lt;- rep(0, 29)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  <a name="lattice"></a>library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  prepanel.ci2 &lt;- function(x, y, ly, lx, uy, ux, subscripts, ...) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  list(ylim=range(y, uy[subscripts], ly[subscripts], finite=T), xlim=range(x, ux[subscripts], lx[subscripts], finite=T))}</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(z~Species|Island, data=gala, ux=gala$ux, lx=gala$lx, uy=gala$uy, ly=gala$ly, prepanel=prepanel.ci2, ylab='Probability', xlab='Species richness',  <span class="style39">layout=c(4,4)</span>, panel=function(x, y, subscripts){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(0:1000, dnbinom(0:1000, mu=gala$mu[subscripts], size=out.NB2$theta), type='h', col='grey')</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=x, col=2, lty=2)},</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">scale=list(x='free', y='free'), strip=strip.custom(par.strip.text=list(cex=0.8)))</div>
+<p>When a multi-page graph is created in R only  the last page of the multi-page graph will be displayed in the graphics window. In Windows OS the graphics window has a <span class="style8">History</span> menu option. If the <span class="style8">Recording</span> option of <span class="style8"> History</span> menu had  previously been checked (Fig. 1a) each  graph is stored as a separate page of the graphics window. Pressing the <span class="style8">PgUp</span> or <span class="style8">PgDown</span> keys on the keyboard allows you to navigate to different pages in the graphics window. Note: For this to work the <span class="style8">Recording</span> option must be selected before you create the graph. In Mac OS X the <span class="style8">Quartz</span> menu has the options <span class="style8">Back</span> and <span class="style8">Forward</span> (with the keyboard shortcuts shown in Fig. 1b) for navigating to previous pages of a multi-page graph.</p>
+<table width="650" border="0" align="center" cellpadding="5">
+  <tr>
+    <td>(a) <img src="../../images/lectures/lecture22/recording.png" alt="recording" width="278" height="262" align="texttop"></td>
+    <td><div align="center"></div>
+    (b) <img src="../../images/lectures/lecture22/quartz.png" alt="quartz" width="226" height="89" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p style="padding-left: 50px; text-indent:-50px"><span class="styleArial1"><strong>Fig. 1</strong> &nbsp;&nbsp;(a) Menu selection in Windows OS to stack multiple graphs and pages of graphs in the same window.</span> (b) Menu selection in Mac OS X to move &quot;Back&quot; to previous pages of graphs  produced in a Quartz window.</p></td>
+  </tr>
+</table>
+<p><a name="ask"></a>It's also possible to pause the graph before each page is displayed by specifying <span class="style1">par(ask=T)</span> at the R prompt. R displays the message <span class="style8">&quot;Hit &lt;Return&gt; to see next plot:&quot;</span> Pressing the <span class="style8">&lt;enter&gt;</span> key causes the next page of the graph to be displayed. Continue pressing <span class="style8">&lt;enter&gt;</span> until all pages are displayed. To disable this option enter <span class="style1">par(ask=F)</span>.</p>
+
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"></div>
+<h2><a name="goodness"></a>The residual deviance as a goodness of fit statistic in Poisson regression</h2>
+<p>I refit the Poisson model for the species-area relationship. Highlighted in the output from the <span class="style1">summary</span> function below is a statistic called the residual deviance.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.pois &lt;- glm(Species~log(Area), data=gala, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.pois)</div>
+<span class="style24">Call:<br>
+  glm(formula = Species ~ log(Area), family = poisson, data = gala)</span>
+<p><span class="style24">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -10.4912&nbsp;&nbsp; -3.6827 &nbsp;&nbsp;-0.9111&nbsp;&nbsp;&nbsp; 2.0992&nbsp;&nbsp; 10.0887&nbsp; </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept) 3.240970&nbsp;&nbsp; 0.043050&nbsp;&nbsp; 75.28&nbsp;&nbsp; &lt;2e-16 ***<br>
+  log(Area)&nbsp;&nbsp; 0.342991&nbsp;&nbsp; 0.007346&nbsp;&nbsp; 46.69&nbsp;&nbsp; &lt;2e-16 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">(Dispersion parameter for poisson family taken to be 1)</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; Null deviance: 3447.59&nbsp; on 28&nbsp; degrees of freedom<br>
+  </span><span class="style25">Residual deviance:&nbsp; 640.22&nbsp; on 27&nbsp; degrees of freedom</span><span class="style24"><br>
+  AIC: 800.03</span>
+<p><span class="style24">Number of Fisher Scoring iterations: 5</span>
+<h3><a name="statistical"></a>A goodness of fit test based on the residual deviance</h3>
+<p>Historically a quantity called the deviance has played an important role in assessing the fit of a Poisson regression model, although in truth it's only sometimes appropriate. The deviance is reported in the summary table of the Poisson model where it is called the residual deviance. The deviance can be derived from the usual likelihood ratio statistic as follows. </p>
+<p>Suppose we have two nested models with estimated parameter sets <img src="../../images/lectures/lecture22/thetatilde.gif" alt="theta tilde" width="17" height="27" align="absmiddle"> and <img src="../../images/lectures/lecture22/thetahat.gif" alt="theta hat" width="17" height="28" align="absmiddle"> and corresponding likelihoods <img src="../../images/lectures/lecture22/likelihood&#32;thetatilde.gif" alt="likelihood" width="47" height="37" align="absmiddle"> and <img src="../../images/lectures/lecture22/likelihood&#32;thethat.gif" alt="likelihood" width="47" height="40" align="absmiddle">. If  <img src="../../images/lectures/lecture22/likelihood&#32;thethat.gif" alt="likelihood" width="47" height="40" align="absmiddle"> is a special case of <img src="../../images/lectures/lecture22/likelihood&#32;thetatilde.gif" alt="likelihood" width="47" height="37" align="absmiddle">  then we can compare the models using a likelihood ratio test.</p>
+<p align="center"><img src="../../images/lectures/lecture22/LRtest.gif" width="338" height="72" alt="LR test"></p>
+<p>Recall that LR has an asymptotic chi-squared distribution with degrees of freedom equal to the difference in the number of parameters estimated by the two models. Alternatively, the degrees of freedom is the number of parameters that are fixed to have a specific value in one model but are freely estimated in the other model. </p>
+<p name="residualdeviance"><a name="residualdeviance"></a>Now suppose the model with likelihood <img src="../../images/lectures/lecture22/likelihood&#32;thetatilde.gif" alt="likelihood" width="47" height="37" align="absmiddle">  is the saturated model. A saturated model is one in which one parameter is estimated for each observation. For a saturated Poisson model &lambda;<sub>i</sub> = y<sub>i</sub>, i.e., the Poisson mean for each observation is the observed count. A likelihood ratio statistic  that compares the current model with a saturated model is  the residual deviance of that model. We can demonstrate this by calculating the likelihood ratio statistic by hand.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># log-likelihood of current model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LL1 &lt;- sum(log(dpois(gala$Species, lambda = fitted(out.pois))))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LL1</div>
+<span class="style24">  [1] -398.0133</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # log-likelihood of saturated model
+</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LL2 &lt;- sum(log(dpois(gala$Species, lambda = gala$Species)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LL2</div>
+<span class="style24">[1] -77.90404</span>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> 2*(LL2-LL1)</div>
+<span class="style24">[1] 640.2186</span>
+
+
+<p name="residualdeviance">For the saturated model there are <em>n</em> parameters, one for each observation. The likelihood ratio statistic has an asymptotic chi-squared distribution with degrees of freedom equal to the difference in the number of estimated parameters of the two nested models. I calculate this difference by hand.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> nrow(gala)-length(coef(out.pois))</div>
+<span class="style24">[1] 27</span>
+<p name="residualdeviance">Notice that 27 is exactly what is reported as the degrees of freedom for the residual deviance in the summary table. The saturated model fits the data perfectly, i.e., it fits it as well as a Poisson model can. If our model is not significantly different from the saturated model we conclude that our model fits as well as a perfect model. Given that our model does so with fewer parameters we should prefer our model because it is more parsimonious. </p>
+<p name="residualdeviance">If we carry out the residual deviance test here we  obtain a significant result. Assuming that the test is valid we conclude that our model is significantly different from the saturated model and hence  that we have a significant lack of fit.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(2*(LL2-LL1), 27)</div>
+<span class="style24">[1] 0</span>
+<h3 name="residualdeviance"><a name="devianceresidual"></a>Deviance residuals and the residual deviance</h3>
+<p>The probability mass function for a Poisson random variable is</p>
+<p align="center"><img src="../../images/lectures/lecture22/poissonprob.gif" width="147" height="60" alt="Poisson probability"></p>
+<p>If <img src="../../images/lectures/lecture22/lambdahat.gif" alt="lambda hagt" width="22" height="37" align="absmiddle"> is the maximum likelihood estimate of &lambda; for observation <em>i</em>, <em>i</em> = 1, &hellip; , <em>n</em>, then the log-likelihood of a Poisson regression model with <em>n</em> observations is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture22/LL1.gif" width="307" height="127" alt="LL1"></p>
+<p>For the saturated model the maximum likelihood estimate of &lambda; is <em>y</em><sub>i</sub> and the corresponding log-likelihood is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture22/LL2.gif" width="312" height="60" alt="LL2"></p>
+<p>Subtracting these quantities and doubling the difference yields the residual deviance for the Poisson model.</p>
+<p align="center"><img src="../../images/lectures/lecture22/Poisson&#32;deviance.gif" width="542" height="67" alt="Poisson deviance"></p>
+<p>Define</p>
+<p align="center"><img src="../../images/lectures/lecture22/di&#32;poisson.gif" width="222" height="67" alt="di"></p>
+<p>then</p>
+<p align="center"><img src="../../images/lectures/lecture22/deviance&#32;residual.gif" width="182" height="42" alt="deviance residual"></p>
+<p>is called a deviance residual. Here <span class="style29">sign</span> denotes the sign function which is defined as follows. </p>
+<blockquote>
+  <p align="center"><img src="../../images/lectures/lecture22/signfunction.gif" width="222" height="103" alt="sign function"></p>
+</blockquote>
+<p><a name="type"></a>The deviance residual measures the i<sup>th</sup> observation's contribution to the deviance. Since under ideal conditions the deviance can be used as a measure of lack of fit, the deviance residual measures the i<sup>th</sup> observation's contribution to model lack of fit. If we square the deviance residuals and sum them we obtain the residual deviance. We can extract the deviance residuals from a Poisson regression model with the <span class="style1">residuals</span> function by specifying <span class="style22">type = 'deviance'</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(residuals(out.pois, type='deviance')^2)</div>
+<span class="style24">[1] 640.2186</span>
+<h3 name="residualdeviance"><a name="problems"></a>Problems with using the residual deviance as a goodness of fit test</h3>
+<p name="residualdeviance">The chi-squared distribution of the likelihood ratio test is an asymptotic result. The likelihood ratio statistic has a chi-squared distribution only as the sample size gets large. Implicit in this statement is that the sample size should get large while the difference in the number of estimated parameters in the two models remains fixed. This is not the case when one of the models is the saturated model because as the sample size gets large, so does the number of parameters (because there is one parameter per observation). This can invalidate the assumed  chi-squared distribution of the residual deviance.</p>
+<p name="residualdeviance">It turns out that the residual deviance for a Poisson regression model is equal to the G-statistic (in the notation of Sokal and Rohlf, 1995). The  G test, often called the likelihood ratio chi-squared test, is an alternative to the Pearson chi-squared test to which it is asymptotically equivalent. The G-test is defined as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture22/G2stat.gif" width="145" height="60" alt="G statistic"></p>
+<p name="residualdeviance">If we calculate this statistic for the current model we see that we obtain the residual deviance.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 2*sum(gala$Species * log(gala$Species/fitted(out.pois)))</div>
+<span class="style24">[1] 640.2186</span>
+<p name="residualdeviance">Like the Pearson chi-squared statistic, the G-statistic has an asymptotic chi-squared distribution with <em>n</em> &ndash;&nbsp;<em>p</em> degrees of freedom where <em>p</em> is the number of estimated parameters. Also like the Pearson statistic the validity of the chi-squared distribution of the G-statistic depends on some minimal sample size restrictions on the counts. If none of the expected counts are less than 1 and no more than 20% are less than 5, then the chi-squared distribution is reasonable. If we check this condition here we find that all of the expected counts exceed 5.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sum(fitted(out.pois)&lt;5)</div>
+<span class="style24">[1] 0</span>
+<p name="residualdeviance">Therefore  the goodness of fit test based on the residual deviance is probably valid for these data and we can conclude that the Poisson regression model does not adequately fit the data.</p>
+<h3 name="residualdeviance"><a name="pearson"></a>The Pearson deviance</h3>
+<p name="residualdeviance">If we use the formula for the Pearson goodness of fit statistic on the individual observations of the Poisson regression model we obtain what's called the Pearson deviance.</p>
+<p align="center" name="residualdeviance"><img src="../../images/lectures/lecture22/pearson.gif" width="153" height="65" alt="Pearson"></p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum((gala$Species-fitted(out.pois))^2/fitted(out.pois))</div>
+<span class="style24">[1] 642.8605</span>
+<p name="residualdeviance">The Pearson deviance is generally considered  superior to the residual deviance as a goodness of fit statistic for Poisson regression models (if the minimal sample size criteria are met). It is also compared to a chi-squared distribution with <em>n</em> &ndash; <em>p</em> degrees of freedom where <em>p</em> is the number of estimated parameters and <em>n</em> is the sample size. Typically there is little substantive difference between  using the residual deviance  and the Pearson deviance as a goodness of fit statistic.</p>
+<p name="residualdeviance">The individual terms of the Pearson statistic are called the Pearson residuals, which for a Poisson regression model are the following.</p>
+<p align="center" name="residualdeviance"><img src="../../images/lectures/lecture22/Pearson&#32;residual.gif" width="97" height="72" alt="Pearson residual"></p>
+<p name="residualdeviance">The Pearson residual when squared can be viewed as the contribution the i<sup>th</sup> observation makes to the Pearson statistic. Because the mean and variance of the Poisson distribution are equal each Pearson residual has the form of a <em>z</em>-score. The Pearson residuals from a <span class="style1">glm</span> object can be extracted with the <span class="style1">residuals</span> function by specifying <span class="style22">type='pearson'</span>. If we square the Pearson residuals and sum them we get the Pearson deviance.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(residuals(out.pois, type='pearson')^2)</div>
+<span class="style24">[1] 642.8605</span>
+<h3><a name="overdispersion"></a>Residual deviance and overdispersion</h3>
+<p>I need to comment on an often spurious seat of the pants  rule about the residual deviance that has appeared in the literature and is perpetuated in textbooks and articles about statistics written for ecologists. The  rule requires that we calculate the ratio of the residual deviance to its degrees of freedom.</p>
+<p align="center"><img src="../../images/lectures/lecture22/phi.gif" width="178" height="52" alt="phi"></p>
+<p>If &phi; &gt; 1 we say the data are overdispersed relative to a Poisson distribution. If &phi; &lt; 1 we say the data are underdispersed relative to a Poisson distribution.   For the current data set and model we find</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois$deviance</div>
+<span class="style24">  [1] 640.2186</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois$df.residual</div>
+<span class="style24">  [1] 27</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.pois$deviance/out.pois$df.residual</div>
+<span class="style24">[1] 23.7118</span>
+
+<p>so we would say using the fitted model that the data are overdispersed relative to a Poisson distribution meaning that the data show more variability than is predicted by a Poisson distribution. </p>
+<p>Technically speaking it's not the deviance based on the G-statistic that is usually used for assessing over- or underdispersion, but instead  it is the &quot;deviance&quot; based on the Pearson goodness of fit statistic. If we calculate the ratio of the Pearson deviance to its degrees of freedom we obtain the following.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(residuals(out.pois, type='pearson')^2)/out.pois$df.residual</div>
+<span class="style24">[1] 23.80965</span>
+
+<p>Once again &phi; &gt; 1 so we would say the data are overdispersed relative to a Poisson distribution. </p>
+<p>The logic behind this rule is that the mean of a chi-squared distribution is equal to its degrees of freedom. So the ratio compares  a chi-squared statistic to its mean. But as we noted above, for the residual deviance to have a chi-squared distribution requires that the individual expected counts are all sufficiently large (at most no more than 20% are smaller than 5). So the seat of the pants rule is inappropriate if there are a large number of small expected counts. </p>
+<h3><a name="analysisofdeviance"></a>Analysis of deviance</h3>
+<p>Suppose we wish to compare two nested models with likelihoods L<sub>1</sub> and L<sub>2</sub> where L<sub>2</sub> is the &quot;larger&quot; (more estimated parameters) of the two likelihoods. Let  L<sub>S</sub> denote the likelihood of the saturated model. The likelihood ratio statistic for comparing these two models is the following. </p>
+<p align="center"><img src="../../images/lectures/lecture22/analysis&#32;of&#32;deviance.gif" width="367" height="132" alt="analysis of deviance"></p>
+<p>where D<sub>1</sub> and D<sub>2</sub> are the deviances of models 1 and 2, respectively. Thus to carry out a likelihood ratio test to compare two models we can equivalently just compute the differences in their  deviances. Because of the parallel to analysis of variance (ANOVA) in ordinary linear models, carrying out an LR test using the  deviances of the models is often called <span class="style3">analysis of deviance</span>. When we apply the <span class="style1">anova</span> function to a <span class="style1">glm</span> model the table that is reported is labeled &quot;analysis of deviance&quot; but as we've seen the individual tests that are reported are just the likelihood ratio tests comparing the sequentially nested models.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out.pois, test='Chisq')</div>
+<span class="style25">  Analysis of Deviance Table</span>
+<p><span class="style24">Model: poisson, link: log</span>
+<p><span class="style24">Response: Species</span>
+<p><span class="style24">Terms added sequentially (first to last)</span>
+
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Deviance Resid. Df Resid. Dev&nbsp; Pr(&gt;Chi)&nbsp;&nbsp;&nbsp; <br>
+  NULL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp; 3447.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  log(Area)&nbsp; 1&nbsp;&nbsp; 2807.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 640.2 &lt; 2.2e-16 ***<br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<h2 name="cvbinary"><a name="count"></a>Count regression models for rates and densities</h2>
+<p name="cvbinary">As counterintuitive as it may seem, it is possible to use Poisson and negative binomial regression to fit models in which the response variable is a rate, the number of events that occur per unit time or per unit area, even when the denominator of the rate is different for different observations. To illustrate how this can be done we consider a data set in which counts of bird species  were obtained on various sized tracts of land all over the island of Jamaica. We load the data set and examine the available variables.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> birds &lt;- read.csv( 'ecol 563/birds.csv')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> birds[1:4,]</div>
+<span class="style141">&nbsp; patch&nbsp; S year&nbsp;&nbsp; landscape&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; area&nbsp; log.area.&nbsp;&nbsp;&nbsp;&nbsp; ENN log.ENN.<br>
+1&nbsp; ag1a 24 2005 Agriculture 3.5101825&nbsp; 0.5453297 20.0000 1.301030<br>
+2&nbsp; ag1b 15 2005 Agriculture 0.6155155 -0.2107610 31.6228 1.500000<br>
+3&nbsp; ag1c 25 2005 Agriculture 2.2350471&nbsp; 0.3492867 31.6228 1.500000<br>
+4&nbsp; ag1d 35 2005 Agriculture 8.2798820&nbsp; 0.9180241 40.0000 1.602060</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> levels(birds$landscape)</div>
+<span class="style141"> [1] &quot;Agriculture&quot; &quot;Bauxite&quot;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Forest&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Urban&quot;</span>
+<p name="cvbinary">The variable S records the bird species richness in a patch in a given year. Each patch was visited up to three times in three consecutive years: 2005 through 2007. The area of each patch was recorded and each patch was assigned a landscape category type of which there are four. The objective was to determine how  aluminum mining on the island (landscape = &quot;Bauxite&quot;) was affecting bird populations. So we have repeated measures data in which  an important covariate, area, was recorded that may modify the nature of the relationship between richness and landscape type. Previously for normally-distributed response variables we used analysis of covariance to adjust for a covariate such as area (<a href="lecture9.htm">lecture 9</a>) and we used a mixed effects (random intercepts) model to account for the repeated measures (<a href="lecture11.htm">lecture 11</a>). The exact same approaches will work when the  response variable  has a Poisson distribution.</p>
+<h3 name="cvbinary"><a name="anova"></a>A basic Poisson count model&mdash;ANOVA</h3>
+<p name="cvbinary">An examination of the gross distribution of bird richness values reveals nothing unusual.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> par(lend=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> tab0 &lt;- table(birds$S)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # plot overall distribution of richness</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(as.numeric(names(tab0)), tab0, type='h', lwd=6, xlab='richness', ylab='frequency')</div><br>
+<table width="450" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture22/fig5.png" width="397" height="282" alt="fig 5"></div></td>
+  </tr>
+  <tr>
+    <td><p class="styleArial1" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Gross distribution of bird richness values</p></td>
+  </tr>
+</table>
+<p>Based on what we see either a Poisson or a normal distribution might be a suitable probability model. Keep in mind that Fig. 2 should not necessarily remind us of any distribution in particular. The goal is to model the mean richness using landscape, year, and perhaps other predictors and it's only after the set of observations has been carved up into  various subsets by predictors that the choice of  probability distribution becomes relevant. For instance, if all the individual subsets are normally distributed it doesn't follow that the overall distribution will also be normally distributed. What we do learn from Fig. 2 is that the distribution is shifted away from zero, so we probably don't have to worry about a normal distribution for richness yielding negative predictions. Furthermore we see that the overall distribution is roughly symmetric so a negative binomial model is probably unnecessary nor will we need to log-transform richness.</p>
+<p><a name="narm"></a>I examine the mean bird richness values by landscape and year. Because there are a number of missing values in the response variable I include the additional argument <span class="style22">na.rm=T</span> to remove those values. (The <span class="style1">tapply</span> function allows additional arguments to the function, in this case <span class="style1">mean</span>, to be listed after the function.)</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"># mean richness by landscape category</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> tapply(birds$S, birds$landscape, mean, na.rm=T)</div>
+<span class="style141"> Agriculture&nbsp;&nbsp;&nbsp;&nbsp; Bauxite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forest&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Urban <br>
+&nbsp;&nbsp; 28.36667&nbsp;&nbsp;&nbsp; 20.04348&nbsp;&nbsp;&nbsp; 25.04225&nbsp;&nbsp;&nbsp; 19.61404 </span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # mean richness by landscape category and year</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> tapply(birds$S, list(birds$year, birds$landscape), mean, na.rm=T)</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp; Agriculture&nbsp; Bauxite&nbsp;&nbsp; Forest&nbsp;&nbsp;&nbsp; Urban<br>
+2005&nbsp;&nbsp;&nbsp; 29.92000 22.04762 26.16667 22.36842<br>
+2006&nbsp;&nbsp;&nbsp; 26.18750 19.00000 24.53846 18.10526<br>
+2007&nbsp;&nbsp;&nbsp; 28.15789 19.30769 24.07143 18.36842</span>
+<p>There appear to be important differences in bird richness across the different landscapes. Richness is lowest in urban areas and around bauxite mines. Forested and agricultural areas have much higher richness values. These patterns maintain themselves across all three years but in year 2005 all four landscapes experienced much higher richness values than in subsequent years. These observations suggest that a simple additive model in landscape and year might suffice, the classic main effects two-factor analysis of variance model. Because we're dealing with count data I assume a Poisson distribution for the response with a log link for the mean.  With only three years of data it probably makes sense to treat year as a factor.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # Poisson model for richness </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.S &lt;- glm(S~landscape + factor(year), data=birds, family=poisson)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> anova(out.S, test=&quot;Chisq&quot;)</div>
+<span class="style141">Analysis of Deviance Table</span>
+<p><span class="style141">Model: poisson, link: log</span>
+<p><span class="style141">Response: S</span>
+<p><span class="style141">Terms added sequentially (first to last)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Deviance Resid. Df Resid. Dev P(&gt;|Chi|)&nbsp;&nbsp;&nbsp; <br>
+  NULL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 256&nbsp;&nbsp;&nbsp;&nbsp; 691.67&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  landscape&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp; 138.918&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 253&nbsp;&nbsp;&nbsp;&nbsp; 552.75 &lt; 2.2e-16 ***<br>
+  factor(year)&nbsp; 2&nbsp;&nbsp; 20.495&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 251&nbsp;&nbsp;&nbsp;&nbsp; 532.25 3.545e-05 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>The analysis of deviance table indicates that both landscape and year are significant predictors. I examine the summary table of the model.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out.S)</div>
+<span class="style141">Call:<br>
+glm(formula = S ~ landscape + factor(year), family = poisson, <br>
+&nbsp;&nbsp;&nbsp; data = birds)</span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -3.80085&nbsp; -1.06031&nbsp;&nbsp; 0.05366&nbsp;&nbsp; 0.98796&nbsp;&nbsp; 2.96943&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.41323&nbsp;&nbsp;&nbsp; 0.02835 120.416&nbsp; &lt; 2e-16 ***<br>
+  landscapeBauxite -0.33365&nbsp;&nbsp;&nbsp; 0.03633&nbsp; -9.183&nbsp; &lt; 2e-16 ***<br>
+  landscapeForest&nbsp; -0.12738&nbsp;&nbsp;&nbsp; 0.03401&nbsp; -3.745 0.000180 ***<br>
+  landscapeUrban&nbsp;&nbsp; -0.35814&nbsp;&nbsp;&nbsp; 0.03858&nbsp; -9.284&nbsp; &lt; 2e-16 ***<br>
+  factor(year)2006 -0.13397&nbsp;&nbsp;&nbsp; 0.03317&nbsp; -4.039 5.36e-05 ***<br>
+  factor(year)2007 -0.10764&nbsp;&nbsp;&nbsp; 0.03005&nbsp; -3.581 0.000342 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for poisson family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 691.67&nbsp; on 256&nbsp; degrees of freedom<br>
+  Residual deviance: 532.25&nbsp; on 251&nbsp; degrees of freedom<br>
+  &nbsp; (49 observations deleted due to missingness)<br>
+  AIC: 1811.3</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 4</span>
+<p>The summary table confirms the pattern we observed in the gross summary statistics. Agricultural areas have the highest bird richness followed by forested areas. Urban and bauxite areas bring up the rear and are essentially tied. We also see that richness in 2005 was significantly higher than in the two subsequent years.</p>
+<p>We're not done yet because we haven't checked fit. It's unwise to draw inferences from a model that doesn't fit the data. The Poisson distribution is one for which the residual deviance can potentially be used as a goodness of fit statistic. I check to see if most of the observations have   predicted cell counts that are larger than five.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sum(fitted(out.S)&lt;5)/length(fitted(out.S))</div>
+<span class="style141">[1] 0</span>
+<p>100% of the  expected cell counts are greater than five so the residual deviance can be used a goodness of fit statistic. I examine the ratio of the residual deviance to its degrees of freedom.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.S$deviance/out.S$df.residual</div>
+<span class="style141"> [1] 2.120532</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(out.S$deviance, out.S$df.residual)</div>
+<span class="style141">[1] 0</span>
+<p>The data are  overdispersed relative to a Poisson distribution and based on the <em>p</em>-value of the chi-squared test, significantly so. This should not be surprising. The smallest predicted Poisson mean is 18.6 yet in Fig. 2 we saw counts as low as six. Even assuming that these low counts correspond to the patch with  the smallest mean, probabilities of obtaining counts this small are extremely low using this Poisson model. This indicates that it is very unlikely that the current model could have generated these data.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"># smallest predicted mean</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> min(fitted(out.S))</div>
+<span class="style141"> [1] 18.56190</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"># count probabilities using the smallest mean</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> rbind(6:15, round(dpois(6:15, min(fitted(out.S))),5))</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp; [,2]&nbsp;&nbsp;&nbsp; [,3]&nbsp;&nbsp;&nbsp; [,4]&nbsp;&nbsp;&nbsp;&nbsp; [,5]&nbsp;&nbsp;&nbsp; [,6]&nbsp;&nbsp;&nbsp;&nbsp; [,7]&nbsp;&nbsp;&nbsp; [,8]&nbsp;&nbsp;&nbsp;&nbsp; [,9]&nbsp;&nbsp;&nbsp; [,10]<br>
+[1,] 6.00000 7.00000 8.00000 9.00000 10.00000 11.0000 12.00000 13.0000 14.00000 15.00000<br>
+[2,] 0.00049 0.00131 0.00303 0.00626&nbsp; 0.01162&nbsp; 0.0196&nbsp; 0.03033&nbsp; 0.0433&nbsp; 0.05741&nbsp; 0.07104</span>
+<h3 name="cvbinary"><a name="ancova"></a>A  Poisson count model with area as a covariate&mdash;ANCOVA</h3>
+<p>An obvious plot characteristic that we'd expect to have a big impact on bird richness is the size of the patch. It turns out the patches vary quite a bit with respect to size.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> range(birds$area)</div>
+<span class="style141">[1]  0.5580768 59.2797938</span>
+<p>So, there's a 100-fold difference in plot size in these data. If we examine the mean patch area by landscape type we see marked differences there also.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> tapply(birds$area, birds$landscape, mean)</div>
+<span class="style141"> Agriculture&nbsp;&nbsp;&nbsp;&nbsp; Bauxite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forest&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Urban <br>
+&nbsp; 10.118108&nbsp;&nbsp;&nbsp; 3.391259&nbsp;&nbsp;&nbsp; 4.290323&nbsp;&nbsp;&nbsp; 3.460408</span>
+<p>Agricultural patches were on average more than twice the size of any of the other patch types. Given that our goal to relate richness to landscape, area is an obvious confounding variable. So, we should replace analysis of variance with analysis of covariance  treating area or log(area) as a covariate. A plot of richness versus area and richness versus log(area) suggests that log-transforming area yields a better linear relationship with species richness.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mar=c(5.1,5.1,2.1,2.1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,2))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(S~area, data=birds, cex=.7, col='grey60')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lines(lowess(birds$S[!is.na(birds$S)] ~ birds$area[!is.na(birds$S)]), col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(S~log(area), data=birds, cex=.7, col='grey60')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">lines(lowess(birds$S[!is.na(birds$S)] ~ log(birds$area[!is.na(birds$S)])), col=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,1))</div><br>
+
+<table width="550" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture22/fig2.png" width="550" height="315" alt="fig. 3"></div></td>
+  </tr>
+  <tr>
+    <td><p class="styleArial1" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;&nbsp;Checking the linear relationship between species richness (S) and area.</p></td>
+  </tr>
+</table>
+<p>Because we're using a log link for the mean, using log(area) will also yield a more interpretable model. If we  use log-likelihood and AIC to compare a model that includes area to a model that uses log(area) as a predictor, the log(area) model  has the larger log-likelihood and the smaller AIC.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.S0a &lt;- glm(S~landscape + factor(year) + area, data=birds, family=poisson)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.S1 &lt;- glm(S~landscape + factor(year) + log(area), data=birds, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(out.S0a, out.S1)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  out.S0a&nbsp; 7 1741.361<br>
+</span><span class="style25">out.S1&nbsp;&nbsp; 7 1578.616
+</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.S1)</div>
+<span class="style24">Call:<br>
+glm(formula = S ~ landscape + factor(year) + log(area), family = poisson, <br>
+&nbsp;&nbsp;&nbsp; data = birds)</span>
+<p><span class="style24">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -3.79706&nbsp; -0.75487&nbsp;&nbsp; 0.04366&nbsp;&nbsp; 0.74034&nbsp;&nbsp; 2.24672&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.08891&nbsp;&nbsp;&nbsp; 0.03662&nbsp; 84.348&nbsp; &lt; 2e-16 ***<br>
+  landscapeBauxite -0.22688&nbsp;&nbsp;&nbsp; 0.03728&nbsp; -6.086 1.16e-09 ***<br>
+  landscapeForest&nbsp; -0.06504&nbsp;&nbsp;&nbsp; 0.03441&nbsp; -1.890 0.058744 .&nbsp; <br>
+  landscapeUrban&nbsp;&nbsp; -0.27087&nbsp;&nbsp;&nbsp; 0.03931&nbsp; -6.890 5.57e-12 ***<br>
+  factor(year)2006 -0.11130&nbsp;&nbsp;&nbsp; 0.03321&nbsp; -3.351 0.000805 ***<br>
+  factor(year)2007 -0.10660&nbsp;&nbsp;&nbsp; 0.03005&nbsp; -3.547 0.000389 ***<br>
+  log(area)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.21003&nbsp;&nbsp;&nbsp; 0.01353&nbsp; 15.518&nbsp; &lt; 2e-16 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for poisson family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 691.67&nbsp; on 256&nbsp; degrees of freedom<br>
+  Residual deviance: 297.53&nbsp; on 250&nbsp; degrees of freedom<br>
+  &nbsp; (49 observations deleted due to missingness)<br>
+  AIC: 1578.6</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 4</span>
+<p>The  predictor log(area) is highly significant. So, having controlled for differences in area we find that the richness in forested areas is no longer significantly different from the richness in agricultural areas. Apparently the   difference we observed in the previous model and in the raw data was due to the much larger size of agricultural patches. </p>
+<p>The final model we've obtained has a simple theoretical basis. The fitted model for mean richness in agricultural areas in 2005 is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture22/logmu.gif" width="230" height="135" alt="areamodel"></p>
+<p>This is the classic species-area model in which richness is proportional to a power of area. The area exponent is 0.21 so we see that richness scales by the fifth root of area. The role that landscape and year play in this model is to modify the multiplier <em>k</em> but not the basic species-area relationship.</p>
+<p>Has adding log(area) to the regression model solved the lack of fit problem? I check again that the expected counts still meet the minimum cell size criterion.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sum(fitted(out.S1)&lt;5)/length(fitted(out.S1))</div>
+<span class="style141"> [1] 0</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> min(fitted(out.S1))</div>
+<span class="style141"> [1] 13.96769</span>
+</p>
+<p>100% of the expected cell counts are still larger than 5, so the residual deviance can be used as a measure of fit. The smallest expected mean count has decreased somewhat but  probably not enough to account for some of the smallest counts in the data set. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.S1$deviance/out.S1$df.residual</div>
+<span class="style141"> [1] 1.190119</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(out.S1$deviance, out.S1$df.residual)</div>
+<span class="style141">[1] 0.02100231</span>
+<p>So, the data are still overdispersed but now only barely so. The chi-squared distribution for the residual deviance indicates that the overdispersion is still statistically significant. So, we may still have a fit problem. This is not surprising because we've been ignoring an important feature of these data, the fact that the same patch is contributing multiple observations to the data set. If a given patch has individual characteristics that cause it to deviate systematically from other patches with the same covariate pattern, that could account for the small amount of overdispersion that remains. We'll consider this possibility <a href="lecture22.htm#fitting">below</a>.</p>
+<h3><a name="offset" id="offset"></a><strong>Using an offset in count  regression models</strong></h3>
+<p>When I submitted the above analysis (with a further adjustment for the repeated measures structure that we'll discuss below) to the researcher, she was not satisfied. She explained that she didn't want to model richness; she wanted to model density, the number of species per unit area. Density is generally a difficult quantity to model statistically. Density is a ratio and ratios can be extremely unstable particularly when both the numerator and denominator are measured with error. We can expect to see  both very small and very large ratios in the same data set. A further complication is that density is a positive quantity, further constraining our choice of probability models. We previously discussed some of the problems with analyzing ratios  in <a href="lecture9.htm#ratios">lecture 9</a>.</p>
+<p>There are a number of reasons why  count observations in a data set might not be  equivalent.</p>
+<ol>
+  <li>If the counts are obtained over time the lengths of time <em>t<sub>i</sub></em> may vary for each observation.</li>
+  <li>If the counts are obtained in space the areas in which the counts occur <em>A<sub>i</sub></em> may vary between observations.</li>
+  <li>Even if the time interval and area are standardized, the populations sizes giving rise to the counts <em>N<sub>i</sub></em> may vary across sample units. </li>
+</ol>
+<p>In each of these cases it would be more natural to work with the rate of occurrence: the number of observations per unit time,  per unit area, or the per capita rate. It is possible to analyze a rate while fitting a Poisson model to the counts if you treat the log of the denominator of the rate  as an offset. An  offset is the name we use for a regressor whose coefficient is not estimated.
+An offset is typically a term of the form, <img src="../../images/lectures/lecture22/logti.gif" alt="log ti" width="43" height="27" align="absmiddle">, <img src="../../images/lectures/lecture22/logAi.gif" alt="log Ai" width="50" height="27" align="absmiddle">, or <img src="../../images/lectures/lecture22/logNi.gif" alt="logNi" width="53" height="27" align="absmiddle"> that is included in the model  with its coefficient constrained to be equal to 1.  </p>
+<p>To understand what using an offset is supposed to accomplish consider the Jamaican birds example where the counts are obtained from patches with different sized areas. Suppose that our model has <em>p</em> additional regressors, <img src="../../images/lectures/lecture22/x1x2xp.gif" width="113" height="30" align="absmiddle">. We fit a count regression model for the mean (either as a Poisson or negative binomial regression) using a log link and an offset of <img src="../../images/lectures/lecture22/logAi.gif" alt="log Ai" width="50" height="27" align="absmiddle">.</p>
+<p align="center"><img src="../../images/lectures/lecture22/offset&#32;model.gif" width="358" height="30"></p>
+<p><img src="../../images/lectures/lecture22/logAi.gif" alt="log Ai" width="50" height="27" align="absmiddle"> is an offset because it's not multiplied by a parameter. Its coefficient is 1, although any numeric multiplier could in principle be used. An equivalent way to write this equation is the following. </p>
+<p align="center"><img src="../../images/lectures/lecture22/offset&#32;model2.gif" width="472" height="122" alt="offset"></p>
+<p>Thus by including an offset we end up fitting a model for the rate of occurrence, counts per unit area, as was desired. The use of an offset then is just a trick that allows us to use Poisson or negative binomial regression, methods that are appropriate for count data, to fit a rate model.</p>
+<p><a name="offsetfunc"></a>The <span class="style13">glm</span> function has an <span class="style22">offset</span> argument for specifying the variable to use as an offset. For regression functions without an <span class="style22">offset</span> argument, such as <span class="style13">lm</span> and <span class="style13">glm.nb</span>, offsets can still be included in a regression model by using the <span class="style13">offset</span> function.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # Poisson model   using the offset argument of glm</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">out.S2 &lt;- glm(S~landscape + factor(year), data=birds, family=poisson, <span class="style100">offset=log(area)</span>)</div>
+<p>The following is completely equivalent.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # Poisson model   using the offset function</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.S2a &lt;- glm(S~landscape + factor(year) + <span class="style100">offset(log(area)</span>), data=birds, family=poisson)</div>
+<p>If we examine the summary table we see that the offset doesn't appear anywhere except in the listed formula. Because the coefficient of log(area) is not estimated, no coefficient is reported in the summary table.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out.S2)</div>
+<span class="style141">Call:<br>
+glm(formula = S ~ landscape + factor(year), family = poisson, <br>
+&nbsp;&nbsp;&nbsp; data = birds, offset = log(area))</span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -13.5597&nbsp;&nbsp; -0.1101&nbsp;&nbsp;&nbsp; 1.5889&nbsp;&nbsp;&nbsp; 3.3103&nbsp;&nbsp;&nbsp; 9.7338&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.19264&nbsp;&nbsp;&nbsp; 0.02786&nbsp; 42.802&nbsp; &lt; 2e-16 ***<br>
+  landscapeBauxite&nbsp; 0.57236&nbsp;&nbsp;&nbsp; 0.03672&nbsp; 15.586&nbsp; &lt; 2e-16 ***<br>
+  landscapeForest&nbsp;&nbsp; 0.55630&nbsp;&nbsp;&nbsp; 0.03401&nbsp; 16.355&nbsp; &lt; 2e-16 ***<br>
+  landscapeUrban&nbsp;&nbsp;&nbsp; 0.57255&nbsp;&nbsp;&nbsp; 0.03903&nbsp; 14.668&nbsp; &lt; 2e-16 ***<br>
+  factor(year)2006&nbsp; 0.02139&nbsp;&nbsp;&nbsp; 0.03351&nbsp;&nbsp; 0.639&nbsp;&nbsp;&nbsp; 0.523&nbsp;&nbsp;&nbsp; <br>
+  factor(year)2007 -0.11795&nbsp;&nbsp;&nbsp; 0.03001&nbsp; -3.930 8.49e-05 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for poisson family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 4250.4&nbsp; on 256&nbsp; degrees of freedom<br>
+  Residual deviance: 3798.6&nbsp; on 251&nbsp; degrees of freedom<br>
+  &nbsp; (49 observations deleted due to missingness)<br>
+  AIC: 5077.7</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 5</span>
+<p>When we include log(area) as an offset in a regression model we constrain its regression coefficient to be one. One way to determine if the use of an offset is justified is by fitting the analysis of covariance model and testing whether the regression coefficient of log(area) is equal to 1, i.e., test H<sub>0</sub>: &beta; = 1. We previously fit the analysis of covariance model so I use the <span class="style1">confint</span> function to obtain 95% confidence intervals for the regression parameters.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> confint(out.S1)</div>
+
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 97.5 %<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.0166971&nbsp; 3.160251302<br>
+  landscapeBauxite -0.3000205 -0.153872960<br>
+  landscapeForest&nbsp; -0.1324742&nbsp; 0.002433206<br>
+  landscapeUrban&nbsp;&nbsp; -0.3481049 -0.193986538<br>
+  factor(year)2006 -0.1765673 -0.046356660<br>
+  factor(year)2007 -0.1655542 -0.047747150<br>
+</span><span class="style25">log(area)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.1834619&nbsp; 0.236518229</span>
+<p>The 95% confidence interval for the coefficient of log(area) is (0.18, 0.24). Because this interval does not include 1 we can reject a coefficient of 1 as being a reasonable value at the &alpha; = .05 level. We can also assess the appropriateness of the offset model with AIC. If we compare the AICs of the various Poisson models we've fit, we see that the Poisson model with a log area offset appears to be a terrible model. The analysis of covariance model ranks best.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sapply(list(out.S, out.S1, out.S2), AIC)</div>
+<span class="style24">[1] 1811.340 1578.616 </span><span class="style25">5077.695</span><br>
+<p name="covariate">The inclusion of an offset in a Poisson regression model is done primarily for purposes of interpretation. If  interpreting the response as a rate is not interesting, but  controlling for the lack of equivalence of the observations is, it is perfectly legitimate to include  time, area, or population size in the model as a covariate.  Covariates generally are variables that are of no interest by themselves but are included solely because it is believed that to omit them would have deleterious effects. When a predictor is included as a covariate rather than as an offset, its regression coefficient is estimated instead of being set to one. When a variable is included as a covariate it may not be necessary or desirable to log-transform it first as was done when it was entered as an offset. My personal choice is to always include a potential offset as a covariate rather than as an offset. If it does turn out that the estimated coefficient of the covariate is not significantly different from 1, then and only then  might I replace it with an offset and thus save a degree of freedom. I prefer to let the data tell me if treating the response as a density or a rate is the correct choice to make.</p>
+<h2><a name="fitting"></a>Fitting a Poisson random intercepts model in R</h2>
+<p>We've already noted that the Jamaican birds data set is a repeated measures design with measurements made over three years. Bird counts were obtained from the same patch in multiple years although not every patch was visited every year, so the data are unbalanced. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(table(birds$patch[!is.na(birds$S)]))</div>
+<span class="style24">&nbsp;0&nbsp; 1&nbsp; 2&nbsp; 3 <br>
+  &nbsp;1 12 22 67</span>
+<p>We see that 12 patches were visited once, 22 patches were visited twice, and 67 patches were visited for all three years. There was no interest in tracking bird richness over time. The concern was that using only a single year of data could be misleading if that year happened to be  particularly good  or  particularly bad  for birds. As was discussed in <a href="lecture11.htm">lecture 11</a> repeated measures designs yield heterogeneous data. Observations from the same patch in different years might be expected to be more similar to each other than they are to observations from different patches in the same or different years. </p>
+<p>One way to account for this heterogeneity is to introduce a term that is shared by all observations from the same patch. Because we're not particularly interested in the value of  this term we make it a random effect, a parameter whose values are drawn from a probability distribution. This specific kind of mixed effects model is called a random intercepts model. Let <em>i </em>denote the patch and <em>j</em> the observation made on that patch. The model we're fitting is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture22/yearmodel.gif" width="595" height="200" alt="random int"></p>
+<p><a name="lmer"></a>So, in this model we  assume that the population log mean richness  in 2005 for patches in agricultural areas with area = 1 are drawn from a common population with mean &beta;<sub>0</sub>. To obtain the mean in a particular patch we add to &beta;<sub>0</sub> the patch-level random effects <em>u</em><sub>0i</sub>, which vary from patch to patch. These patch means all then shift by an amount &beta;<sub>1</sub> in 2006 and by an amount &beta;<sub>2</sub> in year 2007 relative to their values in 2005.  The patch mean is further affected by the landscape type and the  area of the patch. </p>
+<p><a name="lme4"></a>The Poisson random intercepts model is fit in R with the <span class="style13">lmer</span> function from the the <span class="style19">lme4</span> package as follows.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.lmer &lt;- lmer(S~landscape + factor(year) + log(area) + (1|patch), data=birds, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.lmer)</div>
+<span class="style24">  Generalized linear mixed model fit by the Laplace approximation <br>
+  Formula: S ~ landscape + factor(year) + log(area) + (1 | patch) <br>
+  &nbsp;&nbsp; Data: birds.short <br>
+  &nbsp;&nbsp; AIC&nbsp;&nbsp; BIC logLik deviance<br>
+  &nbsp;273.9 302.3 -128.9&nbsp;&nbsp;&nbsp; 257.9<br>
+  Random effects:<br>
+  &nbsp;Groups Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variance Std.Dev.<br>
+  &nbsp;patch&nbsp; (Intercept) 0.01915&nbsp; 0.13838 <br>
+  Number of obs: 257, groups: patch, 101</span>
+<p><span class="style24">Fixed effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.06613&nbsp;&nbsp;&nbsp; 0.05170&nbsp;&nbsp; 59.31&nbsp; &lt; 2e-16 ***<br>
+  landscapeBauxite -0.22858&nbsp;&nbsp;&nbsp; </span><span class="style25">0.05531&nbsp;&nbsp; -4.13 3.58e-05</span><span class="style24"> ***<br>
+  landscapeForest&nbsp; -0.06744&nbsp;&nbsp;&nbsp; </span><span class="style25">0.05205&nbsp;&nbsp; -1.30 0.195084</span><span class="style24">&nbsp;&nbsp;&nbsp; <br>
+  landscapeUrban&nbsp;&nbsp; -0.26663&nbsp;&nbsp;&nbsp; </span><span class="style25">0.05855&nbsp;&nbsp; -4.55 5.26e-06</span><span class="style24"> ***<br>
+  factor(year)2006 -0.13039&nbsp;&nbsp;&nbsp; 0.03389&nbsp;&nbsp; -3.85 0.000119 ***<br>
+  factor(year)2007 -0.10911&nbsp;&nbsp;&nbsp; 0.03044&nbsp;&nbsp; -3.58 0.000339 ***<br>
+  log(area)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.22222&nbsp;&nbsp;&nbsp; 0.02100&nbsp;&nbsp; 10.58&nbsp; &lt; 2e-16 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>From the summary output we see that the between patch variance &tau;<sup>2</sup> is estimated to be 0.019. When we compare the summary table of the random intercept model to the summary table of a model without random effects the changes in the point estimates are rather small. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.S1)</div>
+<span class="style24">Call:<br>
+  glm(formula = S ~ landscape + factor(year) + log(area), family = poisson, <br>
+&nbsp;&nbsp;&nbsp; data = birds)</span>
+<p><span class="style24">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -3.7971&nbsp; -0.7549&nbsp;&nbsp; 0.0437&nbsp;&nbsp; 0.7403&nbsp;&nbsp; 2.2467&nbsp; </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.08891&nbsp;&nbsp;&nbsp; 0.03662&nbsp; 84.348&nbsp; &lt; 2e-16 ***<br>
+  landscapeBauxite -0.22688&nbsp;&nbsp;&nbsp; </span><span class="style25">0.03728&nbsp; -6.086 1.16e-09</span><span class="style24"> ***<br>
+  landscapeForest&nbsp; -0.06504&nbsp;&nbsp;&nbsp; </span><span class="style25">0.03441&nbsp; -1.890 0.058744</span><span class="style24"> .&nbsp; <br>
+  landscapeUrban&nbsp;&nbsp; -0.27087&nbsp;&nbsp;&nbsp; </span><span class="style25">0.03931&nbsp; -6.890 5.57e-12</span><span class="style24"> ***<br>
+  factor(year)2006 -0.11130&nbsp;&nbsp;&nbsp; 0.03321&nbsp; -3.351 0.000805 ***<br>
+  factor(year)2007 -0.10660&nbsp;&nbsp;&nbsp; 0.03005&nbsp; -3.547 0.000389 ***<br>
+  log(area)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.21003&nbsp;&nbsp;&nbsp; 0.01353&nbsp; 15.518&nbsp; &lt; 2e-16 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">(Dispersion parameter for poisson family taken to be 1)</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; Null deviance: 691.67&nbsp; on 256&nbsp; degrees of freedom<br>
+  Residual deviance: 297.53&nbsp; on 250&nbsp; degrees of freedom<br>
+  &nbsp; (49 observations deleted due to missingness)<br>
+  AIC: 1578.6</span>
+<p><span class="style24">Number of Fisher Scoring iterations: 4</span>
+<p name="covariate">More striking though is the fairly large increase in the standard errors of the landscape effects in the random intercepts model. Such an increase should  be expected because without the random effects we are treating the individual measurements made on the same patch but in different years as independent replicates of the landscape effect. This is  pseudo-replication and by including a random effect that links these measurements together and recognizes their correlation we've obtained a more realistic estimate of the precision of the landscape effect.</p>
+<p name="covariate">It would be nice to be able to use AIC  to compare this model to  the unstructured Poisson model, but it turns out that the log-likelihood values reported by the <span class="style13">lmer</span> function aren't comparable to those generated from other distributions or using other R functions. (The AIC from <span class="style13">lmer</span> can be used to compare other Poisson mixed effects models.) </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # these values are not comparable</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sapply(list(out.lmer, out.S1), logLik)</div>
+ <span class="style24"> [1] -128.9333 -782.3082</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(out.lmer, out.S1)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  out2.lmer&nbsp; 8&nbsp; 273.8666<br>
+  out.S1&nbsp;&nbsp;&nbsp;&nbsp; 7 1578.6164</span>
+<p name="covariate">A naive interpretation of the output  would suggest that the mixed effects model is a dramatic improvement over the ordinary Poisson regression model, but this  isn't necessarily correct. Apparently a portion of the log-likelihood not involving the parameters has been  left out of the  log-likelihood that is reported by <span class="style13">lmer</span>. To correct for this we need to calculate the log-likelihood ourselves. To this end the next section presents some basic information on the likelihood of random effects models.</p>
+<h2><a name="ranlike"></a>The likelihood of a Poisson random intercepts model</h2>
+<p>The switch from a pure fixed effects model to a random intercepts model leads to a fundamental change in the likelihood that is being maximized. Because both the response variable and the random effects have a probability distribution, together they have a joint probability distribution. From our standpoint the random effects are nuisance parameters. The likelihood we desire is the the likelihood of the data without the random effects. We can obtain this likelihood by integrating the joint likelihood with respect to the random effects. The trick in all this is to recognize that a joint probability function can be written as  the product of a conditional distribution and a marginal distribution, each of which is a known distribution. It is this product that we then integrate to obtain the desired likelihood.</p>
+<p align="center"><img src="../../images/lectures/lecture22/jointconditional.gif" width="313" height="105" alt="joint conditional"></p>
+<p>In much of what follows I use generic notation for the distributions involved because the ideas carry over to other distributions other than the Poisson distribution that we're focused on here.  I  assume that the observations come in clusters and that the clusters are a random sample from a population of clusters. The clusters for the Jamaican birds example are the patches.</p>
+<h3><a name="cluster"></a>Likelihood of the data at the cluster level</h3>
+<p>Methods employing maximum likelihood all start with the likelihood function. Recall that if we have a random sample of observations, <img src="../../images/lectures/lecture22/y1y2yn.gif" alt="y1" width="115" height="28" align="absmiddle">, that are independent and identically distributed with probability density (mass) function  <img src="../../images/lectures/lecture22/density.gif" alt="density" width="70" height="33" align="absmiddle"> where <strong>&theta;</strong> is potentially a vector of parameters of interest, then the likelihood of our sample is the product of the individual density functions. For the  Poisson regression model <strong>&theta;</strong> will consist solely of the set of regression parameters <strong>&beta;</strong>  so that the likelihood can be written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture22/likelihood1.gif" width="177" height="57" alt="likelihood"></p>
+<p>With correlated data, i.e., structured data, the situation is more complicated. The data consist of observations <img src="../../images/lectures/lecture22/yij.gif" width="23" height="30" align="absmiddle"> where <em>i</em> indicates the level-2 unit (cluster) and <em>j</em> the level-1 observation within that unit. Typically the level-2 units will be independent but  the level-1 units will not be. If we let</p>
+<p align="center"><img src="../../images/lectures/lecture22/yvec.gif" width="503" height="38" alt="yvec"></p>
+<p>so that <img src="../../images/lectures/lecture22/yivec.gif" alt="yi vector" width="183" height="38" align="absmiddle">, then we can write the likelihood in terms of the <em>m</em> level-2 units as follows.</p>
+<h2 align="center"><img src="../../images/lectures/lecture22/prob&#32;of&#32;y.gif" width="235" height="57" alt="likelihood"></h2>
+<h3><a name="joint"></a>Joint distribution of the data and random effects</h3>
+<p>If we choose to model the hierarchical structure using a mixed effects model then the <img src="../../images/lectures/lecture22/yij.gif" alt="" width="23" height="30" align="absmiddle"> are not the only random quantities to consider. The random effects <img src="../../images/lectures/lecture22/ui.gif" alt="ui" width="20" height="27" align="absmiddle"> also have a distribution. Thus the natural starting place in constructing the likelihood is with the joint density function of the data and random effect in cluster <em>i</em>, <img src="../../images/lectures/lecture22/joint.gif" alt="joint" width="182" height="38" align="absmiddle">. From elementary probability theory we can write</p>
+<p align="center"><img src="../../images/lectures/lecture22/conditional3.gif" width="418" height="38" alt="conditional"></p>
+<ul>
+  <li>Here <img src="../../images/lectures/lecture22/conditional2.gif" alt="conditional" width="175" height="38" align="absmiddle"> is the conditional distribution of the observed data assuming the value of the random effect is known. This will correspond to the probability model we assume for the data at level 1. In the Jamaican birds example the assumed distribution is a product of independent Poisson distributions. The idea is that conditional on their common random effect, the count values obtained in the separate years from the same patch are independent. The random effect accounts entirely for the correlation over time. For Poisson models this density will also be a function of the vector of fixed effect parameters <strong>&beta;</strong>.</li>
+  <li><img src="../../images/lectures/lecture22/random&#32;marginal.gif" alt="marginal" width="52" height="32" align="absmiddle"> is the distribution of the random intercept effects which is assumed to be normal with mean zero and  variance &tau;<sup>2</sup>.</li>
+</ul>
+<p>Let <img src="../../images/lectures/lecture22/yivec.gif" alt="yi vector" width="183" height="38" align="absmiddle">. If we include the  regression parameters in the likelihood then the joint distribution of the data and the random effects in cluster <em>i</em> would be written as follows</p>
+<p align="center"><img src="../../images/lectures/lecture22/joint3.gif" width="330" height="38" alt="joint"></p>
+<p>Conditional on the value of the random effect, the individual <img src="../../images/lectures/lecture22/yij.gif" alt="" width="23" height="30" align="absmiddle"> in  cluster <em>i</em> are assumed to be independent. So we have</p>
+<p align="center"><img src="../../images/lectures/lecture22/joint4.gif" width="357" height="102" alt="joint"></p>
+<p>Here I use  <img src="../../images/lectures/lecture22/marginaly.gif" alt="marginal" width="125" height="38" align="absmiddle"> to denote the distribution of the individual <img src="../../images/lectures/lecture22/yij.gif" alt="" width="23" height="30" align="absmiddle"> conditional on the random effect and the regression and variance parameters.</p>
+<h3><a name="marginal" id="marginal"></a>Obtaining the  marginal likelihood of the data</h3>
+<p>To go from the joint probability of <img src="../../images/lectures/lecture22/yij.gif" alt="" width="23" height="30" align="absmiddle"> and <img src="../../images/lectures/lecture22/ui.gif" alt="ui" width="20" height="27" align="absmiddle"> to the marginal probability for <img src="../../images/lectures/lecture22/yij.gif" alt="" width="23" height="30" align="absmiddle"> we integrate over the possible values of <img src="../../images/lectures/lecture22/ui.gif" alt="ui" width="20" height="27" align="absmiddle">. Thus the marginal likelihood for cluster <em>i</em> is the following. </p>
+<p align="center"><img src="../../images/lectures/lecture22/marginal&#32;2.gif" width="348" height="80"></p>
+<p>Putting all these pieces together we can write the marginal likelihood of our data as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture22/marginal3a.gif" width="408" height="237" alt="marginal"></p>
+<p>For the Jamaican birds random intercepts model  the distribution of the random effects is normal and the distribution of the response given the random effects is Poisson. Thus the functions <em>k</em> and <em>h</em> in the last expression are a Poisson probability and a normal density respectively. </p>
+
+<p align="center"><img src="../../images/lectures/lecture22/poisson&#32;marginal.gif" width="483" height="60" alt="poisson marginal"></p>
+<p>This expression doesn't simplify further (unlike the case when both <em>k</em> and <em>h</em> are normal densities) and so the integration needs to be carried out numerically in order to obtain the marginal likelihood. This is what the <span class="style13">lmer</span> function of the <span class="style191">lme4</span> package does.</p>
+<h2><a name="obtaining"></a>Obtaining the correct log-likelihood of the Poisson random intercepts model</h2>
+<p>To obtain the correct marginal log-likelihood for a Poisson random intercepts model that we can then use to compare with ordinary Poisson regression models  I've written a function that inserts the maximum likelihood estimates returned by <span class="style13">lmer</span> into the above expression for the joint log-likelihood that I then integrate numerically to obtain the correct marginal log-likelihood. This function is shown below.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisloglike.log &lt;- function(int.mod, mult=1) {</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # int.mod is the Poisson model random intercepts model fit by lmer</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> # mult is a large multiplier, e.g., 1e40, 1e80, 1e120, etc.</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # used to improve the accuracy of the numerical integration</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  ####### extract model components #######</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  #level-1 variance</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  s &lt;- attr(VarCorr(int.mod)[[1]],&quot;stddev&quot;)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  #Poisson mean</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> etavec &lt;- int.mod@X %*% fixef(int.mod)</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> #check if offset was used</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  if(length(int.mod@offset)&gt;0) etavec &lt;- etavec+int.mod@offset</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  #response variable</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  y &lt;- int.mod@y</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  #split the response and Poisson mean by group</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  temp.dat &lt;- data.frame(y,etavec)</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> split.by.group &lt;- split(temp.dat, int.mod@flist)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  #function to evaluate the integrated likelihood for a group</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  pois.component &lt;- function(xvec) {</div>
+  <div class="style15" style="padding-left: 90px; text-indent:-30px">#likelihood term for the first element in the group</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  base.eta &lt;- paste(&quot;exp(&quot;, xvec[1,2], &quot;+x)&quot;, sep='')</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  base.pois &lt;- paste(&quot;dpois(&quot;, xvec[1,1], &quot;,&quot;, base.eta,&quot;)&quot;, sep='')</div>
+<div class="style15" style="padding-left: 90px; text-indent:-30px">  #add more terms to the product if the group size is &gt; 1</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  if(nrow(xvec)&gt;1)</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  for(i in 2:nrow(xvec)) {</div>
+ <div class="style23" style="padding-left: 120px; text-indent:-30px"> cur.eta &lt;- paste(&quot;exp(&quot;, xvec[i,2], &quot;+x)&quot;, sep='')</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  cur.pois &lt;- paste(&quot;dpois(&quot;, xvec[i,1], &quot;,&quot;, cur.eta,&quot;)&quot;, sep='')</div>
+<div class="style23" style="padding-left: 120px; text-indent:-30px">  base.pois &lt;- paste(base.pois, cur.pois, sep='*')</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  }</div>
+<div class="style15" style="padding-left: 90px; text-indent:-30px">  #construct the integral as a text expression</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  int.call &lt;- paste(&quot;integrate(function(x) &quot;, base.pois, &quot;*dnorm(x,0,&quot;,s,&quot;)*mult, -Inf, Inf, rel.tol = 1e-12)&quot;, sep='')</div>
+<div class="style15" style="padding-left: 90px; text-indent:-30px">  #calculate integral</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  eval(parse(text=int.call))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  }</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  #obtain likelihood terms by group</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  sapply(split.by.group,pois.component) -&gt; like.terms</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  #log-likelihood</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  sum(log(unlist(like.terms[1,])/mult))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>To use it here we just provide it with the name of the Poisson random intercepts model that was fit by <span class="style1">lmer</span>. There is an additional argument that may be needed to get the integral to converge, but it is not needed for this problem.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # log-likelihood of Poisson random intercepts model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> poisloglike.log(out.lmer)</div>
+<span class="style24">  [1] -762.4849</span>
+</p>
+<p>If we compare this to the log-likelihood of the ordinary Poisson regression model without random intercepts we see that the log-likelihood of the random effects model is larger.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # log-likelihood of model without random effects</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> logLik(out.S1)</div>
+<span class="style24">  'log Lik.' -782.3082 (df=7)</span>
+
+<p>To compare the AICs we need the number of estimated parameters in the random intercepts model. This should be one more than it is for the ordinary Poisson regression model, the extra parameter being &tau;<sup>2</sup>, the variance of the random effects. Alternatively we can extract this information using the <span class="style1">attr</span> function applied to the output from <span class="style1">logLik</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # number of estimated parameters</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> attr(logLik(out.lmer),&quot;df&quot;)</div>
+<span class="style24">  [1] 8</span>
+
+<p>Comparing the AICs we obtain the following.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # calculate AIC of random intercepts model</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> -2*poisloglike.log(out.lmer) + 2*attr(logLik(out.lmer),&quot;df&quot;)</div>
+<span class="style24">  [1] 1540.97</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # compare to model without random effects</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> AIC(out.S1)</div>
+<span class="style24">  [1] 1578.616</span>
+<p>So the AIC of the random intercepts model, 1540.97, is appreciably lower than the AIC of the ordinary Poisson regression model. To check the fit of the random intercepts model we would next need to carry out a predictive simulation using the fitted means to generate Poisson distributions like we've done previously for other examples and assess how closely the pseudo-data that are generated  resemble the data that were actually obtained.</p>
+<h2><a name="cited"></a>Cited references</h2>
+<p>Sokal, Robert R. and F. J. Rohlf. 1995. <em>Biometry</em>. W. H. Freeman and Company: New York.</p>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture22&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 11, 2012<br>
+      URL: <a href="lecture22.htm#lecture22" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture22.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 8&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign8" id="assign8"></a>Assignment 8&mdash;Solution</h1>
+<h2>Question 1 </h2>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">stirrett &lt;- read.delim('ecol 563/Stirrett.txt')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> stirrett</div>
+<span class="style24">  &nbsp;&nbsp; Count Trt1 Trt2 Trt3 Trt4<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 19&nbsp;&nbsp; 24&nbsp;&nbsp; 43&nbsp;&nbsp; 47<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 12&nbsp;&nbsp; 16&nbsp;&nbsp; 35&nbsp;&nbsp; 23<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 18&nbsp;&nbsp; 16&nbsp;&nbsp; 17&nbsp;&nbsp; 27<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 18&nbsp;&nbsp; 18&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 9<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 7<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 0<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  11&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  12&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  13&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  14&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  15&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  16&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  17&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+18&nbsp;&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0</span>
+<p>These are the tabulated data. I begin by generating the raw data. I do this separately by treatment, using the <span class="style4">rep</span> function to repeat the values in the Count column the number of times indicated in each of the treatment columns.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">trt1 &lt;- rep(stirrett$Count, stirrett$Trt1)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">trt2 &lt;- rep(stirrett$Count, stirrett$Trt2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">trt3 &lt;- rep(stirrett$Count, stirrett$Trt3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">trt4 &lt;- rep(stirrett$Count, stirrett$Trt4)</div>
+<p>Next we concatenate the counts contained in these three treatment vectors and add a second column that records the treatment to which they correspond.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">borer &lt;- data.frame(count = c(trt1, trt2, trt3, trt4), treatment = rep(1:4, c(length(trt1), length(trt2), length(trt3), length(trt4))))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(borer)</div>
+<span class="style24">[1] 480   2</span>
+<p>We're told that the four treatments are connected in a special way. They correspond to combining the levels of two binary factor variables in all possible ways. The correspondence is detailed in Table 1 where we see that treatments 3 and 4 received an early application of fungal spores, while treatments 2 and 4 received a late application of fungal spores. I add these two factors as two additional columns of the data frame.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> borer$early &lt;- factor(ifelse(borer$treatment %in% c(3,4), 'present', 'absent'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> borer$late &lt;- factor(ifelse(borer$treatment %in% c(2,4), 'present', 'absent'))</div>
+
+<p>When treatments are created by combining factors it is always advantageous to analyze the experiment as a factorial design in this case with two factors rather than as a one-way design with a single treatment. The two-factor interaction model yields a model that is identical to the one-way design. It's just parameterized differently. If the two-factor interaction is significant then nothing has been accomplished by analyzing things as a factorial design. If the interaction is not significant then we can then proceed to simplify the model and perhaps end up with a much simpler interpretation of the effect of treatment. I fit a two-factor interaction model assuming a negative binomial distribution for the response. I use the <span class="style4">anova</span> function to obtain sequential likelihood ratio tests.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(MASS)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB1 &lt;- glm.nb(count~early*late, data=borer)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">anova(out.NB1)</div>
+<span class="style24">Analysis of Deviance Table</span>
+<p><span class="style24">Model: Negative Binomial(1.4714), link: log</span>
+<p><span class="style24">Response: count</span>
+<p><span class="style24">Terms added sequentially (first to last)</span>
+
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Deviance Resid. Df Resid. Dev Pr(&gt;Chi)&nbsp;&nbsp;&nbsp; <br>
+  NULL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 479&nbsp;&nbsp;&nbsp;&nbsp; 623.56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  early&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 81.157&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 478&nbsp;&nbsp;&nbsp;&nbsp; 542.41&nbsp;&nbsp; &lt;2e-16 ***<br>
+  late&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1.927&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 477&nbsp;&nbsp;&nbsp;&nbsp; 540.48&nbsp;&nbsp; 0.1651&nbsp;&nbsp;&nbsp; <br>
+  early:late&nbsp; 1&nbsp;&nbsp;&nbsp; 1.738&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 476&nbsp;&nbsp;&nbsp;&nbsp; 538.74&nbsp;&nbsp; 0.1874&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 <br>
+  Warning message:<br>
+  In anova.negbin(out.NB1) : tests made without re-estimating 'theta'</span>
+<p>Reading from the bottom of the table up we see that the two-factor interaction between <span class="style81">early</span> and <span class="style81">late</span> is not significant. Furthermore we also see the <span class="style81">late</span> main effect is also not significant given that the <span class="style81">early</span> effect is already in the model. <span class="style81">The</span> early effect is highly significant. I refit the model with just an <span class="style81">early</span> effect.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.NB2 &lt;- glm.nb(count~early, data=borer)</div>
+<h2>Question 2</h2>
+<p>To carry out the goodness of fit tests we need to work with the tabulated data. As we've seen, not all of the count categories are shown in the table. Intermediate categories that were not recorded for any of the four treatments are not included. For the goodness of fit test we need to include these missing categories and assign them a frequency of zero. Following the hint for this problem we can carry this out by creating a dummy data frame with just the full set of count categories and then merge this data frame with the tabulated data.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> junk &lt;- data.frame(Count=0:26)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> borer.table &lt;- merge(stirrett, junk, all=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> borer.table</div>
+<span class="style24">  &nbsp;&nbsp; Count Trt1 Trt2 Trt3 Trt4<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 19&nbsp;&nbsp; 24&nbsp;&nbsp; 43&nbsp;&nbsp; 47<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 12&nbsp;&nbsp; 16&nbsp;&nbsp; 35&nbsp;&nbsp; 23<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;18&nbsp;&nbsp; 16&nbsp;&nbsp; 17&nbsp;&nbsp; 27<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 18&nbsp;&nbsp; 18&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 9<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 7<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 0<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  11&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  12&nbsp; &nbsp;&nbsp;11&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  13&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  14&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  15&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA<br>
+  16&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  17&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA<br>
+  18&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  19&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA<br>
+  20&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  21&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA<br>
+  22&nbsp;&nbsp;&nbsp; 21&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA<br>
+  23&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA<br>
+  24&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA<br>
+  25&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA<br>
+  26&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA&nbsp;&nbsp; NA<br>
+  27&nbsp;&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> temp &lt;- sapply(2:5, function(x) ifelse(is.na(borer.table[,x]), 0, borer.table[,x]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(temp)</div>
+ <span class="style24"> [1] 27&nbsp; 4</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> temp</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1] [,2] [,3] [,4]<br>
+  &nbsp;[1,]&nbsp;&nbsp; 19&nbsp;&nbsp; 24&nbsp;&nbsp; 43&nbsp;&nbsp; 47<br>
+  &nbsp;[2,] &nbsp;&nbsp;12&nbsp;&nbsp; 16&nbsp;&nbsp; 35&nbsp;&nbsp; 23<br>
+  &nbsp;[3,]&nbsp;&nbsp; 18&nbsp;&nbsp; 16&nbsp;&nbsp; 17&nbsp;&nbsp; 27<br>
+  &nbsp;[4,]&nbsp;&nbsp; 18&nbsp;&nbsp; 18&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 9<br>
+  &nbsp;[5,]&nbsp;&nbsp; 11&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 7<br>
+  &nbsp;[6,]&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3<br>
+  &nbsp;[7,]&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;[8,]&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;[9,]&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 0<br>
+  [10,]&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [11,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  [12,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  [13,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [14,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [15,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [16,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [17,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [18,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [19,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [20,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [21,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [22,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [23,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [24,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [25,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [26,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  [27,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> borer.table[,2:5] &lt;- temp</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> borer.table</div>
+<span class="style24">  &nbsp;&nbsp; Count Trt1 Trt2 Trt3 Trt4<br>
+  1&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp; 19&nbsp;&nbsp; 24&nbsp;&nbsp; 43&nbsp;&nbsp; 47<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 12&nbsp;&nbsp; 16&nbsp;&nbsp; 35&nbsp;&nbsp; 23<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 18&nbsp;&nbsp; 16&nbsp;&nbsp; 17&nbsp;&nbsp; 27<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 18&nbsp;&nbsp; 18&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 9<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 7<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 0<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  11&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  12&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  13&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  14&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  15&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  16&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  17&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  18&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  19&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  20&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  21&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  22&nbsp;&nbsp;&nbsp; 21&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  23&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  24&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  25&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  26&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp;0<br>
+27&nbsp;&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0</span>
+<p>Next we need to repeat the Count column four times, stack the four treatment columns, and add a vector that identifies the treatments.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">final.borer &lt;- data.frame(count=rep(borer.table$Count,4), freq=unlist(borer.table[,2:5]), treatment=rep(1:4,each=nrow(borer.table)))</div>
+<p>I create the factor variables from before.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">final.borer$early &lt;- factor(ifelse(final.borer$treatment %in% c(3,4), 'present', 'absent'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">final.borer$late &lt;- factor(ifelse(final.borer$treatment %in% c(2,4), 'present', 'absent'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer[1:8,]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; count freq treatment&nbsp; early&nbsp;&nbsp; late<br>
+  Trt11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent<br>
+  Trt12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent<br>
+  Trt13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent<br>
+  Trt14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent<br>
+  Trt15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent<br>
+  Trt16&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent<br>
+  Trt17&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent<br>
+Trt18&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent</span>
+<h3>Add model results</h3>
+<p>I next add the predicted mean from the negative binomial model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer$mu &lt;- predict(out.NB2, type='response', newdata=data.frame(early=final.borer$early))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer[1:8,]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; count freq treatment&nbsp; early&nbsp;&nbsp; late&nbsp; mu<br>
+  Trt11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6<br>
+  Trt12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6<br>
+  Trt13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6<br>
+  Trt14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6<br>
+  Trt15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6<br>
+  Trt16&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6<br>
+  Trt17&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6<br>
+  Trt18&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer$p &lt;- dnbinom(final.borer$count,mu=final.borer$mu,size=out.NB2$theta)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer[1:8,]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; count freq treatment&nbsp; early&nbsp;&nbsp; late&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p<br>
+  Trt11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.16416474<br>
+  Trt12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.16930752<br>
+  Trt13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.14770788<br>
+  Trt14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.12104009<br>
+  Trt15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.09598139<br>
+  Trt16&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.07458538<br>
+  Trt17&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.05716880<br>
+  Trt18&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.04338662</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer$p &lt;- final.borer$p + ifelse(final.borer$count==26, 1-pnbinom(26, mu=final.borer$mu, size=out.NB2$theta),0)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer[1:8,]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; count freq treatment&nbsp; early&nbsp;&nbsp; late&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p<br>
+  Trt11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.16416474<br>
+  Trt12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.16930752<br>
+  Trt13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.14770788<br>
+  Trt14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.12104009<br>
+  Trt15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.09598139<br>
+  Trt16&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 12&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 absent absent 3.6 0.07458538<br>
+  Trt17&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.05716880<br>
+  Trt18&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.04338662</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tapply(final.borer$p, final.borer$treatment, sum)</div>
+ <span class="style24"> 1 2 3 4 <br>
+1 1 1 1 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> tapply(final.borer$freq, final.borer$treatment, sum)</div>
+<span class="style24">  &nbsp; 1&nbsp;&nbsp; 2&nbsp;&nbsp; 3&nbsp;&nbsp; 4 <br>
+  120 120 120 120 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n &lt;- tapply(final.borer$freq, final.borer$treatment, sum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer$exp &lt;- final.borer$p * n[final.borer$treatment]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer[1:8,]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; count freq treatment&nbsp; early&nbsp;&nbsp; late&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exp<br>
+  Trt11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.16416474 19.699769<br>
+  Trt12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.16930752 20.316902<br>
+  Trt13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.14770788 17.724946<br>
+  Trt14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.12104009 14.524810<br>
+  Trt15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.09598139 11.517767<br>
+  Trt16&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.07458538&nbsp; 8.950245<br>
+  Trt17&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.05716880&nbsp; 6.860256<br>
+Trt18&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.04338662&nbsp; 5.206394</span>
+<h3>Generate graph</h3>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(freq~count|early+late, data=final.borer, type='h', lwd=8, col='grey', lineend=1, panel=function(x, y, subscripts){</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, type='h', lwd=8, col='grey', lineend=1)</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, final.borer$exp[subscripts], pch=16, cex=.8, type='o')})</div>
+
+ <p>I improve the labeling on the factors defining the panels and add a legend.</p>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(freq~count|factor(early, levels=levels(early), labels=paste('Early = ', levels(early), sep=''))+factor(late, levels=levels(late), labels=paste('Late = ', levels(late), sep='')), data=final.borer, type='h', lwd=8, col='grey', lineend=1, ylab='frequency', panel=function(x,y,subscripts){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, type='h', lwd=8, col='grey',lineend=1)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, final.borer$exp[subscripts], pch=16, cex=.7, type='o', col=1)},</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  key=list(x=.7, y=.85, corner=c(0,0), lines=list(col=c('grey',1), type=c('p','o'), pch=c(15,16), cex=c(1.2,.7), size=2), text=list(c('observed', 'early main effect'), cex=.9), divide=1)) -&gt; my.graph</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(latticeExtra)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">useOuterStrips(my.graph)</div>
+<p align="center"><img src="../../images/assignments/assignment8/fig1.png" width="520" height="370" alt="fig. 1"></p>
+<h3>Parametric bootstrap</h3>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> borer.p &lt;- split(final.borer$p, final.borer$treatment)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> myfunc &lt;- function() {</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> out.obs &lt;- as.vector(sapply(1:4, function(x) rmultinom(1, size=n[x], prob=borer.p[[x]])))</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> sum((out.obs-final.borer$exp)^2/final.borer$exp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(50)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sim.data &lt;- replicate(9999, myfunc())</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> actual &lt;- sum((final.borer$freq-final.borer$exp)^2/final.borer$exp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> actual</div>
+<span class="style24">  [1] 74.0738</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pearson &lt;- c(sim.data, actual)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pval &lt;- sum(pearson&gt;=actual)/length(pearson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pval</div>
+<span class="style24">[1] 0.4984</span>
+<h2>Question 3</h2>
+<p>The unconstrained model is the two-factor interaction model, or equivalently, a one-way model fit to the original treatment variable. We need to calculate the means, probabilities, and expected counts and add these to the graph of Question 2.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">final.borer$mu2 &lt;- predict(out.NB1, type='response', newdata=data.frame(early=final.borer$early, late=final.borer$late))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">final.borer$p2 &lt;- dnbinom(final.borer$count, mu=final.borer$mu2, size=out.NB1$theta)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">final.borer$p2 &lt;- final.borer$p2 + ifelse(final.borer$count==26, 1-pnbinom(26, mu=final.borer$mu2, size=out.NB1$theta), 0)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">final.borer$exp2 &lt;- final.borer$p2 * n[final.borer$treatment]</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> final.borer[1:8,]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; count freq treatment&nbsp; early&nbsp;&nbsp; late&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mu2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p2&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;exp2<br>
+  Trt11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.16416474 19.699769 4.033333 0.14350498 17.220598<br>
+  Trt12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.16930752 20.316902 4.033333 0.15471639 18.565967<br>
+  Trt13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.14770788 17.724946 4.033333 0.14008190 16.809828<br>
+  Trt14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.12104009 14.524810 4.033333 0.11876694 14.252032<br>
+  Trt15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.09598139 11.517767 4.033333 0.09727647 11.673177<br>
+  Trt16&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.07458538&nbsp; 8.950245 4.033333 0.07799453&nbsp; 9.359343<br>
+  Trt17&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.05716880&nbsp; 6.860256 4.033333 0.06163656&nbsp; 7.396387<br>
+Trt18&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 absent absent 3.6 0.04338662&nbsp; 5.206394 4.033333 0.04820245&nbsp; 5.784294</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(freq~count|factor(early,levels=levels(early), labels=paste('Early = ',levels(early),sep=''))+factor(late,levels=levels(late), labels=paste('Late = ', levels(late),sep='')), data=final.borer, type='h', lwd=8, col='grey', lineend=1, ylab='frequency', panel=function(x,y,subscripts){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">   panel.xyplot(x, y, type='h', lwd=8, col='grey', lineend=1)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">   panel.xyplot(x, final.borer$exp[subscripts], pch=16, cex=.6, type='o', col=1)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">   panel.xyplot(x, final.borer$exp2[subscripts], pch=22, cex=1, type='o', col='dodgerblue')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   }, key=list(x=.7, y=.85, corner=c(0,0), lines=list(col=c('grey',1,'dodgerblue'), type=c('p','o','o'), pch=c(15,16,22), cex=c(1.2,.6, 1), size=2), text=list(c('observed','early main effect','interaction'), cex=.9), divide=1)<br>
+)-&gt;my.graph2</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> useOuterStrips(my.graph2)</div>
+<p align="center"><img src="../../images/assignments/assignment8/fig2.png" width="540" height="440" alt="fig. 2"></p>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment8/hw8scores.png" width="365" height="240" alt="hw8"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 13, 2012<br>
+      URL: <a href="assign8.htm#assign8">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign8.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 15&mdash;Monday, October 15, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture15" id="lecture4"></a>Lecture 15&mdash;Monday, October 15, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture15.htm#aphid">Poisson model for aphid counts</a>
+    <ul>
+      <li><a href="lecture15.htm#code">R code from last time</a></li>
+      <li><a href="lecture15.htm#glm">Fitting the Poisson distribution using the glm function</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture15.htm#assessing">Assessing the fit of the Poisson model graphically</a></li>
+  <li><a href="lecture15.htm#pearson">Pearson chi-square goodness of fit test for discrete data </a></li>
+  <li><a href="lecture15.htm#poissontest">Testing the fit of the Poisson model analytically</a>
+    <ul>
+      <li><a href="lecture15.htm#poissonparametric">Parametric goodness of fit test</a></li>
+      <li><a href="lecture15.htm#poissonsimulate">Simulation-based goodness of fit test (parametric bootstrap)</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture15.htm#NB">Negative binomial distribution</a>
+    <ul>
+      <li><a href="lecture15.htm#background">Some background on the binomial distribution</a>
+      </li>
+    </ul>
+  </li>
+  <ul>
+    <li><a href="lecture15.htm#binderiv">Derivation of the formula for the binomial probability mass function</a></li>
+    <li><a href="lecture15.htm#characteristics">Characteristics of  the negative binomial distribution</a>
+    </li>
+  
+    <li><a href="lecture15.htm#derivation">Derivation of the formula of the negative binomial probability mass function</a></li>
+    <li><a href="lecture15.htm#mean">Mean and variance</a></li>
+  </ul>
+  <li><a href="lecture15.htm#ecological">Ecological parameterization of the negative binomial distribution</a>
+    <ul>
+      <li><a href="lecture15.htm#gammafunc">Gamma function</a></li>
+    </ul>
+  </li>
+  <ul>
+    <li><a href="lecture15.htm#variance">The variance of  the negative binomial distribution in terms of &mu; and &theta;</a>  </li>
+  </ul>
+  <li><a href="lecture15.htm#cited">Cited references</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture15.htm#barplot">barplot</a> is the base graphics function for generating bar plots.</li>
+  <li><a href="lecture15.htm#chisqtest">chisq.test</a> can be used to perform a Monte Carlo goodness of fit test based on the Pearson chi-squared statistic.</li>
+  <li><a href="lecture15.htm#glm">glm</a> is the generalized linear models function. It can be used to fit regression models to response variables with various probability distributions.</li>
+  <li><a href="lecture15.htm#qchisq">pchisq</a> is the cumulative distribution function of the chi-squared distribution.</li>
+  <li><a href="lecture15.htm#ppois">ppois</a> is the cumulative distribution function of the Poisson distribution.</li>
+  <li><a href="lecture15.htm#qchisq">qchisq</a> is the quantile function of the chi-squared distribution.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture15.htm#Barg">B</a>= (argument to <span class="style1">chisq.test</span>) can be used to modify the default number of simulations (B=2000) for the simulation-based version of the chi-squared test.</li>
+  <li><a href="lecture15.htm#family">family=</a> (argument to <span class="style1">glm</span>) is used to specify a probability distribution and, optionally, a link function.</li>
+  <li><a href="lecture15.htm#lowertail">lower.tail=</a> (argument to <span class="style1">ppois</span> and other probability functions) can be assigned TRUE (the default) or FALSE. <span class="style8">ppois(k, lower.tail=T)</span> calculates P(<em>X</em> &le; <em>k</em>) while <span class="style8">ppois(k, lower.tail=F)</span> calculates P(<em>X</em> &gt; <em>k</em>).</li>
+  <li><a href="lecture15.htm#simulatepvalue">simulate.p.value</a>= (argument to <strong class="style1">chisq.test</strong>) can be assigned the values TRUE or FALSE. When TRUE a Monte Carlo-based <em>p</em>-value is calculated for the observed Pearson chi-squared statistic.</li>
+</ul>
+<h2><a name="aphid"></a>Poisson model for  aphid counts</h2>
+<p> We continue with the analysis of the aphid count data set. Last time we fit a Poisson distribution to these data using maximum likelihood. Today we examine the fit of the model.</p>
+<div class="figureR"></div
+>
+<h3><a name="code"></a>R code from last time</h3>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">num.stems &lt;- c(6,8,9,6,6,2,5,3,1,4)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # data frame of tabulated data</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> aphids &lt;- data.frame(aphids=0:9, counts=num.stems)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> aphids</div>
+<span class="style24">  &nbsp;&nbsp; aphids counts<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> aphid.data &lt;- rep(0:9,num.stems)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> aphid.data</div>
+<span class="style24">&nbsp;[1] 0 0 0 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 4 4 4 4 4 4<br>
+[36] 5 5 6 6 6 6 6 7 7 7 8 9 9 9 9</span>
+</p>
+<p><a name="barplot"></a>Examine the distribution of the tabulated data with a bar chart using the <span class="style1">barplot</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">names(num.stems) &lt;- 0:9</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">barplot(num.stems)</div>
+<br>
+<table width="300" border="0" align="center" cellpadding="5">
+  <tr>
+    <td scope="col"><img src="../../images/lectures/lecture14/fig1b.png" alt="fig 1b" width="245" height="170" align="texttop"></td>
+  </tr>
+  <tr>
+    <td class="styleArial"><p style="padding-left: 45px; text-indent:-45px"><strong>Fig. 1 </strong>&nbsp;Bar plot of the tabulated data</td>
+  </tr>
+</table>
+
+<p><a name="poissonLL"></a>Construct a function to calculate the log-likelihood of the data for a specific value of the parameter &lambda;.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.LL &lt;- function(lambda) sum(log(dpois(aphid.data, lambda)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<p>To use <span class="style41">nlm</span>  to obtain the maximum likelihood estimate of &lambda;, we need to change the way we're formulating the problem. Since maximizing <span class="style101">f</span> is equivalent to minimizing <span class="style101">&ndash;f</span>, we need to reformulate our objective function so that it returns the negative log-likelihood rather than the log-likelihood. I use &lambda; = 3 as an initial guess.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.negloglik &lt;- function(lambda) -poisson.LL(lambda)</div>
+<p>I use &lambda; = 3 as an initial guess in the call to <span class="style41">nlm</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.pois &lt;- nlm(poisson.negloglik,3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.pois </div>
+<span class="style24">$minimum<br>
+[1] 124.1764</span>
+</p>
+<p class="style24">$estimate<br>
+  [1] 3.459998</p>
+<p class="style24">$gradient<br>
+  [1] 6.571497e-08</p>
+<p class="style24">$code<br>
+  [1] 1</p>
+<p class="style24">$iterations<br>
+  [1] 4</p>
+<h3><a name="glm" id="glm"></a>Fitting the Poisson distribution  using the glm function</h3>
+<p>The Poisson  model that we've fit using maximum likelihood is an example of Poisson regression, which in turn is a type of generalized linear model. Generalized linear models can be fit in R using the <span class="style13">glm</span> function. We'll discuss generalized linear models in a more formal fashion later. For the moment think of a generalized linear model as an extension of ordinary regression to  response variables that have non-normal distributions. Many of the models we've considered can be fit very simply as a generalized linear model using notation that is identical to what we used when fitting ordinary regression models. The only difference is that in a generalized linear model we  need to specify a probability distribution and optionally a link function. </p>
+<p><a name="family"></a>A link function is a function <em>g</em> that is applied to the mean &mu; of our distribution. The generalized linear model then models <em>g</em>(&mu;) as a function of predictors. If <em>g</em>(&mu;) = &mu; we call <em>g</em> the identity link.  In ordinary regression when we model the mean as a linear combination of regressors we are implicitly using an identity link. While an identity link would seem to be the natural choice in all cases it is  not ideal when the response variable is bounded in any way. For the Poisson distribution a log link is a better choice than an identity link and it is the default link function with the <span class="style13">glm</span> function and <span class="style22">family=poisson</span>. We can fit the  Poisson distribution with the <span class="style13">glm</span> function as follows.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out1 &lt;- glm(aphid.data~1, family=poisson(link=identity))</div>
+<ul>
+  <li>The notation <span class="style10">aphid.data~1</span> indicates we're fitting a model in which <span class="style8">aphid.data</span> is the response variable and the only predictor is an intercept. </li>
+  <li>To get the Poisson distribution we need to specify <span class="style22">family=Poisson</span>.</li>
+  <li>To match the output from <span class="style13">nlm</span> I need to specify the identity link <em>g</em>(&mu;) = &mu; because the default is to model log &mu; rather than &mu;. With <span class="style22">link=identity</span> we are fitting the model  &mu; = &beta;<sub>0</sub>.</li>
+</ul>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out1)</div>
+<span class="style24">Call:<br>
+  glm(formula = aphid.data ~ 1, family = poisson(link = identity))</span>
+<p><span class="style24">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -2.6306&nbsp; -1.5612&nbsp; -0.2531&nbsp;&nbsp; 1.1204&nbsp;&nbsp; 2.4753&nbsp; </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp; </span><span class="style25">3.4600</span><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp; 0.2631&nbsp;&nbsp; 13.15&nbsp;&nbsp; &lt;2e-16 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">(Dispersion parameter for poisson family taken to be 1)</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; Null deviance: 114.46&nbsp; on 49&nbsp; degrees of freedom<br>
+  Residual deviance: 114.46&nbsp; on 49&nbsp; degrees of freedom<br>
+  AIC: 250.35</span>
+<p><span class="style24">Number of Fisher Scoring iterations: 3</span>
+<p>The estimate of the intercept is the mean of the Poisson distribution and it's the same value we obtained above using the <span class="style1">nlm</span> function. If we fit the model without the link argument and accept the default link we are fitting the model log &mu; = &beta;<sub>0</sub>. To obtain the mean of the Poisson distribution we need to exponentiate the result.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out1a &lt;- glm(aphid.data~1, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out1)</div>
+<span class="style24">  (Intercept) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.46 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out1a)</div>
+<span class="style24">  (Intercept) <br>
+  &nbsp;&nbsp; 1.241269 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(out1a))</div>
+<span class="style24">  (Intercept) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.46</span>
+<h2 class="style18"><strong><a name="assessing"></a>Assessing the fit of the Poisson model graphically</strong></h2>
+<p>Having estimated the Poisson model we next examine how well the model fits the observed data.  A good place to start is by calculating the count frequencies predicted by the model and comparing these to the observed frequencies graphically. This can be accomplished with a bar plot of the observed frequencies  on which we superimpose the Poisson predictions as points connected by line segments. </p>
+<p>I begin by calculating the expected values under a Poisson model using the estimated value of &lambda;. I generate the Poisson probabilities for category counts 0 to 9 (matching the range of observed values we have). To obtain the expected counts I multiply these numbers by 50, the number of observations. (Note: What I'm really doing is adding up the predicted probability distributions for all 50 observations. Because each observation has the same predicted probability distribution, this is the same as multiplying that single probability distribution by 50.)</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp &lt;- dpois(0:9, out.pois$estimate)*50</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(exp)</div>
+<span class="style24">[1] 10.84896</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(table(aphid.data))</div>
+<span class="style24">[1] 9</span>
+</p>
+<p>Notice that the expected values have a larger maximum than the observed values. If we sum the expected counts we find that they don't add up to 50. Equivalently, if we sum the predicted probability distribution, the probabilities don't sum to one.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(dpois(0:9, out.pois$estimate))</div>
+<span class="style24">[1] 0.9969393</span>
+<p><a name="ppois"></a>That's because we're leaving off the tail probability. The Poisson distribution is unbounded above, so there is a nonzero probability of obtaining an observation with 10 or more counts. We can obtain the tail probability with the <span class="style1">ppois</span> function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # P(X&gt;9) = 1 - P(X &lt;= 9)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1-ppois(9, out.pois$estimate)</div>
+<span class="style24">[1] 0.003060710</span>
+<p><a name="lowertail"></a>Alternatively we can use the <span class="style22">lower.tail</span> argument of <span class="style1">ppois</span> to calculate P(<em>X</em> &gt; 9) directly.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ppois(9, out.pois$estimate, lower.tail=F)</div>
+<span class="style24">[1] 0.00306071</span>
+<p>So, we have a choice. We can create an additional category for both the observed and predicted counts, labeling it '10+' perhaps, or we can just lump P(<em>X</em> &gt; 9) into the last category effectively making it represent '9 or more'. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Choice 1: modify observed and expected counts so that there are 11 categories</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> obs.counts &lt;- c(num.stems,0)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp.counts &lt;- c((dpois(0:9, out.pois$estimate)), 1-ppois(9,out.pois$estimate))*50</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rbind(obs.counts, exp.counts)</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7<br>
+obs.counts 6.000000 8.000000 9.00000&nbsp; 6.00000 6.000000 2.000000 5.000000 3.000000<br>
+exp.counts 1.571491 5.437355 9.40662 10.84896 9.384349 6.493966 3.744852 1.851026<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+obs.counts 1.0000000 4.0000000 0.0000000<br>
+exp.counts 0.8005683 0.3077739 0.1530355</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Choice 2: add NB tail to last observed category</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp.pois &lt;- c((dpois(0:8, out.pois$estimate)), 1-ppois(8,out.pois$estimate))*50</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rbind(num.stems, exp.pois)</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7<br>
+num.stems 6.000000 8.000000 9.00000&nbsp; 6.00000 6.000000 2.000000 5.000000 3.000000<br>
+exp.pois&nbsp; 1.571491 5.437355 9.40662 10.84896 9.384349 6.493966 3.744852 1.851026<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9<br>
+num.stems 1.0000000 4.0000000<br>
+exp.pois&nbsp; 0.8005683 0.4608094</span>
+<p>Notice that in the second choice I calculate <span class="style10">dpois(0:8)</span> and then use <span class="style10">1-ppois(8)</span> for the last observed category.  I verify that the expected counts now sum to 50.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sum(exp.pois)</div>
+<span class="style24">[1] 50</span>
+<p>Either of these choices is reasonable. In what follows I use the second option. In order to add the expected counts to the bar chart I need to know the <em>x</em>-coordinates of the centers of the bars. You might think these are just the labels that appear below the bars, but in fact the labels shown need not correspond to the coordinate system R has used. Fortunately the coordinates used are returned by R when you assign the results of the <span class="style1">barplot</span> function to an object. The coordinates of the bars are the return value of the<span class="style1"> barplot</span> function. To ensure that the expected values (which will be added to the graph with the <span class="style1">points</span> function) are displayed completely I will need to use the <span class="style22">ylim</span> argument of <span class="style1">barplot</span> to extend the <em>y</em>-axis to include the maximum expected count. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.bar &lt;- barplot(num.stems, ylim=c(0,11))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.bar</div>
+<span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+&nbsp;[1,]&nbsp; 0.7<br>
+&nbsp;[2,]&nbsp; 1.9<br>
+&nbsp;[3,]&nbsp; 3.1<br>
+&nbsp;[4,]&nbsp; 4.3<br>
+&nbsp;[5,]&nbsp; 5.5<br>
+&nbsp;[6,]&nbsp; 6.7<br>
+&nbsp;[7,]&nbsp; 7.9<br>
+&nbsp;[8,]&nbsp; 9.1<br>
+&nbsp;[9,] 10.3<br>
+[10,] 11.5</span>
+<p><a name="type"></a> I use the <span class="style1">barplot</span> coordinates as the <span class="style22">x</span> argument of the <span class="style1">points</span> function. The <span class="style22">type='o'</span> option specifies that point symbols should be overlaid on top of line segments connecting the points.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(out.bar, exp.pois, pch=16, cex=.9, type='o')</div>
+<p><a name="namesarg"></a>We probably should relabel the last category to indicate that it is '9 or more' rather than just 9. The <span class="style1">barplot</span> function has an argument <span class="style22">names.arg</span> that can be used to modify the labels appearing under the bars. I also add a legend that identifies the model being fit.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#relabel bars</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.bar &lt;- barplot(num.stems, ylim=c(0,11), names.arg=c(0:8,'9+'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> points(out.bar, exp.pois, pch=16, cex=.9, type='o')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">legend('topright', 'Poisson model', pch=16, col=1, lty=1, cex=.9, bty='n')</div>
+<p align="center"><img src="../../images/lectures/lecture15/fig2.png" width="360" height="265" alt="fig. 2"></p>
+<p align="center" class="styleArial"><strong>Fig. 2 </strong>&nbsp;Fit of the Poisson model</p>
+<p> Based on the plot the fit doesn't look very good. </p>
+<h2 align="left"><a name="pearson"></a>Pearson chi-squared goodness of fit test for discrete data</h2>
+<p>We can test the fit of the Poisson model formally with the Pearson chi-squared goodness of fit test. The Pearson chi-squared test compares the observed category frequencies to the frequencies predicted by a model (referred to as the expected frequencies) using the following formula.</p>
+<p align="center"><img src="../../images/lectures/lecture15/Pearsonchisquare.gif" width="273" height="65"></p>
+<p>where <em>m</em> is the number of categories. It turns out the Pearson chi-squared statistic has a chi-squared distribution.</p>
+<blockquote>
+  <p align="center"><img src="../../images/lectures/lecture15/pearsondistribution.gif" width="102" height="33"></p>
+</blockquote>
+<p>The degrees of freedom are the number of categories, <em>m</em>, minus one minus the number of estimated parameters, <em>p</em>, used in obtaining the expected frequencies. The null hypothesis of this test is that the fit is adequate. </p>
+<blockquote>
+  <p>H<sub>0</sub>: model fits the data<br>
+  H<sub>1</sub>: model does not fit the data</p>
+</blockquote>
+<p>We should reject the null hypothesis at level &alpha; if the observed value of our test statistic exceeds the 1 &ndash; &alpha; quantile of a chi-squared distribution with <em>m</em> &ndash; 1 &ndash; <em>p</em> degrees of freedom.</p>
+<p align="center">Reject if <img src="../../images/lectures/lecture15/rejectnull.gif" width="157" height="33" align="absmiddle"></p>
+<p><a name="rule20" id="rule20"></a>The chi-squared distribution of <img src="../../images/lectures/lecture15/X2.gif" width="28" height="25" align="absmiddle"> is an asymptotic result. For it to hold the fitted values, the expected frequencies obtained using the model, should be large. A general rule is that the expected cell counts should be 5 or larger, although with many categories Agresti (2002) notes that an expected cell frequency as small as 1 is okay as long as no more than 20% of the expected counts are less than 5. The difficulty in applying this rule when fitting a model such as the Poisson model to data is that the theoretical count distribution is infinite (although the probabilities after a certain point are essentially zero). So the 20% guideline is not well-defined.</p>
+<p>For our data   quite a few of the expected counts are small. In the code below I calculate the expected frequencies, <img src="../../images/lectures/lecture15/expectedcounts.gif" width="108" height="30" align="absmiddle">, for Poisson counts ranging from 0 to 12. From the output we see that  the  expected frequencies  exceed 5 only for <em>k</em> = 1, 2, 3, 4, and 5. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dpois(0:12, out.pois$estimate)*50</div>
+<span class="style24">&nbsp;[1]&nbsp; 1.571490812&nbsp; 5.437355498&nbsp; 9.406620322 10.848963362&nbsp; 9.384348629<br>
+&nbsp;[6]&nbsp; 6.493966014&nbsp; 3.744851868&nbsp; 1.851025857&nbsp; 0.800568284&nbsp; 0.307773876<br>
+[11]&nbsp; 0.106489708&nbsp; 0.033495837&nbsp; 0.009657961</span>
+<p>What to do in such a situation is not entirely clear. The standard recommendation, cited for example in Sokal and Rohlf (1995) is to pool categories. They write, p. 702, &quot;Whenever classes with expected frequencies of less than five occur, expected and observed frequencies for those classes are generally pooled with an adjacent class to obtain a joint class with an expected frequency <img src="../../images/lectures/lecture15/fhat.gif" width="50" height="32" align="absmiddle">.&quot; The number of categories <em>m</em> is thereby reduced in the degrees of freedom of the chi-squared distribution. Not everyone agrees with this. Here's a sampling from the literature. </p>
+<ol>
+  <li>Cameron &amp; Trivedi (1998), p. 157. These authors recommend pooling but don't give an absolute criterion: &quot;&hellip;it is insightful to compare predicted relative frequencies <img src="../../images/lectures/lecture15/phati.gif" width="23" height="30" align="absmiddle"> with  actual relative frequencies <img src="../../images/lectures/lecture15/pbari.gif" width="23" height="30" align="absmiddle">. These are given in Table 5.6 where counts of five or more are grouped into the one cell to prevent cell sizes from getting too small.&quot;</li>
+  <li>Le (1998), p. 209. This author uses  a frequency of 1 as the cutoff: &quot;It is also recommended that adjacent groups at the bottom of the table be combined in order to avoid having any expected frequencies less than 1.&quot;</li>
+  <li>Morgan (2000), p. 17. This author says never pool: &quot;We note here that several of the fitted values are small (say, less than 5), and it is a common practice to pool over categories, to obtain larger expected values. This is somewhat arbitrary and potentially dangerous, and should be avoided if possible.&quot;</li>
+</ol>
+<p>My comments on this are the following. </p>
+<ol>
+  <li>Pooling is unavoidable. Because tail probabilities for discrete count models run forever, it is always necessary to at least pool the observations in the tail. It is not clear though where this should begin without additional guidelines, but a sensible approach would be to add the expected tail probabilities to the last category for which the observed counts are also nonzero. My rationale for this is the following. Every additional cell beyond the last for which the observed count is zero will add the value of the expected count to the chi-squared statistic, no matter how small the expected count, while at the same time add 1 to the degrees of freedom. To see this consider  the generic term of the Pearson chi-squared test when the observed count is 0. </li>
+</ol>
+
+    <blockquote>
+      <p align="center"><img src="../../images/lectures/lecture15/zerocounts.gif" width="453" height="65"></p>
+    </blockquote>
+
+<blockquote>
+  <p>If there are many such cases the  effective result will be to dilute a significant lack of fit that may be occurring if we had just looked at the nonzero cells. Generally speaking, a chi-squared random variable to be significant must at least exceed its degrees of freedom. Each of these terms adds one degree of freedom to the test statistic. If at the same time the expected frequency is less than 1 then these terms will reduce rather than increase the lack of fit as measured by the test statistic. So I think pooling these cells in the tail makes sense. </p>
+</blockquote>
+<ol start="2">
+  <li>There is no doubt  that when the expected cell counts are small the asymptotic chi-squared distribution is a bad approximation to the true distribution of the test statistic.</li>
+  <li>The reason you carry out the Pearson test is to provide evidence that your model fits the data. If you fail to find a significant lack of fit and  you chose to pool (or not) then you need to investigate whether pooling had an effect on the result you obtained. This is the fundamental difference between model falsification and model confirmation. We can falsify models conclusively, but we can't unequivocally confirm them. If the manner in which the pooling was done was  arbitrary, then pooling in some other way is a good check on your results. The bottom line is that you need to convince a skeptic that you tried your best to falsify your model but were unable to do so. </li>
+  <li>Randomization tests (parametric bootstrap) may be an option when there are small expected cell counts. I discuss this approach <a href="lecture15.htm#poissonsimulate">below</a>.</li>
+</ol>
+<h2 align="left"><a name="poissontest" id="poissontest"></a>Testing the fit of the Poisson model analytically</h2>
+<h3 class="style18"><strong><a name="poissonparametric" id="poissonparametric"></a>Parametric goodness of fit test</strong></h3>
+<p>Using 5 as a cut-off we see that we should combine the first two expected counts corresponding to <em>k</em> = 0 and <em>k</em> = 1. Turning to the right hand tail of the distribution, <em>k</em> = 6 is the first expected count to drop under 5. If we calculate the sum of the expected counts greater than 6 we see that these don't exceed 5 either. So we should combine all category counts for <em>k</em> &ge; 6 </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># count X = 6</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dpois(6, out.pois$estimate)*50</div>
+<span class="style24">[1] 3.744852</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># counts X &gt; 6 </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> (1-ppois(6, out.pois$estimate))*50</div>
+<span class="style24">[1] 3.112403</span>
+</p>
+<p>Note: <span class="style101">ppois(6,out.pois$estimate))</span> = P(<em>X</em> &le; 6). Therefore, <span class="style101">1&ndash;ppois(6,out.pois$estimate))</span> = P(<em>X</em> &gt; 6). So, I add <em>X</em> = 6 to the tail too.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">expected.p &lt;- c(sum(dpois(0:1, out.pois$estimate)), dpois(2:5, out.pois$estimate), 1-ppois(5, out.pois$estimate))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> expected &lt;- expected.p*50</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> expected</div>
+<span class="style24">[1] 7.008846 9.406620 10.848963 9.384349 6.493966 6.857255</span>
+</p>
+<p>I next group the observed counts in exactly the same way: pool the first two, keep the next four separate, and pool the remainder. I use <span class="style101">length(num.stems)</span> to locate the position of the last value. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> observed &lt;- c(sum(num.stems[1:2]), num.stems[3:6], sum(num.stems[7:length(num.stems)]))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> observed</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;2 3 4 5 <br>
+14 9 6 6 2 13</span>
+<p><a name="qchisq"></a>Finally I carry out the Pearson chi-squared test. It can be calculated  by hand or extracted from the output of the <span class="style1">chisq.test</span> function. The hand calculations are as follows.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pearson &lt;- sum((observed-expected)^2/expected)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pearson</div>
+<span class="style24">[1] 18.99147</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> df &lt;- length(observed)-1-1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> df</div>
+<span class="style24">[1] 4</span><br>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> qchisq(.95,df)</div>
+<span class="style24">[1] 9.487729</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> p.val &lt;- 1-pchisq(pearson,df)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> p.val</div>
+<span class="style24">[1] 0.0007889844</span><br>
+
+
+<p>The <em>p</em>-value is quite small indicating a significant lack of fit. Alternatively, the critical value for our test is 9.49 and the observed value of our test statistic is 18.99, so the value of the test statistic exceeds the critical value. Therefore we reject the null hypothesis that the fit is adequate.</p>
+<p name="chisqtest"><a name="chisqtest"></a>We can also use the <span class="style41">chisq.test</span> to perform the Pearson chi-square goodness of fit test. Its help screen is shown below (Fig. 3).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ?chisq.test</span></div>
+<p align="center"><img src="../../images/lectures/lecture15/chisq.png" width="618" height="385"></p>
+<p align="center" class="styleArial"><strong>Fig. 3</strong>&nbsp;&nbsp;&nbsp;Help screen for chisq.test</p>
+<p>The entries relevant to us are <span class="style22">x</span> and <span class="style22">p</span>. The <span class="style22">x</span>= argument should contain the observed counts. The <span class="style22">p</span>= argument should contain the expected probabilities (not the expected counts). I try it for our grouped data.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> chisq.test(observed, p=expected.p)</div>
+<span class="style24">Chi-squared test for given probabilities</span>
+<p> <span class="style24">data: observed <br>
+  X-squared = 18.9915, df = 5, p-value = 0.001929</span>
+<p>Observe that while the value of the test statistic is correct,  the <em>p</em>-value is wrong as are the degrees of freedom. That's because the function doesn't know we estimated a parameter in order to obtain the expected probabilities. We can correct this by using <span class="style1">chisq.test</span> to obtain the Pearson statistic, but then calculate the <em>p</em>-value ourselves. I rerun the chi-squared test and save the result as an object in R.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.chisq &lt;- chisq.test(observed, p=expected.p)</div
+>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(out.chisq)</div>
+<span class="style24"> [1] &quot;statistic&quot; &quot;parameter&quot; &quot;p.value&quot;&nbsp;&nbsp; &quot;method&quot;&nbsp;&nbsp;&nbsp; &quot;data.name&quot; &quot;observed&quot; <br>
+[7] &quot;expected&quot;&nbsp; &quot;residuals&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.chisq$statistic</div>
+<span class="style24"> X-squared <br>
+&nbsp;18.99147 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.chisq$parameter</div>
+<span class="style24"> df <br>
+&nbsp;5</span>
+<p>The <span class="style16">$statistic</span> component contains the Pearson statistic. The <span class="style16">$parameter</span> component contains the number of categories minus one, <em>m</em> &ndash; 1. Because we estimated one parameter the degrees of freedom should be decreased by one more.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(out.chisq$statistic, df=out.chisq$parameter-1)</div>
+<span class="style24"> &nbsp;&nbsp; X-squared <br>
+0.0007889844</span>
+<p>This matches the hand-calculation carried out above. So, we reject the null hypothesis and conclude that there is a significant lack of fit. If we supply the original unpooled data and expected probabilities to chisq.test, it warns us that the assumptions of the test are being violated.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.p &lt;- c(dpois(0:8, out.pois$estimate), 1-ppois(8,out.pois$estimate))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> chisq.test(num.stems, p=poisson.p)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi-squared test for given probabilities</span>
+<p><span class="style24">data:&nbsp; num.stems <br>
+  X-squared = 48.5686, df = 9, p-value = 1.999e-07</span>
+<p><span class="style24">Warning message:<br>
+  In chisq.test(num.stems, p = exp.pois.p) :<br>
+  &nbsp; </span><span class="style25">Chi-squared approximation may be incorrect
+  </span>
+<h3><strong><a name="poissonsimulate" id="poissonsimulate"></a>Simulation-based goodness of fit test</strong> (parametric bootstrap)</h3>
+<p name="simulatepvalue"><a name="simulatepvalue"></a>The <span class="style41">chisq.test</span> has an additional argument called <span class="style22">simulate.p.value</span>. Setting this argument to <span class="style8">TRUE</span> causes R to carry out a Monte Carlo simulation (parametric bootstrap) to obtain the <em>p</em>-value of the observed value of the test statistic <img src="../../images/lectures/lecture15/X2.gif" width="28" height="25" align="absmiddle">.
+  This works as follows. </p>
+<ol>
+  <li>The expected probability vector <strong>p</strong> is used to randomly generate new data. In the current problem <strong>p</strong> has ten components. Let the ten components of <strong>p</strong> be labeled p<sub>0</sub>, p<sub>1</sub>, ... , p<sub>9</sub>. At each step of the simulation we generate a new observation. The new observation has probability p<sub>0</sub> of being a 0, probability p<sub>1</sub> of being a 1, etc. Thus we are essentially generating a random observation from a specified multinomial distribution. This step can be easily programmed by using a uniform random number generator.</li>
+  <li>Repeat this as many times as there are observations. That means with  the current data set  the procedure should be carried out 50 times, each time obtaining one of the values  0 to 9. These 50 simulated observations become the new set of raw counts. </li>
+  <li>Next calculate <img src="../../images/lectures/lecture15/X2.gif" width="28" height="25" align="absmiddle"> using these simulated data as if they were the observed values. The expected values are obtained, as usual, by multiplying the components of <strong>p</strong> by 50. Denote this chi-squared statistic <img src="../../images/lectures/lecture15/x2sim.gif" width="38" height="30" align="absmiddle">.</li>
+  <li>Step 3 is carried out a total of B times (by default  B = 2000). Each time a new set of 50 simulated observations is generated and the corresponding <img src="../../images/lectures/lecture15/X2.gif" width="28" height="25" align="absmiddle"> statistic is calculated. So in the end there will be B = 2000 values of <img src="../../images/lectures/lecture15/x2sim.gif" width="38" height="30" align="absmiddle">.</li>
+  <li> Calculate <img src="../../images/lectures/lecture15/X2.gif" width="28" height="25" align="absmiddle"> using the actual observations. Denote this value by <img src="../../images/lectures/lecture15/x2obs.gif" width="38" height="30" align="absmiddle"> and add it the vector of <img src="../../images/lectures/lecture15/x2sim.gif" width="38" height="30" align="absmiddle"> values.</li>
+  <li>Finally  count up the number of <img src="../../images/lectures/lecture15/x2sim.gif" width="38" height="30" align="absmiddle">values that are greater than or equal to <img src="../../images/lectures/lecture15/x2obs.gif" width="38" height="30" align="absmiddle">, (there will always be one such value because <img src="../../images/lectures/lecture15/x2obs.gif" width="38" height="30" align="absmiddle"> is included among the <img src="../../images/lectures/lecture15/x2sim.gif" width="38" height="30" align="absmiddle"> values in  step 5), and divide the result by B + 1. This is the simulation-based <em>p</em>-value.</li>
+</ol>
+<p>The beauty of this approach is that it avoids the whole issue of whether the asymptotic chi-squared distribution is appropriate or not, because it doesn't use it! The set of simulated values defines the  distribution of the <img src="../../images/lectures/lecture15/X2.gif" width="28" height="25" align="absmiddle"> statistic under the null hypothesis that the model fits the data.  The issue of pooling doesn't arise, because it's not necessary. Having said that it is still necessary to combine the tail probabilities of the probability model in order to create the vector <strong>p</strong> used in the simulation. In addition there is no penalty for overfitting like there is in the parametric Pearson test where the degrees of freedom of the test statistic get reduced by <em>p</em>, the number of estimated parameters.</p>
+<p>I redo the goodness of fit test this time setting <span class="style22">simulate.p.value=TRUE</span>. I calculate the predicted probabilities using the Poisson model adding the tail probability to the last observed category, <em>X</em> = 9.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.p &lt;- c(dpois(0:8, out.pois$estimate), 1-ppois(8, out.pois$estimate))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">chisq.test(num.stems, p=poisson.p, simulate.p.value=TRUE)</div>
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi-squared test for given probabilities with simulated p-value<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (based on 2000 replicates)</span>
+<p><span class="style24">data:&nbsp; num.stems <br>
+  X-squared = 48.5686, df = NA, p-value = 0.0004998</span>
+<p>Observe that the reported <em>p</em>-value is equal to <img src="../../images/lectures/lecture15/pval1.gif" width="48" height="30" align="absmiddle"> meaning that the observed value of the test statistic was larger than any of the simulated values. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">1/2001</div>
+<span class="style24">[1] 0.0004997501</span>
+<p><a name="Barg"></a>With 2000 simulations our <em>p</em>-value is accurate to 2 or 3 decimal places. Thus the best we can say is that the true <em>p</em>-value is probably less than 0.001. To get a more accurate result we can increase the number of simulations by specifying our own value for the argument <span class="style22">B</span>. I try 9,999 simulations. I choose 9,999 so that when we include the observed value of our test statistic as one of the simulations we get the nice round number  10,000.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">chisq.test(num.stems, p=poisson.p, simulate.p.value=TRUE, B=9999)</div>
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi-squared test for given probabilities with simulated p-value<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (based on 9999 replicates)</span>
+<p><span class="style24">data:&nbsp; num.stems <br>
+  X-squared = 48.5686, df = NA, p-value = 3e-04</span>
+<p>The reported <em>p</em>-value is equal to <img src="../../images/lectures/lecture15/pval2.gif" width="56" height="30" align="absmiddle"> and tells us that there were two additional simulated values of <img src="../../images/lectures/lecture15/x2sim.gif" width="38" height="30" align="absmiddle"> as extreme as <img src="../../images/lectures/lecture15/x2obs.gif" width="38" height="30" align="absmiddle">.  We now have roughly 3-decimal place accuracy for our <em>p</em>-value and can report <em>p</em> &lt; .001. </p>
+<h2><a name="NB"></a>Negative Binomial Distribution</h2>
+<p>It is clear both graphically and analytically that the Poisson model does not provide an adequate fit to the aphid count data. One obvious explanation is that our model is too simple&mdash;we're assuming that a single value of &lambda; is appropriate for all 50 observations. So a next logical step would be to allow &lambda; to vary depending upon the value of measured predictors. Often though even after including significant predictors a Poisson regression model may still exhibit a significant lack of fit. In that case a possible solution is to switch from a Poisson distribution to a negative binomial distribution as a model for the response.</p>
+<h3><a name="background"></a>Some background on the binomial distribution</h3>
+<p>Before presenting the definition of the negative binomial distribution we need to briefly discuss the binomial distribution to which it is related. (We will explore the binomial distribution in greater detail later in the course.) In order for an experiment to be considered a binomial experiment   four basic assumptions must hold.</p>
+<ol>
+  <li>The experiment must consist of a sequence of trials in which each trial is a Bernoulli trial, meaning only one of two outcomes with probabilities <em>p</em> and 1 &ndash; <em>p </em>can occur. </li>
+  <li> The number of trials is fixed ahead of time at <em>n</em>, a value that is known to us.</li>
+  <li>The probability <em>p</em> is the same on each Bernoulli trial.</li>
+  <li>The Bernoulli trials are independent. Recall that for independent events <em>A</em> and <em>B</em>, <img src="../../images/lectures/lecture15/independence.gif" alt="independence" width="193" height="30" align="absmiddle">.</li>
+</ol>
+<p>A simple illustration of a binomial random variable is the response of a seed germination experiment.
+  Suppose an experiment is carried out in which 100 seeds are planted in a pot and the number of seeds that germinate is recorded. Suppose this is done repeatedly for different pots that are subjected to various light regimes, burial depths, etc. Clearly the first two assumptions of the binomial model hold here.</p>
+<ol>
+  <li>The outcome on individual trials (the fate of an individual seed in the pot) is dichotomous (germinated or not). </li>
+  <li>The number of trials (number of seeds per pot) was fixed ahead of time at 100.</li>
+</ol>
+<h3><strong><a name="binderiv"></a>Derivation of the formula of the binomial probability mass function </strong></h3>
+<p>Suppose we have five independent Bernoulli trials with the same probability <em>p</em> of success on each trial. If we observe the event: </p>
+<p align="center"><img src="../../images/lectures/lecture15/SF&#32;event.gif" alt="success pattern" width="138" height="27" align="absmiddle">,</p>
+<p>i.e., three successes and two failures in the order shown, then by independence this event has probability </p>
+<p align="center">&nbsp;<img src="../../images/lectures/lecture15/probevent.gif" alt="probability of one permutation" width="252" height="30" align="absmiddle">. </p>
+<p>But in a binomial experiment we don&rsquo;t observe the actual sequence of outcomes, just the number of successes, in this case 3. There are many other ways to get 3 successes, just rearrange the order of <em>S</em> and <em>F</em> in the sequence <em>SFSSF</em>. So, the probability we have calculated here is too small. How many other distinct arrangements (permutations) of three <em>S</em>s and two <em>F</em>s are there?</p>
+<ul>
+  <li>If all permutations are distinguishable, as in <em>ABCDE,</em> then elementary counting theory tells us there are 5! = 120 different arrangements. </li>
+  <li>Replace <em>B</em> and <em>E</em> in this permutation by <em>F</em> yielding <em>AFCDF</em> so that now the second and fifth outcomes are indistinguishable. In the original sequence <em>ABCDE</em> and <em>AECDB</em> would be recognizable as different arrangements, but now they would be indistinguishable. With five distinct letters every time you write down a different arrangement of the five letters you immediately get another arrangement just by swapping the <em>B</em> and <em>E</em>. So when <em>B</em> and <em>E</em> are identical, 5! over counts the number of arrangements by a factor of 2.</li>
+  <li>Now suppose we replace <em>A</em>, <em>C</em>, and <em>D</em> by <em>S</em> to yield <em>SBSSE</em>. In the original sequence you could write down one arrangement of the letters and then immediately get 3! = 6 more by swapping the letters <em>A</em>, <em>C</em>, and <em>D</em> in all possible ways. Thus when <em>A</em>, <em>C</em>, and <em>D</em> are indistinguishable 5! over counts the number of possible arrangements by a factor of 6.</li>
+</ul>
+<p name="binomialcoefficient"><a name="binomialcoefficient"></a>Thus to answer the original question, the number of distinct arrangements of three <em>S</em>s and two <em>F</em>s is</p>
+<p align="center"><img src="../../images/lectures/lecture15/combinatorial.gif" width="170" height="65" alt="combinatorial"></p>
+<p>where the last two symbols are two common notations for this quantity. Carrying out the arithmetic of this calculation we find that there are ten distinct arrangements of three <em>S</em>s and two <em>F</em>s. The first notation, <img src="../../images/lectures/lecture15/fivechoosethree.gif" alt="binomial coefficient" width="58" height="65" align="absmiddle">, is called a <strong>binomial coefficient</strong> and is read &quot;5 choose 3&quot;. The <em>C</em> in the second notation denotes &quot;combination&quot; and thus <img src="../../images/lectures/lecture15/fiveCthree.gif" alt="combination" width="33" height="27" align="absmiddle"> is the number of combinations of five things taken three at a time. Putting this altogether, if <img src="../../images/lectures/lecture15/binomial5p.gif" alt="binomial" width="163" height="32" align="absmiddle"> then</p>
+<p align="center"><img src="../../images/lectures/lecture15/probxequal3.gif" alt="Prob(X=3)" width="238" height="65" align="absmiddle">.</p>
+For a generic binomial random variable, <img src="../../images/lectures/lecture15/binomial.gif" alt="binomial" width="158" height="30" align="absmiddle">, in which the total number of trials is denoted by <em>n</em>, we have
+</li>
+<p align="center"><img src="../../images/lectures/lecture15/probgenericbinomial.gif" alt="P(X=k)" width="253" height="65" align="absmiddle">.</p>
+<p align="left">Here <em>k</em> = 0, 1, 2, &hellip; , <em>n</em>.</p>
+<h3 align="left"><a name="characteristics"></a>Characteristics of the negative binomial distribution</h3>
+<p>The negative binomial distribution is a popular alternative to the Poisson distribution as a model for count data (White and Bennetts, 1996; Ver Hoef and Bodeng, 1997; O'Hara and Kotze, 2010; Hilbe, 2011; Lind&eacute;n and  M&auml;ntyniemi. 2011). I list some of the  characteristics of the negative binomial distribution below.</p>
+<ul>
+  <li>A negative binomial (NB) random variable is discrete. A typical use of the negative binomial distribution is as a model for count data.</li>
+  <li>Like the Poisson distribution the negative binomial distribution is bounded on one side. It is bounded below by 0, but is theoretically unbounded above.</li>
+  <li>Suppose we have a sequence of independent Bernoulli trials in which the probability of a success on any given trial is a constant <em>p</em>. Let <em>X<sub>r</sub></em> denote the number of failures that are endured before <em>r</em> successes are achieved. Then <em>X<sub>r</sub></em> is said to have a negative binomial distribution with parameter <em>p</em> (and <em>r</em>). </li>
+  <li>The negative binomial is a two-parameter distribution, but like the ordinary binomial one of the parameters, in this case <em>r</em>, is usually treated as known.</li>
+</ul>
+<h3><strong><a name="derivation"></a>Derivation of the formula of the negative binomial probability mass function</strong></h3>
+<p>The probability mass function of the negative binomial distribution comes in two distinct versions. The first one is the one that appears in every introductory probability textbook; the second is the one that appears in books and articles in ecology. Although the ecological definition is just a reparameterization of the mathematical definition, the reparameterization has a profound impact on the way the negative binomial distribution gets used. We'll begin with the mathematical definition. From an ecological standpoint the mathematical definition is rather bizarre and except for perhaps modeling the number of rejections one has to suffer before getting a manuscript submission accepted for publication, it's hard to see how this distribution is useful. </p>
+<p> Let <em>X<sub>r</sub></em> be a negative binomial random variable with parameter <em>p</em>. Using the definition given above let's calculate <img src="../../images/lectures/lecture15/negbinomialprob.gif" alt="prob" width="88" height="32" align="absmiddle">, the probability of experiencing <em>x</em> failures before <em>r</em> successes are observed.
+  Note: The change in notation from <em>k</em> to <em>x</em> is deliberate. Unfortunately in a number of ecological textbooks the symbol <em>k</em> means something very specific for the negative binomial distribution so I don't want to use it in a generic sense here.</p>
+<p>If we experience <em>x</em> failures and <em>r</em> successes, then it must be the case that we had a total of <em>x</em> + <em>r</em> Bernoulli trials. Furthermore, we know that the last Bernoulli trial resulted in a success, the r<sup>th</sup> success, because that's when the experiment stops. </p>
+<p align="center"><img src="../../images/lectures/lecture15/successes.gif" width="275" height="65" alt="successes"></p>
+<p>What we don't know is where in the first <em>x</em> + <em>r</em> &ndash; 1 Bernoulli trials the <em>x</em> failures and <em>r</em> &ndash; 1 successes occurred. Since the probability of a success is a constant <em>p</em> on each of these trials, we have a binomial experiment in which the number of trials is <em>x</em> + <em>r</em> &ndash; 1. Thus we have the following.</p>
+<p align="center"><img src="../../images/lectures/lecture15/negbinomialformula.gif" width="785" height="195" alt="negative binomial formula"></p>
+<p>So we're done. Note: it's a nontrivial exercise to show that this is a true probability distribution, i.e., </p>
+<p align="center"><img src="../../images/lectures/lecture15/negbinsumto1.gif" width="247" height="65" alt="sum to one"></p>
+<h3><strong><a name="mean"></a>Mean and variance </strong></h3>
+<p>I'll just state the results.</p>
+<p align="center"><img src="../../images/lectures/lecture15/negbinmean.gif" width="158" height="113" alt="NB mean"></p>
+<h2 align="left"><a name="ecological" id="ecological"></a>Ecological parameterization of the negative binomial distribution</h2>
+<p> The ecological definition of the negative binomial is essentially a reparameterization of the formula for the probability mass function that we just derived. </p>
+<p><strong>Step 1: </strong>The first step in the reparameterization is to express <em>p</em> in terms of the mean <em>&mu;</em> and use this expression to replace <em>p</em>. Using the formula for the mean of the negative binomial distribution above, I solve for <em>p</em>. </p>
+<p align="center"><img src="../../images/lectures/lecture15/muofp.gif" width="478" height="113" alt="reparameterization"></p>
+<p>From which it immediately follows that</p>
+<p align="center"><img src="../../images/lectures/lecture15/oneminusp.gif" width="110" height="55" alt="one minus p"></p>
+<p align="left">Plugging these two expressions into the formula for the probability mass function  yields the following.</p>
+<p align="center"><img src="../../images/lectures/lecture15/negbinomialformula2.gif" width="363" height="67" alt="NB formula 2"></p>
+<p><strong>Step 2:</strong> This step is purely cosmetic. Replace the symbol <em>r</em>. There is no universal convention as to what symbol should be used as the replacement. Venables and Ripley (2002) use <em>&theta;</em>. Krebs (1999) uses <em>k</em>. SAS makes the substitution <img src="../../images/lectures/lecture15/alpha.gif" alt="alpha" width="57" height="27" align="absmiddle">. I will use the symbol <em>&theta;</em>.</p>
+<p align="center"><img src="../../images/lectures/lecture15/negbinomialformula3.gif" width="362" height="67" alt="NB formula 3"></p>
+<p><strong>Step 3: </strong>Write the binomial coefficient using factorials.</p>
+<p align="center"><img src="../../images/lectures/lecture15/negbinomialformula4.gif" width="343" height="65" alt="NB formula 4"></p>
+<p><strong>Step 4:</strong> Rewrite the factorials using gamma functions. This step requires a little bit of explanation.</p>
+<h3><a name="gammafunc"></a><strong>Gamma Function </strong></h3>
+<p>The <span class="style9">gamma function</span> is defined as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture15/gammafunction.gif" width="230" height="43" alt="gamma function"></p>
+<p>Although the integrand contains two variables, <em>x</em> and <em>&alpha;</em>, <em>x</em> is the variable of integration and will disappear once the integral is evaluated. So the gamma function is solely a function of <em>&alpha;</em>. The integral defining the gamma function is called an improper integral because infinity appears as an endpoint of integration. Formally such an improper integral is defined as a limit. </p>
+<p>Now if <img src="../../images/lectures/lecture15/alphagt1.gif" width="47" height="22" align="absmiddle">, but still an integer, the integral in the gamma function will be a polynomial times an exponential function. The standard approach for integrating such integrands is to use integration by parts. Integration by parts is essentially a reduction of order technique&mdash;after a finite number of steps the degree of the polynomial is reduced to 0 and the integral that remains to be computed turns out to be <img src="../../images/lectures/lecture15/Gof1.gif" width="42" height="30" align="absmiddle"> (but multiplied by a number of constants). It is a simple exercise in calculus to show that <img src="../../images/lectures/lecture15/Gof1.gif" width="42" height="30" align="absmiddle"> = 1.</p>
+<p>After the first round of integration by parts is applied to the gamma function we obtain the following.</p>
+<p align="center"><img src="../../images/lectures/lecture15/recurrence.gif" width="350" height="75" alt="integration by  parts"></p>
+<p align="left">where in the last step I recognize that the integral is just the gamma function in which <em>&alpha;</em> has been replaced by <img src="../../images/lectures/lecture15/alphaminus1.gif" alt="alpha minus 1" width="45" height="22" align="absmiddle">. This is an example of a recurrence relation; it allows us to calculate one term in a sequence using the value of a previous term. We can use this recurrence relation to build up a catalog of values for the gamma function.</p>
+<p align="center"><img src="../../images/lectures/lecture15/gammarecurrence.gif" width="258" height="188" alt="gamma recurrence"></p>
+<p>So when <em>&alpha;</em> is a positive integer, the gamma function is just the factorial function. But <img src="../../images/lectures/lecture15/gammaofalpha.gif" width="48" height="30" align="absmiddle"> is defined for all positive <em>&alpha;</em>. For example, it can be shown that</p>
+<p align="center"><img src="../../images/lectures/lecture15/gammaofonehalf.gif" width="102" height="35" alt="gamma of one half"></p>
+<p>and then using our recurrence relation we can evaluate others, such as</p>
+<p align="center"><img src="../../images/lectures/lecture15/gammaof3half.gif" width="218" height="35" alt="gamma of threehalf"></p>
+<p><strong>Step 4 (continued):</strong> So using the gamma function we can rewrite the negative binomial probability mass function as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture15/negbinomialformula5.gif" width="343" height="132" alt="neg binomial formula"></p>
+<p align="left">where I've chosen to leave <em>x</em>! alone just to remind us that <em>x</em> is the value whose probability we are computing.</p>
+<p>So what's been accomplished in all this? It would seem not very much, but that's not true. The formula we're left with bears little resemblance to the one with which we started. In particular, all reference to <em>r</em>, the number of successes, has been lost having been replaced by the symbol <em>&theta;</em>. Having come this far, ecologists then take the next logical step. Since the gamma function does not require integer arguments, why not let <em>&theta;</em> be any positive number? And so <em>&theta;</em> is treated solely as a fitting parameter, it's original meaning having been lost (but see below). </p>
+<ul>
+  <li>Engineers sometimes follow the convention of reserving the term &quot;negative binomial distribution&quot; for only the first parameterization we've described, the one in which the parameter <em>r</em> takes on only positive integer values. In contrast they refer to the ecologist's parameterization with the positive continuous parameter <em>&theta;</em> as the Polya distribution. </li>
+  <li>As if this were not confusing enough the engineer's &quot;true&quot; negative binomial distribution is sometimes called the Pascal distribution. Then the two parameterizations we've described are called the Pascal and Polya distributions respectively, and the term negative binomial distribution is not used at all.</li>
+</ul>
+<p>So, what we're left with is a pure, two-parameter distribution, i.e., <img src="../../images/lectures/lecture15/Xdistribnegbin.gif" alt="X distr NB" width="155" height="32" align="absmiddle">, where the only restriction on <em>&mu;</em> and <em>&theta;</em> is that they are positive. With this last change, the original interpretation of the negative binomial distribution has more or less been lost and it is best perhaps to think of the negative binomial as a probability distribution that can be flexibly used to model discrete data. </p>
+<h3><a name="variance" id="variance"></a>The variance of the negative binomial distribution in terms of &mu; and &theta; </h3>
+<p name="dispersion"><a name="dispersion"></a>It turns out that a Poisson random variable can be viewed as a special limiting case of a negative binomial random variable in which the parameter <em>&theta;</em> is allowed to become infinite. Given that there are infinitely many other choices for <em>&theta;</em> the negative binomial distribution is clearly more adaptable than  the Poisson distribution for fitting data. In a sense <em>&theta;</em> is a measure of deviation from a Poisson distribution. For that reason <em>&theta;</em> is sometimes called the <strong class="style9">inverse index of aggregation</strong> (Krebs 1999)&mdash;inverse because small values of <em>&theta;</em> correspond to more clumping than is typically seen in the Poisson distribution. It is also called the <span class="style22">size</span> parameter (documentation for R), but most commonly of all, it is called the <strong class="style9">dispersion parameter</strong> (or <strong class="style9">overdispersion parameter</strong>).</p>
+<p>The relationship between the negative binomial distribution and the Poisson can also be described in terms of the variances of the two distributions. To see this I express the variance of the negative binomial distribution using the parameters of the ecologist's parameterization. </p>
+<p align="center"><img src="../../images/lectures/lecture15/variance2.gif" width="400" height="173" alt="variance"></p>
+<p>Observe that the variance is quadratic in the mean. Since <img src="../../images/lectures/lecture15/parabola1.gif" alt="parabola" width="162" height="58" align="absmiddle">, this represents a parabola opening up that crosses the <em>&mu;</em>-axis at the origin and at the point <img src="../../images/lectures/lecture15/parabola&#32;root.gif" alt="parabola root" width="62" height="27" align="absmiddle">. <em>&theta;</em> controls how fast the parabola climbs.</p>
+<table width="430" border="0" align="center" cellpadding="5">
+  <tr>
+    <td scope="col"><img src="../../images/lectures/lecture15/fig3a.png" width="400" height="295" alt="fig. 3"></td>
+  </tr>
+  <tr>
+    <td class="styleArial"><p style="padding-left: 45px; text-indent:-45px"><strong>Fig. 4</strong> &nbsp;Negative binomial mean-variance relationship as a function of &theta;</td>
+  </tr>
+</table>
+<p> As <img src="../../images/lectures/lecture15/thetagoestoinfinity.gif" width="60" height="23" align="absmiddle">, <img src="../../images/lectures/lecture15/poisson&#32;variance2.gif" width="108" height="30" align="absmiddle">, and we have the variance of a Poisson random variable. For large <em>&theta;</em>, the parabola is very flat while for small <em>&theta;</em> the parabola is narrow. Thus <em>&theta;</em> can be used to describe a whole range of heteroscedastic behavior. Note: In the parameterization of the negative binomial distribution used by SAS, <img src="../../images/lectures/lecture15/SASparam.gif" alt="SAS parameterization" width="58" height="30" align="absmiddle">. Thus the Poisson distribution corresponds to <em>&alpha;</em> = 0 and values of <em>&alpha;</em> &gt; 0 correspond to overdispersion. This is perhaps the more natural parameterization.</p>
+<h2><a name="cited" id="cited"></a>Cited references</h2>
+<ul>
+  <li>Agresti, Alan. 2002. <em>Categorical Data Analysis</em>. Wiley: New York. </li>
+  <li>Cameron, A. Colin and Pravin K. Trivedi. 1998. <em>Regression Analysis of Count Data</em>. Cambridge University Press: New York.</li>
+  <li>Hilbe, Joseph M. 2011. <em>Negative Binomial Regression</em>. Cambridge University Press: New York.</li>
+  <li>Krebs, Charles. 1999. <i>Ecological Methodology</i>. Addison-Wesley: Menlo Park, CA. </li>
+  <li>Le, Chap T. 1998. <em>Applied Categorical Data Analysis</em>. Wiley: New York.</li>
+  <li>Lind&eacute;n, Andreas and Samu M&auml;ntyniemi. 2011. Using negative binomial distribution to model overdispersion in ecological count data. <em>Ecology</em>  <strong>92</strong>: 1414&ndash;1421.<br>
+  </li>
+  <li>Morgan, Byron J. T. 2000. <em>Applied Stochastic Modelling</em>. Arnold Press: London.</li>
+  <li>O'Hara, Robert B. and D. Johan Kotze. 2010. Do not log-transform count data. <em>Methods in Ecology and Evolution</em> <strong>1</strong>: 118&ndash;122.</li>
+  <li>Sokal, Robert R. and F. James Rohlf. 1995. <em>Biometry</em>. W. H. Freeman: New York. </li>
+  <li>Venables, W. N. and B. D. Ripley. 2002. <em>Modern Applied Statistics with S, 4th edition</em>. Springer-Verlag: New York.</li>
+  <li>Ver Hoef, Jay M. and Peter L. Boveng. 2007. Quasi-Poisson vs. negative binomial regression: how should we model overdispersed count data? <em>Ecology</em> <strong>88</strong>: 2766&ndash;2772.</li>
+  <li>White, Gary C., and Robert E. Bennetts. 1996. Analysis of frequency count data using the negative binomial distribution. <em>Ecology</em> <strong>77</strong>: 2549&ndash;2557.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 16, 2012<br>
+      URL: <a href="lecture15.htm#lecture15" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture15.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

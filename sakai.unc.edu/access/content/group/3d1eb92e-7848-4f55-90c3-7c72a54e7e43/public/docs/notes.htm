@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Ecology 563&mdash;R code</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/js/styleswitcher.js"></script> 
+
+<style type="text/css">
+<!--
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+-->
+</style>
+
+</head>
+
+<body>
+<h1 align="center"><a name="notes" id="notes"></a>Ecology 563&mdash;R code from lecture</h1>
+<p align="left">These are text files containing the history of my R sessions from class. I have edited out the mistakes but there is only minimal commentary. Treat these files as being superseded by the lecture notes once those get posted.</p>
+<p align="left"><a href="../notes/lecture1&#32;Rcode.txt">Lecture 1 (Wednesday, August 22)</a><br>
+<a href="../notes/lecture1&#32;notes&#32;Rcode.txt">Lecture 1 (for notes)<br>
+</a><a href="../notes/lecture2&#32;Rcode.html">Lecture 2 (Monday, August 27)</a><br>
+<a href="../notes/lecture3&#32;Rcode.html">Lecture 3 (Wednesday, August 29)</a><br>
+<a href="../notes/lecture4&#32;Rcode.html">Lecture 4 (Wednesday, September 5)</a><br>
+<a href="../notes/lecture5&#32;Rcode.html">Lecture 5 (Monday, September 10)</a><br>
+<a href="../notes/lecture6&#32;Rcode.html">Lecture 6 (Wednesday, September 12)</a><br>
+<a href="../notes/lecture7&#32;Rcode.html">Lecture 7 (Monday, September 17)</a><br>
+<a href="../notes/lecture8&#32;Rcode.html">Lecture 8 (Wednesday, September 19)<br>
+</a><a href="../notes/lecture9&#32;Rcode.html">Lecture 9 (Monday, September 24)</a><br>
+<a href="../notes/lecture10&#32;Rcode.html">Lecture 10 (Wednesday, September 26)</a><br>
+<a href="../notes/lecture11&#32;Rcode.html">Lecture 11 (Monday, October 1)</a><br>
+<a href="../notes/lecture12&#32;Rcode.html">Lecture 12 (Wednesday, October 3)</a><br>
+<a href="../notes/lecture14&#32;Rcode.html">Lecture 14 (Wednesday, October 10)</a><br>
+<a href="../notes/lecture15&#32;Rcode.html">Lecture 15 (Monday, October 15)</a><br>
+<a href="../notes/lecture16&#32;Rcode.html">Lecture 16 (Wednesday, October 17)</a><br>
+<a href="../notes/lecture17&#32;Rcode.html">Lecture 17 (Monday, October 22)</a><br>
+<a href="../notes/lecture18&#32;Rcode.html">Lecture 18 (Wednesday, October 24)</a><br>
+<a href="../notes/lecture19&#32;Rcode.html">Lecture 19 (Monday, October 29)</a><br>
+<a href="../notes/lecture20&#32;Rcode.html">Lecture 20 (Wednesday, October 31)</a><br>
+<a href="../notes/lecture21&#32;Rcode.html">Lecture 21 (Monday, November 5)</a><br>
+<a href="../notes/lecture22&#32;Rcode.html">Lecture 22 (Wednesday, November 7)</a><br>
+<a href="../notes/lecture23&#32;Rcode.html">Lecture 23 (Monday, November 12)</a><br>
+<a href="../notes/lecture24&#32;Rcode.html">Lecture 24 (Wednesday, November 14)</a><br>
+<a href="../notes/lecture25&#32;Rcode.html">Lecture 25 (Monday, November 19)</a><br>
+<a href="../notes/lecture26&#32;Rcode.html">Lecture 26 (Monday, November 26)</a><br>
+<a href="../notes/lecture27&#32;Rcode.html">Lecture 27 (Wednesday, November 28)</a><br>
+<a href="../notes/lecture28&#32;Rcode.html">Lecture 28 (Monday, December 3)</a><br>
+<a href="../notes/lecture29&#32;Rcode.html">Lecture 29 (Wednesday, December 5)</a><br>
+</p>
+<p align="center"><a href="../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="650" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><p><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--December 6, 2012<br>
+      URL: <a href="notes.htm#notes" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/notes</a></font><font size=-1><a href="notes.htm#notes" target="_self">.htm</a></font></p></td>
+  </tr>
+</table>
+<h4>&nbsp;</h4>
+<p align="left">&nbsp;</p>
+</body>
+</html>

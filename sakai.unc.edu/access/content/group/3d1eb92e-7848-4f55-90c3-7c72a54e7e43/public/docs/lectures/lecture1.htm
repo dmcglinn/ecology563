@@ -1,0 +1,648 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 1&mdash;Wednesday, August 22, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-style:italic;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	
+}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture1"></a>Lecture 1&mdash;Wednesday, August 22, 2012</h1>
+<h3>Topics</h3>
+<ul>
+  <li><a href="lecture1.htm#simple">Simple linear regression</a></li>
+  <li><a href="lecture1.htm#multiple">Multiple regression</a> </li>
+  <li><a href="lecture1.htm#categorical">Categorical predictors in regression</a>
+    <ul>
+      <li><a href="lecture1.htm#coding">Coding categorical predictors</a>
+        <ul>
+          <li><a href="lecture1.htm#dummy">Predictors with two categories</a></li>
+          <li><a href="lecture1.htm#threecats">Predictors with three or more categories</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="lecture1.htm#ANOVA">Analysis of variance</a>
+    <ul>
+      <li><a href="lecture1.htm#treatments">Treatments, factors, and levels</a></li>
+      <li><a href="lecture1.htm#choice">One-way ANOVA  or two-way ANOVA?</a>
+        <ul>
+          <li><a href="lecture1.htm#oneway">One-way design</a></li>
+          <li><a href="lecture1.htm#twoway">Two-way design</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="lecture1.htm#Rcode">R code used in lecture 1</a></li>
+</ul>
+<h3>Terminology </h3>
+<ul>
+  <li><a href="lecture1.htm#ANOVA">analysis of variance</a></li>
+  <li><a href="lecture1.htm#baseline">baseline level </a></li>
+  <li><a href="lecture1.htm#dummy">dummy variable </a></li>
+  <li><a href="lecture1.htm#Ftest">F test</a></li>
+  <li><a href="lecture1.htm#treatments">factor</a></li>
+  <li><a href="lecture1.htm#dummy">indicator variable</a></li>
+  <li><a href="lecture1.htm#treatments">levels</a></li>
+  <li><a href="lecture1.htm#maineffect">main effect</a></li>
+  <li><a href="lecture1.htm#baseline">reference level </a></li>
+  <li><a href="lecture1.htm#dummy">regressor</a></li>
+  <li><a href="lecture1.htm#R2">R<sup>2</sup></a></li>
+  <li><a href="lecture1.htm#interaction">two-factor interaction</a></li>
+  <li><a href="lecture1.htm#treatments">treatment </a></li>
+</ul>
+<h2 align="center"><a name="simple" id="simple"></a>Simple linear regression</h2>
+
+<p>	In simple linear regression we attempt to model the relationship between a single response variable <em>y</em> and a predictor <em>x</em> with an equation of the following form.</p>
+<p align="center"><img src="../../images/lectures/lecture1/reg1.gif" width="132" height="27" alt="reg1"></p>
+<p>This is just the equation of a line with intercept &beta;<sub>0</sub> and  slope &beta;<sub>1</sub> in which we account for the fact that the fit isn't perfect so that there is error represented by &epsilon;. Typically we assume that <img src="../../images/lectures/lecture1/reg2.gif" alt="reg2" width="113" height="35" align="absmiddle">, i.e., that the errors are independent and are drawn from a common normal distribution. Equivalently we could also write</p>
+<p align="center"><img src="../../images/lectures/lecture1/reg3.gif" width="168" height="35" alt="reg3"></p>
+<p>From this formulation we see that the regression line is the mean of the response variable <em>y</em>, i.e., <img src="../../images/lectures/lecture1/reg4.gif" alt="reg4" width="105" height="27" align="absmiddle">, so that the mean changes depending on the value of <em>x</em>.  The parameters of the regression model are typically estimated using least squares.</p>
+<p>To illustrate these ideas and to examine the typical linear regression output from statistical packages, I generate some random data,  use it to construct  a response variable, and finally estimate some simple linear regression models using R.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #generate data for example</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  set.seed(10)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   x1 &lt;- runif(90)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   x2 &lt;- rbinom(90,10,.5)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   x3 &lt;- rgamma(90,.1,.1)</div>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> #organize predictors in data frame</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mydata &lt;- data.frame(x1,x2,x3)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#create noise</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   epsilon &lt;- rnorm(90,0,3)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#generate response: additive model plus noise, intercept=0 </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   mydata$y &lt;- 2*x1+x2+3*x3+epsilon</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#simple linear regression with x1 as predictor</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   out.x1 &lt;- lm(y~x1, data=mydata)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># Fig 1a: plot regression line and mean line</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   plot(y~x1, data=mydata)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   abline(h=mean(mydata$y), col='pink', lwd=3)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">  abline(out.x1, lty=2)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#simple linear regression with x3 as a predictor</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">  out.x3 &lt;- lm(y~x3, data=mydata)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # Fig. 1b: graph regression line and mean line</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">  plot(y~x3, data=mydata)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">   abline(out.x3)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">  abline(h=mean(mydata$y), col=2, lwd=2)</div>
+
+<p>Individual regression lines of <em>y</em> versus <em>x</em><sub>1</sub> and <em>y</em> versus <em>x</em><sub>3</sub> are shown in Fig. 1. A horizontal line located at the mean of the response variable is included for reference. Without additional information or predictors, the sample mean of the response  is the best predictor of a new value of<em> y</em>. </p>
+<table width="650" border="0" align="center" cellpadding="1" cellspacing="0">
+  <tr>
+    <td width="366"><div align="center">(a)&nbsp;&nbsp;<img src="../../images/lectures/lecture1/fig1a.png" alt="fig1a" width="295" height="255" align="texttop"></div></td>
+    <td width="350"><div align="center">(b)&nbsp;&nbsp;<img src="../../images/lectures/lecture1/fig1b.png" alt="fig1b" width="295" height="255" align="texttop"></div></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial" style="padding-left: 55px; text-indent:-45px"><strong>Fig. 1 &nbsp;</strong>Individual regression lines for y versus (a) x1 and (b) y versus x2. The pink horizontal line denotes the response mean. The dashed line is the regression line.</td>
+  </tr>
+</table>
+<p>From the graphs it would appear that<em> y</em> is linearly related to <em>x</em><sub>3</sub> but perhaps not to <em>x</em><sub>1</sub>. (Observe also that it may be the case that a single point in Fig. 1b is having a profound effect on the location of the regression line.) To assess the fit of the lines we can examine the output from the regression.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.x1)</div><br>
+<span class="style24">Call:<br>
+lm(formula = y ~ x1, data = mydata)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -12.178&nbsp; -4.564&nbsp; -1.986&nbsp;&nbsp; 1.389&nbsp; 97.676 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp; <span class="style25">9.6623</span>&nbsp;&nbsp;&nbsp;&nbsp; 2.4493&nbsp;&nbsp; 3.945&nbsp; 0.00016 ***<br>
+  x1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style25">-0.5975</span>&nbsp;&nbsp;&nbsp;&nbsp; 4.8060&nbsp; -0.124&nbsp; <span class="style25">0.90134</span>&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 11.86 on 88 degrees of freedom<br>
+  Multiple R-squared: <span class="style25">0.0001756,</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: -0.01119 <br>
+  F-statistic: 0.01546 on 1 and 88 DF,&nbsp; p-value: 0.9013</span>
+<p>The most  useful features of the output are highlighted in <span class="style100">yellow</span>. We see that the estimated regression line is <span class="style10">9.66 &ndash; 0.60x<sub>1</sub>.</span> The highlighted p-value in the column <span class="style10">Pr(&gt;|t|)</span> is for a test of the null hypothesis that &beta;<sub>1</sub> = 0, i.e., that the slope of the regression line is zero. Because the reported p-value is large, p = 0.90, we fail to reject the null hypothesis. Hence we fail to find evidence that the response<em> y</em> is  linearly related to the predictor <em>x</em><sub>1</sub>. This is also confirmed by the statistic labeled &quot;Multiple R-squared&quot; a commonly-used goodness of fit statistic. For simple linear regression it is the square of the correlation coefficient between <em>y</em> and <em>x</em><sub>1</sub>. It also measures the proportion of the original variability in the response that has been explained by the linear regression. In this case that proportion is almost zero telling us that the regression model is essentially worthless.</p>
+<p>When we turn to the linear regression of<em> y</em> on <em>x</em><sub>3</sub>, the results appear more promising.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.x3)</div>
+<span class="style24">Call:<br>
+lm(formula = y ~ x3, data = mydata)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -9.0089 -2.4768 -0.3318&nbsp; 1.7561 10.3645 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp; <span class="style25">6.3972</span>&nbsp;&nbsp;&nbsp;&nbsp; 0.3965&nbsp;&nbsp; 16.13&nbsp;&nbsp; &lt;2e-16 ***<br>
+  x3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="style25">3.1489</span>&nbsp;&nbsp;&nbsp;&nbsp; 0.1080&nbsp;&nbsp; 29.16&nbsp;&nbsp; <span class="style25">&lt;2e-16</span> ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 3.632 on 88 degrees of freedom<br>
+  Multiple R-squared: <span class="style25">0.9062</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: 0.9051 <br>
+  F-statistic: 850.3 on 1 and 88 DF,&nbsp; p-value: &lt; 2.2e-16</span>
+<p> The reported regression line is  <span class="style10">6.40 &ndash; 3.15x<sub>3</sub>.</span> So, a one unit change in <em>x</em><sub>3</sub> yields a 3.15 unit change in the response. The reported p-value for the test of whether the slope is equal to zero is extremely small, reported as zero to 16 decimal places. So, we reject the null hypothesis and conclude that there is a significant linear relationship between <em>y</em> and <em>x</em><sub>3</sub>. The reported R<sup>2</sup> = 0.91 is also exceedingly high. It tells us that 91% of the original variability of the response is explained by its linear relationship with <em>x</em><sub>3</sub>.</p>
+<p>The reason that R<sup>2</sup> is so high here is largely because of the outlier we observed in Fig. 1b. That point is a long way from the mean response and hence is a major contributor to the variability of the response. The fitted regression line passes almost exactly through this point  so  it contributes nothing to the variability about the regression line. Not surprisingly if we remove this point and refit the regression line to the remaining points, the reported R<sup>2</sup> is much reduced.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#remove outlier in x3 space</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mydata1 &lt;- mydata[mydata$x3&lt;25,]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#verify that one observation was removed</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dim(mydata)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dim(mydata1)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#refit model to reduced data</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.x3a &lt;- lm(y~x3, data=mydata1)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.x3a)</div><br>
+<span class="style24">Call:<br>
+lm(formula = y ~ x3, data = mydata1)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -9.0012 -2.4907 -0.3944&nbsp; 1.7376 10.3448 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp; 6.4170&nbsp;&nbsp;&nbsp;&nbsp; 0.4250&nbsp;&nbsp; 15.10&nbsp;&nbsp; &lt;2e-16 ***<br>
+  x3&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1128&nbsp;&nbsp;&nbsp;&nbsp; 0.2894&nbsp;&nbsp; 10.76&nbsp;&nbsp; &lt;2e-16 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 3.653 on 87 degrees of freedom<br>
+  Multiple R-squared: <span class="style25">0.5708</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: 0.5658 <br>
+  F-statistic: 115.7 on 1 and 87 DF,&nbsp; p-value: &lt; 2.2e-16</span>
+<p>R<sup>2</sup> is now reported to be 0.57. This tells us that R<sup>2</sup> as a goodness of fit statistic is highly sensitive to outliers. </p>
+<p>Of course just because a point is an outlier doesn't mean that it's also influential. If we compare the parameter estimates reported after removing the outlier to those that were obtained from fitting the model to the full data set, we see that they've barely changed.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out1)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x3 <br>
+  &nbsp;&nbsp; 6.397223&nbsp;&nbsp;&nbsp; 3.148869 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(out1a)</div>
+<span class="style24">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x3 <br>
+&nbsp;&nbsp; 6.416984&nbsp;&nbsp;&nbsp; 3.112826</span>
+<p>When we include both lines in the same plot we see that they are nearly indistinguishable over the common range of the two data sets.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(y~x3, data=mydata1)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> #regression line without outlier</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> abline(out.x3, lwd=3, col='grey70')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">abline(h=mean(mydata1$y), col='pink', lwd=3)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#regression line with outlier</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">abline(out.x3a, col=2, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">legend('topleft', c('regression with full data', 'regression with reduced data', 'mean line'), col=c('grey70',2,'pink'), lty=c(1,2,1), lwd=c(3,1,3), bty='n',  cex=.9)</div><br>
+<table width="425" border="0" align="center" cellspacing=0 cellpadding=4>
+  <tr>
+    <td  align="center" valign="center"><img src="../../images/lectures/lecture1/fig2.png" width="380" height="330" alt="fig2"></td>
+  </tr>
+  <tr>
+    <td class="styleArial" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 2 </strong>&nbsp;Comparison of the regression lines of y on x<sub>3</sub> with and without an observation that is an outlier in x<sub>3</sub>-space.<span class="styleArial2"></span></td>
+  </tr>
+</table>
+<h2 align="center"><a name="multiple"></a>Multiple regression</h2>
+<p>Multiple regression is really just a trivial extension of simple linear regression in which one predictor is replaced with multiple predictors. Excluding those situations where the additional predictor is just a function of the original predictor (such as in a quadratic model), a regression model with two predictors defines a plane in three-dimensional space. The geometric object defined by regression models with three or more predictors is called a hyperplane. Without a satisfactory way to visualize multiple regression models geometrically, we're forced to explore them analytically. </p>
+<p>As an illustration I fit a linear regression model for <em>y</em> using the three predictors <em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, and <em>x</em><sub>3</sub>. The regression model assumes the mean is given by</p>
+<p align="center"><img src="../../images/lectures/lecture1/multreg.gif" width="220" height="27" alt="multiple regression model"></p>
+<p> The output of special interest from this model is highlighted in <span class="style100">yellow</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out2 &lt;- lm(y~x1+x2+x3, data=mydata)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">summary(out2)</div>
+<span class="style24">Call:<br>
+lm(formula = y ~ x1 + x2 + x3, data = mydata)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -8.3681 -2.0349 -0.2121&nbsp; 1.6987 10.0899 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp; <span class="style25">2.3468</span>&nbsp;&nbsp;&nbsp;&nbsp; 1.5363&nbsp;&nbsp; 1.528&nbsp;&nbsp; 0.1303&nbsp;&nbsp;&nbsp; <br>
+  x1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="style25">2.6665</span>&nbsp;&nbsp;&nbsp;&nbsp; 1.4303&nbsp;&nbsp; 1.864&nbsp;&nbsp; <span class="style25">0.0657</span> .&nbsp; <br>
+  x2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="style25">0.5756</span>&nbsp;&nbsp;&nbsp;&nbsp; 0.2646&nbsp;&nbsp; 2.175&nbsp;&nbsp; <span class="style25">0.0324</span> *&nbsp; <br>
+  x3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="style25">3.1128</span>&nbsp;&nbsp;&nbsp;&nbsp; 0.1073&nbsp; 29.014&nbsp;&nbsp; <span class="style25">&lt;2e-16</span> ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 3.517 on 86 degrees of freedom<br>
+  Multiple R-squared: <span class="style25">0.9141</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjusted R-squared: 0.9111 <br>
+F-statistic:&nbsp;&nbsp; 305 on 3 and 86 DF,&nbsp; p-value: <span class="style25">&lt;2.2e-16</span></span>
+<p>The <span class="style10">Estimate</span> column tells us that estimated equation for the mean response is given by<span class="style10"> &mu; = 2.35 + 2.67x<sub>1</sub> + 0.58x<sub>2</sub> + 3.11x<sub>3</sub>.</span> Each coefficient in this equation is referred to as a partial regression coefficient (to distinguish it from the coefficient in a simple linear regression model). A partial regression coefficient is a regression coefficient obtained after controlling for the effects of other variables. So, for instance, having controlled for the effect of <em>x</em><sub>2</sub> and <em>x</em><sub>3</sub>, we see that a one unit increase in <em>x</em><sub>1</sub> yields a 2.67 unit change in the response. Observe that this is very different from the regression coefficient that was estimated in the simple linear regression model in which<em> x</em><sub>1</sub>was the only predictor. There the estimated coefficient was negative  (although  not  significantly different from zero).</p>
+<p>Each of the reported p-values in the coefficients table is a variables-added-last test. Thus the p-value p = 0.0657 for <em>x</em><sub>1</sub> is for a test of H<sub>0</sub>: &beta;<sub>1</sub> = 0 given that <em>x</em><sub>2</sub> and <em>x</em><sub>3</sub> are already in the regression model. A similar interpretation holds for the reported p-values for the tests of the coefficients of <em>x</em><sub>2</sub> and <em>x</em><sub>3</sub>. </p>
+<p>Notice that the coefficient of <em>x</em><sub>1</sub> is reported to be almost significant (at &alpha; = .05), p = 0.066, whereas in the simple linear regression model it wasn't even close to being significant, p = 0.901. A possible explanation for this is that most of the variability in the response is due its linear relationship with <em>x</em><sub>3</sub>. In the simple linear regression model the variability in the response due to <em>x</em><sub>3</sub> swamped the variability in the response due to <em>x</em><sub>1</sub> (in part because of the very different scales that <em>x</em><sub>1</sub> and <em>x</em><sub>3</sub> are measured on). Having removed most of the variability due to <em>x</em><sub>3</sub> by including <em>x</em><sub>3</sub> in the multiple regression model, the linear relationship between <em>y</em> and <em>x</em><sub>1</sub> was allowed to emerge.</p>
+<p><a name="Ftest"></a>The p-value that appears at the bottom of the output is for the reported <span class="style1">F-test</span> that tests the overall statistical significance of the regression model. Formally the F-test tests the following hypothesis.</p>
+<p align="center"><img src="../../images/lectures/lecture1/mult&#32;hypothesis.gif" width="320" height="58" alt="mult hypothesis"></p>
+<p>Because the p-value for this test is very small, we reject the null hypothesis and conclude that the response is linearly related to one or more of the predictors (when controlling for the rest).</p>
+<p><a name="R2"></a>The reported <span class="style10">Multiple R-squared</span> statistic is also an intuitive goodness of fit statistic in multiple regression. Before we fit the regression model the variability of the response is measured with respect to the sample mean. After fitting a regression model we replace the sample mean with the regression surface. In the regression model  the mean is no longer assumed to be constant but instead varies with the values of the predictors. Consequently variability is measured with respect to the regression surface. The R<sup>2</sup> statistic compares these two measures of variability, the variability about the mean after we fit the model to the variability about the mean before we fit the model. Fig. 3 illustrates the situation when there is just one predictor.</p>
+<table width="660" border="0" align="center" cellpadding="1" cellspacing="0">
+  <tr>
+    <td>(a) <img src="../../images/lectures/lecture1/fig3a.jpg" width="304" height="303" align="texttop"></td>
+    <td>(b) <img src="../../images/lectures/lecture1/fig3b.jpg" width="306" height="306" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 3 </strong>&nbsp;The two measures of variability that are being compared in the R<sup>2</sup> statistic. (a) illustrates  the variability about the sample mean and  (b) illustrates the variability about the regression line. The amount that the variability has decreased in going from (a) to (b) divided by how much  variability  there originally was in (a) defines R<sup>2</sup>. </td>
+  </tr>
+</table>
+<p>Instead of using  average variability, as measured for example by the variance, R<sup>2</sup> uses total variability, which is the variability not normalized by sample size. If we let <img src="../../images/lectures/lecture1/yhat.gif" alt="yhat" width="17" height="27" align="absmiddle"> denote the estimate of the response from the regression equation then R<sup>2</sup> can be formulated as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture1/R2.gif" width="312" height="112" alt="R2"></p>
+<p>Here <em>n</em> is the number of observations and <em>e</em><sub>i</sub> is the residual, i.e., the deviation of the i<sup>th</sup> observed response value from its estimate on the regression surface. As a demonstration of the formula I calculate the R<sup>2</sup> using the formula and compare it to the number that is reported in the regression output.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">SStotal &lt;- sum((mydata$y-mean(mydata$y))^2)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> SSE &lt;- sum(out2$residual^2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">1-SSE/SStotal</div>
+<span class="style24">[1] 0.9140759</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">summary(out2)$r.squared</div>
+<span class="style24">[1] 0.9140759</span>
+<p>The statistic labeled &quot;adjusted R-squared&quot; in the output is obtained by modifying the R<sup>2</sup> formula so that the two sums of squares terms are replaced by their averages in which unbiased estimates are used for each average. The &quot;adjusted R-squared&quot; can be interpreted as a penalized R<sup>2</sup>. Adjusted R-squared is not necessarily better than R<sup>2</sup> but it has a certain appeal . Ordinary R<sup>2</sup> can never decrease when variables are added to a model. It must go up or at worse stay the same. Adjusted R-squared on the other hand can decrease if a newly added variable doesn't decrease the total variability enough. Thus adjusted R-squared can be used in model selection, whereas ordinary R<sup>2</sup> is not particularly good for this purpose except in very simple cases.</p>
+<h2 align="center"><a name="categorical"></a>Categorical predictors in regression</h2>
+<p> Categorical predictors pose special problems in regression models. By a categorical predictor I mean a variable that is measured on a nominal (or perhaps ordinal) scale whose values serve only to label the categories. </p>
+<p>In experimental data it's common for the response variable to be continuous but for all of the predictors to be categorical. In this situation the various combinations of the values of the categorical predictors are usually referred to as treatments or treatment levels. The categories themselves may be generated artificially by dividing the   scale of a continuous variable into discrete categories. Using categories makes it possible to look for gross effects with a limited amount of data. It also avoids the problem of having to determine the proper functional form for the relationship between the response and a continuous predictor. Categorization is also useful in preliminary work where the primary interest is to determine whether a treatment has any effect at all. Typical choices for the discretizing a continuous predictor are:</p>
+
+  <ul>
+      <li>presence, absence (corresponding to treatment and control) </li>
+      <li>high, low </li>
+      <li>high, medium, low</li>
+    </ul>
+
+  <p>It's also common for the treatment to be intrinsically categorical. For instance in a competition experiment the &quot;treatment&quot; may be the identity of the species that is introduced as the competitor. In this case the categories would be the different species.</p>
+<h3><a name="coding"></a>Coding categorical predictors</h3>
+<p>To say analysis of variance is just  regression with categorical predictors avoids an obvious question, namely how do you include categorical predictors in a regression model? Categorical predictors are nominal variables, i.e., their values serve merely as labels for categories. Even if the categories happen to be assigned numerical values  such as 1, 2, 3, &hellip;, those values often don't mean anything. They're just labels. They could just as well be 'a', 'b', 'c', etc. </p>
+<p><a name="dummy"></a><strong>Categorical variables with two levels. </strong>Suppose we have a nominal variable <em>x</em><sub>4</sub> with two categories labeled &quot;A&quot; and &quot;B&quot;. The usual way to include a categorical variable in a regression model is by creating a set of <span class="style1">dummy (indicator) variables</span>. The following single dummy variable could be used to represent the variable <em>x</em><sub>4</sub>.</p>
+<p align="center"><img src="../../images/lectures/lecture1/dummy1.gif" width="193" height="75" alt="dummy 1"></p>
+<p>To include the predictor <em>x</em><sub>4</sub> in a regression model we use the variable <em>Z</em> (called now a <span class="style1">regressor</span>) instead. This is just a simple linear regression of <em>Y</em> on <em>Z</em>. As usual the regression equation gives the mean of the response variable <em>Y</em>.</p>
+<p align="center"><img src="../../images/lectures/lecture1/regdummy.gif" width="108" height="27" alt="regdummy"></p>
+<p>Because <em>Z</em> can take only two values, the regression model returns only two different values for the mean, one for each category of the original variable <em>x</em><sub>4</sub>. Table 1 summarizes the relationships between the model predictions and the original categories &quot;A&quot; and &quot;B&quot; by plugging in values for <em>Z</em> in the regression equation.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=275 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 1 &nbsp;</strong> Regression model for a categorical predictor with two levels<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="293" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+
+     <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td width="60" scope="col" align="center"><em>x</em><sub>4</sub>
+        </td>
+ 
+        <td width="44" scope="col" align="center"><em>Z</em></td>
+       
+        <td width="169" scope="col" align="center"><img src="../../images/lectures/lecture1/regdummy.gif" width="108" height="27" alt="regdummy"></td>
+    </thead>
+
+    <tr>
+    <tbody>
+      <tr>
+        <td align="center">A</td>
+        <td align="center">0</td>
+        <td align="center"><sub><img src="../../images/lectures/lecture1/mua.gif" width="25" height="27" alt="muA"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">B</td>
+        <td align="center">1</td>
+        <td align="center"><sub><img src="../../images/lectures/lecture1/mub.gif" width="62" height="27" alt="muB"></sub></td>
+      </tr>
+        
+    </tbody>
+    
+  </table>
+</div>
+<p>&beta;<sub>0</sub> is the mean for category A. The regression coefficient &beta;<sub>1</sub> represents the amount the mean response changes when we switch from category A to category B. As a result a test of H<sub>0</sub>: &beta;<sub>1</sub> = 0  here is a test of whether the means of categories A and B are the same.</p>
+<p><strong><a name="threecats"></a>Categorical variables with three levels. </strong>The true essence of the dummy variable method becomes clear when we consider a nominal variable that has more than two categories. Suppose <em>x</em><sub>5</sub> is a nominal variable with categories &quot;low&quot;, &quot;medium&quot;, and &quot;high&quot;. Converting this predictor into a form suitable for use in a regression model requires the creation of two dummy variables as shown below.</p>
+<p align="center"><img src="../../images/lectures/lecture1/dummy2.gif" width="257" height="145" alt="dummy2"></p>
+<p>This coding scheme uniquely identifies each of the three categories as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture1/dummy3.gif" width="203" height="87" alt="dummy 3"></p>
+<p><a name="baseline" id="baseline"></a>(Observe that the combination <em>W</em><sub>1</sub> = 1 and <em>W</em><sub>2</sub> = 1 is a logical impossibility.) The category we obtain when all of the dummy variables are set equal to zero is called the <span class="style1">reference</span> or <span class="style1">baseline category</span>. So in the above coding scheme the &quot;low&quot; category is the reference category.</p>
+<p>To include the categorical predictor <em>x</em><sub>5</sub> with three categories <sub></sub> in a regression model we need to include both of the regressors <em>W</em><sub>1</sub>  and <em>W</em><sub>2</sub> in a multiple regression. Once again the regression equation is for the mean of the response variable <em>Y</em>.</p>
+<p align="center"><img src="../../images/lectures/lecture1/regdummy2.gif" width="175" height="27" alt="reg dummy2"></p>
+<p>In this case the regression model returns three different values for the mean, one for each category of the original variable <em>x</em><sub>5</sub>. Table 2 summarizes the relationships between the categories, dummy variables, and model predictions.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=420 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 2 &nbsp;</strong> Regression model with a categorical predictor with three levels<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="383" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+    <colgroup>
+    </colgroup>
+    <colgroup span=2></colgroup>
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td align="center" width="60" scope="col"><em>x</em><sub>5</sub></td>
+        <td align="center" width="44" scope="col"><em>W</em><sub>1</sub></td>
+        <td align="center" width="44" scope="col"><em>W</em><sub>2</sub></td>
+        <td align="center" width="209" scope="col"><img src="../../images/lectures/lecture1/regdummy2.gif" width="175" height="27" alt="reg dummy2"></td>
+      </tr>
+    </thead>
+    <tr>
+    <tbody>
+      <tr>
+        <td align="center">low</td>
+        <td align="center">0</td>
+        <td align="center">0</td>
+        <td align="center"><sub><img src="../../images/lectures/lecture1/mua.gif" width="25" height="27" alt="muA"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">medium</td>
+        <td align="center">1</td>
+        <td align="center">0</td>
+        <td align="center"><sub><img src="../../images/lectures/lecture1/mub.gif" width="62" height="27" alt="muB"></sub></td>
+      </tr>
+      <tr>
+        <td align="center">high</td>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center"><img src="../../images/lectures/lecture1/regdummy3.gif" width="63" height="27" alt="regdummy3"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ul>
+  
+  <li>The regression coefficient &beta;<sub>0</sub> is the mean of the response in the predictor category &quot;low&quot;. A test of H<sub>0</sub>: &beta;<sub>0</sub> = 0  is a test of whether this mean is zero. Typically this test will be of no interest.</li>
+  <li>The regression coefficient &beta;<sub>1</sub> represents the amount the mean response changes when we switch from category &quot;low&quot; to category &quot;medium&quot;. A test of H<sub>0</sub>: &beta;<sub>1</sub> = 0 then is a test of whether the means of categories &quot;low&quot; and &quot;medium&quot; are the same. </li>
+  <li>The regression coefficient &beta;<sub>2</sub> represents the amount the mean response changes when we switch from category &quot;low&quot; to category &quot;high&quot;. A test of H<sub>0</sub>: &beta;<sub>2</sub> = 0 then is a test of whether the means of categories &quot;low&quot; and &quot;high&quot; are the same.</li>
+</ul>
+<p>The pattern should now be clear. To include a categorical predictor with <em>k</em> different categories in a regression model, we need to create <em>k</em> &ndash; 1 different dummy variables of the kind shown above for <em>k</em> = 3.</p>
+<h2 align="center"><a name="ANOVA" id="ANOVA"></a>Analysis of variance</h2>
+<p>With dummy variables we can analyze the relationship between a continuous response and a set of categorical variables (predictors) using standard regression techniques. But the regression approach is not how this problem was formulated initially. The original methodology that was developed to handle a continuous response and categorical predictors is called <span class="style3">analysis of variance</span>, or ANOVA. The name seems peculiar. If the goal is to compare treatment means why do we instead analyze variance?</p>
+<p>If different treatments have different effects on the response  then we  expect the treatment means to be very different. But if the treatment means differ by a large amount then the variability among the treatment means will also be large. To quantify what constitutes &quot;large&quot; we need an appropriate standard of comparison. For this we can use the natural variability of the  observations making up out study. So, if the average variability of the treatment means is large relative to the average variability of the observations then we can conclude that the treatment effect is important. This is the basis of the F-test that appears in analysis of variance tables. </p>
+<p>When we move to other kinds of regression problems later in this course, we'll replace this notion of comparing different sources of variability with comparing the fit of two competing models: one in which we allow the treatment means to differ and a second model in which we constrain the treatment means to all be the same. Still, even in these cases a version of the analysis of variance table is still useful because it's a rather clever way of extracting the maximal amount of information from a regression model in which the response is continuous  and the predictors are categorical.</p>
+<h3><strong><a name="treatments"></a>Treatments, factors, and levels</strong></h3>
+<p>The term <span class="style1">treatment</span> is used in analysis of variance to describe the conditions that we impose on an observational unit. These conditions derive from the values of one or more categorical variables. In analysis of variance we refer to a categorical variable as a <span class="style1">factor</span>.  The values of the categorical variable are called the <span class="style1">levels</span> of the factor. An example of a factor would be temperature recorded &quot;low&quot;, &quot;medium&quot;, and &quot;high&quot;. Another example of a factor is temperature recorded 25&deg;C, 28&deg;C, and 32&deg;C. In this case the levels are numeric so we could treat the predictor as continuous. We may still prefer to treat them as just categories for the reasons described <a href="lecture1.htm#categorical">previously</a>.</p>
+<h3><strong><a name="choice" id="choice"></a>One-way ANOVA or two-way ANOVA?</strong></h3>
+<p>A regression with a continuous response and a single categorical predictor is called a one-way analysis of variance problem. (If the categorical predictor is a factor with just two levels then a one-way ANOVA reduces to an independent two-sample t-test.) A regression with a continuous response and two categorical predictors is called a two-way analysis of variance problem. With two categorical predictors the treatments are created by combining the levels of the two factors in all possible ways and then randomly assigning observations to these combinations. This raises the question, why not just analyze the two-way ANOVA as a one-way ANOVA in which the combined treatments form the levels of  a single categorical variable?</p>
+<p><strong><a name="oneway"></a>One way design.</strong> As an illustration suppose we have two factors, denoted H and P, each with two levels, &quot;low&quot; and &quot;high&quot;. To make things more concrete suppose this is a greenhouse experiment on plant growth and H is a heat treatment and P is a precipitation treatment. So we combine the two levels of each factor in all possible ways to generate four treatments denoted <strong>hp</strong> (control, H and P both low), <strong>Hp</strong> (H high, P low), <strong>hP</strong> (H low, P high), and <strong>HP</strong> (H high, P high) as summarized in Table 3.</p>
+
+
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=350 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 3 &nbsp;</strong> Two factors treated as a one-way treatment structure</td>
+  </tr>
+</table>
+<div align="center">
+  <table width="350" border="1" align="center" cellpadding=2 cellspacing=0 frame=box >
+
+    <thead>
+       <tr  bgcolor="#F1D2D8">
+
+        <td align="center" rowspan="2" ><strong>Factor</strong></td>
+        <td align="center" colspan="4"><strong>Treatment</strong></td>
+
+      </tr>
+
+      <tr  bgcolor="#F1D2D8">
+
+       
+        <td align="center" width="44" >hp</td>
+        <td align="center" width="44" >Hp</td>
+        <td align="center" width="44" >hP</td>
+          <td align="center" width="44">HP</td>
+      </tr>
+    </thead>
+    <tr>
+    <tbody>
+      <tr>
+        <td align="center">H (heat)</td>
+        <td align="center">low</td>
+        <td align="center">high</td>
+        <td align="center">low</td>
+        <td align="center">high</td>
+      </tr>
+      <tr>
+        <td align="center">P (precipitation)</td>
+        <td align="center">low</td>
+        <td align="center">low</td>
+        <td align="center">high</td>
+        <td align="center">high</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<p>A factor with four levels gets entered into a regression model as three dummy variables. I choose the control level <strong>hp</strong> as the reference level.</p>
+<p align="center"><img src="../../images/lectures/lecture1/dummy4.gif" width="587" height="72" alt="dummy 4"></p>
+<p>The regression model is then</p>
+<p align="center"><img src="../../images/lectures/lecture1/oneway.gif" width="248" height="35" alt="oneway"></p>
+<p>from which we obtain the following estimates of the mean for each treatment.</p>
+
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=320 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 4 &nbsp;</strong>Cell means for the one-way design of Table 3</td>
+  </tr>
+</table>
+<div align="center">
+  <table width="400" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=all>
+
+
+    <tbody>
+      <tr >
+        <td bgcolor="#F1D2D8" align="center" width="100" scope="col"><strong>Treatment</strong></td>
+        <td align="center" width="100" scope="col">hp</td>
+  <td align="center" width="100" scope="col">Hp</td>
+    <td align="center" width="100" scope="col">hP<sub></sub></td>
+      <td align="center" width="100" scope="col">HP<sub></sub></td>
+      </tr>
+
+  
+      <tr>
+        <td bgcolor="#F1D2D8" align="center"><strong>Mean</strong></td>
+        <td align="center"><sub><img src="../../images/lectures/lecture1/mua.gif" width="25" height="27" alt="muA"></sub></td>
+                <td align="center"><sub><img src="../../images/lectures/lecture1/mub.gif" width="62" height="27" alt="muB"></sub></td>
+                <td align="center"><img src="../../images/lectures/lecture1/regdummy3.gif" width="63" height="27" alt="regdummy3"></td>
+                <td align="center"><img src="../../images/lectures/lecture1/regdummy4.gif" width="62" height="27" alt="reg dummy 4"></td>
+      </tr>
+   
+    </tbody>
+  </table>
+</div>
+
+<p>Consequently a test of H<sub>0</sub>: &beta;<sub>1</sub> = 0 tests whether treatment Hp is different from the control, H<sub>0</sub>: &beta;<sub>2</sub> = 0 tests whether hP is different from the control, and H<sub>0</sub>: &beta;<sub>3</sub> = 0 tests whether HP is different from the control.</p>
+<p><strong><a name="twoway"></a>Two-way design.</strong> The same experiment can be formulated as a two-way analysis of variance as follows. Create separate dummy variables for the H factor and the P factor as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture1/dummy5.gif" width="420" height="72" alt="dummy 5"></p>
+<p>To create the regression model we  include both H and P as regressors as well as their product H &times; P. This yields three regressors just as we had in the one-way formulation of the experiment. Table 5 compares the dummy variable codings for the one-way and two-way formulations of this ANOVA problem.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=500 valign=top class="styleArial" style="padding-left: 65px; text-indent:-60px"><div align="center"><strong>Table 5&nbsp;</strong>Dummy coding for the four treatments in the two designs</div></td>
+  </tr>
+</table>
+<table border=1 align="center" cellpadding=2 cellspacing=2 frame=box rules=groups>
+<colgroup span=1></colgroup>
+<colgroup span=3></colgroup>
+<colgroup span=3></colgroup>
+  <thead>
+  <tr bgcolor="#F1D2D8">
+      <td  valign=center rowspan="2" align="center"><strong>Treatment<sub></sub></strong></td>
+      <td align="center" colspan="3" valign=center><strong>One-way Design</strong></td>
+      <td align="center" colspan="3" valign=center><strong>Two-way Design</strong></td>
+
+ 
+   
+    </tr>
+    <tr bgcolor="#F1D2D8">
+  
+      <td align="center" width=50 valign=center><strong><em>X</em><sub>1</sub></strong></td>
+      <td align="center" width=50 valign=center><strong><em>X</em><sub>2</sub></strong></td>
+      <td align="center" width=50 valign=center><strong><em>X</em><sub>3</sub></strong></td>
+ 
+      <td width=50 valign=center align="center"><strong><em>H<sub></sub></em></strong></td>
+      <td width=50 valign=center align="center"><strong><em>P</em></strong></td>
+      <td width=70 valign=center align="center"><strong><em>H</em> &times; <em>P</em></strong></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td  valign=top align="center">hp</td>
+      <td  valign=top align="center">0</td>
+      <td  valign=top align="center">0</td>
+      <td  valign=top align="center">0</td>
+
+      <td valign=top align="center">0</td>
+      <td  valign=top align="center">0</td>
+      <td  valign=top align="center">0</td>
+    </tr>
+    <tr>
+      <td  valign=top ><div align="center">Hp</div></td>
+      <td valign=top align="center">1</td>
+      <td  valign=top align="center">0</td>
+      <td  valign=top align="center">0</td>
+
+      <td  valign=top align="center">1</td>
+      <td  valign=top align="center">0</td>
+      <td  valign=top align="center">0</td>
+    </tr>
+    <tr>
+      <td  valign=top ><div align="center">hP</div></td>
+      <td  valign=top align="center">0</td>
+      <td  valign=top align="center">1</td>
+      <td  valign=top align="center">0</td>
+  
+      <td  valign=top align="center">0</td>
+      <td  valign=top align="center">1</td>
+      <td  valign=top align="center">0</td>
+    </tr>
+    <tr>
+      <td  valign=top ><div align="center">HP</div></td>
+      <td  valign=top align="center">0</td>
+      <td  valign=top align="center">0</td>
+      <td  valign=top align="center">1</td>
+    
+      <td  valign=top align="center">1</td>
+      <td  valign=top align="center">1</td>
+      <td  valign=top align="center">1</td>
+    </tr>
+
+  </tbody>
+</table>
+<p>Our regression model for the two-way design is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture1/twoway.gif" width="273" height="38" alt="twoway"></p>
+<p>By plugging in values for H and P in this equation we obtain the following estimates of the mean for each treatment.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=320 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 6 &nbsp;</strong>Estimated cell means for the two-way design<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="400" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=all>
+
+    <tbody>
+      <tr  >
+        <td bgcolor="#F1D2D8" align="center" width="100" scope="col"><strong>Treatment</strong></td>
+        <td align="center" width="100" scope="col">hp</td>
+        <td align="center" width="100" scope="col">Hp</td>
+        <td align="center" width="100" scope="col">hP<sub></sub></td>
+        <td align="center" width="100" scope="col">HP<sub></sub></td>
+      </tr>
+      <tr>
+        <td bgcolor="#F1D2D8" align="center"><strong>Mean</strong></td>
+        <td align="center"><sub><img src="../../images/lectures/lecture1/mua.gif" width="25" height="27" alt="muA"></sub></td>
+        <td align="center"><sub><img src="../../images/lectures/lecture1/mub.gif" width="62" height="27" alt="muB"></sub></td>
+        <td align="center"><img src="../../images/lectures/lecture1/regdummy3.gif" width="63" height="27" alt="regdummy3"></td>
+        <td align="center"><img src="../../images/lectures/lecture1/regdummy6.gif" width="135" height="27" alt="reg dummy 4"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p><a name="interaction"></a>So, we see that the two-way formulation and the one-way formulation are just  different parameterizations of the same experiment, the difference appearing in mean of the HP treatment. The one-way formulation allows us to test whether any of the treatments are different from the control. The two-way formulation allows us to test whether the treatments H and P interact in their effect on the response or instead act in a purely additive manner. The H &times; P term in the regression model is called an interaction, in this case a <span class="style1">two-factor interaction</span>. Fig. 4 illustrates the roles played by the four parameters in the two-way design.</p>
+<table width="500" border="0" align="center" cellspacing=0 cellpadding=4>
+  <tr>
+    <td  align="center" valign="center"><img src="../../images/lectures/lecture1/fig3.5.png" width="420" height="350" alt="fig. 4"></td>
+  </tr>
+  <tr>
+    <td class="styleArial" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 4 </strong>&nbsp;Depiction of the roles of the regression parameters in the two-way design.<span class="styleArial2"> The predicted mean response for each treatment is displayed.</span></td>
+  </tr>
+</table>
+<p><a name="maineffect"></a>From Fig. 4 we can discern the following.</p>
+<ul>
+  <li>&beta;<sub>0</sub> is the mean of the control group, the treatment for  which H and P are both in their &quot;low&quot; state.</li>
+  <li>&beta;<sub>1</sub> is the effect on the mean response of  raising H from &quot;low&quot; to &quot;high&quot; (while holding P constant). If there is no interaction this is called the <span class="style1">main effect</span> of H.</li>
+  <li>&beta;<sub>2</sub> is the effect on the mean response of raising P from &quot;low&quot; to &quot;high&quot; (while holding H constant). If there is no interaction this is called the main effect of P.</li>
+  <li>&beta;<sub>3</sub> is the synergistic effect that H and P have on the response when they are both at their &quot;high&quot; levels. It's the amount by which their joint effect differs from the sum of their separate main effects. If &beta;<sub>3</sub> = 0 then H and P have only an additive effect on the response.</li>
+</ul>
+<p>The attraction of the two-way design is that it allows us to test whether the factors H and P act independently of each other or whether they interact. If factors  interact then the effect of one depends on the level of the other. When there's a significant interaction between factors we can't speak of a single effect due to that factor; its effect varies depending on the values of other predictors in the model.</p>
+<p>When the two factors H and P interact then there  really is no difference between the one-way and two-way formulations of this problem. In both formulations we have four treatment means with no particular relationship between them. Each mean has its own parameter. But, if the factors do not interact then the two-way design is the superior formulation. </p>
+<p>In the one-way design we  estimate the H effect by comparing treatment Hp to treatment hp (the control). But if H and P do not interact then we can obtain a second  estimate of the H effect  by comparing treatment HP to treatment hP (P is at its high level for both). We can then average these two estimates of the H effect to obtain a more precise estimate (using more observations). This is exactly what occurs in the two-way design when we drop the interaction term H &times; P, something we might do if we discover that the interaction is not statistically significant. Without the interaction the four treatment means can all still be different yet we  need only three parameters to generate them.</p>
+<h2><a name="Rcode"></a>R Code</h2>
+<ul>
+  <li>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture1&#32;Rcode.txt">here</a>.</li>
+  <li>Figures 3 and 4 were also produced using R. The R code for these figures, albeit with only minimal explanation, appears <a href="../../notes/lecture1&#32;notes&#32;Rcode.txt">here</a>. </li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--Aug 22, 2012<br>
+      URL: <a href="lecture1.htm#lecture1" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture1.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

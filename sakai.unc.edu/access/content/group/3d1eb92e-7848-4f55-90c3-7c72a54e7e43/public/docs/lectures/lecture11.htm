@@ -1,0 +1,539 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 11&mdash;Monday, October 1, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture11" id="lecture4"></a>Lecture 11&mdash;Monday, October 1, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture11.htm#discussion">Discussion of Assignment 4</a></li>
+  <li><a href="lecture11.htm#analysis">Analysis of repeated measures designs</a>
+    <ul>
+      <li><a href="lecture11.htm#graphing">Graphing the data</a></li>
+      <li><a href="lecture11.htm#analyzing">Analyzing the data</a></li>
+      <li><a href="lecture11.htm#using">Using Markov chain Monte Carlo to examine the sex effect</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture11.htm#results">Graphing the results</a>
+    <ul>
+      <li><a href="lecture11.htm#marginal">Plotting the marginal means and the data</a></li>
+      <li><a href="lecture11.htm#conditional">Plotting the marginal means with the conditional means  </a></li>
+    </ul>
+  </li>
+  <li><a href="lecture11.htm#cited">Cited references</a></li>
+  <li><a href="lecture11.htm#Rcode">R code</a></li>
+</ul>
+<h3>R packages used</h3>
+<ul>
+  <li><a href="lecture11.htm#lattice">lattice</a> for the <span class="style1">xyplot</span> function.</li>
+  <li><a href="lecture11.htm#latticeextra">latticeExtra</a> for the <span class="style1">useOuterStrips</span> function.</li>
+  <li><a href="lecture11.htm#lme4">lme4</a> for the <span class="style1">lmer</span> and <span class="style1">mcmcsamp</span> functions.</li>
+  <li><a href="lecture11.htm#nlme">nlme</a> for the <span class="style1">lme</span> function.</li>
+</ul>
+<h2><a name="discussion" id="refitting4"></a>Discussion of Assignment 4</h2>
+<p>See <a href="../solutions/assign4.htm">Assignment 4 solutions</a>.</p>
+<h2><a name="analysis" id="analysis"></a>Analysis of repeated measures designs</h2>
+<p> A repeated measures design is just a split plot design where the whole plot unit is an individual and the split plot units are the measurements on that individual at specific times. Thus the analysis of repeated measures designs require no new ideas. Consider the following illustration of a repeated measures design that appears as an exercise in Zar (1999), p. 301. He describes the data set as follows.</p>
+<blockquote>
+  <p class="styleArial">Four male and four female turtles had their plasma protein measured (mg/ml) while they were well fed and after ten and 20 days of fasting. Determine the effect of sex and diet on plasma protein levels.</p>
+</blockquote>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> turtles &lt;- read.table('ecol 563/turtles.txt', header=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> turtles[1:8,]</div>
+<span class="style24">   &nbsp; plasma subject&nbsp; sex&nbsp; treat<br>
+  1&nbsp;&nbsp; 42.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 male&nbsp;&nbsp;&nbsp; fed<br>
+  2&nbsp;&nbsp; 42.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 male fast10<br>
+  3&nbsp;&nbsp; 38.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 male fast20<br>
+  4&nbsp;&nbsp; 43.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 male&nbsp;&nbsp;&nbsp; fed<br>
+  5&nbsp;&nbsp; 42.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 male fast10<br>
+  6&nbsp;&nbsp; 40.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 male fast20<br>
+  7&nbsp;&nbsp; 40.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 male&nbsp;&nbsp;&nbsp; fed<br>
+  8&nbsp;&nbsp; 40.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 male fast10</span>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(turtles)</div>
+ <span class="style24">  [1] 24&nbsp; 4</span>
+
+<p>The variable <span class="style8">treat</span> denotes the three time measurements: 0, 10, and 20 days of fasting at which point plasma protein levels were measured for individual turtles. Thus <span class="style8">treat</span> is a variable that changes within turtles and is a function of the measurement occasion. <span class="style8">Sex</span> on the other hand is a characteristic of the turtle (<span class="style8">subject</span>) and does not change during the course of the experiment but does vary between turtles. The data are clearly heterogeneous. We have multiple measurements (three each) on the same turtle as well as measurements on different turtles. Using our test for structured data we see that if we were to misclassify the sex of a turtle it would in turn affect the three observations made on that turtle, not a single observation. Thus we don't have a fully crossed design.</p>
+<p>Using the language of split plot designs we would call <span class="style8">subject</span> (turtle) the whole plot unit and the measurement occasion the split plot unit. In a similar vein <span class="style8">sex</span> is the whole plot treatment (it only varies at the whole plot level) and <span class="style8">treat</span> is the split plot treatment where the &quot;treatment&quot; per se is the length of time since the turtle was last fed. A parallel language has grown up around repeated measures designs that tends to get used instead split plot and whole plot. Typically split plot treatments are referred to as within-subject treatments whereas the whole plot treatments are referred to as between-subject treatments.</p>
+<h3><a name="lattice"></a><a name="graphing"></a>Graphing the data</h3>
+<p>We begin by producing a plot that elucidates the structure of the data set. I use the <span class="style19">lattice</span> package in which I plot plasma protein levels against <span class="style8">treat</span> conditional on the <span class="style8">sex</span> of the turtle. To ensure that the split plot structure is apparent in the graph I group the observations by <span class="style8">subject</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # plot data showing repeated measure structure</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lattice)
+</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(plasma~treat|sex, groups=subject, type='o', data=turtles)</div><br>
+
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture11/fig1.png" width="465" height="340" alt="fig. 1"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Panel graph of turtle plasma protein levels at the three levels of treat stratified by sex</td>
+  </tr>
+</table>
+<p>The saw tooth pattern in the graph is because the data occur in the data frame in natural time order: <span class="style8">fed</span>, <span class="style8">fast10</span>, <span class="style8">fast20</span> but R  created the levels of the factor variable <span class="style8">treat</span> in alphabetical order. The alphabetical order is what is shown on the <em>x</em>-axis. We should change the order of the  levels of the <span class="style8">treat</span> variable so that they match the time order of the experiment.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # reorder treatments so levels are in time order</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> turtles$treat &lt;- factor(turtles$treat, levels=c('fed', 'fast10', 'fast20'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(plasma~treat|sex, groups=subject, type='o', data=turtles)</div><br>
+
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture11/fig2.png" width="465" height="340" alt="fig. 2"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Panel graph of turtle plasma protein levels over time stratified by sex</td>
+  </tr>
+</table>
+<p>What can we conclude from Fig. 2?</p>
+<ol>
+  <li>There is an obvious effect of time on plasma protein levels. The levels tend to decrease over time with a more precipitous decline occurring in the last 10-day interval. </li>
+  <li>There also appears to be a clear effect due to sex. The treatment profiles for males are shifted up relative to females so that individual males have higher plasma protein levels than females at each time point. </li>
+  <li>There doesn't appear to be an interaction between sex and time. The profiles of male turtles seem to be roughly parallel to the profiles of female turtles.</li>
+</ol>
+<h3><a name="nlme"></a><a name="analyzing"></a>Analyzing the data</h3>
+<p>I analyze this experiment using a mixed effects model. In the mixed effects model I identify the whole plot unit as the grouping variable. There is only a single grouping variable in this experiment unlike the split split plot with blocks design we considered in <a href="lecture10.htm">lecture 10</a> where there were three grouping variables and four levels to the experiment. The variable <span class="style8">subject</span> identifies the whole plot units.</p>
+<p> Note: A split plot design is just a randomized block design in which we happen to have a variable measured at the block level. So, we set up the model using <span class="style1">lme</span>, just like we did for a randomized block design, with <span class="style8">subject</span> denoting the block in the design part of the model signified by the key word <span class="style22">random</span>: <span class="style10">random=~1|block</span>. We then include the whole plot treatment <span class="style8">sex</span> in the treatment part of the model and interact it with the split plot treatment <span class="style8">treat</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # fit full interaction model accounting for repeated measures structure</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  turtle1 &lt;- lme(plasma~treat*sex, random=~1|subject, data=turtles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(turtle1)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp;&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 12 1667.4488&nbsp; &lt;.0001<br>
+  treat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 12&nbsp; 168.9732&nbsp; &lt;.0001<br>
+  sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 4.0096&nbsp; 0.0921<br>
+treat:sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 1.0103&nbsp; 0.3931</span>
+<p>Because the data are totally balanced we can also fit this model using the <span class="style1">aov</span> function. The variable <span class="style8">subject</span> is the only variable that needs to appear in the <span class="style22">Error</span> term of <span class="style1">aov</span> because there are only two levels to the hierarchy  and it's unnecessary to specify the lowest level. The levels of <span class="style8">subject</span> are recorded as numbers, not character values. The <span class="style1">aov</span> function uses the variables that appear in the <span class="style22">Error</span> term to construct interactions that it then uses as error terms in the various ANOVA subtables. Therefore we must explicitly declare <span class="style8">subject</span> to be a factor otherwise <span class="style1">aov</span> will treat it as a continuous variable. It is unnecessary to to do this in random argument of <span class="style1">lme</span>  (although it doesn't hurt).</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # using aov</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> turtle1a &lt;- aov(plasma~treat*sex + Error(factor(subject)), data=turtles)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(turtle1a)</div>
+<span class="style24">Error: factor(subject)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value Pr(&gt;F)&nbsp; <br>
+  sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 92.43&nbsp;&nbsp; 92.43&nbsp;&nbsp;&nbsp; 4.01 0.0921 .<br>
+  Residuals&nbsp; 6 138.32&nbsp;&nbsp; 23.05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Error: Within<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  treat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 45.58&nbsp; 22.788&nbsp; 168.97 1.63e-09 ***<br>
+  treat:sex&nbsp; 2&nbsp;&nbsp; 0.27&nbsp;&nbsp; 0.136&nbsp;&nbsp;&nbsp; 1.01&nbsp;&nbsp;&nbsp; 0.393&nbsp;&nbsp;&nbsp; <br>
+  Residuals 12&nbsp;&nbsp; 1.62&nbsp;&nbsp; 0.135&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>The  <span class="style1">aov</span> and <span class="style1">lme</span> function yield identical results except that the <span class="style1">aov</span> function separates the within-subject analysis from the between-subject analysis. Using either analysis we would conclude that the interaction between <span class="style8">sex</span> and <span class="style8">treat</span> is not significant. I try refitting the model with only the main effects of <span class="style8">sex</span> and <span class="style8">treat</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # drop nonsignificant interaction</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> turtle2 &lt;- lme(plasma~treat+sex, random=~1|subject, data=turtles)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px">anova(turtle2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp;&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 14 1667.4485&nbsp; &lt;.0001<br>
+  treat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 14&nbsp; 168.7250&nbsp; &lt;.0001<br>
+  sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 4.0096&nbsp; 0.0921</span>
+
+<p>So, using the &alpha; = .05 criterion we would conclude that the effect of <span class="style8">sex</span> is not statistically significant, although it's close. This is a bit surprising given the fairly marked effect we see in Fig. 2 but it may be that we just don't have enough data.
+</p>
+<h3><a name="using"></a>Using Markov chain Monte Carlo to examine the sex effect</h3>
+<p>Although repeated measures designs are split plot designs,   ordered observations coming from the same individual tend to have a different correlation structure than do non-temporal data. This can cause  the <em>F</em>-tests being used here to not have an exact <em>F</em>-distribution.  The assumption that is required to be able to analyze a repeated measures design as a split plot design is called the sphericity assumption. Under  sphericity  the split plot units are all equally correlated, a situation that is unlikely to hold when the split plot units are measurements over time. Violation of sphericity assumption usually results in<em> F</em>-tests that are too liberal, causing us to reject the null hypothesis of no effect too often. Because of the small sample size in the current data set the sphericity assumption is difficult to test. </p>
+<p><a name="lme4"></a>We might consider refitting the model using the <span class="style19">lme4</span> package and then using the <span class="style1">mcmcsamp</span> function to obtain posterior credible intervals for the parameters of the model. I carry out 10,000 simulations of MCMC and then obtain highest probability density credible intervals for the parameters. </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # refit model using lmer and carry out mcmc</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> detach(package:nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> turtle2a &lt;- lmer(plasma~treat+sex+(1|subject), data=turtles)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Markov chain Monte Carlo</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.mc &lt;- mcmcsamp(turtle2a, n=10000)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # highest probability density intervals</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> HPDinterval(out.mc)</div>
+<span class="style24">  $fixef<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  (Intercept) 37.371796 41.170541<br>
+  treatfast10 -2.213550&nbsp; 1.299105<br>
+  treatfast20 -4.891455 -1.363664<br>
+  sexmale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">1.677546&nbsp; 6.292516</span><span class="style24"><br>
+  attr(,&quot;Probability&quot;)<br>
+  [1] 0.95</span>
+<p><span class="style24">$ST<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp; upper<br>
+  [1,] 0.3174893 1.239069<br>
+  attr(,&quot;Probability&quot;)<br>
+  [1] 0.95</span>
+<p><span class="style24">$sigma<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp; upper<br>
+  [1,] 1.025411 2.512222<br>
+  attr(,&quot;Probability&quot;)<br>
+  [1] 0.95</span>
+<p>The 95% credible interval for the effect of <span class="style8">sex</span> is (1.68, 6.29) and clearly does not include zero. So contrary to the frequentist results, the Bayesian results would lead us to conclude that the effect of <span class="style8">sex</span> on plasma protein levels is real with males having higher levels than females.</p>
+<h2><a name="results"></a>Graphing the results</h2>
+<p>Because a repeated measures design is essentially a split plot design the same sort of graphical summaries we used for split plot designs will work here. One difference is that because one of the factors is time or at least time-ordered it should  be placed on the <em>x</em>-axis so that the order is preserved. I produce two plots. The first displays the marginal means along with the underlying data. Displaying the data with the means rather than just the means plus confidence intervals is reasonable here because we have so little data. The second graph displays  the predicted marginal means with the conditional means and is a useful way to assess the overall fit of the model.</p>
+<h3><a name="marginal"></a>Plotting the marginal means and the data</h3>
+<p>Because the MCMC results found evidence for a  <span class="style8">sex</span> effect I choose to display the additive model that includes both the effect of <span class="style8">treat</span> and <span class="style8">sex</span> on plasma protein levels. I start by generating the basic grouped data graph but do so with a panel function so that we can add the marginal means to the graph.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(plasma~treat|sex, groups=subject, data=turtles, type='o', panel=function(x, y, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x,y,groups,...)})</div>
+<p>I next calculate the marginal means for each sex separately using the <span class="style22">newdata</span> argument of <span class="style1">predict</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">fems &lt;- predict(turtle2, newdata=data.frame(treat=levels(turtles$treat), sex=rep('female'),3), level=0)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> males &lt;- predict(turtle2, newdata=data.frame(treat=levels(turtles$treat), sex=rep('male'),3), level=0)</div>
+<p>I next use a <span class="style1">panel.lines</span> function to draw the mean profiles for each <span class="style8">sex</span>. Because the sexes are being displayed in separate panels I need to select the correct means for the <span class="style8">sex</span> currently being plotted. In the function below I use the line</p>
+<p class="style10">sex &lt;- turtles$sex[subscripts][1]</p>
+<p>This chooses the values for the <span class="style8">sex</span> vector that corresponds to the current panel and then selects only the first of them to yield a scalar. I then use a programming <span class="style1">if...else</span> statement to draw one mean profile if <span class="style8">sex</span> is 'male' and the other mean profile if <span class="style8">sex</span> is 'female'.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(plasma~treat|sex, groups=subject, data=turtles,type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x, y, subscripts, groups,...)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # identify the sex that is currently being plotted&nbsp;</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  sex &lt;- turtles$sex[subscripts][1]</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # choose different means depending on the sex
+  </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">if(sex=='male') panel.lines(1:3, males, type='o', pch=8, lwd=2, col=1) else 
+&nbsp;panel.lines(1:3, fems, type='o', pch=8, lwd=2, col=1)})</div>
+<br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture11/fig3.png" width="465" height="340" alt="fig. 3"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;&nbsp;Adding the marginal means to a profile plot of the raw data</td>
+  </tr>
+</table>
+
+<p>The different colors of the individual turtle profiles are unnecessary and distracting so I redo the graph and make them all gray.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(plasma~treat|sex, groups=subject, data=turtles, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x, y, subscripts, groups, <span class="style39">col='grey70'</span>, ...)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">sex &lt;- turtles$sex[subscripts][1]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">if(sex=='male') panel.lines(1:3, males, type='o', pch=8, lwd=2, col=1) else
+&nbsp;panel.lines(1:3, fems, type='o', pch=8, lwd=2, col=1)})</div>
+<br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture11/fig4.png" width="465" height="340" alt="fig. 2"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 4</strong> &nbsp;&nbsp;Repetition of Fig. 3 but without coloring the different subjects</td>
+  </tr>
+</table>
+<h3><a name="conditional"></a>Plotting the marginal means with the conditional means</h3>
+<p> I start by obtaining the conditional means that can be calculated with the <span class="style1">predict</span> function without specifying the <span class="style22">levels</span> argument.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> turtles$pred &lt;- predict(turtle2)</div>
+<p>The predictions are the marginal means to which are added the individual turtle random effects. I wish to plot individual panels for each turtle organized by <span class="style8">sex</span>. For that I need a subject variable that has the same values for both sexes rather than 8 different values that we have now. For this I renumber turtles 5 through 8 so that they are instead numbered 1 through 4.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> turtles$subject2 &lt;- ifelse(turtles$subject&gt;4, turtles$subject-4, turtles$subject)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">rbind(turtles$subject, turtles$subject2)</div>
+
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp; [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13]<br>
+  [1,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 5<br>
+  [2,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; [,14] [,15] [,16] [,17] [,18] [,19] [,20] [,21] [,22] [,23] [,24]<br>
+  [1,]&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 8<br>
+  [2,]&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 4</span>
+
+<p>I start by plotting the basic graph without the treatment means using two conditioning variables, <span class="style8">sex</span> and <span class="style8">subject2</span>. The <span class="style8">subject2</span> variable needs to be a factor in order to get useful labels, otherwise we get a thermometer display in each panel.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(plasma~treat|sex+factor(subject2), data=turtles, type='o', layout=c(4,2))</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture11/fig5.png" width="440" height="350" alt="fig. 5"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 5</strong> &nbsp;&nbsp;Individual turtle data trajectories over time</td>
+  </tr>
+</table>
+
+<p>Next I display both the marginal and conditional means. For this I need a panel function. The marginal means can be plotted using the same<span class="style1"> if...else</span> code we used before. To plot the conditional means I just add a new <span class="style1">panel.lines</span> statement.<br>
+</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(plasma~treat|sex+factor(subject2), data=turtles, type='o', layout=c(4,2), panel=function(x, y, subscripts, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, type='o', col='grey60') </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">sex &lt;- turtles$sex[subscripts][1]</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># marginal means separately by sex</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">if(sex=='male') panel.lines(1:3, males, pch=8, lwd=2, col=1) else
+  &nbsp;panel.lines(1:3, fems, pch=8, lwd=2, col=1)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># conditional means</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.lines(x, turtles$pred[subscripts], col=4, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">})</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture11/fig6.png" width="440" height="350" alt="fig. 6"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 6</strong> &nbsp;&nbsp;Individual turtle data trajectories over time</span> with conditional and marginal means</td>
+  </tr>
+</table>
+
+<p>All we have left to do is make some cosmetic improvements to the graph. </p>
+<ol>
+  <li>Swap the order of sex and subject so that each row represents a different sex.</li>
+  <li>Make two-line labels for the tick mark labels on the <em>x</em>-axis.</li>
+  <li>Remove the line segments connecting the observed values.</li>
+  <li>Add labels for the <em>x</em>-axis and <em>y</em>-axis.</li>
+</ol>
+<p>To obtain two-line labels I use the R return code <span class="style8">\n</span> within the text string. This is the new line return code. It causes the characters of <span class="style8">&quot;well\nfed&quot;</span> to be split onto two lines: &quot;well&quot;  and &quot;fed&quot;. The fact that the back slash symbol identifies return codes in R is why we can't reference file directories on Windows with a single back slash character in the<span class="style1"> read.table</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(plasma~<span class="style39">factor(treat, levels=levels(treat), labels=c('well\nfed', '10-day\nfast', '20-day\nfast'))</span> | <span class="style39">factor(subject2) + sex</span>, data=turtles, type='o', layout=c(4,2), xlab='Treatment', ylab='Plasma protein (mg/l)',panel=function(x,y , subscripts, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, col='grey60') </div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  sex &lt;- turtles$sex[subscripts][1]</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> if(sex=='male') panel.lines(1:3, males, pch=8, lwd=2, col=2) else
+  panel.lines(1:3, fems, pch=8, lwd=2, col=2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.lines(x, turtles$pred[subscripts], col=4, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">})</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture11/fig7.png" width="490" height="345" alt="fig. 7"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 7</strong> &nbsp;&nbsp;Repetition of Fig. 6 but with improved labeling</td>
+  </tr>
+</table>
+
+<p>Next I add a legend to the graph. There's no room inside the panels so I place it outside the graph on the lower right side. To accomplish this I use a negative coordinate for <em>y</em>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(plasma~factor(treat, levels=levels(treat), labels=c('well\nfed', '10-day\nfast', '20-day\nfast'))| 
+  factor(subject2)+sex, data=turtles, xlab='Treatment', ylab='Plasma protein (mg/l)', type='o', layout=c(4,2), 
+panel=function(x, y, subscripts, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x,y,col='grey30')</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # plot marginal means</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  sex &lt;- turtles$sex[subscripts][1]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  if(sex=='male') panel.lines(1:3, males, lwd=2, col=2) else 
+  panel.lines(1:3, fems, lwd=2, col=2)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # conditional means (include random effects)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.lines(x, turtles$pred[subscripts], col=4, lty=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  }, <span class="style39">key=list(x=.78, y=-.2, corner=c(0,0), lines=list(col=c('grey30',4,2), pch=c(1,NA,NA), lty=c(1,2,1), lwd=c(1,1,2), 
+  size=2, type=c('p','l','l'), divide=2, cex=.85), text=list(c('observed', 'conditional mean', 'marginal mean'), cex=.75),
+border=T)</span>)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture11/fig8.png" width="490" height="345" alt="fig. 8"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 8</strong> &nbsp;&nbsp;Repetition of Fig. 7 but with a legend</td>
+  </tr>
+</table>
+<p><a name="latticeextra"></a>Finally I use the <span class="style19">latticeExtra</span> package to get panel labels on the left and on the top.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(plasma~factor(treat, levels=levels(treat), labels=c('well\nfed', '10-day\nfast', '20-day\nfast'))|  factor(subject2)+sex, data=turtles, xlab='Treatment', ylab='Plasma protein (mg/l)', type='o', layout=c(4,2), 
+panel=function(x,y,subscripts,...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x,y,col='grey30')</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # plot marginal means</div>
+ <div class="style23" style="padding-left: 60px; text-indent:-30px"> sex &lt;- turtles$sex[subscripts][1]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  if(sex=='male') panel.lines(1:3, males, lwd=2, col=2) else 
+  panel.lines(1:3, fems, lwd=2, col=2)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # conditional means (include random effects)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.lines(x, turtles$pred[subscripts], col=4, lty=2)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> }, key=list(x=.78, y=-.2, corner=c(0,0), lines=list(col=c('grey30',4,2), pch=c(1,NA,NA), lty=c(1,2,1), lwd=c(1,1,2), 
+  size=2, type=c('p','l','l'), divide=2, cex=.85), text=list(c('observed','conditional mean', 'marginal mean'), cex=.75), 
+border=T)) <span class="style39">-&gt; out.g</span></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(latticeExtra)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">useOuterStrips(out.g)</div><br>
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture11/fig9.png" width="490" height="345" alt="fig. 8"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 9</strong> &nbsp;&nbsp;Final version of the graph</td>
+  </tr>
+</table>
+<p>The way to interpret this graph is that for each turtle the marginal mean profile is displaced up or down a random amount (the random turtle effect) to account for the variability among the individual turtles. We  can see that the conditional means do a very good job of matching the observed plasma protein values of the individual turtles indicating that our model fits the data.</p>
+<h2><a name="cited" id="cited"></a>Cited references</h2>
+<ul>
+  
+  <li>Zar, Jerrold H. 1999. <em>Biostatistical Analysis</em> (4th edition). Upper Saddle River, New Jersey: Prentice Hall.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A nearly complete collection of all the R code displayed in this document appears <a href="../../notes/lecture12&#32;Rcode.html">here</a>. Additional portions are <a href="../../notes/lecture10&#32;Rcode.html">here</a> and <a href="../../notes/lecture11&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 12, 2012<br>
+      URL: <a href="lecture11.htm#lecture11" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture11.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

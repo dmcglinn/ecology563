@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>R code for lecture 26</title>
+</head>
+
+<body>
+
+<h2 align="center">R Code for Lecture 26 (Monday, November 26, 2012)</h2>
+<div style="overflow:auto;">
+  <div class="geshifilter">
+  <pre class="r geshifilter-R" style="font-family:monospace;">wells <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">read.csv</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;ecol 563/wells.txt&quot;</span><span style="color: #009900;">&#41;</span>
+wells
+<span style="color: #666666; font-style: italic;"># logistic regression model</span>
+out1 <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">glm</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span>y<span style="color: #339933;">,</span> n<span style="">-</span>y<span style="color: #009900;">&#41;</span><span style="">~</span> land.use <span style="">+</span> sewer<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">family</span>=<span style="color: #003399; font-weight: bold;">binomial</span><span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">summary</span><span style="color: #009900;">&#40;</span>out1<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># tabulate data to show quasi-complete separation</span>
+<span style="color: #003399; font-weight: bold;">xtabs</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span>y<span style="color: #339933;">,</span>n<span style="">-</span>y<span style="color: #009900;">&#41;</span><span style="">~</span>land.use<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># refit model to show individual logit means for land use</span>
+out1a <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">glm</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span>y<span style="color: #339933;">,</span> n<span style="">-</span>y<span style="color: #009900;">&#41;</span><span style="">~</span> land.use <span style="">+</span> sewer<span style="">-</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">family</span>=<span style="color: #003399; font-weight: bold;">binomial</span><span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">summary</span><span style="color: #009900;">&#40;</span>out1a<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># models are the same, just different parameterizations</span>
+<span style="color: #003399; font-weight: bold;">AIC</span><span style="color: #009900;">&#40;</span>out1<span style="color: #339933;">,</span>out1a<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># create binary version of the file for comparison</span>
+<span style="color: #666666; font-style: italic;"># function to create binary response</span>
+yn.func <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>x<span style="color: #009900;">&#41;</span> <span style="color: #003399; font-weight: bold;">rep</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">c</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">0</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span><span style="color: #003399; font-weight: bold;">c</span><span style="color: #009900;">&#40;</span>x<span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>x<span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">2</span><span style="color: #009900;">&#93;</span><span style="">-</span>x<span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># sample calculation</span>
+<span style="color: #003399; font-weight: bold;">apply</span><span style="color: #009900;">&#40;</span>wells<span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">2</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> yn.func<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># assemble data</span>
+wells.raw <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">data.frame</span><span style="color: #009900;">&#40;</span>yn=<span style="color: #003399; font-weight: bold;">unlist</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">apply</span><span style="color: #009900;">&#40;</span>wells<span style="color: #009900;">&#91;</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">2</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> yn.func<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> land.use=<span style="color: #003399; font-weight: bold;">rep</span><span style="color: #009900;">&#40;</span>wells<span style="">$</span>land.use<span style="color: #339933;">,</span>wells<span style="">$</span>n<span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> sewer=<span style="color: #003399; font-weight: bold;">rep</span><span style="color: #009900;">&#40;</span>wells<span style="">$</span>sewer<span style="color: #339933;">,</span>wells<span style="">$</span>n<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">dim</span><span style="color: #009900;">&#40;</span>wells.raw<span style="color: #009900;">&#41;</span>
+wells.raw<span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">8</span><span style="color: #339933;">,</span><span style="color: #009900;">&#93;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># fit same model this time with a binary response</span>
+out1b <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">glm</span><span style="color: #009900;">&#40;</span>yn<span style="">~</span> land.use <span style="">+</span> sewer<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells.raw<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">family</span>=<span style="color: #003399; font-weight: bold;">binomial</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># estimates and standard errors are the same, likelihood is different</span>
+<span style="color: #003399; font-weight: bold;">summary</span><span style="color: #009900;">&#40;</span>out1b<span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">summary</span><span style="color: #009900;">&#40;</span>out1<span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">coef</span><span style="color: #009900;">&#40;</span>out1b<span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">coef</span><span style="color: #009900;">&#40;</span>out1<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#### methods for dealing with quasi-complete separation ####</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># Method 1: Firth regression--uses penalized ML</span>
+<span style="color: #003399; font-weight: bold;">library</span><span style="color: #009900;">&#40;</span><span style="">logistf</span><span style="color: #009900;">&#41;</span>
+out1f <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">logistf</span><span style="color: #009900;">&#40;</span>yn<span style="">~</span> land.use <span style="">+</span> sewer<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells.raw<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">family</span>=<span style="color: #003399; font-weight: bold;">binomial</span><span style="color: #009900;">&#41;</span>
+out1f
+&nbsp;
+<span style="color: #666666; font-style: italic;"># Method 2: treat problem group separately: calculate Clopper-Pearson intervals</span>
+<span style="color: #666666; font-style: italic;"># sample run</span>
+<span style="color: #003399; font-weight: bold;">binom.test</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">76</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># CI for land use=undeveloped</span>
+<span style="color: #003399; font-weight: bold;">binom.test</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">76</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># Method 3: collapse categories</span>
+<span style="color: #003399; font-weight: bold;">xtabs</span><span style="color: #009900;">&#40;</span>y<span style="">~</span>land.use<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># examine proportion of contaminated wells by land use category</span>
+<span style="color: #003399; font-weight: bold;">xtabs</span><span style="color: #009900;">&#40;</span>y<span style="">~</span>land.use<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #009900;">&#41;</span><span style="">/</span>sum<span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">xtabs</span><span style="color: #009900;">&#40;</span>y<span style="">~</span>land.use<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># combine undeveloped with agricultural</span>
+wells<span style="">$</span>land.use2 <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">factor</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">ifelse</span><span style="color: #009900;">&#40;</span>wells<span style="">$</span>land.use <span style="">%in%</span> <span style="color: #003399; font-weight: bold;">c</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'agri'</span><span style="color: #339933;">,</span><span style="color: #0000ff;">'undev'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'rural'</span><span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">as.character</span><span style="color: #009900;">&#40;</span>wells<span style="">$</span>land.use<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">xtabs</span><span style="color: #009900;">&#40;</span>y<span style="">~</span>land.use2<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># refit model with new categories</span>
+out2 <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">glm</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span>y<span style="color: #339933;">,</span>n<span style="">-</span>y<span style="color: #009900;">&#41;</span><span style="">~</span>land.use2<span style="">+</span>sewer<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">family</span>=<span style="color: #003399; font-weight: bold;">binomial</span><span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">summary</span><span style="color: #009900;">&#40;</span>out2<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#### simplifying the model: reduce the number of land use categories</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># fit model to get separate logits for each land use type</span>
+out2b <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">glm</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span>y<span style="color: #339933;">,</span>n<span style="">-</span>y<span style="color: #009900;">&#41;</span><span style="">~</span>land.use2<span style="">+</span>sewer<span style="">-</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">family</span>=<span style="color: #003399; font-weight: bold;">binomial</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># examine estimates</span>
+<span style="color: #003399; font-weight: bold;">summary</span><span style="color: #009900;">&#40;</span>out2b<span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">coef</span><span style="color: #009900;">&#40;</span>out2b<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># display estimates in a dotplot</span>
+<span style="color: #003399; font-weight: bold;">library</span><span style="color: #009900;">&#40;</span><span style="">lattice</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># estimates appear to fall into three clusters</span>
+<span style="color: #003399; font-weight: bold;">dotplot</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">coef</span><span style="color: #009900;">&#40;</span>out2b<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">9</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># combine five the categories</span>
+wells<span style="">$</span>land.use3 <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">factor</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">ifelse</span><span style="color: #009900;">&#40;</span>wells<span style="">$</span>land.use2 <span style="">%in%</span> <span style="color: #003399; font-weight: bold;">c</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'inst'</span><span style="color: #339933;">,</span><span style="color: #0000ff;">'recr'</span><span style="color: #339933;">,</span><span style="color: #0000ff;">'resL'</span><span style="color: #339933;">,</span><span style="color: #0000ff;">'resM'</span><span style="color: #339933;">,</span><span style="color: #0000ff;">'trans'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'mixed'</span><span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">as.character</span><span style="color: #009900;">&#40;</span>wells<span style="">$</span>land.use2<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+out2c <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">glm</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span>y<span style="color: #339933;">,</span>n<span style="">-</span>y<span style="color: #009900;">&#41;</span><span style="">~</span>land.use3<span style="">+</span>sewer<span style="color: #339933;">, </span><span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #339933;">, </span><span style="color: #003399; font-weight: bold;">family</span>=<span style="color: #003399; font-weight: bold;">binomial</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># compare with previous model using AIC</span>
+<span style="color: #003399; font-weight: bold;">AIC</span><span style="color: #009900;">&#40;</span>out2b<span style="color: #339933;">,</span> out2c<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># models are nested: use LR test</span>
+<span style="color: #003399; font-weight: bold;">anova</span><span style="color: #009900;">&#40;</span>out2c<span style="color: #339933;">,</span> out2b<span style="color: #339933;">,</span> test=<span style="color: #0000ff;">'Chisq'</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># try collapsing an additional three land use categories</span>
+wells<span style="">$</span>land.use4 <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">factor</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">ifelse</span><span style="color: #009900;">&#40;</span>wells<span style="">$</span>land.use3 <span style="">%in%</span> <span style="color: #003399; font-weight: bold;">c</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'resH'</span><span style="color: #339933;">,</span><span style="color: #0000ff;">'comm'</span><span style="color: #339933;">,</span><span style="color: #0000ff;">'indus'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'high.use'</span><span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">as.character</span><span style="color: #009900;">&#40;</span>wells<span style="">$</span>land.use3<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+out2d <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">glm</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span>y<span style="color: #339933;">,</span>n<span style="">-</span>y<span style="color: #009900;">&#41;</span><span style="">~</span>land.use4<span style="">+</span>sewer<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">family</span>=<span style="color: #003399; font-weight: bold;">binomial</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># compare all the land use models</span>
+<span style="color: #003399; font-weight: bold;">AIC</span><span style="color: #009900;">&#40;</span>out2b<span style="color: #339933;">,</span> out2c<span style="color: #339933;">,</span> out2d<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># LR test with previous model</span>
+<span style="color: #003399; font-weight: bold;">anova</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #339933;">,</span> out2c<span style="color: #339933;">,</span> test=<span style="color: #0000ff;">'Chisq'</span><span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">summary</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># obtain estimates of individual land use logits</span>
+out2e <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">glm</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span>y<span style="color: #339933;">,</span>n<span style="">-</span>y<span style="color: #009900;">&#41;</span><span style="">~</span>land.use4<span style="">+</span>sewer<span style="">-</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">data</span>=wells<span style="color: #339933;">,</span> <span style="color: #003399; font-weight: bold;">family</span>=<span style="color: #003399; font-weight: bold;">binomial</span><span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">summary</span><span style="color: #009900;">&#40;</span>out2e<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># display confidence intervals</span>
+<span style="color: #003399; font-weight: bold;">confint</span><span style="color: #009900;">&#40;</span>out2e<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># predicted logits of individual observations</span>
+<span style="color: #003399; font-weight: bold;">predict</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># predicted probabilities of individual observations</span>
+<span style="color: #003399; font-weight: bold;">predict</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #339933;">,</span> type=<span style="color: #0000ff;">'response'</span><span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">fitted</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># obtain mean of each binomial distribution</span>
+<span style="color: #003399; font-weight: bold;">fitted</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #009900;">&#41;</span><span style="">*</span>wells<span style="">$</span>n
+wells<span style="">$</span>y
+&nbsp;
+<span style="color: #666666; font-style: italic;"># goodness of fit</span>
+<span style="color: #666666; font-style: italic;"># collect the predicted successes and predicted failures in a matrix</span>
+&nbsp;
+Ei <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">fitted</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #009900;">&#41;</span><span style="">*</span>wells<span style="">$</span>n<span style="color: #339933;">,</span> wells<span style="">$</span>n<span style="">-</span><span style="color: #003399; font-weight: bold;">fitted</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #009900;">&#41;</span><span style="">*</span>wells<span style="">$</span>n<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># too many predicted counts are small for chi-squared distribution to hold</span>
+<span style="color: #003399; font-weight: bold;">sum</span><span style="color: #009900;">&#40;</span>Ei<span style="">&lt;=</span><span style="color: #cc66cc;">5</span><span style="color: #009900;">&#41;</span>/<span class="r geshifilter-R" style="font-family:monospace;"><span style="color: #003399; font-weight: bold;">length</span><span style="color: #009900;">&#40;</span>Ei<span style=""></span><span style="color: #cc66cc;"></span><span style="color: #009900;">&#41;</span></span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># carry out Pearson test anyway</span>
+
+Oi <span style="">&lt;-</span> <span style="color: #003399; font-weight: bold;">cbind</span><span style="color: #009900;">&#40;</span>wells<span style="">$</span>y<span style="color: #339933;">,</span> wells<span style="">$</span>n<span style="">-</span>wells<span style="">$</span>y<span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">sum</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#40;</span>Oi<span style="">-</span>Ei<span style="color: #009900;">&#41;</span><span style="">^</span><span style="color: #cc66cc;">2</span><span style="">/</span>Ei<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># p-value for test</span>
+<span style="color: #cc66cc;">1</span><span style="">-</span><a href="http://inside-r.org/r-doc/stats/pchisq"><span style="color: #003399; font-weight: bold;">pchisq</span></a><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">sum</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#40;</span>Oi<span style="">-</span>Ei<span style="color: #009900;">&#41;</span><span style="">^</span><span style="color: #cc66cc;">2</span><span style="">/</span>Ei<span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span><span style="color: #003399; font-weight: bold;">nrow</span><span style="color: #009900;">&#40;</span>wells<span style="color: #009900;">&#41;</span><span style="">-</span><span style="color: #003399; font-weight: bold;">length</span><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">coef</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># residual deviance can be used to check fit too</span>
+<span style="color: #666666; font-style: italic;"># (except probably inappropriate here)</span>
+<span style="color: #003399; font-weight: bold;">summary</span><span style="color: #009900;">&#40;</span>out2d<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># p-value for residual deviance</span>
+<span style="color: #cc66cc;">1</span><span style="">-</span><span style="color: #003399; font-weight: bold;">pchisq</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">21.502</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">16</span><span style="color: #009900;">&#41;</span></pre></div></div><p><a href="http://www.inside-r.org/pretty-r" title="Created by Pretty R at inside-R.org">Created by Pretty R at inside-R.org</a></p>
+
+
+</body>
+</html>

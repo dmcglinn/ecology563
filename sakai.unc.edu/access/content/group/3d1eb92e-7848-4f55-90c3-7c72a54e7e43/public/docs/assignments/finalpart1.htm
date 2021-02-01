@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Final Exam&mdash;Part 1</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.style12 {	font-family: Arial, Helvetica, sans-serif;
+}
+.style16 {font-weight: bold; color: #993333; }
+.style13 {font-weight: bold; color: #008000; }
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="finalpart1" id="finalpart1"></a>Final Exam&mdash;Part 1</h1>
+<h3>Due Date </h3>
+<p>Friday, December 7, 2012</p>
+<h3>Instructions</h3>
+<p align="left">Same rules and policies apply to this &quot;exam&quot; as apply to ordinary assignments. Part 2 of the final will be assigned before the last day of class and will be due on Monday, December 10.</p>
+<h2 align="left" class="style16">Problem 1</h2>
+<h3>Data Source </h3>
+<p>The data for this assignment are contained in <a href="../../data/bycatch.csv">bycatch.csv</a>,  a comma-delimited text file. This is the same data set you analyzed in <a href="assign10.htm">Assignment 10</a>.</p>
+<h3>Background</h3>
+<p>In Question 8 of Assignment 10 you were asked to provide statistical evidence to determine if <span class="style12">log(Tows)</span> should be included  in the regression model as an offset with a coefficient fixed at 1 or as a covariate with an estimated coefficient. What you should have discovered was that AIC favored treating <span class="style12">log(Tows)</span> as a covariate, a Wald test favored treating <span class="style12">log(Tows)</span> as a covariate, but a likelihood ratio test favored treating <span class="style12">log(Tows)</span> as an offset. Because the validity of both the likelihood ratio statistic and the Wald statistic depend on asymptotic results and the bycatch data set is not particularly large, it's not obvious what to do here. This problem attempts to shed light on this question using Bayesian methods.</p>
+<h3>Questions</h3>
+<ol>
+  <li>Use Bayesian methods to fit the final bycatch model from Assignment 10 in which <span class="style12">log(Tows)</span> is treated as a covariate and season is included as a random effect. Report your BUGS program as well as the standard summary table returned by JAGS or WinBUGS.</li>
+  <li>To determine if <span class="style12">log(Tows)</span> can legitimately be treated as an offset in this model report a relevant percentile credible interval and an HPD credible interval. What do you conclude?</li>
+</ol>
+<h2 align="left" class="style16">Problem 2</h2>
+<h3>Data Source </h3>
+<p>The data for this assignment is <a href="../../data/corals.txt">corals.txt</a>,  a tab-delimited text file. </p>
+<h3>Background</h3>
+<p>This data set contains the results of an experiment set up to determine the effect of temperature on the growth rates of corals.  The variables contained in the data set are the following.</p>
+<ol>
+  <li><span class="style12">tank</span>: identifies the three different aquaria that serve as replicates for a given temperature treatment. This identifier is not unique.</li>
+  <li><span class="style12">temp</span>: is the temperature that a particular aquarium was maintained at for the duration of the experiment. Three temperature levels were used: 25&deg;C, 28&deg;C, and 32&deg;C.</li>
+  <li><span class="style12">incr</span>: the gain in dry mass  (g) experienced by a coral over one time period.</li>
+  <li><span class="style12">id</span>: an identifier that uniquely identifies the different coral animals used in the experiment.</li>
+  <li><span class="style12">surf.area</span>: the  surface area of the individual corals (cm<sup>2</sup>) at the start of the experiment.</li>
+  <li><span class="style12">tank.grp</span>: a unique identifier that identifies the nine different aquaria used in the experiment.</li>
+  <li><span class="style12">inctime</span>: the length of time (days) over which the mass gain (<span class="style12">incr</span>) occurred.</li>
+  <li><span class="style12">rate</span>: this is the growth rate, the mass gain (<span class="style12">incr</span>) divided by time (<span class="style12">inctime</span>) reported in mg/day.</li>
+  <li><span class="style12">time.period</span>: identifies the time period of the growth. It is numbered 1, 2, and 3 to correspond to the first, second, and third growth rate measurements for a given animal.</li>
+</ol>
+<p>Because of logistical difficulties it was not possible to measure all 162 coral animals on the same day. So, the length of the observational periods varied slightly for some of the animals from different aquaria. To account for this growth increments were divided by the corresponding time interval  to yield a growth rate. All analyses were carried out on the growth rates. </p>
+<p>It was suspected that there might be some latency effects of temperature. In particular it was thought that there would be an initial adjustment period during which the animals acclimated to their aquaria after which the animals would begin to exhibit their true response to temperature. So a linear relationship between growth and time was not expected. As a result it was decided to treat time as a categorical variable (<span class="style12">time.period</span>)  in this analysis. </p>
+<h3>Important features of the experimental design</h3>
+<ol>
+  <li>There are nine aquaria and each aquarium contained 18 different coral animals.</li>
+  <li>Growth rates were obtained for each coral animal at three different time points in the study yielding 3 &times; 18 &times; 9 = 486 observations. At each time point the growth rate was calculated as the change in dry mass of the animal since the last measurement divided by the length of time. The first growth rate was obtained as the change from the  animal's initial dry mass (a value that is not reported in the data  you are given).</li>
+  <li>Temperature treatments were randomly assigned to aquaria so that there were three aquaria (replicates) at each temperature. The same temperature was maintained in that aquarium for the duration of the experiment. The nine different aquaria used in the experiment are uniquely identified by the variable <span class="style12">tank.grp</span>.</li>
+  <li>Although effort was made to choose coral animals of roughly the same initial size, this turned out to be impossible. It is suspected that an animal's size might affect its growth rate over time or its response to temperature or both. Because an animal's initial surface area was thought to be a more useful predictor than its initial mass, surface area (cm<sup>2</sup>) is reported in the data set for each animal at the beginning of the study.</li>
+</ol>
+<p>The primary objective of this exercise is to determine how an animal's growth rate changes over time and to determine if the nature of that change varies with temperature. This needs to be done in a way that controls for any confounding variables while properly accounting for the experimental design.</p>
+<h3 align="left">Questions</h3>
+<ol>
+  <li>Identify as many of the important statistical design features of this experiment that you can. Be sure to use the language we've presented in this course when naming these design features.</li>
+</ol>
+<blockquote>
+  <p><span class="style13">Hint 1</span>: There are at least three distinct design features you could mention here.<br>
+  <span class="style13">Hint 2</span>: The basic research question here is whether the average growth rate (<span class="style12">rate</span>) is different at different temperatures (<span class="style12">temp</span>). Without any design complications it would seem that this question could be addressed with a one-way analysis of variance, or perhaps a two-way ANOVA with temperature and time as potentially interacting factors. Because of the way the experiment was designed such simple analyses are inappropriate. The design features I'm referring to each individually force the analysis to deviate from an ordinary ANOVA in  specific ways. If it were possible to add these design features sequentially each addition would cause us to change the form or type of model that we are fitting from what it was without it.</p>
+</blockquote>
+<ol start="2">
+  <li>Fit a sensible starting model for this experiment that properly accounts for all the design features you mentioned in Question 1. </li>
+</ol>
+<blockquote>
+  <p><span class="style13">Hint</span>: Some of the factor variables have numeric codes for their categories. Don't slip up and treat these variables as numeric in your model. You don't know that the growth rate is monotonic with temperature or with time.</p>
+</blockquote>
+<ol start="3">
+  <li>Simplify the model you fit in Question 2 so that all the remaining terms are statistically significant.</li>
+  <li>Obtain estimates of the mean growth rates during each time period separately by temperature and obtain 95% confidence intervals for the means. Carry out these calculations for a typical coral animal with an initial surface area of 10 cm<sup>2</sup>, a value that is close to the mean initial size of animals used in the study.</li>
+</ol>
+<blockquote>
+  <p><span class="style13">Hint 1</span>: Sometimes a convenient way to fit a model so that the estimated mean corresponds to a specific value of a covariate is to center the covariate at that  value when you fit the model. This is particularly convenient here when coupled with Hint 2 because it allows you to ignore some of the &quot;nuisance&quot; terms in your final model when obtaining confidence intervals for the terms you care about.<br>
+  <span class="style13">Hint 2</span>: You might also consider  using the trick in which you leave out selected terms  from the model causing R to estimate the same model but with a different parameterization. If you do this the right way you can then easily obtain the confidence intervals for the means you need using a standard function for this type of model. The model you want has only the two 2-factor interactions in it and nothing else (no intercept, no main effects). Also, to get this to work you need to list as the first term in this model the interaction term  whose values correspond to the individual estimates you want. The nuisance interaction term (the one that will drop out when surface area = 10) should be second. Be sure to verify that the model you get has the same AIC as the regularly parameterized final model.<br>
+  <span class="style13">Hint 3</span>: It's also possible to use the <span class="style9">effects</span> package to obtain the means and confidence intervals you need here. You will need to use the <span class="style17">given.values</span> argument to specify the value of surface area.<br>
+  <span class="style13">Hint 4</span>: You can also set up a contrast matrix and get the standard errors with a sandwich expression involving the variance-covariance matrix.</p>
+</blockquote>
+<ol start="5">
+  <li>Prepare a suitable graph that shows the individual treatment means and the confidence intervals that you calculated in Question 4 and permits easy comparison of the effect of  temperature on the mean growth rates over time.</li>
+</ol>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--December 6, 2012<br>
+      URL: <a href="finalpart1.htm#finalpart1" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/finalpart1.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

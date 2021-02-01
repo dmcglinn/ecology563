@@ -1,0 +1,972 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 25&mdash;Monday, November 19, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+.style1012 {	font-family: "Courier New", Courier, mono
+}
+.style1012 {font-family: "Courier New", Courier, mono}
+.style221 {color: #339966;
+	font-weight: bold;
+}
+.style29 {font-family: "Courier New", Courier, mono}
+.style30 {color: #333399;
+	font-weight: bold;
+}
+.style28 {color: #CC0000; font-weight: bold; }
+.style411 {	color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #009900;  font-weight: bold; font-family: "Courier New", Courier, mono;}
+.style5 {	color: #CC0000;
+	font-weight: bold;
+}
+span.GramE {mso-style-name:"";
+	mso-gram-e:yes;}
+span.SpellE {mso-style-name:"";
+	mso-spl-e:yes;}
+.style331 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style391 {font-family: "Courier New", Courier, mono; font-weight: bold; color: #339933}
+.style42 {color: #CCCCCC}
+.style42 {color: #CC0000;
+	font-weight: bold;
+}
+.style401 {color: #CC0000}
+.style2311 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style261 {font-family: "Courier New", Courier, mono}
+.style371 {color: #FF0000;
+	font-weight: bold;
+}
+.style4011 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style421 {color: #0000FF; font-weight: bold; }
+.style44 {font-family: "Courier New", Courier, mono; color: #000000; font-size: smaller; }
+.style332 {color: #0000FF; font-family: "Courier New", Courier, mono; font-size: small;
+background-color:#F0F0F0;
+}
+.style332 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture25" id="lecture25"></a>Lecture 25&mdash;Monday, November 19, 2012</h1>
+<h3>Topics</h3>
+<ul>
+  
+  <li><a href="lecture25.htm#refitting">Creating the variables for a Bayesian analysis</a></li>
+  <li><a href="lecture25.htm#random">Bayesian estimation of a random intercepts model</a></li>
+
+  <li><a href="lecture25.htm#patch">A random  intercepts model with patch-level predictors</a> </a>
+    <ul>
+      <li><a href="lecture25.htm#creating">Creating the level-2 regressors</a></li>
+      <li><a href="lecture25.htm#BUGS">The BUGS model</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture25.htm#obtaining">Obtaining Bayesian estimates of other parameters</a>
+    <ul>
+      <li><a href="lecture25.htm#method1">Method 1: Add the desired parameters to the BUGS model </a></li>
+      <li><a href="lecture25.htm#method2">Method 2: Use the model results already obtained</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture25.htm#bayesian">Bayesian model selection</a>
+    <ul>
+      <li><a href="lecture25.htm#loglikelihood">The log-likelihood in Bayesian and frequentist models</a></li>
+      <li><a href="lecture25.htm#DIC">DIC as a measure of fit</a>  </li>
+    </ul>
+  </li>
+<li><a href="lecture25.htm#cited">Cited references</a></li>
+  <li><a href="lecture25.htm#Rcode">R code</a></li>
+</ul>
+<h3>R packages used </h3>
+<ul>
+  <li><a href="lecture25.htm#arm">arm</a> for the <span class="style42">bugs</span> function that allows running WinBUGS from within R.</li>
+  <li><a href="lecture25.htm#coda">coda</a> for MCMC diagnostics.</li>
+  <li><a href="lecture25.htm#lattice">lattice</a> for <span class="style1">xyplot</span> and <span class="style1">densityplot</span>.</li>
+  <li><a href="lecture25.htm#lme4">lme4</a> for the <span class="style1">lmer</span> function.</li>
+  <li><a href="lecture25.htm#jags">R2jags</a> for the <span class="style42">jags</span> function that allows running JAGS from within R.</li>
+</ul>
+<h2><a name="refitting" id="refitting"></a>Recreating the variables for a Bayesian analysis</h2>
+<p>I reload the birds data set and create the variables needed to fit the Poisson regression models in WinBUGS and JAGS.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px">birds &lt;- read.csv('ecol 563/birds.csv')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">birds.short &lt;- birds[!is.na(birds$S),]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># create variables for WinBUGS</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">y &lt;- birds.short$S</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">year2 &lt;- as.numeric(birds.short$year==2006)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">year3 &lt;- as.numeric(birds.short$year==2007)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">n &lt;- length(y)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># number of patches</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">J &lt;- length(unique(birds.short$patch))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># patch identifier renumbered</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">patch &lt;- as.numeric(factor(birds.short$patch))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">setwd(&quot;C:/Users/jmweiss/Documents/ecol 563/models&quot;)</div>
+
+<h2><a name="random" id="random"></a>Bayesian estimation of a random intercepts model</h2>
+<p><a name="lme4"></a>In the frequentist approach the transition from a Poisson separate intercepts model to a Poisson random intercepts model requires switching from <span class="style1">glm</span> to <span class="style1">lmer</span>.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # separate intercepts model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model2.glm &lt;- glm(S~factor(patch)+factor(year), data=birds.short, family=poisson)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # random intercepts model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(lme4)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model3.lmer &lt;- lmer(S~factor(year) + (1|patch), data=birds.short, family=poisson)</div>
+<p>Let <em>i</em> denote the patch and let <em>j</em> denote the observation from that patch (a measurement made in one of the three years). The random intercepts model can be written in two equivalent ways.</p>
+<table width="700" border="1" align="center" cellpadding="1" cellspacing="0">
+  <tr bgcolor="#F1D2D8">
+    <td><div align="center"><strong>Random effects formulation</strong></div></td>
+    <td><div align="center"><strong>Random intercepts formulation</strong></div></td>
+  </tr>
+  <tr>
+    <td class="style261" valign="top"><div align="center"><img src="../../images/lectures/lecture25/Poissonranef.gif" width="310" height="117" alt="Poisson random effects"></div></td>
+    <td class="style261"><div align="center"><img src="../../images/lectures/lecture25/Poissonranef1.gif" width="278" height="117" alt="random effects model"></div></td>
+  </tr>
+</table>
+<p>In the random effects formulation the focus is on the patch random effects, the u<sub>0i</sub>, which are assumed to have a normal distribution with mean zero. In the random intercepts formulation the focus is on the individual patch intercepts, the &beta;<sub>0i</sub>, which are assumed to have a normal distribution with mean &beta;<sub>0</sub>. The connection between these two formulation is that  &beta;<sub>0i</sub> = &beta;<sub>0</sub> + u<sub>0i</sub>. When we fit this model using <span class="style1">lmer</span> we automatically get both formulations. We can extract the random effects, the u<sub>0i</sub>, with the <span class="style1">ranef</span> function.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> ranef(model3.lmer)[[1]][1:10,1]</div>
+<span class="style141">  &nbsp;[1] -0.008987382 -0.280241025&nbsp; 0.018405654&nbsp; 0.267184478&nbsp; 0.157106981&nbsp; 0.468749019&nbsp; 0.028217857<br>
+&nbsp;[8]&nbsp; 0.331646243&nbsp; 0.423017080&nbsp; 0.359845270</span>
+<p>We obtain the random intercepts, the &beta;<sub>0i</sub>, with the <span class="style1">coef</span> function.<br>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(model3.lmer)[[1]][1:10,1]</div>
+<span class="style141">&nbsp;[1] 3.182561 2.911308 3.209954 3.458733 3.348656 3.660298 3.219767 3.523195 3.614566 3.551394</span>
+<p>We can also obtain the random intercepts from the random effects  by adding the fixed effect estimate of the intercept, &beta;<sub>0</sub>, to the random effects.<br>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">fixef(model3.lmer)[1] + ranef(model3.lmer)[[1]][1:10,1]</div>
+<span class="style24">&nbsp;[1] 3.182561 2.911308 3.209954 3.458733 3.348656 3.660298 3.219767 3.523195 3.614566 3.551394</span>
+<p> There is yet another way to think about this model that focuses on the structural characteristics of the data. It's called the multilevel formulation and  is written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture25/Poissonranef2.gif" width="350" height="110" alt="Poisson multilevel"></p>
+<p>This formulation recognizes that there are quantities that vary among the observations within a patch, such as the variable year, and there are quantities that are constant within a patch but vary between patches, such as the random effects. The multilevel formulation will be especially useful when we add  predictors to the model that characterize the patches.</p>
+<p>The Bayesian version of the random intercepts model makes explicit use of the multilevel formulation. We've already seen this when we specified the separate intercepts model. As a result moving from the separate intercepts model to the random intercepts model  requires  only minor changes in the BUGS code. We need to replace the uninformative prior for the individual intercepts with an informative one. This change in the BUGS code is indicated below.</p>
+<table width="700" border="1" align="center" cellpadding="1" cellspacing="0">
+  <tr bgcolor="#F1D2D8">
+    <td><div align="center"><strong>Separate intercepts model <span class="style44">(model2.txt)</span></strong></div></td>
+    <td><div align="center"><strong>Random intercepts model<span class="style44"> (model3.txt)</span></strong></div></td>
+  </tr>
+  <tr>
+    <td class="style261" valign="top">model{<br>
+      for(i in 1:n) {
+      <div class="style261" style="padding-left: 50px; text-indent:-30px"> y[i]~dpois(mu.hat[i])</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">log.mu[i] &lt;- a[patch[i]] + b1*year2[i] + b2*year3[i]</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">mu.hat[i] <- exp(log.mu[i])</div>
+      }<br>
+      <span class="style151">#priors</span><br>
+      for(j in 1:J){<br>
+      <div class="style4011" style="padding-left: 50px; text-indent:-30px">a[j]~dnorm(0,.000001)</div>
+      }<br>
+      b1~dnorm(0,.000001)<br>
+      b2~dnorm(0,.000001)<br>
+      }
+      </p></td>
+    <td class="style261">model{<br>
+      for(i in 1:n) {<br>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">y[i]~dpois(mu.hat[i])</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">log.mu[i] &lt;- a[patch[i]] + b1*year2[i] + b2*year3[i]</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">mu.hat[i] <- exp(log.mu[i])</div>
+      }<br>
+      <span class="style151">#level-2 model</span><br>
+      for(j in 1:J){<span class="style421"><br>
+        &nbsp;&nbsp; a[j]~dnorm(a.hat[j],tau.a)<br>
+        &nbsp;&nbsp;&nbsp;a.hat[j] &lt;- mu.a<br>
+        </span>}<br>
+      <span class="style151">#priors</span><br>
+      <span class="style421"> mu.a~dnorm(0,.000001)</span><br>
+      <span class="style4011">tau.a &lt;- pow(sigma.a,-2)<br>
+        sigma.a~dunif(0,10000)</span><br>
+      b1~dnorm(0,.000001)<br>
+      b2~dnorm(0,.000001)<br>
+      }
+      </p></td>
+  </tr>
+</table>
+<p>In the separate intercepts model we  assigned separate <u>uninformative</u> priors to each intercept. To a Bayesian the random intercepts model differs because each intercept is given an <u>informative</u> prior so that the intercepts are now modeled parameters. The notation I used for the intercepts in the BUGS code differs slightly from what I used above for the frequentist model. </p>
+<p align="center"><img src="../../images/lectures/lecture25/Bayesian1.gif" width="270" height="117" alt="Bayesian"></p>
+The parameters that appear in the priors for the intercepts, the mean <span class="style8">mu.a</span> and the standard deviation <span class="style8">sigma.a</span>, are in turn given their own priors, now called hyperpriors. In a similar vein the parameters <span class="style8">mu.a </span>and <span class="style8">sigma.a </span>are sometimes called hyperparameters.  To fit this model in WinBUGS we just add additional arguments to the initial value list (<span class="style8">bird.inits</span>) and parameter vector (<span class="style8">bird.parms</span>)  that correspond to these new parameters. 
+<ul>
+  <li>The data argument is unchanged.</li>
+  <li>The new parameters <span class="style8">mu.a</span> and <span class="style8">sigma.a</span> are assigned initial values. </li>
+  <li>The new parameters <span class="style8">mu.a</span> and <span class="style8">sigma.a</span> are added to the parameter list.</li>
+</ul>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.data &lt;- list(&quot;y&quot;, &quot;year2&quot;, &quot;year3&quot;, &quot;n&quot;, &quot;patch&quot;, &quot;J&quot;) </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.inits &lt;- function() {list(a=rnorm(J), b1=rnorm(1), b2=rnorm(1), <span class="style421">mu.a=rnorm(1), sigma.a=runif(1)</span>)}</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">bird.parms &lt;- c(&quot;a&quot;, &quot;b1&quot;, &quot;b2&quot;,  <span class="style421">&quot;mu.a&quot;, &quot;sigma.a&quot;</span>)</div>
+<p><a name="arm"></a><a name="jags"></a>The calls to WinBUGS and JAGS  are shown below.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"># WinBUGS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> library(arm) </div
+>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model3.bugs &lt;- bugs(bird.data, bird.inits, bird.parms, &quot;model3.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=10000, debug=T)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # JAGS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> library(R2jags)</div
+>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model3.jags &lt;- jags(bird.data, bird.inits, bird.parms, &quot;model3.txt&quot;, n.chains=3, n.iter=10000)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(model3.bugs$summary)</div>
+<span class="style24">[1] 106&nbsp;&nbsp; 9</span>
+<p>There are 106 estimated parameters, far too many to squeeze the trace plots of the Markov chains into a single graphics window. I plot them instead 16 per panel. The last set of trajectories is shown in Fig. 1. All of the chains appear to be mixing well. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"><a name="coda"></a><a name="lattice"></a>model3.mcmc &lt;- as.mcmc.list(model3.bugs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(model3.mcmc, layout=c(4, 4))</div><br>
+
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center"><img src="../../images/lectures/lecture25/fig1.png" width="445" height="240" alt="fig. 1">&nbsp;&nbsp;&nbsp;</div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Trace plots of individual Markov chains from  WinBUGS.</td>
+  </tr>
+</table>
+
+<p>Checking the summary object we find that all of the Rhats are less than 1.1 and the effective sample sizes are large.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(model3.bugs$summary[,&quot;Rhat&quot;])</div>
+<span class="style24">[1] 1.007241</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> min(model3.bugs$summary[,&quot;n.eff&quot;])</div>
+<span class="style24">[1] 290</span>
+<p>The  means of the Bayesian posterior distributions for the population intercept, the regression coefficients, and the standard deviation of the random effects  are all very close to the frequentist MLEs. (In the notation I've used <span class="style8">mu.a</span> corresponds to the frequentist intercept &beta;<sub>0</sub>.)</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># Bayesian estimates</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model3.bugs$summary[102:105, &quot;mean&quot;]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mu.a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sigma.a <br>
+&nbsp; -0.1508430&nbsp;&nbsp; -0.1177506&nbsp;&nbsp;&nbsp; 3.1878453&nbsp;&nbsp; &nbsp;0.2951361</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># frequentist estimates</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fixef(model3.lmer)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp; (Intercept) factor(year)2006 factor(year)2007 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1915487&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.1541447&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.1201470 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> attr(VarCorr(model3.lmer)$patch, &quot;stddev&quot;)</div>
+<span class="style24">(Intercept) <br>
+&nbsp; 0.2879088</span>
+<p>The frequentist predictions of the random intercepts are also close to the Bayesian posterior means. (Only the first 12 of these are shown below.)<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model3.bugs$summary[1:12,&quot;mean&quot;]</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp; a[1]&nbsp;&nbsp;&nbsp;&nbsp; a[2]&nbsp;&nbsp;&nbsp;&nbsp; a[3]&nbsp;&nbsp;&nbsp;&nbsp; a[4]&nbsp;&nbsp;&nbsp;&nbsp; a[5]&nbsp;&nbsp;&nbsp;&nbsp; a[6]&nbsp;&nbsp;&nbsp;&nbsp; a[7]&nbsp;&nbsp;&nbsp;&nbsp; a[8] <br>
+  3.172729 2.892569 3.201317 3.452633 3.340987 3.652841 3.208471 3.513790 <br>
+  &nbsp;&nbsp;&nbsp; a[9]&nbsp;&nbsp;&nbsp; a[10]&nbsp;&nbsp;&nbsp; a[11]&nbsp;&nbsp;&nbsp; a[12] <br>
+3.611343 3.543788 3.196539 3.305855</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(model3.lmer)[[1]][1:12,1]</div>
+<span class="style24">  &nbsp;[1] 3.182561 2.911308 3.209954 3.458733 3.348656 3.660298 3.219767 3.523195<br>
+&nbsp;[9] 3.614566 3.551394 3.194726 3.314897</span>
+<p>We can also fit the random effects formulation of the random intercepts model as a Bayesian model. The BUGS code for the random intercepts version and the random effects version of the model are shown below with the differences highlighted.<br>
+</p>
+
+<table width="700" border="1" align="center" cellpadding="1" cellspacing="0">
+  <tr bgcolor="#F1D2D8">
+    <td><div align="center"><strong>Random intercepts version <span class="style44"> (model3.txt)</span></strong> </div></td>
+    <td><div align="center"><strong>Random effects version <span class="style44"> (model3a.txt)</span></strong></div></td>
+  </tr>
+  <tr>
+    <td class="style261" valign="top">model{<br>
+      for(i in 1:n) {<br>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">y[i]~dpois(mu.hat[i])</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">log.mu[i] &lt;- a[patch[i]] + b1*year2[i] + b2*year3[i]</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">mu.hat[i] <- exp(log.mu[i])</div>
+      }<br>
+      <span class="style151">#level-2 model</span><br>
+      for(j in 1:J){<span class="style421"><br>
+        &nbsp;&nbsp; a[j]~dnorm(mu.a,tau.a)<br>
+        </span>}<span class="style421"><br>
+          </span> <span class="style151">#priors</span><br>
+      <span class="style103">mu.a~dnorm(0,.000001)<br>
+        tau.a &lt;- pow(sigma.a,-2)<br>
+        sigma.a~dunif(0,10000)</span><br>
+      b1~dnorm(0,.000001)<br>
+      b2~dnorm(0,.000001)<br>
+      }</td>
+    <td class="style261">model{<br>
+      for(i in 1:n) {<br>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">y[i]~dpois(mu.hat[i])</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">log.mu[i] &lt;- a[patch[i]] + b1*year2[i] + b2*year3[i]</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">mu.hat[i] <- exp(log.mu[i])</div>
+      }<br>
+      <span class="style151">#level-2 model</span><br>
+      for(j in 1:J){<span class="style421"><br>
+        &nbsp;&nbsp;&nbsp;a[j] &lt;- mu.a + u0[j]<br>
+        &nbsp;&nbsp; u0[j]~dnorm(0,tau.a)<br>
+        </span>}<span class="style421"><br>
+          </span> <span class="style151">#priors</span><br>
+      <span class="style103">mu.a~dnorm(0,.000001)<br>
+        tau.a &lt;- pow(sigma.a,-2)<br>
+        sigma.a~dunif(0,10000)</span><br>
+      b1~dnorm(0,.000001)<br>
+      b2~dnorm(0,.000001)<br>
+      }
+      </p></td>
+  </tr>
+</table>
+<p>To run the random effects version of the model  requires changing the initial values and the returned parameters.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">bird.inits &lt;- function() {list(<span class="style39">u0=rnorm(J)</span>, b1=rnorm(1), b2=rnorm(1), mu.a=rnorm(1), sigma.a=runif(1))}</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  bird.parms &lt;- c(<span class="style39">&quot;u0&quot;</span>, &quot;b1&quot;, &quot;b2&quot;, &quot;mu.a&quot;, &quot;sigma.a&quot;)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">model3a.bugs &lt;- bugs(bird.data, bird.inits, bird.parms, &quot;model3a.txt&quot;, bugs.directory=&quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=10000, debug=T)</div>
+<p>I compare the frequentist predictions of the random effects with the Bayesian means. Although there are some differences, the results are similar.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model3a.bugs$summary[1:12,&quot;mean&quot;]</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[5] <br>
+-0.029531178 -0.295107819&nbsp; 0.003504299&nbsp; 0.254502339&nbsp; 0.150943809 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[6]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[7]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[8]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[9]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[10] <br>
+&nbsp;0.464154867&nbsp; 0.025682889&nbsp; 0.327686000&nbsp; 0.419483867&nbsp; 0.353741133 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[11]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u0[12] <br>
+-0.004123341&nbsp; 0.121433980 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ranef(model3.lmer)[[1]][1:12,1]</div>
+<span class="style24">&nbsp;[1] -0.008987382 -0.280241025&nbsp; 0.018405654&nbsp; 0.267184478&nbsp; 0.157106981<br>
+&nbsp;[6]&nbsp; 0.468749019&nbsp; 0.028217857&nbsp; 0.331646243&nbsp; 0.423017080&nbsp; 0.359845270<br>
+[11]&nbsp; 0.003177495&nbsp; 0.123347898</span>
+
+<p name="lmer">We've already seen that the <span class="style1">lmer</span> function does not report a log-likelihood for Poisson models that is comparable to what is reported for other Poisson models (<a href="lecture22.htm#ranlike">lecture 22</a>).  Even if we adjust for this and also take into account the difference between <img src="../../images/lectures/lecture25/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom"> and <img src="../../images/lectures/lecture25/Dbar.gif" alt="Dbar" width="22" height="25" align="absbottom"> in the Bayesian formulation,  the Bayesian and frequentist deviances  with  mixed effects models are not directly comparable. In the Bayesian calculations the reported deviance is based on the joint likelihood of the data and the random effects, an expression we would write as follows.</p>
+<p align="center" name="lmer"><img src="../../images/lectures/lecture25/joint&#32;likelihood.gif" width="338" height="57" alt="joint likelihood"></p>
+<p name="lmer">In the frequentist approach the reported log-likelihood is based on the marginal likelihood of <strong>y</strong> in which the random effects have been integrated out. These two likelihoods are not the same nor do they contain the same information about model fit.</p>
+<h2><a name="patch" id="patch"></a>A random intercepts model with patch-level predictors</h2>
+<p>So far all the random intercepts models for richness that we've considered have included a single predictor, <span class="style8">year</span>, whose value varied across observations. The other variable <span class="style8">patch</span> that  appeared in the model played a role not  as a predictor but as  a structural variable. <span class="style8">Patch</span> describes how the data are organized, the fact that separate annual observations were made on the same patch yielding  a hierarchical data set. The layers of the hierarchy are referred to as levels and so the birds data set is also a 2-level data set. Level 1 corresponds to  the individual annual observations; level 2 corresponds to the patch observations while the patch itself is referred to as a level-2 unit. The variable <span class="style8">year</span> is a level-1 predictor. This break-down resembles  the split plot design discussed in <a href="lecture10.htm">lecture 10</a> where we had split plot (level 1) units as well as whole plot (level 2) units.</p>
+<p>The next complication is to include  level-2 predictors in the model. For the birds data set a  level-2 predictor is a patch characteristic. All observations made on the same patch will   necessarily share the same value of a level-2 predictor. The distinction between level-1 and level-2 predictors is important because the level of a predictor determines how one should measure background variability for use in a statistical test of the predictor's effect on the response. With level-1 predictors  measurements from the same patch or from different patches all count as suitable replicates (although there are issues of correlation that  need to be addressed), but with a level-2 predictor only measurements made on different patches should contribute to assessing the effect of that predictor. Taking repeated measurements of the same level-2 unit and treating them as if they were true replicates of the effect of the level-2 predictor is  called pseudo-replication.</p>
+<p>In the birds data set the variables  <span class="style8">landscape</span> and <span class="style8">area</span> can serve as level-2 predictors. <span class="style8">Landscape</span> classifies the land use type for each patch and <span class="style8">area</span> records the size of each patch. Because they are level-2 predictors they have the same value for  all observations made on the same patch. When we fit the model using the <span class="style1">lmer</span> function we just include level-2 predictors as ordinary predictors; <span class="style1">lmer</span> figures out the appropriate way to deal with them based on their variability in the data set. Previously we used <span class="style8">log(area)</span> as the regressor rather than area.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(lme4)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model4.lmer &lt;- lmer(S~factor(year) + log(area) + landscape + (1|patch), data=birds.short, family=poisson)</div>
+<h3><a name="creating"></a>Creating the level-2 predictors</h3>
+<p>Contrary to  our experience with <span class="style13">lmer</span>, a formal distinction between level-1 and level-2 predictors must be made when fitting a Bayesian model. As we've seen a level-1 predictor has a different value for each observation while a level-2 predictor has a different value for each level-2 unit, here the patch. In the Bayesian model the data for the level-2 regressors must  consist of only one observation per patch. To accomplish this we  use the <span class="style13">tapply</span> function to select  one value of <span class="style8">log(area)</span> and <span class="style8">landscape</span> from each patch. The generic function <span class="style103">function(x) x[1]</span> will accomplish this. The following line of code  extracts one value of <span class="style8">log(area)</span> from each patch.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">L.area &lt;- tapply(log(birds.short$area), birds.short$patch, function(x) x[1])</div>
+<p>If we examine the <span class="style13">class</span> of the variable <span class="style8">L.area</span> that <span class="style13">tapply</span> has created we discover that it is of type &quot;array&quot;.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> class(L.area)</div>
+<span class="style141"> [1] &quot;array&quot;</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> L.area</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag1a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag1b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag1c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag1d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag2a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag2c <br>
+&nbsp;1.25566803 -0.48529516&nbsp; 0.80426229&nbsp; 2.11382872&nbsp; 0.31747398&nbsp; 4.08226850 -0.58325863 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag2d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag3c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag3d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag3e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag3f <br>
+&nbsp;1.45861502&nbsp; 2.97737690&nbsp; 1.70314090&nbsp; 0.17591217&nbsp; 1.12879134&nbsp; 0.65645424 -0.01196129 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag4a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag4b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag4c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag4d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag4e&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ag4f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag5a <br>
+-0.02894873&nbsp; 1.70198933&nbsp; 1.49187731&nbsp; 3.99180410&nbsp; 2.93134152&nbsp; 0.99117214&nbsp; 2.21296689 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag5b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag5c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag5d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ag5e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1c <br>
+&nbsp;0.18857303&nbsp; 3.48248324&nbsp; 1.35823901&nbsp; 1.97287691&nbsp; 2.58970230&nbsp; 0.54765232 -0.54266836 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b2a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b2c <br>
+&nbsp;0.80358443&nbsp; 1.24468274 -0.22189433&nbsp; 0.14928170&nbsp; 2.16974141&nbsp; 0.61853203&nbsp; 1.63539321 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b2d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b2e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b3c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b3d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b3e <br>
+&nbsp;0.75783281&nbsp; 0.31648516&nbsp; 1.47343760&nbsp; 1.37052419&nbsp; 0.09454227&nbsp; 0.74487167&nbsp; 1.72847540 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b3f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b4a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b4b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b4c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b4d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b4e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b5a <br>
+&nbsp;0.26138199&nbsp; 1.45703186&nbsp; 2.30915873&nbsp; 0.46469650&nbsp; 0.38346511 -0.21811995&nbsp; 1.05605267 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b5b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b5c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b5d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref1a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref1b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref1c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref1d <br>
+&nbsp;1.41900354&nbsp; 1.10624972&nbsp; 0.84156719&nbsp; 1.70474809&nbsp; 0.18232156&nbsp; 1.25276297&nbsp; 0.18232156 <br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Ref1e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref1g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref1h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref2a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref2c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref2d <br>
+&nbsp;2.01490302&nbsp; 2.70805020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp; 1.25276297&nbsp; 0.78845736&nbsp; 1.70474809&nbsp; 0.78845736 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref2e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref3c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref3d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref4a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref4b <br>
+&nbsp;0.78845736&nbsp; 0.18232156&nbsp; 1.70474809&nbsp; 1.25276297&nbsp; 0.78845736&nbsp; 0.18232156&nbsp; 1.25276297 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref4c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref4d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref5a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref5b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref5c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref5d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref5e <br>
+&nbsp;0.78845736&nbsp; 0.78845736&nbsp; 0.18232156&nbsp; 1.70474809&nbsp; 1.70474809&nbsp; 1.25276297&nbsp; 0.18232156 <br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Ref6a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref6b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref6c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref6d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref6e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ref6f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u1a <br>
+&nbsp;0.18232156&nbsp; 0.78845736&nbsp; 1.25276297&nbsp; 1.25276297&nbsp; 2.01490302&nbsp; 3.21887582&nbsp; 0.99864818 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u1b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u1c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u1d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u1e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u2a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u2c <br>
+&nbsp;1.54320497&nbsp; 0.52933787&nbsp; 0.34623913&nbsp; 1.92809282&nbsp; 1.53700588&nbsp; 0.35959235&nbsp; 1.19088049 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u2d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u2e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u3c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u3d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u4a <br>
+&nbsp;0.23008174&nbsp; 1.50218226&nbsp; 1.91458168&nbsp; 1.64380994&nbsp; 1.14376245&nbsp; 0.32579492&nbsp; 0.59559073 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;u4b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u4c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u4d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u4e <br>
+&nbsp;0.01921263&nbsp; 1.06914298&nbsp; 0.98235007&nbsp; 2.12134565</span>
+<p>While JAGS has no problem with data in this format, WinBUGS does. WinBUGS accepts only numeric data. We can change the <span class="style13">class</span> of <span class="style8">L.area</span> to type &quot;numeric&quot; by using either the <span class="style13">as.vector</span> function or the <span class="style13">as.numeric</span> function on the output of <span class="style13">tapply</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> L.area &lt;- as.vector(tapply(log(birds.short$area), birds.short$patch, function(x) x[1]))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> class(L.area)</div>
+<span class="style141"> [1] &quot;numeric&quot;</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> L.area</div>
+<span class="style141"> &nbsp; [1]&nbsp; 1.25566803 -0.48529516&nbsp; 0.80426229&nbsp; 2.11382872&nbsp; 0.31747398&nbsp; 4.08226850<br>
+&nbsp; [7] -0.58325863&nbsp; 1.45861502&nbsp; 2.97737690&nbsp; 1.70314090&nbsp; 0.17591217&nbsp; 1.12879134<br>
+&nbsp;[13]&nbsp; 0.65645424 -0.01196129 -0.02894873&nbsp; 1.70198933&nbsp; 1.49187731&nbsp; 3.99180410<br>
+&nbsp;[19]&nbsp; 2.93134152&nbsp; 0.99117214&nbsp; 2.21296689&nbsp; 0.18857303&nbsp; 3.48248324&nbsp; 1.35823901<br>
+&nbsp;[25]&nbsp; 1.97287691&nbsp; 2.58970230&nbsp; 0.54765232 -0.54266836&nbsp; 0.80358443&nbsp; 1.24468274<br>
+&nbsp;[31] -0.22189433&nbsp; 0.14928170&nbsp; 2.16974141&nbsp; 0.61853203&nbsp; 1.63539321&nbsp; 0.75783281<br>
+&nbsp;[37]&nbsp; 0.31648516&nbsp; 1.47343760&nbsp; 1.37052419&nbsp; 0.09454227&nbsp; 0.74487167&nbsp; 1.72847540<br>
+&nbsp;[43]&nbsp; 0.26138199&nbsp; 1.45703186&nbsp; 2.30915873&nbsp; 0.46469650&nbsp; 0.38346511 -0.21811995<br>
+&nbsp;[49]&nbsp; 1.05605267&nbsp; 1.41900354&nbsp; 1.10624972&nbsp; 0.84156719&nbsp; 1.70474809&nbsp; 0.18232156<br>
+&nbsp;[55]&nbsp; 1.25276297&nbsp; 0.18232156&nbsp; 2.01490302&nbsp; 2.70805020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NA&nbsp; 1.25276297<br>
+&nbsp;[61]&nbsp; 0.78845736&nbsp; 1.70474809&nbsp; 0.78845736&nbsp; 0.78845736&nbsp; 0.18232156 &nbsp;1.70474809<br>
+&nbsp;[67]&nbsp; 1.25276297&nbsp; 0.78845736&nbsp; 0.18232156&nbsp; 1.25276297&nbsp; 0.78845736&nbsp; 0.78845736<br>
+&nbsp;[73]&nbsp; 0.18232156&nbsp; 1.70474809&nbsp; 1.70474809&nbsp; 1.25276297&nbsp; 0.18232156&nbsp; 0.18232156<br>
+&nbsp;[79]&nbsp; 0.78845736&nbsp; 1.25276297&nbsp; 1.25276297&nbsp; 2.01490302&nbsp; 3.21887582&nbsp; 0.99864818<br>
+&nbsp;[85]&nbsp; 1.54320497&nbsp; 0.52933787&nbsp; 0.34623913&nbsp; 1.92809282&nbsp; 1.53700588&nbsp; 0.35959235<br>
+&nbsp;[91]&nbsp; 1.19088049&nbsp; 0.23008174&nbsp; 1.50218226&nbsp; 1.91458168&nbsp; 1.64380994&nbsp; 1.14376245<br>
+&nbsp;[97]&nbsp; 0.32579492&nbsp; 0.59559073&nbsp; 0.01921263&nbsp; 1.06914298&nbsp; 0.98235007&nbsp; 2.12134565</span>
+<p>The data are now in the format that WinBUGS requires, but the display of values reveals another problem. There is a missing value for <span class="style8">L.area</span>. Using the output above from when <span class="style8">L.area</span> was of class &quot;array&quot; we see that this missing value corresponds to a patch labeled <span class="style8">&quot;Ref1h&quot;</span>. When we try to list its data in the current data frame we find that this patch doesn't exist.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">birds.short[birds.short$patch=='Ref1h',]</div>
+<span class="style141"> [1] patch&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; landscape area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log.area. ENN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log.ENN. <br>
+&lt;0 rows&gt; (or 0-length row.names)</span>
+<p>On the other hand patch <span class="style8">'Ref1h'</span> is present in the original data frame where it has a non-missing value for <span class="style8">area</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> birds[birds$patch=='Ref1h',]</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp; patch&nbsp; S year landscape area log.area. ENN log.ENN.<br>
+59&nbsp; Ref1h NA 2005&nbsp;&nbsp;&nbsp; Forest&nbsp; 2.2 0.3424227&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+161 Ref1h NA 2006&nbsp;&nbsp;&nbsp; Forest&nbsp; 2.2 0.3424227&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+263 Ref1h NA 2007&nbsp;&nbsp;&nbsp; Forest&nbsp; 2.2 0.3424227&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span>
+<p>Notice that this patch has missing values for richness <span class="style8">S</span> in all three years and as a result all of its observations were deleted when we created the <span class="style8">birds.short</span> data frame. The levels of a factor are defined when the factor is first created and these levels are then inherited by all subsets of the original data frame, regardless of how many levels of the factor are actually represented in the subset. The way around this is to use the <span class="style13">factor</span> function again to redefine the factor variable so that it will have only the unique levels that are  present in the current data frame. It's worth noting that the <span class="style13">as.factor</span> function, which a lot of people in this class like to use, does not work here. The<span class="style13"> as.factor</span> function will only create a factor from a variable  that  is not  a factor. If it is already a factor it just leaves it alone.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"><strong></strong> length(L.area)</div>
+<span class="style141"> [1] 102</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # as.factor does not remove the ghost level </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> L.area &lt;- as.vector(tapply(log(birds.short$area), as.factor(birds.short$patch), function(x) x[1]))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">length(L.area)</div>
+<span class="style141"> [1] 102</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # the factor function does remove the ghost level </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">L.area &lt;- as.vector(tapply(log(birds.short$area), factor(birds.short$patch), function(x) x[1]))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> length(L.area)</div>
+<span class="style141">[1] 101</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> L.area</div>
+<span class="style141">&nbsp; [1]&nbsp; 1.25566803 -0.48529516&nbsp; 0.80426229&nbsp; 2.11382872&nbsp; 0.31747398&nbsp; 4.08226850<br>
+&nbsp; [7] -0.58325863&nbsp; 1.45861502&nbsp; 2.97737690&nbsp; 1.70314090&nbsp; 0.17591217&nbsp; 1.12879134<br>
+&nbsp;[13]&nbsp; 0.65645424 -0.01196129 -0.02894873&nbsp; 1.70198933&nbsp; 1.49187731&nbsp; 3.99180410<br>
+&nbsp;[19]&nbsp; 2.93134152&nbsp; 0.99117214&nbsp; 2.21296689&nbsp; 0.18857303&nbsp; 3.48248324&nbsp; 1.35823901<br>
+&nbsp;[25]&nbsp; 1.97287691&nbsp; 2.58970230&nbsp; 0.54765232 -0.54266836&nbsp; 0.80358443&nbsp; 1.24468274<br>
+&nbsp;[31] -0.22189433&nbsp; 0.14928170&nbsp; 2.16974141&nbsp; 0.61853203&nbsp; 1.63539321&nbsp; 0.75783281<br>
+&nbsp;[37]&nbsp; 0.31648516&nbsp; 1.47343760&nbsp; 1.37052419&nbsp; 0.09454227&nbsp; 0.74487167&nbsp; 1.72847540<br>
+&nbsp;[43]&nbsp; 0.26138199&nbsp; 1.45703186&nbsp; 2.30915873&nbsp; 0.46469650&nbsp; 0.38346511 -0.21811995<br>
+&nbsp;[49]&nbsp; 1.05605267&nbsp; 1.41900354&nbsp; 1.10624972&nbsp; 0.84156719&nbsp; 1.70474809&nbsp; 0.18232156<br>
+&nbsp;[55]&nbsp; 1.25276297&nbsp; 0.18232156&nbsp; 2.01490302&nbsp; 2.70805020&nbsp; 1.25276297&nbsp; 0.78845736<br>
+&nbsp;[61]&nbsp; 1.70474809&nbsp; 0.78845736&nbsp; 0.78845736&nbsp; 0.18232156&nbsp; 1.70474809&nbsp; 1.25276297<br>
+&nbsp;[67]&nbsp; 0.78845736&nbsp; 0.18232156&nbsp; 1.25276297&nbsp; 0.78845736&nbsp; 0.78845736&nbsp; 0.18232156<br>
+&nbsp;[73]&nbsp; 1.70474809&nbsp; 1.70474809&nbsp; 1.25276297&nbsp; 0.18232156&nbsp; 0.18232156&nbsp; 0.78845736<br>
+&nbsp;[79]&nbsp; 1.25276297&nbsp; 1.25276297&nbsp; 2.01490302&nbsp; 3.21887582&nbsp; 0.99864818&nbsp; 1.54320497<br>
+&nbsp;[85]&nbsp; 0.52933787&nbsp; 0.34623913&nbsp; 1.92809282&nbsp; 1.53700588&nbsp; 0.35959235&nbsp; 1.19088049<br>
+&nbsp;[91]&nbsp; 0.23008174&nbsp; 1.50218226&nbsp; 1.91458168&nbsp; 1.64380994&nbsp; 1.14376245&nbsp; 0.32579492<br>
+&nbsp;[97]&nbsp; 0.59559073&nbsp; 0.01921263&nbsp; 1.06914298&nbsp; 0.98235007&nbsp; 2.12134565</span>
+<p>We need to  create a level-2 version of the <span class="style8">landscape</span> variable too.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">Lscape &lt;- as.vector(tapply(birds.short$landscape, factor(birds.short$patch), function(x) x[1]))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> Lscape</div>
+<span class="style141">&nbsp;[1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2<br>
+[41] 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3<br>
+[81] 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</span>
+<p>The factor levels of the <span class="style8">landscape</span> variable have been automatically converted to numeric values by <span class="style13">tapply</span>. For the regression model we need to create three indicator variables that indicate the 2nd, 3rd, and 4th levels of <span class="style8">landscape</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> Lscape2 &lt;- as.numeric(Lscape==2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> Lscape3 &lt;- as.numeric(Lscape==3)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> Lscape4 &lt;- as.numeric(Lscape==4)</div>
+<h3><a name="BUGS"></a>The BUGS model</h3>
+<p>Level-2 predictors should appear in the level-2 part of the BUGS model. So in the BUGS code for the random intercepts model the level-2 predictors should appear as predictors in the model for <span class="style8">a.hat</span>, the individual patch mean.  The table below shows the basic random intercepts model in the left panel and indicates in the right panel where the level-2 predictors should be placed in the model. I save the model as <span class="style8">model4.txt</span>.</p>
+<table width="700" border="1" align="center" cellpadding="1" cellspacing="0">
+  <tr bgcolor="#F1D2D8">
+    <td><div align="center"><strong>Random intercepts model</strong></div></td>
+    <td><div align="center"><strong>Random intercepts model with level-2 predictors&nbsp;</strong></div></td>
+  </tr>
+  <tr>
+    <td class="style261" valign="top">model{<br>
+      for(i in 1:n) {<br>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">y[i]~dpois(mu.hat[i])</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">log.mu[i] &lt;- a[patch[i]] + b1*year2[i] + b2*year3[i]</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">mu.hat[i] <- exp(log.mu[i])</div>
+      }<br>
+      <span class="style151">#level-2 model</span><br>
+      for(j in 1:J){<br>
+      &nbsp;&nbsp; a[j]~dnorm(a.hat[j],tau.a)<br>
+      &nbsp;&nbsp;&nbsp;a.hat[j]&lt;-mu.a<br>
+      }<br>
+      b1~dnorm(0,.000001)<br>
+      b2~dnorm(0,.000001)<br>
+      mu.a~dnorm(0,.000001)<br>
+      tau.a&lt;-pow(sigma.a,-2)<br>
+      sigma.a~dunif(0,10000)<br>
+      }
+      </p></td>
+    <td class="style261">model{<br>
+      for(i in 1:n) {<br>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">y[i]~dpois(mu.hat[i])</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">log.mu[i] &lt;- a[patch[i]] + b1*year2[i] + b2*year3[i]</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">mu.hat[i] <- exp(log.mu[i])</div>
+      <div class="style261" style="padding-left: 30px; text-indent:-30px">}</div>
+      <div class="style151" style="padding-left: 30px; text-indent:-30px">#level-2 model</div>
+      <div class="style261" style="padding-left: 30px; text-indent:-30px">for(j in 1:J){</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">a[j]~dnorm(a.hat[j],tau.a)</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">a.hat[j]&lt;-mu.a <span class="style421">+ g1*L.area[j] + g2*Lscape2[j]
+        + g3*Lscape3[j] + g4*Lscape4[j]</span></div>
+      }<br>
+      <span class="style421">g1~dnorm(0,.000001)<br>
+        g2~dnorm(0,.000001)<br>
+        g3~dnorm(0,.000001)<br>
+        g4~dnorm(0,.000001)</span><br>
+      b1~dnorm(0,.000001)<br>
+      b2~dnorm(0,.000001)<br>
+      mu.a~dnorm(0,.000001)<br>
+      tau.a&lt;-pow(sigma.a,-2)<br>
+      sigma.a~dunif(0,10000)<br>
+      }
+      </p>
+      </p></td>
+  </tr>
+</table>
+<p>The new variables are added to the list of data in the <span class="style8">bird.data</span> and <span class="style8">bird.parms</span> arguments and  additional initial values are included in the <span class="style8">bird.inits</span> argument.<br>
+</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # objects for BUGS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.data &lt;- list(&quot;y&quot;, &quot;year2&quot;, &quot;year3&quot;, &quot;n&quot;, &quot;patch&quot;, &quot;J&quot;, <span class="style39">&quot;L.area&quot;, &quot;Lscape2&quot;, &quot;Lscape3&quot;, &quot;Lscape4&quot;</span>)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.inits &lt;- function() {list(a=rnorm(J), b1=rnorm(1), b2=rnorm(1), <span class="style39">g1=rnorm(1), g2=rnorm(1), g3=rnorm(1), g4=rnorm(1)</span>,  sigma.a=runif(1), mu.a=rnorm(1))}</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> bird.parms &lt;- c(&quot;a&quot;, &quot;b1&quot;, &quot;b2&quot;,  &quot;sigma.a&quot;, &quot;mu.a&quot;, <span class="style39">&quot;g1&quot;, &quot;g2&quot;, &quot;g3&quot;, &quot;g4&quot;</span>)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # fit BUGS model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> library(arm)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.bugs &lt;- bugs(bird.data, bird.inits, bird.parms, &quot;model4.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;,n.chains=3, n.iter=100, debug=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.bugs &lt;- bugs(bird.data, bird.inits, bird.parms, &quot;model4.txt&quot;, bugs.directory = &quot;C:/WinBUGS14&quot;,n.chains=3, n.iter=10000, debug=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> max(model4.bugs$summary[,&quot;Rhat&quot;])</div>
+<span class="style141"> [1] 1.010421</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> min(model4.bugs$summary[,&quot;n.eff&quot;])</div>
+<span class="style141">[1] 250</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"># using JAGS</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> library(R2jags)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.jags &lt;- jags(bird.data, bird.inits, bird.parms, &quot;model4.txt&quot;, n.chains=3, n.iter=10000)</div>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> round(model4.bugs$summary[102:110,],3)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp;&nbsp;&nbsp; sd&nbsp;&nbsp;&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75%&nbsp;&nbsp;&nbsp; 97.5%&nbsp; Rhat n.eff<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.131&nbsp; 0.034&nbsp;&nbsp; -0.197&nbsp;&nbsp; -0.155&nbsp;&nbsp; -0.132&nbsp;&nbsp; -0.109&nbsp;&nbsp; -0.067 1.000&nbsp; 1000<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.108&nbsp; 0.031&nbsp;&nbsp; -0.166&nbsp;&nbsp; -0.130&nbsp;&nbsp; -0.109&nbsp;&nbsp; -0.087&nbsp;&nbsp; -0.045 1.000&nbsp; 1000<br>
+  mu.a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.062&nbsp; 0.054&nbsp;&nbsp;&nbsp; 2.956&nbsp;&nbsp;&nbsp; 3.027&nbsp;&nbsp;&nbsp; 3.063&nbsp;&nbsp;&nbsp; 3.099&nbsp;&nbsp;&nbsp; 3.168 1.000&nbsp; 1000<br>
+  sigma.a&nbsp;&nbsp;&nbsp;&nbsp; 0.148&nbsp; 0.020&nbsp;&nbsp;&nbsp; 0.112&nbsp;&nbsp;&nbsp; 0.134&nbsp;&nbsp;&nbsp; 0.146&nbsp;&nbsp;&nbsp; 0.160&nbsp;&nbsp;&nbsp; 0.190 1.003&nbsp; 1000<br>
+  g1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.223&nbsp; 0.021&nbsp;&nbsp;&nbsp; 0.181&nbsp;&nbsp;&nbsp; 0.209&nbsp;&nbsp;&nbsp; 0.223&nbsp;&nbsp;&nbsp; 0.237&nbsp;&nbsp;&nbsp; 0.264 1.000&nbsp; 1000<br>
+  g2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.228&nbsp; 0.057&nbsp;&nbsp; -0.339&nbsp;&nbsp; -0.263&nbsp;&nbsp; -0.229&nbsp;&nbsp; -0.192&nbsp;&nbsp; -0.113 1.000&nbsp; 1000<br>
+  g3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.065&nbsp; 0.053&nbsp;&nbsp; -0.167&nbsp;&nbsp; -0.102&nbsp;&nbsp; -0.066&nbsp;&nbsp; -0.030&nbsp;&nbsp;&nbsp; 0.039 1.001&nbsp; 1000<br>
+  g4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.266&nbsp; 0.061&nbsp;&nbsp; -0.388&nbsp;&nbsp; -0.305&nbsp;&nbsp; -0.267&nbsp;&nbsp; -0.227&nbsp;&nbsp; -0.151 1.001&nbsp; 1000<br>
+  deviance 1452.312 13.603 1428.000 1442.000 1452.000 1461.000 1481.000 1.002&nbsp; 1000</span>
+<p>These results compare favorably with the frequentist results obtained above. The largest difference occurs in the standard deviation of the  level-2  random effects, <span class="style8">sigma.a</span>, labeled <span class="style8">(intercept)</span> in the <span class="style13">VarCorr</span> output.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> fixef(model4.lmer)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp; (Intercept) factor(year)2006 factor(year)2007&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log(area) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.06613422&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.13039499&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.10910950&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.22222232 <br>
+  landscapeBauxite&nbsp; landscapeForest&nbsp;&nbsp; landscapeUrban <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; -0.22858415&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.06744431&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.26663006 </span>
+ <div class="style231" style="padding-left: 30px; text-indent:-30px"> attr(VarCorr(model4.lmer)[[1]],'stddev')</div>
+<span class="style141">  (Intercept) <br>
+&nbsp; 0.1383838</span>
+
+<table table width="500" border="1" align="center" cellpadding=4 cellspacing=0>
+  <tr bgcolor="#F1D2D8">
+    <td>Predictor</td>
+    <td><div align="center">Parameter</div></td>
+    <td><div align="center">
+      <div align="center">Bayesian estimate <br>
+        (mean of posterior distribution) </div>
+    </div></td>
+    <td><div align="center">
+      <p>Frequentist estimate <br>
+        (MLE)
+        <br>
+      </p>
+</div></td>
+  </tr>
+  <tr>
+    <td>Intercept</td>
+    <td><div align="center">&beta;<sub>0</sub></div></td>
+    <td><div align="center">3.062</div></td>
+    <td><div align="center">3.066</div></td>
+  </tr>
+  <tr>
+    <td>Year 2</td>
+    <td><div align="center">&beta;<sub>1</sub></div></td>
+    <td><div align="center">&ndash;0.131</div></td>
+    <td><div align="center">&ndash;0.130</div></td>
+  </tr>
+  <tr>
+    <td>Year 3</td>
+    <td><div align="center">&nbsp;&beta;<sub>2</sub></div></td>
+    <td><div align="center">&ndash;0.108</div></td>
+    <td><div align="center">&ndash;0.109</div></td>
+  </tr>
+  <tr>
+    <td>log(Area)</td>
+    <td><div align="center">&gamma;<sub>1</sub></div></td>
+    <td><div align="center">0.223</div></td>
+    <td><div align="center">0.222</div></td>
+  </tr>
+  <tr>
+    <td>Bauxite</td>
+    <td><div align="center">&gamma;<sub>2</sub></div></td>
+    <td><div align="center">&ndash;0.228</div></td>
+    <td><div align="center">&ndash;0.229</div></td>
+  </tr>
+  <tr>
+    <td>Forest</td>
+    <td><div align="center">&gamma;<sub>3</sub></div></td>
+    <td><div align="center">&ndash;0.065</div></td>
+    <td><div align="center">&ndash;0.067</div></td>
+  </tr>
+  <tr>
+    <td>Urban</td>
+    <td><div align="center">&gamma;<sub>4</sub></div></td>
+    <td><div align="center">&ndash;0.266 </div></td>
+    <td><div align="center">&ndash;0.267 </div></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><div align="center">&tau;</div></td>
+    <td><div align="center">0.148</div></td>
+    <td><div align="center">0.138</div></td>
+  </tr>
+</table>
+
+
+<h2><a name="obtaining" id="obtaining"></a>Obtaining Bayesian estimates of other parameters</h2>
+<p>One of the major attractions of Bayesian estimation is the ease with which it is possible to obtain interval estimates for auxiliary parameters that are functions of parameters  in the model. To obtain the posterior distribution of an auxiliary parameter defined by a function we just apply that function to the posterior distributions of the parameters that appear in its formula. We can do this either by defining the auxiliary parameters explicitly in the model or by calculating them after the model is fit.</p>
+<h3><a name="method1"></a>Method 1: Add the desired parameters to the BUGS model</h3>
+<p>Suppose we want to obtain  interval estimates of the mean bird richness in the year 2005 for patches with area = 1 separately for each of the four landscape types. The fitted model for the log mean is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture25/landscapemodel.gif" width="483" height="70" alt="landscape model"></p>
+<p>the desired means are the following.</p>
+<p align="center"><img src="../../images/lectures/lecture25/means.gif" width="195" height="150" alt="means"></p>
+<p>We can add these calculations to the BUGS program file.</p>
+<table width="500" border="1" align="center" cellpadding="2" cellspacing="0">
+  <tr bgcolor="#F1D2D8">
+    <td><div align="center"><strong>Model with landscape means <span class="style44"> (model4.txt)</span></strong></div></td>
+  </tr>
+  <tr>
+    <td><div class="style103" style="padding-left: 30px; text-indent:-30px">model{</div>
+<div class="style103" style="padding-left: 30px; text-indent:-30px">for(i in 1:n) {</div>
+<div class="style261" style="padding-left: 50px; text-indent:-30px">y[i]~dpois(mu.hat[i])</div>
+<div class="style261" style="padding-left: 50px; text-indent:-30px">log.mu[i] &lt;- a[patch[i]] + b1*year2[i] + b2*year3[i]</div>
+<div class="style261" style="padding-left: 50px; text-indent:-30px">mu.hat[i] <- exp(log.mu[i])</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">}</div>
+<div class="style151" style="padding-left: 30px; text-indent:-30px">#level-2 model</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">for(j in 1:J){</div>
+<div class="style261" style="padding-left: 50px; text-indent:-30px">a[j]~dnorm(a.hat[j],tau.a)</div>
+<div class="style261" style="padding-left: 50px; text-indent:-30px">a.hat[j] &lt;- mu.a + g1*L.area[j] + g2*Lscape2[j]
+  + g3*Lscape3[j] + g4*Lscape4[j]</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">}</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">g1~dnorm(0,.000001)</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">g2~dnorm(0,.000001)</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">g3~dnorm(0,.000001)</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">g4~dnorm(0,.000001)</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">b1~dnorm(0,.000001)</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">b2~dnorm(0,.000001)</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">mu.a~dnorm(0,.000001)</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">tau.a &lt;- pow(sigma.a,-2)</div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">sigma.a~dunif(0,10000)</div>
+<span class="style40"><div class="style261" style="padding-left: 30px; text-indent:-30px">mean1 <- exp(mu.a) </div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">mean2 <- exp(mu.a + g2) </div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">mean3 <- exp(mu.a + g3) </div>
+<div class="style261" style="padding-left: 30px; text-indent:-30px">mean4 <- exp(mu.a + g4)</div></span>
+}
+
+</p>
+    </div></td>
+  </tr>
+</table>
+<p>We can  refit this model from scratch, or better yet, we can restart the model we previously estimated using the last values of the Markov chains of the sampled parameters as the new initial values. These are stored in the <span class="style8">$last.values</span> component of the <span class="style1">bugs</span> object and can be used instead of <span class="style8">bird.inits</span> as the initial values. The other change is that we need to add the means to the <span class="style8">bird.parms</span> object so that samples of their posterior distributions are returned to us.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"><span class="style39">bird.parms2</span> &lt;- c(&quot;a&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;mu.a&quot;, &quot;sigma.a&quot;, &quot;g1&quot;, &quot;g2&quot;, &quot;g3&quot;, &quot;g4&quot;, <span class="style39">&quot;mean1&quot;, &quot;mean2&quot;, &quot;mean3&quot;, &quot;mean4&quot;</span>)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># rerun model using last values of previous run </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  model4a.bugs &lt;- bugs(bird.data, <span class="style39">model4.bugs$last.values</span>, <span class="style39">bird.parms2</span>, &quot;model4.txt&quot;, bugs.directory=&quot;C:/WinBUGS14&quot;, n.chains=3, n.iter=10000, debug=T)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># JAGS run</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model4a.jags &lt;- jags(bird.data, <span class="style39">model4.jags$BUGSoutput$last.values</span>, <span class="style39">bird.parms2</span>, &quot;model4.txt&quot;,  n.chains=3, n.iter=10000)</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # percentile credible intervals</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> apply(model4a.bugs$sims.matrix[, c(&quot;mean1&quot;, &quot;mean2&quot;, &quot;mean3&quot;, &quot;mean4&quot;)], 2, function(x) quantile(x, c(.025,.975)))</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean1&nbsp; mean2&nbsp;&nbsp; mean3 mean4<br>
+  2.5%&nbsp; 19.1905 15.301 18.2105 14.63<br>
+  97.5% 23.6900 18.610 21.8995 18.08</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # HPD credible intervals</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> HPDinterval(as.mcmc(model4a.bugs$sims.matrix[, c(&quot;mean1&quot;, &quot;mean2&quot;, &quot;mean3&quot;, &quot;mean4&quot;)]))</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower upper<br>
+  mean1 19.37 23.84<br>
+  mean2 15.40 18.66<br>
+  mean3 18.21 21.91<br>
+  mean4 14.63 18.08<br>
+  attr(,&quot;Probability&quot;)<br>
+[1] 0.9500998</span>
+<h3><a name="method2"></a>Method 2: Use the model results already obtained</h3>
+<p>Given that we already have samples from the posterior distributions of all the parameters that are needed for the calculations of the means, we don't actually need to fit the model again. Instead we can perform the arithmetic on the vectors of samples and then  obtain the interval estimates from the results.  I first calculate the posterior distributions of the means and then assemble the results in a matrix in the order &quot;agricultural&quot;, &quot;bauxite&quot;, &quot;forest&quot;, and &quot;urban&quot;.
+<br></p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">mean.matrix &lt;- cbind(model4.bugs$sims.matrix[,&quot;mu.a&quot;], model4.bugs$sims.matrix[,&quot;mu.a&quot;]+ model4.bugs$sims.matrix[,&quot;g2&quot;], model4.bugs$sims.matrix[,&quot;mu.a&quot;]+ model4.bugs$sims.matrix[,&quot;g3&quot;], model4.bugs$sims.matrix[,&quot;mu.a&quot;]+ model4.bugs$sims.matrix[,&quot;g4&quot;])</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> mean.matrix &lt;- exp(mean.matrix)</div>
+<p>The percentile 95% credible intervals can be calculated in the usual fashion.<br>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> apply(mean.matrix, 2, function(x) quantile(x, c(.025, .975)))</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp; [,2]&nbsp;&nbsp;&nbsp;&nbsp; [,3]&nbsp;&nbsp;&nbsp;&nbsp; [,4]<br>
+  2.5%&nbsp; 19.22141 15.40112 18.36952 14.79520<br>
+  97.5% 23.75932 18.84194 21.93979 18.19401</span>
+
+<p>Or we can convert the matrix to an mcmc object and calculate the HPD intervals.<br>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> mean.mcmc &lt;- as.mcmc(mean.matrix)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> HPDinterval(mean.mcmc)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp; upper<br>
+  var1 19.20172 23.71244<br>
+  var2 15.48853 18.88561<br>
+  var3 18.26013 21.82482<br>
+  var4 14.87229 18.24881<br>
+  attr(,&quot;Probability&quot;)<br>
+[1] 0.9500998</span>
+
+<h2><a name="bayesian"></a>Bayesian model selection</h2>
+<h3><a name="loglikelihood" id="loglikelihood"></a>The log-likelihood in Bayesian and frequentist models </h3>
+<p> WinBUGS and JAGS  and for that matter Bayesians in general use the term deviance to mean &ndash;2 times the log-likelihood of the model.</p>
+<p align="center">deviance = &ndash;2 &times; log-likelihood</p>
+<p>This differs from the classical definition of deviance</a> used in generalized linear models where the deviance (scaled) was defined as twice the difference in the log-likelihoods between the current model and the so-called saturated model&mdash;a model in which there is a separate parameter estimated for every observation. The deviance defined in this way can be used as a goodness-of-fit statistic for Poisson or grouped binary data, but only when the expected cell counts  meet certain minimum cell-size criteria. </p>
+<p>Now in certain circumstances the log-likelihood of the saturated model  turns out to be zero and for these cases the Bayesian and classical definitions of the deviance are the same. One example is with binary data in which the response is assumed to have a Bernoulli distribution. For most other probability models the saturated model will contribute a nonzero term to the classical definition of the deviance and as a result the classical definition and the Bayesian definition  will not agree. Unfortunately the Bayesian use of the term deviance, in which the contribution of the saturated model to the deviance is ignored, is now well-established in the literature. As a result use of the  term &quot;deviance&quot; is ambiguous. </p>
+<p>We saw in <a href="lecture24.htm#deviance">lecture 24</a> that for a Poisson fixed effects models, the estimated log-likelihood returned by WinBUGS based on <img src="../../images/lectures/lecture25/Dhat.gif" alt="Dhat" width="22" height="27" align="absmiddle"> is  approximately the same as the log-likelihood returned by frequentist software.  This will generally be the case when the models in question involve only fixed effects (although differences can arise due to the way variances are estimated by maximum likelihood). When random effects are thrown into the mix, the situation changes and the log-likelihoods returned are no longer the same.</p>
+<p> In hierarchical models with both fixed and random effects, the log-likelihoods estimated by Bayesian and frequentist software  can differ markedly. This occurs because Bayesians and frequentists are no longer estimating the same quantity. As was explained in <a href="lecture22.htm#ranlike">lecture 22</a>, frequentists work with what is called the marginal likelihood</a>, the likelihood obtained after integrating out the random effects from the joint likelihood of the parameters and the random effects. Bayesians instead work directly with the joint likelihood</a> and treat the individual random effects as parameters to be estimated. This poses an interesting conundrum. We've argued that one of the advantages that random effects models have over fixed effects (separate regressions) models is that they are more parsimonious and do not overfit models to data. But if in the Bayesian approach the random effects are estimated directly as part of fitting the model, then where is the parsimony? </p>
+<h3><a name="DIC"></a>DIC as a measure of fit</h3>
+<p name="pd">Bayesians address the issue of parsimony with a model characteristic they call the effective number of estimated parameters, or <em>p<sub>D</sub></em>. The term &quot;effective&quot; is used because unlike the parameters obtained in a  separate regressions model, the parameters in a Bayesian mixed effects model are subject to constraints. </p>
+<ol>
+  <li>If even a weakly informative prior is used for a parameter in a Bayesian model, then that parameter is no longer free to take on any potential value in the parameter space.</li>
+  <li>Random effects are assumed to be drawn from a common distribution, typically multivariate normal. This distribution dictates that certain sets of values for the parameter are more likely to occur than other sets. Thus the presence of a common distribution imposes additional constraints on the parameters.</li>
+</ol>
+<p>These ideas  get used  formally in the Bayesian formulation of model complexity. If model parameters are constrained, either through their priors or because they arise from a common distribution as is the case with random effects, then the actual number of parameters in the model is not a true reflection of model complexity. Instead we need to know the effective number of parameters, <em>p<sub>D</sub></em>, a correction to the actual number of parameters that takes into account their mutual constraints. Bayesians then use <em>p<sub>D</sub></em> to calculate DIC, the Bayesian version of the information-theoretic model selection statistic AIC.</p>
+<p>Recall that AIC is a measure of relative model complexity in that it estimates  expected relative Kullback-Leibler information. In a simplistic sense AIC can be thought of as penalized log-likelihood in which increases in log-likelihood that are achieved by increasing a model's complexity are penalized according to the number of extra parameters that have been added to the model. Using  Bayesian notation AIC can be written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture25/AIC.gif" width="142" height="27" alt="AIC"></p>
+<p>Here <img src="../../images/lectures/lecture25/Dmin.gif" alt="Dmin" width="40" height="27" align="absmiddle"> is the deviance calculated at the modes of the posterior distributions of all parameters in the model and <em>K</em> is number of parameters estimated in fitting the model. Bayesians replace AIC with DIC that is estimated as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture25/DIC.gif" width="128" height="31"></p>
+<p>where <img src="../../images/lectures/lecture25/Dhat.gif" width="21" height="26" align="absbottom"> is the deviance calculated at the means of the individual parameter posterior distributions and <em>p<sub>D</sub></em> is as defined above. DIC is an acronym for &quot;deviance information criterion&quot;. All of this begs the question of how model complexity, <em>p<sub>D</sub></em>, in Bayesian models is determined. There are a number of definitions but the most popular one is due to Spiegelhalter <em>et al. </em>(2002). (David Spiegelhalter is one of the primary developers of the WinBUGS software.) Their definition is </p>
+<p align="center"><img src="../../images/lectures/lecture25/pddef.gif" width="102" height="32" alt="pD definition"></p>
+<p>where <img src="../../images/lectures/lecture25/Dbar.gif" alt="Dbar" width="22" height="25" align="absbottom"> is the mean of posterior distribution of the deviance.</p>
+<p>Their rationale for this definition is as follows. Each MCMC sample of <em>D</em> is calculated using the current values of the parameters in the Markov chains that are samples from their respective posterior distributions. Because at any given iteration these values are not likely to be at the modes, or means for that matter, of their respective posterior distributions, the calculated log-likelihood obtained from <em>D</em> will be less than its maximum possible value. Said differently the deviance  obtained in this fashion will be larger than <img src="../../images/lectures/lecture25/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom">. The mean of all the deviance values in the sample, <img src="../../images/lectures/lecture25/Dbar.gif" alt="Dbar" width="22" height="25" align="absbottom">, will also exceed <img src="../../images/lectures/lecture25/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom"> and hence <em>p<sub>D</sub></em> defined by the above formula should be non-negative. </p>
+<p>When there are  more constraints on the individual parameters, <em>D</em> will have less room to vary. Thus the individual values of <em>D</em> will on average be closer to <img src="../../images/lectures/lecture25/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom">. When there are fewer constraints on the parameters, values of <em>D</em> can vary more and will typically be further from <img src="../../images/lectures/lecture25/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom">. When there are no constraints at all on the parameters (a separate intercepts regressions model with uninformative priors) <em>p<sub>D</sub></em> assumes its largest possible value which turns out to be equal to <em>K</em>, the number of parameters in  the frequentist definition of AIC. As the number  and strength of the constraints is increased, <em>p<sub>D</sub></em> decreases from this maximum value. While additional steps are needed  to make this argument rigorous, this is essentially the motivation for the Bayesian definition of DIC. Additional information can be found in McCarthy (2007).</p>
+<p>The <span class="style13">bugs</span> function returns <em>p<sub>D</sub></em> as a model component.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.bugs$pD</div>
+<span class="style141">[1] 59.039</span>
+<p>In the current model there  are seven regression parameters and one variance term for a total of eight fixed effects parameters. This is the number of parameters used by frequentists  to calculate AIC.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> attr(logLik(model4.lmer),'df')</div>
+<span class="style141">[1] 8</span>
+<p>Yet WinBUGS has determined there are 59.039 effective parameters, roughly 51 more than the number of fixed effects parameters. Random effects in Bayesian models are treated as modeled parameters, but because they are constrained to come from a common distribution they are not free to vary independently of each other. So, even though there are 101 random intercepts in the model,</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> dim(ranef(model4.lmer)[[1]])</div>
+<span class="style141">[1] 101   1</span>
+<p>due to the constraints WinBUGS counts them as being effectively equivalent to 51 free parameters. WinBUGS also returns DIC as a model component. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.bugs$DIC</div>
+<span class="style141">[1] 1511.35</span>
+<p>Although WinBUGS does not return <img src="../../images/lectures/lecture25/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom"> it does return <img src="../../images/lectures/lecture25/Dbar.gif" alt="Dbar" width="22" height="25" align="absbottom">. This is enough for us to calculate DIC ourselves because <img src="../../images/lectures/lecture25/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom"> is not needed as the following algebra shows.</p>
+<p align="center"><img src="../../images/lectures/lecture25/pDidentity.gif" width="225" height="32" alt="pD identity"></p>
+<p>Plugging this expression for <img src="../../images/lectures/lecture25/Dhat.gif" alt="Dhat" width="22" height="27" align="absbottom"> into the DIC formula yields the following alternative formula.</p>
+<p align="center"><img src="../../images/lectures/lecture25/DICidentity.gif" width="338" height="32" alt="DIC identity"></p>
+<p>Using this we find</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.bugs$summary[&quot;deviance&quot;,&quot;mean&quot;]</div>
+<span class="style141"> [1] 1452.312</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.bugs$summary[&quot;deviance&quot;,&quot;mean&quot;] + model4.bugs$pD</div>
+<span class="style141">[1] 1511.351</span>
+<p>which agrees with the reported DIC. Interestingly JAGS reports completely different values for <em>p<sub>D</sub></em> and DIC than does WinBUGS.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.jags$BUGSoutput$DIC</div>
+<span class="style141"> [1] 1551.947</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.jags$BUGSoutput$pD</div>
+<span class="style141"> [1] 98.73004</span>
+<p>The mean deviance <img src="../../images/lectures/lecture25/Dbar.gif" alt="Dbar" width="22" height="25" align="absbottom"> reported by JAGS is in agreement with the value reported by WinBUGS.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">model4.jags$BUGSoutput$summary[&quot;deviance&quot;, &quot;mean&quot;]</div>
+<span class="style141">[1] 1453.217</span>
+<p>and using the alternative formula for DIC we  obtain the value reported by JAGS.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> model4.jags$BUGSoutput$summary[&quot;deviance&quot;, &quot;mean&quot;] + model4.jags$BUGSoutput$pD</div>
+<span class="style141">[1] 1551.947</span>
+<p>Thus the difference between JAGS and WinBUGS is in how <em>p<sub>D</sub></em> is calculated. An explanation of what JAGS is doing can be found <a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/ECOL&#32;563&#32;Fall&#32;2010/docs/lectures/lecture26.htm#number">here</a>.</p>
+<p name="cAIC"><a name="cAIC"></a>Because DIC and AIC in mixed effects models work with different log-likelihoods, they are not directly comparable. Whether AIC is an appropriate way to compare mixed effects models is a matter of debate. An alternative definition of AIC has been proposed by Vaida and Blanchard (2005) for mixed effects models. They call their version conditional AIC and it is essentially a frequentist formulation of DIC. They promote the use of conditional AIC for model comparison when the random effects are of primary interest and not merely nuisance parameters. At present it is not known how to calculate conditional AIC except in a few special cases.</p>
+<h2><a name="cited"></a>Cited references</h2>
+<ul>
+  <li>McCarthy, M. A. 2007. <em>Bayesian Methods for Ecology</em>. New York: Cambridge University Press. </li>
+  <li> Spiegelhalter, D. J., N. G. Best, B. P. Carlin, and A. van der Linde. 2002. Bayesian measures of model complexity and fit. <em>Journal of the Royal Society: Series B</em> <strong>64</strong>: 583&ndash;639. </li>
+  <li>Vaida, F. and S. Blanchard. 2005. Conditional Akaike information for mixed-effect models. <em>Biometrika</em> <strong>92</strong>(2): 351&ndash;370.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture25&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 23, 2012<br>
+      URL: <a href="lecture25.htm#lecture25" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture25.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>R code for lecture 2</title>
+</head>
+
+<body>
+
+<h2 align="center">R Code for Lecture 2 (Monday, August 27, 2012)</h2>
+
+<div style="overflow:auto;"><div class="geshifilter">
+  <pre class="r geshifilter-R" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">#determine current working directory</span>
+<a href="http://inside-r.org/r-doc/base/getwd"><span style="color: #003399; font-weight: bold;">getwd</span></a><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#read in local file</span>
+tadpoles <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/read.table"><span style="color: #003399; font-weight: bold;">read.table</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;C:/Users/jmweiss/Documents/ecol 563/tadpoles.csv&quot;</span><span style="color: #339933;">,</span> header=T<span style="color: #339933;">,</span> sep=<span style="color: #0000ff;">','</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#this yields an error because the extension is missing in the file name</span>
+tadpoles <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/read.table"><span style="color: #003399; font-weight: bold;">read.table</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;C:/Users/jmweiss/Documents/ecol 563/tadpoles&quot;</span><span style="color: #339933;">,</span> header=T<span style="color: #339933;">,</span> sep=<span style="color: #0000ff;">','</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#The read.csv function reads in comma-delimited files directly</span>
+tadpoles <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/read.csv"><span style="color: #003399; font-weight: bold;">read.csv</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;C:/Users/jmweiss/Documents/ecol 563/tadpoles.csv&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#examine beginning and end of the file</span>
+<a href="http://inside-r.org/r-doc/utils/head"><span style="color: #003399; font-weight: bold;">head</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/utils/tail"><span style="color: #003399; font-weight: bold;">tail</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#look at first six observations</span>
+tadpoles<span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">6</span><span style="color: #339933;">,</span><span style="color: #009900;">&#93;</span>
+<span style="color: #666666; font-style: italic;">#look at first six observations and first two variables</span>
+tadpoles<span style="color: #009900;">&#91;</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">6</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">2</span><span style="color: #009900;">&#93;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#You can read in files from web sites but not if they're https URLs</span>
+junk<span style=""> &lt;- </span><a href="http://inside-r.org/r-doc/utils/read.csv"><span style="color: #003399; font-weight: bold;">read.csv</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/data/tadpoles.csv&quot;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#To read in https files we need the RCurl package and a two-step process</span>
+<a href="http://inside-r.org/r-doc/base/library"><span style="color: #003399; font-weight: bold;">library</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/RCurl"><span style="">RCurl</span></a><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#This works in Mac OSX</span>
+myfile<span style="">&lt;-</span><span style="color: #003399; font-weight: bold;">getURL</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/data/tadpoles.csv&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#This works in Windows--need two more arguments</span>
+myfile<span style="">&lt;-</span><span style="color: #003399; font-weight: bold;">getURL</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/data/tadpoles.csv&quot;</span><span style="color: #339933;">,</span> ssl.verifyhost=F<span style="color: #339933;">,</span> ssl.verifypeer=F<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#Both Mac OSX and Windows: Finally convert the file into an internal R format</span>
+tadpoles1 <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/read.csv"><span style="color: #003399; font-weight: bold;">read.csv</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/r-doc/base/textConnection"><span style="color: #003399; font-weight: bold;">textConnection</span></a><span style="color: #009900;">&#40;</span>myfile<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#You can also read in files interactively</span>
+temp.dat <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/read.csv"><span style="color: #003399; font-weight: bold;">read.csv</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/r-doc/base/file.choose"><span style="color: #003399; font-weight: bold;">file.choose</span></a><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#You can read in files from local folders using a forward slash between folders</span>
+tadpoles <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/read.csv"><span style="color: #003399; font-weight: bold;">read.csv</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;C:/Users/jmweiss/Documents/ecol 563/tadpoles.csv&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;"># or by using a double back-slash (Windows). Single back slashes are not allowed</span>
+tadpoles <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/utils/read.csv"><span style="color: #003399; font-weight: bold;">read.csv</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;C:<span style="color: #000099; font-weight: bold;">\\</span>Users<span style="color: #000099; font-weight: bold;">\\</span>jmweiss<span style="color: #000099; font-weight: bold;">\\</span>Documents<span style="color: #000099; font-weight: bold;">\\</span>ecol 563<span style="color: #000099; font-weight: bold;">\\</span>tadpoles.csv&quot;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;"># To access a variable inside a data frame we must also reference the data frame as part of the name</span>
+<span style="color: #666666; font-style: italic;"># To display the variable called response</span>
+tadpoles<span style="">$</span>response
+<span style="color: #666666; font-style: italic;"># Or specify the first column</span>
+tadpoles<span style="color: #009900;">&#91;</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">1</span><span style="color: #009900;">&#93;</span>
+<span style="color: #666666; font-style: italic;"># Or specify the column named response</span>
+tadpoles<span style="color: #009900;">&#91;</span><span style="color: #339933;">,</span><span style="color: #0000ff;">&quot;response&quot;</span><span style="color: #009900;">&#93;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#determining the nature of R variables with the class function</span>
+<a href="http://inside-r.org/r-doc/base/class"><span style="color: #003399; font-weight: bold;">class</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>response<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#because its values are characters treatment was read in as a factor with associated dummy variables</span>
+<a href="http://inside-r.org/r-doc/base/class"><span style="color: #003399; font-weight: bold;">class</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>treatment<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/contrasts"><span style="color: #003399; font-weight: bold;">contrasts</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>treatment<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#fac1 is a factor with associated dummy variables</span>
+<a href="http://inside-r.org/r-doc/base/class"><span style="color: #003399; font-weight: bold;">class</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>fac1<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/contrasts"><span style="color: #003399; font-weight: bold;">contrasts</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>fac1<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#fac2 is a factor with associated dummy variables</span>
+<a href="http://inside-r.org/r-doc/stats/contrasts"><span style="color: #003399; font-weight: bold;">contrasts</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>fac2<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#fac3 is numeric because its values are numbers</span>
+<a href="http://inside-r.org/r-doc/base/class"><span style="color: #003399; font-weight: bold;">class</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>fac3<span style="color: #009900;">&#41;</span>
+tadpoles<span style="">$</span>fac3
+&nbsp;
+<span style="color: #666666; font-style: italic;">#we can convert a numeric variable to a factor with the factor function</span>
+tadpoles<span style="">$</span>fac3.f<span style=""> &lt;- </span><a href="http://inside-r.org/r-doc/base/factor"><span style="color: #003399; font-weight: bold;">factor</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>fac3<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/base/class"><span style="color: #003399; font-weight: bold;">class</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>fac3.f<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/contrasts"><span style="color: #003399; font-weight: bold;">contrasts</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>fac3.f<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#I overwrite the numeric variable version with the factor version</span>
+tadpoles<span style="">$</span>fac3<span style=""> &lt;- </span><a href="http://inside-r.org/r-doc/base/factor"><span style="color: #003399; font-weight: bold;">factor</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>fac3<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/contrasts"><span style="color: #003399; font-weight: bold;">contrasts</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>fac3<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#analyze experiment as a one-way ANOVA model: assign results to an object</span>
+out0 <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/lm"><span style="color: #003399; font-weight: bold;">lm</span></a><span style="color: #009900;">&#40;</span>response<span style="">~</span>treatment<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=tadpoles<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#placing the output object on the right side</span>
+<a href="http://inside-r.org/r-doc/stats/lm"><span style="color: #003399; font-weight: bold;">lm</span></a><span style="color: #009900;">&#40;</span>response<span style="">~</span>treatment<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=tadpoles<span style="color: #009900;">&#41;</span> <span style="">-&gt;</span> out0
+out0
+<span style="color: #666666; font-style: italic;">#summary table</span>
+<a href="http://inside-r.org/r-doc/base/summary"><span style="color: #003399; font-weight: bold;">summary</span></a><span style="color: #009900;">&#40;</span>out0<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#ANOVA table</span>
+<a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>out0<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#analyze as a 3-way ANOVA model</span>
+out1 <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/lm"><span style="color: #003399; font-weight: bold;">lm</span></a><span style="color: #009900;">&#40;</span>response<span style="">~</span>fac1<span style="">+</span>fac2<span style="">+</span>fac3<span style="">+</span>fac1<span style="">:</span>fac2<span style="">+</span>fac1<span style="">:</span>fac3<span style="">+</span>fac2<span style="">:</span>fac3<span style="">+</span>fac1<span style="">:</span>fac2<span style="">:</span>fac3<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=tadpoles<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#same number of parameters in both cases, just different parameterization</span>
+<a href="http://inside-r.org/r-doc/stats/coef"><span style="color: #003399; font-weight: bold;">coef</span></a><span style="color: #009900;">&#40;</span>out0<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/coef"><span style="color: #003399; font-weight: bold;">coef</span></a><span style="color: #009900;">&#40;</span>out1<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/base/length"><span style="color: #003399; font-weight: bold;">length</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/r-doc/stats/coef"><span style="color: #003399; font-weight: bold;">coef</span></a><span style="color: #009900;">&#40;</span>out0<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/base/length"><span style="color: #003399; font-weight: bold;">length</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/r-doc/stats/coef"><span style="color: #003399; font-weight: bold;">coef</span></a><span style="color: #009900;">&#40;</span>out1<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#short-cut notation for fitting a three-factor interaction model</span>
+out1 <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/lm"><span style="color: #003399; font-weight: bold;">lm</span></a><span style="color: #009900;">&#40;</span>response<span style="">~</span>fac1<span style="">*</span>fac2<span style="">*</span>fac3<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=tadpoles<span style="color: #009900;">&#41;</span>
+out1 <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/lm"><span style="color: #003399; font-weight: bold;">lm</span></a><span style="color: #009900;">&#40;</span>response<span style="">~</span><span style="color: #009900;">&#40;</span>fac1<span style="">+</span>fac2<span style="">+</span>fac3<span style="color: #009900;">&#41;</span><span style="">^</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=tadpoles<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#sequential ANOVA table: Type I tests</span>
+<a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>out1<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#ANOVA table with Type II tests</span>
+<a href="http://inside-r.org/r-doc/base/library"><span style="color: #003399; font-weight: bold;">library</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/packages/cran/car"><span style="">car</span></a><span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">Anova</span><span style="color: #009900;">&#40;</span>out1<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#based on the Type II tests we can drop three factor interaction and fac1:fac3</span>
+out2 <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/lm"><span style="color: #003399; font-weight: bold;">lm</span></a><span style="color: #009900;">&#40;</span>response<span style="">~</span>fac1<span style="">+</span>fac2<span style="">+</span>fac3<span style="">+</span>fac1<span style="">:</span>fac2<span style="">+</span>fac2<span style="">:</span>fac3<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=tadpoles<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#alternatively we can drop terms from the full model using the update function</span>
+out2a <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/stats/update"><span style="color: #003399; font-weight: bold;">update</span></a><span style="color: #009900;">&#40;</span>out1<span style="color: #339933;">,</span> .<span style="">~</span>.<span style="">-</span>fac1<span style="">:</span>fac2<span style="">:</span>fac3<span style="">-</span>fac1<span style="">:</span>fac3<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#Type II tests and Type I tests disagree about the fac1:fac2 interaction</span>
+<a href="http://inside-r.org/r-doc/stats/anova"><span style="color: #003399; font-weight: bold;">anova</span></a><span style="color: #009900;">&#40;</span>out2<span style="color: #009900;">&#41;</span>
+<span style="color: #003399; font-weight: bold;">Anova</span><span style="color: #009900;">&#40;</span>out2<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#graphical display of interactions</span>
+<a href="http://inside-r.org/r-doc/base/library"><span style="color: #003399; font-weight: bold;">library</span></a><span style="color: #009900;">&#40;</span><a href="http://inside-r.org/r-doc/stats/effects"><span style="color: #003399; font-weight: bold;">effects</span></a><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#obtain means from each effect</span>
+effect<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'fac2:fac3'</span><span style="color: #339933;">, </span>out2<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#graph the fac2:fac3 interaction</span>
+<a href="http://inside-r.org/r-doc/graphics/plot"><span style="color: #003399; font-weight: bold;">plot</span></a><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">effect</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'fac2:fac3'</span><span style="color: #339933;">, </span>out2<span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> multiline=T<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#graph the fac1:fac2 interaction</span>
+<a href="http://inside-r.org/r-doc/graphics/plot"><span style="color: #003399; font-weight: bold;">plot</span></a><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">effect</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'fac1:fac2'</span><span style="color: #339933;">, </span>out2<span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> multiline=T<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#swap the roles of fac1 and fac2 in the plot</span>
+<a href="http://inside-r.org/r-doc/graphics/plot"><span style="color: #003399; font-weight: bold;">plot</span></a><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">effect</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'fac1:fac2'</span><span style="color: #339933;">,</span>out2<span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> multiline=T<span style="color: #339933;">,</span> x.var=<span style="color: #0000ff;">'fac2'</span><span style="color: #339933;">,</span> z.var=<span style="color: #0000ff;">'fac1'</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#without multiline=T we get profiles graphed separately</span>
+<a href="http://inside-r.org/r-doc/graphics/plot"><span style="color: #003399; font-weight: bold;">plot</span></a><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">effect</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'fac1:fac2'</span><span style="color: #339933;">,</span>out2<span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> x.var=<span style="color: #0000ff;">'fac2'</span><span style="color: #339933;">,</span> z.var=<span style="color: #0000ff;">'fac1'</span><span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#plot the 3-factor interaction</span>
+<a href="http://inside-r.org/r-doc/graphics/plot"><span style="color: #003399; font-weight: bold;">plot</span></a><span style="color: #009900;">&#40;</span><span style="color: #003399; font-weight: bold;">effect</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'fac1:fac2:fac3'</span><span style="color: #339933;">,</span>out1<span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> multiline=T<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#Check to see if variance is constant across treatments</span>
+<a href="http://inside-r.org/r-doc/graphics/boxplot"><span style="color: #003399; font-weight: bold;">boxplot</span></a><span style="color: #009900;">&#40;</span>response<span style="">~</span>treatment<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=tadpoles<span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/graphics/boxplot"><span style="color: #003399; font-weight: bold;">boxplot</span></a><span style="color: #009900;">&#40;</span>response<span style="">~</span>treatment<span style="color: #339933;">,</span> <a href="http://inside-r.org/r-doc/utils/data"><span style="color: #003399; font-weight: bold;">data</span></a>=tadpoles<span style="color: #339933;">,</span> horizontal=T<span style="color: #009900;">&#41;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">#calculate mean response by treatment</span>
+<a href="http://inside-r.org/r-doc/base/tapply"><span style="color: #003399; font-weight: bold;">tapply</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>response<span style="color: #339933;">, </span>tadpoles<span style="">$</span>treatment<span style="color: #339933;">, </span><a href="http://inside-r.org/r-doc/base/mean"><span style="color: #003399; font-weight: bold;">mean</span></a><span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#calculate mean response by treatment: remove missing values first</span>
+<a href="http://inside-r.org/r-doc/base/tapply"><span style="color: #003399; font-weight: bold;">tapply</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>response<span style="color: #339933;">,</span> tadpoles<span style="">$</span>treatment<span style="color: #339933;">, </span><a href="http://inside-r.org/r-doc/base/mean"><span style="color: #003399; font-weight: bold;">mean</span></a><span style="color: #339933;">, </span>na.rm=T<span style="color: #009900;">&#41;</span>
+<span style="color: #666666; font-style: italic;">#save results</span>
+<a href="http://inside-r.org/r-doc/base/tapply"><span style="color: #003399; font-weight: bold;">tapply</span></a><span style="color: #009900;">&#40;</span>tadpoles<span style="">$</span>response<span style="color: #339933;">, </span>tadpoles<span style="">$</span>treatment<span style="color: #339933;">, </span><a href="http://inside-r.org/r-doc/base/mean"><span style="color: #003399; font-weight: bold;">mean</span></a><span style="color: #339933;">, </span>na.rm=T<span style="color: #009900;">&#41;</span><span style=""> -&gt; </span>my.means
+<span style="color: #666666; font-style: italic;">#add the means to the boxplots</span>
+<a href="http://inside-r.org/r-doc/graphics/points"><span style="color: #003399; font-weight: bold;">points</span></a><span style="color: #009900;">&#40;</span>my.means<span style="color: #339933;">, </span><span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">12</span><span style="color: #339933;">, </span><a href="http://inside-r.org/r-doc/base/col"><span style="color: #003399; font-weight: bold;">col</span></a>=<span style="color: #cc66cc;">2</span><span style="color: #339933;">, </span>pch=<span style="color: #cc66cc;">8</span><span style="color: #009900;">&#41;</span></pre></div></div><p><a href="http://www.inside-r.org/pretty-r" title="Created by Pretty R at inside-R.org">Created by Pretty R at inside-R.org</a></p>
+</body>
+</html>

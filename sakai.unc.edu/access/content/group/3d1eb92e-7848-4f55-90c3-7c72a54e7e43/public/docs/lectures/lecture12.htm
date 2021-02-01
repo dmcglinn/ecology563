@@ -1,0 +1,385 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 12&mdash;Wednesday, October 3, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture12" id="lecture4"></a>Lecture 12&mdash;Wednesday, October 3, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture12.htm#methods">Methods of estimation</a></li>
+  <li><a href="lecture12.htm#MLE">Maximum likelihood estimation </a>
+    <ul>
+      <li><a href="lecture12.htm#sample">The random sample</a></li>
+      <li><a href="lecture12.htm#likelihood">The likelihood</a></li>
+      <li><a href="lecture12.htm#loglikelihood">The log-likelihood</a></li>
+      <li><a href="lecture12.htm#principle">The maximum likelihood principle</a></li>
+      <li><a href="lecture12.htm#Newton">Maximizing the likelihood: the Newton-Raphson method</a>  </li>
+      <li><a href="lecture12.htm#information">The information matrix</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture12.htm#properties">Properties of maximum likelihood estimators</a>
+    <ul>
+      <li><a href="lecture12.htm#notnice">Some not so nice properties</a></li>
+      <li><a href="lecture12.htm#nice">A few of the nice properties</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture12.htm#connection">The connection between least squares and maximum likelihood</a></li>
+</ul>
+<h2 align="left"><a name="methods"></a>Methods of Estimation </h2>
+<p>So far in this course we've studied four basic statistical experimental designs: analysis of variance, the randomized block design, analysis of covariance, and the split plot design. As we've seen all of these are just variations of the ordinary regression model. Up until this point we've explicitly assumed   a normal distribution for the response variable. We now relax that assumption and turn to situations where the response variable is clearly not normally distributed. We focus especially on instances where the Poisson, negative binomial, or binomial distributions provide better alternatives. To fit regression models to a non-normal response variable requires a different approach to estimation and we consider those methods next.</p>
+<p>In statistics we often use a parametric probability model  to describe the behavior of a response variable. The role of data in all of this is to provide estimates  of the parameters of the probability model. The three most widely-used statistical estimation techniques  are </p>
+<ul>
+  <li>least squares estimation,</li>
+  <li>maximum likelihood estimation , and </li>
+  <li>Bayesian estimation.</li>
+</ul>
+<p>Least squares estimation is extremely popular because it's easy to understand, easy to implement, and has good properties. In simple linear regression the regression model takes the form of deviations about a line:</p>
+<p align="center"><img src="../../images/lectures/lecture12/ordinaryregression.gif" width="145" height="27" alt="ordinary regression"></p>
+<p>The method of least squares obtains values for &beta;<sub>0</sub> and  &beta;<sub>1</sub> that minimize the sum of squared deviations about that line.</p>
+<p align="center"><img src="../../images/lectures/lecture12/OLS.gif" width="232" height="60"></p>
+<p>The sum of the squared deviations is  called the objective function of least squares and it readily generalizes to more complicated scenarios. The standard tools of calculus can used to minimize the objective function and well-defined algorithms exist for finding solutions in both the linear and nonlinear setting. Alternatively the regression problem can be also viewed as vector projection in <em>n</em>-dimensional space for which the standard tools of linear algebra can be applied. </p>
+<p>Observe that least squares makes no assumption about an underlying probability model for the response. Typically, a normal model is assumed, but that assumption is tacked on at the end and is not formally part of the least squares solution. A normal probability model is a natural choice for least squares because the basic formulation involving squared deviations necessarily assumes that the errors are symmetrically disposed about the regression surface. Symmetry is also a characteristic of a normal distribution.</p>
+<p>For asymmetric probability models, which include most of the ones we'll be discussing in this course, least squares solutions don't make much sense. The two major alternatives to ordinary least squares,   maximum likelihood estimation and Bayesian estimation, both incorporate the probability model directly into the objective function rather than tacking it on at the end as an afterthought. We  begin with a discussion of maximum likelihood and turn later to Bayesian methods. </p>
+<h2 align="center"><a name="MLE" id="MLE"></a>Maximum Likelihood Estimation</h2>
+<h3><a name="sample"></a>The random sample</h3>
+<p>We start with the assumption that we have  a random sample of size <i>m</i>. For example, suppose we select <em>m</em> shoots at random from a field. On each shoot we count the number of aphids present. The number of aphids observed on a given shoot is a random variable (it has a probability distribution). Denote this random variable by the symbol <i>X</i>. In our random sample then we observe the values of <i>m</i> random variables, <i>X</i><sub>1</sub>, <i>X</i><sub>2</sub>, ... , <i>X<sub>m</sub></i>, one for each shoot in our sample. </p>
+<p>What is the probability of obtaining the data we collected? The notation for this probability is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture12/jointprob.gif" width="265" height="32" alt="joint probability"></p>
+<p>This is called a joint probability, the probability of simultaneously observing all <i>m</i> events. (I follow the standard statistical convention of using capital letters for random variables and lower case variables for their values.) Another way of writing this is</p>
+<p align="center"><img src="../../images/lectures/lecture12/jointprob2.gif" width="340" height="35" alt="joint  probability"></p>
+<p>Because we have a random sample, each of these events is independent of the other. From elementary probability theory, if events <i>A</i> and <i>B</i> are independent then we have</p>
+<p align="center"><img src="../../images/lectures/lecture12/independence.gif" width="193" height="30" alt="independence"></p>
+<p>Applying this to our data we have</p>
+<p align="center"><img src="../../images/lectures/lecture12/randomsamp.gif" width="403" height="125" alt="random sample"></p>
+<p>where I use &Pi; to indicate the product (analogous to &Sigma; for sums).</p>
+<h3><a name="likelihood"></a>The likelihood</h3>
+<p>Now suppose we have a probability model for these data. Later on we'll consider   Poisson and negative binomial models for count data, but for the moment we'll treat the probability model generically. Let <img src="../../images/lectures/lecture12/probmodelgeneric.gif" alt="prob model" width="98" height="32" align="absmiddle"> denote the probability model. In general <em>f</em>  can be a density or a probability mass function where &alpha; and &beta; are its parameters. For a Poisson model there is a single parameter, &lambda;, while for a negative binomial model there are two parameters usually denoted &mu; and &theta;. When we extend things to include estimating regression models the parameter list will also include the set of regression coefficients in our model. Using this generic probability model we can rewrite the expression for the probability of our data. This new formulation is called the <span class="style9">likelihood</span> of our data with respect to the model <em>f</em>.</p>
+<p align="center"><img src="../../images/lectures/lecture12/probmodelL.gif" width="347" height="115" alt="likelihood"></p>
+<p>From the likelihood perspective the probability of the data is a function of the parameters &alpha; and &beta;. After we've collected the data it's the data that are known and observed while it's the parameter values that are unknown. The likelihood is a probability when we treat the parameters as fixed and the data as random, but when the data are   fixed and the parameters are treated as random the likelihood is no longer a probability. </p>
+<p>Note: If <em>f</em> is a density function then the likelihood does not derive from a probability. We need to integrate a density in order to obtain a probability. We can get around this &quot;problem&quot; by including an increment <img src="../../images/lectures/lecture12/deltaxi.gif" alt="delta xi" width="32" height="27" align="absmiddle"> in the expression for the product and then arguing that the product of a density times an increment is an approximation to the true probability.</p>
+<h3><a name="loglikelihood"></a>The log-likelihood</h3>
+<p>For both practical and theoretical reasons, it is preferable to work with the natural logarithm of the likelihood function, i.e., the <strong class="style9">log-likelihood</strong>. For our generic probability model the log-likelihood takes the following form.</p>
+<p align="center"><img src="../../images/lectures/lecture12/probmodelLL.gif" width="413" height="120" alt="log-likelihood"></p>
+<p>In the last step I used a  basic property of the logarithm function: for positive numbers <em>a</em> and <em>b</em>, <img src="../../images/lectures/lecture12/log1.gif" alt="log product" width="170" height="27" align="absmiddle">. So the logarithm function turns multiplication into addition.</p>
+<h3><a name="principle"></a>The maximum likelihood principle</h3>
+<p>One of R. A. Fisher's many major contributions to statistics was to realize that the likelihood function  is a vehicle for obtaining parameter estimates. He proposed what has become known as the maximum likelihood principle for parameter estimation.</p>
+<p id="likelihoodprinciple2" name="likelihoodprinciple"><strong class="style9">Maximum Likelihood Principle</strong>: Choose as your estimates of the parameters those values that make obtaining the data that were actually obtained the most probable. In other words, we should choose the parameter values that maximize the value of the likelihood. Typically we maximize the log-likelihood instead of the likelihood.</p>
+<ol>
+  <li>Because the logarithm is a monotone increasing function, the likelihood and the log-likelihood will achieve their maximum at exactly the same place. So, nothing is lost in using the log-likelihood. </li>
+  <li>For hand calculations the log-likelihood is far easier to work with because it converts products into sums.</li>
+  <li>All of the theoretical results concerning maximum likelihood estimators are based on the log-likelihood.</li>
+  <li>Using log-likelihoods increases the numerical stability of parameter estimates. Because likelihoods arise from joint probabilities (at least in the discrete setting) that, under independence, factor into a product of marginal probabilities, the magnitude of the likelihood can be quite small, often very close to zero. With a large number of observations this value can even approach the machine zero of the computing device being used, leading to numerical problems. Log-transforming the likelihood converts these tiny probabilities into moderately large negative numbers thus eliminating numerical instability.</li>
+</ol>
+<p>Another argument in favor of maximum likelihood estimates (MLEs) is that the maximum likelihood estimates of a model's parameters give that model the best chance of fitting the data. If after using these &quot;best&quot; estimates the model is deemed inadequate we can be sure that it is truly inadequate.</p>
+<h3><a name="Newton"></a>Maximizing the log-likelihood: the Newton-Raphson method</h3>
+<p>Maximizing a log-likelihood can be done in various ways. </p>
+<ul>
+  <li>Graphically by plotting the log-likelihood and estimating where the peak occurs.</li>
+  <li>Algebraically by using calculus. This is a viable option only for fairly simple problems.</li>
+  <li>Numerically using special optimization routines.</li>
+</ul>
+The derivative of the log-likelihood is called the <strong class="style9"> score </strong>or <strong class="style9">gradient</strong> function.   For log-likelihoods that are functions of more than one parameter obtaining the gradient means taking first partial derivatives with respect to each parameter in turn. The result is then organized in a vector.
+<p align="center"><img src="../../images/lectures/lecture12/scoreab.gif" width="373" height="127" alt="score"></p>
+<div class="figureR">
+  <p align="center"><img src="../../images/lectures/lecture12/fig6.png" width="350" height="250" alt="fig 6">
+  <p align="center"> <strong>Fig. 1</strong> &nbsp;An illustration of Newton's method (<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/notes/lecture12&#32;fig1.html">R code</a>)</p>
+</div>
+<p>From calculus we know that all local maxima occur at points where the first derivative is equal to zero, the so-called critical points. In all but the simplest of problems finding a critical point has to be done numerically. Numerical optimization is a rich and active area of research in mathematics, and there are many different approaches available. The Newton-Raphson method is often a good choice. </p>
+<p>The Newton-Raphson method is just the multivariate generalization of Newton's method, a method which you should have learned in calculus. Suppose we're trying to find a root of the function <em>f</em>, i.e., the value of <em>x</em> such that <em>f</em>(<em>x</em>) = 0. Fig. 1 illustrates this scenario where it appears that <em>x</em> = 1 is a root of the function <em>f</em>. Newton's method allows us to start with an initial guess for the root and then if our guess is good enough and the function is sufficiently well-behaved, it will  after a finite number of steps return  a reasonable estimate of the root. </p>
+<p>We start with a guess for the root. Fig. 1 shows the guess x<sub>0</sub> = 2. We evaluate the function at the guess to obtain the point on the curve labeled (<em>x</em><sub>0</sub>, <em>f</em>(<em>x</em><sub>0</sub>)). The derivative of <em>f</em> yields a formula for the slope of the tangent line to the curve at any point on the curve. Thus <em>f </em>&prime;(<em>x</em><sub>0</sub>) is the slope of the tangent line to the curve at (<em>x</em><sub>0</sub>, <em>f</em>(<em>x</em><sub>0</sub>)). A portion of the tangent line is shown in Fig. 1 as the line segment that connects (<em>x</em><sub>0</sub>, <em>f</em>(<em>x</em><sub>0</sub>)) to the point (<em>x</em><sub>1</sub>, 0), the place where the tangent line crosses the <em>x</em>-axis. Using the usual formula for the slope of a line segment we obtain two different expressions for the slope of the displayed tangent line.</p>
+<p align="center"><img src="../../images/lectures/lecture12/pointslope.gif" width="205" height="62" alt="point slope"></p>
+<p>I solve this expression for <em>x</em><sub>1</sub> (where at the second step below I assume that <img src="../../images/lectures/lecture12/fprimenotequalzero.gif" width="90" height="32" align="absmiddle">).</p>
+<p align="center"><img src="../../images/lectures/lecture12/newton1.gif" width="387" height="125" alt="newton"></p>
+<p>Observe from Fig. 1 that <em>x</em><sub>1</sub> is closer to the point where <em>f</em> crosses the <em>x</em>-axis than was our initial guess <em>x</em><sub>0</sub>. We could now use <em>x</em><sub>1</sub> as our new initial guess and repeat this process yielding a value <em>x</em><sub>2</sub> that will be closer to the root than was <em>x</em><sub>1</sub>. </p>
+<p>The formula given above is an example of a recurrence relation and it allows us to use the current value to obtain an updated value. This is the basis of Newton's method. Written more generally the estimate of the root at the (<em>k</em>+1)<sup>st</sup> step of the algorithm is given in terms of the <em>k</em><sup>th</sup> step as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture12/newton2.gif" width="150" height="63" alt="newton"></p>
+<p>In the maximum likelihood problem we desire the roots of the score function, the derivative of the log-likelihood. To simplify notation let <img src="../../images/lectures/lecture12/scriptl.gif" alt="loglikelihood" width="187" height="32" align="absmiddle">. Suppose the log-likelihood function is a function of the single parameter &theta;. Then to find the maximum likelihood estimate  of &theta; we need to find the roots of the equation </p>
+<p align="center"><img src="../../images/lectures/lecture12/score&#32;equation.gif" width="87" height="53" alt="score eqn"></p>
+<p>Thus we need the roots of <img src="../../images/lectures/lecture12/lprime.gif" alt="l prime" width="47" height="30" align="absmiddle">. In Newton's formula let <em>x</em> = &theta;, <img src="../../images/lectures/lecture12/equivalence1.gif" alt="l prime" width="107" height="30" align="absmiddle">, and <img src="../../images/lectures/lecture12/equivalence2.gif" alt="l  primeprime" width="115" height="30" align="absmiddle">.   Newton's method formula applied to the maximum likelihood problem becomes the following.</p>
+<p align="center"><img src="../../images/lectures/lecture12/newton3.gif" width="142" height="58" alt="newton-raphson"></p>
+<p name="mle">When there are multiple parameters to be estimated &theta; becomes a vector of parameters, <img src="../../images/lectures/lecture12/lprime.gif" alt="l prime" width="47" height="30" align="absmiddle"> becomes the gradient or score vector (as was depicted above for two parameters), and <img src="../../images/lectures/lecture12/ldoubleprime.gif" alt="ldoubleprime" width="50" height="30" align="absmiddle"> becomes a matrix of second partials called the Hessian matrix <strong>H</strong>. The Hessian matrix when there are two parameters, &alpha; and &beta;, is the following.</p>
+<p align="center" name="mle"><img src="../../images/lectures/lecture12/hessianab.gif" width="488" height="135" alt="hessian"></p>
+<p name="mle">In the formula for Newton's method <img src="../../images/lectures/lecture12/ldoubleprime.gif" alt="ldoubleprime" width="50" height="30" align="absmiddle"> occurs in the denominator. This is equivalent to multiplying by its reciprocal. The analogous operation for matrices is matrix inversion. Thus the Newton-Raphson method as implemented for finding the MLEs of a log-likelihood with multiple parameters is the following.</p>
+<p align="center" name="mle"><img src="../../images/lectures/lecture12/newton.gif" width="208" height="32" alt="newton"></p>
+<p name="mle">Here, for example, <strong>&theta;</strong> might be the vector <img src="../../images/lectures/lecture12/thetavec.gif" alt="theta vector" width="90" height="68" align="absmiddle">, <strong>g</strong> and <strong>H</strong> are as shown above, and <strong>H</strong><sup>-1</sup> denotes the inverse of the Hessian matrix.</p>
+<h3><b><a name="information"></a>The information matrix</b></h3>
+<p>We've already defined the score function as being the first derivative of the log-likelihood. If there is more than one parameter so that <strong>&theta;</strong> is a vector of parameters, then we speak of the score vector whose components are the first partial derivatives of the log-likelihood. As was noted above the matrix of second partial derivatives of the log-likelihood is called the <span class="style9">Hessian matrix</span>. </p>
+<p align="center"><img src="../../images/lectures/lecture12/hessian.gif" width="225" height="68" alt="hessian"></p>
+<p>If there is only a single parameter <em>&theta;</em>, then the Hessian is a scalar function.</p>
+<p align="center"><img src="../../images/lectures/lecture12/hessiansinglevariable.gif" width="207" height="55" alt="hessian"></p>
+<p>The <span class="style9">information matrix</span>, I(&theta;), is an important quantity in likelihood theory. It is defined in terms of the Hessian and comes in two versions: the <span class="style9">observed information</span> and the <span class="style9">expected information</span>.</p>
+<ol>
+  <li><a name="observed"></a> The observed information is just the negative of the Hessian evaluated at the maximum likelihood estimate.</li>
+</ol>
+<p align="center"><img src="../../images/lectures/lecture12/observed_information.gif" width="313" height="70" alt="observed information"></p>
+<ol start="2">
+  <li><a name="expected"></a>The expected information is  the expected value of the negative of the Hessian, i.e., the mean of the sampling distribution of the negative Hessian,</li>
+</ol>
+<p align="center"><img src="../../images/lectures/lecture12/expected_information.gif" width="280" height="63" alt="expected information"></p>
+<blockquote>
+  <p align="left">which is  then evaluated at the maximum likelihood estimate.</p>
+</blockquote>
+<h2><a name="properties"></a>Properties of maximum likelihood estimators (MLEs) </h2>
+<p>The near universal popularity of maximum likelihood estimation derives from the fact that the estimates it produces have good properties. Nearly all of the properties of maximum likelihood estimators are <a name="asymptotic"></a><span class="style9">asymptotic</span>, i.e., they only kick in after the sample size is sufficiently large. For small samples there are no guarantees that these properties hold and what constitutes &quot;large&quot; will vary on a case by case basis. In what follows I use the notation <img src="../../images/lectures/lecture12/thetahatn.gif" alt="theta hat n" width="22" height="32" align="absmiddle"> as   shorthand for &quot;the maximum likelihood estimate of &theta; based on a sample of size <i>n</i>.&quot;</p>
+<h3><b><a name="notnice"></a>Some of the not so nice properties of MLEs</b></h3>
+<ol>
+  <li> Maximum likelihood estimators are often biased (see <a href="lecture12.htm#asymptoticallyunbiased">below</a>).</li>
+  <li>Maximum likelihood estimators need not be unique. </li>
+  <li>Maximum likelihood estimators may not exist. </li>
+  <li>Maximum likelihood estimators can be difficult to derive analytically. In all but the simplest cases they need to be approximated numerically. Numerical methods can be very sensitive to initial guesses for the parameter estimates and may fail to converge. </li>
+  <li>Testing that the critical point corresponds to a maximum can be painful even for simple scenarios. The possibility of obtaining local maxima rather than global maxima is quite real. </li>
+</ol>
+<h3><b><a name="nice"></a>A few of the nice properties of MLEs </b></h3>
+<p>This is an abbreviated list because many of the properties of MLEs will not make sense if you don't have the requisite background in statistical theory. Even some of the ones I list here may seem puzzling to you. The most important properties for practitioners are (4) and (5) that give the asymptotic variance and the asymptotic distribution of maximum likelihood estimators.</p>
+<ol>
+  <li><a name="consistent"></a><img src="../../images/lectures/lecture12/thetahatn.gif" alt="theta hat n" width="22" height="32" align="absmiddle"> is a <span class="style9">consistent estimator</span> of &theta;. This means</li>
+</ol>
+<p align="center"><img src="../../images/lectures/lecture12/consistent.gif" width="185" height="40" alt="consistency"></p>
+<blockquote>
+  <p>Thus the maximum likelihood estimate approaches the population value as sample size increases.</p>
+</blockquote>
+<ol start="2">
+  <li><a name="asymptoticallyunbiased"></a><img src="../../images/lectures/lecture12/thetahatn.gif" alt="theta hat n" width="22" height="32" align="absmiddle"> is <span class="style9">asymptotically unbiased</span>, i.e., <img src="../../images/lectures/lecture12/unbiased.gif" alt="unbiased" width="115" height="40" align="absmiddle">. So, for large samples the  sampling distribution of an MLE is centered on the true population value. Maximum likelihood estimators can be biased, but the bias disappears as the sample size increases. As an example, if <img src="../../images/lectures/lecture12/x1x2xn.gif" alt="x1 xn" width="102" height="27" align="absmiddle"> is a random sample from a normal distribution with mean &mu; and variance <img src="../../images/lectures/lecture12/sigmasquared.gif" alt="sigma squared" width="27" height="27" align="absmiddle">, the maximum likelihood estimator of <img src="../../images/lectures/lecture12/sigmasquared.gif" alt="sigma squared" width="27" height="27" align="absmiddle"> is </li>
+</ol>
+<p align="center"><img src="../../images/lectures/lecture12/sigmahatformula.gif" width="157" height="58" alt="sigma hat"></p>
+<blockquote>
+  <p>This estimator is biased, which is why we typically use the sample variance as an estimator instead because it is unbiased.</p>
+</blockquote>
+<p align="center"><img src="../../images/lectures/lecture12/S2.gif" width="178" height="58" alt="s2"></p>
+<blockquote>
+  <p>Clearly  the difference between these two estimators becomes insignificant as <i>n</i> gets large.</p>
+</blockquote>
+<ol start="3">
+  <li><a name="asymptoticallyefficient"></a><img src="../../images/lectures/lecture12/thetahatn.gif" alt="theta hat n" width="22" height="32" align="absmiddle"> is <span class="style9">asymptotically efficient</span>, i.e., among all asymptotically unbiased estimators it has the minimum  variance asymptotically. In other words, maximum likelihood estimators tend to be the most precise estimators possible.</li>
+  <li>The variance of <img src="../../images/lectures/lecture12/thetahatn.gif" alt="theta hat n" width="22" height="32" align="absmiddle"> is known (at least asymptotically). For <i>n</i> large, </li>
+</ol>
+<p align="center"><img src="../../images/lectures/lecture12/varianceofthetathatn.gif" width="138" height="40"></p>
+<blockquote>
+  <p>where <img src="../../images/lectures/lecture12/inverseofinformation.gif" alt="inverse information" width="55" height="32" align="absmiddle"> is the inverse of the information matrix (for  a sample of size <i>n</i>). This is an important result because it means that the standard error of a maximum likelihood estimator can be calculated.</p>
+</blockquote>
+<ol start="5">
+  <li><a name="asymptoticnormal"></a><img src="../../images/lectures/lecture12/thetahatn.gif" alt="theta hat n" width="22" height="32" align="absmiddle"> is asymptotically normally distributed. So we  know what the sampling distribution of a maximum likelihood estimator looks like, at least for large <i>n</i>. This provides the basis for hypothesis testing and the construction of confidence intervals.</li>
+</ol>
+<p>Properties 2, 4, and  5 together tell us that for large samples the maximum likelihood estimator <img src="../../images/lectures/lecture12/thetahatn.gif" alt="theta hat n" width="22" height="32" align="absmiddle"> of a population parameter <em>&theta;</em> has an approximate normal distribution with mean <em>&theta;</em> and variance that can be estimated as <img src="../../images/lectures/lecture12/asymptoticvariance.gif" alt="asymptotic variance" width="62" height="40" align="absmiddle">.</p>
+<p align="center"><img src="../../images/lectures/lecture12/asypmtoticallynormal.gif" width="152" height="43" alt="asymptotic distribution"></p>
+<h2><a name="connection"></a>The connection between least squares and maximum likelihood</h2>
+<p>In  linear regression  we assume <img src="../../images/lectures/lecture12/yinormal.gif" alt="normal distribution" width="120" height="35" align="absmiddle"> where <img src="../../images/lectures/lecture12/muregression.gif" alt="mu regression" width="113" height="27" align="absmiddle">. If we use maximum likelihood instead of least squares to obtain estimates of &beta;<sub>0</sub> and &beta;<sub>1</sub> we find that the estimates  are identical to the ones we would have obtained using least squares. This happens because the function containing the regression parameters (the sum of squared errors)  that is then minimized in ordinary least squares also appears in exactly the same form in the log-likelihood function for this problem. The upstart is that if we use least squares to find the parameter estimates in a regression problem and then assume the errors are normally distributed, or we begin instead by assuming that the response is normally distributed and then use maximum likelihood to estimate the  parameters in the regression equation for the mean, we obtain the same results. </p>
+<p>While the estimates of the regression parameters are the same, the maximum likelihood estimate of <img src="../../images/lectures/lecture12/sigmasquared.gif" alt="sigma squared" width="27" height="27" align="absmiddle"> is not the same as the one that is typically used in ordinary regression. Just as with the MLE of the sample variance described <a href="lecture12.htm#asymptoticallyunbiased">above</a>, the maximum likelihood estimate of <img src="../../images/lectures/lecture12/sigmasquared.gif" alt="sigma squared" width="27" height="27" align="absmiddle"> in regression is biased, but the bias does diminish with sample size.</p>
+<p>Likelihood theory is one of the few places in statistics where Bayesians and frequentists are in agreement. Both believe that the likelihood is fundamental to statistical inference. They diverge in that frequentists focus solely on the likelihood and use it obtain  maximum likelihood estimates of the parameters, while a Bayesian uses it to construct something called the posterior distribution of the parameters.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 8, 2012<br>
+      URL: <a href="lecture12.htm#lecture12" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture12.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

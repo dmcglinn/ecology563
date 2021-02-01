@@ -1,0 +1,1026 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 18&mdash;Wednesday, October 24, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture18" id="lecture18"></a>Lecture 18&mdash;Wednesday, October 24, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture18.htm#rcode">Fitting a Poisson and negative binomial models to the slugs data: R code from lecture 17</a></li>
+  <li><a href="lecture18.htm#hierarchy">A hierarchy of Poisson and negative binomial models</a></li>
+  <li><a href="lecture18.htm#testing">Testing whether a negative binomial is an improvement over a Poisson model</a></li>
+  <li><a href="lecture18.htm#separate">Separate dispersions negative binomial regression models</a>  
+    <ul>
+      <li><a href="lecture18.htm#modelNB3">Model NB3: Common mean, separate dispersions model </a></li>
+      <li><a href="lecture18.htm#modelNB4">Model NB4: Separate means, separate dispersions model</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture18.htm#functions">Fitting  Poisson and negative binomial models using standard R functions</a>
+    <ul>
+      <li><a href="lecture18.htm#Poisson">Poisson models
+      </a></li>
+    </ul>
+  </li>
+  <ul>
+    <li><a href="lecture18.htm#NBmean">Negative binomial models for the mean
+    </a></li>
+  </ul>
+  <ul>
+    <li><a href="lecture18.htm#dispersion">Negative binomial models for the dispersion</a>
+      <ul>
+        <li><a href="lecture18.htm#NB3">NB3: Common mean, separate dispersions model
+        </a></li>
+      </ul>
+    </li>
+    <ul>
+      <li><a href="lecture18.htm#NB4">NB4: Separate means, separate dispersions model</a></li>
+    </ul>
+    <li><a href="lecture18.htm#collecting">Collecting the model results</a></li>
+  </ul>
+  <li><a href="lecture18.htm#choosing">Choosing a best model with likelihood ratio tests</a>
+    <ul>
+      <li><a href="lecture18.htm#pathway1">Pathway 1: Pois1 &rarr; Pois2 &rarr; NB2 &rarr; NB4 &rarr; NB3</a>
+        <ul>
+          <li><a href="lecture18.htm#step1">Step 1: Pois1 &rarr; Pois2</a></li>
+          <li><a href="lecture18.htm#step2">Step 2: Pois2 &rarr; NB2</a></li>
+          <li><a href="lecture18.htm#step3">Step 3: NB2 &rarr; NB4</a></li>
+          <li><a href="lecture18.htm#step4">Step 4: NB4 &rarr; NB3</a></li>
+          <li><a href="lecture18.htm#step5">Step 5: Test NB3 &larr; NB1</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <ul>
+    <li><a href="lecture18.htm#pathway2">Pathway 2: Pois1 &rarr; Pois2 &rarr; NB2 &rarr; NB1 &rarr; NB3</a></li>
+    <li><a href="lecture18.htm#pathway3">Pathway 3: Pois1 &rarr;  NB1 &rarr; NB3</a></li>
+  </ul>
+  <a href="lecture18.htm#NBassess"></a>
+  <li><a href="lecture18.htm#graphing">Graphing the best model</a> </li>
+  <li><a href="lecture18.htm#analytical">Analytical goodness of fit test</a></li>
+  <li><a href="lecture18.htm#references">Cited references</a></li>
+  <li><a href="lecture18.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+<li><a href="lecture18.htm#attr">attr</a> extracts a named attribute from an R object.</li>
+<li><a href="lecture18.htm#gamlss">gamlss</a>  (from <span class="style19">gamlss</span>) fits generalized additive models for location, scale, and shape. We used it to fit a regression model for the dispersion parameter of a negative binomial model.</li>
+<li><a href="lecture18.htm#logLik">logLik</a> extracts the log-likelihood of <span class="style1">lm</span>, <span class="style1">glm</span>, <span class="style1">glm.nb</span>, and <span class="style1">gamlss</span> models. </li>
+<li><a href="lecture18.htm#LRtest">LR.test</a> (from <span class="style19">gamlss</span>) carries out a likelihood ratio test for two nested models.</li>
+<li><a href="lecture18.htm#merge">merge</a> combines two data frames using common variables that act as key fields.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture18.htm#muformula">mu.formula</a>= (argument to <strong class="style1">gamlss</strong>) specifies the regression model for the mean of the distribution. </li>
+  <li><a href="lecture18.htm#muformula">sigma.formula=</a> (argument to <strong class="style1">gamlss</strong>) specifies the regression model for the sigma parameter of the distribution. </li>
+  <li><a href="lecture18.htm#what">what=</a> (argument to <span class="style1">coef.gamlss</span>) specifies which parameter estimates to return from a <strong class="style1">gamlss</strong> model.</li>
+</ul>
+<h3>R packages used</h3>
+<ul>
+  <li><a href="lecture18.htm#gamlss">gamlss</a> for separate dispersion negative binomial models.</li>
+  <li><a href="lecture18.htm#lattice">lattice</a> for lattice graphics functions.</li>
+  <li><a href="lecture18.htm#mass">MASS</a> for the <span class="style1">glm.nb</span> function.</li>
+</ul>
+<h2 align="left"><a name="rcode"></a>Fitting a Poisson and negative binomial models to the slugs data: R code from lecture 17</h2>
+<p>I reload the slugs data set from <a href="lecture17.htm">lecture 17</a> and refit both the common means and separate means Poisson regression models as well as the common means and separate means negative binomial regression models.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugs &lt;- read.table( 'http://www.bio.ic.ac.uk/research/mjcraw/statcomp/data/slugsurvey.txt', header=TRUE)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  slug.table &lt;- table(slugs$slugs, slugs$field)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  slugtable &lt;- data.frame(table(slugs$slugs, slugs$field))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">slugtable$Var1.num &lt;- as.numeric(as.character(slugtable$Var1))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># common mean Poisson model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  pois1.LL &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  LL&lt;-sum(log(dpois(slugs$slugs,lambda=p)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  negpois1.LL&lt;-function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  -pois1.LL(p)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.pois1 &lt;- nlm(negpois1.LL, c(1.2))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># separate means Poisson model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  pois2.LL &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  mu &lt;- p[1] + p[2]*(slugs$field==&quot;Rookery&quot;)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  LL &lt;- sum(log(dpois(slugs$slugs, lambda=mu)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  negpois2.LL &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  -pois2.LL(p)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.pois2 &lt;- nlm(negpois2.LL, c(1.2,1))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># model 1: single mean negative binomial model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  negNB1.LL &lt;- function(p) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  mu &lt;- p[1]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  theta &lt;- p[2]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  LL &lt;- sum(log(dnbinom(slugs$slugs, mu=mu, size=theta)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  -LL</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.NB1 &lt;- nlm(negNB1.LL, c(2,1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.NB1</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># model 2: two means negative binomial model</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> negNB2.LL &lt;- function(p) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  mu &lt;- p[1] + p[2]*(slugs$field=='Rookery')</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  theta &lt;- p[3]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  LL &lt;- sum(log(dnbinom(slugs$slugs, mu=mu, size=theta)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  -LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  }</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># obtain estimates</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.NB2 &lt;- nlm(negNB2.LL, c(2,1,1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.NB2</div>
+<h2 align="left"><a name="hierarchy" id="hierarchy"></a>A hierarchy of Poisson and negative binomial models</h2>
+<p>There are six models we might consider for the slugs data set: two Poisson and four negative binomial models. Table 1 lists these models. </p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=350 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 1 &nbsp;</strong> Regression models for the slugs data set<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<table width="520" border="1" align="center" cellpadding=2 cellspacing=0 frame=box >
+  <tr bgcolor="#F1D2D8">
+    <td><div align="center"><strong>Model</strong></div></td>
+    <td><div align="center"><strong>Distribution</strong></div></td>
+    <td ><div align="center"><strong>Mean model</strong></div></td>
+    <td ><div align="center"><strong>Dispersion model</strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">Pois1</div></td>
+    <td><div align="center">Poisson</div></td>
+    <td><div align="center">&mu; = &beta;<sub>0</sub></div></td>
+    <td><div align="center">&mdash;</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">Pois2</div></td>
+    <td><div align="center">Poisson</div></td>
+    <td><div align="center">&mu; = &beta;<sub>0</sub> + &beta;<sub>1</sub>*field</div></td>
+    <td><div align="center">&mdash;</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">NB1</div></td>
+    <td><div align="center">negative binomial</div></td>
+    <td><div align="center">&mu; = &beta;<sub>0</sub></div></td>
+    <td><div align="center">&theta; = &theta;<sub>0</sub></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">NB2</div></td>
+    <td><div align="center">negative binomial</div></td>
+    <td><div align="center">&mu; = &beta;<sub>0</sub>+ &beta;<sub>1</sub>*field</div></td>
+    <td><div align="center">&theta; = &theta;<sub>0</sub></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">NB3</div></td>
+    <td><div align="center">negative binomial</div></td>
+    <td><div align="center">&mu; = &beta;<sub>0</sub></div></td>
+    <td><div align="center">&theta; = &theta;<sub>0</sub>+ &theta;<sub>1</sub>*field</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">NB4</div></td>
+    <td><div align="center">negative binomial</div></td>
+    <td><div align="center">&mu; = &beta;<sub>0</sub>+ &beta;<sub>1</sub>*field</div></td>
+    <td><div align="center">&theta; = &theta;<sub>0</sub>+ &theta;<sub>1</sub>*field</div></td>
+  </tr>
+</table>
+<p>So far we've fit four of these. The two models we have yet to consider are <span class="style31">NB3</span> and <span class="style31">NB4</span> that allow the dispersion parameter &theta; of the negative binomial distribution to vary by field type. We saw in <a href="lecture16.htm#examples">lecture 16</a> that when the mean of the negative binomial distribution is held fixed    smaller values of  &theta; yielded more heterogeneous data, data that can exhibit a large number of zero counts along with  some extremely large counts. From an ecological perspective, low values of &theta; correspond to environmental patchiness such that many locations yield no individuals but some locations  are teeming with individuals.</p>
+<p>With only one predictor at out disposal, field type, Table 1 exhausts the possibilities when we restrict ourselves to   Poisson and negative binomial distributions.  Because the likelihood for each model is the probability of obtaining the data if that particular model is the correct model, we can carry out an informal comparison of the Poisson and negative binomial models by comparing their  log-likelihoods.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> c(-out.pois1$minimum, -out.pois2$minimum, -out.NB1$minimum, -out.NB2$minimum)</div>
+<span class="style141">[1] -176.8383 -171.1275 -144.3980 -142.6750</span>
+<p>The log-likelihoods aren't directly comparable because some of the models use different numbers of parameters.  But if we examine the two 2-parameter models, the separate means Poisson model, <span class="style8">out.pois2</span>, and the common mean negative binomial model, <span class="style8">out.NB1</span>, we see that the  log-likelihood of the negative binomial model (&ndash;144.398) is much greater than the  log-likelihood of the Poisson model (&ndash;171.1275). This suggests that the negative binomial distribution is a more likely model for these data.</p>
+<p>Because a number of the models shown in Table 1 are nested we can formally compare them with a likelihood ratio test. Given a pair of nested models the likelihood ratio test  can be used to determine whether the more complicated model can be reduced to the simpler model. A significant result for the likelihood ratio test indicates that the simplification should not be carried out meaning we should prefer the more complicated model over the simpler model. Fig. 1 below shows the hierarchical relationships between the six models of Table 1.</p>
+<p align="center"><img src="../../images/lectures/lecture18/fig1a.png" width="390" height="330" alt="fig. 1"><br>
+<span class="styleArial"><strong>Fig. 1</strong> &nbsp;A hierarchy of Poisson and negative binomial models</span></p>
+<p>Fig. 1 is a  directed graph that shows the pathways along which likelihood ratio tests can be used to compare pairs of models. Any two  models that can be reached by following the arrows in the direction  shown in Fig. 1 can also be legitimately compared using a likelihood ratio test. The arrows in the figure point in the direction of model simplification. The hypothesis tested by the likelihood ratio test is indicated next to the arrow that connects the models. So, for instance, model <span class="style31">Pois2</span> can be reduced to <span class="style31">Pois1</span> if the coefficient of field type, &beta;<sub>1</sub>, in the regression model for the mean is not significantly different from zero. The likelihood ratio test is carried out by comparing the log-likelihoods of the two models.</p>
+<p> Fig. 1 also indicates possible comparisons  among the four negative binomial models. We can compare <span class="style31">NB4</span> with <span class="style31">NB2</span>, <span class="style31">NB2</span> with <span class="style31">NB1</span> (and therefore <span class="style31">NB4</span> with <span class="style31">NB1</span>),  <span class="style31">NB4</span> with <span class="style31">NB3</span>, and <span class="style31">NB3</span> with <span class="style31">NB1</span>. Notice that it is not possible to compare models <span class="style31">NB3</span> and <span class="style31">NB2</span> because there is no pathway connecting them in the direction of the  arrows. This follows from the fact that the models are not nested. Model <span class="style31">NB2</span> contains the parameter &beta;<sub>1</sub> not found in <span class="style31">NB3</span> while model <span class="style31">NB3</span> contains the parameter &theta;<sub>1</sub> not found in <span class="style31">NB2</span>. We have to hope instead for an indirect test, one in which  a likelihood ratio test we can carry out allows us to reject one of these models in favor of a competing model. If it turns out that the available likelihood ratio tests do not reject either <span class="style31">NB3</span> or <span class="style31">NB2</span> then there is no way  to discriminate between them using significance testing. In lecture 19 we will discuss an alternative to significance testing that does allow us to compare   models <span class="style31">NB3</span> and <span class="style31">NB2</span> directly.</p>
+<p>There are two other tests possible in Fig. 1, the tests that compare <span class="style31">NB2</span> with <span class="style31">Pois2</span> and <span class="style31">NB1</span> with <span class="style31">Pois1</span> and  allow us to choose between a negative binomial and a Poisson model. These tests turn out not to be straight-forward likelihood ratio tests. The details are discussed in the next section.</p>
+<h2><a name="testing" id="testing"></a>Testing whether a negative binomial is an improvement over a Poisson model</h2>
+<p>The negative binomial and Poisson distributions differ in a single parameter, the dispersion parameter &theta;. In <a href="lecture15.htm#variance">lecture 15</a> it was mentioned that the Poisson distribution can be thought of as a limiting case of the negative binomial distribution. As &theta; &rarr; &infin;, the negative binomial distribution approaches a Poisson distribution with the same mean. The other common way to parameterize the negative binomial is with a parameter<img src="../../images/lectures/lecture18/SASparam.gif" alt="SAS parameterization" width="58" height="30" align="absmiddle"> . With this parameterization we don't have to invoke limits. The Poisson distribution corresponds to a negative binomial distribution in which &alpha; = 0.  Consequently using this parameterization a Poisson model and a negative binomial model with the same  mean are clearly nested. </p>
+<p>A  formal test of whether the negative binomial distribution is an improvement over the Poisson distribution might take the following form.</p>
+<p align="center"><img src="../../images/lectures/lecture18/hypoth1.gif" width="123" height="107" alt="hypothesis"></p>
+<p align="left">The alternative hypothesis is one-sided because the dispersion parameter can't be negative. To carry out the test  of this hypothesis we  could construct a likelihood ratio statistic, twice the difference in the log-likelihoods of the two models.</p>
+<p align="center"><img src="../../images/lectures/lecture18/LR1.gif" width="555" height="33" alt="LR test"></p>
+<p align="left">Because the two models are nested and differ in the presence of a single parameter, &theta;, we would ordinarily compare the value of LR to the critical value of a chi-squared distribution with one degree of freedom. If it turns out that <img src="../../images/lectures/lecture18/LRcrit.gif" alt="LR critical" width="115" height="32" align="absmiddle"> (or alternatively that the <em>p</em>-value of our test statistic is small), we would reject the null hypothesis and conclude that the negative binomial model is preferred over a Poisson model. </p>
+<p name="boundary"><a name="boundary"></a>Unfortunately the likelihood ratio test just described is incorrect. The null hypothesis being tested asserts that the dispersion parameter &alpha; is zero. Because dispersions can't be negative, a value of zero is a boundary value of the parameter space of &alpha;. One of the conditions for the asymptotic chi-squared distribution of the likelihood ratio statistic to hold is that the value being tested does not lie on the boundary of the parameter space. This is  referred to as a regularity condition. Because the regularity condition fails in a test that compares a negative binomial distribution with a  Poisson distribution  the chi-squared distribution ( <img src="../../images/lectures/lecture18/chisqone.gif" alt="chisquared one" width="27" height="30" align="absmiddle">) of the likelihood ratio statistic  is suspect.</p>
+<p>A number of solutions to this situation have been proposed. One that is easy to implement is from Verbeke and Molenberghs (2000), p. 64&ndash;7, who discuss it in the context of mixed effects models, a topic we'll discuss later in the course. They argue that the distribution of the likelihood ratio statistic for testing a boundary condition can be approximated by a  mixture distribution that is approximately a 50:50 mixture of two chi-squared distributions, one with 0 degrees of freedom and one with 1 degree of freedom. Thus we should use a mixture of a <img src="../../images/lectures/lecture18/chisqzero.gif" alt="chisquare zero" width="27" height="30" align="absmiddle"> and a <img src="../../images/lectures/lecture18/chisqone.gif" alt="chisquared one" width="27" height="30" align="absmiddle"> random variable, each assigned a weight of 0.5, as the critical value of our test.</p>
+<p align="center"><img src="../../images/lectures/lecture18/LRdist.gif" width="142" height="35" alt="mixture"></p>
+<p> A <img src="../../images/lectures/lecture18/chisqzero.gif" alt="chisquare zero" width="27" height="30" align="absmiddle"> random variable gives a probability mass of 1 to the value 0 and a mass of 0 to every other value. It's what's called a point mass function. The cdf of a <img src="../../images/lectures/lecture18/chisqzero.gif" alt="chisquare zero" width="27" height="30" align="absmiddle"> random variable is 0 for <em>x</em> &lt; 0 and  1 for every value of <em>x</em> &gt; 0. In Fig. 2 the notation 0<sup>&ndash;</sup> means a value just a little bit less than 0, while the notation 0<sup>+</sup> denotes a value just a little bit bigger than 0.</p>
+<p align="center"><img src="../../images/lectures/lecture18/pointmass3.png" width="320" height="244"><br>
+  <span class="styleArial"><strong>Fig. 2</strong> &nbsp;The pdf (<strong>black</strong>) and cdf (red ) of a <img src="../../images/lectures/lecture18/chisqzero.gif" width="26" height="30" align="absmiddle"> distribution</span></p>
+<p> Using this mixture distribution the critical value of our test statistic  is</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> .5*0 + .5*qchisq(.95,1)</div>
+<span class="style141">[1] 1.920729</span>
+<p>If we calculate the likelihood ratio test statistics for a comparison of <span class="style31">NB2</span> with <span class="style31">Pois2</span> and <span class="style31">NB1</span> with <span class="style31">Pois1</span>, we find that the observed values of both test statistics exceed this critical value.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LR1 &lt;- 2*(out.pois1$minimum - out.NB1$minimum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LR1 </div>
+<span class="style141"> [1] 64.88053</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LR2 &lt;- 2*(out.pois2$minimum - out.NB2$minimum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LR2 </div>
+<span class="style141">[1] 56.90509</span>
+<p>Thus we  reject the null hypothesis and conclude that a negative binomial model is a significant improvement over a Poisson model in both cases. As Fig. 2 shows if LR &gt; 0 then P(<img src="../../images/lectures/lecture18/chisqzero.gif" alt="chisquare zero" width="27" height="30" align="absmiddle"> &le; LR) = 1 and hence P(<img src="../../images/lectures/lecture18/chisqzero.gif" alt="chisquare zero" width="27" height="30" align="absmiddle"> &gt; LR) = 0. So the contribution of this term to the <em>p</em>-value of our test statistic  is zero. The <em>p</em>-values of the two tests can be calculated as follows.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> .5*0 + .5*(1-pchisq(LR1,1))</div>
+<span class="style141"> [1] 3.885781e-16</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> .5*0 + .5*(1-pchisq(LR2,1))</div>
+<span class="style141">[1] 2.287059e-14</span>
+<p>The <em>p</em>-values are exceedingly small causing us to reject the null hypothesis that &alpha; = 0.</p>
+<h2><a name="separate" id="separate"></a>Separate dispersions negative binomial regression models</h2>
+<p>Although we found that the mean slug counts in the two fields were significantly different under a separate means Poisson model (using a likelihood ratio test that compared <span class="style31">Pois1</span> with <span class="style31">Pois2</span>), the analytical goodness of ft test we carried out in <a href="lecture17.htm#goodness">lecture 17</a> showed that the separate means Poisson model does not fit the data. We  saw in the previous section that the negative binomial models <span class="style31">NB1</span> and <span class="style31">NB2</span> are a significant improvement over the Poisson models, but we also saw  in <a href="lecture17.htm#nblrtest">lecture 17</a> that when we use an LR test to compare models <span class="style31">NB1</span> and <span class="style31">NB2</span> we found that they were not significantly different <span class="style31"></span> indicating that if slug counts have a negative binomial distribution then the mean slug occurrence is not significantly different across field types. This still leaves open the possibility that the dispersion parameter of the negative binomial distribution varies by field type.</p>
+<h3><a name="modelNB3"></a>Model NB3: Common mean, separate dispersions model</h3>
+<p>In a Poisson model there is only a single parameter, the rate,  so our only choice was to use field type to model the rate. The negative binomial model  has two parameters and we can choose to let  one or both of them to differ by field type. So far we've just built a model for the mean. Another possibility is to model the dispersion parameter. In the code below the dispersion parameter, <span class="style8">theta</span>, is allowed to vary by field type but the mean is kept constant.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">negNB.LL3 &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> mu &lt;- p[1]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> theta &lt;- p[2]+p[3]*(slugs$field==&quot;Rookery&quot;)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> LL &lt;- sum(log(dnbinom(slugs$slugs, mu=mu, size=theta)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> -LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.NB3 &lt;- nlm(negNB.LL3, c(2,1,1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB3</div>
+<span class="style141"> $minimum<br>
+[1] 138.2398</span>
+<p><span class="style141">$estimate<br>
+  [1] 2.0913794 0.2506018 1.6472297</span>
+<p><span class="style141">$gradient<br>
+  [1]  1.479944e-05  6.480150e-05 -6.729157e-06</span>
+<p><span class="style141">$code<br>
+  [1] 1</span>
+<p><span class="style141">$iterations<br>
+  [1] 16</span>
+<p>The common mean and dispersion negative binomial model, <span class="style8">out.NB1</span>, fit previously is nested in  <span class="style8">out.NB3</span>, so we can test whether the dispersion parameter is the same in both field types using a likelihood ratio test.</p>
+<div align="center">
+  <table width="420" border="1" align="center" cellpadding=2 cellspacing=0 frame=box >
+    <tr bgcolor="#F1D2D8">
+      <td><div align="center"><strong> Model NB1</strong></div></td>
+      <td ><div align="center"><strong> Model NB3</strong></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"><img src="../../images/lectures/lecture18/dispersion1.gif" width="57" height="58" alt="dispersion 1"></div></td>
+      <td><div align="center"><img src="../../images/lectures/lecture18/dispersion2.gif" width="252" height="60" alt="dispersion2"></div></td>
+    </tr>
+  </table>
+</div>
+<p>The likelihood ratio test  is a test of the following.</p>
+<blockquote>
+  <p>H<sub>0</sub>: &nbsp;&theta;<sub>1</sub> = 0<br>
+    H<sub>1</sub>: &nbsp;&theta;<sub>1</sub> &ne; 0 </p>
+</blockquote>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">LRstat3 &lt;- 2*(out.NB1$minimum - out.NB3$minimum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LRstat3</div>
+<span class="style141"> [1] 12.31653</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(LRstat3, df=1)</div>
+<span class="style141">[1] 0.000448965</span>
+<p>So we reject the null hypothesis and conclude that the dispersion parameters are significantly different between the two habitats. One way to interpret a difference in the dispersion parameter  is that in the habitat with the lower dispersion parameter (Nursery) the slugs are more clustered than in the other habitat (Rookery). In the nursery habitat most of the rocks examined had no slugs under them so the distribution of slugs was  patchier.</p>
+<h3><a name="modelNB4"></a>Model NB4: Separate means, separate dispersions model</h3>
+<p>The last model we consider is a negative binomial model in which both the mean and the dispersion are allowed to vary by field type. The code to fit this model is shown below.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># model 4: two means, two dispersions negative binomial model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  negNB4.LL &lt;- function(p) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  mu &lt;- p[1] + p[2]*(slugs$field==&quot;Rookery&quot;)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  theta &lt;- p[3] + p[4]*(slugs$field==&quot;Rookery&quot;)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  LL &lt;- sum(log(dnbinom(slugs$slugs, mu=mu, size=theta)))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  -LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># obtain estimates</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.NB4 &lt;- nlm(negNB4.LL, c(2,1,1,1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out.NB4</div>
+
+<span class="style24">$minimum<br>
+[1] 137.1253</span>
+<p><span class="style24">$estimate<br>
+  [1] 1.2750057 0.9999968 0.2840913 1.6448438</span>
+<p><span class="style24">$gradient<br>
+  [1]&nbsp; 6.210394e-05&nbsp; 2.464162e-05&nbsp; 1.243734e-04 -1.128337e-05</span>
+<p><span class="style24">$code<br>
+  [1] 1</span>
+<p><span class="style24">$iterations<br>
+  [1] 21</span>
+<p>Models <span class="style31">NB3</span> and <span class="style31">NB4</span> are directly comparable using a likelihood ratio test because model <span class="style31">NB3</span> is contained in <span class="style31">NB4</span>. Model <span class="style31">NB4</span> has an  additional parameter &beta;<sub>1</sub>.</p>
+<div align="center">
+  <table width="420" border="1" align="center" cellpadding=2 cellspacing=0 frame=box >
+    <tr bgcolor="#F1D2D8">
+      <td><div align="center"><strong>Model NB3</strong></div></td>
+      <td ><div align="center"><strong>Model NB4</strong></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"><img src="../../images/lectures/lecture18/dispersion2.gif" width="252" height="60" alt="dispersion2"></div></td>
+      <td><div align="center"><img src="../../images/lectures/lecture18/dispersion4.gif" width="257" height="63" alt="NB4"></div></td>
+    </tr>
+  </table>
+</div>
+<p>The likelihood ratio test  here is a test of the following.</p>
+<blockquote>
+  <p>H<sub>0</sub>: &nbsp;&beta;<sub>1</sub> = 0<br>
+  H<sub>1</sub>: &nbsp;&beta;<sub>1</sub> &ne; 0 </p>
+</blockquote>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">LRstat4 &lt;- 2*(out.NB3$minimum - out.NB4$minimum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LRstat4</div>
+<span class="style141"> [1] 2.229016</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(LRstat4, df=1)</div>
+<span class="style141">[1] 0.13544</span>
+<p>We fail to reject the null hypothesis and conclude that the means are not significantly different between the two habitats. Thus we should retain the simpler model <span class="style31">NB3</span> and reject model <span class="style31">NB4</span>. For future reference I collect the log-likelihoods and the number of estimated parameters  for all  six of the models that we've fit.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # collect log-likelihoods of the various models</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> LL &lt;- sapply(list(out.pois1, out.pois2, out.NB1, out.NB2, out.NB3, out.NB4), function(x) -x$minimum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LL</div>
+<span class="style24">  [1] -176.8383 -171.1275 -144.3980 -142.6750 -138.2398 -137.1253</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # count number of estimated parameters</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> k &lt;- sapply(list(out.pois1, out.pois2, out.NB1, out.NB2, out.NB3, out.NB4), function(x) length(x$estimate))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> k</div>
+<span class="style24">  [1] 1 2 2 3 3 4</span>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> labels &lt;- c('Pois1', 'Pois2', 'NB1', 'NB2', 'NB3', 'NB4')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> output &lt;- data.frame(labels, LL, k)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">output</div>
+<span class="style24">  &nbsp; labels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LL k<br>
+  1&nbsp; Pois1 -176.8383 1<br>
+  2&nbsp; Pois2 -171.1275 2<br>
+  3&nbsp;&nbsp;&nbsp; NB1 -144.3980 2<br>
+  4&nbsp;&nbsp;&nbsp; NB2 -142.6750 3<br>
+  5&nbsp;&nbsp;&nbsp; NB3 -138.2398 3<br>
+6&nbsp;&nbsp;&nbsp; NB4 -137.1253 4</span>
+<h2><a name="functions"></a>Fitting  Poisson and negative binomial models using standard R functions</h2>
+<p>We've already seen that Poisson models can be fit with the <span class="style1">glm</span> function and negative binomial models for the mean can be fit with the <span class="style1">glm.nb</span> function from the <span class="style19">MASS</span> package. To fit negative binomial models in which  the dispersion parameter is modeled we can use the <span class="style1">gamlss</span> function from the <span class="style19">gamlss</span> package. I briefly review fitting the <span class="style1">glm</span> and <span class="style1">glm.nb</span> models but then focus on fitting the <span class="style1">gamlss</span> models.</p>
+<h3><a name="Poisson"></a>Poisson models</h3>
+<p>The <span class="style1">glm</span> function fits Poisson models with a log link so that it models log &mu;. We can override that and force <span class="style1">glm</span> to fit models to &mu; by explicitly specifying an identity link.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Poisson model with identity link versus log link</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> glm.pois1.ident &lt;- glm(slugs~1, data=slugs, family=poisson<span class="style39">(link=identity)</span>)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> glm.pois1 &lt;- glm(slugs~1, data=slugs, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(glm.pois1.ident)</div>
+<span class="style24">  (Intercept) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.775 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(glm.pois1)</div>
+ <span class="style24"> (Intercept) <br>
+  &nbsp; 0.5738004 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(glm.pois1))</div>
+<span class="style24">  (Intercept) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;1.775 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># separate mean Poisson model: log link</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  glm.pois2 &lt;- glm(slugs~field, data=slugs, family=poisson)<br>
+</div>
+<p>Generally speaking there is no reason to use an identity link and every reason not to. The use of the log link guarantees that the regression model will yield a positive value for &mu;, something that is necessary because &mu; is the mean of counts. One consequence of using a log link is that the coefficients have a different interpretation. Consider the separate means Poisson model with a log link.</p>
+<p align="center"><img src="../../images/lectures/lecture18/logmu.gif" width="237" height="108"></p>
+<p>So although the predictors act additively on the scale of log mean, they have a multiplicative effect on the scale of the raw mean. Thus the effect on the mean of switching from nursery to rookery is to multiply the mean by exp(&beta;<sub>1</sub>) = 1.78.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(glm.pois2)[2])</div>
+<span class="style24">  fieldRookery <br>
+&nbsp;&nbsp;&nbsp; 1.784314</span>
+<h3><a name="NBmean" id="NBmean"></a>Negative binomial models for the mean</h3>
+<p><a name="MASS"></a>The <span class="style19">MASS</span> package can be used to fit negative binomial models for the mean. As with Poisson regression the default link function is a log link. Consequently   regression coefficients for the default negative binomial model  have a multiplicative interpretation.<br>
+</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(MASS)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  glm.NB1 &lt;- glm.nb(slugs~1, data=slugs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">glm.NB2 &lt;- glm.nb(slugs~field, data=slugs)</div>
+<h3><a name="dispersion"></a>Negative binomial models for the dispersion</h3>
+<p><a name="gamlss"></a>The <span class="style19">gamlss</span> package is a comprehensive package for fitting regression models using a vast array of probability models. The <span class="style19">gamlss</span> package allows the user to model any of the parameters of these distributions, not just the mean. The name <span class="style19">gamlss</span> is short for &quot;generalized additive models for location, scale, and shape.&quot; The <span class="style19">gamlss</span> package has its own web site with extensive documentation (<a href="http://www.gamlss.org">www.gamlss.org</a>). </p>
+<p><a name="muformula"></a>If you examine the help screen for <span class="style1">gamlss</span> and then click the link for the help screen of <span class="style1">gamlss.family</span>, you'll see the basic syntax for <span class="style1">gamlss</span> and the  probability models it supports. The negative binomial distribution we've been fitting is denoted <span class="style8">NBI</span> by<span class="style19"> gamlss</span> and is specified in a <span class="style22">family</span> argument. (There is a second negative binomial distribution that is denoted by NBII that we may have a chance to talk about at a later date.) The <span class="style1">gamlss</span> function has separate arguments for specifying the regression model for each parameter. The mean argument is denoted <span class="style22">mu.formula</span> and is the first argument of the function while the regression model for the dispersion parameter  is specified in the <span class="style22">sigma.formula</span> argument. </p>
+<a name="NB3"></a><strong>NB3: Common mean, separate dispersions model</strong>
+<p>To fit the common mean, separate dispersions model with <span class="style1">gamlss</span> we would write the following.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(gamlss)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">glm.NB3 &lt;- gamlss(slugs ~ 1, sigma.formula=~field, data=slugs, family=NBI)</div>
+<p>This fits the following models for the negative binomial parameters</p>
+<table width="420" border="1" align="center" cellpadding=2 cellspacing=0 frame=box >
+  <tr bgcolor="#F1D2D8">
+    <td ><div align="center"><strong>gamlss model NB3</strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture18/dispersion5.gif" width="288" height="82" alt="NB3"></div></td>
+  </tr>
+</table>
+<p>The <span class="style1">gamlss</span> function uses a log link for both the mean and the dispersion. In addition, <span class="style1">gamlss</span> follows the convention of many packages of modeling the reciprocal of the <span class="style1">glm.nb</span> &theta; parameter, <img src="../../images/lectures/lecture18/SASparam.gif" alt="SAS parameterization" width="58" height="30" align="absmiddle">. As a result &alpha; = 0 corresponds to a Poisson distribution and larger values of &alpha; indicate overdispersion. To see the detailed output from the analysis we  use the <span class="style1">summary</span> function on the fitted model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(glm.NB3)</div>
+<span class="style24">The following object(s) are masked _by_ '.GlobalEnv':</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; slugs<br>
+  *******************************************************************<br>
+  Family:&nbsp; c(&quot;NBI&quot;, &quot;Negative Binomial type I&quot;) </span>
+<p><span class="style24">Call:&nbsp; gamlss(formula = slugs ~ 1, sigma.formula = ~field, family = NBI,&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data = slugs) </span><br>
+
+<p><span class="style24">Fitting method: RS() </span>
+<p><span class="style24">-------------------------------------------------------------------<br>
+  Mu link function:&nbsp; log<br>
+  Mu Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate&nbsp; Std. Error&nbsp; t value&nbsp;&nbsp; Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp; 0.7378&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.1432&nbsp;&nbsp;&nbsp; 5.152&nbsp; 1.855e-06</span>
+<p><span class="style24">-------------------------------------------------------------------<br>
+  Sigma link function:&nbsp; log<br>
+  Sigma Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate&nbsp; Std. Error&nbsp; t value&nbsp;&nbsp; Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.384&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.3602&nbsp;&nbsp;&nbsp; 3.842&nbsp; 0.0002469<br>
+  </span><span class="style25">fieldRookery&nbsp;&nbsp;&nbsp; -2.024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6083&nbsp;&nbsp; -3.328&nbsp; 0.0013362
+  </span>
+<p><span class="style24">-------------------------------------------------------------------<br>
+  No. of observations in the fit:&nbsp; 80 <br>
+  Degrees of Freedom for the fit:&nbsp; 3<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Residual Deg. of Freedom:&nbsp; 77 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at cycle:&nbsp; 4 <br>
+  &nbsp;<br>
+  Global Deviance:&nbsp;&nbsp;&nbsp;&nbsp; 276.4796 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC:&nbsp;&nbsp;&nbsp;&nbsp; 282.4796 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SBC:&nbsp;&nbsp;&nbsp;&nbsp; 289.6256 <br>
+  *******************************************************************<br>
+  Warning message:<br>
+  In summary.gamlss(glm.NB3) :<br>
+  &nbsp; summary: vcov has failed, option qr is used instead</span>
+<p>The estimates for the mean model and the dispersion model appear in separate sections of the output. The warning message at the bottom means that <span class="style1">gamlss</span> was unable to extract the variance-covariance matrix of the parameter estimates, so it used an approximate method, denoted qr, to obtain the standard errors. This seems to happen a lot with this function. According to the documentation when this happens the reported standard errors should be used with caution. Using the <span class="style1">coef</span> function on a <span class="style1">gamlss</span> model returns the parameter estimates from the mean formula.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(glm.NB3)</div>
+<span class="style24">  (Intercept) <br>
+&nbsp;&nbsp; 0.737792 </span>
+<p>The <span class="style19">gamlss</span> package includes a special method for <span class="style1">coef</span> that permits the inclusion of a <span class="style22">what</span> argument to extract the estimates for the dispersion part of the model. <br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">coef(glm.NB3, <span class="style39">what='sigma'</span>)</div>
+<span class="style24">  &nbsp;(Intercept) fieldRookery <br>
+&nbsp;&nbsp;&nbsp; 1.383828&nbsp;&nbsp;&nbsp; -2.024476 </span>
+<p>We can map these results onto those returned by <span class="style1">nlm</span> as follows.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB3$estimate</div>
+<span class="style24">[1] 2.0913794 0.2506018 1.6472297</span>
+<p>To match the overall mean returned by <span class="style1">nlm</span> we need to exponentiate the value returned by <span class="style1">gamlss</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> exp(coef(glm.NB3))</div>
+<span class="style24">  (Intercept) <br>
+&nbsp;&nbsp; 2.091313 </span>
+<p>To obtain the dispersion of the &quot;Nursery&quot; habitat we exponentiate the first estimate returned by <span class="style1">gamlss</span> and then take the reciprocal of the result.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1/exp(coef(glm.NB3, what='sigma')[1])</div>
+<span class="style24">  (Intercept) <br>
+&nbsp; 0.2506174 </span>
+<p>The dispersion in the &quot;Rookery&quot; habitat is the sum of the two parameters returned by <span class="style1">nlm</span>.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(out.NB3$estimate[2:3])</div>
+<span class="style24">[1] 1.897832</span>
+<p>To obtain the same value using <span class="style1">gamlss</span> we sum the two values it returns, exponentiate the result, and then take the reciprocal.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1/exp(sum(coef(glm.NB3, what='sigma')[1:2]))</div>
+<span class="style24">  [1] 1.89771</span>
+<p><strong><a name="NB4"></a>NB4: Separate means, separate dispersions model
+  </strong>
+</p>
+<p>To fit the separate means and dispersions model with <span class="style1">gamlss</span> we would write the following.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">glm.NB4 &lt;- gamlss(slugs ~ field, sigma.formula=~field, data=slugs, family=NBI)</div>
+<p>This fits the following models for the negative binomial parameters.</p>
+<table width="420" border="1" align="center" cellpadding=2 cellspacing=0 frame=box >
+  <tr bgcolor="#F1D2D8">
+    <td ><div align="center"><strong>gamlss model NB4</strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture18/dispersion6.gif" width="288" height="83" alt="NB4"></div></td>
+  </tr>
+</table>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(glm.NB4)</div>
+<span class="style24">The following object(s) are masked _by_ '.GlobalEnv':</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; slugs<br>
+  *******************************************************************<br>
+  Family:&nbsp; c(&quot;NBI&quot;, &quot;Negative Binomial type I&quot;) </span>
+<p><span class="style24">Call:&nbsp; gamlss(formula = slugs ~ field, sigma.formula = ~field, family = NBI,&nbsp; <br>
+  &nbsp;&nbsp;&nbsp; data = slugs) </span>
+<p><span class="style24">Fitting method: RS() </span>
+<p><span class="style24">-------------------------------------------------------------------<br>
+  Mu link function:&nbsp; log<br>
+  Mu Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate&nbsp; Std. Error&nbsp; t value&nbsp; Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; 0.2429&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.3282&nbsp;&nbsp; 0.7403&nbsp;&nbsp;&nbsp; 0.4613<br>
+  </span><span class="style25">fieldRookery&nbsp;&nbsp;&nbsp; 0.5790&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.3628&nbsp;&nbsp; 1.5959&nbsp;&nbsp;&nbsp; 0.1146</span>
+<p><span class="style24">-------------------------------------------------------------------<br>
+  Sigma link function:&nbsp; log<br>
+  Sigma Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate&nbsp; Std. Error&nbsp; t value&nbsp; Pr(&gt;|t|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.258&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.4374&nbsp;&nbsp;&nbsp; 2.876&nbsp; 0.005184<br>
+  </span><span class="style25">fieldRookery&nbsp;&nbsp;&nbsp; -1.915&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.6569&nbsp;&nbsp; -2.916&nbsp; 0.004631
+  </span>
+<p><span class="style24">-------------------------------------------------------------------<br>
+  No. of observations in the fit:&nbsp; 80 <br>
+  Degrees of Freedom for the fit:&nbsp; 4<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Residual Deg. of Freedom:&nbsp; 76 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at cycle:&nbsp; 2 <br>
+  &nbsp;<br>
+  Global Deviance:&nbsp;&nbsp;&nbsp;&nbsp; 274.2505 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC:&nbsp;&nbsp;&nbsp;&nbsp; 282.2505 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SBC:&nbsp;&nbsp;&nbsp;&nbsp; 291.7787 <br>
+  *******************************************************************<br>
+  Warning message:<br>
+  In summary.gamlss(glm.NB4) :<br>
+  &nbsp; summary: vcov has failed, option qr is used instead</span>
+<p>If we can trust the standard errors and tests that are reported it appears that the dispersion parameter varies across habitat type, but  the mean does not.</p>
+<h3><a name="collecting"></a>Collecting the model results</h3>
+<p><a name="logLik"></a>Finally I collect the results of the various model fits in a single data frame. The log-likelihoods can be extracted with the <span class="style1">logLik</span> function. To get all six log-likelihoods simultaneously I create a list object of the models and then <span class="style1">sapply</span> the <span class="style1">logLik</span> function on the list.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LL.glm &lt;- sapply(list(glm.pois1, glm.pois2, glm.NB1, glm.NB2, glm.NB3, glm.NB4), logLik)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LL.glm</div>
+<span class="style24">[1] -176.8383 -171.1275 -144.3980 -142.6750 -138.2398 -137.1253</span>
+<p><a name="what"></a>Obtaining the number of parameters <em>k</em> is a bit more awkward because some of the parameters are stored in different components of the model.</p>
+<ol>
+  <li>For the Poisson models all parameters are returned with the <span class="style1">coef</span> function.</li>
+  <li>For the negative binomial models fit with <span class="style1">glm.nb</span>, the regression parameters are returned by the <span class="style1">coef</span> function but there is the additional dispersion parameter that is stored in the <span class="style8">$theta</span> component of the model.</li>
+  <li>For the negative binomial models fit with <span class="style1">gamlss</span> we can extract the parameter estimates for the mean with <span class="style1">coef</span> and the parameter estimates for the dispersion using the <span class="style1">coef</span> function with the <span class="style22">what</span> argument.</li>
+</ol>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">k.glm &lt;- sapply(list(coef(glm.pois1), coef(glm.pois2), c(coef(glm.NB1), glm.NB1$theta), c(coef(glm.NB2), glm.NB2$theta), c(coef(glm.NB3), coef(glm.NB3, what='sigma')), c(coef(glm.NB4), coef(glm.NB4, what='sigma'))), length) </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> k.glm</div>
+<span class="style24">[1] 1 2 2 3 3 4</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">labels.glm &lt;- c('glm.pois1', 'glm.pois2', 'glm.NB1', 'glm.NB2', 'glm.NB3', 'glm.NB4')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> output.glm &lt;- data.frame(model = labels.glm, LL = LL.glm, k = k.glm)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> output.glm</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LL k<br>
+  1 glm.pois1 -176.8383 1<br>
+  2 glm.pois2 -171.1275 2<br>
+  3&nbsp;&nbsp; glm.NB1 -144.3980 2<br>
+  4&nbsp;&nbsp; glm.NB2 -142.6750 3<br>
+  5&nbsp;&nbsp; glm.NB3 -138.2398 3<br>
+  6&nbsp;&nbsp; glm.NB4 -137.1253 4</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> output</div>
+<span class="style24">  &nbsp; labels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LL k<br>
+  1&nbsp; Pois1 -176.8383 1<br>
+  2&nbsp; Pois2 -171.1275 2<br>
+  3&nbsp;&nbsp;&nbsp; NB1 -144.3980 2<br>
+  4&nbsp;&nbsp;&nbsp; NB2 -142.6750 3<br>
+  5&nbsp;&nbsp;&nbsp; NB3 -138.2398 3<br>
+6&nbsp;&nbsp;&nbsp; NB4 -137.1253 4</span>
+<p>So,  the results obtained with <span class="style1">nlm</span> match the results obtained with <span class="style1">glm</span>, <span class="style1">glm.nb</span>, and <span class="style1">gamlss</span>. </p>
+<h2><a name="choosing"></a>Choosing a best model with likelihood ratio tests</h2>
+<p>I repeat Fig. 1 below, the  directed graph that shows the pathways along which likelihood ratio tests can be used to compare the various models we've fit.</p>
+<p align="center"><img src="../../images/lectures/lecture18/fig1a.png" width="390" height="330" alt="fig. 1"><br>
+<span class="styleArial"><strong>Fig. 1 (again)</strong> &nbsp;A hierarchy of Poisson and negative binomial models</span></p>
+<p>The slugs data set is really an observational data set, not an experiment. We don't have treatments per se that were randomly assigned to observational units unless we can view habitat assignment as a random act of nature. Before collecting the data we don't  know much about the nature of the response variable except that it is a count. In particular we don't know  whether one probability distribution will make more sense here than another. With experimental data in which treatments are randomly assigned to subjects and  we can therefore infer causation from correlation, my preference is to start with the most complicated model involving all the treatments and then see if  it can be simplified. My rationale is that any treatment effects uncovered from experimental data have a high probability of being real. With observational data the danger of finding spurious relationships by chance is very high. Here, my predilection is to start with the simplest possible model and make it more complicated only if necessary. </p>
+<p>So, for the slugs data set I would  start with the model labeled <strong class="style31">Pois1</strong> at the top of the diagram in Fig. 1. According to the diagram there are two ways we can proceed from <strong class="style31">Pois1</strong>. We can try complexifying it by letting the Poisson mean vary by field type (<strong class="style31">Pois2</strong>) or we can add a dispersion parameter and thus replace the Poisson distribution with a negative binomial distribution (<strong class="style31">NB1</strong>). </p>
+<h3><a name="pathway1"></a>Pathway 1: Pois1 &rarr; Pois2 &rarr; NB2 &rarr; NB4 &rarr; NB3</h3>
+<p class="style9"><strong><a name="step1"></a>Step 1: Pois1 &rarr; Pois2</strong></p>
+<p>I start by comparing models <strong class="style31">Pois1</strong> and <strong class="style31">Pois2</strong>. Because <strong class="style31">Pois2</strong> is the more complicated model and contains model <strong class="style31">Pois1</strong>, a likelihood ratio test is appropriate. The LR test here tests whether the additional parameter in <span class="style31">Pois2</span> is different from zero.</p>
+<blockquote>
+  <p>H<sub>0</sub>: &nbsp;&beta;<sub>1</sub> = 0<br>
+  H<sub>1</sub>: &nbsp;&beta;<sub>1</sub> &ne; 0 </p>
+</blockquote>
+<p>We can carry out this test with the <span class="style1">anova</span> function applied to the two <span class="style1">glm</span> models.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(glm.pois1, glm.pois2, test='Chisq')</div>
+<span class="style24">Analysis of Deviance Table</span>
+<p><span class="style24">Model 1: slugs ~ 1<br>
+  Model 2: slugs ~ field<br>
+  &nbsp; Resid. Df Resid. Dev Df Deviance Pr(&gt;Chi)&nbsp;&nbsp;&nbsp; <br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp;&nbsp; 224.86&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp; 213.44&nbsp; 1&nbsp;&nbsp; 11.422 </span><span class="style25">0.000726</span><span class="style24"> ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><a name="attr"></a>Because the simpler model and the more complicated model are significantly different we conclude &beta;<sub>1</sub> &ne; 0 and thus we have reason to prefer the more complicated model, <span class="style31">Pois2</span>. Alternatively we can carry out the LR test ourselves, by doubling the difference in the log-likelihoods and using as degrees of freedom the difference in the number of estimated parameters in the two models. We can extract the number of estimated parameters directly from the output of the <span class="style1">logLik</span> function. The object created by <span class="style1">logLik</span> has an attribute called <span class="style8">'df'</span>, for degrees of freedom, that can be extracted with the <span class="style1">attr</span> function.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># number of estimated parameters in Pois1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> attr(logLik(glm.pois1), 'df')</div>
+<span class="style24">  [1] 1</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # number of estimated parameters in Pois2
+  </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> attr(logLik(glm.pois2), 'df')</div>
+ <span class="style24"> [1] 2</span>
+ <div class="style15" style="padding-left: 30px; text-indent:-30px"> # likelihood ratio statistic
+</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 2*(logLik(glm.pois2) - logLik(glm.pois1))</div>
+ <span class="style24"> [1] 11.42156<br>
+  attr(,&quot;nobs&quot;)<br>
+  [1] 80<br>
+  attr(,&quot;df&quot;)<br>
+  [1] 2<br>
+  attr(,&quot;class&quot;)<br>
+  [1] &quot;logLik&quot;</span>
+<p>I collect this all in a function that mimics <span class="style1">anova</span> and returns the <em>p</em>-value of the test.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LRfunc &lt;- function(x, y) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> LR &lt;- 2*(logLik(y) - logLik(x))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> df &lt;- attr(logLik(y), 'df') - attr(logLik(x), 'df')</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> p &lt;- 1-pchisq(LR, df)[1]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> out &lt;- data.frame(LR=LR, df=df, p=p)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> print(out, row.names=F)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LRfunc(glm.pois1, glm.pois2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LR df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p<br>
+  &nbsp;11.42156&nbsp; 1 0.0007259673</span>
+  
+<p class="style9"><strong><a name="step2"></a>Step 2: Pois2 &rarr; NB2</strong></p>
+<p>This is a non-standard likelihood ratio test because it involves testing whether the dispersion parameter, &theta;, is equal to a boundary value, &infin;.</p>
+<blockquote>
+  <p> H<sub>0</sub>: &nbsp;&theta;<sub>0</sub> = &infin;<br>
+    H<sub>1</sub>: &nbsp;&theta;<sub>0</sub> &lt; &infin; </p>
+</blockquote>
+<p>As was discussed <a href="lecture18.htm#testing">above</a>  the <em>p</em>-value for this test is  calculated as <img src="../../images/lectures/lecture18/LRpvalue.gif" alt="LR pvalue" width="107" height="40" align="absmiddle">.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> .5*(1 - pchisq(2*(logLik(glm.NB2) - logLik(glm.pois2)), df=1))[1]</div>
+<span class="style24">[1] 2.287059e-14</span>
+<p>The <em>p</em>-value tells us that the models are significantly different indicating that &theta;<sub>0</sub> &lt; &infin;. So, we should choose the more complicated model, <span class="style31">NB2</span>, a negative binomial with separate means that vary by  field type.</p>
+<p class="style9"> <strong><a name="step3"></a>Step 3: NB2 &rarr; NB4</strong></p>
+<p>The likelihood ratio test here tests whether the dispersions in the two field types are different given that the means are different.</p>
+<blockquote>
+  <p>H<sub>0</sub>: &nbsp;&theta;<sub>1</sub> = 0<br>
+    H<sub>1</sub>: &nbsp;&theta;<sub>1</sub> &ne; 0 </p>
+</blockquote>
+<p>We can't use the <span class="style1">anova</span> function to compare these models because one model was fit using <span class="style1">glm.nb</span> (<span class="style31">NB2</span>) and the other using <span class="style1">gamlss</span> (<span class="style31">NB4</span>). (Also the <span class="style19">gamlss</span> package does not have a method for the <span class="style1">anova</span> function.) On the other hand the <span class="style1">logLik</span> function works with both models so we can carry out the calculation  by hand or use the function we  previously wrote for this purpose.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  LRfunc(glm.NB2, glm.NB4)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LR df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p<br>
+&nbsp;11.09942&nbsp; 1 0.0008635472</span>
+<p>So the models are significantly different indicating &theta;<sub>1</sub> &ne; 0. So, we should choose the more complicated model, <span class="style31">NB4</span>, a negative binomial model with separate means and separate dispersions depending on field type.</p>
+<p class="style9"> <strong><a name="step4"></a>Step 4: NB4 &rarr; NB3</strong></p>
+<p>The likelihood ratio test here tests whether the means  vary by field type given that their dispersions are different.</p>
+<blockquote>
+  <p>H<sub>0</sub>: &nbsp;&beta;<sub>1</sub> = 0<br>
+    H<sub>1</sub>: &nbsp;&beta;<sub>1</sub> &ne; 0 </p>
+</blockquote>
+<p><a name="LRtest"></a>Both of these models were fit using  <span class="style1">gamlss</span>. The <span class="style19">gamlss</span> package does not have a method for <span class="style1">anova</span> but it does have its own function <span class="style1">LR.test</span> for carrying out likelihood ratio tests.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  LR.test(glm.NB3, glm.NB4)</div>
+<span class="style24">  &nbsp;Likelihood Ratio Test for nested GAMLSS models. <br>
+  &nbsp;(No check whether the models are nested is performed). <br>
+  &nbsp;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Null model: deviance= 276.4796 with&nbsp; 3 deg. of freedom <br>
+  &nbsp;Altenative model: deviance= 274.2505 with&nbsp; 4 deg. of freedom <br>
+  &nbsp;<br>
+&nbsp;LRT = 2.229016 with 1 deg. of freedom and </span><span class="style25">p-value= 0.1354401
+</span>
+<p>Alternatively we can carry out the test ourselves.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  LRfunc(glm.NB3, glm.NB4)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LR df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p<br>
+&nbsp;2.229016&nbsp; 1 0.1354401</span>
+<p>So the models are not significantly different and we fail to reject the hypothesis that &beta;<sub>1</sub> = 0. Thus we have no reason to prefer the more complicated model (<span class="style31">NB4</span>) over the simpler model (<span class="style31">NB3</span>). Thus we should choose <span class="style31">NB3</span>.</p>
+<p class="style9"><strong><a name="step5"></a>Step 5: Test NB3 &larr; NB1</strong></p>
+<p>We can ask whether the model with a single mean can be reduced further by letting it have a single dispersion parameter. </p>
+<blockquote>
+  <p>H<sub>0</sub>: &nbsp;&theta;<sub>1</sub> = 0<br>
+    H<sub>1</sub>: &nbsp;&theta;<sub>1</sub> &ne; 0 </p>
+</blockquote>
+<p>This reduction is unlikely given our previous results from testing <span class="style31">NB2</span> versus <span class="style31">NB4</span>. Because we have to compare a <span class="style1">gamlss</span> model with a <span class="style1">glm.nb</span> function we need to do the calculations by hand.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  LRfunc(glm.NB1, glm.NB3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LR df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p<br>
+&nbsp;12.31653&nbsp; 1 0.000448965</span>
+<p>The models are significantly different and we conclude that &theta;<sub>1</sub> &ne; 0: the coefficient of the field term in the dispersion model is  different from zero. Thus we should retain the more complicated model (<span class="style31">NB3</span>) over the simpler model <span class="style31">NB1</span>. This brings us to a stopping point on pathway 1. <span class="style31">NB3</span> is our final model because we cannot simplify it (the results of the current test) and according to the previous test there is no need to complexify it further by letting the means vary by habitat type.</p>
+<h3><a name="pathway2"></a>Pathway 2: Pois1 &rarr; Pois2 &rarr; NB2 &rarr; NB1 &rarr; NB3</h3>
+<p>When we reached model <span class="style31">NB2</span> in the previous pathway we had a choice. We could test <span class="style31">NB2</span> against <span class="style31">NB4</span> (which was the choice we made) or <span class="style31">NB2</span> against <span class="style31">NB1</span>. The latter is a test of the separate means model versus the common means model when both models are negative binomial. The corresponding hypothesis test is the following.</p>
+<blockquote>
+  <p>H<sub>0</sub>: &nbsp;&beta;<sub>1</sub> = 0<br>
+    H<sub>1</sub>: &nbsp;&beta;<sub>1</sub> &ne; 0 </p>
+</blockquote>
+<p>Because <span class="style31">NB1</span> and <span class="style31">NB2</span> are both <span class="style1">glm.nb</span> models the test can be computed with the <span class="style1">anova</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  anova(glm.NB1, glm.NB2)</div>
+<span class="style24">Likelihood ratio tests of Negative Binomial Models</span>
+<p><span class="style24">Response: slugs<br>
+  &nbsp; Model&nbsp;&nbsp;&nbsp;&nbsp; theta Resid. df&nbsp;&nbsp;&nbsp; 2 x log-lik.&nbsp;&nbsp; Test&nbsp;&nbsp;&nbsp; df LR stat.&nbsp;&nbsp;&nbsp; Pr(Chi)<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 1 0.7155672&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -288.7961&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2 field 0.7859313&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -285.3500 1 vs 2&nbsp;&nbsp;&nbsp;&nbsp; 1 3.446124 </span><span class="style25">0.06340028
+  </span>
+<p>The models are not significantly different therefore we fail to reject H<sub>0</sub>: &beta;<sub>1</sub> = 0. Thus we should prefer the simpler model <span class="style31">NB1</span>. In <a href="lecture18.htm#step5">Step 5</a> of  Pathway 1 we then discovered that <span class="style31">NB3</span> was a significant improvement over <span class="style31">NB1</span> so we would next choose model <span class="style31">NB3</span> at which point we reach the same stopping point as before.</p>
+<h3><a name="pathway3"></a>Pathway 3: Pois1 &rarr;  NB1 &rarr; NB3</h3>
+<p>Initially we had a choice of comparing <span class="style31">Pois1</span> against <span class="style31">Pois2</span> or <span class="style31">Pois1</span> against <span class="style31">NB1</span>. If we choose to test <span class="style31">Pois1</span> against <span class="style31">NB1</span> we are testing </p>
+<blockquote>
+  <p>H<sub>0</sub>: &nbsp;&theta;<sub>0</sub> = &infin;<br>
+    H<sub>1</sub>: &nbsp;&theta;<sub>0</sub> &lt; &infin; </p>
+</blockquote>
+<p>This is a non-standard likelihood ratio test because we're testing a boundary value of the parameter space of &theta;. As was discussed <a href="lecture18.htm#testing">above</a> the <em>p</em>-value of the likelihood ratio statistic  for this test is <img src="../../images/lectures/lecture18/LRpvalue.gif" alt="LR pvalue" width="107" height="40" align="absmiddle">.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  .5*(1 - pchisq(2*(logLik(glm.NB1) - logLik(glm.pois1)), df=1))[1]</div>
+<span class="style24">[1] 3.885781e-16</span>
+<p>The models are significantly different and we conclude &theta;<sub>0</sub> &lt; &infin;. So, we should choose the more complicated model, <span class="style31">NB1</span>, a negative binomial with a common mean, over the Poisson model with a common mean. At this point in Pathway 1, we next  rejected <span class="style31">NB1</span> in favor of <span class="style31">NB3</span> at which point we reached our final model <span class="style31">NB3</span>.</p>
+<h2><a name="graphing"></a>Graphing the best model</h2>
+<p>So regardless of the pathway we follow we end up with the same model <span class="style31">NB3</span> as our final model,  a negative binomial model with a single mean and separate dispersion parameters for the two field types. To assess the fit of this model visually I obtain the probability estimates of the various count categories using this model and superimpose the model predictions on a bar plot of the raw data. The protocol for doing so follows almost exactly what we did for the Poisson model in <a href="lecture16.htm#graphing">lecture 16</a>. I start by extracting the mean and dispersions for each field type and adding them to the <span class="style8">slugtable</span> data frame. I choose to use the output from <span class="style1">nlm</span>, <span class="style8">out.NB3</span>, because it doesn't require back-transforming things.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain expected counts of NB3 model</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # mean</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$mu &lt;- out.NB3$estimate[1]</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # theta</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$theta &lt;- out.NB3$estimate[2] + out.NB3$estimate[3]*(slugtable$Var2=='Rookery')</div>
+
+<p>Using these means and dispersions I calculate the negative binomial probabilities of the count categories 0 through 10 for each field type.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # calculate NB probabilities of each count</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$p &lt;- dnbinom(slugtable$Var1.num, mu=slugtable$mu, size=slugtable$theta)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(slugtable$p[1:11])</div>
+<span class="style24">  [1] 0.9493655</span>
+
+<p>The probabilities don't sum to one. I add the tail probability to the last observed count category, X = 10, and store the final probabilities  in the column labeled <span class="style8">p2</span>.<br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # add tail probability to X=10 category</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable$p2 &lt;- slugtable$p + pnbinom(10, mu=slugtable$mu, size=slugtable$theta, lower.tail=F)*(slugtable$Var1.num==10)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable</div>
+<span class="style24">  &nbsp;&nbsp; Var1&nbsp;&nbsp;&nbsp; Var2 Freq Var1.num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp; theta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p2<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp; 0 Nursery&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 2.091379 0.2506018 0.571170892 0.571170892<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; 1 Nursery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.091379 0.2506018 0.127820270 0.127820270<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp; 2 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 2.091379 0.2506018 0.071373700 0.071373700<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp; 3 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;3 2.091379 0.2506018 0.047815097 0.047815097<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp; 4 Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 2.091379 0.2506018 0.034699103 0.034699103<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp; 5 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 2.091379 0.2506018 0.026341960 0.026341960<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp; 6 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 2.091379 0.2506018 0.020585211 0.020585211<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp; 7 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 2.091379 0.2506018 0.016414533 0.016414533<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp; 8 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 2.091379 0.2506018 0.013285014 0.013285014<br>
+  10&nbsp;&nbsp;&nbsp; 9 Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 2.091379 0.2506018 0.010875633 0.010875633<br>
+  11&nbsp;&nbsp; 10 Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 2.091379 0.2506018 0.008984087 0.059618587<br>
+  12&nbsp;&nbsp;&nbsp; 0 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 2.091379 1.8978315 0.244176494 0.244176494<br>
+  13&nbsp;&nbsp;&nbsp; 1 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.091379 1.8978315 0.242944651 0.242944651<br>
+  14&nbsp;&nbsp;&nbsp; 2 Rookery&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 2.091379 1.8978315 0.184542461 0.184542461<br>
+  15&nbsp;&nbsp;&nbsp; 3 Rookery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 2.091379 1.8978315 0.125702509 0.125702509<br>
+  16&nbsp;&nbsp;&nbsp; 4 Rookery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 2.091379 1.8978315 0.080692585 0.080692585<br>
+  17&nbsp;&nbsp;&nbsp; 5 Rookery&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 2.091379 1.8978315 0.049900146 0.049900146<br>
+  18&nbsp;&nbsp;&nbsp; 6 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 2.091379 1.8978315 0.030075231 0.030075231<br>
+  19&nbsp;&nbsp;&nbsp; 7 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 2.091379 1.8978315 0.017789536 0.017789536<br>
+  20&nbsp;&nbsp;&nbsp; 8 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 2.091379 1.8978315 0.010373006 0.010373006<br>
+  21&nbsp;&nbsp;&nbsp; 9 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 2.091379 1.8978315 0.005980645 0.005980645<br>
+  22&nbsp;&nbsp; 10 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 2.091379 1.8978315 0.003416913 0.007822736</span>
+
+<p>I next obtain the total sample sizes in each field type.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> # create a data frame of sample sizes</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n.data &lt;- data.frame(table(slugs$field))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n.data</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; Var1 Freq<br>
+  1 Nursery&nbsp;&nbsp; 40<br>
+2 Rookery&nbsp;&nbsp; 40</span>
+<p>For these data the sample sizes are the same in the two groups. For other data sets they will be different. One way we can automatically add the sample totals to the <span class="style8">slugtable</span> data frame so that the correct total is added to the correct field type is to perform a many-to-one merge. I relabel the variables in the sample size data set, <span class="style8">n.data</span>, so that the field variable has the same name in both <span class="style8">n.data</span> and <span class="style8">slugtable</span>: <span class="style8">Var2</span>.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> names(n.data) &lt;- c('Var2','n')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n.data</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; Var2&nbsp; n<br>
+  1 Nursery 40<br>
+2 Rookery 40</span>
+<p><a name="merge"></a>To combine the two data frames I use the <span class="style1">merge</span> function of R. The <span class="style1">merge</span> function adds the variables of one data frame to a second data frame using the values of a key field that appears in both data frames to link up the correct observations. For us <span class="style8">Var2</span> will serve the role of the key field.  The values of the key field have to be all different in at least one of the data frames. This is the case for <span class="style8">n.data</span>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # add samples sizes to data set</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable2 &lt;- merge(slugtable, n.data)</div> 
+<p>  Finally I  calculate the expected counts by multiplying the <span class="style8">n</span> and <span class="style8">p2</span> columns together. </p>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # calculate expected counts</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable2$exp &lt;- slugtable2$n*slugtable2$p2</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slugtable2</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Var2 Var1 Freq Var1.num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp; theta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p2&nbsp; n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exp<br>
+  1&nbsp; Nursery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 2.091379 0.2506018 0.571170892 0.571170892 40 22.8468357<br>
+  2&nbsp; Nursery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.091379 0.2506018 0.127820270 0.127820270 40&nbsp; 5.1128108<br>
+  3&nbsp; Nursery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 2.091379 0.2506018 0.071373700 0.071373700 40&nbsp; 2.8549480<br>
+  4&nbsp; Nursery&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 2.091379 0.2506018 0.047815097 0.047815097 40&nbsp; 1.9126039<br>
+  5&nbsp; Nursery&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 2.091379 0.2506018 0.034699103 0.034699103 40&nbsp; 1.3879641<br>
+  6&nbsp; Nursery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 2.091379 0.2506018 0.026341960 0.026341960 40&nbsp; 1.0536784<br>
+  7&nbsp; Nursery&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 2.091379 0.2506018 0.020585211 0.020585211 40&nbsp; 0.8234085<br>
+  8&nbsp; Nursery&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 2.091379 0.2506018 0.016414533 0.016414533 40&nbsp; 0.6565813<br>
+  9&nbsp; Nursery&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 2.091379 0.2506018 0.013285014 0.013285014 40&nbsp; 0.5314006<br>
+  10 Nursery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 2.091379 0.2506018 0.010875633 0.010875633 40&nbsp; 0.4350253<br>
+  11 Nursery&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 2.091379 0.2506018 0.008984087 0.059618587 40&nbsp; 2.3847435<br>
+  12 Rookery&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 2.091379 1.8978315 0.244176494 0.244176494 40&nbsp; 9.7670598<br>
+  13 Rookery&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2.091379 1.8978315 0.242944651 0.242944651 40&nbsp; 9.7177860<br>
+  14 Rookery&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 2.091379 1.8978315 0.184542461 0.184542461 40&nbsp; 7.3816984<br>
+  15 Rookery&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 2.091379 1.8978315 0.125702509 0.125702509 40&nbsp; 5.0281004<br>
+  16 Rookery&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 2.091379 1.8978315 0.080692585 0.080692585 40&nbsp; 3.2277034<br>
+  17 Rookery&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 2.091379 1.8978315 0.049900146 0.049900146 40&nbsp; 1.9960058<br>
+  18 Rookery&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 2.091379 1.8978315 0.030075231 0.030075231 40&nbsp; 1.2030092<br>
+  19 Rookery&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 2.091379 1.8978315 0.017789536 0.017789536 40&nbsp; 0.7115814<br>
+  20 Rookery&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 2.091379 1.8978315 0.010373006 0.010373006 40&nbsp; 0.4149203<br>
+  21 Rookery&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 2.091379 1.8978315 0.005980645 0.005980645 40&nbsp; 0.2392258<br>
+  22 Rookery&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 2.091379 1.8978315 0.003416913 0.007822736 40&nbsp; 0.3129094</span>
+
+<p><a name="lattice"></a>With that I can produce the bar plot of the observed data with the expected counts superimposed.<br>
+</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(Freq~Var1.num|Var2, data=slugtable2, xlab='Count category', panel=function(x, y, subscripts) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x, y, type='h', lineend=1, col='grey', lwd=10)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # NB3 model counts</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.points(x, slugtable2$exp[subscripts], pch=16, cex=.6, col=1, type='o')})</div>
+
+<p align="center"><img src="../../images/lectures/lecture18/fig2.png" width="465" height="305" alt="fig. 2"></p>
+<p align="center" class="styleArial"><strong>Fig. 3</strong> &nbsp;Graphical fit of the separate dispersions negative binomial model</p>
+<p>From the graph it's clear that the separate dispersions negative binomial model provides a reasonable fit to the data. </p>
+<h2><a name="analytical"></a>Analytical goodness of fit test</h2>
+<p>To test the goodness of fit of the separate dispersions model using the data from both fields simultaneously I use a parametric bootstrap following exactly the same protocol outlined in <a href="lecture17.htm#goodness">lecture 17</a> for the Poisson model. I begin by segregating the predicted probabilities by field type into the components of a list object.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># split probabilities by field type</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">
+ slug.p2 &lt;- split(slugtable2$p2, slugtable2$Var2)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> slug.p2</div>
+<span class="style24">    $Nursery<br>
+  &nbsp;[1] 0.57117089 0.12782027 0.07137370 0.04781510 0.03469910 0.02634196 0.02058521<br>
+  &nbsp;[8] 0.01641453 0.01328501 0.01087563 0.05961859</span>
+<p><span class="style24">$Rookery<br>
+  &nbsp;[1] 0.244176494 0.242944651 0.184542461 0.125702509 0.080692585 0.049900146<br>
+  &nbsp;[7] 0.030075231 0.017789536 0.010373006 0.005980645 0.007822736</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#number of observations per field</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n &lt;- table(slugs$field)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">n</div>
+<span  class="style141">Nursery Rookery <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;40 </span>
+
+  <div class="style15" style="padding-left: 30px; text-indent:-30px">#  function that implements parametric bootstrap</div>
+  <div class="style23" style="padding-left: 30px; text-indent:-30px"> myfunc &lt;- function() {</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> out.obs &lt;- as.vector(sapply(1:2, function(x) rmultinom(1, size=n[x], prob=slug.p2[[x]])))</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> sum((out.obs-slugtable2$exp)^2/slugtable2$exp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># Repeat 9999 times to yield 10,000 Pearson statistics</div>
+  <div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(15) </div>
+  <div class="style23" style="padding-left: 30px; text-indent:-30px">sim.data &lt;- replicate(9999, myfunc())</div>
+  <div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(sim.data)</div>
+<span  class="style24">[1] 94.67193</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">actual2 &lt;- sum((slugtable2$Freq-slugtable2$exp)^2/slugtable2$exp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> actual2</div>
+<span  class="style24">[1] 9.673385</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># add actual value to the list of simulated Pearson statistics</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pearson2 &lt;- c(sim.data, actual2)</div>
+<p>The <em>p</em>-value of the simulation-based test is defined to be the total number of Pearson statistics that are as large or larger than the observed Pearson statistic divided by the total number of simulations.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pval &lt;- sum(pearson2&gt;=actual2)/length(pearson2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pval</div>
+<span  class="style24">[1] 0.9722</span>
+<p>The actual Pearson statistic is not statistically significant. The null hypothesis of the Pearson goodness of fit test is the following.</p>
+<blockquote>
+  <p>H<sub>0</sub>: fit is adequate<br>
+    H<sub>1</sub>: fit is inadequate </p>
+</blockquote>
+<p>Thus we  fail to reject the null hypothesis and conclude that the fit is adequate. The analytical results are consistent with the good graphical fit we obtained in Fig. 3.</p>
+<h2><b><a name="references"></a>Cited references</b></h2>
+<ul>
+  <li>Verbeke, G. &amp; Molenberghs, G. (2000) <em>Linear Mixed Models for Longitudinal Data</em> (Springer-Verlag, New York).</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture18&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 27, 2012<br>
+      URL: <a href="lecture18.htm#lecture18" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture18.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>UNC-Chapel Hill Single Sign-On</title>
+        <link rel="stylesheet" type="text/css" href="https://sso.unc.edu/idp/css/main.1581709046.css">
+    </head>
+    <body>
+        <header class="page">
+          <a id="headerLogo" href="http://unc.edu/" title="UNC Home Page">
+          </a>
+          <h1>Single Sign-On</h1>
+        </header>
+
+    <div class="wrapper">
+      <div class="container">
+
+        <div class="content">
+          <div class="column one">
+
+
+            <form name="singleSignOn" class="sso-form" action="ecol563" method="post">
+
+
+              <div class="form-element-wrapper">
+                <label for="username">Onyen -or- UNC Guest ID</label>
+                <input class="form-element form-field" id="username" name="j_username" type="text"
+                    accesskey="o" autocorrect="off" autocomplete="off" autocapitalize="off"
+                    value="" autofocus />
+              </div>
+
+              <div class="form-element-wrapper">
+                <label accesskey="p" for="password">Password</label>
+                <input class="form-element form-field" id="password" name="j_password" type="password" value="" />
+              </div>
+
+
+
+
+
+
+              <div class="form-element-wrapper">
+                <button class="form-element form-button" type="submit" name="_eventId_proceed"
+                    accesskey="S"
+                    onClick="this.childNodes[0].nodeValue='Signing in, please wait...'"
+                    >Sign in</button>
+              </div>
+
+
+            <div class="loginHelp">
+	      <p>
+	        Reset password for <a href="https://improv.itsapps.unc.edu">Onyen</a> |
+	        <a href="https://account.itsapps.unc.edu/guestid/reset-password">UNC Guest ID</a> or get <a href="http://help.unc.edu/">help</a>.
+	      </p>
+	      <p class="reminder">
+	        <em>Important</em>
+	        To protect your personal information, you must close every instance of this browser that is open on your
+	        computer when you log out.
+	      </p>
+            </div>
+
+            </form>
+
+            
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        <div class="container container-footer">
+          <p class="footer-text">&copy; 2018 The University of North Carolina at Chapel Hill. All rights reserved.</p>
+          <a href="http://unc.edu" id="footerLogo" title="UNC Home Page"></a>
+        </div>
+      </footer>
+    </div>
+    
+     </body>
+</html>

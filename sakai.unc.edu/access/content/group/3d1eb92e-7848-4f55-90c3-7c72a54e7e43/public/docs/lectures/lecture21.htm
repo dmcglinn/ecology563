@@ -1,0 +1,430 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 21&mdash;Monday, November 5, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+.style1012 {	font-family: "Courier New", Courier, mono
+}
+.style1012 {font-family: "Courier New", Courier, mono}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture21" id="lecture21"></a>Lecture 21&mdash;Monday, November 5, 2012</h1>
+<h3>Topics </h3>
+<ul>
+  <li><a href="lecture21.htm#example">Discussion of Assignment 8</a></li>
+  <li><a href="lecture21.htm#goodness">Testing  the fit of a negative binomial regression with a continuous predictor</a>
+    <ul>
+      <li><a href="lecture21.htm#graphical">Graphical assessment of fit</a></li>
+      <li><a href="lecture21.htm#analytical">Analytical assessment of fit</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture21.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture21.htm#fitted">fitted</a> returns the predicted mean from a regression model for each observation inverting the link function. It is equivalent to using <span class="style1">predict</span> with the <span class="style22">type=&quot;response&quot;</span> argument.</li>
+  <li><a href="lecture21.htm#lapply">lapply</a> for applying a function to a list of elements. The output of <span class="style1">lapply</span> is also a list.</li>
+</ul>
+<h3>R packages used</h3>
+<ul>
+  <li><a href="lecture21.htm#lattice">lattice</a> for lattice graphics.</li>
+  <li><a href="lecture21.htm#MASS">MASS</a> for the <span class="style1">glm.nb</span> function.</li>
+</ul>
+<h2><a name="example" id="example"></a>Discussion of Assignment 8</h2>
+<p>See <a href="../solutions/assign8.htm">HW 8 solutions</a>.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"></div>
+<h2><a name="goodness"></a>Testing  the fit of a negative binomial regression with a continuous predictor</h2>
+<p>Last time we fit various regression models of the species-area relationship for data on the vascular flora of the Galapagos islands. The best model according to AIC was a negative binomial regression model with log(<span class="style8">Area</span>) as the predictor.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># read in galapagos flora data</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> gala &lt;- read.table('ecol 563/galapagos.txt', header=T)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # fit NB-2 model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> <a name="MASS"></a>library(MASS)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.NB2 &lt;- glm.nb(Species~log(Area), data=gala)</div>
+<p>In the count regression models we've considered previously our predictors have all been categorical variables. These categorical variables provided a natural way to group the data values and made carrying out a goodness of fit test easy. We compared the observed distribution of counts in each group against what  the negative binomial regression model predicted  using either a formal chi-squared test or its simulation-based version (nonparametric bootstrap). In the Galapagos regression model log(<span class="style8">Area</span>) is a continuous predictor so this is not possible. Each observation has a different value of area and hence its own individual predicted negative binomial distribution so there are no natural groups.The negative binomial regression model can still be treated as a data-generating mechanism but now we have a different mechanism for each observation. </p>
+<p>Given an island's size our negative binomial regression model defines a probability distribution of likely species richness values for that island. This predicted distribution can  form the basis for a goodness of fit test. For each observation we can ask whether the observed richness value looks like a typical realization from the estimated probability distribution for that observation. This  can be assessed graphically by plotting the predicted probability distributions with the observed richness values superimposed. We can then follow this up analytically by calculating a <em>p</em>-value in which we treat the observed richness  as the value of our test statistic and the predicted probability distribution as our null model. </p>
+<h3><a name="graphical"></a>Graphical assessment of fit</h3>
+<p>With 29 different distributions to examine for the 29 different islands the most parsimonious way to display things is with a panel graph. The  thing that makes producing this graph complicated is that there is a wide range in observed richness values among the different islands ranging  from 2 to 444 species.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> range(gala$Species)</div>
+<span class="style24">  [1]&nbsp;&nbsp; 2 444</span>
+
+<p><a name="fitted"></a>To obtain a sensible picture we will to need to plot the probability distribution for each island using different settings for the <em>x</em>- and <em>y</em>-axes, cutting off the distributions when the probabilities are too small to be displayed. The <span class="style1">fitted</span> function of R returns the predicted mean on the raw scale and is equivalent to using the <span class="style1">predict</span> function with <span class="style22">type='response'</span>. I add the predicted means as a column to the <span class="style8">gala</span> data frame.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">fitted(out.NB2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 <br>
+  &nbsp;76.112866&nbsp; 25.242555&nbsp; 13.155450&nbsp; 10.019655&nbsp;&nbsp; 7.769198&nbsp; 15.700120&nbsp; 31.817486 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14 <br>
+  &nbsp; 6.441081&nbsp; 12.431872 103.695024 249.071798&nbsp; 18.978209&nbsp; 21.293508&nbsp; 66.476019 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21 <br>
+  518.139404 139.004430 &nbsp;&nbsp;4.303854 104.531677&nbsp; 67.310634&nbsp; 13.602074&nbsp; 41.765825 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28 <br>
+  236.601139 239.823172 283.606385&nbsp; 74.973770 153.911956&nbsp; 29.176613&nbsp; 25.242555 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 29 <br>
+&nbsp;34.258938</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">gala$mu &lt;- fitted(out.NB2)</div>
+<p>I add the predicted probabilities of the observed richness values as another column in the <span class="style8">gala</span> data frame.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> gala$z &lt;- dnbinom(gala$Species, mu=fitted(out.NB2), size=out.NB2$theta)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> min(gala$z)</div>
+ <span class="style24"> [1] 0.001036964</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(gala$z)</div>
+<span class="style24">[1] 0.1436656</span>
+<p>To get a sense of the range of count values that need to be displayed I calculate the probability of the smallest richness value, 0, and the probability of a fairly large richness value, 1000.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> max(dnbinom(1000, mu=fitted(out.NB2), size=out.NB2$theta))</div>
+ <span class="style24"> [1] 0.0003065981</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> min(dnbinom(0, mu=fitted(out.NB2), size=out.NB2$theta))</div>
+<span class="style24">[1] 8.946816e-07</span>
+<p><a name="lapply"></a>So for some islands the probability of zero counts will be too small to show up on the graph whereas for others counts as large as 1000 will still have a non-negligible probability. With these rough guidelines for the data range I calculate the probability of obtaining richness values between 0 and 1000 for each of the 29 islands. I use the <span class="style1">lapply</span> function for this to force the output to take the form of a list. (The <span class="style1">lapply</span> function is identical to <span class="style1">sapply</span> except that <span class="style1">sapply</span> will try to format list output as a vector or a matrix when it can while <span class="style1">lapply</span> will always produce list output.)</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.p &lt;- lapply(1:29, function(x) dnbinom(0:1000, mu=fitted(out.NB2)[x], size=out.NB2$theta))</div>
+<p>At least for some of the islands a lot of the calculated probabilities will be too small to show up on the graph. For each island I determine the largest count for which the calculated probability exceeds 1e-5.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sapply(1:29, function(x) max((0:1000)[out.p[[x]]&gt;1e-5]))</div>
+<span class="style24">  &nbsp;[1]&nbsp; 344&nbsp; 129&nbsp;&nbsp; 73&nbsp;&nbsp; 58&nbsp;&nbsp; 47&nbsp;&nbsp; 85&nbsp; 159&nbsp;&nbsp; 40&nbsp;&nbsp; 70&nbsp; 454&nbsp; 987&nbsp; 101&nbsp; 111&nbsp; 305 1000&nbsp; 589<br>
+[17]&nbsp;&nbsp; 29&nbsp; 457&nbsp; 309&nbsp;&nbsp; 75&nbsp; 202&nbsp; 943&nbsp; 955 1000&nbsp; 340&nbsp; 644&nbsp; 147&nbsp; 129&nbsp; 169</span>
+<p>For each island the expression <span class="style8">out.p[[x]]&gt;1e-5</span> will evaluate to TRUE or FALSE depending on whether the calculated probability exceeds the given threshold. The expression <span class="style8">(0:1000)[out.p[[x]]&gt;1e-5]</span> will then return only those  count categories whose probabilities exceed the threshold. Finally <span class="style1">max</span> finds the largest of these counts. I store the result as a column <span class="style8">ux</span> in the <span class="style8">gala</span> data frame.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">gala$ux &lt;- sapply(1:29, function(x) max((0:1000)[out.p[[x]]&gt;1e-5]))</div>
+<p>We can do a similar calculation  for each island at the low end, determining the smallest count category that still has a non-negligible probability.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sapply(1:29, function(x) min((0:1000)[out.p[[x]]&gt;1e-5]))</div>
+ <span class="style24"> &nbsp;[1] 0 0 0 0 0 0 0 0 0 0 1 0 0 0 5 0 0 0 0 0 0 1 1 1 0 0 0 0 0</span>
+
+<p>Because these values are barely different from zero  it seems reasonable to start all the  panel graphs  at zero. I create a variable <span class="style8">lx</span> that records this minimum value.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">gala$lx &lt;- rep(0, 29)</div>
+<p>Next I determine the maximum calculated probability on each island and store the result. I record the minimum probability as zero.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">gala$uy &lt;- sapply(out.p, max)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">gala$ly &lt;- rep(0, 29)</div>
+<p> I write a prepanel function that calculates the <em>x</em>-limits (<span class="style8">xlim</span>) and <em>y</em>-limits (<span class="style8">ylim</span>) for each panel using the variables <span class="style8">lx</span>, <span class="style8">ux,</span> <span class="style8">ly</span>, and <span class="style8">uy</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">prepanel.ci2 &lt;- function(x, y, ly, lx, uy, ux, subscripts, ...) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">list(ylim=range(y, uy[subscripts], ly[subscripts], finite=T), xlim=range(x, ux[subscripts], lx[subscripts], finite=T))}</div>
+<p>We're now ready to create the graph. </p>
+<ul>
+  <li>I plot the observed probability against the observed count separately by island. </li>
+  <li>I specify the variables containing the values of <span class="style8">ux</span>, <span class="style8">lx</span>, <span class="style8">uy</span>, and <span class="style8">ly</span> as arguments to be passed to the prepanel function that is also specified. </li>
+  <li>The panel function <span class="style1">panel.xyplot</span> draws the predicted negative binomial distribution for each island. </li>
+  <li>The <span class="style1">panel.abline</span> function draws a vertical line  at the location that corresponds to the observed species richness value for that island. </li>
+  <li>The additional argument: <span class="style22">scale=list(x=&quot;free&quot;, y=&quot;free&quot;)</span> causes the <em>x</em>-limits and <em>y</em>-limits to be set separately in each panel.</li>
+  <li>To reduce the size of the text appearing in the panel strips I use the <span class="style22">strip</span> argument as shown.</li>
+</ul>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># plot distributions for each island</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"><a name="lattice"></a>library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  xyplot(z~Species|Island, data=gala, ux=gala$ux, lx=gala$lx, uy=gala$uy, ly=gala$ly, 
+  prepanel=prepanel.ci2, ylab='Probability', xlab='Species richness', panel=function(x, y, subscripts){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(0:1000, dnbinom(0:1000, mu=gala$mu[subscripts], size=out.NB2$theta), type='h', col='grey')</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.abline(v=x, col=2, lty=2)},</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">scale=list(x='free', y='free'), strip=strip.custom(par.strip.text=list(cex=0.8)))</div><br>
+
+<table width="660" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture21/fig1.png" width="630" height="440" alt="fig. 1"></div></td>
+  </tr>
+  <tr>
+    <td><p style="padding-left: 50px; text-indent:-50px"><span class="styleArial1"><strong>Fig. 1</strong> &nbsp;&nbsp;<span class="styleArial">Predicted negative binomial distributions for individual islands with the location of the observed species richness value superimposed.</span></span></p></td>
+  </tr>
+</table>
+<p>Based on the graph it would appear that the observed richness on Champion and Gardner.a islands may be unusually large at least compared to the model prediction. At the other extreme the richness on Gardner.b may be unusually low. </p>
+<h3><a name="analytical"></a>Analytical assessment of fit</h3>
+<p>To get a better sense of the quality of the fit shown in Fig. 1 we can calculate <em>p</em>-values for the observed richness values. A <em>p</em>-value is the probability of obtaining a predicted value that is as extreme  or more extreme than the observed richness value. We can calculate both a lower-tailed <em>p</em>-value (for observed richness values that are too low) and an upper-tailed <em>p</em>-value (for observed richness values that are too big). The upper-tailed <em>p</em>-value is of the form P(<em>X</em> &ge; <em>k</em>). The  <span class="style1">pnbinom</span> function returns P(<em>X</em> &le; <em>k</em>), so 1 &ndash; <span class="style8">pnbinom</span>(<em>k</em>) returns P(<em>X</em> &gt; <em>k</em>). Because the negative binomial function is discrete, to  obtain the desired upper-tailed <em>p</em>-value using <span class="style1">pnbinom</span> we have to subtract 1 from the observed richness value: P(<em>X</em> &ge; <em>k</em>) = P(<em>X</em> &gt; <em>k</em>&ndash;1) = 1 &ndash; <span class="style8">pnbinom</span>(<em>k</em> &ndash; 1).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> upper.p &lt;- 1-pnbinom(gala$Species-1, mu=gala$mu, size=out.NB2$theta)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> upper.p</div>
+<span class="style24">  &nbsp;[1] 0.58535291 0.30618234 0.94174006 0.04041012 0.92039206 0.35479054 0.90561894<br>
+  &nbsp;[8] 0.33598154 0.96789984 0.46247618 0.87505733 0.01116176 0.94354653 0.70718942<br>
+  [15] 0.65445700 0.87859926 0.79455247 0.42418245 0.15644491 0.51231540 0.14058454<br>
+  [22] 0.31532278 0.42674999 0.16357795 0.53807249 0.09706292 0.19253194 0.68307008<br>
+  [29] 0.69856167</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(upper.p&lt;.05)</div>
+<span class="style24">  [1] 2</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> gala$Island[upper.p&lt;.05]</div>
+<span class="style24">[1] Champion&nbsp; Gardner.a</span>
+<p>Two of the islands have upper-tailed <em>p</em>-values less than &alpha; = .05: Gardner.a and Champion. Having carried out 29 tests (one for each island) we'd expect to obtain 29 &times; .05 = 1.45 significant results by chance alone, so obtaining two &quot;significant&quot; results here is probably nothing to be alarmed about. In a similar fashion  we can calculate lower-tailed <em>p</em>-values: P(<em>X</em> &le; <em>k</em>) = <span class="style8">pnbinom</span>(<em>k</em>). The smallest observed <em>p</em>-value is not less than .05.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lower.p &lt;- pnbinom(gala$Species, mu=gala$mu, size=out.NB2$theta)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> lower.p</div>
+<span class="style24">  &nbsp;[1] 0.42435700 0.71221773 0.09648845 0.96626903 0.15123079 0.67703197 0.11293472<br>
+  &nbsp;[8] 0.72867434 0.06506618 0.54387039 0.12756742 0.98995874 0.07951873 0.30434031<br>
+  [15] 0.34704017 0.12605349 0.34911315 0.58177527 0.84765877 0.53419809 0.86531981<br>
+  [22] 0.68682199 0.57588233 0.83745902 0.47142078 0.90412548 0.81839213 0.34634258<br>
+  [29] 0.32342568</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(lower.p&lt;.05)</div>
+<span class="style24">[1] 0</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> min(lower.p)</div>
+<span class="style24">[1] 0.06506618</span>
+<p>We can summarize things using a dot plot with the panels representing the lower-tailed and upper-tailed results.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">pval.dat &lt;- data.frame(pvalue=c(lower.p, upper.p), island=rep(gala$Island,2), label=rep(c('lower', 'upper'), each=nrow(gala)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dotplot(island~pvalue|factor(label, levels=levels(label), labels=c('Lower-tailed', 'Upper-tailed')), data=pval.dat, xlab='p-value', panel=function(x,y) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.dotplot(x,y)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.abline(v=.05, col=2,lty=2)})</div>
+<br>
+<table width="550" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture21/fig2.png" width="500" height="370" alt="fig. 2"></div></td>
+  </tr>
+  <tr>
+    <td><p style="padding-left: 50px; text-indent:-50px"><span class="styleArial1"><strong>Fig. 2</strong> &nbsp;&nbsp;Upper-tailed and lower-tailed p-values measuring the probability of obtaining a richness value as extreme or more extreme than what was observed. Dashed vertical lines in each panel are located at &alpha; = .05</span>.</p></td>
+  </tr>
+</table>
+<p>Much of  what's displayed in Fig. 2 is redundant. The left panel is nearly a mirror image of the right half. (It's not a perfect mirror image because P(<em>X</em> = <em>k</em>) is counted in both the lower-tailed and the upper-tailed calculations.) Given that we're interested in observed richness values that are both too small and too large it probably makes sense to carry out a two-tailed test here. For each island I calculate either a lower-tailed or an upper-tailed <em>p</em>-value (but not both) depending on whether P(<em>X</em> &le; <em>k</em>) is less than or greater than 0.5. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">p.to.plot &lt;- ifelse(pnbinom(gala$Species, mu=gala$mu, size=out.NB2$theta) &lt; .5, pnbinom(gala$Species, mu=gala$mu, size=out.NB2$theta), pnbinom(gala$Species-1, mu=gala$mu, size=out.NB2$theta))</div>
+<p>I next place everything in a single graph with lower-tailed <em>p</em>-values displayed on the left and the upper-tailed <em>p</em>-values displayed on the right. I add vertical lines at &alpha; = .025 and .975 to identify significant results. The overall rejection region thus corresponds to &alpha; = .05. I use the <span class="style22">scales</span> argument to relabel the tick marks for the upper-tailed <em>p</em>-values. The use of the <span class="style1">page</span> function is just window dressing that allows me to add the identifying text at the bottom of the graph using the grid graphics system.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(grid)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dotplot(gala$Island~p.to.plot, xlab='   ', xlim=c(-0.03,1.03), panel=function(x,y){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.dotplot(x,y)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.abline(v=c(.025,.975), col=2, lty=2)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.abline(v=0.5, col='grey70', lwd=2)},</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">scales=list(x=list(at=seq(0,1,.2), labels=c(0, 0.2, 0.4, 0.4, 0.2, 0))),
+page = function(n) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">grid.text(&quot;upper-tailed p-value&quot;, 
+x = .85, y = 0.025, 
+default.units = &quot;npc&quot;, 
+just = c(&quot;right&quot;, &quot;bottom&quot;))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">grid.text(&quot;lower-tailed p-value&quot;, 
+x = .45, y = 0.025, 
+default.units = &quot;npc&quot;, 
+just = c(&quot;right&quot;, &quot;bottom&quot;))})</div><br>
+
+<table width="550" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><div align="center"><img src="../../images/lectures/lecture21/fig3.png" width="500" height="370" alt="fig. 3"></div></td>
+  </tr>
+  <tr>
+    <td><p style="padding-left: 50px; text-indent:-50px"><span class="styleArial1"><strong>Fig. 3</strong> &nbsp;&nbsp;Probabilities of obtaining values more extreme than the observed richness value. Dashed vertical lines are placed at &alpha; = .025</span>.</p></td>
+  </tr>
+</table>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture21&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 6, 2012<br>
+      URL: <a href="lecture21.htm#lecture21" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture21.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

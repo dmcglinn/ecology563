@@ -1,0 +1,925 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 29&mdash;Wednesday, December 5, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+.style1012 {	font-family: "Courier New", Courier, mono
+}
+.style1012 {font-family: "Courier New", Courier, mono}
+.style221 {color: #339966;
+	font-weight: bold;
+}
+.style29 {font-family: "Courier New", Courier, mono}
+.style30 {color: #333399;
+	font-weight: bold;
+}
+.style28 {color: #CC0000; font-weight: bold; }
+.style411 {	color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #009900;  font-weight: bold; font-family: "Courier New", Courier, mono;}
+.style5 {	color: #CC0000;
+	font-weight: bold;
+}
+span.GramE {mso-style-name:"";
+	mso-gram-e:yes;}
+span.SpellE {mso-style-name:"";
+	mso-spl-e:yes;}
+.style331 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style391 {font-family: "Courier New", Courier, mono; font-weight: bold; color: #339933}
+.style42 {color: #CCCCCC}
+.style42 {color: #CC0000;
+	font-weight: bold;
+}
+.style401 {color: #CC0000}
+.style2311 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style261 {font-family: "Courier New", Courier, mono}
+.style371 {color: #FF0000;
+	font-weight: bold;
+}
+.style4011 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style421 {color: #0000FF; font-weight: bold; }
+.style44 {font-family: "Courier New", Courier, mono; color: #000000; font-size: smaller; }
+.style332 {color: #0000FF; font-family: "Courier New", Courier, mono; font-size: small;
+background-color:#F0F0F0;
+}
+.style332 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style91 {	color: #333399;
+	font-weight: bold;
+}
+.style2211 {color: #663366; font-weight: bold; }
+.style104 {color: #CC0000;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture29" id="lecture29"></a>Lecture 29&mdash;Wednesday, December 5, 2012</h1>
+<h3>Topics</h3>
+<ul><li><a href="lecture29.htm#binary">Logistic regression with binary data</a></li>
+  <li><a href="lecture29.htm#visualizing">Visualizing the logistic regression model with binary data</a>  </li>
+  <li><a href="lecture29.htm#gam">Using GAMS to check the structural form of continuous regressors</a>
+    <ul>
+      <li><a href="lecture29.htm#age">Assessing the structural form of age</a></li>
+      <li><a href="lecture29.htm#weight">Assessing the structural form of weight</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture29.htm#deviance">Residual deviance with binary data</a></li>
+  
+  <li><a href="lecture29.htm#confusion">The  confusion (classification) matrix</a></li>
+  <li><a href="lecture29.htm#rules">Jointly optimizing specificity and sensitivity</a>
+    <ul>
+      <li><a href="lecture29.htm#MDT">Minimized difference threshold (MDT)</a></li>
+      <li><a href="lecture29.htm#MST">Maximized sum threshold (MST)</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture29.htm#background">ROC curves </a></li>
+  <li><a href="lecture29.htm#ROC">Generating ROC curves in R</a></li>
+  <li><a href="lecture29.htm#AUC">Area under the curve (AUC)</a></li>
+  <li><a href="lecture29.htm#cross">Cross-validation</a></li>
+  <li><a href="lecture29.htm#references">Cited references</a></li>
+  <li><a href="lecture29.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture29.htm#cvbinary">cv.binary</a> (from <span class="style191">DAAG</span>) gives cross-validation measures of predictive accuracy for regression with a binary response.</li>
+  <li><a href="lecture29.htm#gam">gam</a> (from <span class="style191">mgcv</span>) fits generalized additive models. </li>
+  <li><a href="lecture29.htm#visualizing">jitter</a> randomly adds a small numeric value (noise) to each element of its argument. </li>
+  <li><a href="lecture29.htm#performance">performance</a> (from <span class="style191">ROCR</span>) calculates model calibration statistics from a prediction object. </li>
+  <li><a href="lecture29.htm#prediction">prediction</a> (from <span class="style191">ROCR</span>) creates a prediction object from which calibration statistics can be calculated.</li>
+  <li><a href="lecture29.htm#sfunc">s</a> (from <span class="style191">mgcv</span>) denotes a nonparametric smoother for use in fitting generalized additive models.</li>
+  <li><a href="lecture29.htm#S4">slotNames</a> displays the names of the slots of an S4 object. </li>
+  <li><a href="lecture29.htm#S4">str</a> displays the structure of an S4 object.</li>
+  <li><a href="lecture29.htm#MST">which.max</a> identifies where in a vector  the maximum occurs.</li>
+  <li><a href="lecture29.htm#whichmin">which.min</a> identifies where in a vector  the minimum occurs.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture29.htm#visualizing">a=</a> (argument to jitter) specifies an absolute amount for jittering points</li>
+  <li><a href="lecture29.htm#age">select=</a> (argument to <span class="style1">plot</span> for <span class="style1">gam</span> objects) is used to select a particular smooth from a <span class="style1">gam</span> object to plot.</li>
+</ul>
+<h3>R packages used </h3>
+<ul>
+<li><a href="lecture29.htm#cvbinary">DAAG</a> contains the frogs data set and the <span class="style104">cv.binary</span> function </li>
+<li><a href="lecture29.htm#gam">mgcv</a> contains the gam function for fitting generalized additive models </li>
+  <li><a href="lecture29.htm#ROCR">ROCR</a> contains the <span class="style104">prediction</span> and <span class="style104">performance</span> functions</li>
+</ul>
+<h2><a name="binary"></a>Logistic regression with binary data</h2>
+<p>Binary data are a special case of binomial data when the number of trials for each observation is 1. As a result most (but not all) of what we discussed in lectures 26 through 28 on logistic regression applies here.  Because binary data arise in  many different kinds of applications, a number of  model assessment tools have been developed specifically for binary data. To illustrate the fitting of  logistic regression models to binary data I use a data set that appears in Chapter 21 of Crawley (2007). As is the case with much of the data used in his book, very little background information is given. All we are told is that the binary response denotes whether an individual organism is observed to be parasitized (infection = &quot;present&quot;) or not (infection = &quot;absent&quot;). We are given additional information about the sex, weight, and age of the host, presumably. I'll assume that the goal is to determine the manner in which these variables affect the probability that a potential host is  parasitized.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> parasites &lt;- read.table( 'ecol 563/Parasite.txt', header=T)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> parasites[1:4,]</div>
+<span class="style141"> &nbsp; infection age weight&nbsp;&nbsp;&nbsp; sex<br>
+1&nbsp;&nbsp;&nbsp; absent&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 female<br>
+2&nbsp;&nbsp;&nbsp; absent&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp; 13 female<br>
+3&nbsp;&nbsp; present&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 female<br>
+4&nbsp;&nbsp;&nbsp; absent&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 16 female</span>
+<p>In logistic regression with binary data, the  binary variable appears as the lone response variable in the formula argument of the <span class="style13">glm</span> function. There is no need for the <span class="style13">cbind</span> construction that we used with binomial data proper. The levels of the factor variable <span class="style8">infection</span> are  &quot;absent&quot; and &quot;present&quot; and  by default are ordered alphabetically. So, <span class="style13">glm</span> will model the log odds of infection being &quot;present&quot;. I fit a logit model that is additive in  sex and the continuous control variables, weight and age and examine the summary table.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- glm(infection~sex+age+weight, data=parasites, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out1)$coefficients</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error&nbsp;&nbsp;&nbsp; z value&nbsp;&nbsp;&nbsp; Pr(&gt;|z|)<br>
+(Intercept)&nbsp; 0.60936876 0.80328772&nbsp; 0.7585934 0.448095827<br>
+sexmale&nbsp;&nbsp;&nbsp;&nbsp; -1.54344372 0.68568081 -2.2509653 0.024387734<br>
+age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.01265295 0.00677195&nbsp; 1.8684356 0.061701379<br>
+weight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.22791241 0.06859941 -3.3223670 0.000892572</span>
+<p>Both sex and weight are statistically significant. The Wald test for age (a variables-added last test) would seem to indicate that with sex and weight already in the model, age is not statistically significant. Wald tests and likelihood ratio tests often disagree. I  next drop age from the model and compare the two models with a likelihood ratio test.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2 &lt;- update(out1, .~.-age)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">anova(out2, out1, test='Chisq')</div>
+<span class="style141">Analysis of Deviance Table</span>
+<p><span class="style141">Model 1: infection ~ sex + weight<br>
+  Model 2: infection ~ sex + age + weight<br>
+  &nbsp; Resid. Df Resid. Dev Df Deviance P(&gt;|Chi|)&nbsp; <br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp; 63.785&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 77&nbsp;&nbsp;&nbsp;&nbsp; 59.859&nbsp; 1&nbsp;&nbsp; 3.9268&nbsp;&nbsp; 0.04752 *<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>Contrary to the Wald test, the likelihood ratio test  we  allows us to conclude that age is statistically significant. Of course to argue that the difference between <em>p</em> = 0.047 and <em>p</em> = 0.062  has any substantive significance would be silly. </p>
+<p> As with binomial data we can calculate  an odds ratio for  individual predictors by exponentiating their coefficients.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(coef(out1)[2:4])</div>
+<span class="style141">  &nbsp; sexmale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age&nbsp;&nbsp;&nbsp; weight <br>
+0.2136441 1.0127333 0.7961940</span>
+<p>So we conclude that the odds of infection for males is 21% the odds of infection for females, the odds of infection increases by 1% for each one unit increment in age, and a unit increment in weight leads to an odds that is 80% of what it was.</p>
+<h2><a name="visualizing"></a>Visualizing the logistic regression model with binary data</h2>
+<p>The notion of fitting a regression model to a response variable that consists solely of zeros and ones should seem rather strange. To better understand this I plot the regression model with the data. This can be done for the simpler model <span class="style8">out2</span> that has a single continuous predictor <span class="style8">weight</span> and a categorical predictor <span class="style8">sex</span>. Because there are multiple observations with the same value of <span class="style8">weight</span> and <span class="style8">infection</span>, I jitter the data slightly both in the <em>x</em>-direction and the <em>y</em>-direction. The <span class="style22">a=</span> argument of <span class="style1">jitter</span> controls the absolute amount of jitter of the points.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(jitter(as.numeric(infection), a=.05)-1 ~ jitter(weight, a=.2), data=parasites, col=as.numeric(sex), xlab='Weight', ylab='Probability', cex=.8)</div>
+<p>The linear predictor of our model is a function of <span class="style8">weight</span> and <span class="style8">sex</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">coef(out2)</div>
+<span class="style141">  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; sexmale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; weight <br>
+  &nbsp; 1.4152741&nbsp; -1.2964536&nbsp; -0.2020149 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # linear predictor</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">eta &lt;- function(weight,sex) coef(out2)[1] + coef(out2)[2]*(sex=='male') + coef(out2)[3]*weight</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> eta(1,'female')</div>
+<span class="style141">  (Intercept) <br>
+  &nbsp;&nbsp; 1.213259 </span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> eta(1,'male')</div>
+<span class="style141">  (Intercept) <br>
+  -0.08319437 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # logistic function</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> inv.logit &lt;- function(eta) exp(eta)/(1+exp(eta))</div>
+<p>I determine the range of weights  for each sex and plot the logistic function separately for each sex over that range.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sex.range &lt;- tapply(parasites$weight, parasites$sex, range)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sex.range</div>
+<span class="style141">$female<br>
+[1]&nbsp; 1 16</span>
+<p><span class="style141">$male<br>
+  [1]&nbsp; 1 18</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(inv.logit(eta(x, 'female')), add=T, lty=2, xlim=sex.range$female)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> curve(inv.logit(eta(x, 'male')), add=T, lty=2, col=2, xlim=sex.range$male)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> legend('right', c('female', 'male'), col=1:2, lty=2, bty='n', cex=.9)</div>
+<br>
+<table width="500" border="0" align="center" cellpadding="5">
+  <tr>
+    <td><img src="../../images/lectures/lecture29/fig1a.png" width="460" height="300" alt="fig. 1"></td>
+  </tr>
+  <tr>
+    <td class="styleArial1" style="padding-left: 45px; text-indent:-45px"><strong>Fig. 1</strong> &nbsp;Estimated probability of infection as a function of weight shown separately for males and females</td>
+  </tr>
+</table>
+<p>At every weight (i.e., controlling for weight) we see that the probability of infection is less for males than it is for females. This is essentially an analysis of covariance model. On a logit scale the curves shown in Fig. 1 would parallel; on a probability scale they are not because the inverse logit transformation is nonlinear. This is unavoidable in a  model that assumes that weight has a monotonic effect on the probability of infection that is constrained to lie between 0 and 1.</p>
+<h2><a name="gam"></a>Using GAMS to check the structural form of continuous regressors</h2>
+<p>It is  imperative with any regression model to verify that a predictor has been entered in the model properly, i.e., to check that the response is truly  proportional to the predictor (having controlled for the effects of the other predictors) or whether some other functional form is more appropriate. With ordinary regression this usually involves examining residuals, plotting them against the predictors, and determining if there still remains a systematic pattern. Checking the linearity assumption is perhaps even more important with logistic regression because we typically don't have an intuitive sense of how a predictor should vary with a logit. Unfortunately the residuals from logistic regression are not especially useful for this.</p>
+<p>The default residual returned by <span class="style13">glm</span> is called a deviance residual. This is the signed contribution of the current observation to the model's residual deviance. Another choice is the Pearson residual&mdash;the signed square root of that observation's contribution to the Pearson statistic, i.e., the Pearson deviance. Fig. 2 shows both of these residuals for the analysis of covariance model plotted against age with a lowess curve superimposed.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,2))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> oldmar &lt;- par(&quot;mar&quot;)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> par(mar=c(5.1,5.1,1.1,1.1))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(residuals(out1, type='pearson')~age, data=parasites, ylab='Pearson residual')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> lines(lowess(residuals(out1, type='pearson') ~ parasites$age), col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(residuals(out1, type='deviance')~age, data=parasites, ylab='Deviance residual')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> lines(lowess(residuals(out1, type='deviance') ~ parasites$age), col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,1))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> par(mar=oldmar)</div>
+<p align="center"><img src="../../images/lectures/lecture29/fig1.png" width="570" height="335" alt="fig 1"></p>
+<p align="center"><span class="styleArial1"><strong>Fig. 2</strong> &nbsp;Residual plots (Pearson</span> and deviance residuals) against age</p>
+<p>The pattern shown in Fig. 2 is typical for logistic regression with binary data. One generally gets two bands of points: one band corresponds to the zeros (and consists of negative residuals) and the second band corresponds to the ones (and consists of positive residuals). If the regression coefficient of the variable plotted on the <em>x</em>-axis is positive  the bands show a decline from left to right. So we get the negative trend exhibited by the lowess curve in Fig. 2. This occurs because of the S-shaped logistic curve&mdash;it is closer to the zero observations on the left but becomes closer to the ones on the right. Because of all of the spurious patterns going on in these residual plots, they don't shed much light on regressor mis-specification.</p>
+<p>A good alternative to residual plots is to fit a generalized additive model (GAM) to the data and then examine the  form of the  functions of the predictors it estimates. A generalized additive model replaces the linear regression model with a sum of nonparametric smoothers. GAMs are stand-alone models and so can be used as a replacement for generalized linear models.  I view GAMs as  exploratory tools and generally will use them to help suggest a parametric form when biological theory is not very helpful. I will even occasionally include a nonparametric smooth in a model  in an attempt to account for a complicated correlation structure. But as a general rule I avoid them because they make it too easy to overfit data. Some recent textbook introductions to generalized additive models are Wood (2006) and Keele (2008). Some authors who often use GAMs as their primary source of inference are Zuur et al. (2008).</p>
+<p><a name="sfunc"></a>For our  logistic regression model, the analogous generalized additive model would be the following.</p>
+<p align="center"><img src="../../images/lectures/lecture29/gam.gif" width="382" height="67" alt="gam"></p>
+<p>The functions <em>f</em><sub>1</sub> and <em>f</em><sub>2</sub> are  nonparametric smooths and in the context of the model represent partial regression functions. We don't obtain  explicit formulas for these smooths, but we can plot them and if we're fortunate we'll see that they can be approximated by a simple function whose parametric form we recognize and can then estimate. In R a number of packages can  fit GAMs. I prefer the <span class="style13">gam</span> function in the <span class="style191">mgcv</span> package. The <span class="style191">mgcv</span> package is part of the standard installation of R and does not have to be specially downloaded. Here's how we would fit the generalized additive model shown above. The nonparametric smooths are obtained with the <span class="style13">s</span> function.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> library(mgcv)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2.gam &lt;- gam(infection~sex+s(age)+s(weight), data=parasites, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out2.gam)</div>
+<p><span class="style141">Family: binomial <br>
+  Link function: logit </span>
+<p><span class="style141">Formula:<br>
+  infection ~ sex + s(age) + s(weight)</span>
+<p><span class="style141">Parametric coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp; <br>
+  (Intercept)&nbsp; -1.4763&nbsp;&nbsp;&nbsp;&nbsp; 0.5716&nbsp; -2.583&nbsp;&nbsp; 0.0098 **<br>
+  sexmale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.3099&nbsp;&nbsp;&nbsp;&nbsp; 0.7279&nbsp; -1.800&nbsp;&nbsp; 0.0719 . <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">Approximate significance of smooth terms:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">edf</span><span class="style141"> Ref.df Chi.sq p-value&nbsp;&nbsp; <br>
+    s(age)&nbsp;&nbsp;&nbsp; </span><span class="style25">2.150</span><span class="style141">&nbsp; 2.715&nbsp; 6.663 0.06740 . <br>
+      s(weight) </span><span class="style25">1.957</span><span class="style141">&nbsp; 2.446 11.442 0.00548 **<br>
+        ---<br>
+        Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">R-sq.(adj) =&nbsp; 0.359&nbsp;&nbsp; Deviance explained = 40.3%<br>
+  UBRE score = -0.23574&nbsp; Scale est. = 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n = 81</span>
+<p>Useful information can be obtained from the   column labeled <span class="style8">edf</span> (estimated degrees of freedom) in the table of the smooth terms. Values very different from 1 in this column indicate possible deviations from linearity. A better assessment is provided by plots of the smooths. These can be obtained by using the <span class="style13">plot</span> function on the model object. There are two smooths in this model so I arrange  the graph window so that they appear side by side.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,2))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(out2.gam)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,1))</div>
+<p align="center"><img src="../../images/lectures/lecture29/fig2.png" width="570" height="299" alt="fig 2"></p>
+<p align="center" class="styleArial1"><strong>Fig. 3</strong> &nbsp;Estimated nonparametric smooths from the generalized additive model</p>
+<p>The smooth of age indicates that the true relationship between the logit and age (after controlling for sex and weight) might be quadratic. On the other hand the relationship with weight may be linear but perhaps not initially. It appears that for low weights the  effect on the log odds is constant  and positive  but after passing a threshold value of weight the log odds begins to decreases at a constant rate with weight.</p>
+<h3><a name="age"></a>Assessing the structural form of age</h3>
+<p>We can examine the plots individually by adding the <span class="style17">select</span> argument to the <span class="style13">plot</span> function and choosing by number which smooth to display. I plot the smooth of age and add a horizontal line at log odds = 0.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> plot(out2.gam, select=1)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> abline(h=0, col=2)</div>
+
+<p align="center"><img src="../../images/lectures/lecture29/fig3.png" width="434" height="320" alt="fig 3"></p>
+<p align="center" class="styleArial1"><strong>Fig. 4</strong> &nbsp;Estimated nonparametric smooth for age</p>
+<p>Places where the confidence bands enclose the horizontal line indicate age values where the overall pattern is not significant. From this we see that the initial positive linear trend is significant but the region where the trend turns back may not be. Thus evidence for the quadratic pattern is somewhat weak. The rug plot displayed at the bottom of the graph indicates that the downturn in the graph may be  driven by only a few observations. Still I try adding a quadratic term to the model and test whether it's statistically significant.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out3 &lt;- update(out1, .~. + I(age^2))</div>
+<p>To carry out arithmetic on model terms within the regression model itself requires the use of the <span class="style13">I</span> function, <span class="style13">I</span> for identity. Without the <span class="style13">I</span> function, R would ignore the arithmetic and just treat the term <span class="style8">age</span> as appearing in the model twice. An alternative to using the <span class="style13">I</span> function would be to create a variable that is the square of <span class="style8">age</span> in the data frame containing the data. After fitting the model I carry out a likelihood ratio test to test the need for the quadratic term and then examine the summary table of the model.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> anova(out1, out3, test='Chisq')</div>
+<span class="style141"> Analysis of Deviance Table</span>
+<p><span class="style141">Model 1: infection ~ sex + age + weight<br>
+  Model 2: infection ~ sex + age + weight + I(age^2)<br>
+  &nbsp; Resid. Df Resid. Dev Df Deviance P(&gt;|Chi|)&nbsp;&nbsp; <br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 77&nbsp;&nbsp;&nbsp;&nbsp; 59.859&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 76&nbsp;&nbsp;&nbsp;&nbsp; 53.091&nbsp; 1&nbsp;&nbsp; 6.7672&nbsp; </span><span class="style25">0.009285</span><span class="style141"> **<br>
+    ---<br>
+    Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out3)$coefficients</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate&nbsp;&nbsp; Std. Error&nbsp;&nbsp; z value&nbsp;&nbsp;&nbsp; Pr(&gt;|z|)<br>
+(Intercept) -1.6156075658 1.3837742090 -1.167537 0.242993582<br>
+sexmale&nbsp;&nbsp;&nbsp;&nbsp; -1.6383418731 0.7473362195 -2.192242 0.028362035<br>
+age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0841665280 0.0347952021&nbsp; 2.418912 0.015567011<br>
+weight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.2340759877 0.0728522126 -3.213025 0.001313448<br>
+I(age^2)&nbsp;&nbsp;&nbsp; -0.0003973344 0.0001889220 -2.103166 </span><span class="style25">0.035451250 </span>
+<p>Both the likelihood ratio test and the Wald test agree that the quadratic term is statistically significant. </p>
+<h3><a name="weight" id="weight"></a>Assessing the structural form of weight</h3>
+<p>I next turn to the structural form of the predictor <span class="style8">weight</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(out2.gam, select=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">abline(h=0, col=2, lty=2)</div>
+<p align="center"><img src="../../images/lectures/lecture29/fig4.png" width="420" height="305" alt="fig1"></p>
+<p align="center" class="styleArial1"><strong>Fig. 5</strong> &nbsp;Estimated nonparametric smooth for weight</p>
+<p>The graph and the estimated degrees of freedom indicate a slight deviation from linearity. The graph suggests that there may be two regions where weight has different effects: an initial region in which the logit is constant with respect to weight followed by a second region in which the logit is decreasing. A simple parametric model that displays such a pattern  is a breakpoint (segmented) regression model. This is a model that consists of  two separate linear pieces that  meet at the breakpoint. Define</p>
+<p align="center"><img src="../../images/lectures/lecture29/linearspline.gif" width="223" height="70" alt="linear spline"></p>
+<p>This is  called a linear spline. A breakpoint regression model for the mean that resembles the graph in Fig. 5 <em></em> is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture29/breakpointmodel.gif" width="158" height="32" alt="breakpoint model"></p>
+<p>Based on the graph a value of <em>c</em> = 6 might be appropriate. A breakpoint regression model for weight that also includes sex and  quadratic age  can be fit in R as follows.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> c &lt;- 6</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out4 &lt;- glm(infection~sex + age + I(age^2) + I((weight&gt;=c)*(weight-c)), data=parasites, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out4)</div>
+<span class="style141">Call:<br>
+glm(formula = infection ~ sex + age + I(age^2) + I((weight &gt;= <br>
+&nbsp;&nbsp;&nbsp; c) * (weight - c)), family = binomial, data = parasites)</span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -1.8685&nbsp; -0.4735&nbsp; -0.2044&nbsp; -0.0422&nbsp;&nbsp; 2.4295&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.2951147&nbsp; 1.4048274&nbsp; -1.634 0.102315&nbsp;&nbsp;&nbsp; <br>
+  sexmale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.4591063&nbsp; 0.7601672&nbsp; -1.919 0.054927 .&nbsp; <br>
+  age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0824861&nbsp; 0.0355678&nbsp;&nbsp; 2.319 0.020388 *&nbsp; <br>
+  I(age^2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.0003886&nbsp; 0.0001951&nbsp; -1.992 0.046404 *&nbsp; <br>
+  I((weight &gt;= c) * (weight - c)) -0.3592856&nbsp; 0.1044614&nbsp; -3.439 0.000583 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for binomial family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 83.234&nbsp; on 80&nbsp; degrees of freedom<br>
+  Residual deviance: 50.001&nbsp; on 76&nbsp; degrees of freedom<br>
+  AIC: 60.001</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 6</span>
+<p>The reported  AIC of 60.001 is not correct because it doesn't account for <em>c</em> which we estimated ourselves by inspecting the graph. We should add 2 to the reported AIC to account for this.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> AIC(out4)+2</div>
+<span class="style141"> [1] 62.00094</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> AIC(out3)</div>
+<span class="style141"> [1] 63.09144</span>
+<p>The  AIC of the breakpoint regression model indicates that this model is a slight improvement over   the linear weight model that we fit above. I graph the estimated breakpoint model for weight  in Fig. 6 (using <span class="style8">sex = 0</span> and <span class="style8">age = 0</span>).</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#draw breakpoint regression model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> func1 &lt;- function(x) coef(out4)[1] + coef(out4)[5]*I(x&gt;=6)*(x-6)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> range(parasites$weight)</div>
+<span class="style141"> [1] &nbsp;1 18</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">curve(func1, from=1, to=18, ylab='breakpoint model', xlab='weight')</div>
+<p align="center"><img src="../../images/lectures/lecture29/fig5.png" width="420" height="305" alt="fig 2"></p>
+<p align="center" class="styleArial1"><strong>Fig. 6</strong> &nbsp;Estimated breakpoint model with breakpoint <em>c</em> = 6</p>
+<p>We selected <em>c </em>= 6 by inspection but there may be a better choice for the breakpoint. To investigate this systematically I write a function that for a given <em>c</em> fits the model and returns the log-likelihood of the model. The only candidates for <em>c</em> that can affect the likelihood are the values of weight that occur in the data set.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> cvec &lt;- sort(unique(parasites$weight))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> cvec</div>
+<span class="style141"> &nbsp;[1]&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 5&nbsp; 6&nbsp; 8&nbsp; 9 10 11 12 13 14 15 16 17 18</span>
+<p>The following function  fits the breakpoint regression model and returns the log-likelihood.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#function to fit model and return log-likelihood</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> c.func &lt;- function(c) {</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px"> mymodel &lt;- glm(infection~sex + age + I(age^2) + I((weight&gt;=c)*(weight-c)), data=parasites, family=binomial)</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px">c(c,logLik(mymodel))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">}</div>
+<p>I <span class="style13">sapply</span> this function on the vector of potential breakpoints.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #obtain profile log-likelihood</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.c &lt;- sapply(cvec, c.func)</div>
+<span class="style141"> Warning messages:<br>
+1: In glm.fit(x = X, y = Y, weights = weights, start = start, etastart = etastart,&nbsp; :<br>
+&nbsp; fitted probabilities numerically 0 or 1 occurred<br>
+2: In glm.fit(x = X, y = Y, weights = weights, start = start, etastart = etastart,&nbsp; :<br>
+&nbsp; fitted probabilities numerically 0 or 1 occurred<br>
+3: In glm.fit(x = X, y = Y, weights = weights, start = start, etastart = etastart,&nbsp; :<br>
+&nbsp; fitted probabilities numerically 0 or 1 occurred</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.c</div>
+<p class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,5]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,6]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,7]<br>
+  [1,]&nbsp;&nbsp; 1.00000&nbsp;&nbsp; 2.00000&nbsp;&nbsp; 3.00000&nbsp;&nbsp; 5.00000&nbsp;&nbsp; 6.00000&nbsp;&nbsp; 8.00000&nbsp;&nbsp; 9.00000<br>
+  [2,] -26.54572 -26.33032 -26.22076 -25.42467 -25.00047 -24.80258 -25.05273<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,8]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,9]&nbsp;&nbsp;&nbsp;&nbsp; [,10]&nbsp;&nbsp;&nbsp;&nbsp; [,11]&nbsp;&nbsp;&nbsp;&nbsp; [,12]&nbsp;&nbsp;&nbsp;&nbsp; [,13]&nbsp;&nbsp;&nbsp;&nbsp; [,14]<br>
+  [1,]&nbsp; 10.00000&nbsp; 11.00000&nbsp; 12.00000&nbsp; 13.00000&nbsp; 14.00000&nbsp; 15.00000&nbsp; 16.00000<br>
+  [2,] -24.99888 -25.05888 -24.34345 -25.87872 -25.79176 -28.55724 -32.57559<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,15]&nbsp;&nbsp;&nbsp;&nbsp; [,16]<br>
+  [1,]&nbsp; 17.00000&nbsp; 18.00000<br>
+  [2,] -32.78470 -32.84746 </span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#find location that maximizes the profile log-likelihood</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> which.max(out.c[2,])</div>
+<span class="style141"> [1] 10</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out.c[,10]</div>
+<span class="style141"> [1]&nbsp; 12.00000 -24.34345</span>
+<p>The warning messages indicate that there was <a href="lecture26.htm#quasi">complete or quasi-complete separation</a> when fitting one or more of the models. The largest log-likelihood was achieved using a breakpoint of <em>c</em> = 12. It's useful to plot the log-likelihood as a function of <em>c</em> yielding what's called a profile log-likelihood.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#graph profile log-likelihood</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(out.c[1,], out.c[2,], type='o', xlab='c', ylab='Profile log-likelihood')</div>
+<p align="center"><img src="../../images/lectures/lecture29/fig2pt5.png" width="470" height="290" alt="fig 3"><br>
+  <span class="styleArial1"><strong>Fig. 7</strong> &nbsp;Profile log-likelihood for the  breakpoint</span></p>
+<p>Based on the figure there are clearly quite a few values of <em>c</em> that yield roughly the same log-likelihood. I fit the breakpoint regression model with <em>c</em> = 12.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #fit best breakpoint regression model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out6 &lt;- glm(infection~sex + age + I(age^2) + I((weight&gt;=12)*(weight-12)), data=parasites, family=binomial)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #obtain AIC of candidate models</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sapply(list(out1, out3, out6), AIC) + c(0,0,2)</div>
+<span class="style141">[1] 67.85860 63.09144 60.68691</span>
+<p>So, the logistic regression model with quadratic age and a breakpoint model for weight yields the lowest AIC.</p>
+<h2><a name="deviance" id="deviance"></a>Residual deviance with binary data</h2>
+<p>The residual deviance of a binary regression model deserves special comment. The residual deviance is defined as being &ndash;2 times a difference in two log-likelihoods, the log-likelihood of the current model minus the log-likelihood of the saturated model. Observe that if we multiply the log-likelihood of the current model by &ndash;2 we obtain the residual deviance reported for the model</p>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out6$deviance</div>
+ <span class="style141"> [1] 48.68691</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> -2*logLik(out6)[1]</div>
+<span class="style141">[1] 48.68691</span>
+<p>So, the deviance of the saturated model is apparently zero. This is always the case for binary data. A saturated model is one in which each observation gets its own parameter so that we fit the data perfectly. For binary data the likelihood takes the following form.</p>
+<p align="center"><img src="../../images/lectures/lecture29/likelihood.gif" alt="" width="267" height="57"></p>
+<p>where y<sub>i</sub> for observation <em>i</em> is either 0 or 1, so only one of the two terms shown appears for a given observation. Typically we would model the individual p<sub>i</sub> as a function of predictors and a small set of parameters, but in the saturated model each observation gets  a  value of p<sub>i</sub> unconstrained by the rest of the data. In order to reproduce the observed values exactly we must assign p<sub>i&nbsp;</sub>=&nbsp;1 if   observation <em>i</em> is a success and p<sub>i</sub>&nbsp;=&nbsp;0 if it's a failure. This yields a likelihood of one  and hence a log-likelihood of zero.</p>
+<p>The problem with using the residual deviance as a goodness of fit statistic for binary data is that we have no metric of &quot;nearness&quot; like we have for binomial data. The probabilistic argument that the residual deviance has an asymptotic chi-squared distribution applies to binomial (grouped binary) and Poisson data, but  not to binary data. Its derivation requires that the number of parameters can be held fixed in the saturated model as the sample size is allowed to become infinite. With binary data as the sample size increases  the number of parameters in the saturated model does also and  the a limiting chi-squared distribution does not arise. Without a distribution to appeal to, the residual deviance is of no value in assessing model fit with binary data.</p>
+<h2><strong><a name="confusion"></a>The  confusion (classification) matrix</strong></h2>
+<p>One popular use of logistic regression is to classify future observations as successes or failures based on measured characteristics.  In addition to logistic regression there are many other ways to classify observations. Popular methods such as classification trees and support vector machines are  inherently non-statistical and originated in the machine learning community. These newer approaches are not likelihood-based  so they can't appeal to log-likelihood and AIC for model selection. Instead they rate models based on their classification  accuracy, an approach that is called model calibration. Model calibration, for reasons that will be made clear below, is a good tool for assessing model performance, but is less useful as a way to select models. Model calibration methods can be used with logistic regression if we're willing to view our model as a way to classify observations as being either zeros or ones. If doing so does not make sense, then model calibration should not be used. </p>
+<p>Because logistic regression estimates a probability, to classify observations we need to choose a cutoff value <em>c</em> such that if <img src="../../images/lectures/lecture29/cutoff.gif" width="53" height="28" align="absmiddle"> we classify the observation to be a success, otherwise we classify it as a failure. Here <img src="../../images/lectures/lecture29/prob.gif" alt="" width="22" height="28" align="absmiddle"> is the probability estimated by the logistic regression model. For a given choice of <em>c</em> we can measure how well the logistic regression model predicts the data that went into fitting the model. A decision rule for classifying  observations as zeros or ones using the cutoff <em>c</em> is the following. </p>
+<p align="center"><img src="../../images/lectures/lecture29/decision&#32;rule.gif" width="280" height="80" alt="decision rule"></p>
+<p>Results obtained using such a decision rule can be organized into what's called a classification table (also called a <span class="style30">confusion matrix</span>).
+  A generic version of a confusion matrix is shown  in Fig. 8. Consistent with the conventions of model calibration ones are referred to as &quot;positives&quot; and zeros are referred to as &quot;negatives&quot;.</p>
+<table width="600" border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td colspan="2" rowspan="2" bordercolor="#FFFFFF">&nbsp;</td>
+    <td colspan="2" bordercolor="#000000" bgcolor="#F1D2D8"><div align="center"><strong>Observed</strong></div></td>
+  </tr>
+  <tr>
+    <td align="center" bordercolor="#000000" bgcolor="#F0F0F0"><em>Y<sub>i</sub></em> = 0</td>
+    <td align="center" bordercolor="#000000" bgcolor="#F0F0F0"><em>Y<sub>i </sub></em>= 1</td>
+  </tr>
+  <tr>
+    <td rowspan="2" bordercolor="#000000" bgcolor="#F1D2D8"><p align="center"><strong>Predicted</strong><br>
+      (using <img src="../../images/lectures/lecture29/cutoff.gif" width="53" height="28" align="absmiddle"> decision rule) </p></td>
+    <td bordercolor="#000000" bgcolor="#F0F0F0"><img src="../../images/lectures/lecture29/Yihat0.gif" width="52" height="32" alt="Yi 0"></td>
+    <td  bgcolor="#F5F5DC"><div align="center"><strong>True negatives</strong></div></td>
+    <td  bgcolor="#F5F5DC"><div align="center"><strong>False negatives</strong></div></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000" bgcolor="#F0F0F0"><img src="../../images/lectures/lecture29/Yihat1.gif" width="48" height="32" alt="Y1 hat"></td>
+    <td  bgcolor="#F5F5DC"><div align="center"><strong>False positives</strong></div></td>
+    <td bgcolor="#F5F5DC"><div align="center"><strong>True positives</strong></div></td>
+  </tr>
+</table>
+<p align="center" class="styleArial1"><strong>Fig. 8</strong>&nbsp;&nbsp;Confusion matrix for a classification rule with  labeled cell outcomes </p>
+<p>The diagonal entries correspond to observations that were classified correctly whereas the off-diagonal entries are misclassifications. False negatives are observations that were classified as zeros but turned out to be ones. False positives are observations that were classified as ones but turned out to be zeros. Fig. 9 repeats the confusion matrix of Fig. 8 but this time with numeric values populating the cells.</p>
+<table width="500" border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td colspan="2" rowspan="2" bordercolor="#FFFFFF">&nbsp;</td>
+    <td colspan="2" bordercolor="#000000" bgcolor="#F1D2D8"><div align="center"><strong>Observed</strong></div></td>
+    <td rowspan="2" bordercolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000" bgcolor="#F0F0F0"><em>Y<sub>i</sub></em> = 0</td>
+    <td bordercolor="#000000" bgcolor="#F0F0F0"><em>Y<sub>i</sub></em> = 1</td>
+  </tr>
+  <tr>
+    <td rowspan="2" bordercolor="#000000" bgcolor="#F1D2D8" border=1><p align="center"><strong>Predicted</strong><br>
+      (using <img src="../../images/lectures/lecture29/cutoff.gif" width="53" height="28" align="absmiddle"> decision rule) </p></td>
+    <td bordercolor="#000000" bgcolor="#F0F0F0"><img src="../../images/lectures/lecture29/Yihat0.gif" width="52" height="32" alt="Yi 0"></td>
+    <td bgcolor="#F5F5DC"><div align="center"><em>A</em></div></td>
+    <td bgcolor="#F5F5DC"><div align="center"><em>C</em></div></td>
+    <td bgcolor="#BCD4E6"><div align="center"><em>A+C</em></div></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000" bgcolor="#F0F0F0"><img src="../../images/lectures/lecture29/Yihat1.gif" width="48" height="32" alt="Y1 hat"></td>
+    <td bgcolor="#F5F5DC"><div align="center"><em>B</em></div></td>
+    <td bgcolor="#F5F5DC"><div align="center"><em>D</em></div></td>
+    <td bgcolor="#BCD4E6"><div align="center"><em>B+D</em></div></td>
+  </tr>
+  <tr>
+    <td colspan="2" bordercolor="#FFFFFF">&nbsp;</td>
+    <td bgcolor="#BCD4E6"><div align="center"><em>A+B</em></div></td>
+    <td bgcolor="#BCD4E6"><div align="center"><em>C+D</em></div></td>
+    <td bgcolor="#F0F0F0"><div align="center"><em>A+B+C+D</em></div></td>
+  </tr>
+</table>
+<p align="center" class="styleArial1"><strong>Fig. 9</strong>&nbsp;&nbsp;Confusion matrix for a classification rule with numeric cell frequencies</p>
+<p>From the confusion matrix a number of quantities of interest can be defined. They include the following.</p>
+<blockquote>
+  <p align="center"><img src="../../images/lectures/lecture29/rate2.gif" width="507" height="122" alt="rate2"></p>
+  <p align="center"><img src="../../images/lectures/lecture29/rate1.gif" width="485" height="122" alt="rate1"></p>
+</blockquote>
+<p>We encountered the terms sensitivity and specificity previously when discussing <a href="lecture23.htm#simple">Bayes rule</a>. The Wikipedia page for <a href="http://en.wikipedia.org/wiki/Receiver_operating_characteristic">ROC curve</a> lists many other statistics that are commonly calculated from a confusion matrix. Obtaining a confusion matrix from a logistic regression model and calculating specificity and sensitivity for a decision rule are easy to do in R. To construct the confusion matrix we just tabulate the predicted values that exceed a cutoff <em>c</em> against the observed 0 and 1 counts.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> tab0 &lt;- table(fitted(out6)&gt;=.5, parasites$infection)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> tab0</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; absent present<br>
+&nbsp; FALSE&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8<br>
+&nbsp; TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9</span>
+<p>From this we can readily calculate the sensitivity and specificity.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">diag(tab0)/apply(tab0, 2, sum)</div>
+<span class="style141"> &nbsp;&nbsp; absent&nbsp;&nbsp; present <br>
+0.9375000 0.5294118</span>
+<p>We can collect these calculations in a function that returns the confusion matrix, sensitivity, and specificity for any choice of cutoff <em>c</em>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> precision&lt;-function(c) {</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px"> tab1 &lt;- table(fitted(out6)&gt;=c, parasites$infection)</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px"> out &lt;- diag(tab1)/apply(tab1, 2, sum)</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px"> names(out) &lt;- c('specificity', 'sensitivity')</div>
+<div class="style231" style="padding-left: 60px; text-indent:-30px"> list(tab1, out)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> }</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> precision(.5)</div>
+<span class="style141">[[1]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; absent present<br>
+&nbsp; FALSE&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;8<br>
+&nbsp; TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9</span>
+<p><span class="style141">[[2]]<br>
+  specificity sensitivity <br>
+  &nbsp; 0.9375000&nbsp;&nbsp; 0.5294118 </span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> precision(.25)</div>
+<span class="style141"> [[1]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; absent present<br>
+&nbsp; FALSE&nbsp;&nbsp;&nbsp;&nbsp; 52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+&nbsp; TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14</span>
+<p><span class="style141">[[2]]<br>
+  specificity sensitivity <br>
+  &nbsp; 0.8125000&nbsp;&nbsp; 0.8235294</span>
+<p>There are problems with attempting to use a decision rule to evaluate the quality of logistic regression models. </p>
+<ol>
+  <li>The choice of <em>c</em> is arbitrary. All of the statistics will change if a different <em>c</em> is used. A solution is to choose <em>c</em> that is optimal in some way. We will examine two optimality criteria based on sensitivity and specificity: minimized difference threshold (MDT) and maximized sum threshold (MST).</li>
+  <li>When we predict a dichotomous response <img src="../../images/lectures/lecture29/yihat.gif" alt="yihat" width="20" height="32" align="absmiddle"> by reducing the continuum <img src="../../images/lectures/lecture29/prob.gif" width="22" height="28" align="absmiddle"> to a dichotomy, 0 or 1, this entails a loss of information. A solution we'll consider is to examine all values of <em>c</em> simultaneously using a ROC curve.</li>
+  <li>All the rates calculated above depend on the margins of the classification table, <em>A</em> + <em>B</em> and <em>C</em> + <em>D</em>. The margins of the table are determined by the population from which the data come and do not depend on the model. Thus specificity and sensitivity are not just properties of the model, they also depend on the underlying population. As a result these quantities should not be treated as absolute measures of model quality. Using the same decision rule with different populations can yield very different values for these summary statistics and thus different conclusions. One way to correct for this is to use  cross-validation.</li>
+</ol>
+<h2><a name="rules"></a>Jointly optimizing specificity and sensitivity</h2>
+<p> If we think of specificity and sensitivity as functions of <em>c</em>, the cutoff, then a couple of things are obvious. </p>
+<ol>
+  <li>If <em>c</em> is chosen to be a very low value (near 0), then we will predict <img src="../../images/lectures/lecture29/Yihat1.gif" width="48" height="32" align="absmiddle"> for almost all of the observations <em>i</em>. As a result the sensitivity (true positive rate) will be very high (near 1) and the specificity (true negative rate) will be very low (near 0).</li>
+  <li>If <em>c</em> is chosen to be a very high value (near 1), then we will predict <img src="../../images/lectures/lecture29/Yihat0.gif" width="52" height="32" align="absmiddle"> for nearly all observations <em>i</em>. As a result the sensitivity will be very low (near 0) and the specificity will be very high (near 1). </li>
+</ol>
+<p>Based on these considerations we expect sensitivity to be a monotone non-increasing function of <em>c</em>, while specificity should be a monotone non-decreasing function of <em>c</em>. </p>
+<p name="ROCR"><a name="ROCR"></a><a name="prediction"></a>Various functions in the <span class="style191">ROCR</span> package can be used to compute model sensitivity and specificity as well as plot them as a function of <em>c</em>. The process begins by creating what's called a <span class="style1021">prediction</span> object. To do this the <span class="style1021">prediction</span> function in the <span class="style191">ROCR</span> package is supplied the fitted values from the model and a vector of presence/absence information.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(ROCR)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pred1 &lt;- prediction(fitted(out6), parasites$infection)</div>
+<p name="performance"><a name="performance"></a>Having constructed the <span class="style1021">prediction</span> object the <span class="style1021">performance</span> function is then used to extract the statistics of interest. To obtain sensitivity and specificity, respectively, we need to specify <span class="style8">'tpr'</span>, for true positive rate, and <span class="style8">'tnr'</span>, for true negative rate.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">stats1 &lt;- performance(pred1 ,'tpr', 'tnr')</div>
+<p name="S4"><a name="S4"></a>If you print the contents of the <span class="style1021">performance</span> object just created, <span class="style8">stats1</span>, you'll see that the elements occupy locations called &quot;slots&quot; and the elements of the slots are actually list elements. The <span class="style191">ROCR</span> package is written using the conventions of the S4 language. Other than the functions from the <span class="style19">lme4</span> package, all of the functions we've dealt with in the course up until this point were written using the S3 language. A major difference in the two languages manifests itself in the way we  have to access information from objects. For instance, the <span class="style1021">names</span> function will not list the  components of an object created by an S4 function. To see what's going on we instead need to use the <span class="style1021">slotNames</span> and <span class="style1021">str</span> functions.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> names(stats1)</div>
+<span class="style141"> NULL</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> slotNames(stats1)</div>
+<span class="style141">  [1] &quot;x.name&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;y.name&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;alpha.name&quot;&nbsp;&nbsp; &quot;x.values&quot;&nbsp;&nbsp;&nbsp;&nbsp; &quot;y.values&quot;&nbsp;&nbsp;&nbsp; <br>
+  [6] &quot;alpha.values&quot;</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> str(stats1)</div>
+<span class="style141"> Formal class 'performance' [package &quot;ROCR&quot;] with 6 slots<br>
+&nbsp; ..@ x.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : chr &quot;True negative rate&quot;<br>
+&nbsp; ..@ y.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : chr &quot;True positive rate&quot;<br>
+&nbsp; ..@ alpha.name&nbsp; : chr &quot;Cutoff&quot;<br>
+&nbsp; ..@ x.values&nbsp;&nbsp;&nbsp; :List of 1<br>
+&nbsp; .. ..$ : num [1:79] 1 1 1 1 1 ...<br>
+&nbsp; ..@ y.values&nbsp;&nbsp;&nbsp; :List of 1<br>
+&nbsp; .. ..$ : num [1:79] 0 0.0588 0.1176 0.1765 0.2353 ...<br>
+&nbsp; ..@ alpha.values:List of 1<br>
+&nbsp; .. ..$ : num [1:79] Inf 0.793 0.785 0.785 0.774 ...</span>
+
+<p>The <span class="style1021">slotNames</span> function returns the names of the slots and the <span class="style1021">str</span> function (<span class="style1021">str</span> for structure) describes what the slots contain. From the printout we see the numeric slots are called <span class="style2211">@x.values</span>, <span class="style2211">@y.values</span>, and <span class="style2211">@alpha.values</span> referring respectively to &quot;True negative rate&quot;, &quot;True positive rate&quot;, and &quot;Cutoff&quot;. Furthermore we see that these last three elements are lists. To access the elements of slots you need to use R's @ notation and then to extract the list elements from each slot you need to use  double bracket notation. So to access, for example, the vector of cutoffs we would need to specify the following.</p>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats1@alpha.values[[1]]</div>
+<span class="style141">  &nbsp;[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inf 7.931348e-01 7.851018e-01 7.847749e-01 7.735453e-01 7.320393e-01<br>
+  &nbsp;[7] 7.068306e-01 6.965148e-01 6.904112e-01 6.706730e-01 6.470482e-01 5.864794e-01<br>
+  [13] 5.768001e-01 5.106708e-01 4.820191e-01 4.791661e-01 4.695323e-01 4.661914e-01<br>
+  [19] 4.571419e-01 4.523381e-01 4.421820e-01 4.368343e-01 4.254121e-01 4.201144e-01<br>
+  [25] 4.184546e-01 3.880035e-01 3.511353e-01 2.149719e-01 2.125627e-01 1.957958e-01<br>
+  [31] 1.915924e-01 1.781944e-01 1.623620e-01 1.142500e-01 1.029369e-01 9.174342e-02<br>
+  [37] 7.970223e-02 7.360240e-02 7.193043e-02 6.959228e-02 6.583708e-02 6.144700e-02<br>
+  [43] 5.773590e-02 4.955878e-02 4.645721e-02 4.419742e-02 4.382669e-02 3.171776e-02<br>
+  [49] 3.156568e-02 2.096166e-02 1.874082e-02 1.629557e-02 1.376495e-02 1.167576e-02<br>
+  [55] 1.047035e-02 8.134189e-03 5.302873e-03 4.625364e-03 4.524780e-03 4.517581e-03<br>
+  [61] 4.490233e-03 4.271452e-03 4.260367e-03 2.105351e-03 1.992135e-03 1.887416e-03<br>
+  [67] 8.802227e-04 8.582422e-04 6.953080e-04 6.390727e-04 6.183652e-04 3.750832e-04<br>
+  [73] 3.279278e-04 1.069128e-04 8.462967e-05 5.929474e-05 4.378917e-05 4.009883e-05<br>
+  [79] 2.362462e-05</span>
+
+<p align="left">The displayed cutoffs are all the choices of <em>c</em> for which there has been some change in the assignment of observations to the cells of the confusion matrix. Notice that the first cutoff is labeled as infinite. I change that value to 1.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px">#reassign infinite value to 1</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">stats1@alpha.values[[1]][1] &lt;- 1</div>
+<p>The following code plots specificity and sensitivity against the cutoffs. I use <span class="style17">type='s'</span> to obtain a step function (because the confusion matrix does not change except at the reported values of <em>c</em>).</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(stats1@alpha.values[[1]], stats1@x.values[[1]], xlab=stats1@alpha.name, ylab='Classification rate', type='s')</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #add sensitivity</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> lines(stats1@alpha.values[[1]], stats1@y.values[[1]], type='s', col=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">legend('right', c('specificity', 'sensitivity', 'MDT', 'MST'), col=c(1,2,4,'seagreen'), lty=c(1,1,2,3), lwd=c(1,1,1,2), bty='n', cex=.9)</div>
+<p align="center"><img src="../../images/lectures/lecture29/fig6.png" width="420" height="305" alt="fig 6"></p>
+<p align="center" class="styleArial1"><strong>Fig. 10</strong>&nbsp;&nbsp;Plot of model sensitivity and specificity for various cutoffs</p>
+<h3><a name="MDT"></a>Minimized difference threshold (MDT)</h3>
+<p><a name="whichmin"></a>The value of <em>c</em> where the sensitivity and specificity functions cross is the value of <em>c</em> that jointly maximizes sensitivity and specificity. This is sometimes called the <span class="style30">minimized difference threshold</span> or <span class="style30">MDT</span> (Jim&eacute;nez-Valverde and Lobo 2007). We can estimate this value of <em>c</em> approximately as the value of <em>c</em> that minimizes the absolute difference between the sensitivity and specificity curves. I use the <span class="style13">which.min</span> function to identify where in the vector of absolute differences the minimum occurs.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> which.min(abs(stats1@x.values[[1]]-stats1@y.values[[1]]))</div>
+<span class="style141"> [1] 26</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats1@alpha.values[[1]][26]</div>
+<span class="style141"> [1] 0.3880035</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats1@x.values[[1]][26]</div>
+<span class="style141"> [1] 0.828125</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats1@y.values[[1]][26]</div>
+<span class="style141">[1] 0.8235294</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">abline(v=stats1@alpha.values[[1]][26], lty=2, col=4) </div>
+<p>When we add this value to the graph (Fig. 10) we see that it's not selecting the exact location of  the crossing point but the value does correspond to a <em>c</em> where the two step functions are the closest. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> precision(stats1@alpha.values[[1]][26])</div>
+<span class="style141"> [[1]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; absent present<br>
+&nbsp; FALSE&nbsp;&nbsp;&nbsp;&nbsp; 53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+&nbsp; TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14</span>
+<p><span class="style141">[[2]]<br>
+  specificity sensitivity <br>
+  &nbsp; 0.8281250&nbsp;&nbsp; 0.8235294</span>
+<p>Using the MDT we see from  the confusion matrix  that we misclassified 3 actual infections as being absent (false negatives), and we classified 11 individuals as being parasitized when in fact they're not (false positives).</p>
+<h3><a name="MST"></a>Maximized sum threshold (MST)</h3>
+<p>Another commonly used criterion for choosing the cutoff <em>c</em> is <span class="style30">MST</span> (<span class="style30">maximized sum threshold</span>), the threshold value that maximizes the sum of specificity and sensitivity. We can estimate this from the sensitivity and specificity values by using the <span class="style13">which.max</span> function.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> which.max(stats1@x.values[[1]]+stats1@y.values[[1]])</div>
+<span class="style141"> [1] 37</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats1@alpha.values[[1]][37]</div>
+<span class="style141"> [1] 0.07970223</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats1@x.values[[1]][37]</div>
+<span class="style141"> [1] 0.703125</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats1@y.values[[1]][37]</div>
+<span class="style141">[1] 1</span>
+<p>A plot of the sum of specificity and sensitivity suggests that there may be a number of cutoffs that do nearly as well.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(stats1@alpha.values[[1]], stats1@x.values[[1]]+stats1@y.values[[1]], ylab=expression('Sensitivity'+'Specificity'), xlab='cutoff', type='s')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">abline(v=stats1@alpha.values[[1]][37], lty=3, col='seagreen', lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">legend('topright', 'MST', lty=3, lwd=2, col='seagreen', bty='n', cex=.9)</div>
+<p align="center"><img src="../../images/lectures/lecture29/fig7.png" width="419" height="305" alt="fig  7"></p>
+<p align="center" class="styleArial1"><strong>Fig. 11</strong>&nbsp;&nbsp;Plot of the sum of sensitivity and specificity for various cutoffs</p>
+<p>I generate the confusion matrix associated with the MST. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> precision(stats1@alpha.values[[1]][37])</div>
+<span class="style141"> [[1]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; absent present<br>
+&nbsp; FALSE&nbsp;&nbsp;&nbsp;&nbsp; 45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+&nbsp; TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17</span>
+<p><span class="style141">[[2]]<br>
+  specificity sensitivity <br>
+  &nbsp;&nbsp; 0.703125&nbsp;&nbsp;&nbsp; 1.000000</span>
+<p>So with this choice we have no false negatives but we mistakenly classify 19 individuals as being parasitized when in fact they are not.</p>
+<h2><a name="background"></a>ROC curves</h2>
+<p>We can avoid the loss of information that results from dichotomizing a probability with a single cutoff value <em>c</em> by using all possible values of <em>c</em> simultaneously. The standard way to do this is with a <span class="style30">ROC curve</span>. ROC stands for &quot;receiver operating characteristic&quot; and is a concept derived from signal detection theory. It's early use was in assessing the quality of radar operators who were faced with the task of differentiating noise from signals, and friend from foe. </p>
+<p>Suppose logistic regression is  used to construct a habitat suitability model in which the goal is to distinguish good habitat from bad habitat for a species of interest. Effectively the model takes what appears to be a single population of data values and divides it statistically into two populations: one representing good habitats and the other bad habitats. Fig. 12 is a caricature of such a  habitat suitability model and is a graphical representation of the confusion matrix of three different models. Each panel depicts the model-generated probability distributions of good and bad habitat as a function of <em>c</em>, the cut-off value of our decision rule. The closer the two bell-shaped curves are to each other, the more &quot;confused&quot; we are as to what constitutes good and bad habitat. Better models are those that completely separate the two populations so that the two curves have minimal overlap. In the panel labeled &quot;great model&quot; there is a value of <em>c</em> that  allows us to distinguish the two populations almost perfectly. </p>
+<table width="400" border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><img src="../../images/lectures/lecture29/model&#32;bad1.png" width="219" height="165"></td>
+    <td><img src="../../images/lectures/lecture29/model&#32;average1.png" width="219" height="166"></td>
+    <td><img src="../../images/lectures/lecture29/model&#32;great1.png" width="219" height="166"></td>
+  </tr>
+</table>
+<p align="center" class="styleArial1"><strong>Fig. 12&nbsp;</strong> Discriminating Y = 0 from Y =1</p>
+<p>The ROC curve is used to display how changing <em>c</em> in the decision rule affects the TPR (true positive rate or sensitivity) and the FPR (false positive rate = 1 &ndash; specificity)  of a given model. In the graph of the ROC curve all reference to <em>c</em> is suppressed. TPR is plotted directly against FPR. </p>
+<p>To understand how the ROC curve is constructed, lets's focus on middle panel of Fig. 12, the so-called &quot;good&quot; model. Because the two depicted curves are probability densities, the area under each curve is one. In Fig. 13 things are color-coded to make it clear that TNR + FPR = 1 (red) and that TPR + FNR = 1 (blue). In addition, the color coding tells us that TNR and FPR depend solely on the Y = 0 distribution, while TPR and FNR depend solely on the Y = 1 distribution. </p>
+<p align="center">(a) <img src="../../images/lectures/lecture29/fig3c.png" width="287" height="203" align="texttop">&nbsp;&nbsp;&nbsp;&nbsp;(b) <img src="../../images/lectures/lecture29/fig3d.png" width="287" height="203" align="texttop"></p>
+<p align="center" class="styleArial1"><strong>Fig. 13</strong>&nbsp;&nbsp;The effect of changing <em>c</em> on model calibration statistics. The area under each curve is a probability. </p>
+<div class="figureR">
+  <p align="center"><img src="../../images/lectures/lecture29/fig4&#32;copy.png" width="345" height="318">
+  <p align="center"> <strong>Fig. 14</strong>&nbsp; &nbsp;ROC curves for the different models of Fig. 13 </p>
+</div>
+<p>Using  the relationships depicted in Fig. 13 we can construct  the red ROC curve (&quot;good model&quot;) shown in Fig. 14 as follows.</p>
+<ul>
+  <li>If we select a low value for <em>c</em> (Fig. 13a), then nearly all true positive values will be predicted to be positive so TPR is approximately 1. At the same time most negative values will also be classified as positive. So the FPR will also be near 1. When <em>c</em> = 0 we are at the top right corner of Fig. 14.</li>
+  <li>As <em>c</em> increases, the FPR will decrease faster than TPR (Fig. 13a). In fact, at least initially, FPR will decrease without TPR changing much at all because we're not yet  intersecting the Y = 1 curve. </li>
+  <li>Eventually <em>c</em> will increase enough so that TPR will begin to decrease also (Fig. 13b).</li>
+  <li>As <em>c</em> approaches 1 nearly all the observations will be classified as negative. As a result both the TPR and FPR will approach zero.</li>
+</ul>
+<p>If you repeat the above steps for the models labeled &quot;bad&quot; and &quot;great&quot; in Fig. 14 you'll see that the only things that change are the relative rates at which the TPR and FPR decrease to zero. In the &quot;bad&quot; model they decrease at nearly the same rate. In the &quot;great&quot; model, the FPR decreases almost to zero long before the TPR even begins to decrease. The curves shown in Fig. 14 were artificially generated to match the displays of Fig. 13. As a result the ranking of the models in Fig. 14 is unambiguous. The ROC curve of the &quot;great&quot; model always lies entirely above the ROC curves of the &quot;good&quot; and &quot;bad&quot; models. With real data the results are almost always more ambiguous.</p>
+<h2><a name="ROC"></a>Generating ROC curves in R</h2>
+<p>A number of functions in different R packages can be used to produce ROC curves. One of these is  the <span class="style191">ROCR</span> package that we previously used to calculate sensitivity and specificity. To generate a ROC curve we need to extract the sensitivity (<span class="style8">'tpr'</span>) and 1 &ndash; specificity, which is the same as the false positive rate <span class="style8">'fpr'</span>. Again we use the <span class="style1021">performance</span> function to obtain these statistics from the variable <span class="style8">pred1</span> that was created above. If we then <span class="style1021">plot</span> this performance object we get a ROC curve by default. ROC curves can be used to compare models. In Fig. 15 I display the ROC curve for <span class="style8">out6</span> and superimpose on top of it the ROC curve for the model that is only additive in weight, age, and sex.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #obtain statistics for first model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pred1 &lt;- prediction(fitted(out6), parasites$infection)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats1a &lt;- performance(pred1, 'tpr', 'fpr')</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #obtain statistics for second model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pred2 &lt;- prediction(fitted(out1), parasites$infection)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">stats2 &lt;- performance(pred2, 'tpr', 'fpr')</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #formatted labels for the models</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> mod1.lab &lt;- expression('sex'+'age'^2+'weight'>12)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> mod2.lab &lt;- expression('sex'+'age'+'weight')</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> #draw graphs</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">plot(stats1a@x.values[[1]], stats1a@y.values[[1]], type='s', ylab=stats1a@y.name, xlab=stats1a@x.name, col='grey70', lwd=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> lines(stats2@x.values[[1]], stats2@y.values[[1]], type='s', col=2, lty=2)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> legend('bottomright', c(mod1.lab, mod2.lab), col=c('grey70',2), lwd=c(2,1), lty=1:2, cex=.9, bty='n')</div>
+<p align="center"><img src="../../images/lectures/lecture29/fig4pt1.png" width="395" height="284" alt="fig 4"></p>
+<p align="center" class="styleArial1"><strong>Fig. 15</strong>&nbsp;&nbsp;The ROC curves of two different models</p>
+<p>Fig. 15 is the typical pattern for the ROC curves of nested models. The bigger model  performs as well as or better than the smaller model. In Fig. 15 the ROC curve of <span class="style8">out6</span> (depicted in light gray) lies above the ROC curve of <span class="style8">out1</span> (red dashed line) for nearly all choices of <em>c.</em> The models are distinguishable everywhere except for very small values of <em>c</em> (right side of the graph) where both models have a sensitivity of 1. This makes  ranking the models easy. </p>
+<h2><a name="AUC"></a>Area under the curve (AUC)</h2>
+<p>Typically and especially when the models are not nested, the ranking of the ROC curves from different models will be less clear cut. It is normal for the ROC curves from different models to cross repeatedly making it difficult to say which model is best. A partial resolution of this difficulty lies in the following observation: better models have ROC curves that are closer to the left and top edges of the unit square (Fig. 14). Said differently the area under a ROC curve for a good model should be close to 1 (the area of the unit square). This suggests that the area under the ROC curve (<span class="style30">AUC</span>) might be a reasonable single number summary to use to compare the ROC curves of different models. Although the ROC curves of  two models may cross each other, the ROC curve of the better model will  on average enclose a greater area.</p>
+<p>AUC can also be given an additional probabilistic interpretation.
+  Suppose we have a data set in which a tabulation of the presence-absence variable yields <em>n</em><sub>1</sub> ones and <em>n</em><sub>0</sub> zeros. Imagine forming all possible <em>n</em><sub>1</sub> &times; <em>n</em><sub>0</sub> pairs of these ones and zeros. Define the random variable <em>U<sub>i</sub></em> as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture29/Ui.gif" width="198" height="72"></p>
+<p>Here <img src="../../images/lectures/lecture29/prob1.gif" width="27" height="28" align="absmiddle"> and <img src="../../images/lectures/lecture29/probzero.gif" width="28" height="28" align="absmiddle"> are the estimated probabilities (obtained from the logistic regression model) for the &quot;presence&quot; and &quot;absence&quot; observations in the i<sup>th</sup> pair using the model. So for a given pair of observations <em>U<sub>i</sub></em> = 1 if the model assigns a higher probability to the  &quot;presence&quot; observation than it does to the  &quot;absence&quot; observation. When this happens the observations are said to be concordant, i.e., the ranking based on the model matches the ranking based on the data. From this we can calculate the <span class="style30">concordance index</span> of the model.</p>
+<p align="center"><img src="../../images/lectures/lecture29/concordance.gif" width="233" height="88"></p>
+<p>It turns out that the concordance index is equal to the AUC. Thus  AUC can be interpreted as giving the fraction of 0-1 pairs that are correctly classified by the model. If AUC = 0.5 then our model is doing no better than random guessing. A fairly arbitrary scale for interpreting AUC values has been proposed to assist in model calibration. </p>
+<p align="center"><img src="../../images/lectures/lecture29/AUC&#32;scale.gif" width="318" height="160"></p>
+<p>Note: a wonderful online resource for visualizing ROC curves and their  relationship to underlying population models is a site called <a href="http://www.anaesthetist.com/mnm/stats/roc/">The Magnificent ROC</a>. Figures like those shown above can be found there along with applets that allow you to dynamically alter <em>c</em> in the decision rule and watch how the corresponding ROC curve changes.</p>
+<p>To calculate AUC using the <span class="style191">ROCR</span> package we just use the keyword <span class="style17">'auc'</span> as an argument to the <span class="style13">performance</span> function.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats1b &lt;- performance(pred1, 'auc')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> str(stats1b)</div>
+<span class="style141"> Formal class 'performance' [package &quot;ROCR&quot;] with 6 slots<br>
+&nbsp; ..@ x.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : chr &quot;None&quot;<br>
+&nbsp; ..@ y.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : chr &quot;Area under the ROC curve&quot;<br>
+&nbsp; ..@ alpha.name&nbsp; : chr &quot;none&quot;<br>
+&nbsp; ..@ x.values&nbsp;&nbsp;&nbsp; : list()<br>
+&nbsp; ..@ y.values&nbsp;&nbsp;&nbsp; :List of 1<br>
+&nbsp; .. ..$ : num 0.913<br>
+&nbsp; ..@ alpha.values: list()</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> stats2a &lt;- performance(pred2, 'auc')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> str(stats2a)</div>
+<span class="style141"> Formal class 'performance' [package &quot;ROCR&quot;] with 6 slots<br>
+&nbsp; ..@ x.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : chr &quot;None&quot;<br>
+&nbsp; ..@ y.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : chr &quot;Area under the ROC curve&quot;<br>
+&nbsp; ..@ alpha.name&nbsp; : chr &quot;none&quot;<br>
+&nbsp; ..@ x.values&nbsp;&nbsp;&nbsp; : list()<br>
+&nbsp; ..@ y.values&nbsp;&nbsp;&nbsp; :List of 1<br>
+&nbsp; .. ..$ : num 0.863<br>
+&nbsp; ..@ alpha.values: list()</span>
+<p>So for <span class="style8">out6</span> we see that 91.3% of the possible pairwise matchings of zeros and ones are assigned probabilities of infection that are correctly ordered, i.e., the predicted probability of the zero observation is lower than the predicted  probability of the &quot;one&quot; observation. If we use the model that is linear in age, sex, and weight this percentage drops to 86.3%.</p>
+<h2><a name="cross"></a>Cross-validation</h2>
+<p>One  concern about the calibration statistics described so far is that the same data set is being used to both fit the model and test the model. Not surprisingly the values of the statistics one obtains in this way are much more favorable towards the current model than they would be  if we evaluated the model on a brand new set of data. In particular we'd expect a statistic such as AUC to be much smaller when calculated on data that are different from those that were used to fit the model. </p>
+<p>A natural way to handle this problem is to leave out some of the data when fitting the model and use it later to test the model. The dilemma is that we want to use as much of the data as possible to build the model and we'd prefer not to leave out any data at all. A satisfactory resolution of the dilemma is to do cross-validation. In cross-validation a data set is repeatedly divided into parts and one part is used to fit the model while the other part is used to test the model. A popular way of doing this is with 10-fold cross-validation. Here the data set is randomly divided into 10 parts, called folds. Nine of the folds are combined and used for fitting the model and the remaining fold is used for testing the model. This is then repeated a total of 10 times so that each fold gets to be used once for testing. At each iteration a statistic of interest is calculated. Finally the statistics calculated from the different folds are averaged over the 10 runs. </p>
+<p name="cvbinary"><a name="cvbinary"></a>The <span class="style1021">cv.binary</span> function in the <span class="style191">DAAG</span> package carries out 10-fold cross-validation on a specified model. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> library(DAAG)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">cv.binary(out6)</div>
+<span class="style141">Fold:&nbsp; 6 9 2 4 8 3 1 10 5 7<br>
+Internal estimate of accuracy = 0.852<br>
+Cross-validation estimate of accuracy = 0.815</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> cv.binary(out1)</div>
+<span class="style141">Fold:&nbsp; 8 5 6 3 2 4 10 7 9 1<br>
+Internal estimate of accuracy = 0.827<br>
+Cross-validation estimate of accuracy = 0.802</span>
+<p>It reports what it calls an &quot;estimate of accuracy&quot;. This is just the fraction of predicted probabilities that round to the observed value of 0 or 1. In terms of a decision rule this is equivalent to using <em>c</em> = 0.5 as a cut-off. Here's how we would calculate the estimate of accuracy by hand for <span class="style8">out6</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sum(round(fitted(out6))==as.numeric(parasites$infection)-1) / length(parasites$infection)</div>
+<span class="style141"> [1] 0.8518519</span>
+<p name="cvbinary">The partition into folds  is random so we will get slightly different results each time we run the cross-validation. In the output above we see that the cross-validation estimate is fairly close, albeit smaller, to the estimate that is obtained when the same data are used to build and test the model. In the output the <span class="style1021">cv.binary</span> function calls the latter value the internal estimate of accuracy. Notice that <span class="style8">out6</span> appears to exhibit a greater loss of performance than does <span class="style8">out1</span> suggesting that perhaps we may have been guilty of overfitting in constructing <span class="style8">out6</span>. On the other hand the breakpoint <em>c</em> = 12 is being held fixed in these calculations and this may be contributing to the poorer performance of this model in cross-validation.</p>
+<p name="cvbinary">It would be easy to edit the code of <span class="style13">cv.binary</span> to force it to perform cross-validation using a different model performance statistic such as AUC. To see the code of the <span class="style13">cv.binary</span> function enter the function name <span class="style13">cv.binary</span> at the command line without any arguments and press the return key.</p>
+<h2><a name="references" id="references"></a>Cited references</h2>
+<ul>
+  <li>Crawley, Michael J. 2007. <em>The R Book</em>. Wiley: New York.</li>
+  <li>Jim&eacute;nez-Valverde, Alberto and Jorge M. Lobo. 2007. Threshold criteria for conversion of probability of species presence to either-or presence-absence. <em>Acta Oecologica</em> <strong>31</strong>(3): 361&ndash;369.</li>
+  <li>Keele, Luke. 2008. <em>Semiparametric Regression for the Social Sciences</em>. Wiley: New York.</li>
+  <li>Wood, Simon. 2006. <em>Generalized Additive Models: An Introduction with R</em>. Chapman &amp; Hall/CRC: Boca Raton, FL.</li>
+  <li>Zuur, Alain F., Elena N. Ieno, Neil J. Walker, Anatoly A. Savelieve, and Graham M. Smith. 2009. <em>Mixed Effects Models and Extensions in Ecology with R.</em> Springer, New York.<br>
+</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture29&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--December 6, 2012<br>
+      URL: <a href="lecture29.htm#lecture29" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture29.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

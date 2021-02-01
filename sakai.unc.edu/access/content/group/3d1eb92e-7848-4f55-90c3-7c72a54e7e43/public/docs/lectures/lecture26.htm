@@ -1,0 +1,975 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 26&mdash;Monday, November 26, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+.style1012 {	font-family: "Courier New", Courier, mono
+}
+.style1012 {font-family: "Courier New", Courier, mono}
+.style221 {color: #339966;
+	font-weight: bold;
+}
+.style29 {font-family: "Courier New", Courier, mono}
+.style30 {color: #333399;
+	font-weight: bold;
+}
+.style28 {color: #CC0000; font-weight: bold; }
+.style411 {	color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #009900;  font-weight: bold; font-family: "Courier New", Courier, mono;}
+.style5 {	color: #CC0000;
+	font-weight: bold;
+}
+span.GramE {mso-style-name:"";
+	mso-gram-e:yes;}
+span.SpellE {mso-style-name:"";
+	mso-spl-e:yes;}
+.style331 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style391 {font-family: "Courier New", Courier, mono; font-weight: bold; color: #339933}
+.style42 {color: #CCCCCC}
+.style42 {color: #CC0000;
+	font-weight: bold;
+}
+.style401 {color: #CC0000}
+.style2311 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style261 {font-family: "Courier New", Courier, mono}
+.style371 {color: #FF0000;
+	font-weight: bold;
+}
+.style4011 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style421 {color: #0000FF; font-weight: bold; }
+.style44 {font-family: "Courier New", Courier, mono; color: #000000; font-size: smaller; }
+.style332 {color: #0000FF; font-family: "Courier New", Courier, mono; font-size: small;
+background-color:#F0F0F0;
+}
+.style332 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style91 {	color: #333399;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture26" id="lecture26"></a>Lecture 26&mdash;Monday, November 26, 2012</h1>
+<h3>Topics</h3>
+<ul>
+  
+  <li><a href="lecture26.htm#binary">The analysis of binary data</a>
+    <ul>
+      <li><a href="lecture26.htm#Bernoulli">The product Bernoulli distribution</a></li>
+      <li><a href="lecture26.htm#binomial">The binomial distribution</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture26.htm#visualizing">Visualizing the binomial distribution</a></li>
+  <li><a href="lecture26.htm#likelihood">The likelihood of a binomial model</a></li>
+  <li><a href="lecture26.htm#link">The link function for binomial regression</a> 
+    <ul>
+      <li><a href="lecture26.htm#Poisson">Distinguishing Poisson from binomial data</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture26.htm#data">A binomial data example</a></li>
+  <li><a href="lecture26.htm#fitting">Fitting logistic regression models</a>
+    <ul>
+      <li><a href="lecture26.htm#fitting">Fitting grouped binary data as binary data</a></li>
+      <li><a href="lecture26.htm#obtaining">Obtaining the estimated logits of individual categories</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture26.htm#quasi">Estimating proportions when there  is quasi-complete separation</a>
+    <ul>
+      <li><a href="lecture26.htm#firth">Regression approaches: the Firth method</a></li>
+      <li><a href="lecture26.htm#approximate">Approximate confidence intervals</a></li>
+      <li><a href="lecture26.htm#exact">Exact (Clopper-Pearson) confidence intervals</a></li>
+      <li><a href="lecture26.htm#combining">Combining categories to eliminate quasi-complete separation</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture26.htm#dealing">Dealing with categorical predictors that have many categories</a></li>
+<li><a href="lecture26.htm#cited">Cited references</a></li>
+  <li><a href="lecture26.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture26.htm#binomtest">binom.test</a> carries out tests of a binomial proportion and calculates confidence intervals.</li>
+  <li><a href="lecture26.htm#visualizing">dbinom</a> is the binomial probability mass function.</li>
+  <li><a href="lecture26.htm#firth">logistf</a> implements Firth regression useful for data exhibiting quasi-complete separation.</li>
+  <li><a href="lecture26.htm#xtabs">xtabs</a> tabulates data with respect to categorical variables when the frequencies are stored in another variable. </li>
+</ul>
+<h3>R packages used </h3>
+<ul>
+  <li><a href="lecture26.htm#lattice">lattice</a> for the <span class="style1">dotplot</span> function.</li>
+  <li><a href="lecture26.htm#firth">logistf</a> for the <span class="style42">logistf</span> function that carries out Firth regression.</li>
+</ul>
+<h2 align="left"><strong><a name="binary" id="binary"></a>The analysis of binary data</strong></h2>
+<p>So far we've studied regression models for two data types: </p>
+<ol>
+  <li>continuous data where we assume at least theoretically that any value is possible, and </li>
+  <li>count data where the only legal values are non-negative integers.</li>
+</ol>
+<p>For continuous data we assumed that a reasonable data generating mechanism for the observed values was a normal distribution  and we used an ordinary regression model to determine how the mean of that normal distribution varied as a function of the values of various predictor variables. For count data standard data generating mechanisms are the Poisson distribution and the negative binomial distribution. To ensure that our regression model returned non-negative estimates for the mean of these distributions we constructed a regression model for the log of the mean. We refer to the log function in this context as the link function for count data.</p>
+<p>We now turn to regression models for binary data. Binary data are data in which there  are only two possible outcomes: 0 and 1, failure and success. Thus we are dealing with purely nominal data. The simplest case of binary data is when we have a single observed binary outcome. A textbook example of this is flipping a coin once and recording the outcome, heads or tails. </p>
+<p>The standard probability model for such a simple experiment is the Bernoulli distribution. The Bernoulli distribution has one parameter <em>p</em>, the probability of success, with 0 &le;<em> p</em> &le; 1. The notation we will use is <img src="../../images/lectures/lecture26/Bernoulli.gif" alt="Bernoulli" width="145" height="30" align="absmiddle">, to be read <em>&quot;X</em> is distributed Bernoulli with parameter <em>p</em>.&quot; Obviously if the probability of success is <em>p</em>, then the probability of failure is 1 &ndash; <em>p</em>. The mean of the Bernoulli distribution is <em>p. </em>The variance of the Bernoulli distribution is <em>p</em>(1 &ndash; <em>p</em>). We refer to the single binary outcome as  a Bernoulli trial.</p>
+<p>Binary data don't become interesting statistically until an experiment produces multiple Bernoulli trials. Depending on how we choose to record the results from this experiment we are led to  one of two closely related probability models: the product Bernoulli distribution or the binomial distribution.</p>
+<h3 align="left"><a name="Bernoulli"></a>The product Bernoulli distribution</h3>
+<p align="left">The product Bernoulli distribution is the natural model to use when we observe a sequence of <em>n</em> independent Bernoulli trials each with some probability of success <em>p<sub>i</sub></em>. An example of this in ecology would be the construction of a habitat suitability model for the spatial distribution of an endangered species. Typically we record the presence or absence of the species in a habitat in each of a set of randomly located quadrats. We then try to relate the observed species distribution to measured characteristics of the habitat. Each individual species occurrence is treated as the realization of a Bernoulli random variable whose parameter <em>p</em> is modeled as a function of habitat characteristics.</p>
+<p align="left">Suppose <img src="../../images/lectures/lecture26/X1&#32;to&#32;Xn.gif" alt="X1 to Xn" width="78" height="27" align="absmiddle"> are <em>n</em> independent binary outcomes from such a habitat suitability study. Let the observed binary outcomes be <em>x</em><sub>1</sub> = 1, <em>x</em><sub>2</sub> = 0, <em>x</em><sub>3</sub> = 0, <em>x</em><sub>4</sub> = 1, &hellip; , <em>x</em><sub><em>n</em></sub> = 1 for quadrats numbered 1, 2, 3, &hellip; , <em>n</em>. To formulate the likelihood of our data we begin by writing down the probability of observing the data we obtained, the joint probability of our data.</p>
+<p align="center"><img src="../../images/lectures/lecture26/productbernoulli.gif" width="458" height="112" alt="product Bernoulli"></p>
+<p align="left">where in the second step we make use of the fact that the individual binary outcomes are assumed to be independent. If we've measured a common set of predictors that vary among the binary observations we can develop a regression model for <em>p</em> as a function of these predictors. We then replace the various <em>p<sub>i</sub></em> in the log-likelihood by their corresponding regression models and obtain maximum likelihood estimates of the regression coefficients.</p>
+<h3><strong><a name="binomial"></a></strong>The binomial distribution</h3>
+<p>Another common way binary data arise involves a slight variation of the product Bernoulli scenario. Suppose instead of observing the individual outcomes from the independent trials we only observe the number of successes. The classical example of this is an experiment in which a coin is flipped <em>n</em> times and we record the number of heads, but not the order in which the heads and tails appeared. Because we've haven't recorded the information about the individual binary trials we are forced to assume (unlike the product Bernoulli model) that the probability of a success <em>p</em> is the same for each of the <em>n</em> trials.</p>
+<p>A simple biological illustration of this might be a seed germination experiment.
+  Suppose in such an experiment 100 seeds are planted in a pot and the number of seeds that germinate is recorded. Suppose we observe that <em>k</em> out of 100 seeds germinated. In this case we haven't recorded which seeds germinated only that <em>k</em> of them did. If we had recorded the order of the events (i.e., which seed yielded which success or failure) then the product binomial model would be appropriate. Now there are many different ways that <em>k</em> successful germinations could have occurred. The first <em>k</em> seeds could have been successes while the last 100 &ndash; <em>k</em> were failures, or the first 100 &ndash; <em>k</em> seeds could have been successes and the last <em>k</em> were failures, and there are many others. Each of these possible events is contributing to the overall probability of obtaining the <em>k</em> observed successes. Because the seeds are assumed identical each such outcome has the same probability that is given by the product Bernoulli model: </p>
+<p align="center"><img src="../../images/lectures/lecture26/Bernoulliprob.gif" width="97" height="43" alt="Bernoulli probability"></p>
+<p>where I replace <em>p<sub>i</sub></em> by <em>p</em> because the probabilities are the same on each Bernoulli trial. So all we need to do is figure out how many of these different outcomes each leading to <em>k</em> successes there are and  multiply that number by their identical probability. The answer is provided by the binomial coefficient whose derivation is given in any elementary probability text.</p>
+<p align="center"><img src="../../images/lectures/lecture26/nchoosek.gif" width="147" height="65" alt="n choose k"></p>
+<p>Putting this altogether the probability of observing <em>k</em> successes out of <em>n</em> independent trials where the probability of success <em>p</em> is the same on each trial is given by the binomial probability mass function.</p>
+<p align="center"><img src="../../images/lectures/lecture26/probgenericbinomial.gif" width="238" height="65" alt="binomial"></p>
+<p>Formally a  binomial random variable arises from a  binomial experiment, which is an experiment consisting of  a sequence of <em>n</em> independent Bernoulli trials. If <img src="../../images/lectures/lecture26/X1&#32;to&#32;Xn.gif" alt="X1 to Xn" width="78" height="27" align="absmiddle"> are independent and identically distributed Bernoulli random variables each with parameter <em>p</em>, then</p>
+<p align="center"><img src="../../images/lectures/lecture26/Bernoulli&#32;sum.gif" width="178" height="27" alt="Bernoulli sum"></p>
+<p>is said to have a <strong>binomial distribution</strong> with parameters <em>n</em> and <em>p</em>. We write this as <img src="../../images/lectures/lecture26/binomial.gif" alt="binomial" width="158" height="30" align="absmiddle">. Given the mean and variance of the Bernoulli distribution it should not be surprising that the mean  of the binomial distribution is <em>np </em>and the variance of the binomial distribution is <em>np</em>(1 &ndash; <em>p</em>). To better distinguish the binomial distribution from the product Bernoulli distribution, we sometimes refer to data arising from a binomial distribution as <strong>grouped binary data</strong>. </p>
+<p>In order for an experiment to be considered a binomial experiment   four basic assumptions must hold.</p>
+<ol>
+  <li>The experiment must consist of a sequence of trials in which each trial is a Bernoulli trial, meaning only one of two outcomes with probabilities <em>p</em> and 1 &ndash; <em>p </em>can occur. </li>
+  <li> The number of trials is fixed ahead of time at <em>n</em>, a value that is known to us.</li>
+  <li>The probability <em>p</em> is the same on each Bernoulli trial.</li>
+  <li>The Bernoulli trials are independent. Recall that for independent events <em>A</em> and <em>B</em>, <img src="../../images/lectures/lecture26/independence.gif" alt="independence" width="193" height="30" align="absmiddle">.</li>
+</ol>
+<p>If (1) or (2) are violated then a binomial model is completely inappropriate and a different probability distribution should be used. If  (3) is violated, it may be possible to salvage things by including random effects in the final model. If (4) is violated it may be possible to account for it by adding a correlation structure to the model.</p>
+<h2><a name="visualizing"></a>Visualizing the binomial distribution</h2>
+<p align="left"> The <span class="style1">dbinom</span> function of R is the probability mass function for the binomial and it returns the probability of a specified value. The syntax of <span class="style1">dbinom</span> is <span class="style8">dbinom(x, size, prob)</span> where <span class="style17">size</span> is what we have been calling <em>n</em> and <span class="style17">prob</span> is what we've been calling <em>p</em>. I start by placing three binomial distributions side-by-side. All have <em>n</em> = 10, but <em>p</em> varies with <em>p</em> = 0.1, 0.5, and 0.9. I use the <span class="style17">mfrow</span> argument of the <span class="style1">par</span> function of R to obtain a graphical display consisting of 1 row and 3 columns.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#set graphics window to have one row and three columns</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,3))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#set bar ends to have square ends</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(lend=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:10, dbinom(0:10,10,.1), type='h', lwd=6, xlab='#successes', ylab='probability')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3,line=.5,'p = 0.10')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:10, dbinom(0:10,10,.5), type='h', lwd=6, xlab='#successes', ylab='probability')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3,line=.5,'p = 0.50')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:10, dbinom(0:10,10,.9), type='h', lwd=6, xlab='#successes', ylab='probability')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3,line=.5,'p = 0.90')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,1))</div>
+<p align="center"><img src="../../images/lectures/lecture26/fig3.png" width="490" height="300" alt="binomial distributions"></p>
+<p align="center" class="styleArial"><strong>Fig. 1</strong>&nbsp;&nbsp;Three binomial probability mass functions with n = 10 and p = 0.1, 0.5, and 0.9</p>
+<p align="left">Observe that as <em>p</em> approaches the endpoint values of 0 and 1  the distributions are more skewed. When <em>p</em> = 0.5 the distribution looks quite symmetric. I repeat this  for <em>p</em> = 0.5, 0.8, and 0.9 but this time with a much larger number of trials, <em>n</em> = 100.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,3))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(30:70, dbinom(30:70,100,.5), type='h', lwd=2, xlab='#successes', ylab='probability')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(side=3,line=.5,'p = 0.50')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(60:100, dbinom(60:100,100,.8), type='h', lwd=2, xlab='#successes', ylab='probability')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(side=3,line=.5,'p = 0.80')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(60:100, dbinom(60:100,100,.9), type='h', lwd=2, xlab='#successes', ylab='probability')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mtext(side=3,line=.5,'p = 0.90')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> par(mfrow=c(1,1))</div>
+<p align="center"><img src="../../images/lectures/lecture26/fig4.png" width="540" height="260" alt="fig. 2"></p>
+<p align="center"><span class="styleArial"><strong>Fig. 2</strong>&nbsp;&nbsp;Three binomial probability mass functions with n = 100 and p = 0.5, 0.8, and 0.9</span></p>
+<p align="left">Notice that  the distributions for <em>p</em> = 0.5 and 0.8 are nearly perfectly symmetrical, while the distribution for <em>p</em> = 0.9 is nearly symmetrical showing only a hint of left skewness. </p>
+<p align="left"><a name="np"></a>Because  a binomial distribution is the sum of <em>n</em> independent Bernoulli random variables, the central limit theorem applies. According to the central limit theorem when we add up a large number of independent and identically distributed random variables, no matter what their distribution, the sum will tend to look normally distributed. Fig. 2 is an illustration of the central limit theorem in practice and is an empirical rationale for using a normal distribution to approximate the binomial. Practically speaking, if you have binomial data and your <em>n</em> is big enough, you could analyze your binomial counts as if they came from a normal distribution. In order for the approximation to be good the recommendation is that both the products <em>np</em> and <em>n</em>(1&ndash;<em>p</em>) need to be large. If both products exceed 5 that is typically large enough for the normal approximation to be a reasonable one.</p>
+<h2><a name="likelihood"></a>The likelihood of a binomial model</h2>
+<p>To illustrate constructing the likelihood of  a binomial random variable we consider a seed germination experiment in which 100 seeds are planted in a pot and the number of seeds that germinate is recorded. Suppose this is done repeatedly for different pots of seeds such that the different pots are each subjected to different light regimes, burial depths, etc. Clearly the first two assumptions of the binomial distribution hold here.</p>
+<ol>
+  <li>The outcome on individual trials (the fate of an individual seed in the pot) is dichotomous. A seed germinates or it does not.</li>
+  <li>The number of trials (number of seeds per pot) was fixed ahead of time at 100. </li>
+</ol>
+<p>Assumptions (3) and (4), constant <em>p</em> and independent trials, would need to be verified. Suppose there are  <em>m</em> pots subjected to different treatments and in each pot we record the total number of germinated seeds. Let the probability of germination in pot <em>i</em> be <em>p<sub>i</sub> </em>and to make things more general suppose <em>n<sub>i</sub> </em>seeds were planted in pot <em>i</em>. We make the usual assumption  that the outcomes in different pots are independent of each other. Then we can write the down the following likelihood for our model.</p>
+<p align="center"><img src="../../images/lectures/lecture26/binomiallikelihood.gif" width="612" height="233" alt="binomial likelihood"></p>
+<p>Except for the leading product of binomial coefficients the remainder of the likelihood looks just like the likelihood of the product Bernoulli model. The only real substantive difference is that in the binomial model the probabilities <em>p</em> are the same for observations coming from the same group (pot) whereas in the product Bernoulli model all the probabilities are potentially different. As a result when we formulate a regression model for binomial data our predictors will vary for different groups (pots) but will be constant for all the Bernoulli trials that make up a group. In contrast to this in the product Bernoulli model each individual binary observation can have a different values of a predictor.</p>
+<p>Because  the  binomial distribution assumes that each binomial outcome arises from a sequence of independent Bernoulli trials, a binomial experiment with <em>m</em> binomial random variables each constructed from <em>n</em> independent Bernoulli trials yields a likelihood consisting of a product of <em>m</em> &times; <em>n</em> Bernoulli probabilities. This is exactly what we would obtain if we had used a product Bernoulli model and viewed the experiment as consisting of  <em>m</em> &times; <em>n</em> independent ordered Bernoulli trials. The likelihoods differ only in the presence of the binomial coefficients. </p>
+<p>Because the binomial coefficients in the binomial likelihood don't contain <em>p</em>, they do not affect our estimate of<em> p</em>. So, whether we treat a binomial experiment as grouped binary data or ordered binary data we will obtain the same maximum likelihood estimates of the parameters. Because  the likelihood of the binomial model also contains the binomial coefficients the reported log-likelihoods at the maximum likelihood estimates will differ between the two approaches (as will the residual deviance and the AIC), but the estimates, their standard errors, and significance tests will all be the same.</p>
+<h2 align="left"><strong><a name="link"></a>The link function for binomial regression</strong></h2>
+<p align="left">With continuous data our basic regression model took the following form.</p>
+<p align="center"><img src="../../images/lectures/lecture26/normal.gif" width="210" height="73" alt="normal"></p>
+<p align="left">With count data our basic regression model took the following form.</p>
+<p align="center"><img src="../../images/lectures/lecture26/Poisson.gif" width="237" height="72" alt="Poisson"></p>
+<p align="left">(A  model similar to this was used for the negative binomial distribution.) The use of the log link with count data is important because it guarantees that the mean of the Poisson (negative binomial) distribution will be greater than zero. A potential down side is that while the predictors  act additively on the log mean scale they will act in a multiplicative fashion on the mean  on the original scale of the response.</p>
+<p>Fitting regression models using a  binomial distribution  poses an additional challenge. The parameter <em>p</em> that we wish to model is bounded on two sides. It is bounded below by zero and above by one. Thus in order for the regression model to yield sensible results we need a link function that will constrain <em>p</em> to lie within these limits. The most popular modern choice for such a link function is the logit function. Thus with binary data the basic logistic regression model takes the following form.</p>
+<p align="center"><img src="../../images/lectures/lecture26/lgit.gif" width="247" height="72" alt="logit"></p>
+<p>The logit, also called a log odds, is defined as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture26/logodds.gif" width="148" height="55" alt="log odds"></p>
+<p>&quot;Odds&quot; is meant in the sense that a gambler uses the term odds. In truth the concept of  &quot;odds&quot; is completely interchangeable with the concept of probability. If you're told that the probability of a success is <img src="../../images/lectures/lecture26/twothirds.gif" alt="two thirds" width="25" height="30" align="absmiddle"> that translates into saying that the odds are 2 to 1.</p>
+<p align="center"><img src="../../images/lectures/lecture26/odds.gif" width="188" height="60" alt="odds"></p>
+<p>If on the other hand you're told that the odds are 1.5 in favor of an event this means that the probability of a success is <img src="../../images/lectures/lecture26/threefifths.gif" alt="three fifths" width="25" height="30" align="absmiddle">.</p>
+<p align="center"><img src="../../images/lectures/lecture26/odds2.gif" width="292" height="60" alt="odds"></p>
+<p>So, odds are an equivalent although perhaps less familiar way of talking about probability. Odds can be any number from 0 to &infin;. Taking the log of the odds then can yield any number on the  real line. So, the logit maps a probability, a number in the open interval (0, 1),  onto the set of real numbers. The benefit of using a logit link in binary regression is that it permits the regression equation to take on any value (negative or positive) while guaranteeing that when we back-transform the logit to obtain <em>p</em>,<em> </em>the result will  lie in the interval  (0, 1).</p>
+<p>Although the logit is the most popular link function for binomial data because of its interpretability as a log odds, there are other possible choices for the link function. Historically a commonly used alternative was the probit function defined to be <img src="../../images/lectures/lecture26/probit.gif" alt="probit" width="63" height="38" align="absmiddle"> where &Phi; is the cumulative distribution function of the standard normal distribution. Because <img src="../../images/lectures/lecture26/Phi.gif" alt="Phi" width="133" height="38" align="absmiddle"> the function &Phi; maps real numbers into the interval [0, 1]. The probit, being the inverse function,  therefore maps probabilities onto the real line. By inverting the probit function we can obtain a probability corresponding to a probit regression prediction. For binomial data the <span class="style1">glm</span> function of R offers the  logit link (the default), the probit link, and a third link called the complementary log log (cloglog) link.</p>
+<h3 align="left"><a name="Poisson"></a>Distinguishing Poisson from binomial data</h3>
+<p align="left">Although Poisson data  resemble binomial data  they are fundamentally different. Poisson counts are unbounded above, while binomial counts are bounded above by <em>n</em>. As a result we always know that a binomial response cannot exceed <em>n</em>, the total number of trials, whereas a Poisson response  theoretically has no upper bound. </p>
+<p align="left">As an example the bycatch data from <a href="../assignments/assign10.htm">Assignment 10</a> that we analyzed using Poisson regression superficially looks like binomial data. The response variable was the number of dolphins caught over a fixed number of tows for each trip. The difference is that we weren't treating the outcome of each tow as a success or a failure. We just counted up the number of dolphins caught, so the individual tows were not Bernoulli trials. On a single tow there could be many dolphins caught, one dolphin, or none. So, potentially at least, there was no maximum value for the number of dolphins caught; the number could conceivably exceed the number of tows. We did include the number of tows in the model as a covariate (or an offset) to account for the fact that the observations in the data set were not equivalent because they were obtained with unequal degrees of effort.</p>
+<p align="left">Still, there are situations where it is legitimate to treat binomial data as having an approximate Poisson distribution. The classical instance of this is  a binomial experiment in which <em>n</em> is extremely large and <em>p</em> is extremely small. In this case if we let &lambda; = <em>np</em> and calculate probabilities  P(<em>X</em> = <em>k</em>) using a Poisson or a binomial model, the answers we get are very similar.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> n &lt;- 1000000</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> p &lt;- .000001</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> dbinom(1, p=p, size=n)</div>
+ <span class="style141"> [1] 0.367879625111</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> dpois(1, lambda=n*p)</div>
+<span class="style141">[1] 0.367879441171</span>
+<p>There is a formal theorem that specifies the conditions for which a Poisson distribution can be viewed as the limiting case of a binomial distribution.</p>
+<h2><a name="data" id="data"></a>A binomial data example</h2>
+<p>The data set for today's lecture is taken from Piegorsch and Bailer (2005) who describe it as follows (p. 126).</p>
+<blockquote>
+  <p class="styleArial1">In the late 1980s, the US Geological Survey (USGS) conducted a water quality study of land on Long Island, New York (Eckhardt et al., 1989). As part of the study, results were presented on contamination of the groundwater by the industrial solvent trichloroethylene (TCE). We have Y = number of wells where TCE was detected, out of N sampled wells in total. Also recorded for use as potential predictor variables were the qualitative variables x<sub>i1</sub> = land use (with 10 different categories), and x<sub>i2</sub> = whether or not sewers were used in the area around the well, along with the quantitative variates x<sub>i3</sub> = median concentration (mg/L) of nitrate at the N well sites, and x<sub>i4</sub> = median concentration (mg/L) of chloride at the N well sites. Interest existed in identifying if and how these predictor variables affect TCE contamination.</p>
+</blockquote>
+<p>I load and examine the data.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells &lt;- read.csv( 'ecol 563/wells.txt')</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells </div>
+
+<span class="style141">&nbsp;&nbsp;&nbsp; y&nbsp; n land.use sewer nitrate chloride<br>
+  1&nbsp;&nbsp; 0 17&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10<br>
+  2&nbsp;&nbsp; 0 59&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 0.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17<br>
+  3&nbsp;&nbsp; 0&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; agri&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 0.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9<br>
+  4&nbsp;&nbsp; 2 48&nbsp;&nbsp;&nbsp;&nbsp; agri&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20<br>
+  5&nbsp;&nbsp; 0&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 1.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  6&nbsp;&nbsp; 2 21&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 3.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14<br>
+  7&nbsp; 12 43&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18<br>
+  8&nbsp;&nbsp; 5 86&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 2.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15<br>
+  9&nbsp; 33 76&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 5.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 33<br>
+  10&nbsp; 1 17&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 4.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18<br>
+  11&nbsp; 3 26&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 2.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16<br>
+  12&nbsp; 4 38 &nbsp;&nbsp;&nbsp;&nbsp;recr&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11<br>
+  13&nbsp; 8 32&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36<br>
+  14&nbsp; 0 22&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 0.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11<br>
+  15&nbsp; 7 29&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 66<br>
+  16&nbsp; 1 30&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12<br>
+  17 20 42&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 4.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24<br>
+  18&nbsp; 0&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30<br>
+  19 17 33&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23<br>
+  20&nbsp; 3 12&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 2.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19</span>
+<p>Each row is a single binomial observation, the observed number of successes <em>y</em> out of a fixed total <em>n</em>. An observation is classified as a &quot;success&quot; if the well is contaminated with TCE. The binomial distribution has two parameters, <em>n</em> and <em>p</em>. We are given <em>n</em> for each observation but we need to estimate <em>p</em>, the probability of success. Our goal is to quantify how <em>p</em> depends on the measured predictors: land use (categorical), sewer use (categorical), nitrate (continuous), and chloride (continuous). The land use categories are: undeveloped (<span class="style8">undev</span>), agriculture (<span class="style8">agri</span>), low-density residential with less than 2 dwellings/acre (<span class="style8">resL</span>), medium-density residential with 2-4 dwellings/acre (<span class="style8">resM</span>), high-density residential with greater than 4 dwellings/acre (<span class="style8">resH</span>), recreation (<span class="style8">recr</span>), institution (<span class="style8">inst</span>), transportation (<span class="style8">trans</span>), commercial (<span class="style8">comm</span>), and industrial (<span class="style8">indus</span>).</p>
+<p>The source of the binomial grouping for these data is unclear. It is possible that a map of Long Island was stratified into areal regions according to land use  (and perhaps the presence of sewers) and then within each stratum a certain number of wells were tested. If this description is correct then we do not have a random sample of wells. Land use and sewer are stratum characteristics that are then inherited by all the wells in that stratum. From the description of the study, chloride and nitrate concentration were  measured separately for each individual well but the value reported in the data set is the median value of these concentrations for all the wells in the stratum. Thus for better or worse all of the predictors in the data set are measured at the stratum level, i.e., at the level of the binomial observation (not at the level of the individual well). It's probably the case that these are really binary data (measurements on individual wells) that have been categorized for presentation purposes by landscape type and sewer type. </p>
+<p><a name="lattice"></a>We can get a preliminary sense of the importance of the categorical predictors sewer and land use with a dot plot of the raw success probabilities for each category.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(lattice)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">dotplot(land.use~y/n, col=as.numeric(wells$sewer), data=wells)</div>
+<p align="center"><img src="../../images/lectures/lecture26/fig1.png" width="409" height="333" alt="fig 1"></p>
+<p align="center" class="styleArial1"><strong>Fig. 3</strong>&nbsp;&nbsp;The effect of sewer and land use on the  proportion of contaminated wells</p>
+<p>From the graph we see that while there are small differences with respect to land type there are some  large effects associated with the presence (red) or absence (black) of sewers.</p>
+<h2><a name="fitting"></a>Fitting logistic regression models</h2>
+<p>Logistic regression models are fit in R using the <span class="style13">glm</span> function with the argument <span class="style17">family=binomial</span>. The logit link is the default and doesn't have to be specified. For true binomial (grouped binary) data the response &quot;variable&quot; is a matrix constructed with the <span class="style13">cbind</span> function in which the first column is the number of successes and the second column is the number of failures. I start by fitting an additive logistic regression model that includes only the two categorical variables as predictors.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">out1 &lt;- glm(cbind(y,n-y) ~ land.use + sewer, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">summary(out1)</div>
+<span class="style141">Call:<br>
+glm(formula = cbind(y, n - y) ~ land.use + sewer, family = binomial, <br>
+&nbsp;&nbsp;&nbsp; data = wells)</span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -1.5363685&nbsp; -0.9860019&nbsp; -0.0001991&nbsp;&nbsp; 0.3541879&nbsp;&nbsp; 1.4394048&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; -3.6568&nbsp;&nbsp;&nbsp;&nbsp; 0.7376&nbsp; -4.957 7.14e-07 ***<br>
+  land.usecomm&nbsp;&nbsp;&nbsp;&nbsp; 1.8676&nbsp;&nbsp;&nbsp;&nbsp; 0.8044&nbsp;&nbsp; 2.322&nbsp; 0.02025 *&nbsp; <br>
+  land.useindus&nbsp;&nbsp;&nbsp; 2.2070&nbsp;&nbsp;&nbsp;&nbsp; 0.8053&nbsp;&nbsp; 2.741&nbsp; 0.00613 ** <br>
+  land.useinst&nbsp;&nbsp;&nbsp;&nbsp; 0.7584&nbsp;&nbsp;&nbsp;&nbsp; 0.8395&nbsp;&nbsp; 0.903&nbsp; 0.36629&nbsp;&nbsp;&nbsp; <br>
+  land.userecr&nbsp;&nbsp;&nbsp;&nbsp; 0.6676&nbsp;&nbsp;&nbsp;&nbsp; 0.8435&nbsp;&nbsp; 0.791&nbsp; 0.42870&nbsp;&nbsp;&nbsp; <br>
+  land.useresH&nbsp;&nbsp;&nbsp;&nbsp; 1.7316&nbsp;&nbsp;&nbsp;&nbsp; 0.7784&nbsp;&nbsp; 2.225&nbsp; 0.02611 *&nbsp; <br>
+  land.useresL&nbsp;&nbsp;&nbsp;&nbsp; 0.6663&nbsp;&nbsp;&nbsp;&nbsp; 1.0501&nbsp;&nbsp; 0.635&nbsp; 0.52572&nbsp;&nbsp;&nbsp; <br>
+  land.useresM&nbsp;&nbsp;&nbsp;&nbsp; 1.0212&nbsp;&nbsp;&nbsp;&nbsp; 0.7809&nbsp;&nbsp; 1.308&nbsp; 0.19099&nbsp;&nbsp;&nbsp; <br>
+  land.usetrans&nbsp;&nbsp;&nbsp; 0.7933&nbsp;&nbsp;&nbsp;&nbsp; 0.8360&nbsp;&nbsp; 0.949&nbsp; 0.34267&nbsp;&nbsp;&nbsp; <br>
+  land.useundev&nbsp; -18.3414&nbsp; 3033.9308&nbsp; -0.006&nbsp; 0.99518&nbsp;&nbsp;&nbsp; <br>
+  seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.5980&nbsp;&nbsp;&nbsp;&nbsp; 0.2955&nbsp;&nbsp; 5.407 6.41e-08 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for binomial family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 146.956&nbsp; on 19&nbsp; degrees of freedom<br>
+  Residual deviance:&nbsp; 15.201&nbsp; on&nbsp; 9&nbsp; degrees of freedom<br>
+  AIC: 82.476</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 17</span>
+<p>Except for the fact that the response is a logit, much of the summary output should look familiar. The <span class="style8">land.use</span> and <span class="style8">sewer</span> variables are factors and have been entered into the model as dummy variables. The  estimates reported in the summary table are for the  coefficients of those dummy variables in the model. The coding has been done alphabetically so that the reference group for <span class="style8">land.use</span> is <span class="style8">agri</span> and the reference group for <span class="style8">sewer</span> is <span class="style8">sewer = no</span>. As usual then the reported estimates are &quot;effects&quot;, the effect of switching from the reference category to the level shown.</p>
+<p>Although we haven't discussed ways to interpret the logit, one useful fact about  logit(<em>p</em>) is that it is an invertible function that is monotonic in <em>p</em>. Thus when <em>p</em> goes up, the logit goes up; when <em>p</em> goes down, the logit goes down, and vice versa. We can use this fact to interpret how predictors affect the probability that a well is contaminated. Positive coefficients for a dummy regressor mean when we switch from the reference level to the level indicated by the dummy regressor the logit increases. But if the logit increases then the probability of contamination must also  increase. Thus we can see from the reported estimates that for all of the land use categories except &quot;undeveloped&quot; the probability of a well being contaminated by TCE is higher for that land use than it is for agricultural land (the reference category), although only some of these differences are significant. Similarly wells on tracts of land that have sewers have a higher probability of being contaminated than do wells on tracts without sewers.</p>
+<h3><a name="fitting"></a>Fitting grouped binary data as binary data</h3>
+<p>As was pointed out above, the likelihoods for grouped binary data (under a binomial model) and binary data (under a product Bernoulli model) take the same form and yield the same maximum likelihood estimates for the regression parameters. We can demonstrate this by converting the binomial data of the wells data set to binary data. As binary data each observation should generate <span class="style8">wells$y </span>ones and <span class="style8">wells$n &ndash; wells$y</span> zeros. I write a function that generates the zeros and ones on a per observation basis treating a row of the <span class="style8">wells</span> data frame  as a vector.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">yn.func &lt;- function(x) rep(c(1,0), c(x[1], x[2]-x[1]))</div>
+<p>I try the function out on the first four observations of the data set using the <span class="style1">apply</span> function. The <span class="style1">apply</span> function returns a list because the vectors of zeros and ones created from different rows are of different lengths.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">apply(wells[1:4,1:2], 1, yn.func)</div>
+<span class="style141">$`1`<br>
+&nbsp;[1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</span>
+<p><span class="style141">$`2`<br>
+  &nbsp;[1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br>
+  [37] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</span>
+<p><span class="style141">$`3`<br>
+  [1] 0 0 0 0 0 0 0</span>
+<p><span class="style141">$`4`<br>
+  &nbsp;[1] 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br>
+  [37] 0 0 0 0 0 0 0 0 0 0 0 0</span>
+<p>Finally I do this for all the observations, <span class="style1">unlist</span> the results, and add columns indicating the values of the <span class="style8">land.use</span> and <span class="style8">sewer</span> variables repeated the necessary number of times.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells.raw &lt;- data.frame(yn=unlist(apply(wells[,1:2], 1, yn.func)), land.use=rep(wells$land.use, wells$n), sewer=rep(wells$sewer, wells$n))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> dim(wells.raw)</div>
+ <span class="style141"> [1] 650&nbsp;&nbsp; 3</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells.raw[1:8,]</div>
+<span class="style141">  &nbsp; yn land.use sewer<br>
+  1&nbsp; 0&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes<br>
+  2&nbsp; 0&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes<br>
+  3&nbsp; 0&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes<br>
+  4&nbsp; 0&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes<br>
+  5&nbsp; 0&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes<br>
+  6&nbsp; 0&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes<br>
+  7&nbsp; 0&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes<br>
+8&nbsp; 0&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes</span>
+<p>To fit a logistic regression model to binary data we just enter the binary variable as the response and specify the <span class="style22">family</span> argument as binomial.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out1a &lt;- glm(yn~ land.use + sewer, data=wells.raw, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out1a)</div>
+<span class="style141">Call:<br>
+  glm(formula = yn ~ land.use + sewer, family = binomial, data = wells.raw)</span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -1.2409&nbsp; -0.6666&nbsp; -0.3332&nbsp; -0.0001&nbsp;&nbsp; 2.7138&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; -3.657&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.738&nbsp;&nbsp; -4.96&nbsp; 7.1e-07 ***<br>
+  land.usecomm&nbsp;&nbsp;&nbsp;&nbsp; 1.868&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.804&nbsp;&nbsp;&nbsp; 2.32&nbsp;&nbsp; 0.0203 *&nbsp; <br>
+  land.useindus&nbsp;&nbsp;&nbsp; 2.207&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.805&nbsp;&nbsp;&nbsp; 2.74&nbsp;&nbsp; 0.0061 ** <br>
+  land.useinst&nbsp;&nbsp;&nbsp;&nbsp; 0.758&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.839&nbsp;&nbsp;&nbsp; 0.90&nbsp;&nbsp; 0.3663&nbsp;&nbsp;&nbsp; <br>
+  land.userecr&nbsp;&nbsp;&nbsp;&nbsp; 0.668&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.844&nbsp;&nbsp;&nbsp; 0.79&nbsp;&nbsp; 0.4287&nbsp;&nbsp;&nbsp; <br>
+  land.useresH&nbsp;&nbsp;&nbsp;&nbsp; 1.732&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.778&nbsp;&nbsp;&nbsp; 2.22&nbsp;&nbsp; 0.0261 *&nbsp; <br>
+  land.useresL&nbsp;&nbsp;&nbsp;&nbsp; 0.666&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.050&nbsp;&nbsp;&nbsp; 0.63&nbsp;&nbsp; 0.5257&nbsp;&nbsp;&nbsp; <br>
+  land.useresM&nbsp;&nbsp;&nbsp;&nbsp; 1.021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.781&nbsp;&nbsp;&nbsp; 1.31&nbsp;&nbsp; 0.1910&nbsp;&nbsp;&nbsp; <br>
+  land.usetrans&nbsp;&nbsp;&nbsp; 0.793&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.836&nbsp;&nbsp;&nbsp; 0.95&nbsp;&nbsp; 0.3427&nbsp;&nbsp;&nbsp; <br>
+  land.useundev&nbsp; -15.456&nbsp;&nbsp;&nbsp; 716.838&nbsp;&nbsp; -0.02&nbsp;&nbsp; 0.9828&nbsp;&nbsp;&nbsp; <br>
+  seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.598&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.296&nbsp;&nbsp;&nbsp; 5.41&nbsp; 6.4e-08 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for binomial family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 615.83&nbsp; on 649&nbsp; degrees of freedom<br>
+  Residual deviance: 484.08&nbsp; on 639&nbsp; degrees of freedom<br>
+  AIC: 506.1</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 17</span>
+<p>If you compare this output with the output from the grouped binary data model above, you'll see that the coefficient estimates, standard errors, and <em>p</em>-values are exactly the same (except for the undeveloped land use type, discussed further below). The AIC, log-likelihood, and residual deviance are all different.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # binomial model </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out1)</div>
+<span class="style141">  &nbsp; (Intercept)&nbsp; land.usecomm land.useindus&nbsp; land.useinst&nbsp; land.userecr <br>
+  &nbsp;&nbsp; -3.6568378&nbsp;&nbsp;&nbsp;&nbsp; 1.8676147&nbsp;&nbsp;&nbsp;&nbsp; 2.2069914&nbsp;&nbsp;&nbsp;&nbsp; 0.7584341&nbsp;&nbsp;&nbsp;&nbsp; 0.6675926 <br>
+  &nbsp;land.useresH&nbsp; land.useresL&nbsp; land.useresM land.usetrans land.useundev <br>
+  &nbsp;&nbsp;&nbsp; 1.7315828&nbsp;&nbsp;&nbsp;&nbsp; 0.6663339&nbsp;&nbsp;&nbsp;&nbsp; 1.0211725&nbsp;&nbsp;&nbsp;&nbsp; 0.7932990&nbsp;&nbsp; -18.3414442 <br>
+  &nbsp;&nbsp;&nbsp; &nbsp;seweryes <br>
+  &nbsp;&nbsp;&nbsp; 1.5979587 </span>
+  <div class="style15" style="padding-left: 30px; text-indent:-30px"> # binary model </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">coef(out1a)</div>
+ <span class="style141"> &nbsp; (Intercept)&nbsp; land.usecomm land.useindus&nbsp; land.useinst&nbsp; land.userecr <br>
+  &nbsp;&nbsp; -3.6568378&nbsp;&nbsp;&nbsp;&nbsp; 1.8676147&nbsp;&nbsp;&nbsp;&nbsp; 2.2069914&nbsp;&nbsp;&nbsp;&nbsp; 0.7584341&nbsp;&nbsp;&nbsp;&nbsp; 0.6675926 <br>
+  &nbsp;land.useresH&nbsp; land.useresL&nbsp; land.useresM land.usetrans land.useundev <br>
+  &nbsp;&nbsp; &nbsp;1.7315828&nbsp;&nbsp;&nbsp;&nbsp; 0.6663339&nbsp;&nbsp;&nbsp;&nbsp; 1.0211725&nbsp;&nbsp;&nbsp;&nbsp; 0.7932990&nbsp;&nbsp; -15.4559130 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; seweryes <br>
+&nbsp;&nbsp;&nbsp; 1.5979587</span>
+
+  <div class="style15" style="padding-left: 30px; text-indent:-30px"> # binomial model </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> c(AIC(out1), logLik(out1), deviance(out1))</div>
+<span class="style141">  [1]&nbsp; 82.4765 -30.2382&nbsp; 15.2006</span>
+  <div class="style15" style="padding-left: 30px; text-indent:-30px"> # binary model </div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> c(AIC(out1a), logLik(out1a), deviance(out1a))</div>
+<span class="style141">  [1]&nbsp; 506.078 -242.039&nbsp; 484.078</span>
+
+<p>So in terms of obtaining estimates and carrying out statistical tests, it doesn't matter whether we view the response as binomial or binary.</p>
+<h3><a name="obtaining"></a>Obtaining the estimated logits of individual categories</h3>
+<p>It is sometimes useful to see the actual estimates for each category, rather than the estimated effects. We could obtain these estimates by hand by adding the estimate of the intercept to each estimated effect. To obtain standard errors we would need to use the method described in <a href="lecture4.htm#meanmatrix">lecture 4</a>. An easier way when it's possible is to refit the model without an intercept. This allows us to see the individual category estimates for one of the factors in the model, namely the  factor variable that is listed first in the model formula.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out1b &lt;- glm(cbind(y,n-y) ~ land.use + sewer-1, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out1b)</div>
+<span class="style141">Call:<br>
+glm(formula = cbind(y, n - y) ~ land.use + sewer - 1, family = binomial, <br>
+&nbsp;&nbsp;&nbsp; data = wells)</span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -1.5363685&nbsp; -0.9860019&nbsp; -0.0001991&nbsp;&nbsp; 0.3541879&nbsp;&nbsp; 1.4394048&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  land.useagri&nbsp;&nbsp;&nbsp; -3.6568&nbsp;&nbsp;&nbsp;&nbsp; 0.7376&nbsp; -4.957 7.14e-07 ***<br>
+  land.usecomm&nbsp;&nbsp;&nbsp; -1.7892&nbsp;&nbsp;&nbsp;&nbsp; 0.4041&nbsp; -4.427 9.54e-06 ***<br>
+  land.useindus&nbsp;&nbsp; -1.4498&nbsp;&nbsp;&nbsp;&nbsp; 0.3971&nbsp; -3.651 0.000261 ***<br>
+  land.useinst&nbsp;&nbsp;&nbsp; -2.8984&nbsp;&nbsp;&nbsp;&nbsp; 0.4636&nbsp; -6.252 4.05e-10 ***<br>
+  land.userecr&nbsp;&nbsp;&nbsp; -2.9892&nbsp;&nbsp;&nbsp;&nbsp; 0.4620&nbsp; -6.470 9.82e-11 ***<br>
+  land.useresH&nbsp;&nbsp;&nbsp; -1.9253&nbsp;&nbsp;&nbsp;&nbsp; 0.3478&nbsp; -5.536 3.10e-08 ***<br>
+  land.useresL&nbsp;&nbsp;&nbsp; -2.9905&nbsp;&nbsp;&nbsp;&nbsp; 0.7669&nbsp; -3.899 9.65e-05 ***<br>
+  land.useresM&nbsp;&nbsp;&nbsp; -2.6357&nbsp;&nbsp;&nbsp;&nbsp; 0.3246&nbsp; -8.120 4.68e-16 ***<br>
+  land.usetrans&nbsp;&nbsp; -2.8635&nbsp;&nbsp;&nbsp;&nbsp; 0.4524&nbsp; -6.329 2.47e-10 ***<br>
+  </span><span class="style25">land.useundev&nbsp; -21.9983&nbsp; 3033.9307&nbsp; -0.007 0.994215</span><span class="style141">&nbsp;&nbsp;&nbsp; <br>
+    seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;1.5980&nbsp;&nbsp;&nbsp;&nbsp; 0.2955&nbsp;&nbsp; 5.407 6.41e-08 ***<br>
+    ---<br>
+    Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for binomial family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 432.213&nbsp; on 20&nbsp; degrees of freedom<br>
+  Residual deviance:&nbsp; 15.201&nbsp; on&nbsp; 9&nbsp; degrees of freedom<br>
+  AIC: 82.476</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 17</span>
+<p>Observe that <span class="style8">land.use = 'agri'</span> has the value of the intercept from the previous model and all of the other land use categories have  the old intercept value added to them. These are the predicted logits for each <span class="style8">land.use</span> type when <span class="style8">sewer='no'</span>. The estimate of <span class="style8">sewer</span> is still an effect estimate and is the difference in logits between <span class="style8">sewer = 'no'</span> and <span class="style8">sewer = 'yes'</span>. If we wanted to see the estimated logits for both <span class="style8">sewer</span> categories we would need to list <span class="style8">sewer</span> before <span class="style8">land.use</span> in the model formula. Removing the intercept has no effect on model fit. The reported AIC values are the same.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> AIC(out1)</div>
+<span class="style141"> [1] 82.47647</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> AIC(out1b)</div>
+<span class="style141">[1] 82.47647</span>
+<h2><a name="quasi" id="quasi"></a>Estimating proportions when there  is quasi-complete separation</h2>
+<p>The reported standard error  for <span class="style8">land.use = undev</span> is crazy  in all versions of the logistic regression model we've fit. The estimated logit for the undeveloped land use category is &ndash;22 with a standard error of 3000 yielding a <em>p</em>-value of 1. This indicates that <span class="style13">glm</span> failed to estimate  this parameter. If we look at the raw data we can see why this has happened.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells[wells$land.use=='undev',]</div>
+<span class="style141"> &nbsp; y&nbsp; n land.use sewer nitrate chloride<br>
+1 0 17&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10<br>
+2 0 59&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 0.8&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;17</span>
+<p><a name="xtabs"></a>Both  binomial observations in the undeveloped land use category had 0 successes, i.e., no contaminated wells. This is the only land use category for which this happened. We can get information about successes and failures for each land use category with the <span class="style1">xtabs</span> function. <span class="style1">xtabs</span> tabulates data by a categorical variable using the value of another variable for the frequencies.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> xtabs(cbind(y,n-y)~land.use, data=wells)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  land.use&nbsp;&nbsp; y&nbsp; V2<br>
+  &nbsp;&nbsp; agri&nbsp;&nbsp;&nbsp; 2&nbsp; 53<br>
+  &nbsp;&nbsp; comm&nbsp;&nbsp; 20&nbsp; 29<br>
+  &nbsp;&nbsp; indus&nbsp; 20&nbsp; 25<br>
+  &nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp; 8&nbsp; 46<br>
+  &nbsp;&nbsp; recr&nbsp;&nbsp;&nbsp; 7&nbsp; 57<br>
+  &nbsp;&nbsp; resH&nbsp;&nbsp; 34&nbsp; 59<br>
+  &nbsp;&nbsp; resL&nbsp;&nbsp;&nbsp; 2&nbsp; 24<br>
+  &nbsp;&nbsp; resM&nbsp;&nbsp; 17 112<br>
+  &nbsp;&nbsp; trans&nbsp;&nbsp; 8&nbsp; 51<br>
+&nbsp;&nbsp; undev&nbsp;&nbsp; 0&nbsp; 76</span>
+<p><a name="separation"></a>With no successes the maximum likelihood estimate of the probability of success for this category should be zero. This also corresponds to an odds of zero. Because the log of zero is undefined,  the logit is undefined for this group thus leading to estimation problems in a logit model. The problem described here is called <span class="style91">quasi-complete separation</span> and occurs any time a parameter in a model corresponds to a set of  observations that are all successes or all failures. While this is a nuisance when fitting a logistic regression model it is obviously not a bad problem to have. What it means here is that  wells on undeveloped land are never contaminated regardless of their sewer status. As a result knowing that <span class="style8">land.use = 'undev'</span> perfectly predicts that a well is not  contaminated. Unfortunately maximum likelihood estimation has failed as indicated by the ridiculously large standard error reported in the summary table.</p>
+<p>When binomial data exhibit quasi-complete separation we have a number of options. </p>
+<ol>
+  <li>Abandon logistic regression using maximum likelihood estimation in favor of a method that does not suffer the same deficiencies. One regression method that can work with quasi-complete separation is the Firth method.</li>
+  <li>Remove the observations causing the problem from the analysis (in this case the two binomial observations corresponding to the undeveloped land use category) and analyze them separately. </li>
+  <li>Combine the offending category with another category either based on some theoretical rationale or because they exhibit similar binomial proportions.</li>
+</ol>
+<h3><a name="firth"></a>Regression approaches: the Firth method</h3>
+<p>There are alternatives to maximum likelihood estimation when the data are sparse: exact methods (Mehta and Patel 1995; Venkataraman and Ananthanarayanan 2008),  a Bayesian approach with an informative prior (Gelman et al. 2008), and the Firth bias reduction method (Firth 1993) that maximizes a penalized likelihood function. The exact approach is proprietary and is only implemented in SAS and logXact. Furthermore the exact method can fail for complicated models. The R package <span class="style19">elrm</span> approximates exact logistic regression using MCMC but I&rsquo;ve found its performance to be somewhat unsatisfactory.  </p>
+<p>Firth regression is identical to Bayesian logistic regression with a noninformative Jeffreys prior (Fijorek and Sokolowski 2012). Heinze and Schemper (2002) have shown that the Firth method is a general solution to the problem of complete separation. The <span class="style19">logistf</span> package of R (Ploner et al. 2010) carries out the Firth method. An extension of the Firth method to multinomial models is implemented in the <span class="style19">pmlr</span> package of R (Colby et al. 2010).<br>
+</p>
+<p>The <span class="style1">logistf</span> function of the <span class="style19">logistf</span> package requires a binary response variable in which the categories  have the numerical values 0 and 1. The <span class="style8">wells.raw</span> data frame we created previously will work here.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">library(logistf)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">  out1f &lt;- logistf(yn~ land.use + sewer, data=wells.raw, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out1f</div>
+<span class="style141">logistf(formula = yn ~ land.use + sewer, data = wells.raw, family = binomial)<br>
+Model fitted by Penalized ML<br>
+Confidence intervals and p-values by Profile Likelihood </span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; coef se(coef) lower 0.95 upper 0.95&nbsp;&nbsp;&nbsp;&nbsp; Chisq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p<br>
+  (Intercept)&nbsp;&nbsp; -3.424344 0.670564&nbsp; -5.025055&nbsp; -2.313637 68.763252 1.11022e-16<br>
+  land.usecomm&nbsp;&nbsp; 1.682935 0.744342&nbsp;&nbsp; 0.377902&nbsp;&nbsp; 3.376933&nbsp; 6.695309 9.66669e-03<br>
+  land.useindus&nbsp; 2.015201 0.745245&nbsp;&nbsp; 0.708822&nbsp;&nbsp; 3.710398&nbsp; 9.935773 1.62097e-03<br>
+  land.useinst&nbsp;&nbsp; 0.613195 0.778832&nbsp; -0.793258&nbsp;&nbsp; 2.349624&nbsp; 0.680935 4.09265e-01<br>
+  land.userecr&nbsp;&nbsp; 0.528785 0.781638&nbsp; -0.891240&nbsp;&nbsp; 2.267772&nbsp; 0.496065 4.81234e-01<br>
+  land.useresH&nbsp;&nbsp; 1.545687 0.716133&nbsp;&nbsp; 0.308640&nbsp;&nbsp; 3.201830&nbsp; 6.298950 1.20810e-02<br>
+  land.useresL&nbsp;&nbsp; 0.654184 0.963398&nbsp; -1.303080&nbsp;&nbsp; 2.610622&nbsp; 0.469950 4.93010e-01<br>
+  land.useresM&nbsp;&nbsp; 0.844285 0.718005&nbsp; -0.401195&nbsp;&nbsp; 2.502388&nbsp; 1.652675 1.98595e-01<br>
+  land.usetrans&nbsp; 0.646981 0.774896&nbsp; -0.751044&nbsp;&nbsp; 2.377972&nbsp; 0.769544 3.80358e-01<br>
+  </span><span class="style25">land.useundev -2.208163 1.578255</span><span class="style141">&nbsp; -7.148982&nbsp;&nbsp; 0.345864&nbsp; 2.806710 9.38707e-02<br>
+  seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.555010 0.286769&nbsp;&nbsp; 1.004491&nbsp;&nbsp; 2.147990 33.464284 7.25847e-09</span>
+<p><span class="style141">Likelihood ratio test=124.958 on 10 df, p=0, n=650</span>
+</p>
+The reported estimate and standard error for the undeveloped land use category effect are sensible. According to the output we see that although undeveloped land has a lower probability of well contamination  than does agricultural land,  the difference is not significant (<em>p</em> = 0.09).
+<h3><a name="approximate"></a>Approximate confidence intervals</h3>
+<p>What if we had chosen to remove <span class="style8">land.use=&quot;undev&quot;</span> from the analysis? What should we report as the estimate for this group? Based on the data alone the obvious estimate for the probability of contamination is zero, but what about a confidence interval for this estimate? Do we really believe that there are no contaminated wells on undeveloped land? How should we quantify our  uncertainty when we have a point estimate of zero? To understand how to proceed I start with a less severe situation that I then generalize  to the case of zero successes.</p>
+<p>There were 76 wells tested for <span class="style8">land.use='undev'</span>. Suppose we had observed 2 contaminated wells among these 76. The obvious point estimate of the probability of contamination is <img src="../../images/lectures/lecture26/two76.gif" width="33" height="30" align="absmiddle">. What should we report for  a confidence interval? Statistical theory tells us that the variance of a binomial proportion <em>p</em> when the number of trials is <em>n</em> is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture26/varproportion.gif" width="157" height="53" alt="Var(p)"></p>
+<p>Binomial proportions are in principal sums; hence the central limit theorem apples to them and we  expect them to  be approximately normally distributed when samples are large. A large sample confidence interval for a proportion is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture26/pCI.gif" width="335" height="70"></p>
+<p>If we use this formula when the success rate is 2 out of 76, we get a silly confidence interval estimate for <em>p</em>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> my.sd &lt;- sqrt((2/76)*(74/76)/76)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> my.sd</div>
+<span class="style141"> [1] 0.01836160</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 2/76</div>
+<span class="style141">[1] 0.02631579</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 2/76 + c(qnorm(.025), qnorm(.975))*my.sd</div>
+<span class="style141">[1] -0.00967228  0.06230386</span>
+<p>An interval estimate for a proportion that includes negative values is obviously nonsensical. The usual seat of the pants rule for when the central limit theorem is applicable to proportions is that both <em>np</em> &ge; 5 and <em>n</em>(1 &ndash; <em>p</em>) &ge; 5. In our case <em>np</em> = 2 so the guidelines aren't satisfied. One &quot;fix&quot; is to instead assume normality on a logit scale. While this would yield a sensible confidence interval for the current example, it is of no help in dealing with <em>p</em> = 0 because the logit when <em>p</em> = 0 is undefined. </p>
+<h3><a name="exact"></a>Exact (Clopper-Pearson) confidence intervals</h3>
+<p>Another solution is to construct what's called an exact confidence interval. It's called exact because it is based not on a normal approximation but instead on the exact tail probabilities of the binomial distribution. The idea is simple. Let the desired confidence interval for <em>p</em> be denoted <img src="../../images/lectures/lecture26/plimits.gif" alt="p CI" width="75" height="32" align="absmiddle"> and consider the case where we observe <em>X</em> = 2 successes out of <em>n</em> = 76 trials. </p>
+<ol>
+  <li>We wish to find  p<sub>U</sub> so that if <em>X</em> ~ binomial(<em>n</em> = 76,  p<sub>U</sub>), then P(<em>X</em> &le; 2) = .025. In other words <em>X</em> = 2 is the smallest binomial count that if observed  we would still feel comfortable saying it was generated by <em>X</em>. So <em>X</em> = 2 cuts off a probability of .025 in the lower tail of the binomial distribution. If we chose <em>p</em> to be any bigger than this the lower-tailed probability would be less than .025.</li>
+  <li>Similarly, we wish to find  p<sub>L</sub> such that if <em>X</em> ~ binomial(<em>n</em> = 76,  p<sub>L</sub>), then P(<em>X</em> &ge; 2) = .025. In other words <em>X</em> = 2 is the largest binomial count that if observed  we would still feel comfortable saying it was generated by <em>X</em>. Thus <em>X</em> = 2 cuts off a probability of .025 in the upper tail of the binomial distribution. If <em>p</em> were any smaller than this the upper-tailed probability would become less than .025.</li>
+</ol>
+<p>Fig. 4 displays the two binomial distributions corresponding to p<sub>U</sub> and p<sub>L</sub>.</p>
+<p align="center"><img src="../../images/lectures/lecture26/fig4a.png" width="447" height="280" alt="fig4"></p>
+<p align="center" class="styleArial1"><strong>Fig. 4</strong> &nbsp;Finding an exact confidence interval for p when X ~ binomial(n = 76, p) &nbsp;<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/notes/lec26fig4Rcode.txt">R code</a></p>
+<p>It's not hard to obtain p<sub>U</sub> and p<sub>L</sub> iteratively  by starting with an initial guess and then  refining it. To find p<sub>U</sub> I just keep trying new values for  p<sub>U</sub> such that <span class="style8">pbinom(2,size=76,p=pU)</span> gets as close as possible to 0.025.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pbinom(2,76,.05)</div>
+<span class="style141"> [1] 0.2614607</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pbinom(2,76,.08)</div>
+<span class="style141"> [1] 0.05159937</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pbinom(2,76,.09)</div>
+<span class="style141"> [1] 0.02806534</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pbinom(2,76,.092)</div>
+<span class="style141"> [1] 0.02476487</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pbinom(2,76,.091)</div>
+<span class="style141"> [1] 0.02636699</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pbinom(2,76,.0913)</div>
+<span class="style141"> [1] 0.02587648</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pbinom(2,76,.0914)</div>
+<span class="style141"> [1] 0.02571488</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pbinom(2,76,.0918)</div>
+<span class="style141">[1] 0.02507784</span>
+<p>To find p<sub>L</sub> we use the fact that P(<em>X</em> &ge; 2) = P(<em>X</em> &gt; 1) = 1 &ndash; P(<em>X</em> &le; 1) = <span class="style8">1-pbinom(1, size=76, p=pL)</span>.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # find pL such that its upper tail rejection region is .025</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 1-pbinom(1,76,.01)</div>
+<span class="style141"> [1] 0.1764734</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 1-pbinom(1,76,.005)</div>
+<span class="style141"> [1] 0.05586575</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 1-pbinom(1,76,.003)</div>
+<span class="style141"> [1] 0.02214837</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 1-pbinom(1,76,.0035)</div>
+<span class="style141"> [1] 0.02942497</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 1-pbinom(1,76,.0032)</div>
+<span class="style141">[1] 0.02495674</span>
+<p><a name="binomtest"></a>So, an approximate answer is (.0032, .0918). But there's no need to do this by hand. The <span class="style13">binom.test</span> function of R will generate this very same confidence interval.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> binom.test(2,76)</div>
+<span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exact binomial test</span>
+<p><span class="style141">data:&nbsp; 2 and 76 <br>
+  number of successes = 2, number of trials = 76, p-value &lt; 2.2e-16<br>
+  alternative hypothesis: true probability of success is not equal to 0.5 <br>
+  95 percent confidence interval:<br>
+  &nbsp;</span><span class="style25">0.003203005 0.091849523</span><span class="style141"> <br>
+    sample estimates:<br>
+    probability of success <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.02631579</span>
+<p>The interval that we've calculated is called the Clopper-Pearson interval. A number of other kinds of confidence intervals are available for proportions. See, e.g., Agresti (2002), p. 14&ndash;21, and Brown et al. (2001). What about the the case when there are 0 successes? Here's what the <span class="style13">binom.test </span>function reports.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> binom.test(0,76)</div>
+<span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exact binomial test</span>
+<p><span class="style141">data:&nbsp; 0 and 76 <br>
+  number of successes = 0, number of trials = 76, p-value &lt; 2.2e-16<br>
+  alternative hypothesis: true probability of success is not equal to 0.5 <br>
+  95 percent confidence interval:<br>
+  &nbsp;</span><span class="style25">0.00000000 0.04737875</span><span class="style141"> <br>
+    sample estimates:<br>
+    probability of success <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</span>
+<p>The 95% confidence interval is (0.000, 0.047). The convention is to take 0 as the lower limit when zero successes are observed, but the upper limit is calculated in the manner that was just described.</p>
+<h3><a name="combining"></a>Combining categories to eliminate quasi-complete separation</h3>
+<p>We can combine the undeveloped land use category with another similar category (either theoretically similar or empirically similar) and refit the model.  A priori it would make sense to combine it  with some other low impact category. Using the individual logit estimates from <span class="style13">glm</span> or the empirical probability estimates shown below, it would appear that the undeveloped category is most similar to the agriculture category.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> tapply(wells$y, wells$land.use, sum)/tapply(wells$n, wells$land.use, sum)</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; agri&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resL <br>
+0.03636364 0.40816327 0.44444444 0.14814815 0.10937500 0.36559140 0.07692308 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; undev <br>
+0.13178295 0.13559322 0.00000000</span>
+<p>I combine these two categories to make a new land use category and then refit the model with the new land use variable. For the moment I continue to fit a model without an intercept so that I can  compare the logits corresponding to the different land use categories.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">wells$land.use2 &lt;- factor(ifelse(wells$land.use %in% c('undev', 'agri'), 'rural', as.character(wells$land.use)))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells</div>
+<span class="style141">&nbsp;&nbsp;&nbsp; y&nbsp; n land.use sewer nitrate chloride land.use2<br>
+1&nbsp;&nbsp; 0 17&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+2&nbsp;&nbsp; 0 59&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 0.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+3&nbsp;&nbsp; 0&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; agri&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 0.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+4&nbsp;&nbsp; 2 48&nbsp;&nbsp;&nbsp;&nbsp; agri&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp; &nbsp;&nbsp;&nbsp;rural<br>
+5&nbsp;&nbsp; 0&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 1.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resL<br>
+6&nbsp;&nbsp; 2 21&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 3.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resL<br>
+7&nbsp; 12 43&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resM<br>
+8&nbsp;&nbsp; 5 86&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 2.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resM<br>
+9&nbsp; 33 76&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 5.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 33&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;resH<br>
+10&nbsp; 1 17&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 4.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH<br>
+11&nbsp; 3 26&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 2.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; recr<br>
+12&nbsp; 4 38&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; recr<br>
+13&nbsp; 8 32&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inst<br>
+14&nbsp; 0 22&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 0.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;inst<br>
+15&nbsp; 7 29&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 66&nbsp;&nbsp;&nbsp;&nbsp; trans<br>
+16&nbsp; 1 30&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp; trans<br>
+17 20 42&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 4.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm<br>
+18&nbsp; 0&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm<br>
+19 17 33&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp;&nbsp; indus<br>
+20&nbsp; 3 12&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 2.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp; indus</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # refit model with new land use variable</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">out2b &lt;- glm(cbind(y,n-y) ~ land.use2 + sewer -1, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out2b)</div>
+<span class="style141">Call:<br>
+glm(formula = cbind(y, n - y) ~ land.use2 + sewer - 1, family = binomial, <br>
+&nbsp;&nbsp;&nbsp; data = wells) </span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -1.5494&nbsp; -1.0623&nbsp; -0.3001&nbsp;&nbsp; 0.3583&nbsp;&nbsp; 1.7330&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  land.use2comm&nbsp;&nbsp; -1.7699&nbsp;&nbsp;&nbsp;&nbsp; 0.4027&nbsp; -4.395 1.11e-05 ***<br>
+  land.use2indus&nbsp; -1.4328&nbsp;&nbsp;&nbsp;&nbsp; 0.3956&nbsp; -3.621 0.000293 ***<br>
+  land.use2inst&nbsp;&nbsp; -2.8810&nbsp;&nbsp;&nbsp;&nbsp; 0.4622&nbsp; -6.233 4.58e-10 ***<br>
+  land.use2recr&nbsp;&nbsp; -2.9745&nbsp;&nbsp;&nbsp;&nbsp; 0.4607&nbsp; -6.456 1.08e-10 ***<br>
+  land.use2resH&nbsp;&nbsp; -1.9062 &nbsp;&nbsp;&nbsp;&nbsp;0.3462&nbsp; -5.507 3.66e-08 ***<br>
+  land.use2resL&nbsp;&nbsp; -2.9810&nbsp;&nbsp;&nbsp;&nbsp; 0.7660&nbsp; -3.892 9.96e-05 ***<br>
+  land.use2resM&nbsp;&nbsp; -2.6230&nbsp;&nbsp;&nbsp;&nbsp; 0.3232&nbsp; -8.116 4.83e-16 ***<br>
+  land.use2rural&nbsp; -4.6878&nbsp;&nbsp;&nbsp;&nbsp; 0.7317&nbsp; -6.407 1.48e-10 ***<br>
+  land.use2trans&nbsp; -2.8475&nbsp;&nbsp;&nbsp;&nbsp; 0.4511&nbsp; -6.313 2.74e-10 ***<br>
+  seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.5770&nbsp;&nbsp;&nbsp;&nbsp; 0.2937&nbsp;&nbsp; 5.369 7.91e-08 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for binomial family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 432.213&nbsp; on 20&nbsp; degrees of freedom<br>
+  Residual deviance:&nbsp; 19.289&nbsp; on 10&nbsp; degrees of freedom<br>
+  AIC: 84.565</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 5</span>
+<p>Notice that AIC tells us that this last model is worse than the previous model.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> AIC(out1)</div>
+<span class="style141"> [1] 82.47647</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> AIC(out2b)</div>
+<span class="style141">[1] 84.56454</span>
+<p>This is an illustration of why  AIC should not always be taken seriously. The previous model yielded an estimated logit with a ridiculous standard error for the undeveloped land use category. Although the estimated logit was very negative it was still not significantly different from zero. A logit of zero corresponds to <em>p</em> = 0.50. So even though the point estimate for the probability of contamination for undeveloped land is near zero  the very wide confidence interval tells us the true value could be any number between 0 and 1. Reporting the estimates from such a model doesn't make any sense </p>
+<h2><a name="dealing"></a>Dealing with categorical predictors that have many categories</h2>
+<p>After collapsing the agricultural and undeveloped land use categories,  land use is now a categorical variable with nine levels. Categorical variables with  a lot of levels are extremely unwieldy to work with. One approach is to work with the variable as is and then in the end carry out a sequence of post hoc comparisons, such as all pairwise comparisons, to see what's different from what. With 9 categories this would mean 36 different pairwise comparisons of which we'd expect at least two significant results just by chance. After carrying out all these tests we would then be faced with the task of making sense of them. </p>
+<p>I find the post hoc testing approach nonsensical, counter-productive, and inconsistent with basic regression modeling strategies. It is also antithetical to the information-theoretic approach to model selection that is very popular in the biological literature (<a href="lecture19.htm">lecture 19</a>). In keeping with the information-theoretic approach I propose that we should  make the re-categorization of the land use variable a part of the model building process itself. To this end I suggest that we fit different models in which the land use variable is categorized in different ways and then use AIC to select the superior categorization. Ideally the re-categorization should be done on theoretical grounds. For instance if we think intensity of land use drives well contamination with TCE then we could try a re-categorization that combines land use categories based on some measure of intensity. Because I don't have any theory to work with here I'm going to use a data-snooping empirical approach. I combine land use categories based on the similarities of their estimated logits. To facilitate this I plot the nine estimated land use logits in a single dot plot.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">dotplot(coef(out2b)[1:9], xlab='Land use logits')</div>
+<p align="center"><img src="../../images/lectures/lecture26/fig2.png" width="408" height="333" alt="fig 2"></p>
+<p align="center" class="styleArial1"><strong>Fig. 5</strong>&nbsp;&nbsp;The predicted logits for different categories of land use</p>
+<p>Without worrying about what's significantly different from what, it's pretty clear that the logits fall into three  groups. The rural category stands alone but then there are five categories all with logits  around &ndash;3 and three categories with logits that are larger than &ndash;2. These last three all seem to represent high intensity land use: commercial, industrial, and high-density residential. The other five perhaps represent an intermediate level of use intensity. I fit the re-categorization models in stages. First I combine the five middle categories.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells$land.use3 &lt;- factor(ifelse(wells$land.use2 %in% c('inst', 'recr', 'resL', 'resM', 'trans'), 'mixed', as.character(wells$land.use2)))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp; y&nbsp; n land.use sewer nitrate chloride land.use2 land.use3<br>
+1&nbsp;&nbsp; 0 17&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+2&nbsp;&nbsp; 0 59&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 0.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+3&nbsp;&nbsp; 0&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; agri&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 0.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+4&nbsp;&nbsp; 2 48&nbsp;&nbsp;&nbsp;&nbsp; agri&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp; &nbsp;7.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+5&nbsp;&nbsp; 0&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 1.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+6&nbsp;&nbsp; 2 21&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 3.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+7&nbsp; 12 43&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+8&nbsp;&nbsp; 5 86&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 2.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+9&nbsp; 33 76&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 5.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH<br>
+10&nbsp; 1 17&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 4.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH<br>
+11&nbsp; 3 26&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 2.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+12&nbsp; 4 38&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; recr &nbsp;&nbsp;&nbsp;&nbsp;mixed<br>
+13&nbsp; 8 32&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+14&nbsp; 0 22&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 0.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+15&nbsp; 7 29&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 66&nbsp;&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+16&nbsp; 1 30&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+17 20 42&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 4.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm<br>
+18&nbsp; 0&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm<br>
+19 17 33&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp;&nbsp;&nbsp; indus<br>
+20&nbsp; 3 12&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 2.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp;&nbsp;&nbsp; indus</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # refit model with new land use variable</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2c &lt;- glm(cbind(y,n-y) ~ land.use3 + sewer-1, data=wells, family=binomial)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # AIC says we have a better model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sapply(list(out2b, out2c), AIC)</div>
+<span class="style141"> [1] 84.56454 77.27980</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sapply(list(out2b, out2c), logLik)</div>
+<span class="style141">[1] -32.28227 -32.63990</span>
+<p>AIC argues for the simpler model. Observe that the log-likelihoods of the two models are barely different. If we were to carry out a likelihood ratio test (legitimate here because the two models are nested) we would fail to find a significant difference.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> anova(out2c, out2b, test='Chisq')</div>
+<span class="style141">Analysis of Deviance Table</span>
+<p><span class="style141">Model 1: cbind(y, n - y) ~ land.use3 + sewer - 1<br>
+  Model 2: cbind(y, n - y) ~ land.use2 + sewer - 1<br>
+  &nbsp; Resid. Df Resid. Dev Df Deviance P(&gt;|Chi|)<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp; 20.004&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp; 19.289&nbsp; 4&nbsp; 0.71526&nbsp;&nbsp;&nbsp; 0.9494</span>
+<p>The summary table of this last model suggests that the three estimated logits from the high intensity use categories are  not very different ranging from &ndash;1.4 to &ndash;1.9. I proceed to combine them into a single category. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out2c)$coefficients</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error&nbsp;&nbsp;&nbsp; z value&nbsp;&nbsp;&nbsp;&nbsp; Pr(&gt;|z|)<br>
+land.use3comm&nbsp; -1.754564&nbsp; 0.3995232&nbsp; -4.391646 1.124957e-05<br>
+land.use3indus -1.419244&nbsp; 0.3928789&nbsp; -3.612421 3.033519e-04<br>
+land.use3mixed -2.788366&nbsp; 0.2617619 -10.652302 1.701053e-26<br>
+land.use3resH&nbsp; -1.891219&nbsp; 0.3425983&nbsp; -5.520224 3.385672e-08<br>
+land.use3rural -4.679524&nbsp; 0.7308714&nbsp; -6.402665 1.526883e-10<br>
+seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.560404&nbsp; 0.2889619&nbsp;&nbsp; 5.400032 6.662912e-08</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # the high use land types all have similar estimates</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells$land.use4 &lt;- factor(ifelse(wells$land.use3 %in% c('resH','comm','indus'), 'high.use', as.character(wells$land.use3)))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp; y&nbsp; n land.use sewer nitrate chloride land.use2 land.use3 land.use4<br>
+1&nbsp;&nbsp; 0 17&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+2&nbsp;&nbsp; 0 59&nbsp;&nbsp;&nbsp; undev&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 0.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+3&nbsp;&nbsp; 0&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; agri&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 0.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+4&nbsp;&nbsp; 2 48&nbsp;&nbsp;&nbsp;&nbsp; agri&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 7.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural&nbsp;&nbsp;&nbsp;&nbsp; rural<br>
+5&nbsp;&nbsp; 0&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 1.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+6&nbsp;&nbsp; 2 21&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 3.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resL&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+7&nbsp; 12 43&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+8&nbsp;&nbsp; 5 86&nbsp;&nbsp;&nbsp;&nbsp; resM&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 2.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;resM&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+9&nbsp; 33 76&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 5.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp; high.use<br>
+10&nbsp; 1 17&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 4.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resH&nbsp; high.use<br>
+11&nbsp; 3 26&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 2.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+12&nbsp; 4 38&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; recr&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+13&nbsp; 8 32&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+14&nbsp; 0 22&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 0.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inst&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+15&nbsp; 7 29&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 4.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 66&nbsp;&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+16&nbsp; 1 30&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp; trans&nbsp;&nbsp;&nbsp;&nbsp; mixed&nbsp;&nbsp;&nbsp;&nbsp; mixed<br>
+17 20 42&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 4.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp; high.use<br>
+18&nbsp; 0&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comm&nbsp; high.use<br>
+19 17 33&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp; yes&nbsp;&nbsp;&nbsp;&nbsp; 3.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp;&nbsp;&nbsp; indus&nbsp; high.use<br>
+20&nbsp; 3 12&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp;&nbsp; 2.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp; indus&nbsp;&nbsp;&nbsp;&nbsp; indus&nbsp; high.use</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # fit the model with three land use categories</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d &lt;- glm(cbind(y,n-y) ~ land.use4 + sewer, data=wells, family=binomial)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # this is the best model so far</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sapply(list(out2b, out2c, out2d), AIC)</div>
+<span class="style141">[1] 84.56454 77.27980 74.77762</span>
+<p>AIC chooses the simplest model with just three land use categories. A likelihood ratio test agrees.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> anova(out2d, out2c, test='Chisq') </div>
+<span class="style141">Analysis of Deviance Table</span>
+<p><span class="style141">Model 1: cbind(y, n - y) ~ land.use4 + sewer - 1<br>
+  Model 2: cbind(y, n - y) ~ land.use3 + sewer - 1<br>
+  &nbsp; Resid. Df Resid. Dev Df Deviance P(&gt;|Chi|)<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp; 21.502&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp; 20.004&nbsp; 2&nbsp;&nbsp; 1.4978&nbsp;&nbsp;&nbsp; 0.4729</span>
+<p>Finally I refit this model without an intercept to obtain the estimated logits of the individual land use categories and their confidence intervals.</p>
+
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # refit the model obtaining separate land use  estimates</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2e &lt;- glm(cbind(y,n-y) ~ land.use4 + sewer -1, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2e)</div>
+<span class="style141">  land.use4high.use&nbsp;&nbsp;&nbsp; land.use4mixed&nbsp;&nbsp;&nbsp; land.use4rural&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.725217&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.774902&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -4.669765&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.540770</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> confint(out2e)</div>
+<span class="style141">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp; 97.5 %<br>
+  (Intercept)&nbsp;&nbsp;&nbsp; -2.338665 -1.160706<br>
+  land.use4mixed -1.519613 -0.587796<br>
+  land.use4rural -4.780182 -1.718357<br>
+seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.995094&nbsp; 2.130452</span>
+<p>As a final test of model adequacy I try adding an interaction between land use and sewer.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # fit the two-factor interaction model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2f &lt;- glm(cbind(y,n-y) ~ land.use4*sewer, data=wells, family=binomial)</div>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # compare the models with a likelihood ratio test</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> anova(out2d, out2f, test='Chisq')</div>
+<span class="style141">Analysis of Deviance Table</span>
+<p><span class="style141">Model 1: cbind(y, n - y) ~ land.use4 + sewer<br>
+  Model 2: cbind(y, n - y) ~ land.use4 * sewer<br>
+  &nbsp; Resid. Df Resid. Dev Df Deviance P(&gt;|Chi|)<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp; 21.502&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14&nbsp;&nbsp;&nbsp;&nbsp; 18.081&nbsp; 2&nbsp;&nbsp; 3.4206&nbsp;&nbsp;&nbsp; 0.1808</span>
+<p>The interaction term is not significant so we can stay with  the main effects model. We come to the same conclusion if we use AIC to select the final model.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # AIC agrees with significance testing here</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sapply(list(out2e, out2f), AIC)</div>
+<span class="style141">[1] 74.77762 75.35699</span>
+<h2><a name="cited"></a>Cited references</h2>
+<ul>
+  
+  <li>Agresti, Alan. 2002. <i>Categorical Data Analysis</i>. Wiley: New York.</li>
+  <li>Brown, L. D., T. T. Cai, and A.DasGupta. 2001. Interval estimation for a binomial proportion.<em> Statistical Science</em> <strong>16</strong>: 101&ndash;133.  </li>
+  <li>Eckhardt, D. A. Flipse, W. J., and Oaksford, E. T. 1989. Relation between land use and ground-quality in the upper glacial aquifer in Nassau and Suffolk Counties, Long Island. Water-Resources Investigations Report no. 86-4142. US Geological Survey, Syosset, NY.</li>
+  <li>Fijorek, K. and A. Sokolowski. 2012. Separation-resistant and bias-reduced logistic regression: STATISTICA Macro. <em>Journal of Statistical Software</em> <strong>47</strong>: Code Snippet 2, 1&ndash;12.
+  </li>
+  <li>
+    Firth, D. 1993. Bias reduction of maximum likelihood estimates. <em>Biometrika</em> <strong>80</strong>: 27&ndash;38.
+  </li>
+  <li>Gelman, Andrew, Aleks Jakulin, Maria Grazia Pittau, and Yu-Sing Su. 2008. A weakly informative default prior distribution for logistic and other regression models. <em>The Annals of Applied Statistics</em> <strong>2</strong>: 1360&ndash;1383. </li>
+  <li>
+   Heinze, G. and M. Schemper. 2002. A solution to the problem of separation in logistic regression. <em>Statistics in Medicine</em> <strong>21</strong>: 2409&ndash;2419.
+  </li>
+  <li>
+    Mehta, C.&nbsp;R. and N.&nbsp;R. Patel. 1995. Exact logistic regression: theory and examples. <em>Statistics in Medicine</em> <strong>14</strong>: 2143&ndash;2160.
+  </li>
+  <li>Piegorsch, Walter W. and A. John Bailer. 2005.<em> Analyzing Environmental Data</em>. Wiley.</li>
+  <li>
+    Venkataraman, G. and V. Ananthanarayanan. 2008. Demystifying &ldquo;exact&rdquo; logistic regression for pathologists. <em>Journal of Clinical Pathology</em> <strong>61</strong>: 237&ndash;238. 
+  </li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture26&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 30, 2012<br>
+      URL: <a href="lecture26.htm#lecture26" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture26.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

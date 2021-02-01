@@ -1,0 +1,385 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 6&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign6" id="assign6"></a>Assignment 6&mdash;Solution</h1>
+<h2>Question 1 </h2>
+<p>This is a simple split plot design with two levels. Pond is the whole plot unit and the six observations  obtained from each pond (the clutches of eggs) are the split plot units. The variable &quot;species&quot; only varies between ponds and hence is a whole plot treatment. Depth and season vary within a pond and are split plot treatments. At the split plot level we have a crossed two-factor design in which depth and season are paired in all possible (six) ways. We can imagine that potential locations in a given pond were classified as deep and shallow. Three of the deep sites were randomly selected and three of the shallow sites were randomly selected. The three sites at each depth were then randomly assigned to season. (In a true crossed experimental design we would randomly choose six observations and these would then be assigned one of the six unique treatment combinations of depth and season.)</p>
+<p>Without species this is just a randomized block design in which pond is the blocking variable where within each block we have six treatments obtained by combining the two factors season and depth in all possible combinations. When we add species, a variable that only varies  between blocks (ponds), we have a split plot design.  </p>
+<p>The only other intelligible interpretation of this design is as a split plot design with a repeated measures design at the split plot level. For this design to hold you'd have to assume that there were only two locations  used in each pond, one deep and one shallow. These two locations were then followed over time being measured repeatedly at season = 'early', 'middle', and 'late'. The hints to this problem essentially tell you to reject this as a possible design.</p>
+<h2>Question 2</h2>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fisheggs &lt;- read.delim(&quot;fisheggs.txt&quot;)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fisheggs[1:4,]</div>
+<span class="style24">  &nbsp; sodium pond species season&nbsp;&nbsp; depth<br>
+  1&nbsp;&nbsp;&nbsp; 254&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; early shallow<br>
+  2&nbsp;&nbsp;&nbsp; 257&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; early&nbsp;&nbsp;&nbsp; deep<br>
+  3&nbsp;&nbsp;&nbsp; 249&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 middle shallow<br>
+4&nbsp;&nbsp;&nbsp; 246&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 middle&nbsp;&nbsp;&nbsp; deep</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model1 &lt;- lme(sodium~factor(species)*season*depth, random=~1|pond, data=fisheggs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(model1)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 20 3600.999&nbsp; &lt;.0001<br>
+  factor(species)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11.080&nbsp; 0.0291<br>
+  season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp; 36.168&nbsp; &lt;.0001<br>
+  depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 5.067&nbsp; 0.0358<br>
+  factor(species):season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 3.960&nbsp; 0.0356<br>
+  factor(species):depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 0.126&nbsp; 0.7260<br>
+  season:depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 0.285&nbsp; 0.7547<br>
+  factor(species):season:depth&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 0.117&nbsp; </span><span class="style25">0.8902
+  </span>
+<p>The three-factor interaction is not significant. Of the two-factor interactions it appears that only the species &times; season interaction is significant. We can explore this further by dropping the three-factor interaction and then obtaining the marginal tests from <span class="style4">lme</span>. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model1a &lt;- update(model1, .~. - factor(species):season:depth)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(model1a, type='marginal')</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp;&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 22 1955.8191&nbsp; &lt;.0001<br>
+  factor(species)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 13.6370&nbsp; 0.0210<br>
+  season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp; 25.8803&nbsp; &lt;.0001<br>
+  depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp; 2.3846&nbsp; 0.1368<br>
+  factor(species):season&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp; 4.3054&nbsp; 0.0264<br>
+  factor(species):depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp; 0.1374&nbsp; 0.7145<br>
+season:depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp; 0.3103&nbsp; 0.7364</span>
+<p>In truth because of the balanced design the marginal tests of the two-factor interactions are the same as the sequential tests. In any case it appears we can drop all of the two-factor interactions except species &times; season.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model2 &lt;- lme(sodium~factor(species)*season + depth, random=~1|pond, data=fisheggs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(model2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 25 3600.999&nbsp; &lt;.0001<br>
+  factor(species)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; &nbsp;&nbsp;&nbsp;4&nbsp;&nbsp; 11.080&nbsp; 0.0291<br>
+  season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp; 43.199&nbsp; &lt;.0001<br>
+  depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp; 6.052&nbsp; 0.0211<br>
+factor(species):season&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp; 4.730&nbsp; 0.0181</span>
+<p>So our final model includes the main effect of depth and an interaction between season and species.
+</p>
+<h2>Question 3</h2>
+<p>The set-up using <span class="style4">aov</span> is nearly the same. We just replace <span class="style81">random=~1|pond</span> with <span class="style81">Error(factor(pond))</span>. It's important that we use <span class="style81">factor(pond)</span> because otherwise <span class="style4">aov</span> treats pond as continuous when setting up tests and interactions.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.aov &lt;- aov(sodium~factor(species)*season*depth + Error(factor(pond)), data=fisheggs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(out.aov)</div>
+<span class="style24">Error: factor(pond)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value Pr(&gt;F)&nbsp; <br>
+  factor(species)&nbsp; 1&nbsp;&nbsp; 6110&nbsp;&nbsp;&nbsp; 6110&nbsp;&nbsp; 11.08 0.0291 *<br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 2206&nbsp;&nbsp;&nbsp;&nbsp; 551&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Error: Within<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 1288.4&nbsp;&nbsp; 644.2&nbsp; 36.168 2.27e-07 ***<br>
+  depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 90.2&nbsp;&nbsp;&nbsp; 90.2&nbsp;&nbsp; 5.067&nbsp;&nbsp; 0.0358 *&nbsp; <br>
+  factor(species):season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 141.1&nbsp;&nbsp;&nbsp; 70.5&nbsp;&nbsp; 3.960&nbsp;&nbsp; 0.0356 *&nbsp; <br>
+  factor(species):depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2.3&nbsp;&nbsp;&nbsp;&nbsp; 2.3&nbsp;&nbsp; 0.126&nbsp;&nbsp; 0.7260&nbsp;&nbsp;&nbsp; <br>
+  season:depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 10.2&nbsp;&nbsp;&nbsp;&nbsp; 5.1&nbsp;&nbsp; 0.285&nbsp;&nbsp; 0.7547&nbsp;&nbsp;&nbsp; <br>
+  factor(species):season:depth&nbsp; 2&nbsp;&nbsp;&nbsp; 4.2&nbsp;&nbsp;&nbsp; &nbsp;2.1&nbsp;&nbsp; 0.117&nbsp;&nbsp; 0.8902&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp; 356.2&nbsp;&nbsp;&nbsp; 17.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<h2>Question 4</h2>
+<p>I start by obtaining the population average estimates of the means.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">fisheggs$pred &lt;- predict(model2, level=0)</div>
+<p>Because season is an ordinal variable I choose to display it on the <em>x</em>-axis. I reset the  levels of the season variable so that they're in time order.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> levels(fisheggs$season)</div>
+ <span class="style24"> [1] &quot;early&quot;&nbsp; &quot;late&quot;&nbsp;&nbsp; &quot;middle&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fisheggs$season &lt;- factor(fisheggs$season, levels=c('early','middle','late'))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> levels(fisheggs$season)</div>
+<span class="style24">[1] &quot;early&quot;&nbsp; &quot;middle&quot; &quot;late&quot;</span>
+<p>Much of the code from <a href="../lectures/lecture10.htm#density">lecture 10</a> can be used here with minimal modification. For the conditioning variables I specify them in the order depth + species so that  species varies within a row to facilitate detecting the nature of the species &times; season interaction. I also improve the labeling of the species variable in the plot and add appropriate labels.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(sodium~season|factor(species, levels=1:2, labels=paste(&quot;Species &quot;, 1:2, sep='')) + depth, ylab=expression(paste('Sodium content ', (paste(mu, 'mol')/'g'), sep='')), xlab='Season', data=fisheggs, groups=pond, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.superpose(x, y, subscripts, groups, col='grey70', ...)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x[1:3], fisheggs$pred[subscripts][1:3], col=2, pch=8, type='o')})</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(latticeExtra)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> xyplot(sodium~season|factor(species, levels=1:2, labels=paste(&quot;Species &quot;, 1:2, sep='')) + depth, ylab=expression(paste('Sodium content ', (paste(mu, 'mol')/'g'), sep='')), xlab='Season', data=fisheggs, groups=pond, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.superpose(x, y, subscripts, groups, col='grey70', ...)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x[1:3], fisheggs$pred[subscripts][1:3], col=2, pch=8, type='o')}) -&gt; graph1</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> useOuterStrips(graph1)</div><br>
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center"><img src="../../images/assignments/assignment6/fig1.png" width="465" height="340" alt="Fig. 1">&nbsp;&nbsp;&nbsp;</div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Population average mean response (<img src="../../images/assignments/assignment6/star.gif" alt="star" width="37" height="18" align="absmiddle">) and raw data (&ndash;o&ndash;) from the split plot design.</td>
+  </tr>
+</table>
+<p>While the interaction between season and species is more or less apparent in Fig. 1, it might be preferable to show both species profiles for a given depth in the same panel. The following code only conditions on depth and plots the profiles for both species in the same panel. It accomplishes this by subsetting the data by species within the panel function. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(sodium~season|depth, ylab=expression(paste('Sodium content ', (paste(mu,'mol')/'g'), sep='')), xlab='Season', data=fisheggs, groups=pond, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.superpose(x, y, subscripts, groups, col=c(rep('grey70',3), rep('pink2',3)),...)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # select predictions and species observations for the current panel</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> cur.pred &lt;- fisheggs$pred[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> cur.sp &lt;- fisheggs$species[subscripts]</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # select species 1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> p1 &lt;- cur.pred[cur.sp==1]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x[1:3], p1[1:3], col=1, pch=8, type='o', lwd=2)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # select species 2</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> p1 &lt;- cur.pred[cur.sp==2]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> panel.xyplot(x[1:3], p1[1:3], col=2, pch=8, type='o', lwd=2)},</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> key=list(x=.75, y=.85, corner=c(0,0), lines=list(lty=1, col=c(1,2), size=2, lwd=2), text=list(c('Species 1', 'Species 2'), cex=.9)))</div>
+<br>
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment6/fig2.png" width="460" height="340" alt="Fig. 2"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Population average mean response (<img src="../../images/assignments/assignment6/star.gif" alt="star" width="37" height="18" align="absmiddle">) and raw data (&ndash;o&ndash;) from the split plot design.</td>
+  </tr>
+</table>
+<h2>Question 5</h2>
+<p>I convert the season variable to a numeric variable (the factor levels are coded 1, 2, and 3) and refit the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model1.num &lt;- lme(sodium~factor(species)*as.numeric(season)*depth, random=~1|pond, data=fisheggs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(model1.num)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 24 3600.999&nbsp; &lt;.0001<br>
+  factor(species)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11.080&nbsp; 0.0291<br>
+  as.numeric(season)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp; 78.435&nbsp; &lt;.0001<br>
+  depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp; 5.611&nbsp; 0.0262<br>
+  factor(species):as.numeric(season)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp; 8.715&nbsp; 0.0070<br>
+  factor(species):depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp; 0.140&nbsp; 0.7117<br>
+  as.numeric(season):depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; &nbsp;24&nbsp;&nbsp;&nbsp; 0.508&nbsp; 0.4830<br>
+  factor(species):as.numeric(season):depth&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp; 0.259&nbsp; 0.6154</span>
+
+<p>We get the same pattern as before, a significant main effect due to depth and a significant interaction between season and species.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model2.num &lt;- lme(sodium~factor(species)*as.numeric(season) + depth, random=~1|pond, data=fisheggs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(model2.num)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 27 3600.999&nbsp; &lt;.0001<br>
+  factor(species)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 11.080&nbsp; 0.0291<br>
+  as.numeric(season)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp; 85.027&nbsp; &lt;.0001<br>
+  depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp; 6.083&nbsp; 0.0203<br>
+factor(species):as.numeric(season)&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp; 9.447&nbsp; 0.0048</span>
+<p>I obtain the predictions from this model and add them to the graph of Fig. 1</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(sodium~season|factor(species, levels=1:2, labels=paste(&quot;Species &quot;, 1:2, sep='')) + depth, ylab=expression(paste('Sodium content ', (paste(mu, 'mol')/'g'), sep='')), xlab='Season', data=fisheggs, groups=pond, type='o', panel=function(x, y, subscripts, groups, ...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x, y, subscripts, groups, col='grey70', ...)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # predictions of factor season model</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x[1:3], fisheggs$pred[subscripts][1:3], col=2, pch=8, type='o')</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # predictions of linear season model</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x[1:3], fisheggs$pred2[subscripts][1:3], col=4, lty=2, type='l')},</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">key=list(x=.7, y=.84, corner=c(0,0), lines=list(lty=c(1,2), col=c(2,4), size=2), text=list(c('factor season', 'linear season'), cex=.9))) -&gt; mygraph2</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> useOuterStrips(mygraph2)</div><br>
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment6/fig3.png" width="465" height="340" alt="Fig. 3"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;&nbsp;Comparing the population average mean response for a factor season model and a numeric season model.</td>
+  </tr>
+</table>
+
+<h2>Question 6</h2>
+<p>I redo Fig. 2 using the linear model instead of the factor model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(sodium~season|depth, data=fisheggs,  ylab=expression(paste('Sodium content ', (paste(mu,'mol')/'g'), sep='')), xlab='Season', groups=pond, type='o', panel=function(x, y, subscripts, groups,...){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.superpose(x, y, subscripts, groups, col=c(rep('grey70',3), rep('pink2',3)), ...)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # subset variables for current panel</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">cur.pred &lt;- fisheggs$pred2[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">cur.sp &lt;- fisheggs$species[subscripts]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  cur.depth &lt;- fisheggs$depth[subscripts]</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # select species 1</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">p1 &lt;- cur.pred[cur.sp==1]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x[1:3], p1[1:3], col=1, type='l', lwd=2)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # select species 2</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">p2 &lt;- cur.pred[cur.sp==2]</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x[1:3], p2[1:3], col=2, type='l', lwd=2)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # label the distance between the mean profiles</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">if(cur.depth[1]=='deep') {</div>
+<div class="style15" style="padding-left: 90px; text-indent:-30px"> # season = early</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  panel.arrows(as.numeric(x[1])-.05, p1[1]-.9, as.numeric(x[1])-.05, p2[1]+.9, angle=45, length=0.075, code=3, col='dodgerblue')</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  panel.text(x[1], (p1[1]+p2[1])/2, labels=30.89, col='dodgerblue',cex=.75, pos=2, offset=.65)</div>
+<div class="style15" style="padding-left: 90px; text-indent:-30px"> # season = late</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  panel.arrows(as.numeric(x[3])+.05, p1[3]-.75, as.numeric(x[3])+.05, p2[3]+.75, angle=45, length=0.075, code=3, col='dodgerblue')</div>
+<div class="style23" style="padding-left: 90px; text-indent:-30px">  panel.text(x[3],(p1[3]+p2[3])/2, labels=21.22, col='dodgerblue', cex=.75, pos=4, offset=.65)}</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  },
+key=list(x=.75,y=.85,corner=c(0,0), lines=list(lty=1, col=c(1,2), size=2, lwd=2), text=list(c('Species 1','Species 2'), cex=.9)))</div><br>
+
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/assignment6/fig4.png" width="465" height="340" alt="fig. 4"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 4</strong> &nbsp;&nbsp;Population average mean responses (<span class="style4">&mdash;</span>) and raw data (&ndash;o&ndash;) for a model in which season is treated as a numeric variable with equally spaced categories.</td>
+  </tr>
+</table>
+<p>From the graph we see that there are two differences between the  species.</p>
+<ol>
+  <li>The eggs of species 2 have consistently lower sodium levels than do those of species 1.</li>
+  <li>The rate of decline of egg sodium level over the course of the season is greater for species 1 (steeper slope) than it is for species 2.</li>
+</ol>
+<p>The summary table of the model is shown below.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(model2.num)$tTable,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value Std.Error DF t-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;268.806&nbsp;&nbsp;&nbsp;&nbsp; 5.999 27&nbsp; 44.805&nbsp;&nbsp; 0.000<br>
+  factor(species)2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -35.722&nbsp;&nbsp;&nbsp;&nbsp; 8.436&nbsp; 4&nbsp; -4.235&nbsp;&nbsp; 0.013<br>
+  as.numeric(season)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -9.667&nbsp;&nbsp;&nbsp;&nbsp; 1.112 27&nbsp; -8.694&nbsp;&nbsp; 0.000<br>
+  depthshallow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -3.167&nbsp;&nbsp;&nbsp;&nbsp; 1.284 27&nbsp; -2.466&nbsp;&nbsp; 0.020<br>
+  factor(species)2:as.numeric(season)&nbsp;&nbsp; 4.833&nbsp;&nbsp;&nbsp;&nbsp; 1.572 27&nbsp;&nbsp; 3.074&nbsp;&nbsp; 0.005</span>
+
+<p>The estimated model is</p>
+<p align="center"><img src="../../images/assignments/assignment6/model.gif" width="698" height="38"></p>
+<p>Because the first numerical value of season is 1 the estimates of the intercept and the species main effect are not directly interpretable in this model. The intercept and the species main effect correspond to when season = 0, a value that is outside the range of the data. Even worse it is unclear what season = 0 could possibly mean given that season actually represents &quot;early&quot;, &quot;middle&quot;, and &quot;late&quot; , values that  we are assuming  are equally spaced.</p>
+<p>To make the intercept interpretable we should   code the numeric season variable so that zero corresponds to the level season = 'early'.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> model2a.num &lt;- lme(sodium~factor(species)*I(as.numeric(season)-1) + depth, random=~1|pond, data=fisheggs)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> round(summary(model2a.num)$tTable,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value Std.Error DF t-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 259.139&nbsp;&nbsp;&nbsp;&nbsp; 5.682 27&nbsp; 45.608&nbsp;&nbsp; 0.000<br>
+  factor(species)2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -30.889&nbsp;&nbsp;&nbsp;&nbsp; 7.984&nbsp; 4&nbsp; -3.869&nbsp;&nbsp; 0.018<br>
+  I(as.numeric(season) - 1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-9.667&nbsp;&nbsp;&nbsp;&nbsp; 1.112 27&nbsp; -8.694&nbsp;&nbsp; 0.000<br>
+  depthshallow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -3.167&nbsp;&nbsp;&nbsp;&nbsp; 1.284 27&nbsp; -2.466&nbsp;&nbsp; 0.020<br>
+factor(species)2:I(as.numeric(season) - 1)&nbsp;&nbsp; 4.833&nbsp;&nbsp;&nbsp;&nbsp; 1.572 27&nbsp;&nbsp; 3.074&nbsp;&nbsp; 0.005</span>
+<p align="center"><img src="../../images/assignments/assignment6/model2.gif" width="772" height="38"></p>
+<p>Now we see that when season = 1 ('early') the sodium content of species 2 eggs is 30.9 units below that of species 1 eggs (the value of &beta;<sub>1</sub>). During the course of the season the sodium content of species 1 eggs decreases at a rate of 9.67 &micro;mol/g per unit time (&beta;<sub>2</sub>), but the sodium content of species 2 eggs decreases at a rate of 4.83  &micro;mol/g per unit time, obtained by adding the season effect to the season &times; species interaction (&beta;<sub>2</sub> + &beta;<sub>4</sub>). (Note: it is entirely fortuitous that the rate for species 2, &beta;<sub>2</sub> + &beta;<sub>4</sub>, and the difference in the rates between species 1 and species 2, &beta;<sub>2</sub>, are  the same.)</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fixef(model2a.num)[3] + fixef(model2.num)[5]</div>
+<span class="style24">  I(as.numeric(season) - 1) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -4.833333</span>
+<p>When season = 1 ('early') the mean sodium content of the eggs of the two species differs by &beta;<sub>1</sub> = 30.89 &micro;mol/g. When season = 3 ('late') the mean sodium content of the eggs differs by only &beta;<sub>1</sub> + (3 &ndash; 1)&beta;<sub>4</sub> = 21.22 &micro;mol/g. We can also calculate this difference by subtracting the prediction of species 2 from species 1 when season = 3.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> stuff &lt;- data.frame(season=c(3,3), depth=c('shallow','shallow'), species=c(1,2))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.late &lt;- predict(model2a.num, newdata=stuff, level=0)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.late</div>
+<span class="style24">  [1] 236.6389 215.4167<br>
+  attr(,&quot;label&quot;)<br>
+  [1] &quot;Predicted values&quot;</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.late[2]-out.late[1]</div>
+<span class="style24">[1] -21.22222</span><br>
+<p>Table 1  summarizes the estimated differences between the species.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=350 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><strong>Table 1 &nbsp;</strong> Estimated species effects on egg sodium content<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+<div align="center">
+  <table width="625" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=all>
+    <colgroup>
+    </colgroup>
+    <colgroup></colgroup><colgroup></colgroup>
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td colspan="2" align="center" scope="col"><strong>Characteristic</strong></td>
+        <td width="175" align="center"  scope="col"><strong>Difference: <br>
+          Species 2 &ndash; Species 1</strong></td>
+        <td width="68" align="center"  scope="col"><strong>Species 1</strong></td>
+        <td width="72" align="center"  scope="col"><strong>Species 2</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td colspan="2" align="center">Rate of change of egg sodium content over time (&mu;mol/g/time)</td>
+        <td align="center"> &nbsp;&nbsp;&nbsp;4.83 </td>
+        <td align="center">&ndash;9.67</td>
+        <td align="center">&ndash;4.83</td>
+      </tr>
+      <tr >
+        <td width="177"  rowspan="2" align="center"><p>Egg sodium content <br>
+        (&mu;mol/g )       </p></td>
+        <td width="116"   align="center">Season = 'early'</td>
+        <td align="center">&ndash;30.89 </td>
+        <td colspan="2" rowspan="2" align="center">varies with depth</td>
+      </tr>
+      <tr >
+        <td align="center"><p>Season = 'late'</p></td>
+        <td align="center">&ndash;21.22 </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment6/hw6scores.png" width="395" height="230" alt="hw 6"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 21, 2012<br>
+      URL: <a href="assign6.htm#assign6">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign6.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

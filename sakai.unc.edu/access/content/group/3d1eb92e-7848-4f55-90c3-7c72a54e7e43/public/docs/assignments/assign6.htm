@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 6</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style22 {color: #663366; font-weight: bold; }
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style36 {font-size: larger}
+
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+.border-side {
+  border-left: solid 1px black;
+}
+.border-bottom {
+  border-bottom: solid 1px black;
+} 
+
+td, th {
+  border-left: solid 1px black;
+} 
+
+.no-border {
+  border-left: none;
+} 
+
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"> <a name="assign6" id="assign6"></a>Assignment 6 </h1>
+<h2>Due Date </h2>
+
+  <p>Friday, October 12, 2012</p>
+
+<h2>Data Source </h2>
+
+  <p>The data for this assignment is <a href="../../data/fisheggs.txt">fisheggs.txt</a>,  a tab-delimited text file.</p>
+  <h2>Background</h2>
+  <p>The data are from Zar (1999), p. 302. The file <a href="../../data/fisheggs.txt">fisheggs.txt</a> records the sodium content (<em>&mu;</em>mol/g dry weight) of freshly laid fish eggs that were collected from six ponds  in three seasons and at two water depths for two fish species.  Six measurements were obtained from each of the six ponds. Fish species 1 was  used  in   ponds 1, 2, and 3 while fish species 2 was used in ponds 4, 5, and 6. The organization of the data is shown below.</p>
+<div align="center">
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td valign=top  class="styleArial no-border" style="padding-left: 72px; text-indent:-62px" ><strong>Table 1 &nbsp;</strong> Sodium content  (<em>&mu;</em>mol/g) of fish eggs from six different ponds<a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/code/R&#32;code&#32;hot&#32;days.html#gam"></a></td>
+  </tr>
+</table>
+  <table width="500" border="1" align="center" cellpadding=2 cellspacing=0 frame=box rules=groups>
+
+    <thead>
+      <tr  bgcolor="#F1D2D8">
+        <td width="60" rowspan="3" align="center" scope="col"><strong>Species</strong></td>
+        <td width="44" rowspan="3" align="center" scope="col"><strong>Pond</strong></td>
+        <td colspan="6" align="center" scope="col"><strong>Season</strong></td>
+      </tr>
+      <tr  bgcolor="#F1D2D8" class="border-bottom">
+        <td colspan="2" align="center" scope="col" >Early</td>
+        <td colspan="2" align="center" scope="col" class="no-border">Middle</td>
+        <td colspan="2" align="center" scope="col" class="no-border">Late</td>
+      </tr>
+      <tr  bgcolor="#F1D2D8">
+        <td width="44" align="center" scope="col">Shallow</td>
+        <td width="44" align="center" scope="col" class="no-border">Deep</td>
+        <td width="44" align="center" scope="col">Shallow</td>
+        <td width="44" align="center" scope="col" class="no-border">Deep</td>
+        <td width="44" align="center" scope="col">Shallow</td>
+        <td width="44" align="center" scope="col" class="no-border">Deep</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td align="center">1</td>
+        <td align="center">1</td>
+        <td align="center">254</td>
+        <td align="center" class="no-border">257</td>
+        <td align="center">249</td>
+        <td align="center" class="no-border">246</td>
+        <td align="center">236</td>
+        <td align="center" class="no-border">241</td>
+      </tr>
+      <tr >
+        <td align="center">&nbsp;</td>
+        <td align="center">2</td>
+        <td align="center">261</td>
+        <td align="center" class="no-border">268</td>
+        <td align="center">257</td>
+        <td align="center" class="no-border">263</td>
+        <td align="center">249</td>
+        <td align="center" class="no-border">252</td>
+      </tr>
+      <tr>
+        <td align="center">&nbsp;</td>
+        <td align="center">3</td>
+        <td align="center">248</td>
+        <td align="center" class="no-border">253</td>
+        <td align="center">239</td>
+        <td align="center" class="no-border">242</td>
+        <td align="center">226</td>
+        <td align="center" class="no-border">221</td>
+      </tr>
+      <tr bgcolor="#F2F2F2">
+        <td align="center">2</td>
+        <td align="center">4</td>
+        <td align="center">227</td>
+        <td align="center" class="no-border">226</td>
+        <td align="center">221</td>
+        <td align="center" class="no-border">218</td>
+        <td align="center">219</td>
+        <td align="center" class="no-border">226</td>
+      </tr>
+      <tr bgcolor="#F2F2F2">
+        <td align="center">&nbsp;</td>
+        <td align="center">5</td>
+        <td align="center">233</td>
+        <td align="center" class="no-border">239</td>
+        <td align="center">229</td>
+        <td align="center" class="no-border">235</td>
+        <td align="center">222</td>
+        <td align="center" class="no-border">224</td>
+      </tr>
+      <tr bgcolor="#F2F2F2" >
+        <td align="center">&nbsp;</td>
+        <td align="center">6</td>
+        <td align="center">212</td>
+        <td align="center" class="no-border">220</td>
+        <td align="center">214</td>
+        <td align="center" class="no-border">220</td>
+        <td align="center">203</td>
+        <td align="center" class="no-border">205</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 align="left">Questions</h2>
+<ol>
+  <li>Explain  the experimental design that was used here. Clearly identify the different kinds of experimental units and treatments using the language that is appropriate for this design.</li>
+  <li>Analyze the manner in which species, depth, and season  affected  the  sodium content of fish eggs.</li>
+  <li><strong>Bonus question.</strong> Because the data of this experiment are perfectly balanced the analysis can also be done using the <span class="style1">aov</span> function of R. Show how your starting model in Question 2 can be fit using the aov function.</li>
+  <li>Prepare a graph that summarizes the results of your analysis.</li>
+  <li>Assume that the three values of the season variable are equally spaced in time. Refit your final model from question 2 but this time treat season as a continuous variable with equally spaced values. Superimpose your final continuous season model on the graph of Question 4.</li>
+  <li>Interpret your final model of Question 5. In terms of this model how does the sodium content of the eggs of the two species differ? Give both a qualitative and a quantitative answer.</li>
+</ol>
+<h2>Hints</h2>
+
+  <ol>
+    <li>By the way I've constructed Table 1 I mean for you to assume that there is no connection between the season and the depth, i.e., in each of the three seasons two new random locations were selected&mdash;one deep and one shallow&mdash;in each of the six ponds. Thus you can view season and pond as crossed factors.</li>
+    <li>Question 3 is a bonus question; it is not required. If you manage to fit both the <span class="style1">aov</span> model  and the starting model in Question 2 correctly, the results should match exactly. Be sure when you're fitting the <span class="style1">aov</span> model that any categorical variable that has numeric levels is declared to be a factor.</li>
+  </ol>
+<h2>Cited references</h2>
+<ul>
+  <li>Zar, Jerrold H. 1999. <em>Biostatistical Analysis</em> (4th edition). Upper Saddle River, New Jersey: Prentice Hall.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 8, 2012<br>
+      URL: <a href="assign6.htm#assign6" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/assign6.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

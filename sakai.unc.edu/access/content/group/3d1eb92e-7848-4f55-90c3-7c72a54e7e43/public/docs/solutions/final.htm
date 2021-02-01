@@ -1,0 +1,859 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Final Exam&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style261 {font-family: "Courier New", Courier, mono}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+.style16 {font-weight: bold; color: #993333; }
+.style101 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="final" id="final"></a>Final Exam&mdash;Solution</h1>
+<h2 align="left" class="style16">Problem 1</h2>
+
+<h3>Question 1</h3>
+<p>We need to fit a Poisson random intercepts model so we can adapt the comparable code from <a href="../lectures/lecture25.htm#random">lecture 25</a>. The variable <span class="style81">Season</span> is the grouping variable for the random effects. I read in the data and create the objects needed for WinBUGS and JAGS.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">bycatch &lt;- read.csv('ecol 563/bycatch.csv')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  y &lt;- bycatch$Bycatch</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  area &lt;- as.numeric(bycatch$Area=='North')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  gear &lt;- as.numeric(bycatch$Gear.Type=='Bottom')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  time &lt;- as.numeric(bycatch$Time=='Day')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  logtows &lt;- log(bycatch$Tows)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  season &lt;- as.numeric(bycatch$Season)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  J &lt;- length(unique(season))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">n &lt;- length(y)</div>
+<p>The BUGS program is shown below.</p>
+<table width="700" border="1" align="center" cellpadding="1" cellspacing="0">
+  <tr bgcolor="#F1D2D8">
+    <td><div align="center"><strong>BUGS model <span class="style44"> (manlybugs.txt)</span></strong></div></td>
+  </tr>
+  <tr>
+    <td class="style261">model{<br>
+      for(i in 1:n) {<br>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">y[i]~dpois(mu.hat[i])</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">log.mu[i] &lt;- a[season[i]] + b1*area[i] + b2*gear[i] + b3*time[i] + b4*logtows[i]</div>
+      <div class="style261" style="padding-left: 50px; text-indent:-30px">mu.hat[i] <- exp(log.mu[i])</div>
+      }<br>
+      <span class="style151">#level-2 model</span><br>
+      for(j in 1:J){<br>
+<div class="style261" style="padding-left: 50px; text-indent:-30px">a[j]~dnorm(mu.a,tau.a)</div>
+        }<span class="style421"><br>
+          </span> <span class="style151">#priors</span><br>
+      <span class="style103">mu.a~dnorm(0,.000001)<br>
+        tau.a &lt;- pow(sigma.a,-2)<br>
+        sigma.a~dunif(0,10000)</span><br>
+      b1~dnorm(0,.000001)<br>
+      b2~dnorm(0,.000001)<br>
+      b3~dnorm(0,.000001)<br>
+      b4~dnorm(0,.000001) <br>
+      }
+      </p></td>
+  </tr>
+</table><br>
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px">setwd(&quot;/Users/jackweiss/Documents/Ecol 563 Fall 2012 stuff/models&quot;)</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> manly.data &lt;- list(&quot;y&quot;, &quot;area&quot;, &quot;gear&quot;, &quot;time&quot;, &quot;logtows&quot;, &quot;n&quot;, &quot;season&quot;, &quot;J&quot;)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> manly.inits &lt;- function() {list(a=rnorm(J), b1=rnorm(1), b2=rnorm(1), b3=rnorm(1), b4=rnorm(1), mu.a=rnorm(1), sigma.a=runif(1))}</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">manly.parms &lt;- c(&quot;a&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;b3&quot;, &quot;b4&quot;, &quot;mu.a&quot;, &quot;sigma.a&quot;)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># WinBUGS run</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">library(arm)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> manly1.bugs &lt;- jags(manly.data, manly.inits, manly.parms, &quot;manlybugs.txt&quot;, bugs.directory='C:/WinBUGS14', n.chains=3, n.iter=100, debug=T)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># JAGS run</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">library(R2jags)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> manly1.jags &lt;- jags(manly.data, manly.inits, manly.parms, &quot;manlybugs.txt&quot;, n.chains=3, n.iter=100)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">manly1.jags &lt;- jags(manly.data, manly.inits, manly.parms, &quot;manlybugs.txt&quot;, n.chains=3, n.iter=10000)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">xyplot(as.mcmc(manly1.jags),layout=c(3,5))</div><br>
+<table width="640" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/final/fig1.png" width="610" height="520" alt="fig. 1"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Trace plots of individual Markov chains for each parameter.</td>
+  </tr>
+</table><br>
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(manly1.jags$BUGSoutput$summary,3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mean&nbsp;&nbsp;&nbsp; sd&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp; 25%&nbsp;&nbsp;&nbsp; 50%&nbsp;&nbsp;&nbsp; 75%&nbsp; 97.5%&nbsp; Rhat n.eff<br>
+  a[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.013 0.886 -1.849 -0.554&nbsp; 0.041&nbsp; 0.617&nbsp; 1.672 1.001&nbsp; 3000<br>
+  a[2]&nbsp;&nbsp;&nbsp;&nbsp; -3.919 1.915 -8.744 -4.840 -3.625 -2.653 -0.957 1.020&nbsp;&nbsp; 480<br>
+  a[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.259 0.555&nbsp; 0.121&nbsp; 0.898&nbsp; 1.266&nbsp; 1.644&nbsp; 2.301 1.001&nbsp; 2900<br>
+  a[4]&nbsp;&nbsp;&nbsp;&nbsp; -0.318 0.754 -1.824 -0.814 -0.303&nbsp; 0.197&nbsp; 1.140 1.001&nbsp; 3000<br>
+  a[5]&nbsp;&nbsp;&nbsp;&nbsp; -1.021 0.872 -2.771 -1.582 -0.995 -0.419&nbsp; 0.602 1.001&nbsp; 2200<br>
+  a[6]&nbsp;&nbsp;&nbsp;&nbsp; -0.173 0.869 -1.883 -0.733 -0.149&nbsp; 0.417&nbsp; 1.462 1.001&nbsp; 3000<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.957 0.420 -2.826 -2.229 -1.935 -1.660 -1.203 1.002&nbsp; 1500<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.952 0.408 -2.807 -2.215 -1.926 -1.678 -1.202 1.002&nbsp; 1600<br>
+  b3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.161 0.432 -3.047 -2.442 -2.143 -1.850 -1.362 1.004&nbsp;&nbsp; 530<br>
+  b4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.668 0.196&nbsp; 0.305&nbsp; 0.533&nbsp; 0.664&nbsp; 0.792&nbsp; 1.072 1.001&nbsp; 3000<br>
+  deviance 87.857 4.796 80.649 84.383 87.209 90.595 99.131 1.001&nbsp; 3000<br>
+  mu.a&nbsp;&nbsp;&nbsp;&nbsp; -0.660 1.445 -3.760 -1.443 -0.562&nbsp; 0.194&nbsp; 1.963 1.003&nbsp; 3000<br>
+sigma.a&nbsp;&nbsp; 2.506 1.507&nbsp; 0.890&nbsp; 1.535&nbsp; 2.110&nbsp; 2.979&nbsp; 6.588 1.002&nbsp; 1500</span>
+<h3>Question 2</h3>
+<p>The percentile and HPD 95% credible intervals are shown below. I've highlighted the intervals that correspond to the coefficient of log(Tows).</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(manly1.jags$BUGSoutput$summary[,c(3,5,7)],3)</div>
+ <span class="style24"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5%&nbsp;&nbsp;&nbsp; 50%&nbsp; 97.5%<br>
+  a[1]&nbsp;&nbsp;&nbsp;&nbsp; -1.849&nbsp; 0.041&nbsp; 1.672<br>
+  a[2]&nbsp;&nbsp;&nbsp;&nbsp; -8.744 -3.625 -0.957<br>
+  a[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.121&nbsp; 1.266&nbsp; 2.301<br>
+  a[4]&nbsp;&nbsp;&nbsp;&nbsp; -1.824 -0.303&nbsp; 1.140<br>
+  a[5]&nbsp;&nbsp;&nbsp;&nbsp; -2.771 -0.995&nbsp; 0.602<br>
+  a[6]&nbsp;&nbsp;&nbsp;&nbsp; -1.883 -0.149&nbsp; 1.462<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.826 -1.935 -1.203<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.807 -1.926 -1.202<br>
+  b3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -3.047 -2.143 -1.362<br>
+  b4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">0.305&nbsp; 0.664&nbsp; 1.072</span><span class="style24"><br>
+  deviance 80.649 87.209 99.131<br>
+  mu.a&nbsp;&nbsp;&nbsp;&nbsp; -3.760 -0.562&nbsp; 1.963<br>
+  sigma.a&nbsp;&nbsp; 0.890&nbsp; 2.110&nbsp; 6.588</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> HPDinterval(as.mcmc(manly1.jags$BUGSoutput$sims.matrix))</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  a[1]&nbsp;&nbsp;&nbsp;&nbsp; -1.6373366&nbsp; 1.7858370<br>
+  a[2]&nbsp;&nbsp;&nbsp;&nbsp; -8.2517138 -0.7911186<br>
+  a[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.1994334&nbsp; 2.3578090<br>
+  a[4]&nbsp;&nbsp;&nbsp;&nbsp; -1.7349306&nbsp; 1.1848399<br>
+  a[5]&nbsp;&nbsp;&nbsp;&nbsp; -2.7347817&nbsp; 0.6374401<br>
+  a[6]&nbsp;&nbsp;&nbsp;&nbsp; -1.8827512&nbsp; 1.4618864<br>
+  b1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.7452448 -1.1350550<br>
+  b2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.8159875 -1.2146354<br>
+  b3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -3.0467614 -1.3610107<br>
+  b4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style25">0.2739653&nbsp; 1.0199939</span><span class="style24"><br>
+  deviance 79.7408560 97.1228256<br>
+  mu.a&nbsp;&nbsp;&nbsp;&nbsp; -3.5632133&nbsp; 2.0624371<br>
+  sigma.a&nbsp;&nbsp; 0.6721666&nbsp; 5.4892025<br>
+  attr(,&quot;Probability&quot;)<br>
+  [1] 0.95</span>
+
+<p>When we include log(Tows) as an offset in a model we are fixing its coefficient to be 1 rather than estimating it. To determine if this is a good idea we can carry out a hypothesis test.</p>
+<p>H<sub>0</sub>: b4 = 1<br>
+H<sub>1</sub>: b4 &ne; 1</p>
+<p>An equivalent way of carrying out this test is to construct a confidence interval for b4. We fail to reject H<sub>0</sub> at &alpha; = .05 if 1 is not in a 95% confidence interval for b4. The reported 95% credible intervals are percentile: (0.305, 1.072) and HPD: (0.274, 1.02). Because the number 1 is contained in both the percentile and HPD 95% credible intervals we   fail to reject 1 as a possible value for the coefficient of <span class="style81">log(Tows)</span> in the model. Therefore treating <span class="style81">log(Tows)</span> as an offset with a coefficient of 1 is a reasonable thing to do here.</p>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/final/finalprob1.png" width="400" height="200" alt="problem1 scores"></p>
+<h2 align="left" class="style16">Problem 2</h2>
+
+<h3>Question 1</h3>
+<p>The three design features that are deviations from an ordinary two-factor design with crossed factors are the following.</p>
+<ol>
+  <li>This is a split plot design for the temperature treatment.</li>
+  <li>There are repeated measures for the time effect</li>
+  <li>We need to include a covariate to control for differences in initial size.</li>
+</ol>
+<p><strong>Split plot design.</strong> Although the growth of individual animals was tracked over time, the main treatment of interest, temperature, was randomly applied to nine different aquaria, not to the 9 &times; 18 = 162 individual animals in the study. If this had been a true factorial design then each coral would have been placed in an individual jar with its own thermostat. 54 of the jars would have been randomly assigned to the 25&deg;C treatment, 54 jars would have been randomly assigned to the 28&deg;C treatment, and 54 jars would have been randomly assigned to the 32&deg;C treatment. For logistical reasons this wasn't done and treatments were randomly assigned to aquaria. Corals from the same tank would be expected to be more similar to each other than to corals from different tanks, not only because they share a common temperature treatment but because they share a common aquarium environment. As a result the observations used in the study are not all equivalent, something we've called   data heterogeneity. In the language of split plot designs  the aquarium is the whole plot unit, the individual corals are the split plot units, and temperature is the whole plot treatment. Technically there is no split plot treatment here. Analytically we can account for the split plot design by fitting a mixed effects model. The grouping variable in the mixed effects model is <span class="style81">tank.grp</span>, a variable that uniquely identifies each of the nine aquaria. (Note: Technically because there is no split plot treatment we would usually call the temperature experiment a nested design rather than a split plot design but the method of analysis is the same.)</p>
+<p><strong>Repeated measures design.</strong> There are 486 observations in the data frame coming from 162 different animals with three measurements per animal. Thus we don't have a random sample of animal times. If this had been a random sample of animal-times then there would have been 486 animals of which 162 would  have been randomly chosen to be measured at time 1, a different 162 chosen to be measured at time 2, and the remaining 162 chosen to be measured at time 3. Instead we measured each animal three times. Thus we have measurements from the same animal as well as measurements from different animals. We would expect measurements made on the same animal to be more similar to each other than they are to measurements made on different animals. Thus we have observational heterogeneity. The grouping variable here is the individual animal, recorded as the variable <span class="style81">id</span> in the data frame. A repeated measures design can be analyzed like a split plot design. The animal (<span class="style81">id</span>) is the whole plot unit and the individual time measurements on that animal (the rows of the data frame) are the split plot units. There are no treatments per se unless time is viewed as a treatment.</p>
+<p>The temperature experiment combined with the repeated measures together can be viewed as a split-split plot design. In this perspective aquaria are whole plot units, individual corals are split plot units, and the individual time measurements are split-split plot units. Temperature is the whole plot treatment and time can be viewed as a split-split plot &quot;treatment&quot;, but that's a bit of a stretch. Once again there is no split plot treatment.</p>
+<p><strong>Controlling for a nuisance covariate</strong>. Because the animals did not all have the same initial size, it is necessary to include the variable <span class="style81">surf.area</span> as a covariate to control for differences in size. In its simplest form this would convert a two-factor analysis of variance model to test for the effects of temperature, time, and their interaction, into an analysis of covariance model that also includes the additive effect of <span class="style81">surf.area</span>. It is  possible that the effect of treatment  also varies with the value of the covariate. This should be investigated by fitting a preliminary model in which surface area is allowed to interact with the treatment variables.</p>
+<h3>Question 2</h3>
+<p>The grouping variables are <span class="style81">tank.grp</span>, the unique identifier for the nine aquaria, and <span class="style81">id</span>, the unique identifier for the individual coral animals. Using the <span class="style19">nlme</span> package we would represent this structure with <span class="style81">random=~1|tank.grp/id</span>. Using the <span class="style19">lme4</span> package we just need to include the terms <span class="style81">(1|tank.grp) + (1|id)</span>. Because this is a controlled experiment where all detected effects should be only due to the administered treatments we should start with the most complicated model, one that includes an interaction between <span class="style81">temp</span>, <span class="style81">time.period</span>, and <span class="style81">surf.area</span>. To avoid confusion I convert both <span class="style81">temp</span> and <span class="style81">time.period</span> to factors before fitting the model.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> corals &lt;- read.table('corals.txt', header=T)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> corals[1:4,]</div>
+<span class="style24">  &nbsp; tank temp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; incr&nbsp; id surf.area tank.grp inctime&nbsp;&nbsp;&nbsp;&nbsp; rate time.period<br>
+  1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 32 0.1656716&nbsp; A1&nbsp;&nbsp;&nbsp;&nbsp; 7.084&nbsp;&nbsp;&nbsp;&nbsp; 32.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 35 4.733473&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 32 0.0271845&nbsp; A1&nbsp;&nbsp;&nbsp;&nbsp; 7.084&nbsp;&nbsp;&nbsp;&nbsp; 32.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25 1.087380&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  3&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 32 0.1051476&nbsp; A1&nbsp;&nbsp;&nbsp;&nbsp; 7.084&nbsp;&nbsp;&nbsp;&nbsp; 32.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 35 3.004217&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+  4&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 25 0.3333948 A13&nbsp;&nbsp;&nbsp;&nbsp; 7.050&nbsp;&nbsp;&nbsp;&nbsp; 25.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 35 9.525565&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # convert temp and time.period to factors</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> corals$temp &lt;- factor(corals$temp)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> corals$time.period &lt;- factor(corals$time.period)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # lme version of the model</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> library(nlme)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.lme &lt;- lme(rate ~ temp*time.period*surf.area, random=~1|tank.grp/id, data=corals)</div>
+
+<p>Using the <span class="style19">lme4</span> package, the model would be written as follows.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.lmer &lt;- lmer(rate ~ temp*time.period*surf.area + (1|tank.grp) + (1|id), data=corals)</div>
+<h3>Question 3</h3>
+<p>I use with the <span class="style19">nlme</span> package for the analysis because it's easier to use with normal-response mixed effects models.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(out.lme)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 312 379.2266&nbsp; &lt;.0001<br>
+  temp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp; 55.7383&nbsp; 0.0001<br>
+  time.period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 312&nbsp; 24.2382&nbsp; &lt;.0001<br>
+  surf.area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 150&nbsp; 77.8080&nbsp; &lt;.0001<br>
+  temp:time.period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 312&nbsp; 62.3850&nbsp; &lt;.0001<br>
+  temp:surf.area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 150&nbsp;&nbsp; 8.7679&nbsp; 0.0003<br>
+  time.period:surf.area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 312&nbsp;&nbsp; 0.3115&nbsp; 0.7326<br>
+  temp:time.period:surf.area&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 312&nbsp;&nbsp; 1.1847&nbsp; 0.3175</span>
+
+<p>According to the ANOVA table we can drop the three-factor interaction. I refit the model with all two-factor interactions.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.lme2 &lt;- lme(rate ~ (temp + time.period + surf.area)^2, random=~1|tank.grp/id, data=corals)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(out.lme2)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 316 379.2267&nbsp; &lt;.0001<br>
+  temp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp; 55.7384&nbsp; 0.0001<br>
+  time.period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 316&nbsp; 24.1817&nbsp; &lt;.0001<br>
+  surf.area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 150&nbsp; 77.8080&nbsp; &lt;.0001<br>
+  temp:time.period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 316&nbsp; 62.2395&nbsp; &lt;.0001<br>
+  temp:surf.area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 150&nbsp;&nbsp; 8.7679&nbsp; 0.0003<br>
+  time.period:surf.area&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 316&nbsp;&nbsp; 0.3107&nbsp; 0.7331</span>
+
+<p>When <span class="style81">time.period:surf.area</span> is added last it is not significant so we can drop it.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.lme3 &lt;- update(out.lme2, .~. - time.period:surf.area)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(out.lme3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 318 379.2268&nbsp; &lt;.0001<br>
+  temp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp; 55.7384&nbsp;&nbsp; 1e-04<br>
+  time.period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 318&nbsp; 24.2870&nbsp; &lt;.0001<br>
+  surf.area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 150&nbsp; 77.8080&nbsp; &lt;.0001<br>
+  temp:time.period&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 318&nbsp; 62.5105&nbsp; &lt;.0001<br>
+temp:surf.area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 150&nbsp;&nbsp; 8.7679&nbsp;&nbsp; 3e-04</span>
+<p>Changing the order of the two-factor interaction terms in the sequential ANOVA table does not affect our conclusions. All of the remaining effects are statistically significant.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.lme3a &lt;- lme(rate~temp*surf.area + temp*time.period, random=~1|tank.grp/id, data=corals)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> anova(out.lme3a)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 318 379.2268&nbsp; &lt;.0001<br>
+  temp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp; 55.7384&nbsp;&nbsp; 1e-04<br>
+  surf.area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 150&nbsp; 77.8080&nbsp; &lt;.0001<br>
+  time.period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 318&nbsp; 24.2870&nbsp; &lt;.0001<br>
+  temp:surf.area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 150&nbsp;&nbsp; 8.7679&nbsp;&nbsp; 3e-04<br>
+temp:time.period&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 318&nbsp; 62.5105&nbsp; &lt;.0001</span>
+<p>Note: There was actually no need to refit the model. We could have used <span class="style81">anova(out.lme3, type='marginal')</span> to obtain marginal tests of each effect.</p>
+<h3>Question 4</h3>
+<p>There are three different ways to obtain treatment means, their standard errors, and confidence intervals. We can</p>
+<ol>
+  <li>reparameterize the model to return means directly and then use the <span class="style4">intervals</span> function from the <span class="style19">nlme</span> package,</li>
+  <li>use the <span class="style19">effects</span> package with the original model, or </li>
+  <li>construct a  contrast matrix to obtain the means and standard errors.</li>
+</ol>
+<p>I illustrate each method in turn.</p>
+<p><strong>Method 1: Reparameterize the model and use the intervals function</strong></p>
+<p>The first two hints for this question suggest reparameterizing the model so that we can get the means we want directly rather than  their effects. The means of interest correspond to the <span class="style81">temp:time.period</span> interaction. Following the hint I fit a model with only the two 2-factor interactions and no intercept. I also center surface area at 10 using the <span class="style4">I</span> function of R.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">out.lme4 &lt;- lme(rate ~ temp:time.period + temp:I(surf.area-10) - 1, data=corals, random=~1|tank.grp/id)</div>
+<p>The AIC of this model matches the AIC of the model in its original parameterization indicating that they're equivalent.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> AIC(out.lme3, out.lme4)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  out.lme3 15 2886.079<br>
+out.lme4 15 2886.079</span>
+<p>If we examine the summary table of the model we can see that we've obtained what we want.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(summary(out.lme4)$tTable,4)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value Std.Error&nbsp; DF t-value p-value<br>
+  temp25:time.period1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16.0675&nbsp;&nbsp;&nbsp; 1.4411 316 11.1497 &nbsp;0.0000<br>
+  temp28:time.period1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18.9906&nbsp;&nbsp;&nbsp; 1.4368 316 13.2174&nbsp; 0.0000<br>
+  temp32:time.period1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.8468&nbsp;&nbsp;&nbsp; 1.4869 316&nbsp; 5.2772&nbsp; 0.0000<br>
+  temp25:time.period2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19.1829&nbsp;&nbsp;&nbsp; 1.4411 316 13.3116&nbsp; 0.0000<br>
+  temp28:time.period2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26.9032&nbsp;&nbsp;&nbsp; 1.4368 316 18.7246&nbsp; 0.0000<br>
+  temp32:time.period2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1679&nbsp;&nbsp;&nbsp; 1.4869 316&nbsp; 2.1305&nbsp; 0.0339<br>
+  temp25:time.period3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21.5174&nbsp;&nbsp;&nbsp; 1.4411 316 14.9316&nbsp; 0.0000<br>
+  temp28:time.period3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26.9933&nbsp;&nbsp;&nbsp; 1.4368 316 18.7873&nbsp; 0.0000<br>
+  temp32:time.period3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.4784&nbsp;&nbsp;&nbsp; 1.4869 316&nbsp; 1.6668&nbsp; 0.0965<br>
+  temp25:I(surf.area - 10)&nbsp; 2.2798&nbsp;&nbsp;&nbsp; 0.3545 151&nbsp; 6.4304&nbsp; 0.0000<br>
+  temp28:I(surf.area - 10)&nbsp; 2.7244&nbsp;&nbsp;&nbsp; 0.3741 151&nbsp; 7.2822&nbsp; 0.0000<br>
+temp32:I(surf.area - 10)&nbsp; 0.4252&nbsp;&nbsp;&nbsp; 0.4333 151&nbsp; 0.9815&nbsp; 0.3279</span>
+<p>When we plug in surface area = 10, the last three terms in the model will drop out. The first nine terms are the means at the individual temperatures and time periods. To get the confidence intervals I use the <span class="style4">intervals</span> function on this model with the <span class="style22">which=&quot;fixed&quot;</span> argument so that we only get confidence intervals for the fixed effect estimates. The entries we want are in the first nine rows.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.int &lt;- intervals(out.lme4, which='fixed')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> names(out.int)</div>
+ <span class="style24"> [1] &quot;fixed&quot;</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.ci &lt;- out.int$fixed[1:9,]</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.ci</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est.&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  temp25:time.period1 13.2321571 16.067453 18.902749<br>
+  temp28:time.period1 16.1636829 18.990559 21.817435<br>
+  temp32:time.period1&nbsp; 4.9212827&nbsp; 7.846818 10.772354<br>
+  temp25:time.period2 16.3476520 19.182948 22.018244<br>
+  temp28:time.period2 24.0763344 26.903210 29.730086<br>
+  temp32:time.period2&nbsp; 0.2423577&nbsp; 3.167893&nbsp; 6.093429<br>
+  temp25:time.period3 18.6821261 21.517422 24.352718<br>
+  temp28:time.period3 24.1663868 26.993263 29.820139<br>
+temp32:time.period3 -0.4470924&nbsp; 2.478443&nbsp; 5.403978</span>
+<p><strong>Method 2: Use the effects package</strong></p>
+<p>To use the <span class="style19">effects</span> package to obtain the means we can use the original model. The syntax for  obtaining the means at each temperature and time combination when surface area = 10 is the following.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">library(effects)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">out.eff &lt;- effect(&quot;temp:time.period&quot;, out.lme3, given.values = c(surf.area = 10))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"></div>
+<p>The terms we want are scattered in different components of the object returned by the <span class="style4">effect</span> function.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> names(out.eff)</div>
+<span class="style24">&nbsp;[1] &quot;term&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;formula&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;response&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;variables&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;[5] &quot;fit&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;x&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;model.matrix&quot;&nbsp;&nbsp;&nbsp;&nbsp; &quot;data&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;[9] &quot;discrepancy&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;offset&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;vcov&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;se&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+[13] &quot;lower&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;upper&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;confidence.level&quot; &quot;transformation&quot;&nbsp; </span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.ci2 &lt;- cbind(lower=out.eff$lower, est.=out.eff$fit, upper=out.eff$upper)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.ci2</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,3]<br>
+1 13.2430163 16.067453 18.891890<br>
+2 16.1745099 18.990559 21.806608<br>
+3&nbsp; 4.9324875&nbsp; 7.846818 10.761149<br>
+4 16.3585112 19.182948 22.007385<br>
+5 24.0871613 26.903210 29.719259<br>
+6&nbsp; 0.2535625&nbsp; 3.167893&nbsp; 6.082224<br>
+7 18.6929853 21.517422 24.341859<br>
+8 24.1772137 26.993263 29.809312<br>
+9 -0.4358876&nbsp; 2.478443&nbsp; 5.392774</span>
+<p>Notice that the confidence bounds are slightly different from what we obtained using the first method. That's because the <span class="style4">intervals</span> function uses a <em>t</em>-distribution with 316 degrees of freedom (see the summary table above) in calculating the confidence bounds while the <span class="style19">effects</span> package uses a normal distribution. We can easily demonstrate this fact.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># normal distribution: used by effect</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.eff$fit + qnorm(.025)*out.eff$se</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+1 13.2430163<br>
+2 16.1745099<br>
+3&nbsp; 4.9324875<br>
+4 16.3585112<br>
+5 24.0871613<br>
+6&nbsp; 0.2535625<br>
+7 18.6929853<br>
+8 24.1772137<br>
+9 -0.4358876</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># t-distribution: used by intervals</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.eff$fit + qt(.025,316)*out.eff$se</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+1 13.2321571<br>
+2 16.1636829<br>
+3&nbsp; 4.9212827<br>
+4 16.3476520<br>
+5 24.0763344<br>
+6&nbsp; 0.2423577<br>
+7 18.6821261<br>
+8 24.1663868<br>
+9 -0.4470924</span>
+<h3>Method 3: Hand calculation</h3>
+<p>This method was outlined in <a href="../lectures/lecture4.htm#meanmatrix">lecture 4</a>. To obtain the  means at the nine different combinations of temperature and time we form the matrix product <strong>C&beta;</strong> where the nine rows of <strong>C</strong> contain the values of the regressors in the model at each of those means and <strong>&beta;</strong> is the vector of fixed effect estimates from the model, <span class="style81">fixef(out.lme3)</span>. The variance-covariance matrix of the means can be obtained with the matrix product <img src="../../images/assignments/final/matrixsandwich.gif" alt="matrix sandwich" width="65" height="37" align="absmiddle">, where <strong>&Sigma;</strong><sub>&beta;</sub> is the variance covariance matrix of the parameter estimates obtained with<span class="style81"> vcov(out.lme3)</span>. The second appearance of <strong>C</strong> in the product is the matrix transpose of the first. To obtain the standard errors of the means we extract the diagonal of the final matrix and take its square root.</p>
+<p>I start by using <span class="style4">expand.grid</span> to obtain the nine combinations of temperature and time that correspond to the nine means.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> temp.time &lt;- expand.grid(temp=levels(corals$temp), time.period=levels(corals$time.period))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> temp.time</div>
+<span class="style24">  &nbsp; temp time.period<br>
+  1&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  2&nbsp;&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  3&nbsp;&nbsp; 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  4&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  5&nbsp;&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  6&nbsp;&nbsp; 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  7&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+  8&nbsp;&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+  9&nbsp;&nbsp; 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3</span>
+<p>I next create the dummy variables for temperature and time that correspond to these nine observations. An easy way to get them is with the <span class="style4">outer</span> function, which can be used to carry out element-wise calculations on two sets of vectors. Here I test separately whether the temperature is equal to 28 or to 32.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> part.temp &lt;- outer(temp.time[,1], c(28,32), '==') + 0</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  part.temp</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1] [,2]<br>
+  &nbsp;[1,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[2,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[3,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;[4,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[5,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[6,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;[7,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[8,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[9,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1</span>
+<p>I do a similar calculation for time.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> part.time &lt;- outer(temp.time[,2], c(2,3), '==') + 0</div>
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> part.time</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1] [,2]<br>
+  &nbsp;[1,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[2,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[3,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[4,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[5,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[6,]&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[7,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+  &nbsp;[8,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
+&nbsp;[9,]&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1</span>
+<p>I examine the entries of the coefficient vector from the model.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fixef(out.lme3)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; temp28&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp32 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -6.7305414&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.5227216&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10.3250530 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; time.period2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; time.period3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; surf.area <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1154949&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.4499690&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2797995 <br>
+  temp28:time.period2 temp32:time.period2 temp28:time.period3 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.7971566&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -7.7944198&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5527349 <br>
+  temp32:time.period3&nbsp;&nbsp;&nbsp; temp28:surf.area&nbsp;&nbsp;&nbsp; temp32:surf.area <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -10.8183440&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.4445827&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.8545688</span>
+<p>We need to construct a matrix <strong>C</strong> with 12 columns so that each column corresponds to a different regressor. I start by adding the intercept, the dummy vectors for temperature, the dummy vectors for time, and a column for surface area = 10.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> cmat &lt;- cbind(rep(1, nrow(part.temp)), part.temp, part.time, rep(10, nrow(part.time)))</div>
+
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> colnames(cmat) &lt;- c('i', 't28', 't32', 't2', 't3', 's')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> cmat</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i t28 t32 t2 t3&nbsp; s<br>
+  &nbsp;[1,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp; 0&nbsp; 0 10<br>
+  &nbsp;[2,] 1&nbsp;&nbsp; 1&nbsp;&nbsp; 0&nbsp; 0&nbsp; 0 10<br>
+  &nbsp;[3,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 1&nbsp; 0&nbsp; 0 10<br>
+  &nbsp;[4,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp; 1&nbsp; 0 10<br>
+  &nbsp;[5,] 1&nbsp;&nbsp; 1&nbsp;&nbsp; 0&nbsp; 1&nbsp; 0 10<br>
+  &nbsp;[6,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 1&nbsp; 1&nbsp; 0 10<br>
+  &nbsp;[7,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp; 0&nbsp; 1 10<br>
+  &nbsp;[8,] 1&nbsp;&nbsp; 1&nbsp;&nbsp; 0&nbsp; 0&nbsp; 1 10<br>
+  &nbsp;[9,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 1&nbsp; 0&nbsp; 1 10<br>
+  </span>
+
+<p>Next I create the interactions by multiplying the corresponding dummy vectors together. I do this so that the results match the order shown in the coefficient vector.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> cmat.int &lt;- cbind(cmat[,2]*cmat[,4], cmat[,3]*cmat[,4], cmat[,2]*cmat[,5], cmat[,3]*cmat[,5], cmat[,2]*cmat[,6], cmat[,3]*cmat[,6])</div>
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> cmat &lt;- cbind(cmat, cmat.int)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">colnames(cmat)[7:12] &lt;- c('t28.t2', 't32.t2', 't28.t3', 't32.t3', 't28.s', 't32.s')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> cmat</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i t28 t32 t2 t3&nbsp; s t28.t2 t32.t2 t28.t3 t32.t3 t28.s t32.s<br>
+  &nbsp;[1,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp; 0&nbsp; 0 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[2,] 1&nbsp;&nbsp; 1&nbsp;&nbsp; 0&nbsp; 0&nbsp; 0 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[3,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 1&nbsp; 0&nbsp; 0 10&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 10<br>
+  &nbsp;[4,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp; 1&nbsp; 0 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[5,] 1&nbsp;&nbsp; 1&nbsp;&nbsp; 0&nbsp; 1&nbsp; 0 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[6,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 1&nbsp; 1&nbsp; 0 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 10<br>
+  &nbsp;[7,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp; 0&nbsp; 1 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[8,] 1&nbsp;&nbsp; 1&nbsp;&nbsp; 0&nbsp; 0&nbsp; 1 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+  &nbsp;[9,] 1&nbsp;&nbsp; 0&nbsp;&nbsp; 1&nbsp; 0&nbsp; 1 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 10</span>
+<p>Next I use the matrix <strong>C</strong> to calculate the means and their standard errors. I then obtain the lower and upper 95% confidence intervals for the means using a <em>t</em>-distribution for the multiplier just like the <span class="style4">intervals</span> function does.</p>
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> est.model &lt;- cmat %*% fixef(out.lme3)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> se.model &lt;- sqrt(diag(cmat %*% vcov(out.lme3) %*% t(cmat)))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> lower.model &lt;- est.model + qt(.025, 316)*se.model</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> upper.model &lt;- est.model + qt(.975,316)*se.model</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.ci3 &lt;- data.frame(lower=lower.model, est.=est.model, upper=upper.model)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.ci3</div>
+
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est.&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+1 13.2321571 16.067453 18.902749<br>
+2 16.1636829 18.990559 21.817435<br>
+3&nbsp; 4.9212827&nbsp; 7.846818 10.772354<br>
+4 16.3476520 19.182948 22.018244<br>
+5 24.0763344 26.903210 29.730086<br>
+6&nbsp; 0.2423577&nbsp; 3.167893&nbsp; 6.093429<br>
+7 18.6821261 21.517422 24.352718<br>
+8 24.1663868 26.993263 29.820139<br>
+9 -0.4470924&nbsp; 2.478443&nbsp; 5.403978</span>
+<p>The matrix of results matches what we obtained using the <span class="style4">intervals</span> function in Method 1.&nbsp;</p>
+<h3>Question 5</h3>
+<p>Because this is a repeated measures design I place time on the <em>x</em>-axis and draw separate time profiles for each temperature. There are two sensible graphs we could produce here. We can put the time profiles for each temperature in a single panel or in different panels. I illustrate both approaches.</p>
+<p><strong>Method 1: One-panel graph</strong></p>
+<p>I modify the code from <a href="../lectures/lecture8.htm#creating">Lecture 8</a> that  uses a group panel function. In lecture 8 there were only two groups. Here we have three. I start by collecting the factor levels and estimates in a data frame.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fac.vals &lt;- data.frame(time=factor(rep(1:3,each=3)), temp=factor(rep(c(25,28,32),3)), est=out.ci[,&quot;est.&quot;], low95=out.ci[,&quot;lower&quot;], up95=out.ci[,&quot;upper&quot;])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fac.vals</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; time temp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low95&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up95<br>
+temp25:time.period1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 25 16.067453 13.2321571 18.902749<br>
+temp28:time.period1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 28 18.990559 16.1636829 21.817435<br>
+temp32:time.period1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 32&nbsp; 7.846818&nbsp; 4.9212827 10.772354<br>
+temp25:time.period2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 25 19.182948 16.3476520 22.018244<br>
+temp28:time.period2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 28 26.903210 24.0763344 29.730086<br>
+temp32:time.period2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 32&nbsp; 3.167893&nbsp; 0.2423577&nbsp; 6.093429<br>
+temp25:time.period3&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 25 21.517422 18.6821261 24.352718<br>
+temp28:time.period3&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 28 26.993263 24.1663868 29.820139<br>
+temp32:time.period3&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 32&nbsp; 2.478443 -0.4470924&nbsp; 5.403978</span>
+<p>Because the graph is rather full, I don't do a legend but instead use the <span class="style4">panel.text</span> function to place an identifier for each temperature  at the end of its corresponding profile. To get the correct temperature to show up on the correct profile with a degree symbol, I use the <span class="style4">substitute</span> function, something that we didn't cover in the course. The <span class="style4">substitute</span> function allows one to insert the values of variables into mathematical expressions.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">my.panel &lt;- function(x, y, subscripts, col, pch, group.number, ...) {</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> #subset variables for the current panel</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  low95 &lt;- fac.vals$low95[subscripts]</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">up95 &lt;- fac.vals$up95[subscripts]</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">myjitter &lt;- c(-.05,.05,0)</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  temp &lt;- c(25,28,32)</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  col2 &lt;- c('tomato', 'grey60', 'dodgerblue1')</div>
+ <div class="style15" style="padding-left: 60px; text-indent:-30px"> #95% confidence interval</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.arrows(x+myjitter[group.number], low95, x+myjitter[group.number], up95, angle=90, code=3, length=.05, col=col)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # connect means with line segments</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.lines(x+myjitter[group.number], y, col=col)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # add point estimates for the means</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x+myjitter[group.number], y, col='white', pch=16)</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x+myjitter[group.number], y, col=col, pch=pch, ...)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px">  # add temperature labels at ends of profiles</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  last.y &lt;- y[x==3]</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.text(3+myjitter[group.number], last.y, labels=substitute(paste(a*degree, 'C'), list(a = temp[group.number])), pos=4, cex=0.9)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># grid lines</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.abline(h=seq(0,30,5), col='lightgrey', lty=3)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  }</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">prepanel.ci2 &lt;- function(x, y, ly, uy, subscripts, ...) {</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  list(ylim=range(y, uy[subscripts], ly[subscripts], finite=TRUE))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">}</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">xyplot(est~time, xlab ='Time period', ylab='Estimated mean rate', groups=temp, data=fac.vals, col=c(1,2,4), pch=c(1,16,15), prepanel=prepanel.ci2, ly=fac.vals$low95, uy=fac.vals$up95, panel.groups=my.panel, panel=&quot;panel.superpose&quot;)</div><br>
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/final/fig2.png" width="465" height="340" alt="Fig. 2"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Interaction graph in a single panel</td>
+  </tr>
+</table>
+
+<p><strong>Method 2: Three-panel graph</strong></p>
+<p>For this method I place each time profile in a separate panel according to its temperature.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">prepanel.ci2 &lt;- function(x, y, ly, uy, subscripts, ...) {</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  list(ylim=range(y, uy[subscripts], ly[subscripts], finite=TRUE))</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">}</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">xyplot(est~time|temp, xlab ='Time period', ylab='Estimated mean rate', data=fac.vals, prepanel=prepanel.ci2, ly=fac.vals$low95, uy=fac.vals$up95, layout=c(3,1), panel=function(x, y, subscripts) {</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x, y, col='dodgerblue4', type='l')</div>
+  <div class="style10" style="padding-left: 60px; text-indent:-30px">panel.arrows(x, fac.vals$low95[subscripts], x, fac.vals$up95[subscripts], lineend=1, col='dodgerblue1', angle=90, code=3, length=.1)</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, col='dodgerblue4', pch=16)})</div>
+<p>To get degree symbols in the panel strips takes a bit of work. If we're sure of which label goes where we can hardwire it in with the <span class="style4">strip.custom</span> function in the <span class="style22">strip</span> argument. I use the <span class="style22">factor.levels</span> argument to specify formatted values for the temperature in a specific order.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># hard-wiring the temperature labels</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  xyplot(est~time|temp, xlab ='Time period', ylab='Estimated mean rate', data=fac.vals, prepanel=prepanel.ci2, ly=fac.vals$low95, uy=fac.vals$up95, layout=c(3,1), panel=function(x, y, subscripts) {</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, col='dodgerblue4',type='l')</div>
+  <div class="style10" style="padding-left: 60px; text-indent:-30px">panel.arrows(x, fac.vals$low95[subscripts], x, fac.vals$up95[subscripts], lineend=1, col='dodgerblue1', angle=90, code=3, length=.1)</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, col='dodgerblue4', pch=16)}, strip=strip.custom(par.strip.text = list(cex=0.9), factor.levels= c(expression(paste(25*degree, 'C')), expression(paste(28*degree, 'C')), expression(paste(32*degree, 'C')))))</div>
+
+<p>A more elegant approach is to do this dynamically and let the <span class="style4">xyplot</span> function figure out what temperature labels go where. For this we have to write a function that substitutes a value of temperature into a math expression. Then we have to use the <span class="style22">strip</span> argument with the <span class="style4">strip.custom</span> function to apply this function to the value for each panel separately.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#function for panel labels</div>
+ <div class="style10" style="padding-left: 30px; text-indent:-30px"> stuff.func3 &lt;- function(x) substitute(expression(paste(z*degree, 'C', sep='')), list(z=x))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># dynamic labeling</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">xyplot(est~time|temp, xlab ='Time period', ylab='Estimated mean rate', data=fac.vals, prepanel=prepanel.ci2, ly=fac.vals$low95, uy=fac.vals$up95, layout=c(3,1), panel=function(x,y,subscripts) {</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"></div>
+  <div class="style10" style="padding-left: 60px; text-indent:-30px">panel.arrows(x, fac.vals$low95[subscripts], x, fac.vals$up95[subscripts], lineend=1, col='dodgerblue1', angle=90, code=3, length=.1)</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x, y, col='dodgerblue4', pch=16, type='o')},</div> 
+<div class="style10" style="padding-left: 30px; text-indent:-30px">strip=strip.custom(par.strip.text = list(cex=0.9), factor.levels= as.expression(unlist(sapply(levels(factor(fac.vals$temp)), function(x) eval(stuff.func3(x)))))))</div><br>
+
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/final/fig3.png" width="460" height="340" alt="Fig. 3"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;&nbsp;Interaction graph in  three panels</td>
+  </tr>
+</table><br>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/final/finalprob2.png" width="380" height="220" alt="final 2 scores"></p>
+<h2 align="left" class="style16">Problem 3</h2>
+<h3>Question 1</h3>
+<p>Define a dummy variable for Morph.</p>
+<p align="center"><img src="../../images/assignments/final/morphdummy.gif" width="217" height="75" alt="morph"></p>
+<p>The regression model that answers the researcher's question is a model that includes distance, a dummy variable for Morph, and the interaction between the two of them.</p>
+<p align="center"><img src="../../images/assignments/final/eqn.gif" width="313" height="27"></p>
+<h3>Question 2</h3>
+<p>The goal is to find evidence of natural selection on moth color morphs based on the background color of tree bark. Distance from Liverpool is the proxy for tree background color. The greater the distance the lighter the bark. If we can show that the distance from Liverpool affects the removal rate of the two color morphs differently that would be evidence that the combination of moth color and bark color matters. </p>
+<p>We have two regression models depending on the Morph. When<span class="style81"> Morph = 'dark</span>', (<em>z</em> = 0), we have</p>
+<p align="center"><img src="../../images/assignments/final/dark.gif" width="262" height="27" alt="dark"></p>
+<p>When <span class="style81">Morph = 'light'</span>, (<em>z</em> = 1), we have</p>
+<p align="center"><img src="../../images/assignments/final/light.gif" width="410" height="62" alt="light"></p>
+<p>On the scale of the response these expressions represent two lines with different slopes and different intercepts. The  relationship with distance is the same if the two slopes are the same. This would happen if &beta;<sub>3</sub> = 0. Thus our null hypothesis stated in terms of the regression model is simply H<sub>0</sub>: &beta;<sub>3</sub> = 0.</p>
+<h3>Question 3</h3>
+<p>The response variable is the number of moths removed out of a fixed total. A suitable probability model is a binomial distribution and hence logistic regression  is appropriate.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> moths &lt;- read.csv('moths.csv')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> moths</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Location Distance Morph Num_moths Num_removed<br>
+1&nbsp;&nbsp;&nbsp; Sefton Park&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0 light&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17<br>
+2&nbsp;&nbsp;&nbsp; Sefton Park&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp; dark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14<br>
+3&nbsp; Eastham Ferry&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;7.2 light&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28<br>
+4&nbsp; Eastham Ferry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.2&nbsp; dark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20<br>
+5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hawarden&nbsp;&nbsp;&nbsp;&nbsp; 24.1 light&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18<br>
+6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hawarden&nbsp;&nbsp;&nbsp;&nbsp; 24.1&nbsp; dark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22<br>
+7&nbsp;&nbsp;&nbsp; Loggerheads&nbsp;&nbsp;&nbsp;&nbsp; 30.2 light&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9<br>
+8&nbsp;&nbsp;&nbsp; Loggerheads&nbsp;&nbsp;&nbsp;&nbsp; 30.2&nbsp; dark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16<br>
+9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Llanbedr&nbsp;&nbsp;&nbsp;&nbsp; 36.4 light&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16<br>
+10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Llanbedr&nbsp;&nbsp;&nbsp;&nbsp; 36.4&nbsp; dark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23<br>
+11&nbsp;&nbsp;&nbsp;&nbsp; Pwyllglas&nbsp;&nbsp;&nbsp;&nbsp; 41.5 light&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 84&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20<br>
+12&nbsp;&nbsp;&nbsp;&nbsp; Pwyllglas&nbsp;&nbsp;&nbsp;&nbsp; 41.5&nbsp; dark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 84&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40<br>
+13&nbsp;&nbsp; Clergy Mawr&nbsp;&nbsp;&nbsp;&nbsp; 51.2 light&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24<br>
+14&nbsp;&nbsp; Clergy Mawr&nbsp;&nbsp;&nbsp;&nbsp; 51.2&nbsp; dark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 39</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- glm(cbind(Num_removed, Num_moths-Num_removed) ~ Morph*Distance, data=moths, family=binomial)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> summary(out1)</div>
+<span class="style24">Call:<br>
+  glm(formula = cbind(Num_removed, Num_moths - Num_removed) ~ Morph * <br>
+  &nbsp;&nbsp;&nbsp; Distance, family = binomial, data = moths)</span>
+<p><span class="style24">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -2.21183&nbsp; -0.39883&nbsp;&nbsp; 0.01155&nbsp;&nbsp; 0.68292&nbsp;&nbsp; 1.31242&nbsp; </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.128987&nbsp;&nbsp; 0.197906&nbsp; -5.705 1.17e-08 ***<br>
+  Morphlight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.411257&nbsp;&nbsp; 0.274490&nbsp;&nbsp; 1.498 0.134066&nbsp;&nbsp;&nbsp; <br>
+  Distance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.018502&nbsp;&nbsp; 0.005645&nbsp;&nbsp; 3.277 0.001048 ** <br>
+  Morphlight:Distance -0.027789&nbsp;&nbsp; 0.008085&nbsp; -3.437 0.000588 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">(Dispersion parameter for binomial family taken to be 1)</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; Null deviance: 35.385&nbsp; on 13&nbsp; degrees of freedom<br>
+  Residual deviance: 13.230&nbsp; on 10&nbsp; degrees of freedom<br>
+  AIC: 83.904</span>
+<p><span class="style24">Number of Fisher Scoring iterations: 4</span>
+<p>The interaction is significant so we have evidence that the predation rate varies with distance in a different manner for the two morphs. From the output the predation rate for the dark morph increases with distance. The significant interaction tells us that the change in the predation rate with distance for the light morph is significantly less than it is for the dark morph. To understand this better we can force R to return separate slopes for each <span class="style81">Morph</span> type by refitting the model without the main effect of <span class="style81">Distance</span>.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out1a &lt;- glm(cbind(Num_removed, Num_moths-Num_removed) ~ Morph:Distance + Morph, data=moths, family=binomial)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> round(summary(out1a)$coefficients,5)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error&nbsp; z value Pr(&gt;|z|)<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.12899&nbsp;&nbsp;&nbsp; 0.19791 -5.70466&nbsp; 0.00000<br>
+  Morphlight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.41126&nbsp;&nbsp;&nbsp; 0.27449&nbsp; 1.49826&nbsp; 0.13407<br>
+  Morphdark:Distance&nbsp;&nbsp; 0.01850&nbsp;&nbsp;&nbsp; 0.00565&nbsp; 3.27744&nbsp; 0.00105<br>
+Morphlight:Distance -0.00929&nbsp;&nbsp;&nbsp; 0.00579 -1.60439&nbsp; 0.10863</span>
+<p>Now we see that for the dark morph the predation rate increases with distance (slope = 0.0185) and the relationship is significant (<em>p</em> = 0.001). For the light morph the predation rate decreases with distance (slope = &ndash;0.0093), although the relationship is not statistically significant (<em>p</em> = 0.109). The signs of the coefficients are consistent with theory. The further away from Liverpool we are the lighter the trees are thus making the dark morph more vulnerable to predation and the light morph less so.</p>
+<h3>Question 4</h3>
+<p>The residual deviance can be used as a goodness of fit statistic if the predicted counts are large enough, greater than 5. Checking this we find that all the predicted counts are greater than 5.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fitted(out1)*moths$Num_moths</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 <br>
+  18.36202 13.68350 25.06645 21.58191 14.59064 17.44984 16.15784 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14 <br>
+21.67119 15.48714 23.28317 20.92891 34.49737 21.40701 41.83303</span>
+<p>I compare the residual deviance to a chi-squared distribution with degrees of freedom equal to the residual degrees of freedom.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(deviance(out1), df.residual(out1))</div>
+<span class="style24">[1] 0.2111003</span>
+<p>The residual deviance is not significant. Therefore we fail to find evidence of lack of fit.</p>
+<h3>Question 5</h3>
+<p>The experiment is set up in the form of a randomized block design. At each of the seven location we have pairs of observations: the light morph binomial result and the dark morph binomial result for a total of 14 measurements. Contrast this with an ordinary crossed design in which case there would be 14 locations and 14 measurements. The fact that we have measurements from the same location and measurements from different locations means that the data are heterogeneous. We should account for the pairing of observations in the analysis.</p>
+<h3>Question 6</h3>
+<p>I fit a logistic regression random intercepts model treating <span class="style81">Location</span> as the grouping variable. Because <span class="style81">Distance</span> varies across <span class="style81">Location</span> (but is constant within a <span class="style81">Location</span>), <span class="style81">Distance</span> is a level-2 predictor. Because <span class="style81">Morph</span> varies within a <span class="style81">Location</span>, <span class="style81">Morph</span> is a level-1 predictor.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out1.lmer &lt;- lmer(cbind(Num_removed, Num_moths-Num_removed) ~ Morph*Distance + (1|Location), data=moths, family=binomial)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> summary(out1.lmer)</div>
+<span class="style24">Generalized linear mixed model fit by the Laplace approximation <br>
+Formula: cbind(Num_removed, Num_moths - Num_removed) ~ Morph * Distance +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1 | Location) <br>
+&nbsp;&nbsp; Data: moths <br>
+&nbsp;AIC&nbsp; BIC logLik deviance<br>
+&nbsp; 23 26.2 -6.501&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13<br>
+Random effects:<br>
+&nbsp;Groups&nbsp;&nbsp; Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variance Std.Dev.<br>
+&nbsp;Location (Intercept) 0.011483 0.10716 <br>
+Number of obs: 14, groups: Location, 7</span>
+<p><span class="style24">Fixed effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.130918&nbsp;&nbsp; 0.212723&nbsp; -5.316 1.06e-07 ***<br>
+  Morphlight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.411129&nbsp;&nbsp; 0.274625&nbsp;&nbsp; 1.497 0.134379&nbsp;&nbsp;&nbsp; <br>
+  Distance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.018477&nbsp;&nbsp; 0.006150&nbsp;&nbsp; 3.005 0.002659 ** <br>
+  Morphlight:Distance -0.027819&nbsp;&nbsp; 0.008089&nbsp; -3.439 0.000584 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Correlation of Fixed Effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;(Intr) Mrphlg Distnc<br>
+  Morphlight&nbsp; -0.672&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  Distance&nbsp;&nbsp;&nbsp; -0.871&nbsp; 0.581&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  Mrphlght:Ds&nbsp; 0.570 -0.859 -0.643</span>
+<p>Other than a slight increase in the standard errors of the parameter estimates, the results from the mixed effects model are virtually identical to the results from the ordinary logistic regression model.</p>
+<h3>Question 7</h3>
+<p><strong>Analysis of deviance</strong></p>
+<p>Ordinarily to  carry out an analysis of deviance  we would subtract the deviance of the two models and compare the result to a chi-squared distribution with 1 degree of freedom (the number of parameters that the two models differ by). The parameter  in question is the variance of the random effects, &tau;<sup>2</sup>, which is set to zero in the ordinary logistic regression model. Because 0 is a boundary value for the variance, the usual <img src="../../images/lectures/lecture18/chisqone.gif" alt="chisquared one" width="27" height="30" align="absmiddle"> distribution  for the test statistic is incorrect. What we saw previously in <a href="../lectures/lecture18.htm#testing">lecture 18</a> was that the correct distribution can be approximated by a   distribution that is approximately a 50:50 mixture of two chi-squared distributions, one with 0 degrees of freedom and one with 1 degree of freedom. Thus we should use a mixture of a <img src="../../images/lectures/lecture18/chisqzero.gif" alt="chisquare zero" width="27" height="30" align="absmiddle"> and a <img src="../../images/lectures/lecture18/chisqone.gif" alt="chisquared one" width="27" height="30" align="absmiddle"> random variable, each assigned a weight of 0.5.</p>
+<p align="center"><img src="../../images/assignments/final/LRdist.gif" width="142" height="35" alt="mixture"></p>
+<p>This translates into dividing the usual <em>p</em>-value of our test by 2.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">deviance(out1)-deviance(out1.lmer)</div>
+<span class="style24">  [1] 0.2277714</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> 0.5*(1-pchisq(deviance(out1)-deviance(out1.lmer),1))</div>
+<span class="style24">[1] 0.3165906</span>
+<p>The test statistic is not significant so we conclude that the two models are not significantly different. Thus there doesn't appear to be a need for the random effects.</p>
+<p><strong>Using AIC</strong></p>
+<p>Alternatively we can calculate the AIC of the models. The values returned by <span class="style4">AIC</span> and <span class="style4">logLik</span> for an <span class="style4">lmer</span> model cannot be compared to those same values from an ordinary logistic regression model. Following the hint for this question I calculate the log-likelihood of a saturated model. The saturated model has one parameter per observation. I create a factor variable with 14 levels and fit the logistic regression model to it.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> sat.fact &lt;- factor(1:14)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out3 &lt;- glm(cbind(Num_removed, Num_moths-Num_removed) ~ sat.fact, data=moths, family=binomial)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> logLik(out3)</div>
+<span class="style24">'log Lik.' -31.33724 (df=14)</span>
+<p>Alternatively  the formula for the deviance tells us the following.</p>
+<p align="center"><img src="../../images/assignments/final/deviance.gif" width="340" height="38" alt="deviance"></p>
+<p>Solving for the log-likelihood of the saturated model we obtain the following.</p>
+<p align="center"><img src="../../images/assignments/final/saturated.gif" width="333" height="33" alt="saturated"></p>
+<p>Using this formula with the <span class="style4">glm</span> model we obtain the following.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> logLik(out1) + 0.5*deviance(out1)</div>
+<span class="style24">'log Lik.' -31.33724 (df=4)</span>
+<p>which is the same answer we obtained above. Using the deviance expression again I this time solve for the log-likelihood of the model of interest.</p>
+<p align="center"><img src="../../images/assignments/final/LLmodel.gif" width="338" height="33" alt="LL model"></p>
+<p>For the mixed effects model we estimated four regression parameters plus the variance of the random effects for a total of 5 parameters. Using this and the correct log-likelihood for the <span class="style4">lmer</span> model we obtain the following value of AIC.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> LL.out.lmer &lt;- logLik(out3)-.5*deviance(out1.lmer)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> LL.out.lmer</div>
+<span class="style24">'log Lik.' -37.8383 (df=14)</span>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> data.frame(model=c('glm','lmer'), LL=c(logLik(out1), LL.out.lmer), df=c(4,5), AIC=c(AIC(out1), -2*LL.out.lmer+2*5))</div>
+<span class="style24">  &nbsp; model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LL df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC<br>
+  1&nbsp;&nbsp; glm -37.95219&nbsp; 4 83.90438<br>
+2&nbsp; lmer -37.83830&nbsp; 5 85.67661</span>
+<p>The AIC of the  random effects model is larger than the AIC of the <span class="style4">glm</span> model. Once again we find little support for  the random effects.</p>
+<h3>Question 8</h3>
+<p>Consider two moths both of the dark morph that are 50 km apart. The predicted logits for the two moths are the following.</p>
+<p align="center"><img src="../../images/assignments/final/odds59.gif" width="347" height="75" alt="log odds 50"></p>
+<p>Subtracting the two expressions yields the following.</p>
+<p align="center"><img src="../../images/assignments/final/OR50.gif" width="462" height="110" alt="OR 50"></p>
+<p>If we turn to the light morphs we get the same kind of expression except for light morphs the effect of distance is given by &beta;<sub>2</sub> + &beta;<sub>3</sub>.</p>
+<p align="center"><img src="../../images/assignments/final/odds50light.gif" width="480" height="75" alt="ORlight"></p>
+<p>Subtracting the two expressions and exponentiating the result yields the following.</p>
+<p align="center"><img src="../../images/assignments/final/OR&#32;50&#32;light.gif" width="515" height="113" alt="OR 50"></p>
+<p>Plugging in the data we obtain the odds ratios.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> fixef(out1.lmer)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Morphlight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Distance <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.13091787&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.41112874&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.01847748 <br>
+  Morphlight:Distance <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.02781868 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # dark morph</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> exp(50*fixef(out1.lmer)[3])</div>
+<span class="style24">  Distance <br>
+  &nbsp;2.51903 </span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">  # light morph</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">exp(50*(fixef(out1.lmer)[3] + fixef(out1.lmer)[4]))</div>
+<span class="style24">  &nbsp;Distance <br>
+0.6268426</span>
+<p>So for the dark morph the odds of being removed in North Wales is 2.5 times its odds of being removed in Liverpool. For the light morph the odds of it being removed in North Wales is only 62% of its odds of being removed in Liverpool.</p>
+<h3>Question 9</h3>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">mycol &lt;- c('tomato', 'dodgerblue3')</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">plot(Num_removed/Num_moths~Distance, data=moths, col=mycol[as.numeric(moths$Morph)], pch=1, ylab='Probability of removal', xlab='Distance from Liverpool (km)')</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # fixed effects curve </div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">my.prob &lt;- function(morph,x) {</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px">linpred &lt;- fixef(out1.lmer)[1] + fixef(out1.lmer)[2]*(morph=='light') + fixef(out1.lmer)[3]*x + fixef(out1.lmer)[4]*(morph=='light')*x</div>
+<div class="style10" style="padding-left: 60px; text-indent:-30px"> exp(linpred)/(1+exp(linpred))}</div>
+
+<div class="style10" style="padding-left: 30px; text-indent:-30px">curve(my.prob('dark',x), add=T, col=mycol[1], lty=2)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">curve(my.prob('light',x), add=T, col=mycol[2], lty=2)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # subject-specific estimates </div>  
+<div class="style10" style="padding-left: 30px; text-indent:-30px">    points(moths[moths$Morph=='dark', 'Distance'], fitted(out1.lmer)[moths$Morph=='dark'], pch=8, cex=.8, type='o', col=mycol[1])</div>
+    <div class="style10" style="padding-left: 30px; text-indent:-30px">points(moths[moths$Morph=='light', 'Distance'], fitted(out1.lmer)[moths$Morph=='light'], pch=8, cex=.8, type='o', col=mycol[2])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">legend('bottomleft', rep(c('observed', 'fixed only', 'fixed + random'),2), col=rep(mycol, each=3), pch=rep(c(1,NA,8), 2), lty=rep(c(NA,2,1), 2), cex=.9, bty='n', ncol=2, title=c(expression(bold('Dark morph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Light morph'))))</div>
+<br>
+<table width="520" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top"><div align="center">&nbsp;&nbsp;&nbsp;<img src="../../images/assignments/final/fig4.png" width="490" height="350" alt="fig. 4"></div></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 4</strong> &nbsp;&nbsp;Effect of distance on the probability of removal of individual morphs</td>
+  </tr>
+</table>
+<p>The curves labeled &quot;fixed only&quot; correspond to the estimated regression model from the mixed effects model that includes only the fixed effects terms. The trajectories labeled &quot;fixed + random&quot; are the location-specific probabilities obtained by adding the random effects to the already displayed fixed effects curves.</p>
+<h3>Question 10</h3>
+<p>The four basic assumptions of the binomial distribution are:</p>
+<ol>
+  <li>The experiment must consist of a sequence of trials in which each trial is a Bernoulli trial, meaning only one of two outcomes with probabilities <em>p</em> and 1 &ndash; <em>p</em> can occur.</li>
+  <li>The number of trials is fixed ahead of time at <em>n</em>, a value that is known to us.</li>
+  <li>The probability <em>p</em> is the same on each Bernoulli trial.</li>
+  <li>The Bernoulli trials are independent. </li>
+</ol>
+<p> Clearly the first two assumptions still hold. Independence is always an issue with binomial trials, but we need to assume that the researche did not choose to blatantly violate this assumption. If you look at the paper you'll see that the protocol was to put one moth out for a fixed length of time. They then recorded whether during that time it was removed or not. If it was not removed they removed it and put a fresh moth out.  This was then repeated until the moth supply was exhausted.</p>
+<p> If birds developed a search image over time then perhaps independence might have been an issue in the original design. With multiple trees the same protocol was followed. If anything the use of multiple trees rather than a single tree might actually make it more likely the individual Bernoulli trials were independent.</p>
+<p> What the introduction of multiple trees does do is introduce observational heterogeneity. Given that different trees are not likely to be identical in their bark color and other characteristics, the probability of a moth being detected and eaten probably varied from tree to tree. We've been assuming that except for the effect of morph type the probability of being removed was the same for each moth at a location. This might not be the case for different moths if they were on different trees.</p>
+<h3>Question 11</h3>
+<p>A simple rule is that the normal approximation to the binomial distribution is likely to hold if both <em>np</em> &gt; 5 and <em>n</em>(1 &ndash; <em>p</em>) &gt; 5. I check this for our data. <em>np</em> and <em>n</em>(1 &ndash; <em>p</em>) are just the number of moths removed and the number of moths that are left behind.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> sum(moths$Num_removed&lt;=5) + sum((moths$Num_moths-moths$Num_removed) &lt;= 5)</div>
+<span class="style24">[1] 0</span>
+<p>So both of these values are greater than 5 for every observation. The normal approximation should be reasonable. I analyze the proportions using  a randomized block design treating block (location) as a random effect.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">moths$p &lt;- moths$Num_removed/moths$Num_moths</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> detach(package:lme4)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> library(nlme)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> out.lme &lt;- lme(p~Morph*Distance, random=~1|Location, data=moths)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> summary(out.lme)</div>
+<span class="style24">Linear mixed-effects model fit by REML<br>
+&nbsp;Data: moths <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BIC&nbsp;&nbsp; logLik<br>
+&nbsp; 2.149637 3.965148 4.925181</span>
+<p><span class="style24">Random effects:<br>
+  &nbsp;Formula: ~1 | Location<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp; Residual<br>
+  StdDev:&nbsp; 0.05410956 0.0378578</span>
+<p><span class="style24">Fixed effects: p ~ Morph * Distance <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value&nbsp; Std.Error DF&nbsp;&nbsp; t-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.24394502 0.04712545&nbsp; 5&nbsp; 5.176503&nbsp; 0.0035<br>
+  Morphlight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.08102398 0.03820586&nbsp; 5&nbsp; 2.120721&nbsp; 0.0874<br>
+  Distance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00401661 0.00146803&nbsp; 5&nbsp; 2.736044&nbsp; 0.0410<br>
+  Morphlight:Distance -0.00590237 0.00119017&nbsp; 5 -4.959245&nbsp; 0.0043<br>
+  &nbsp;Correlation: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intr) Mrphlg Distnc<br>
+  Morphlight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.405&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  Distance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.848&nbsp; 0.344&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  Morphlight:Distance&nbsp; 0.344 -0.848 -0.405</span>
+<p><span class="style24">Standardized Within-Group Residuals:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Med&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max <br>
+  -0.83172423 -0.66326402 -0.01896693&nbsp; 0.52633610&nbsp; 1.12747315 </span>
+<p><span class="style24">Number of Observations: 14<br>
+  Number of Groups: 7</span>
+<p>Our conclusions are the same. The probability of being removed increases with distance for the dark morph. This change with distance is significantly less for the light morph where it actually decreases with distance (although not significantly different from zero).</p>
+<h3>Question 12</h3>
+<p>I obtain the pairwise differences in the proportion of moths removed for each pair of morphs, dark minus light, at each location and regress them against the location's distance from Liverpool.</p>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">out.diff &lt;- tapply(moths$Num_removed/moths$Num_moths, moths$Location, function(x) x[1]-x[2])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">  out.dist &lt;- tapply(moths$Distance, moths$Location, function(x) x[1])</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px">out.reg &lt;- lm(out.diff~out.dist)</div>
+<div class="style10" style="padding-left: 30px; text-indent:-30px"> summary(out.reg)</div>
+<span class="style24">Call:<br>
+lm(formula = out.diff ~ out.dist)</span>
+<p><span class="style24">Residuals:<br>
+  &nbsp; Clergy Mawr Eastham Ferry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hawarden&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Llanbedr&nbsp;&nbsp; Loggerheads <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.05813&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.06147&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.01570&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.01716&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.01944 <br>
+  &nbsp;&nbsp;&nbsp; Pwyllglas&nbsp;&nbsp; Sefton Park <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; -0.07417&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.02745 </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp; <br>
+  (Intercept)&nbsp; 0.081024&nbsp;&nbsp; 0.038206&nbsp;&nbsp; 2.121&nbsp; 0.08743 . <br>
+  out.dist&nbsp;&nbsp;&nbsp; -0.005902&nbsp;&nbsp; 0.001190&nbsp; -4.959&nbsp; 0.00425 **<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">Residual standard error: 0.05354 on 5 degrees of freedom<br>
+  Multiple R-squared: 0.831,&nbsp; Adjusted R-squared: 0.7973 <br>
+  F-statistic: 24.59 on 1 and 5 DF,&nbsp; p-value: 0.004251</span>
+<p>Observe that the two rows of the summary table from this model match the two rows in the summary table of the randomized blocks design of Question 11 labeled <span class="style81">Morph</span> and <span class="style81">Morph:Distance</span>. There <span class="style81">Morph</span> represents the difference in removal rate between dark and light Morphs at distance 0 (Liverpool). The interaction in that model represents how much the probability  change with distance differs between the two morphs. Both of these are difference estimates. It is always the case that when you analyze paired data as a randomized block design or as a regression on differences (thus removing the block effects) you get identical results for the differences. Of course with the paired difference analysis you  can't predict the actual counts at each site, only the difference between them.</p>
+<p>The point of Questions 11 and 12 is to note that it is not always necessary to carry out a complicated analysis of data. The old-fashioned methods that were popular before the advent of sophisticated statistical software often work just as well and can be easier  for the lay reader to understand.</p>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/final/finalprob3.png" width="465" height="270" alt="final 3 scores"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--December 11, 2012<br>
+      URL: <a href="final.htm#final">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/final.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,814 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 7&mdash;Monday, September 17, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture7" id="lecture4"></a>Lecture 7&mdash;Monday, September 17, 2012</h1>
+<h3>Topics</h3>
+<ul>
+<li><a href="lecture7.htm#randomized">Randomized block design (review)</a>
+  <ul>
+    <li><a href="lecture7.htm#method1">The fixed effects approach to block designs</a></li>
+    <li><a href="lecture7.htm#method2">The mixed effects approach to block designs</a></li>
+  </ul>
+</li>
+<li><a href="lecture7.htm#shrinkage">Shrinkage estimates</a></li>
+<li><a href="lecture7.htm#replication">A randomized complete block design (RCBD) without replication</a>
+  <ul>
+    <li><a href="lecture7.htm#tukey">Analytical tests of interaction when there is no replication</a></li>
+    <li><a href="lecture7.htm#graphical">Graphical assessment  of block &times; treatment interaction</a></li>
+  </ul>
+</li>
+<li><a href="lecture7.htm#4factor">A 4-factor analysis of variance design with blocking</a> 
+  <ul>
+    <li><a href="lecture7.htm#treating">Treating blocks as fixed effects</a></li>
+    <li><a href="lecture7.htm#fitting">Fitting the final model as a mixed effects model</a></li>
+    <li><a href="lecture7.htm#crossed">Crossed random effects</a></li>
+  </ul>
+</li>
+
+  <li><a href="lecture7.htm#cited">Cited references</a></li>
+  <li><a href="lecture7.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+<li><a href="lecture7.htm#data">data</a> loads specific data sets, usually used for data sets in packages.</li>
+<li><a href="lecture7.htm#fitted">fitted</a> returns the  predicted  mean from a regression model for each observation that was used to estimate the model. With mixed effects models the <span class="style1">fitted</span> function uses both the fixed and random effects to calculate the mean.</li>
+<li><a href="lecture7.htm#ifelse">ifelse</a> uses a Boolean condition to conditionally change the values of elements of a vector.</li>
+  <li><a href="lecture7.htm#interaction">interaction.plot</a> can be used to generate interaction plots (i.e., mean profile plots), plots of means against the categories of one variable separately for the levels of a second variable.</li>
+  <li><a href="lecture7.htm#intervals">intervals</a> (from the <span class="style19">nlme</span> package) calculates confidence intervals for parameters estimated using the <span class="style1">lme</span> function.</li>
+  <li><a href="lecture7.htm#jitter">jitter</a> can be used to add random noise to the values of a variable.</li>
+  <li><a href="lecture7.htm#methods">methods</a> can be used to determine if a package has a method  for a given function.</li>
+  <li><a href="lecture7.htm#panelgrid">panel.grid</a> (from <span class="style191">lattice</span>) is the panel function that draws a set of grid lines.</li>
+  <li><a href="lecture7.htm#panelpoints">panel.points</a> (from <span class="style191">lattice</span>) is the panel function that plots individual points and is analogous to the <span class="style1">points</span> function of base graphics.</li>
+  <li><a href="lecture7.htm#paste">paste</a> is used to concatenate character strings together.</li>
+  <li><a href="lecture7.htm#trellisget">trellis.par.get</a> (from <span class="style191">lattice</span>) is used to retrieve global parameter settings for <span class="style191">lattice</span> graphics.</li>
+  <li><a href="lecture7.htm#trellisset">trellis.par.set</a> (from <span class="style191">lattice</span>) is used to set global parameter settings for <span class="style191">lattice</span> graphics.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture7.htm#autokey">auto.key=</a> (argument to many <span class="style19">lattice</span> plotting functions) adds a crude key to a <span class="style19">lattice</span> graph.</li>
+  <li><a href="lecture7.htm#key">corner=</a> (setting of <span class="style22">key</span> argument of <span class="style1021">xyplot</span> and other <span class="style191">lattice</span> functions) is used to specify a corner of the graph to use as the origin for specifying the absolute location of the key (legend). For instance <span class="style22">corner(0,0)</span> denotes the bottom left corner while <span class="style22">corner(1,1)</span> specifies the top right corner.</li>
+  <li><a href="lecture7.htm#groups">groups=</a> (argument to many <span class="style19">lattice</span> plotting functions) specifies a variable that identifies different groups within a panel for plotting.</li>
+  <li><a href="lecture7.htm#key">key=</a> (argument to <span class="style1021">xyplot</span> and other <span class="style191">lattice</span> functions) defines characteristics of the legend for a graph.</li>
+  <li><a href="lecture7.htm#scales">scales</a>= (argument to <span class="style1021">xyplot</span> and other <span class="style191">lattice</span> functions) defines characteristics of the axis&mdash;the number of tick marks, position and labels of the ticks, etc.</li>
+  <li><a href="lecture7.htm#sep">sep=</a> (argument to <span class="style1021">paste</span>) specifies  characters to insert between the strings that are being concatenated together.</li>
+  <li><a href="lecture7.htm#space">space=</a> (argument to <span class="style22">auto.key</span>, which is used to stet up legends for <span class="style191">lattice</span> functions) identifies where the key should appear on the outside margin of the graph. Choices include <span class="style22">space=&quot;right&quot;</span>, <span class="style22">&quot;top&quot;</span>, <span class="style22">&quot;bottom&quot;</span>, and <span class="style22">&quot;left&quot;</span>.</li>
+  <li><a href="lecture7.htm#subscripts">subscripts</a> is a key word available in panel functions of <span class="style191">lattice</span> for identifying the observations that are being used in drawing the current panel.</li>
+  <li><a href="lecture7.htm#which">which</a> (argument to <span class="style1">intervals</span>) can be used to  to construct  confidence intervals for a subset of parameters. Specifying <span class="style22">which=&quot;fixed&quot;</span> generates confidence intervals for the fixed effects only.</li>
+</ul>
+<h3>Additional R packages used </h3>
+<ul>
+  <li><a href="lecture7.htm#car">car</a> for the <span class="style1">Anova</span> function.</li>
+  <li><a href="lecture7.htm#faraway">faraway</a> for the <span class="style8">oatvar</span> data set</li>
+  <li><a href="lecture7.htm#lattice">lattice</a> for the <span class="style1">dotplot</span> function.</li>
+  <li><a href="lecture7.htm#lme4">lme4</a> for the <span class="style1">lmer</span> <span class="style1"></span> function.</li>
+  <li><a href="lecture7.htm#nlme">nlme</a> for the <span class="style1">lme</span> function.</li>
+</ul>
+<h2><a name="randomized" id="refitting4"></a>Randomized block designs (review)</h2>
+<p>Last time we considered a randomized block design. The experiment we examined had  multiple plants growing in the same pot as well as plants growing in different plots for a total of 96 plants organized in 16 pots. The six plants per pot consisted of two types: three plants of type 'G' and three plants of type 'N'. If we think of type as a treatment that was randomly applied to individual plants then this design is an example of restricted randomization. Among the six plants in any pot three were always assigned to one treatment and three to the other treatment. Notice that this is not the same as randomly assigning 48 plants to one treatment and  48 plants to the other and then randomly  dividing them among the 16 pots.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plants &lt;- read.table('ecol 563/jimsonweed.txt', header=T, sep='\t')</div>
+<p>Last time we  considered two different ways to analyze these data. The first was as a fixed effects model in which block was treated as a factor and the analysis resembled a two-factor analysis of variance. Because  the treatments are replicated within blocks we were able to test for a block &times; treatment interaction. We found that the interaction was not significant so we dropped it. The final model was additive in blocks and treatments.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod2 &lt;- lm(lw.rat~factor(pot)*type, data=plants)</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod2)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: lw.rat<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(pot)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15 0.8977&nbsp; 0.0598&nbsp;&nbsp; 3.373&nbsp; 0.000342 ***<br>
+  type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 7.3206 &nbsp;7.3206 412.575 &lt; 2.2e-16 ***<br>
+  factor(pot):type 15 0.3050&nbsp; 0.0203&nbsp;&nbsp; 1.146&nbsp; 0.336418&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 64 1.1356&nbsp; 0.0177&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod1 &lt;- lm(lw.rat~factor(pot)+type, data=plants)</div>
+<p>Although the randomized block design looks like a two-way analysis of variance there are some subtle differences. For instance,  most statistics texts would argue that a formal test for block effects in a randomized block design is not appropriate. Typically in the RCBD we can't test for a block &times; treatment interaction  because there is no replication of treatments within blocks. What would normally constitute the interaction sum of squares is instead used as the error term in testing for a treatment effect. But the ratio of the mean squares for blocks to the mean squares for interaction  does not have an <em>F</em>-distribution and so there is no valid test for blocks in this case. This problem is not an issue with the current design because we have replication of treatments within blocks. </p>
+<p>The second argument against testing for a block effect is that unlike the treatments, blocks are usually not randomly assigned to subjects. (Again, that is technically not the case here where plants could have been randomly assigned to pots.) Some authors attempt to formalize this further by defining an additional error variance that they call restriction error that is peculiar to block designs. The absence of randomization of subjects to blocks technically makes the <em>F</em>-test for blocks invalid. </p>
+<p>The basic point  is that blocks are philosophically different from treatments. They are part of the design structure rather than the treatment structure. As a result we should retain them regardless of what we discover about them after the fact. If it turns out they didn't make much of a difference there's nothing we can do about it. We deliberately altered our experimental design to include them. We chose a restricted randomization in which  treatments  were randomly assigned within individual blocks,  not across blocks. Dropping blocks from the analysis at this point would be to claim that we had actually carried out a completely randomized design, which is not true. The loss in degrees of freedom in the MSE that we suffer due to  blocking is the penalty we pay for a bad design choice.</p>
+<p>Two complications that arise with the fixed effects approach to a randomized block design is that (1) we end up with estimates of block effects that we don't care about and (2) when we try to predict the mean response for individual treatments we get the treatment means for a specific block (the reference block) rather than for an average block. We can get around both of these difficulties by treating blocks as a random effect rather than a fixed effect. When block effects are treated as random effects we view the treatments as defining the population mean structure about which individual blocks deviate randomly. In fitting this model we formally estimate the parameters of the probability distribution of the blocks  rather than the individual block effects.</p>
+<h3><a name="method1"></a>The fixed effects approach to block designs</h3>
+<p><a name="nlme"></a>One way of fitting a model in which block effects are treated as random is with the <span class="style19">nlme</span> package.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod2.lme &lt;- lme(lw.rat~type, random=~1|pot, data=plants)</div>
+<p>To extract the fixed estimates of the intercept and the treatment effect we use <span class="style1">fixef</span>. To extract predictions of the random effects we use <span class="style1">ranef</span>. To obtain estimates of the intercepts that vary by block we use <span class="style1">coef</span>. The <span class="style1">predict</span> function can be used to obtain estimates of the population means for individual observations. The <span class="style1">predict</span> function by itself returns the estimated mean for each observation in the data set using both the fixed effects and random effects. These are sometimes called the conditional means.  To obtain only the fixed effects prediction of the mean requires using the <span class="style22">level=0</span> argument of <span class="style1">predict</span>. These are called the marginal means, or, if the data can be treated as a random sample from a known population, the population average means. The <span class="style22">newdata</span> argument of predict can be used with <span class="style1">lme</span> objects to predict the means of new observations. The <span class="style1">fitted</span> function when applied to an <span class="style1">lme</span> object also  returns estimates of the conditional means. </p>
+<p><a name="intervals"></a>Last time we didn't discuss how to obtain confidence intervals of the parameter estimates returned by <span class="style1">lme</span>. One way to calculate them is by  extracting parameter estimates and their standard errors and then selecting the appropriate <em>t</em>-distribution or normal distribution multiplier to use in the standard confidence interval formula. A second way for obtaining confidence intervals  is to use the <span class="style1">intervals</span> function of the <span class="style19">nlme</span> package.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">intervals(mod2.lme)</div>
+<span class="style24">Approximate 95% confidence intervals</span>
+<p><span class="style24">&nbsp;Fixed effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est.&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  (Intercept) 1.4623991 1.5191667 1.5759342<br>
+  typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.4974252 0.5522917 0.6071582<br>
+  attr(,&quot;label&quot;)<br>
+  [1] &quot;Fixed effects:&quot;</span>
+<p><span class="style24">&nbsp;Random Effects:<br>
+  &nbsp; Level: pot <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est.&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  sd((Intercept)) 0.04955372 0.08328042 0.1399618</span>
+<p><span class="style24">&nbsp;Within-group standard error:<br>
+  &nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est.&nbsp;&nbsp;&nbsp;&nbsp; upper <br>
+  0.1155431 0.1350398 0.1578263 </span>
+<p><a name="which"></a>By default the <span class="style1">intervals</span> function returns  confidence intervals for the fixed effect parameters as well as the standard deviations of the normal distributions of the errors and random effects. To obtain only the confidence intervals for the fixed effect parameters we can use the <span class="style22">which='fixed'</span> argument of <span class="style1">intervals</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> intervals(mod2.lme, which='fixed')</div>
+<span class="style24">  Approximate 95% confidence intervals</span>
+<p><span class="style24">&nbsp;Fixed effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; est.&nbsp;&nbsp;&nbsp;&nbsp; upper<br>
+  (Intercept) 1.4623991 1.5191667 1.5759342<br>
+  typeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.4974252 0.5522917 0.6071582<br>
+  attr(,&quot;label&quot;)<br>
+  [1] &quot;Fixed effects:&quot;</span>
+<h3><a name="method2" id="method2"></a>The mixed effects approach to block designs</h3>
+<p><a name="lme4" id="lme4"></a>A second way of fitting a model in which the block effects are treated as random is with the <span class="style19">lme4</span> package. The syntax is a bit different from <span class="style19">nlme</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">detach(package:nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(lme4)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mod2.lmer &lt;- lmer(lw.rat~type + (1|pot), data=plants)</div>
+<p>The <span class="style1">fixef</span>, <span class="style1">ranef</span>, and <span class="style1">coef</span> functions work the same way as with <span class="style1">lme</span>. Unlike <span class="style1">lme</span> there is no <span class="style1">predict</span> method for <span class="style1">mer</span> objects.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> predict(mod2.lmer)</div>
+<span class="style24">  Error in UseMethod(&quot;predict&quot;) : <br>
+&nbsp; no applicable method for 'predict' applied to an object of class &quot;mer&quot;</span>
+<p><a name="methods"></a>The <span class="style1">methods</span> function of R can be used to determine if a particular package has supplied a method  for a given function. The output below shows the available methods for <span class="style1">predict</span> from all the packages installed in my version of R. Notice that there are methods for <span class="style1">nlme</span>, <span class="style1">lme</span>, and <span class="style1">gls</span> objects (all created by the <span class="style19">nlme</span> package), but none listed for <span class="style1">lmer</span>.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> methods(predict)</div>
+<span class="style24">  &nbsp;[1] predict.ar*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.Arima*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.arima0*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;[4] predict.bs*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.bSpline*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.coxph*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;[7] predict.coxph.penal*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.glm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.glmmPQL*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [10] predict.gls*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.gnls*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.HoltWinters*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [13] predict.lda*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.lm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.lme*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [16] predict.lmList*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.loess*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.lqs*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [19] predict.mca*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.mlm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.multinom*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [22] predict.nbSpline*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.nlme*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.nls*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [25] predict.nnet*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.npolySpline*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.ns*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [28] predict.pbSpline*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.polr*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.poly&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [31] predict.polySpline*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.ppolySpline*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.ppr*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  [34] predict.prcomp*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.princomp*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.qda*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+  [37] predict.rlm*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.smooth.spline*&nbsp;&nbsp;&nbsp;&nbsp; predict.smooth.spline.fit*<br>
+[40] predict.StructTS*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.survreg*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predict.survreg.penal*&nbsp;&nbsp;&nbsp; </span>
+<p><a name="fitted"></a>The <span class="style1">fitted</span> function does work with the output from <span class="style1">lmer</span> and from <span class="style1">lme</span>. It returns predicted means for each observation in the data frame using both the fixed and random effects.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fitted(mod2.lmer)[1:12]</div>
+<span class="style24">  &nbsp;[1] 1.608182 1.608182 1.608182 2.160473 2.160473 2.160473 1.565304 1.565304 1.565304<br>
+[10] 2.117595 2.117595 2.117595</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> fitted(mod2.lme)[1:12]</div>
+<span class="style24">  &nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16533&nbsp;&nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534 <br>
+  1.608180 1.608180 1.608180 2.160472 2.160472 2.160472 1.565303 1.565303 1.565303 2.117595 <br>
+  &nbsp;&nbsp; 16534&nbsp;&nbsp;&nbsp; 16534 <br>
+2.117595 2.117595</span>
+<h2><a name="shrinkage"></a>Shrinkage estimates</h2>
+<p>For the randomized block design that we've been considering, there are three kinds of means we can obtain for individual observations. One type is the ordinary least squares mean obtained by fitting an <span class="style1">lm</span> model in which both treatments and blocks are treated as fixed effects. Two additional means from a mixed effects model are the marginal and conditional means. It might be worthwhile to compare these different means in a single diagram in which we superimpose the means on a plot of the raw data. </p>
+<p>I begin by collecting the OLS and conditional means in a data frame and then adding them to the data frame of the raw data. For the mixed effects model I use the output from <span class="style1">lmer</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mean.dat &lt;- data.frame(fix.ests=predict(mod1), mix.ests=fitted(mod2.lmer))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">new.dat3 &lt;- cbind(plants, mean.dat)</div>
+<p><a name="ifelse"></a>To calculate the marginal means from the <span class="style1">lmer</span> object I just use the regression formula. The intercept, <span class="style8">coef(mod2.lmer)[1]</span>, is the mean for <span class="style8">type = 'G'</span>. The intercept plus the treatment effect, <span class="style8">coef(mod2.lmer)[1] +  coef(mod2.lmer)[2]</span>, is the mean for <span class="style8">type = 'N'</span>. To add this mean to the data frame I use the <span class="style1">ifelse</span> function. The first argument of <span class="style1">ifelse</span> is a logical condition, the second argument is the value to return if the condition evaluates to TRUE, and the third argument is the value to return if the condition evaluates to FALSE.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> ifelse(2==4, 0, 1)</div>
+<span class="style24">[1] 1</span>
+<p>The <span class="style1">ifelse</span> function works with vectors component-wise so for each observation we can test if <span class="style8">type == 'G'</span> and have <span class="style1">ifelse</span> return the appropriate mean based on the result of evaluating the test condition.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">new.dat3$pop.mean &lt;- ifelse(new.dat3$type=='G', fixef(mod2.lmer)[1], fixef(mod2.lmer)[1] + fixef(mod2.lmer)[2])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> new.dat3[1:10,]</div>
+<span class="style24">  &nbsp;&nbsp; lw.rat&nbsp;&nbsp; pot type fix.ests mix.ests pop.mean<br>
+  1&nbsp;&nbsp;&nbsp; 1.67 16533&nbsp;&nbsp;&nbsp; G 1.647187 1.608182 1.519167<br>
+  2&nbsp;&nbsp;&nbsp; 1.53 16533&nbsp;&nbsp;&nbsp; G 1.647187 1.608182 1.519167<br>
+  3&nbsp;&nbsp;&nbsp; 1.61 16533&nbsp;&nbsp;&nbsp; G 1.647187 1.608182 1.519167<br>
+  4&nbsp;&nbsp;&nbsp; 2.18 16533&nbsp;&nbsp;&nbsp; N 2.199479 2.160473 2.071458<br>
+  5&nbsp;&nbsp;&nbsp; 2.23 16533&nbsp;&nbsp;&nbsp; N 2.199479 2.160473 2.071458<br>
+  6&nbsp;&nbsp;&nbsp; 2.32 16533&nbsp;&nbsp;&nbsp; N 2.199479 2.160473 2.071458<br>
+  7&nbsp;&nbsp;&nbsp; 1.68 16534&nbsp;&nbsp;&nbsp; G 1.585521 1.565304 1.519167<br>
+  8&nbsp;&nbsp;&nbsp; 1.70 16534&nbsp;&nbsp;&nbsp; G 1.585521 1.565304 1.519167<br>
+  9&nbsp;&nbsp;&nbsp; 1.49 16534&nbsp;&nbsp;&nbsp; G 1.585521 1.565304 1.519167<br>
+10&nbsp;&nbsp; 2.00 16534&nbsp;&nbsp;&nbsp; N 2.137812 2.117595 2.071458</span>
+<p><a name="lattice"></a><a name="panelgrid"></a><a name="panelpoints"></a>I display the length-width ratios using a dot plot. For this I use two new panel functions: <span class="style1">panel.points</span> and <span class="style1">panel.grid</span>. The <span class="style1">panel.points</span> function is the <span class="style19">lattice</span> analog of the <span class="style1">points</span> function of  base graphics and adds points to a graph. The <span class="style1">panel.grid</span> function adds grid lines. I specify <span class="style10">v=0</span> to prevent  vertical grid lines from being displayed and <span class="style10">h=-16</span> to get 16 horizontal grid lines to display at the 16 tick marks.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dotplot(factor(pot)~lw.rat|type, data=new.dat3, xlab='Length-width ratio', panel=function(x,y,subscripts){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.grid(v=0, h=-16, lty=1)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># raw data</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.xyplot(x, jitter(as.numeric(y)), col=1, cex=.5, pch=16)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># OLS means</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.points(new.dat3$fix.ests[subscripts], y, pch=1, col=4)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># conditional means</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.points(new.dat3$mix.est[subscripts], y, pch=8, col=2)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"># marginal means</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">panel.abline(v=new.dat3$pop.mean[subscripts], lty=2, col='seagreen')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}, scales=list(x=&quot;free&quot;), key=list(x=.8, y=.8, corner=c(0,0), text=list(c('observations', 'OLS mean', 'conditional mean', 'marginal mean'), cex=.85), lines=list(pch=c(16, 1, 8, 1), col=c(1, 'blue', 'red', 'seagreen'), cex=.85, type=c('p', 'p', 'p', 'l'), lty=2, size=2)))</div>
+<br>
+<table width="630" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture7/fig1.png" width="615" height="355" alt="fig. 1"></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 1</strong> &nbsp;&nbsp;Dot plot of length-width ratios for each pot separately by treatment. The raw data, OLS means (blocks treated as fixed effects), conditional means (which include predictions of the block random effects), and marginal means (averages over all blocks) are shown.</td>
+  </tr>
+</table>
+<p><a name="subscripts"></a>The main new feature in this code is the use of  <span class="style22">subscripts</span> in the list of arguments of  the panel function. When the panel function is called upon to draw a panel the variable <span class="style22">subscripts</span> indicates the  value of <span class="style8">type</span> (the variable that defines the panels) that is being used for the current panel. It takes the form of a Boolean vector of TRUEs and FALSEs. So, in the above code the expressions <span class="style8">new.dat3$fix.ests[subscripts]</span> and <span class="style8">new.dat3$mix.est[subscripts]</span> extract a vector of OLS means and a vector of conditional means corresponding to the level of <span class="style8">type</span> that is currently being plotted. This is the same role the arguments <em>x</em> and <em>y</em> have in the function. By default each time a panel is drawn the correct set of <span class="style8"> pot</span> and <span class="style8">lw.rat</span> values (the <em>x</em> and <em>y</em> variables) are selected. Because <span class="style8">fix.ests</span> and <span class="style8">mix.est</span> were not part of the original function call we have to extract the correct set of observations  for them explicitly.</p>
+<p><a name="scales"></a>I use the <span class="style22">scales</span> argument with value <span class="style22">list(x='free')</span> to specify that the <em>x</em>-limits can be different in the two panels.</p>
+<p><a name="jitter"></a>The <span class="style1">jitter</span> function adds random noise to the <em>y</em>-coordinate of the observed points, by default, up to 20% of the closest distance between points in the <em>y</em>-direction. This allows us to distinguish observations in the same block that have the same length-width ratios. The <span class="style1">jitter</span> amount can be specified explicitly with the <span class="style22">amount</span> argument of <span class="style1">jitter</span>. The <span class="style1">jitter</span> function requires a numeric argument so I have to first convert the factor to its numeric value with <span class="style10">as.numeric(y)</span>. </p>
+<p><a name="key"></a>The <span class="style22">key</span> argument is mostly self-explanatory. The  key itself is an R object called a list that is here created with the <span class="style12">list</span> function. A list object in R is one whose components can be of various types and of different lengths.</p>
+<ul>
+  <li>The <span class="style22">text=</span> and <span class="style22">lines=</span> arguments shown in the key are specified separately also using individual <span class="style12">list</span> functions. The elements of each list are the characteristics that we want the displayed text and symbols in the legend to have. 
+    <ul>
+      <li>For the <span class="style22">text</span> list I specify the vector of text that should appear in the legend and the size I want it to have. </li>
+      <li>For the <span class="style22">lines</span> list I specify the print characters and colors. The <span class="style22">type</span> argument indicates whether a point <span class="style8">'p'</span> or a line <span class="style8">'l'</span> should be drawn. This allows me to include a dashed line as the last key element. The <span class="style22">size</span> argument applies to the line and makes it shorter than the default here.</li>
+    </ul>
+  </li>
+  <li>To position the legend inside the panels I give its relative coordinates with the <span class="style22">x=</span> and <span class="style22">y=</span> arguments. Because I specified <span class="style10">corner=c(0,0)</span>, the <span class="style22">x=</span> and <span class="style22">y=</span> arguments are measured with respect to this corner, the lower left corner. The  bottom of the figure is <em>y</em> = 0 and the top of the figure corresponds to<em> y</em> = 1. The left edge of the figure is <em>x</em> = 0 and the right edge of the figure corresponds to <em>x</em> = 1. By specifying <span class="style10">x=.8, y=.8 </span> the legend is placed near the top right corner.</li>
+</ul>
+<p>Notice that in all cases in Fig. 1 the conditional mean is located between the marginal mean (vertical line) and the OLS mean. We say that the conditional means are shrunk towards the population mean. The shrinkage occurs because the random effects are constrained to come from a common distribution and are not totally free to vary as the OLS means are. If we had an unequal number of observations in the groups, the estimates for groups with more observations would typically be shrunk less than the estimates for groups with fewer observations. Because of shrinkage mixed effects models are less affected by anomalous  data values and  are less prone overfitting the data.</p>
+<h2><a name="replication" id="replication"></a>A randomized complete block design (RCBD) without replication</h2>
+<p><a name="faraway"></a><a name="data"></a>As was explained last time it is more typical in randomized block designs to not have any replication of treatments within blocks. To illustrate a situation where this occurs I consider a data set in the <span class="style19">faraway</span> package that is meant to supplement <a href="lecture7.htm#Faraway">Faraway (2005)</a>. The data set is called <span class="style8">oatvar</span> and can be loaded with the <span class="style1">data</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(faraway)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> data(oatvar)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> oatvar[1:8,]</div>
+<span class="style24">  &nbsp; yield block variety<br>
+  1&nbsp;&nbsp; 296&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  2&nbsp;&nbsp; 357&nbsp;&nbsp;&nbsp; II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  3&nbsp;&nbsp; 340&nbsp;&nbsp; III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  4&nbsp;&nbsp; 331&nbsp;&nbsp;&nbsp; IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  5&nbsp;&nbsp; 348&nbsp;&nbsp;&nbsp;&nbsp; V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  6&nbsp;&nbsp; 402&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  7&nbsp;&nbsp; 390&nbsp;&nbsp;&nbsp; II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+8&nbsp;&nbsp; 431&nbsp;&nbsp; III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</span>
+<p>Faraway (2005) describes the data as follows, p. 204. &quot;We illustrate this with an experiment to compare eight varieties of oats. The growing area was heterogeneous and so was grouped into five blocks. Each variety was sown once within each  block and the yield in grams per 16-ft row was recorded. The data come from Anderson and Bancroft (1952).&quot; If we tabulate the data by block and variety we see that there is one observation per treatment within each block.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(oatvar$block, oatvar$variety)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2 3 4 5 6 7 8<br>
+  &nbsp; I&nbsp;&nbsp; 1 1 1 1 1 1 1 1<br>
+  &nbsp; II&nbsp; 1 1 1 1 1 1 1 1<br>
+  &nbsp; III 1 1 1 1 1 1 1 1<br>
+  &nbsp; IV&nbsp; 1 1 1 1 1 1 1 1<br>
+&nbsp; V&nbsp;&nbsp; 1 1 1 1 1 1 1 1</span>
+<p>The lack of replication means that we can't fit a model in which block and treatment interact. If we try to fit this model the <span class="style1">anova</span> function issues a warning and the ANOVA table does not report any <em>F</em>-statistics or <em>p</em>-values. The summary table for the coefficients has missing values for standard errors and test statistics (not shown).</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g1 &lt;- lm(yield~block*variety, data=oatvar)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(g1)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: yield<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value Pr(&gt;F)<br>
+  block&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 33396&nbsp; 8348.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  variety&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp; 77524 11074.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  block:variety 28&nbsp; 37433&nbsp; 1336.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  </span><span class="style25">Warning message:<br>
+  In anova.lm(g1) :<br>
+&nbsp; ANOVA F-tests on an essentially perfect fit are unreliable
+  </span>
+<p>On the other hand there is no problem in fitting a model that is additive in block and treatment. Controlling for  blocks we find that there is a significant effect of <span class="style8">variety</span>. </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g &lt;- lm(yield~block+variety, data=oatvar)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(g)</div>
+<span class="style24">  Analysis of Variance Table</span>
+<p><span class="style24">Response: yield<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  block&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 33396 &nbsp;8348.9&nbsp; 6.2449&nbsp; 0.001008 ** <br>
+  variety&nbsp;&nbsp;&nbsp; 7&nbsp; 77524 11074.8&nbsp; 8.2839 1.804e-05 ***<br>
+  Residuals 28&nbsp; 37433&nbsp; 1336.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<h3><a name="tukey"></a>Analytical tests of interaction when there is no replication</h3>
+<p>The randomized block design with interaction can be written generically as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture7/intmodel.gif" width="225" height="42"></p>
+<p>Here &alpha;<sub>i</sub> denotes the effect of block <em>i</em> and &beta;<sub>j</sub> denotes the effect of treatment <em>j</em>. Without replication we can't formally test for interaction and we have to assume (&alpha;&beta;)<sub>ij</sub> = 0 for all <em>i</em> and <em>j</em>. While we can't test for a generic interaction it is possible to test for specific forms of the interaction. One test  of this kind is the Tukey test for non-additivity. To use the test we have to assume that the interaction can be written as a product of the block and treatment effects.</p>
+<p align="center"><img src="../../images/lectures/lecture7/tukey.gif" width="215" height="37" alt="tukey"></p>
+<p>We can fit this model by estimating the additive model, extracting the coefficient estimates for &alpha;<sub>i</sub> and &beta;<sub>j</sub>, constructing the product term using these estimates, and refitting the model with this term to test if the coefficient of the product term is significantly different from zero.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> coef(g)</div>
+<span class="style24">(Intercept)&nbsp;&nbsp;&nbsp;&nbsp; blockII&nbsp;&nbsp;&nbsp; blockIII&nbsp;&nbsp;&nbsp;&nbsp; blockIV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; blockV&nbsp;&nbsp;&nbsp; variety2&nbsp;&nbsp;&nbsp; variety3 <br>
+&nbsp;&nbsp;&nbsp; 363.275&nbsp;&nbsp;&nbsp;&nbsp; -25.500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.125&nbsp;&nbsp;&nbsp;&nbsp; -42.000&nbsp;&nbsp;&nbsp;&nbsp; -77.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 42.200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28.200 <br>
+&nbsp;&nbsp; variety4&nbsp;&nbsp;&nbsp; variety5&nbsp;&nbsp;&nbsp; variety6&nbsp;&nbsp;&nbsp; variety7&nbsp;&nbsp;&nbsp; variety8 <br>
+&nbsp;&nbsp;&nbsp; -47.600&nbsp;&nbsp;&nbsp;&nbsp; 105.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -3.800&nbsp;&nbsp;&nbsp;&nbsp; -16.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 49.800 </span>
+<p>The block estimates are in positions 2 through 5 and the treatment estimates are in positions 6 through 12. The first block effect and the first treatment effect are both zero (because we are using reference cell coding for the effects), so I prepend a zero to the block and treatment vectors.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> blockcoefs &lt;- c(0,coef(g)[2:5])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> treatcoefs &lt;- c(0,coef(g)[6:12])</div>
+<p>To match the layout in the <span class="style8">oatvar</span> data frame each element of the treatment vector needs to be repeated five times (once for each block) while the entire block effect vector needs to be repeated eight times. To make the arrangement clear I assemble everything in a data frame and display the first few observations.
+<div class="style23" style="padding-left: 30px; text-indent:-30px">ab &lt;- rep(blockcoefs,8) *  rep(treatcoefs, each=5) </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> data.frame(oatvar, a=rep(blockcoefs, 8), b=rep(treatcoefs, each=5), ab)[1:12,]</div>
+<span class="style24">&nbsp;&nbsp; yield block variety&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a&nbsp;&nbsp;&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ab<br>
+1&nbsp;&nbsp;&nbsp; 296&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 0.000&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+2&nbsp;&nbsp;&nbsp; 357&nbsp;&nbsp;&nbsp; II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 -25.500&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+3&nbsp;&nbsp;&nbsp; 340&nbsp;&nbsp; III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 0.125&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+4&nbsp;&nbsp;&nbsp; 331&nbsp;&nbsp;&nbsp; IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 -42.000&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+5&nbsp;&nbsp;&nbsp; 348&nbsp;&nbsp; &nbsp;&nbsp;V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 -77.000&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+6&nbsp;&nbsp;&nbsp; 402&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 0.000 42.2&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+7&nbsp;&nbsp;&nbsp; 390&nbsp;&nbsp;&nbsp; II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 -25.500 42.2 -1076.100<br>
+8&nbsp;&nbsp;&nbsp; 431&nbsp;&nbsp; III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 0.125 42.2&nbsp;&nbsp;&nbsp;&nbsp; 5.275<br>
+9&nbsp;&nbsp;&nbsp; 340&nbsp;&nbsp;&nbsp; IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 -42.000 42.2 -1772.400<br>
+10&nbsp;&nbsp; 320&nbsp;&nbsp;&nbsp;&nbsp; V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 -77.000 42.2 -3249.400<br>
+11&nbsp;&nbsp; 437&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 0.000 28.2&nbsp;&nbsp;&nbsp;&nbsp; 0.000<br>
+12&nbsp;&nbsp; 334&nbsp;&nbsp;&nbsp; II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 -25.500 28.2&nbsp; -719.100</span>
+<p>I add the multiplicative term to the additive model and carry out a significance test.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> g2 &lt;- update(g, .~.+ab)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(g2)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: yield<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  block&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 33396&nbsp; 8348.9&nbsp; 6.0563&nbsp; 0.001299 ** <br>
+  variety&nbsp;&nbsp;&nbsp; 7&nbsp; 77524 11074.8&nbsp; 8.0337 2.787e-05 ***<br>
+  ab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 213&nbsp;&nbsp; 212.9&nbsp; 0.1544&nbsp; 0.697428&nbsp;&nbsp;&nbsp; <br>
+  Residuals 27&nbsp; 37220&nbsp; 1378.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>The multiplicative term is not significant thus we can reject the presence of an interaction of the form posited by the Tukey test.</p>
+<h3><a name="graphical"></a>Graphical assessment  of a block &times; treatment interaction</h3>
+<p><a name="groups"></a>Graphical methods of assessing interaction are applicable here. For instance we can produce a dot plot of yield by block in which we identify the different treatments by symbol type and color. Adding the <span class="style22">groups</span> argument to a <span class="style19">lattice</span> plot function causes the points to be plotted with different colors. To get different symbols too I  specify the <span class="style22">pch</span> argument with eight different values.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dotplot(block~yield, groups=variety, data=oatvar, pch=1:8)</div>
+<p><a name="autokey"></a><a name="trellisget"></a>To get a legend we could create our own using the <span class="style22">key</span> argument as was done in Fig. 1. Alternatively we can use the <span class="style22">auto.key</span> argument. For <span class="style22">auto.key</span> to work we have to reset the global <span class="style22">pch</span> setting for groups for <span class="style19">lattice</span> graphs to <span class="style8">1:8</span>. <span class="style19">Lattice</span> works differently from base graphics. The graphical parameter setting for <span class="style22">groups</span> is contained in the components of the <span class="style22">superpose.symbol</span> parameter. We can obtain the current settings of this <span class="style19">lattice</span> graphics parameter with <span class="style1">trellis.par.get</span>.<br>
+</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">trellis.par.get(&quot;superpose.symbol&quot;)</div>
+<span class="style24">  $alpha<br>
+[1] 1 1 1 1 1 1 1</span>
+<p><span class="style24">$cex<br>
+  [1] 0.8 0.8 0.8 0.8 0.8 0.8 0.8</span>
+<p><span class="style24">$col<br>
+  [1] &quot;#0080ff&quot;&nbsp;&nbsp; &quot;#ff00ff&quot;&nbsp;&nbsp; &quot;darkgreen&quot; &quot;#ff0000&quot;&nbsp;&nbsp; &quot;orange&quot;&nbsp;&nbsp;&nbsp; &quot;#00ff00&quot;&nbsp;&nbsp; &quot;brown&quot;&nbsp;&nbsp;&nbsp; </span>
+<p><span class="style24">$fill<br>
+  [1] &quot;#CCFFFF&quot; &quot;#FFCCFF&quot; &quot;#CCFFCC&quot; &quot;#FFE5CC&quot; &quot;#CCE6FF&quot; &quot;#FFFFCC&quot; &quot;#FFCCCC&quot;</span>
+<p><span class="style24">$font<br>
+  [1] 1 1 1 1 1 1 1</span>
+<p><span class="style25">$pch<br>
+  [1] 1 1 1 1 1 1 1</span>
+<p><a name="trellisset" id="trellisset"></a>Notice that the default symbol type is 1 for all groups. To change the settings we need to use the <span class="style1">trellis.par.set</span> function. The following call changes the settings for <span class="style22">pch</span> to 1:8.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">trellis.par.set(superpose.symbol=list(pch=1:8))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> trellis.par.get(&quot;superpose.symbol&quot;)</div>
+<span class="style24">$alpha<br>
+[1] 1 1 1 1 1 1 1</span>
+<p><span class="style24">$cex<br>
+  [1] 0.8 0.8 0.8 0.8 0.8 0.8 0.8</span>
+<p><span class="style24">$col<br>
+  [1] &quot;#0080ff&quot;&nbsp;&nbsp; &quot;#ff00ff&quot;&nbsp;&nbsp; &quot;darkgreen&quot; &quot;#ff0000&quot;&nbsp;&nbsp; &quot;orange&quot;&nbsp;&nbsp;&nbsp; &quot;#00ff00&quot;&nbsp;&nbsp; &quot;brown&quot;&nbsp;&nbsp;&nbsp; </span>
+<p><span class="style24">$fill<br>
+  [1] &quot;#CCFFFF&quot; &quot;#FFCCFF&quot; &quot;#CCFFCC&quot; &quot;#FFE5CC&quot; &quot;#CCE6FF&quot; &quot;#FFFFCC&quot; &quot;#FFCCCC&quot;</span>
+<p><span class="style24">$font<br>
+  [1] 1 1 1 1 1 1 1</span>
+<p><span class="style25">$pch<br>
+  [1] 1 2 3 4 5 6 7 8</span>
+<p><a name="space" id="space"></a>Now we can use the <span class="style22">auto.key</span> argument and specify that the legend should appear on the right side of the graph with the <span class="style22">space</span> argument.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dotplot(block~yield, groups=variety, data=oatvar, auto.key=list(space='right'))</div><br>
+<table width="650" border="0" align="center" cellpadding="5" cellspacing="0">  
+  <tr>
+    <td  valign="top">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture7/fig2.png" width="625" height="340" alt="fig. 2"></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 2</strong> &nbsp;&nbsp;Dot plot of yields separately by block with individual treatments indicated</td>
+  </tr>
+</table>
+<p>Notice that the ranking of treatments (by yield) is more or less consistent across blocks. For instance, treatment 4 yields either the lowest  yield (in three blocks) or the second lowest yield (in two blocks). Similarly treatment 5 yields the highest yield in four of the five blocks, and the second highest yield in one block. There are some inconsistencies across blocks. For instance treatment 7 ranks worst in block V but in the other four blocks it is never  worse than third worst.</p>
+<p><a name="interaction"></a>Alternatively we can generate a crude interaction plot with the <span class="style1">interaction.plot</span> function of R. The first argument of <span class="style1">interaction.plot</span> defines the variable to plot on the <em>x</em>-axis, the second argument is the variable that defines the profiles, and the last variable defines what is to be plotted. In Fig. 3 I plot <span class="style8">yield</span> against <span class="style8">variety</span> separately for each <span class="style8">block</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">interaction.plot(oatvar$variety, oatvar$block, oatvar$yield)</div><br>
+<table width="650" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td  valign="top">&nbsp;&nbsp;&nbsp;<img src="../../images/lectures/lecture7/fig3.png" width="620" height="335" alt="fig. 3"></td>
+  <tr>
+    <td  class="styleArial" style="padding-left: 50px; text-indent:-50px"><strong>Fig. 3</strong> &nbsp;&nbsp;Interaction plot showing the variability of treatment effects by block</td>
+  </tr>
+</table>
+<p>In Fig. 3 we need to determine if the block profiles are parallel. Notice that if we look only at varieties 3, 4, 5, and 6 the parallel assumption seem reasonable. If we look at varieties 1 and 2 or varieties 7 and 8 the rankings of the treatments within blocks appear to change. What we can say is that the deviations from additivity that we can detect in Fig. 3 are not especially dramatic.</p>
+<h2><a name="4factor"></a>A 4-factor analysis of variance design with blocking</h2>
+<p>Blocking can be part of any experimental design. We next consider an experiment in which the treatments consist of combining the levels of four factors (each with two levels) in all possible ways.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> nitro &lt;- read.csv(ecol 563/nitro.csv')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(nitro)</div>
+ <span class="style24">  [1] 138&nbsp;&nbsp; 9</span>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> nitro[1:8,]</div>
+ <span class="style24">  &nbsp; tag spp block phy lh func n p&nbsp;&nbsp; pN<br>
+  1&nbsp; 71&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 1 AVE EA inoc 0 0 4.34<br>
+  2 169&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 2 AVE EA inoc 0 0 3.67<br>
+  3 469&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 5 AVE EA inoc 0 0 2.81<br>
+  4 137&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 2 AVE EA inoc 0 1 3.53<br>
+  5 327&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 4 AVE EA inoc 0 1 3.93<br>
+  6 472&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 5 AVE EA inoc 0 1 3.16<br>
+  7&nbsp; 25&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 1 AVE EA inoc 1 0 4.27<br>
+8 115&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 2 AVE EA inoc 1 0 4.28</span>
+<p>The factors comprising the treatment are <span class="style8">lh</span> (a life history trait), <span class="style8">func</span> (an indicator of whether the plant was infected with virus), and nutrient treatments <span class="style8">n</span> and <span class="style8">p.</span> The response is <span class="style8">pN</span>, the percent nitrogen composition of the plant. If we tabulate the treatments we see that the data are unbalanced with between 6 and 12 observations per treatment.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(nitro$lh, nitro$func, nitro$n, nitro$p)</div>
+<span class="style24">, ,&nbsp; = 0,&nbsp; = 0</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp; &nbsp;&nbsp;inoc mock<br>
+  &nbsp; EA&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7<br>
+  &nbsp; NP&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 9</span>
+<p><span class="style24">, ,&nbsp; = 1,&nbsp; = 0</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; inoc mock<br>
+  &nbsp; EA&nbsp;&nbsp; 12&nbsp;&nbsp; 12<br>
+  &nbsp; NP&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 7</span>
+<p><span class="style24">, ,&nbsp; = 0,&nbsp; = 1</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; inoc mock<br>
+  &nbsp; EA&nbsp;&nbsp; 10&nbsp;&nbsp; 10<br>
+  &nbsp; NP&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 8</span>
+<p><span class="style24">, ,&nbsp; = 1,&nbsp; = 1</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; inoc mock<br>
+  &nbsp; EA&nbsp;&nbsp; 10&nbsp;&nbsp; 10<br>
+  &nbsp; NP&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 6</span>
+<p><a name="paste"></a><a name="sep"></a>In addition to the treatment structure there is a blocking variable (five <span class="style8">blocks</span>) and a variable <span class="style8">phy</span> that indicates the type of grass plant. It turns out that not every treatment appeared in every block. To see this I create a treatment variable by concatenating the levels of the four factor variables with the <span class="style1">paste</span> function of R. The <span class="style1">paste</span> function has a <span class="style22">sep</span> argument that permits a separator to be placed between each of the character values. I use a period to serve as the separator between the factor levels.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> nitro$trt &lt;- paste(nitro$lh, nitro$func, nitro$n, nitro$p, sep='.')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> nitro[1:8,]</div>
+ <span class="style24"> &nbsp; tag spp block phy lh func n p&nbsp;&nbsp; pN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trt<br>
+  1&nbsp; 71&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 1 AVE EA inoc 0 0 4.34 EA.inoc.0.0<br>
+  2 169&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 2 AVE EA inoc 0 0 3.67 EA.inoc.0.0<br>
+  3 469&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 5 AVE EA inoc 0 0 2.81 EA.inoc.0.0<br>
+  4 137&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 2 AVE EA inoc 0 1 3.53 EA.inoc.0.1<br>
+  5 327&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 4 AVE EA inoc 0 1 3.93 EA.inoc.0.1<br>
+  6 472&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 5 AVE EA inoc 0 1 3.16 EA.inoc.0.1<br>
+  7&nbsp; 25&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 1 AVE EA inoc 1 0 4.27 EA.inoc.1.0<br>
+8 115&nbsp; af&nbsp;&nbsp;&nbsp;&nbsp; 2 AVE EA inoc 1 0 4.28 EA.inoc.1.0</span>
+<p> I tabulate the treatment variable against <span class="style8">block</span> and against <span class="style8">phy</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(nitro$trt, nitro$block)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 2 3 4 5 6<br>
+  &nbsp; EA.inoc.0.0 2 2 0 1 1 1<br>
+  &nbsp; EA.inoc.0.1 2 2 1 1 3 1<br>
+  &nbsp; EA.inoc.1.0 3 3 1 1 2 2<br>
+  &nbsp; EA.inoc.1.1 2 2 2 0 3 1<br>
+  &nbsp; EA.mock.0.0 2 2 0 1 1 1<br>
+  &nbsp; EA.mock.0.1 2 2 1 1 3 1<br>
+  &nbsp; EA.mock.1.0 3 3 1 1 2 2<br>
+  &nbsp; EA.mock.1.1 2 2 2 0 3 1<br>
+  &nbsp; NP.inoc.0.0 2 2 2 0 2 1<br>
+  &nbsp; NP.inoc.0.1 2 1 1 1 1 2<br>
+  &nbsp; NP.inoc.1.0 2 1 1 0 2 1<br>
+  &nbsp; NP.inoc.1.1 2 1 1 1 1 0<br>
+  &nbsp; NP.mock.0.0 2 2 2 0 2 1<br>
+  &nbsp; NP.mock.0.1 2 1 1 1 1 2<br>
+  &nbsp; NP.mock.1.0 2 1 1 0 2 1<br>
+  &nbsp; NP.mock.1.1 2 1 1 1 1 0<br>
+</span>
+<p>We can see that there are a lot of zeros so not every treatment is represented in every block. Blocks 3, 4, and 6 have missing treatments. The situation for the three grass types is similar. Only <span class="style8">&quot;TRI&quot;</span> is represented in all 16 treatments.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> table(nitro$trt, nitro$phy)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AVE BRO TRI<br>
+  &nbsp; EA.inoc.0.0&nbsp;&nbsp; 3&nbsp;&nbsp; 0&nbsp;&nbsp; 4<br>
+  &nbsp; EA.inoc.0.1&nbsp;&nbsp; 3&nbsp;&nbsp; 2&nbsp;&nbsp; 5<br>
+  &nbsp; EA.inoc.1.0&nbsp;&nbsp; 4&nbsp;&nbsp; 5&nbsp;&nbsp; 3<br>
+  &nbsp; EA.inoc.1.1&nbsp;&nbsp; 2&nbsp;&nbsp; 4&nbsp;&nbsp; 4<br>
+  &nbsp; EA.mock.0.0&nbsp;&nbsp; 3&nbsp;&nbsp; 0&nbsp;&nbsp; 4<br>
+  &nbsp; EA.mock.0.1&nbsp;&nbsp; 3&nbsp;&nbsp; 2&nbsp;&nbsp; 5<br>
+  &nbsp; EA.mock.1.0&nbsp;&nbsp; 4&nbsp;&nbsp; 5&nbsp;&nbsp; 3<br>
+  &nbsp; EA.mock.1.1&nbsp;&nbsp; 2&nbsp;&nbsp; 4&nbsp;&nbsp; 4<br>
+  &nbsp; NP.inoc.0.0&nbsp;&nbsp; 3&nbsp;&nbsp; 5&nbsp;&nbsp; 1<br>
+  &nbsp; NP.inoc.0.1&nbsp;&nbsp; 0&nbsp;&nbsp; 5&nbsp;&nbsp; 3<br>
+  &nbsp; NP.inoc.1.0&nbsp;&nbsp; 0&nbsp;&nbsp; 5&nbsp;&nbsp; 2<br>
+  &nbsp; NP.inoc.1.1&nbsp;&nbsp; 0&nbsp;&nbsp; 4&nbsp;&nbsp; 2<br>
+  &nbsp; NP.mock.0.0&nbsp;&nbsp; 3&nbsp;&nbsp; 5&nbsp;&nbsp; 1<br>
+  &nbsp; NP.mock.0.1&nbsp;&nbsp; 0&nbsp;&nbsp; 5&nbsp;&nbsp; 3<br>
+  &nbsp; NP.mock.1.0&nbsp;&nbsp; 0&nbsp;&nbsp; 5&nbsp;&nbsp; 2<br>
+  &nbsp; NP.mock.1.1&nbsp;&nbsp; 0&nbsp;&nbsp; 4&nbsp;&nbsp; 2<br>
+</span>
+<h3><a name="treating"></a>Treating blocks as fixed effects</h3>
+<p><a name="car"></a>The researcher chose to fit models in which the square of <span class="style8">pN</span> was the response, a very strange choice. He also chose to drop the observation corresponding to tag #444. I fit his basic model that included <span class="style8">block</span> and <span class="style8">phy</span> as well as a 4-factor interaction between <span class="style8">lh</span>, <span class="style8">func</span>, <span class="style8">n</span> and <span class="style8">p</span>. I then consider Type I and Type II tests of all the terms in the model that are related to treatment.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod3 &lt;- lm(pN^2 ~ factor(block)+factor(phy) + factor(lh)*factor(n)*factor(func)*factor(p), data=nitro[nitro$tag!=444,]) </div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # compare Type I and Type II tests</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod3)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: pN^2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Df&nbsp; Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(block)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp; 264.59&nbsp;&nbsp; 52.92&nbsp; 4.1968 0.0015441 ** <br>
+  factor(phy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 229.04&nbsp; 114.52&nbsp; 9.0822 0.0002188 ***<br>
+  factor(lh)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp; 739.16&nbsp; 739.16 58.6214 6.749e-12 ***<br>
+  factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 634.83&nbsp; 634.83 50.3471 1.165e-10 ***<br>
+  factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 135.19&nbsp; 135.19 10.7217 0.0014025 ** <br>
+  factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp; 101.81&nbsp; 101.81&nbsp; 8.0744 0.0053200 ** <br>
+  factor(lh):factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 105.33&nbsp; 105.33&nbsp; 8.3534 0.0046098 ** <br>
+  factor(lh):factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 24.33&nbsp;&nbsp; 24.33&nbsp; 1.9292 0.1675527&nbsp;&nbsp;&nbsp; <br>
+  factor(n):factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp; 8.48&nbsp;&nbsp;&nbsp; 8.48&nbsp; 0.6723 0.4139756&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 5.52&nbsp;&nbsp;&nbsp; 5.52&nbsp; 0.4375 0.5096631&nbsp;&nbsp;&nbsp; <br>
+  factor(n):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 26.63&nbsp;&nbsp; 26.63&nbsp; 2.1122 0.1488793&nbsp;&nbsp;&nbsp; <br>
+  factor(func):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp; 1.09&nbsp;&nbsp;&nbsp; 1.09&nbsp; 0.0865 0.7692047&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(n):factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 28.18&nbsp;&nbsp; 28.18&nbsp; 2.2350 0.1376806&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(n):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 15.94&nbsp;&nbsp; 15.94&nbsp; 1.2638 0.2632881&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(func):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 36.27&nbsp;&nbsp; 36.27&nbsp; 2.8762 0.0926295 .&nbsp; <br>
+  factor(n):factor(func):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 13.75&nbsp;&nbsp; 13.75&nbsp; 1.0903 0.2986082&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(n):factor(func):factor(p)&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1.96&nbsp;&nbsp;&nbsp; 1.96&nbsp; 0.1555 0.6940604&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;114 1437.43&nbsp;&nbsp; 12.61&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(car)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Anova(mod3)</div>
+<span class="style24">  Anova Table (Type II tests)</span>
+<p><span class="style24">Response: pN^2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sum Sq&nbsp; Df F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(block)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 288.20&nbsp;&nbsp; 5&nbsp; 4.5713 0.0007754 ***<br>
+  factor(phy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 208.54&nbsp;&nbsp; 2&nbsp; 8.2694 0.0004430 ***<br>
+  factor(lh)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;446.58&nbsp;&nbsp; 1 35.4177 2.995e-08 ***<br>
+  factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 687.74&nbsp;&nbsp; 1 54.5433 2.698e-11 ***<br>
+  factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 134.25&nbsp;&nbsp; 1 10.6474 0.0014549 ** <br>
+  factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;109.82&nbsp;&nbsp; 1&nbsp; 8.7095 0.0038434 ** <br>
+  factor(lh):factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 101.30&nbsp;&nbsp; 1&nbsp; 8.0339 0.0054320 ** <br>
+  factor(lh):factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24.92&nbsp;&nbsp; 1&nbsp; 1.9760 0.1625351&nbsp;&nbsp;&nbsp; <br>
+  factor(n):factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.14&nbsp;&nbsp; 1&nbsp; 0.4871 0.4866400&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.71&nbsp;&nbsp; 1&nbsp; 0.2146 0.6440844&nbsp;&nbsp;&nbsp; <br>
+  factor(n):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26.66&nbsp;&nbsp; 1&nbsp; 2.1144 0.1486659&nbsp;&nbsp;&nbsp; <br>
+  factor(func):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.61&nbsp;&nbsp; 1&nbsp; 0.0486 0.8258384&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(n):factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21.77&nbsp;&nbsp; 1&nbsp; 1.7269 0.1914517&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(n):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15.75&nbsp;&nbsp; 1&nbsp; 1.2493 0.2660352&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(func):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 41.59&nbsp;&nbsp; 1&nbsp; 3.2981 0.0719899 .&nbsp; <br>
+  factor(n):factor(func):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13.75&nbsp;&nbsp; 1&nbsp; 1.0903 0.2986082&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(n):factor(func):factor(p)&nbsp;&nbsp;&nbsp; 1.96&nbsp;&nbsp; 1&nbsp; 0.1555 0.6940604&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1437.43 114&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>It's clear from the output that the 4-factor interaction can be dropped. From the Type II tests we see that none of the 3-factor interactions are significant when  added last, although the <span class="style8">lh:func:p</span> interaction comes close. Although the Type I tests add the 3-factor interactions in a different order they also agree with the  the Type II tests. Still we might  want to consider a model in which <span class="style8">lh:func:p</span> is the first 3-factor interaction added.</p>
+<p>From the Type I tests  the<span class="style8"> lh:n</span> interaction appears to be significant. The Type II tests are in agreement with this. We should realize that the Type II tests of the two-factor interactions are rather strange here because the reference model includes some of the three-factor interactions too. For instance, the <span class="style1">Anova</span> function tests the term <span class="style8">factor(func):factor(n)</span> by fitting a model that contains all main effects, all two-factor interactions, and any higher order interaction that doesn&rsquo;t also contain the term <span class="style8">factor(func):factor(n)</span>. It then compares this to the same model in which the term <span class="style8">factor(func):factor(n)</span> has been dropped. The reference model then is one with all two-factor interactions and main effects plus the two three-factor interactions <span class="style8">factor(func):factor(lh):factor(p)</span> and <span class="style8">factor(lh):factor(n):factor(p)</span>. </p>
+<p>I next fit a model with all two-factor interactions and try adding back in the <span class="style8">lh:func:p</span> three-factor interaction.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # add back in 3-factor interaction with lowest p-value</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod3a &lt;- lm(pN^2 ~ factor(block)+factor(phy) + (factor(lh) + factor(n) + factor(func) + factor(p))^2, data=nitro[nitro$tag!=444,]) </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod3b &lt;- update(mod3a, .~. + factor(lh):factor(func):factor(p))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod3b)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: pN^2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(block)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp; 264.59&nbsp;&nbsp; 52.92&nbsp; 4.1841 0.0015504 ** <br>
+  factor(phy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 229.04&nbsp; 114.52&nbsp; 9.0548 0.0002196 ***<br>
+  factor(lh)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp; 739.16&nbsp; 739.16 58.4449 6.153e-12 ***<br>
+  factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 634.83&nbsp; 634.83 50.1955 1.090e-10 ***<br>
+  factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 135.19&nbsp; 135.19 10.6894 0.0014123 ** <br>
+  factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 101.81&nbsp; 101.81&nbsp; 8.0501 0.0053576 ** <br>
+  factor(lh):factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 105.33&nbsp; 105.33&nbsp; 8.3283 0.0046425 ** <br>
+  factor(lh):factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 24.33&nbsp;&nbsp; 24.33&nbsp; 1.9234 0.1680970&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 5.44&nbsp;&nbsp;&nbsp; 5.44&nbsp; 0.4299 0.5133070&nbsp;&nbsp;&nbsp; <br>
+  factor(n):factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 8.56&nbsp;&nbsp;&nbsp; 8.56&nbsp; 0.6765 0.4124502&nbsp;&nbsp;&nbsp; <br>
+  factor(n):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 26.63&nbsp;&nbsp; 26.63&nbsp; 2.1058 0.1493942&nbsp;&nbsp;&nbsp; <br>
+  factor(func):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1.09&nbsp;&nbsp;&nbsp; 1.09&nbsp; 0.0862 0.7695245&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(func):factor(p)&nbsp;&nbsp; 1&nbsp;&nbsp; 41.16&nbsp;&nbsp; 41.16&nbsp; 3.2545 0.0737780 .&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 118 1492.36&nbsp;&nbsp; 12.65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>So, we don't need to include any of the three-factor interactions. I next consider the Type II tests for the model that contains all two-factor interactions.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Anova(mod3a)</div>
+<span class="style24">Anova Table (Type II tests)</span>
+<p><span class="style24">Response: pN^2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sum Sq&nbsp; Df F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(block)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 280.80&nbsp;&nbsp; 5&nbsp; 4.3579 0.0011186 ** <br>
+  factor(phy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 223.94&nbsp;&nbsp; 2&nbsp; 8.6886 0.0003005 ***<br>
+  factor(lh)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 444.88&nbsp;&nbsp; 1 34.5224 3.922e-08 ***<br>
+  factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 689.40&nbsp;&nbsp; 1 53.4967 3.284e-11 ***<br>
+  factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 133.67&nbsp;&nbsp; 1 10.3724 0.0016496 ** <br>
+  factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 109.19&nbsp;&nbsp; 1&nbsp; 8.4731 0.0043039 ** <br>
+  factor(lh):factor(n)&nbsp;&nbsp;&nbsp;&nbsp; 100.83&nbsp;&nbsp; 1&nbsp; 7.8246 0.0060126 ** <br>
+  factor(lh):factor(func)&nbsp;&nbsp; 26.51&nbsp;&nbsp; 1&nbsp; 2.0570 0.1541314&nbsp;&nbsp;&nbsp; <br>
+  factor(lh):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.86&nbsp;&nbsp; 1&nbsp; 0.2220 0.6383522&nbsp;&nbsp;&nbsp; <br>
+  factor(n):factor(func)&nbsp;&nbsp;&nbsp;&nbsp; 8.12&nbsp;&nbsp; 1&nbsp; 0.6300 0.4289362&nbsp;&nbsp;&nbsp; <br>
+  factor(n):factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26.57&nbsp;&nbsp; 1&nbsp; 2.0618 0.1536520&nbsp;&nbsp;&nbsp; <br>
+  factor(func):factor(p)&nbsp;&nbsp;&nbsp;&nbsp; 1.09&nbsp;&nbsp; 1&nbsp; 0.0846 0.7716120&nbsp;&nbsp;&nbsp; <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1533.52 119&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 <br>
+</span>
+<p>The Type II and Type I tests combined suggest that only the <span class="style8">lh</span> &times; <span class="style8">n</span> interaction needs to be retained. I fit that model and examine the remaining terms.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod3c &lt;- lm(pN^2 ~ factor(block)+factor(phy) + factor(lh)*factor(n)+factor(func)+factor(p), data=nitro[nitro$tag!=444,])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">anova(mod3c)</div>
+<span class="style24">Analysis of Variance Table</span>
+<p><span class="style24">Response: pN^2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df&nbsp; Sum Sq Mean Sq F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(block)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp; 264.59&nbsp;&nbsp; 52.92&nbsp; 4.1022 0.0017588 ** <br>
+  factor(phy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 229.04&nbsp; 114.52&nbsp; 8.8775 0.0002493 ***<br>
+  factor(lh)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 739.16&nbsp; 739.16 57.3005 7.391e-12 ***<br>
+  factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 634.83&nbsp; 634.83 49.2127 1.317e-10 ***<br>
+  factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 135.19&nbsp; 135.19 10.4801 0.0015481 ** <br>
+  factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 101.81&nbsp; 101.81&nbsp; 7.8924 0.0057698 ** <br>
+  factor(lh):factor(n)&nbsp;&nbsp; 1&nbsp; 105.33&nbsp; 105.33&nbsp; 8.1652 0.0050096 ** <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 124 1599.56&nbsp;&nbsp; 12.90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> Anova(mod3c)</div>
+<span class="style24">  Anova Table (Type II tests)</span>
+<p><span class="style24">Response: pN^2<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sum Sq&nbsp; Df F value&nbsp;&nbsp;&nbsp; Pr(&gt;F)&nbsp;&nbsp;&nbsp; <br>
+  factor(block)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 294.16&nbsp;&nbsp; 5&nbsp; 4.5607 0.0007486 ***<br>
+  factor(phy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 217.45&nbsp;&nbsp; 2&nbsp; 8.4284 0.0003698 ***<br>
+  factor(lh)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 427.11&nbsp;&nbsp; 1 33.1098 6.426e-08 ***<br>
+  factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 686.40&nbsp;&nbsp; 1 53.2103 3.117e-11 ***<br>
+  factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 134.70&nbsp;&nbsp; 1 10.4417 0.0015780 ** <br>
+  factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 108.85&nbsp;&nbsp; 1&nbsp; 8.4378 0.0043527 ** <br>
+  factor(lh):factor(n)&nbsp; 105.33&nbsp;&nbsp; 1&nbsp; 8.1652 0.0050096 ** <br>
+  Residuals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1599.56 124&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>Based on the output we have a significant interaction between <span class="style8">lh</span> and <span class="style8">n</span> as well as significant main effects for <span class="style8">func</span> and <span class="style8">p</span>.</p>
+<h3><a name="fitting"></a>Fitting the final model as a mixed effects model</h3>
+<p>As we've previously seen, treating <span class="style8">block</span> as a fixed effect allows us to estimate treatment differences, but it makes obtaining sensible treatment means more difficult. To get around this I treat <span class="style8">block</span> as a random effect and refit the final model above with random blocks rather than fixed blocks.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod3.lme &lt;- lme(pN^2 ~ factor(phy) + factor(lh)*factor(n) + factor(func) + factor(p), random=~1|block, data=nitro[nitro$tag!=444,])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod3.lme)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numDF denDF&nbsp; F-value p-value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 124 668.5863&nbsp; &lt;.0001<br>
+  factor(phy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 124&nbsp;&nbsp; 8.7290&nbsp; 0.0003<br>
+  factor(lh)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 124&nbsp; 57.1568&nbsp; &lt;.0001<br>
+  factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 124&nbsp; 49.6185&nbsp; &lt;.0001<br>
+  factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 124&nbsp; 10.4440&nbsp; 0.0016<br>
+  factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 124&nbsp;&nbsp; 7.6733&nbsp; 0.0065<br>
+factor(lh):factor(n)&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 124&nbsp;&nbsp; 8.3349&nbsp; 0.0046</span>
+<p>The <em>F</em>-statistics in the ANOVA table of the mixed effects model are nearly identical to the <em>F</em>-statistics from the ANOVA table of Type I tests for the fixed effects <span class="style8">block</span> model. </p>
+<h3><a name="crossed"></a>Crossed random effects</h3>
+<p>Depending upon how we view the variable <span class="style8">phy</span> we might also choose to make <span class="style8">phy</span> random. If the species used were of no special interest and were merely selected to be representative of a larger pool of possible species then we might be more interested in the average treatment mean for a typical plant (irrespective of species) than the mean of a plant of a specific species. This would also be a good approach  if we  had predictors that grouped species in various ways that  might  explain any differences between the  species. Of course with only three species, as is the case here, treating species as random might be a bit suspect. </p>
+<p>The species and block variables are crossed (rather than nested) in this design, i.e., they are found in all possible combinations. A cross random effects model for  observation <em>k</em> of species <em>j</em> from block <em>i</em> can be written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture7/crossedmodel.gif" width="193" height="37"></p>
+<p align="center"><img src="../../images/lectures/lecture7/variances.gif" width="507" height="40"></p>
+<p>The term &mu;<sub>ijk</sub> is  short hand notation for the fixed effect part of the model that arises from the treatment structure. The <span class="style19">lme4</span> package is well-suited for estimating models with crossed random effects. We just need to include two random terms in the model.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> detach(package:nlme)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> library(lme4)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> mod3.lmer &lt;- lmer(pN^2 ~ factor(lh)*factor(n) + factor(func) + factor(p) + (1|block) + (1|phy), data=nitro[nitro$tag!=444,])</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(mod3.lmer)</div>
+<span class="style24">  Analysis of Variance Table<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Df Sum Sq Mean Sq F value<br>
+  factor(lh)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 718.34&nbsp; 718.34 55.8087<br>
+  factor(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 650.47&nbsp; 650.47 50.5362<br>
+  factor(func)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 133.81&nbsp; 133.81 10.3958<br>
+  factor(p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 105.90&nbsp; 105.90&nbsp; 8.2276<br>
+factor(lh):factor(n)&nbsp; 1 104.19&nbsp; 104.19&nbsp; 8.0949</span>
+<p>The ANOVA table is nearly the same as what we obtained with <span class="style1">lme</span> and only random blocks. If we examine the summary table we see that the variability between species exceeds the variability between blocks.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> summary(mod3.lmer)</div>
+<span class="style24">  Linear mixed model fit by REML <br>
+  Formula: pN^2 ~ factor(lh) * factor(n) + factor(func) + factor(p) + (1 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; block) + (1 | phy) <br>
+  &nbsp;&nbsp; Data: nitro[nitro$tag != 444, ] <br>
+  &nbsp;&nbsp; AIC&nbsp;&nbsp; BIC logLik deviance REMLdev<br>
+  &nbsp;757.1 783.3 -369.5&nbsp;&nbsp;&nbsp; 747.1&nbsp;&nbsp; 739.1<br>
+  Random effects:<br>
+  &nbsp;Groups&nbsp;&nbsp; Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variance Std.Dev.<br>
+&nbsp;block&nbsp;&nbsp;&nbsp; (Intercept)&nbsp; </span><span class="style25">1.8962</span><span class="style24">&nbsp; 1.3770&nbsp; <br>
+  &nbsp;phy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp; </span><span class="style25">2.9194</span><span class="style24">&nbsp; 1.7086&nbsp; <br>
+  &nbsp;Residual&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.8714&nbsp; 3.5877&nbsp; <br>
+Number of obs: 137, groups: block, 6; phy, 3</span>
+<p><span class="style24">Fixed effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.9810&nbsp;&nbsp;&nbsp;&nbsp; 1.3909&nbsp;&nbsp; 9.333<br>
+  factor(lh)NP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.0468&nbsp;&nbsp;&nbsp;&nbsp; 0.9416&nbsp; -2.174<br>
+  factor(n)1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.3092&nbsp;&nbsp;&nbsp;&nbsp; 0.8492&nbsp;&nbsp; 7.430<br>
+  factor(func)mock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.9742&nbsp;&nbsp;&nbsp;&nbsp; 0.6132&nbsp;&nbsp; 3.219<br>
+  factor(p)1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.8754&nbsp;&nbsp;&nbsp;&nbsp; 0.6302&nbsp;&nbsp; 2.976<br>
+factor(lh)NP:factor(n)1&nbsp; -3.6139&nbsp;&nbsp;&nbsp;&nbsp; 1.2702&nbsp; -2.845</span>
+<p><span class="style24">Correlation of Fixed Effects:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intr) fc()NP fctr(n)1 fctr() fctr(p)1<br>
+  factr(lh)NP -0.347&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  factor(n)1&nbsp; -0.372&nbsp; 0.565&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  fctr(fnc)mc -0.221 -0.013 -0.001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  factor(p)1&nbsp; -0.269&nbsp; 0.086&nbsp; 0.105&nbsp;&nbsp;&nbsp; 0.006&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+fct()NP:()1&nbsp; 0.241 -0.691 -0.659&nbsp;&nbsp;&nbsp; 0.008 -0.038&nbsp; </span>
+<h2><a name="cited"></a>Cited references</h2>
+<ul>
+  <li>Anderson, R. and T. Bancroft. 1952. <em>Statistical Theory in Research</em>. McGraw Hill: New York.</li>
+  <li>Blakeslee, A. F. 1921. The globe mutant in the jimson weed (<em>Datura stramonium</em>). <em>Genetics</em> <strong>6</strong>: 241&ndash;264.</li>
+  <li><a name="Faraway"></a>Faraway, Julian. 2005. <em>Linear Models with R</em>. CRC Press: Boca Raton, FL.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture7&#32;Rcode.html">here</a>. </p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--September 25, 2012<br>
+      URL: <a href="lecture7.htm#lecture7" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture7.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

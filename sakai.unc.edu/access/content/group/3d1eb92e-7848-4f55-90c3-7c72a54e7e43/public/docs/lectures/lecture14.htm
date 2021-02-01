@@ -1,0 +1,656 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 14&mdash;Wednesday, October 10, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture14" id="lecture4"></a>Lecture 14&mdash;Wednesday, October 10, 2012</h1>
+<h3>Topics </h3>
+<ul>
+
+  <li><a href="lecture14.htm#Poisson">Poisson distribution</a>
+    <ul>
+      <li><a href="lecture14.htm#poisbasic">Basic characteristics</a></li>
+      <li><a href="lecture14.htm#poismass">Probability mass function for the Poisson</a></li>
+      <li><a href="lecture14.htm#poisimport">Importance and use</a></li>
+      <li><a href="lecture14.htm#theoretical">Theoretical motivation for the Poisson distribution</a></li>
+      <li><a href="lecture14.htm#poisexamp">Examples of Poisson distributions</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture14.htm#strategies">Traditional strategies for analyzing count data</a></li>
+  <li><a href="lecture14.htm#aphid">Poisson model for aphid counts</a>
+    <ul>
+      <li><a href="lecture14.htm#constructing">Constructing the Poisson  log-likelihood</a></li>
+      <li><a href="lecture14.htm#graphing">Graphing the log-likelihood</a></li>
+      <li><a href="lecture14.htm#maximizing">Maximizing the log-likelihood numerically</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture14.htm#cited">Cited references</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture14.htm#barplot">barplot</a> is the base graphics function for generating bar plots.</li>
+  <li><a href="lecture14.htm#dpois">dpois</a> is the probability mass function of the Poisson distribution.</li>
+  <li><a href="lecture14.htm#mtext">mtext</a> adds text to the margin of a graph.</li>
+  <li><a href="lecture14.htm#nlm">nlm</a> is the nonlinear minimization function of R.</li>
+  <li><a href="lecture14.htm#prod">prod</a> calculates the product of all the elements of a vector.</li>
+</ul>
+<h3>R function options</h3>
+<ul>
+  <li><a href="lecture14.htm#hessian">hessian</a>= (argument to <strong class="style1">nlm</strong>) can be assigned the values TRUE or FALSE (the default). When TRUE the Hessian is reported evaluated at the minimum value obtained by <strong class="style1">nlm</strong>.</li>
+  <li><a href="lecture14.htm#mtext">line=</a> (argument to <span class="style1">mtext</span>) specifies how far away (in line units) from the plot border to add the text.</li>
+  <li><a href="lecture14.htm#mtext">mfrow=</a> (argument to <span class="style1">par</span>) divides the graphics window into a specified  number of rows and columns.</li>
+  <li><a href="lecture14.htm#mtext">side=</a> (argument to <span class="style1">mtext</span>) specifies the side of the graph on which to place the text:  1 = bottom, 2 = left, 3 = top, 4 = right.</li>
+  <li><a href="lecture14.htm#type">type</a>= (argument to <span class="style1">plot</span>, <span class="style1">points</span>, and <span class="style1">lines</span>) controls what is plotted. We used <strong class="style17">type='h'</strong> to drop vertical lines from plotted points.</li>
+</ul>
+<h2 align="center"><strong><a name="Poisson" id="Poisson"></a>Poisson Distribution </strong></h2>
+<h3><strong><a name="poisbasic"></a>Basic characteristics</strong></h3>
+<ul>
+  <li>A Poisson random variable is discrete. </li>
+  <li>A typical use for the Poisson distribution is  as a model for count data.</li>
+  <li>The Poisson distribution is bounded on only one side. It is bounded below by 0, but has no upper limit. This distinguishes it from the binomial distribution which is bounded on both sides.</li>
+  <li>Example of a Poisson random variable: the number of cases of Lyme disease in a North Carolina county in a year.</li>
+  <li>If the  following three assumptions hold then any non-negative discrete random variable recording the number of events in an interval of time or in a region of space will follow a Poisson distribution.
+    <ol>
+      <li><span class="style3" id="homogeneity" name="homogeneity"><a name="homogeneity" id="homogeneity"></a></span><strong>Homogeneity</strong> assumption: Events occur at a constant rate &lambda; such that on average for any length of time <em>t</em> we  expect to see <em> &lambda;t </em> events.</li>
+      <li><strong>Independence</strong> assumption: For any two non-overlapping intervals the number of observed events is independent. </li>
+      <li>If the interval is very small, then the probability of observing two or more events in that interval is essentially zero. (More specifically, this probability is much, much smaller than the probability of observing one event.)</li>
+    </ol>
+  </li>
+  <li>The Poisson distribution is a one-parameter distribution. The parameter is usually denoted with the symbol &lambda;, the rate.</li>
+  <li>The mean of the Poisson distribution is equal to the rate, &lambda;. The variance of the Poisson distribution is also equal to &lambda;. Thus in the Poisson distribution the variance is equal to the mean. When  the mean gets larger, the variance gets larger at exactly the same rate. So we have if <img src="../../images/lectures/lecture14/Poisdist.gif" alt="Poisson distribution" width="132" height="30" align="absmiddle"> then </li>
+</ul>
+<blockquote>
+  <p align="center">Mean: <img src="../../images/lectures/lecture14/Poismean.gif" alt="Poisson mean" width="83" height="30" align="absmiddle"></p>
+  <p align="center">Variance: <img src="../../images/lectures/lecture14/Poisvar.gif" alt="Poisson variance" width="100" height="30" align="absmiddle"></p>
+</blockquote>
+<ul>
+  <li> The R Poisson probability functions are <span class="style3">dpois</span>, <span class="style3">ppois</span>, <span class="style3">qpois</span>, and <span class="style3">rpois</span>.</li>
+</ul>
+<h3><strong><a name="poismass"></a>Probability mass function for the Poisson</strong></h3>
+<p>Let <img src="../../images/lectures/lecture14/Poisson.gif" alt="Poisson" width="138" height="30" align="absmiddle"> where <em>N<sub>t</sub></em> is the number of events occurring in a time interval of length <em>t</em>, then the probability of observing <em>k </em>events in that interval is </p>
+<p align="center"><img src="../../images/lectures/lecture14/Poisson&#32;mass.gif" width="185" height="58" alt="Poisson time"></p>
+<p>The Poisson distribution can be applied to events occurring in time or space. In a Poisson model of two-dimensional space, events occur again at a constant rate such that the number of events observed in an area A is expected on average to be &lambda;A. In this case the probability mass function is written as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture14/Poisson&#32;mass&#32;area.gif" width="198" height="58" alt="Poisson area"><br>
+</p>
+<p>Often in application  the time interval or the area is the same for all observations. For example, if all the quadrats are the same size then we don't need to know what <em>A</em> is. In such cases we suppress <em>t</em> and <em>A</em> in our formula for the probability mass function and write instead</p>
+<p align="center"><img src="../../images/lectures/lecture14/Poisson&#32;mass&#32;general.gif" width="152" height="55" alt="Poisson probability"></p>
+<h3><a name="poisimport"></a>Importance and Use</h3>
+<p> For spatial distributions the Poisson distribution plays a role in defining  a common null model called <strong>CSR&mdash;complete spatial randomness</strong>. </p>
+<ul>
+  <li>If we imagine moving a window of fixed size over a landscape then due to the homogeneity assumption of the Poisson distribution, no matter where we move the window the picture should look essentially the same. We will on average see the same number of events in each window. This rules out clumping. If the distribution were aggregated then some snapshots from our moving window would show many events, while others would show none. Note: in a clumped distribution the variance will be greater than the mean. </li>
+  <li>Due to the independence assumption the spatial distribution under CSR will not appear very regular. If a regular, equally-spaced distribution is observed then nearby events are interfering with each other to produce the regular spacing. The assumption of the independence of events in non-overlapping regions means that interference of this sort is  impossible. In a regular distribution the variance is smaller than the mean. </li>
+</ul>
+<h3><a name="theoretical"></a>Theoretical motivation for the Poisson distribution</h3>
+<p>Many probability distributions  have no theoretical motivation but get used in biological applications because they resemble distributions seen in nature. Unlike these distributions the Poisson distribution can be motivated by theory. There are two primary ways that the Poisson distribution arises in practice from theory. </p>
+<ol>
+  <li>Using the three assumptions listed above one can derive the formula for the Poisson probability mass function directly from first principles. The process involves setting up differential equations that describe the probability of seeing a new event in the next time interval. If you would like to see how this is done see this <a href="http://www.isds.duke.edu/courses/Fall06/sta113/poisson.pdf">document</a> from a probability for engineers course taught at Duke. This theoretical motivation for the Poisson is  important  because if a Poisson model does not fit our data it can help us understand why not. We can examine the three assumptions (the first two anyway) and try to determine which one(s) is(are) being violated.</li>
+  <li>Another way the Poisson probability model arises in practice is as an approximation to the binomial distribution. Suppose we have binomial data in which <em>p</em>, the probability of success is very small, and <em>n</em>, the number of trials, is very large. In this case the Poisson distribution is a good approximation to the binomial where &lambda; = <em>np</em>. Formally it can be shown that if you start with the probability mass function for a binomial distribution and let <em>n</em> &rarr; &infin; and <em>p</em> &rarr; 0 in such a way that <em>np</em> remains constant, you obtain the probability mass function of the Poisson distribution. <a href="http://www.uoxray.uoregon.edu/ph353/Poisson_distribution.pdf">Here's</a> a document from a physics course taught at the University of Oregon that illustrates the proof of this fact.</li>
+</ol>
+<h3><a name="poisexamp"></a>Examples of Poisson distributions</h3>
+<p><a name="type"></a><a name="mtext"></a>I graph the Poisson distribution for different choices of the parameter &lambda;. The argument <span class="style22">type='h'</span> drops a vertical line from the plotted point to the <em>x</em>-axis. The <span class="style1">mtext</span> function adds text to the margin of a graph. The <span class="style22">side</span> argument specifies the edge: 1 = bottom, 2 = left, 3 = top, 4 = right. The <span class="style22">line</span> argument specifies the distance from the edge in line units. The <span class="style22">mfrow</span> argument of <span class="style1">par</span> divides the graphics window into the specified number of rows and columns.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,3))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(lend=2)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:10, dpois(0:10,1), type='h', lwd=6, xlab='count category', ylab='probability')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, expression(lambda==1))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:15, dpois(0:15,5), type='h', lwd=6, xlab='count category', ylab='probability')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, expression(lambda==5))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(0:35, dpois(0:35,15), type='h', lwd=3, xlab='count category', ylab='probability')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mtext(side=3, line=.5, expression(lambda==15))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># return graphics window to its defaults</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">par(mfrow=c(1,1))</div>
+<p align="center"><img src="../../images/lectures/lecture14/fig1.png" width="500" height="300" alt="fig 6"></p>
+<p align="center" class="styleArial"><strong>Fig. 1</strong>&nbsp;&nbsp;The Poisson distribution for different choices of the rate constant &lambda;</p>
+<p>Notice that when the rate constant &lambda; = 1  the zero category is extremely common comprising nearly 40% of the observations. For small values of &lambda; the Poisson distribution is  skewed, but as &lambda; gets larger the Poisson distribution becomes more symmetric. Not surprisingly given that counts are really sums, the central limit theorem kicks in when &lambda; gets large enough (usually &lambda; &gt; 30 is sufficient). In such cases it is reasonable to use a normal distribution to approximate the discrete Poisson distribution if desired. Keep in mind that in using the normal distribution it will be necessary to calculate probabilities over intervals to find the probabilities of specific count categories. For example, using a normal distribution we would have to calculate the Poisson probability P(<em>X</em> = 16) as follows.</p>
+<p align="center"><img src="../../images/lectures/lecture14/normal&#32;approx.gif" width="453" height="105" alt="normal approximation"></p>
+<p align="left"><a name="dpois"></a>In Fig. 1(c), where &lambda; = 15, we could approximate the Poisson probability as follows.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # normal approximation to Poisson probability</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pnorm(16.5, 15, sqrt(15)) - pnorm(15.5, 15, sqrt(15))</div>
+<span class="style24">[1] 0.0993718</span>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # P(X = 16) for Poisson with lambda=15</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dpois(16,15)</div>
+<span class="style24">  [1] 0.09603362</span>
+
+<p align="left">So even with &lambda; = 15 the normal approximation is quite good.</p>
+<h2><a name="strategies"></a>Traditional strategies for analyzing count data</h2>
+<p>There are a number of  standard recommendations for analyzing count data. These date from a time when statistical tools were more limited than they are today. The recommendations are usually some variation of the following. (See, e.g., Snijders and Bosker, 1999, pp. 234&ndash;235.)</p>
+<ol>
+  <li> If the counts are all large then standard statistical procedures that assume a normal distribution can be used directly on the raw data. This follows from the fact that count data are essentially sums and the central limit theorem applies to sums when they are large. The term large is relative, but &lambda; &gt; 30 is reasonable although even smaller values of &lambda; will work as long as the the individual counts don't approach the lower boundary of zero.</li>
+  <li>If the counts are only moderately large, say eight or larger, a transformation is advisable. Popular transformations for count data are the square root, logarithm, and Freeman-Tukey transformation. The transformed data can then be used in procedures that assume homoscedastic normally distributed data. It&rsquo;s worth noting that transformations, by changing the model being fit, lead to additional complications, both in interpretation and in statistical inference. For a  critique of the use of data transformations in ecology see McArdle and Anderson (2004).
+    <ol type="a">
+      <li>If there are some zeros along with only moderately large counts the square root is typically recommended.</li>
+      <li>The logarithm is a more extreme transformation than the square root. If there are some extremely large counts then a log transform may work better. If  any of the observed   counts are zero then the logarithm is undefined. A common strategy in this case (albeit fraught with problems) is to carry out the transformation log(<em>x</em> + <em>c</em>) where <em>c</em> is a small constant that is added to all the observations <em>x</em>, zero or not. Typically <em>c</em> = 0.5 is chosen without much justification. It is easy to construct cases where the choice of <em>c</em> can markedly change the results  (Yamamura 1999).</li>
+    </ol>
+  </li>
+  <li>If the data consist of at least some small counts, a discrete probability distribution should be considered as a probability model and the untransformed raw data analyzed directly. For probability distributions such as the Poisson that are in the exponential family a generalized linear model is a popular choice. For other distributions the likelihood needs to be constructed from first principles and worked with directly.</li>
+</ol>
+<p>The consensus today is that in cases (1) and (3) a Poisson distribution can be used although in case (1) the Poisson will be nearly indistinguishable from a normal distribution. Case (2) is best handled by assuming a negative binomial distribution for the response rather than transforming the response variable (O&rsquo;Hara &amp; Kotze 2010). This is especially true if there are both large counts and zeros in the data set. In practice log-transforming and assuming normality or using a negative binomial distribution tend to give nearly identical results, but the negative binomial is better able to handle zero counts and is easier to interpret. Contrary to the nay-sayers like O&rsquo;Hara &amp; Kotze (2010) there are still cases where you may want to  log transform count data and assume normality. The Poisson and especially the negative binomial distribution can be difficult to fit with structured data sets that necessitate the inclusion of random effects. On the other hand these models are relatively easy to fit if one can assume the response is normally distributed.</p>
+<h2><a name="aphid"></a>Poisson model for  aphid counts</h2>
+<p> The data set we'll examine today is shown below.  It tabulates the number of aphids found on a random sample of plant stems. It appears on p. 130 of Krebs (1999) but he doesn't give a source for it.</p>
+
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=200 valign=top  class="styleArial" style="padding-left: 72px; text-indent:-62px"><div align="center"><strong>Table 1 &nbsp;</strong> Today's Data <a href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/code/R&#32;code&#32;hot&#32;days.html#gam"></a></div></td>
+  </tr>
+</table>
+<table  border="1" align="center" cellpadding="5" cellspacing="0" bordercolor="#000000">
+  <tr  bgcolor="#F1D2D8">
+    <td><div align="center"><b># of aphids on a stem</b></div></td>
+    <td ><div align="center"><b>Number of stems</b></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">0</div></td>
+    <td><div align="center">6</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">1</div></td>
+    <td><div align="center">8</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">2</div></td>
+    <td><div align="center">9</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">3</div></td>
+    <td><div align="center">6</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">4</div></td>
+    <td><div align="center">6</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">5</div></td>
+    <td><div align="center">2</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">6</div></td>
+    <td><div align="center">5</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">7</div></td>
+    <td><div align="center">3</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">8</div></td>
+    <td><div align="center">1</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">9</div></td>
+    <td><div align="center">4</div></td>
+  </tr>
+  <tr  bgcolor="#F1D2D8">
+    <td><div align="center"><b>Total</b></div></td>
+    <td><div align="center"><b>50</b></div></td>
+  </tr>
+</table>
+<div class="figureR"> </div
+>
+<p>Our goal today is to a fit Poisson  distribution to these data. Since the Poisson distribution is a one-parameter distribution with parameter &lambda;  the problem  reduces to estimating &lambda;. Typically Poisson regression models include predictors in which we make &lambda; a function of those predictors. From a regression standpoint what we're  doing today is  fitting a Poisson regression model in which the only predictor is an intercept.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">num.stems &lt;- c(6,8,9,6,6,2,5,3,1,4)</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px">#error check: numbers should sum to 50</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(num.stems)</div>
+<span class="style24">[1] 50</span><br>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> # data frame of tabulated data</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> aphids &lt;- data.frame(aphids=0:9, counts=num.stems)</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> aphids</div>
+<span class="style24">  &nbsp;&nbsp; aphids counts<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</span>
+<p name="rep"><a name="rep"></a>The data in Table 1 are given in summary form. The raw data would  consist of a list of stems with a count of how many aphids were found on each stem. The table above groups the stems together based on how many aphids were found. The raw data can be recreated from  the grouped data  with R's <span class="style41">rep</span> function. With <span class="style41">rep</span> we can repeat the numbers in the first column&mdash;0, 1, 3, &hellip;, 9&mdash;the exact number of times listed in the second column. Recall how <span class="style41">rep</span> works. The first argument to <span class="style41">rep</span> is what we want to repeat; the second argument describes how the repetition is supposed to be done. </p>
+<ul>
+  <li>If the second argument of <span class="style41">rep</span> is a single number, then the first argument is repeated that many times as a unit.
+<p class="style101">rep(4,10)<br>
+      <span class="style24">[1] 4 4 4 4 4 4 4 4 4 4</span><br>
+      rep(0:9,4)<br>
+      <span class="style24">&nbsp;[1] 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4<br>
+        [36] 5 6 7 8 9</span></p>
+  </li>
+  <li>If the second argument is a vector whose length is the same as the length of the first argument, then the elements of the two vectors are matched up 1-to-1. If each element of the vector in the second argument is the same, then the elements of the first argument are all repeated the same number of times, but individually this time, not as a unit.
+    <p class="style101">rep(0:9, rep(4,10))<br>
+      <span class="style24">&nbsp;[1] 0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8<br>
+        [36] 8 9 9 9 9</span></p>
+    <p>In specifying the repetition pattern  for the second argument I used a shortcut. I wrote <span class="style41">rep(4,10)</span> which produces, as shown above, a  vector of all 4s that is of length 10.</p>
+  </li>
+</ul>
+<p>Now we're ready to recreate the data. To do this I make the second argument of <span class="style41">rep</span> the observed frequencies shown in the second column of Table 1. </p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> aphid.data &lt;- rep(0:9,num.stems)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> aphid.data</div>
+<span class="style24">&nbsp;[1] 0 0 0 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 4 4 4 4 4 4<br>
+[36] 5 5 6 6 6 6 6 7 7 7 8 9 9 9 9</span>
+</p>
+<p><a name="barplot"></a>Given that there are no gaps in the count categories, we can visualize the distribution of the tabulated data with a bar chart using the <span class="style1">barplot</span> function.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">barplot(num.stems)</div>
+<p>To get labels on the categories we need to add a names attribute to the vector <span class="style8">num.stems</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">names(num.stems) &lt;- 0:9</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">barplot(num.stems)</div>
+<br>
+<table width="600" border="0" align="center" cellpadding="5">
+  <tr>
+    <td scope="col">(a) <img src="../../images/lectures/lecture14/fig1a.png" alt="fig 1a" width="245" height="170" align="texttop"></td>
+    <td scope="col">(b) <img src="../../images/lectures/lecture14/fig1b.png" alt="fig 1b" width="245" height="170" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial"><p style="padding-left: 45px; text-indent:-45px"><strong>Fig. 2 </strong>&nbsp;Bar plots of the tabulated data: (a) without and (b) with the names attribute of the vector</td>
+  </tr>
+</table>
+<p></p>
+<h3><a name="constructing" id="constructing"></a>Constructing the  Poisson log-likelihood</h3>
+We have a random sample of 50 observations&mdash;the counts of the number of aphids on 50 different plant stems.  Let X<sub>i</sub> = # of aphids on stem <em>i</em> and  let the observed values in our sample be denoted x<sub>1</sub>, x<sub>2</sub>, &hellip; , x<sub>50</sub>. The joint probability of obtaining the sample we got can be written generically as follows.
+<p align="center"><img src="../../images/lectures/lecture14/randomsamp.gif" width="408" height="125" alt="likelihood"></p>
+<p>The first equality follows because we are assuming that we have a random sample and hence the individual observations are independent. Our  goal  is to fit a Poisson distribution to these data. Once we replace the generic probability expression in the above expression  above with a hypothesized probability model, we refer to the new expression as a likelihood. When we take the log of the likelihood we obtain the log-likelihood.</p>
+<p align="center"><img src="../../images/lectures/lecture14/PoissonLL.gif" width="382" height="175" alt="Poisson"></p>
+<p>The quantity inside the parentheses is just the <span class="style1">dpois</span> function evaluated at <em>x<sub>i</sub></em> and &lambda;. The <span class="style1">dpois</span> function is listable. Thus for a fixed value of &lambda; we can obtain  the probabilities for all of our observations at once. For example, when &lambda; = 1 we have</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dpois(aphid.data, lambda=1)</div>
+<span class="style24">&nbsp;[1] 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01<br>
+&nbsp;[6] 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01<br>
+[11] 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01 1.839397e-01<br>
+[16] 1.839397e-01 1.839397e-01 1.839397e-01 1.839397e-01 1.839397e-01<br>
+[21] 1.839397e-01 1.839397e-01 1.839397e-01 6.131324e-02 6.131324e-02<br>
+[26] 6.131324e-02 6.131324e-02 6.131324e-02 6.131324e-02 1.532831e-02<br>
+[31] 1.532831e-02 1.532831e-02 1.532831e-02 1.532831e-02 1.532831e-02<br>
+[36] 3.065662e-03 3.065662e-03 5.109437e-04 5.109437e-04 5.109437e-04<br>
+[41] 5.109437e-04 5.109437e-04 7.299195e-05 7.299195e-05 7.299195e-05<br>
+[46] 9.123994e-06 1.013777e-06 1.013777e-06 1.013777e-06 1.013777e-06</span>
+</p>
+<p>Next we need the log of all these values.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">log(dpois(aphid.data, lambda=1))</div>
+<span class="style24">&nbsp;[1]&nbsp; -1.000000&nbsp; -1.000000&nbsp; -1.000000&nbsp; -1.000000&nbsp; -1.000000&nbsp; -1.000000<br>
+&nbsp;[7]&nbsp; -1.000000&nbsp; -1.000000&nbsp; -1.000000&nbsp; -1.000000&nbsp; -1.000000&nbsp; -1.000000<br>
+[13]&nbsp; -1.000000&nbsp; -1.000000&nbsp; -1.693147&nbsp; -1.693147&nbsp; -1.693147&nbsp; -1.693147<br>
+[19]&nbsp; -1.693147&nbsp; -1.693147&nbsp; -1.693147&nbsp; -1.693147&nbsp; -1.693147&nbsp; -2.791759<br>
+[25]&nbsp; -2.791759&nbsp; -2.791759&nbsp; -2.791759&nbsp; -2.791759&nbsp; -2.791759&nbsp; -4.178054<br>
+[31]&nbsp; -4.178054&nbsp; -4.178054&nbsp; -4.178054&nbsp; -4.178054&nbsp; -4.178054&nbsp; -5.787492<br>
+[37]&nbsp; -5.787492&nbsp; -7.579251&nbsp; -7.579251&nbsp; -7.579251&nbsp; -7.579251&nbsp; -7.579251<br>
+[43]&nbsp; -9.525161&nbsp; -9.525161&nbsp; -9.525161 -11.604603 -13.801827 -13.801827<br>
+[49] -13.801827 -13.801827</span>
+<p>Finally we need to sum up all these values.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sum(log(dpois(aphid.data, lambda=1)))</div>
+<span class="style24">[1] -215.9158 </span>
+<p><a name="poissonLL"></a>The last line is what we need for our log-likelihood function. We just need to turn it into a function in which <span class="style17">lambda</span> is the sole argument.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.LL &lt;- function(lambda) sum(log(dpois(aphid.data, lambda)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> poisson.LL(1)</div>
+<span class="style24">[1] -215.9158</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> poisson.LL(2)</div>
+<span class="style24">[1] -146.0014</span>
+</p>
+<p>The function seems to work. </p>
+<h3><a name="graphing"></a>Graphing the log-likelihood</h3>
+<p> To graph the log-likelihood, we need to evaluate our function on a whole list of possible values of &lambda; and then plot the results against &lambda;. For example to plot over the range 1 &le; &lambda; &le; 6, we could first generate a vector of values for &lambda; in increments of 0.1 with <span class="style101">seq(1,6,.1)</span>. But when I apply the log-likelihood function to this vector I can see something went wrong.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.LL(seq(1,6,.1))</div>
+<span class="style24">[1] -89.3177</span>
+</p>
+<p>R returns a single number. I was expecting it to return a list of numbers one for each value of <span class="style101">seq(1,6,.1)</span>. What if I give it two numbers? </p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.LL(1:2)</div>
+<span class="style24">[1] -179.2257</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> poisson.LL(1)</div>
+<span class="style24">[1] -215.9158</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> poisson.LL(2)</div>
+<span class="style24">[1] -146.0014</span>
+</p>
+<p>As we can see when I give it both 1 and 2 the answer I get is neither the value at 1 nor the value at 2. To understand what's happening let's tease apart the function into its components. I repeat the above exercise using just the innermost part of our function, <span class="style1">dpois</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dpois(aphid.data,1)</div>
+<span class="style24">&nbsp;[1] 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01<br>
+&nbsp;[6] 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01<br>
+[11] 3.678794e-01 3.678794e-01 3.678794e-01 3.678794e-01 1.839397e-01<br>
+[16] 1.839397e-01 1.839397e-01 1.839397e-01 1.839397e-01 1.839397e-01<br>
+[21] 1.839397e-01 1.839397e-01 1.839397e-01 6.131324e-02 6.131324e-02<br>
+[26] 6.131324e-02 6.131324e-02 6.131324e-02 6.131324e-02 1.532831e-02<br>
+[31] 1.532831e-02 1.532831e-02 1.532831e-02 1.532831e-02 1.532831e-02<br>
+[36] 3.065662e-03 3.065662e-03 5.109437e-04 5.109437e-04 5.109437e-04<br>
+[41] 5.109437e-04 5.109437e-04 7.299195e-05 7.299195e-05 7.299195e-05<br>
+[46] 9.123994e-06 1.013777e-06 1.013777e-06 1.013777e-06 1.013777e-06</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dpois(aphid.data,2)</div>
+<span class="style24">&nbsp;[1] 0.1353352832 0.1353352832 0.1353352832 0.1353352832 0.1353352832<br>
+&nbsp;[6] 0.1353352832 0.2706705665 0.2706705665 0.2706705665 0.2706705665<br>
+[11] 0.2706705665 0.2706705665 0.2706705665 0.2706705665 0.2706705665<br>
+[16] 0.2706705665 0.2706705665 0.2706705665 0.2706705665 0.2706705665<br>
+[21] 0.2706705665 0.2706705665 0.2706705665 0.1804470443 0.1804470443<br>
+[26] 0.1804470443 0.1804470443 0.1804470443 0.1804470443 0.0902235222<br>
+[31] 0.0902235222 0.0902235222 0.0902235222 0.0902235222 0.0902235222<br>
+[36] 0.0360894089 0.0360894089 0.0120298030 0.0120298030 0.0120298030<br>
+[41] 0.0120298030 0.0120298030 0.0034370866 0.0034370866 0.0034370866<br>
+[46] 0.0008592716 0.0001909493 0.0001909493 0.0001909493 0.0001909493</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">dpois(aphid.data,1:2)</div>
+<span class="style24">&nbsp;[1] 3.678794e-01 1.353353e-01 3.678794e-01 1.353353e-01 3.678794e-01<br>
+&nbsp;[6] 1.353353e-01 3.678794e-01 2.706706e-01 3.678794e-01 2.706706e-01<br>
+[11] 3.678794e-01 2.706706e-01 3.678794e-01 2.706706e-01 1.839397e-01<br>
+[16] 2.706706e-01 1.839397e-01 2.706706e-01 1.839397e-01 2.706706e-01<br>
+[21] 1.839397e-01 2.706706e-01 1.839397e-01 1.804470e-01 6.131324e-02<br>
+[26] 1.804470e-01 6.131324e-02 1.804470e-01 6.131324e-02 9.022352e-02<br>
+[31] 1.532831e-02 9.022352e-02 1.532831e-02 9.022352e-02 1.532831e-02<br>
+[36] 3.608941e-02 3.065662e-03 1.202980e-02 5.109437e-04 1.202980e-02<br>
+[41] 5.109437e-04 1.202980e-02 7.299195e-05 3.437087e-03 7.299195e-05<br>
+[46] 8.592716e-04 1.013777e-06 1.909493e-04 1.013777e-06 1.909493e-04</span>
+</p>
+<p>If you compare the output from the three function calls. you'll see that in the last call R alternates its use of &lambda; = 1 and &lambda; = 2. For the first observation it uses 1, for the second it uses 2, for the third it uses 1, etc. Thus R is trying to match up the entries in each vector argument and when it runs out of entries in the second vector it just recycles the second vector over and over again. Of course when we take the log of the results and then sum everything up we get total gibberish.</p>
+<p name="sapply"><a name="sapply"></a>The solution is to force R to use each element of the &lambda; vector one at a time. The <span class="style41">sapply</span> function will do this.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.LL(1)</div>
+<span class="style24">[1] -215.9158</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> poisson.LL(2)</div>
+<span class="style24">[1] -146.0014</span><br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sapply(1:2,poisson.LL)</div>
+<span class="style24">[1] -215.9158 -146.0014</span>
+</p>
+<p>Now  we get the right answer. We're ready to do the plot. To obtain the <em>y</em>-coordinates of the graph we need to use <span class="style41">sapply</span>. I specify <span class="style17">type='l'</span> in the <span class="style1">plot</span> function so that the plotted points are connected by line segments thus generating a curve. I use the <span class="style17">xlab</span> and <span class="style17">ylab</span> arguments to add  labels to the axes.
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(seq(2,5,.01), sapply(seq(2,5,.01), poisson.LL), type='l', xlab=expression(lambda), ylab='log-likelihood')</div>
+<p><a name="prod"></a>From the graph it would appear that the log-likelihood takes on its maximum value somewhere in the interval 3 &le; &lambda; &le; 4. We obtain the same information if we plot the likelihood instead. The <span class="style1">prod</span> function replaces the <span class="style1">sum</span> function in the function definition of the likelihood.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.L &lt;- function(lambda) prod(dpois(aphid.data,lambda))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">plot(seq(2,5,.01), sapply(seq(2,5,.01), poisson.L), type='l', xlab=expression(lambda), ylab='likelihood')</div>
+<br>
+<table width="630" border="0" align="center" cellpadding="5">
+  <tr>
+    <td scope="col">(a) <img src="../../images/lectures/lecture14/fig2a.png" alt="fig 2a" width="280" height="240" align="texttop"></td>
+    <td scope="col">(b) <img src="../../images/lectures/lecture14/fig2b.png" alt="fig 2b" width="280" height="250" align="texttop"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="styleArial"><p style="padding-left: 45px; text-indent:-45px"><strong>Fig. 3 </strong>&nbsp;Plots of the (a) log-likelihood and (b) likelihood functions for a Poisson model for the aphid count data</td>
+  </tr>
+</table>
+<h3><a name="maximizing"></a>Maximizing the log-likelihood numerically </h3>
+<p> <span class="style41"><a name="nlm"></a></span>We could zoom in on the MLE graphically and obtain an estimate that is as accurate as we please. It can also be shown using calculus that the MLE for &lambda; in a Poisson distribution is the sample mean <img src="../../images/lectures/lecture14/xbar.gif" width="18" height="20" align="absmiddle">. Even without this information we can  obtain  accurate estimates of the MLE using a numerical optimization routine. R provides two numerical optimization functions, <span class="style41">nlm</span> and <span class="style41">optim</span>, of which  I focus on <span class="style41">nlm</span>. Figure 4 shows the help screen for <span class="style1">nlm</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">?nlm</div>
+<p align="center" class="style101"><img src="../../images/lectures/lecture14/nlm.png" width="523" height="379"></p>
+<p align="center" class="styleArial"><strong>Fig. 4</strong> &nbsp;Help screen for nlm </p>
+<p>From the help screen we see that there are only two arguments that are required, <span class="style17">f</span>, the function to be minimized, and <span class="style17">p</span>, a vector of initial estimates of the parameter values. The rest of the arguments have default values. </p>
+<p>Observe that <span class="style41">nlm</span> carries out <u>minimization</u>, not maximization. Thus in order for us to be able to use <span class="style41">nlm</span> we need to change the way we're formulating our problem. Since maximizing <span class="style101">f</span> is equivalent to minimizing <span class="style101">&ndash;f</span>, we need to reformulate our objective function so that it returns the negative log-likelihood rather than the log-likelihood.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">poisson.negloglik &lt;- function(lambda) -poisson.LL(lambda)</div>
+<p>The <span class="style1">nlm</span> function uses a method similar to the Newton-Raphson method described in <a href="lecture12.htm#Newton">lecture 12</a>. To use <span class="style41">nlm</span> we enter the name of our function, <span class="style8">poisson.negloglik</span>, as the first argument followed by an initial estimate for its single parameter <span class="style8">lambda</span>. Because our graphical analysis indicated that the MLE is near 3, I choose <span class="style22">3</span> for the initial estimate.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.pois &lt;- nlm(poisson.negloglik,3)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out.pois </div>
+<span class="style24">$minimum<br>
+[1] 124.1764</span>
+</p>
+<p class="style24">$estimate<br>
+  [1] 3.459998</p>
+<p class="style24">$gradient<br>
+  [1] 6.571497e-08</p>
+<p class="style24">$code<br>
+  [1] 1</p>
+<p class="style24">$iterations<br>
+  [1] 4</p>
+<p>The output tells us the following. </p>
+<ol>
+  <li>The value of the negative log-likelihood at the minimum is 124.1764.</li>
+  <li>The estimate of the MLE of &lambda; is 3.459998.</li>
+  <li>The value of the gradient at the MLE is very small. This is what we want. The gradient is the same as the score, the derivative of the log-likelihood, which from calculus should be zero at a maximum or a minimum. Thus the fact that the value of the gradient  is very close to zero  encourages us to believe that <span class="style41">nlm</span> has found a solution (although there's no guarantee that it's the global minimum that we seek).</li>
+  <li>The help screen tell us that <span class="styleArial">code=1</span> means <span class="styleArial">&quot;relative gradient is close to zero, current iterate is probably solution.&quot;</span></li>
+  <li>It took 4 iterations of the numerical algorithm to  converge.</li>
+</ol>
+<p>Using calculus  the exact MLE for &lambda; in a Poisson distribution is the sample mean <img src="../../images/lectures/lecture14/xbar.gif" width="18" height="20" align="absmiddle">, which turns out to be the same as the estimate returned by <span class="style41">nlm</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">mean(aphid.data)</div>
+<span class="style24">[1] 3.46</span>
+<p><a name="hessian"></a>By adding the argument <span class="style22">hessian=T</span> to <span class="style1">nlm</span> we can get it to return the value of the Hessian evaluated at the maximum likelihood estimate of &lambda;.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # refit model to return Hessian</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois &lt;- nlm(pois.negloglike, 2, hessian=T)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois</div>
+<span class="style24">  $minimum<br>
+  [1] 124.1764</span>
+<p><span class="style24">$estimate<br>
+[1] 3.459998</span>
+<p><span class="style24">$gradient<br>
+  [1] 1.437515e-07</span>
+<p><span class="style24">$hessian<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+  [1,] 14.44799</span>
+<p><span class="style24">$code<br>
+  [1] 1</span>
+<p><span class="style24">$iterations<br>
+  [1] 7</span>
+<p><a href="lecture13.htm#information">Recall</a> that the information of likelihood theory is the negative of the Hessian. Because we've minimizing the negative log-likelihood here the negative sign is already included in the reported Hessian. Thus the information is also 14.448. Likelihood theory tells us that the inverse of the Hessian is the variance of the maximum likelihood estimate.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # standard error of the mean</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sqrt(1/out.pois$hessian)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+  [1,] 0.2630851</span>
+
+<p>We can use this to calculate 95% Wald confidence intervals for &lambda; (assuming that the sample size is large enough that we can assume normality for the distribution of the MLE). </p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # Wald confidence intervals</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois$estimate - 1.96*sqrt(1/out.pois$hessian)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+  [1,] 2.944351</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois$estimate + 1.96*sqrt(1/out.pois$hessian)</div>
+<span class="style24">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+[1,] 3.975645</span>
+<p>So, a 95% confidence interval for &lambda; is (2.94, 3.98).
+</p>
+<h2><a name="cited" id="cited"></a>Cited references</h2>
+<ul>
+  <li>Krebs, Charles. 1999. <i>Ecological Methodology</i>. Menlo Park, CA: Addison-Wesley.
+  </li>
+  <li>McArdle, Brian H. and Marti J. Anderson. 2004. Variance heterogeneity, transformations, and models of species abundance: a cautionary tale. <em>Canadian Journal of Fisheries and Aquatic Sciences</em> <strong>61</strong>: 1294&ndash;1302.
+  </li>
+  <li>O&rsquo;Hara, Robert B. and D. Johan Kotze. 2010. Do not log-transform count data. <em>Methods in Ecology and Evolution</em> <strong>1</strong>: 118&ndash;122.</li>
+  <li>    Snijders, Tom A. B. and Roel J. Bosker. 1999. <em>Multilevel Analysis: An Introduction to Advanced and Multilevel Modeling</em>. London: Sage Publications. </li>
+  <li>Yamamura, K. 1999. Transformation using (<em>x</em> + 0.5) to stabilize the variance of populations. <em>Researches on Population Ecology</em> <strong>43</strong>: 229&ndash;234.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 10, 2012<br>
+      URL: <a href="lecture14.htm#lecture14" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture14.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

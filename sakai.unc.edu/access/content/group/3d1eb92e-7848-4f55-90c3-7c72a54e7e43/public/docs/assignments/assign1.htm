@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 1</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+.style2 {
+	color: #990000;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style9 {	color: #339900;
+	font-weight: bold;
+}
+
+.style10 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style15 {font-family: "Courier New", Courier, mono; color: #009900; }
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"> <a name="assign1" id="assign1"></a>Assignment 1 </h1>
+<h2>Due Date </h2>
+
+  <p>Friday, September 7, 2012</p>
+
+<h2>Data Source </h2>
+
+  <p>The data for this assignment is  <a href="../../data/quinn1.csv">quinn1.csv</a>,  a comma-delimited text file.This data set is extensively discussed in Quinn and Keough (2002) and was first analyzed by Quinn (1988). The data are described as follows (modified from Quinn and Keough, 2002).</p>
+  <blockquote>
+    <p>Quinn (1988) examined the effect of season (two levels: winter/spring and summer/autumn) and adult density (three levels: 6, 12, and 24 animals per 225 cm<sup>2</sup>) on the production of egg masses by rocky intertidal pulmonate limpets (<em>Siphonaria diemenensis</em>). Limpets (15-20 mm shell length) were enclosed in 225 cm<sup>2</sup> stainless steel mesh enclosures attached to the rocky platform. There were six treatment combinations (three densities at each of two seasons) and three replicate enclosures per treatment combination. One of the important questions being asked with this experiment was whether the effect of density on number of egg masses per limpet depended on season. Quinn (1988) predicted that the density effect would be greater in summer/autumn, when algal food was scarce, than in winter/spring, when algal food was more abundant. It turned out at this site that there was less seasonal variation in the availability of algal food than expected, algal cover being high all year round.</p>
+  </blockquote>
+<p>The variable &quot;Eggs&quot; is the average number of eggs per limpet in an enclosure. Analyzing a ratio rather than total egg counts was  an attempt to correct for the fact that  enclosures with more limpets would necessarily yield more egg masses. Later in this course we'll consider &quot;better&quot; ways to control for baseline differences like this.</p>
+<h2 align="left">Questions</h2>
+<ol>
+  <li>Treating both &quot;Season&quot; and &quot;Density&quot; as categorical predictors and &quot;Eggs&quot; as the response, carry out an appropriate analysis of these data. What do you conclude from your analysis?</li>
+  <li>Produce an appropriate graphical display that summarizes the results of your analysis.</li>
+  <li>Examine the coefficient estimates of the model and use them to quantify the effect that Season and Density have on egg density.</li>
+  <li>Use predictive simulation to assess the fit of the model. Show that your model occasionally generates silly values for egg density suggesting that perhaps this is not a trustworthy model. Calculate the  proportion of silly values obtained from  your simulations. (Do a minimum of 1000 simulations.)</li>
+</ol>
+<h2>Hints</h2>
+<ul>
+  <li> In question 2 the fairly primitive graphs provided by the effects package are adequate.</li>
+  <li>In question 3 you might write out the regression model in terms of the dummy variables to help you understand what each coefficient represents.</li>
+  <li>In question 4 to see what I mean by &quot;silly&quot; I suggest you calculate the minimum value obtained in each of your simulated data sets.</li>
+  <li>In question 4 use the set.seed function to set the random seed before using the simulate function so that your simulation results are reproducible.</li>
+</ul>
+<h2>Cited references</h2>
+<ul>
+  <li>Quinn, Gerry P. and Michael J. Keough. 2002. <em>Experimental Design and Data Analysis for Biologists</em>. Cambridge University Press.</li>
+  <li>Quinn, G. P. 1988. Ecology of the intertidal pulmonate limpet <em>Siphonaria diemenensis</em> Quoy et Gaimard. II Reproductive patterns and energetics. <em>Journal of Experimental Marine Biology and Ecology</em> <strong>117</strong>: 137&ndash;156.</li>
+</ul>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="left" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum in Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--August 29, 2012<br>
+      URL: <a href="assign1.htm#assign1" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/assignments/assign1.htm</a></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

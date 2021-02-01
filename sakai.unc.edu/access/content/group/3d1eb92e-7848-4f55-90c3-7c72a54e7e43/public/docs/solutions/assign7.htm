@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Assignment 7&mdash;Solution</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-align: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-align: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-align: center;}
+.style1 {font-family: "Courier New", Courier, mono}
+.style2 {
+	color: #0000FF;
+	font-family: "Courier New", Courier, mono;
+	font-size: smaller;
+}
+.style7 {font-family: "Courier New", Courier, mono; color: #00CC00; }
+.style8 {color: #CC0033}
+.style11 {font-family: "Courier New", Courier, mono;}
+.style22 {color: #663366; font-weight: bold; }
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style33 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#FFFACD;
+}
+.style4 {	color: #CC0000;
+	font-weight: bold;
+}
+
+.style34 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#FFFACD; }
+.style43 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono;  background-color:#FFFACD;}
+.style19 {color: #339933;
+	font-weight: bold;}
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.styleArial2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style81 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="assign7" id="assign7"></a>Assignment 7&mdash;Solution</h1>
+<h2>Question 1 </h2>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau &lt;- read.delim('Pyrausta.txt')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau</div>
+<span class="style24">  &nbsp; eggs X1936 X1937 X1938<br>
+  1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp; 37&nbsp;&nbsp;&nbsp; 14<br>
+  2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp; 21<br>
+  3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 11<br>
+  4&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 7<br>
+5&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 2</span>
+<p>I begin by converting the tabulated data into raw data. For this I use the <span class="style4">rep</span> function once for each year. In each case I <span class="style4">rep</span> the <span class="style81">eggs</span> column by the frequencies that appear in the year columns.<br>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> y.1936 &lt;- rep(pyrau$eggs, pyrau$X1936)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> y.1937 &lt;- rep(pyrau$eggs, pyrau$X1937)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> y.1938 &lt;- rep(pyrau$eggs, pyrau$X1938)</div>
+<p>Next I concatenate these three vectors together and make them a column in a data frame. To create a year variable I <span class="style4">rep</span> each year by the total for that year (obtained by taking the length of raw data vector for that year) and turn the result into a factor.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.raw &lt;- data.frame(count=c(y.1936, y.1937, y.1938), year=factor(rep(1936:1938, c(length(y.1936), length(y.1937), length(y.1938)))))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> dim(pyrau.raw)</div>
+<span class="style24">[1] 167&nbsp;&nbsp; 2</span>
+<h3>Using glm</h3>
+<p>To test for a <span class="style81">year</span> effect I use <span class="style4">glm</span> to fit a Poisson regression model in which <span class="style81">year</span> is the only predictor. I use the <span class="style4">anova</span> function to carry out a likelihood ratio test for the effect of <span class="style81">year</span>.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out1 &lt;- glm(count~year, data=pyrau.raw, family=poisson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> anova(out1, test='Chisq')</div>
+<span class="style24">Analysis of Deviance Table</span>
+<p><span class="style24">Model: poisson, link: log</span>
+<p><span class="style24">Response: count</span>
+<p><span class="style24">Terms added sequentially (first to last)</span>
+>
+<p><span class="style24">&nbsp;&nbsp;&nbsp;&nbsp; Df Deviance Resid. Df Resid. Dev&nbsp; Pr(&gt;Chi)&nbsp;&nbsp;&nbsp; <br>
+  NULL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 166&nbsp;&nbsp;&nbsp;&nbsp; 220.91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  year&nbsp; 2&nbsp;&nbsp; 22.095&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 164&nbsp;&nbsp;&nbsp;&nbsp; 198.82 1.593e-05 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p>The model being fit is the following.</p>
+<p align="center"><img src="../../images/assignments/assignment7/logmu.gif" width="383" height="38" alt="log mu"></p>
+<p>The likelihood ratio test tests the following hypothesis.</p>
+<blockquote>
+  <p>H<sub>0</sub>: &nbsp;&beta;<sub>1</sub> = &beta;<sub>2</sub> = 0<br>
+    H<sub>1</sub>: &nbsp;at least one of &beta;<sub>1</sub>, &beta;<sub>2</sub> not zero</p>
+</blockquote>
+<p>The reported <em>p</em>-value for the test is small so we reject the null hypothesis and conclude there is a <span class="style81">year</span> effect. If we examine the summary table we can determine how the years differ.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">summary(out1)</div>
+<span class="style24">Call:<br>
+  glm(formula = count ~ year, family = poisson, data = pyrau.raw)</span>
+<p><span class="style24">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -1.6181&nbsp; -0.9820&nbsp; -0.2820&nbsp;&nbsp; 0.5599&nbsp;&nbsp; 2.4572&nbsp; </span>
+<p><span class="style24">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp; <br>
+  (Intercept)&nbsp; -0.1542&nbsp;&nbsp;&nbsp;&nbsp; 0.1443&nbsp; -1.068&nbsp;&nbsp; 0.2855&nbsp; <br>
+  year1937&nbsp;&nbsp;&nbsp;&nbsp; -0.5754&nbsp;&nbsp;&nbsp;&nbsp; 0.2406&nbsp; -2.392&nbsp;&nbsp; 0.0168 *<br>
+  year1938&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.4235&nbsp;&nbsp;&nbsp;&nbsp; 0.1863&nbsp;&nbsp; 2.273&nbsp;&nbsp; 0.0230 *<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style24">(Dispersion parameter for poisson family taken to be 1)</span>
+<p><span class="style24">&nbsp;&nbsp;&nbsp; Null deviance: 220.91&nbsp; on 166&nbsp; degrees of freedom<br>
+  Residual deviance: 198.82&nbsp; on 164&nbsp; degrees of freedom<br>
+  AIC: 414.33</span>
+<p><span class="style24">Number of Fisher Scoring iterations: 6</span>
+<p>From the output we see that the mean in 1937 is significantly lower than the mean in 1936 (the reference group) and the mean in 1938 is significantly higher than the mean in 1936. Given this and the fact that the means are ranked <img src="../../images/assignments/assignment7/mean&#32;rankings.gif" alt="mean rankings" width="155" height="35" align="absmiddle">, it follows that the means in 1937 and 1938 are also significantly different. Thus all the means differ from each other.</p>
+<h3>Using nlm</h3>
+<p>Alternatively we can construct the log-likelihoods ourselves and use <span class="style4">nlm</span> to obtain the maximum likelihood estimates and to carry out the likelihood ratio test.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># common mean model </div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">negpois1.LL &lt;- function(p){</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> LL &lt;- sum(log(dpois(pyrau.raw$count, lambda=p)))</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> -LL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois1 &lt;- nlm(negpois1.LL,.8)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois1</div>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"># separate means model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> negpois2.LL &lt;- function(p){</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> mu &lt;- p[1] + p[2]*(pyrau.raw$year==1937) + p[3]*(pyrau.raw$year==1938)</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> LL &lt;- sum(log(dpois(pyrau.raw$count, lambda=mu)))</div>
+  <div class="style23" style="padding-left: 60px; text-indent:-30px"> -LL</div>
+ <div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out.pois2 &lt;- nlm(negpois2.LL, c(0.8,-0.4,0.4))</div>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LRstat &lt;- 2*(out.pois1$minimum-out.pois2$minimum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> LRstat</div>
+<span class="style24">  [1] 22.09468</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> length(out.pois2$estimate)-length(out.pois1$estimate)</div>
+<span class="style24">  [1] 2</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(LRstat, df=2)</div>
+ <span class="style24"> [1] 1.592949e-05</span>
+<p>This is the same answer we obtained with the <span class="style4">anova</span> function on the <span class="style4">glm</span> object.</p>
+<h2>Question 2</h2>
+<p>We need the tabulated data for the plot. I <span class="style4">rep</span> the count categories three times, concatenate the three columns of frequencies together, and make a third column that records the year.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table &lt;- data.frame(count=rep(pyrau$eggs,3), freq=unlist(pyrau[,2:4]), year=factor(rep(1936:1938, each=5)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> rownames(pyrau.table) &lt;- NULL</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table</div>
+<span class="style24">  &nbsp;&nbsp; count freq year<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 26 1936<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 19 1936<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 7 1936<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 1 1936<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3 1936<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 37 1937<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 14 1937<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2 1937<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 3 1937<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 0 1937<br>
+  11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 14 1938<br>
+  12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 21 1938<br>
+  13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 11 1938<br>
+  14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 7 1938<br>
+  15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 2 1938</span>
+<p>I use the <span class="style4">predict</span> function with the <span class="style22">newdata</span> argument to add the predicted mean for each year to the data frame.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table$mu &lt;- predict(out1, type='response', newdata=data.frame(year=pyrau.table$year))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table</div>
+<span class="style24">  &nbsp;&nbsp; count freq year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mu<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 26 1936 0.8571429<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 19 1936 0.8571429<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 7 1936 0.8571429<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 1 1936 0.8571429<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3 1936 0.8571429<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 37 1937 0.4821429<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 14 1937 0.4821429<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2 1937 0.4821429<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 3 1937 0.4821429<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 0 1937 0.4821429<br>
+  11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 14 1938 1.3090909<br>
+  12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 21 1938 1.3090909<br>
+  13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 11 1938 1.3090909<br>
+  14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 7 1938 1.3090909<br>
+  15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 2 1938 1.3090909</span>
+<p>Next I use the <span class="style4">dpois</span> function to calculate the Poisson probabilities of the count categories using the mean just created. I add the tail probabilities to the last reported category, <em>X</em> = 4.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table$p &lt;- dpois(pyrau.table$count, pyrau.table$mu)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table$p2 &lt;- pyrau.table$p + ppois(4, pyrau.table$mu, lower.tail=F) * (pyrau.table$count==4)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table</div>
+<span class="style24">  &nbsp;&nbsp; count freq year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p2<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 26 1936 0.8571429 0.424372846 0.424372846<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 19 1936 0.8571429 0.363748153 0.363748153<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 7 1936 0.8571429 0.155892066 0.155892066<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 1 1936 0.8571429 0.044540590 0.044540590<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3 1936 0.8571429 0.009544412 0.011446345<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 37 1937 0.4821429 0.617458847 0.617458847<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 14 1937 0.4821429 0.297703373 0.297703373<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2 1937 0.4821429 0.071767777 0.071767777<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 3 1937 0.4821429 0.011534107 0.011534107<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 0 1937 0.4821429 0.001390272 0.001535896<br>
+  11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 14 1938 1.3090909 0.270065459 0.270065459<br>
+  12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 21 1938 1.3090909 0.353540237 0.353540237<br>
+  13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 11 1938 1.3090909 0.231408155 0.231408155<br>
+  14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 7 1938 1.3090909 0.100978104 0.100978104<br>
+  15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 2 1938 1.3090909 0.033047380 0.044008045</span>
+<h3>Obtaining the expected counts</h3>
+<p><strong>Method 1:</strong></p>
+<p>To get the expected category counts according to the model we need the count totals for each year.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> apply(pyrau[,2:4],2,sum)</div>
+<span class="style24"> X1936 X1937 X1938 <br>
+&nbsp;&nbsp; 56&nbsp;&nbsp;&nbsp; 56&nbsp;&nbsp;&nbsp; 55 </span>
+<p>A simple way to obtain the expected counts is with an <span class="style4">ifelse</span> in which I multiply the probabilities by 55 for year 1938 and by 56 otherwise.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table$exp &lt;- ifelse(pyrau.table$year==1938, pyrau.table$p2*55, pyrau.table$p2*56)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table</div>
+<span class="style24">  &nbsp;&nbsp; count freq year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exp<br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 26 1936 0.8571429 0.424372846 0.424372846 23.76487936<br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 19 1936 0.8571429 0.363748153 0.363748153 20.36989659<br>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 7 1936 0.8571429 0.155892066 0.155892066&nbsp; 8.72995568<br>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 1 1936 0.8571429 0.044540590 0.044540590&nbsp; 2.49427305<br>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3 1936 0.8571429 0.009544412 0.011446345&nbsp; 0.64099531<br>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 37 1937 0.4821429 0.617458847 0.617458847 34.57769544<br>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 14 1937 0.4821429 0.297703373 0.297703373 16.67138887<br>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2 1937 0.4821429 0.071767777 0.071767777&nbsp; 4.01899553<br>
+  9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 3 1937 0.4821429 0.011534107 0.011534107&nbsp; 0.64591000<br>
+  10&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 0 1937 0.4821429 0.001390272 0.001535896&nbsp; 0.08601017<br>
+  11&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 14 1938 1.3090909 0.270065459 0.270065459 14.85360024<br>
+  12&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 21 1938 1.3090909 0.353540237 0.353540237 19.44471304<br>
+  13&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 11 1938 1.3090909 0.231408155 0.231408155 12.72744853<br>
+  14&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 7 1938 1.3090909 0.100978104 0.100978104&nbsp; 5.55379572<br>
+15&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 2 1938 1.3090909 0.033047380 0.044008045&nbsp; 2.42044246</span>
+
+<p><strong>Method 2: </strong></p>
+<p>Use the fact that becausde year is a factor  when it gets converted to a numeric variable it has the values 1, 2, and 3. These can then be used to select the correct total from a vector of totals.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n &lt;- apply(pyrau[,2:4], 2, sum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">pyrau.table$exp &lt;- pyrau.table$p2 * n[as.numeric(pyrau.table$year)]</div>
+<p><strong>Method 3: </strong></p>
+<p>A more general method is to tabulate the counts and collect them in a separate data frame with a year variable. Then using the year variable as the key field we canI do a many-to-one merge and add the sample totals as a new column to the data frame. To get the expected counts multiply the sample total column by the probability column.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n &lt;- apply(pyrau[,2:4], 2, sum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> new.dat &lt;- data.frame(year=1936:1938, n=as.numeric(apply(pyrau[,2:4], 2, sum)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> new.dat</div>
+<span class="style24">  &nbsp; year&nbsp; n<br>
+  1 1936 56<br>
+  2 1937 56<br>
+  3 1938 55</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table2 &lt;- merge(pyrau.table, new.dat)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table2$exp &lt;- pyrau.table2$p2*pyrau.table2$n</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.table2</div>
+<span class="style24">  &nbsp;&nbsp; year count freq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p2&nbsp; n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exp<br>
+  1&nbsp; 1936&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 26 0.8571429 0.424372846 0.424372846 56 23.76487936<br>
+  2&nbsp; 1936&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 19 0.8571429 0.363748153 0.363748153 56 20.36989659<br>
+  3&nbsp; 1936&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 7 0.8571429 0.155892066 0.155892066 56&nbsp; 8.72995568<br>
+  4&nbsp; 1936&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 1 0.8571429 0.044540590 0.044540590 56&nbsp; 2.49427305<br>
+  5&nbsp; 1936&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3 0.8571429 0.009544412 0.011446345 56&nbsp; 0.64099531<br>
+  6&nbsp; 1937&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 37 0.4821429 0.617458847 0.617458847 56 34.57769544<br>
+  7&nbsp; 1937&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 14 0.4821429 0.297703373 0.297703373 56 16.67138887<br>
+  8&nbsp; 1937&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2 0.4821429 0.071767777 0.071767777 56&nbsp; 4.01899553<br>
+  9&nbsp; 1937&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 3 0.4821429 0.011534107 0.011534107 56&nbsp; 0.64591000<br>
+  10 1937&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 0 0.4821429 0.001390272 0.001535896 56&nbsp; 0.08601017<br>
+  11 1938&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 14 1.3090909 0.270065459 0.270065459 55 14.85360024<br>
+  12 1938&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 21 1.3090909 0.353540237 0.353540237 55 19.44471304<br>
+  13 1938&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 11 1.3090909 0.231408155 0.231408155 55 12.72744853<br>
+  14 1938&nbsp; &nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp; 7 1.3090909 0.100978104 0.100978104 55&nbsp; 5.55379572<br>
+15 1938&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 2 1.3090909 0.033047380 0.044008045 55&nbsp; 2.42044246</span>
+<h3>Graph the results</h3>
+<p>Finally we can produce the graph.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">library(lattice)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">xyplot(freq~count|year, data=pyrau.table, xlab='Count category', panel=function(x, y, subscripts) {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.xyplot(x, y, type='h', lineend=1, col='grey', lwd=10)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px">  panel.points(x, pyrau.table$exp[subscripts], pch=16, cex=.6, col=1, type='o')</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">}, key=list(x=.82, y=.80, corner=c(0,0),  points=list(pch=c(15,16), cex=c(1.2,.7), col=c('grey70', 'black')), text=list(c('observed', 'expected'), cex=.9)))</div>
+<p align="center"><img src="../../images/assignments/assignment7/fig1.png" width="575" height="285" alt="fig. 1"> </p>
+<div class="styleArial" style="padding-left: 30px; text-indent:-30px">
+  <div align="center"><strong>Fig. 1</strong> &nbsp;&nbsp;Predicted and observed count categories under a Poisson model</div>
+</div>
+<h2>Question 3</h2>
+<p>The simplest way to carry out the parametric bootstrap separately by year is with the <span class="style4">chisq.test</span> function. We just need to use it three times each time selecting the appropriate observed counts and predicted probabilities for the corresponding year.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> chisq.test(pyrau.table$freq[1:5],p=pyrau.table$p2[1:5],simulate.p.value=T, B=9999)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi-squared test for given probabilities with simulated p-value<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (based on 9999 replicates)</span>
+<p><span class="style24">data:&nbsp; pyrau.table$freq[1:5] <br>
+  X-squared = 10.222, df = NA, p-value = 0.0478</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> chisq.test(pyrau.table$freq[6:10],p=pyrau.table$p2[6:10],simulate.p.value=T, B=9999)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi-squared test for given probabilities with simulated p-value<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (based on 9999 replicates)</span>
+<p><span class="style24">data:&nbsp; pyrau.table$freq[6:10] <br>
+  X-squared = 10.2778, df = NA, p-value = 0.1048</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> chisq.test(pyrau.table$freq[11:15],p=pyrau.table$p2[11:15],simulate.p.value=T, B=9999)</div>
+<span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chi-squared test for given probabilities with simulated p-value<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (based on 9999 replicates)</span>
+<p><span class="style24">data:&nbsp; pyrau.table$freq[11:15] <br>
+  X-squared = 0.8575, df = NA, p-value = 0.9332</span>
+<p>Based on the output it is only the fit in 1936 that is suspect. To determine what's driving the lack of fit we can look at the individual contributions to the Pearson statistic. Doing so we see that it's the last term corresponding to <em>X</em> = 4 that is the largest. In fact, its contribution is 85% of the entire Pearson statistic. Under the fitted Poisson model observing three  counts of four is apparently highly unlikely, yet that is exactly what was observed in 1936.</p>
+
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum((pyrau.table$freq[1:5] - pyrau.table$exp[1:5])^2/pyrau.table$exp[1:5])</div>
+<span class="style24">  [1] 10.22201</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> (pyrau.table$freq[1:5] - pyrau.table$exp[1:5])^2/pyrau.table$exp[1:5]</div>
+<span class="style24">[1] 0.21021627 0.09212696 0.34281350 0.89519147 </span><span class="style25">8.68165956
+</span>
+<h2>Question 4</h2>
+<p>I repeat the protocol outlined in <a href="../lectures/lecture17.htm#goodness">lecture 17</a> only modifying it to account for the fact that we have three groups to consider.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pyrau.p &lt;- split(pyrau.table$p2, pyrau.table$year)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> n &lt;- apply(pyrau[,2:4],2,sum)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> myfunc &lt;- function() {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> out.obs &lt;- as.vector(sapply(1:3, function(x) rmultinom(1, size=n[x], prob=pyrau.p[[x]])))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> sum((out.obs-pyrau.table$exp)^2/pyrau.table$exp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> set.seed(50)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sim.data &lt;- replicate(9999, myfunc())</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> actual &lt;- sum((pyrau.table$freq-pyrau.table$exp)^2/pyrau.table$exp)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> actual</div>
+ <span class="style24"> [1] 21.35731</span>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pearson &lt;- c(sim.data, actual)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pval &lt;- sum(pearson&gt;=actual)/length(pearson)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> pval</div>
+<span class="style24">[1] 0.0664</span>
+<p>The test is not significant, although it's close. So, we don't have  evidence of a lack of fit.</p>
+<hr align="center" width="75%">
+<p align="center"><img src="../../images/assignments/assignment7/hw7scores.png" width="380" height="240" alt="hw 7"><br>
+</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+          <i>Phone: </i>(919) 962-5930<br>
+          <i>E-Mail:</i> jack_weiss@unc.edu<br>
+          <i>Address: </i>Curriculum for Ecology and the Environment, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--October 29, 2012<br>
+      URL: <a href="assign7.htm#assign7">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/solutions/assign7.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>

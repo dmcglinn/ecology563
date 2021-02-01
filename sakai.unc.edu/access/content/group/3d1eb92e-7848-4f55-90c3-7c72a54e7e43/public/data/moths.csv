@@ -1,0 +1,15 @@
+Location,Distance,Morph,Num_moths,Num_removed
+Sefton Park,0,light,56,17
+Sefton Park,0,dark,56,14
+Eastham Ferry,7.2,light,80,28
+Eastham Ferry,7.2,dark,80,20
+Hawarden,24.1,light,52,18
+Hawarden,24.1,dark,52,22
+Loggerheads,30.2,light,60,9
+Loggerheads,30.2,dark,60,16
+Llanbedr,36.4,light,60,16
+Llanbedr,36.4,dark,60,23
+Pwyllglas,41.5,light,84,20
+Pwyllglas,41.5,dark,84,40
+Clergy Mawr,51.2,light,92,24
+Clergy Mawr,51.2,dark,92,39

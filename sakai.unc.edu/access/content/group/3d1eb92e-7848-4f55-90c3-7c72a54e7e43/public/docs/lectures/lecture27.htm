@@ -1,0 +1,837 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Lecture 27&mdash;Wednesday, November 28, 2012</title>
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/green.css" title="green" /> 
+<link rel="stylesheet" type="text/css" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/calendar.css" title="calendar" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/purple.css" title="purple" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/large.css" title="large" /> 
+<link rel="alternate stylesheet" type="text/css" media="all" href="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/css/reverse.css" title="reverse" /> 
+<!-- the @import method only works from 5.0 and upwards  -->
+<!-- so, using @import would "hide" the more sophisticated sheet from < 5.0 browsers -->
+<!-- <style type="text/css" media="all">@import "fancy_style.css";</style> -->
+<script language="JavaScript" type="text/javascript" src="https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/js/styleswitcher.js"></script> 
+<style type="text/css">
+<!--
+div.figure {float:none;width=25%;} 
+div.figure p {test-aligh: center;font-style:italic;}
+div.figureL {float:left;width=50%; margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureL p {test-aligh: center;font-style:italic;}
+div.figureR {float:right;width=50%;margin:1.5em;padding:4px 4px 4px 0px;} 
+div.figureR p {test-aligh: center;font-family: Arial, Helvetica, sans-serif; font-size:11.0pt;}
+
+a:link {color: #0000CC; text-decoration:none}
+a:visited {color: #0000CC; text-decoration:none}
+a:hover {color: green; text-decoration:underline; background:#F9EDED}
+a:active {color: red; text-decoration:none}
+
+
+.eq { width: 100%; }
+.eq th { text-align: right;
+         vertical-align: absolute middle;
+		 font-weight: normal; }
+
+.style1 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CCCCCC}
+.style7 {font-family: "Courier New", Courier, mono}
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {
+	color: #3333CC;
+	font-weight: bold;
+}
+.styleArial {
+	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style23 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style10 {
+	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+
+.style39 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+}
+.style40 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+
+.style24 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	font-size:small;
+}
+
+.style395 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#F0F0F0;
+	font-weight: bold;
+	font-size:small;
+}
+
+.style25 {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFFC9A;
+	font-size:small;
+}
+
+.style25a {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCCCC;
+	font-size:small;
+}
+
+.style25b {
+	font-family: "Courier New", Courier, mono;
+	color: #0000FF;
+	background-color:#FFCC00;
+	font-size:small;
+}
+
+
+.style26 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+}
+.style27 {
+	font-family: "Courier New", Courier, mono;
+    color: #CC0000;
+	font-weight: bold;
+	font-size:small;
+    background-color:#FFFC9A;	
+}
+
+.style15 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style100 {
+	background-color:#FFFC9A;
+}
+.style16 {
+	color: #660033;
+	font-weight: bold;
+}
+.style17 {
+	color: #993399;
+	font-weight: bold;
+}
+.style19 {color: #009900; font-weight: bold; }
+.style101 {font-family: "Courier New", Courier, mono}
+.style14 {color: #0000FF; font-size: smaller; font-family: "Courier New", Courier, mono; }
+.style41 {	color: #CC0000;
+	font-weight: bold;
+}
+.style151 {font-family: "Courier New", Courier, mono; color: #009900; }
+.style20 {color: #FF0000}
+.style191 {color: #339933;
+	font-weight: bold;}
+.style22 {color: #663366; font-weight: bold; }
+.style11 {font-family: "Courier New", Courier, mono;}
+.style102 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style1011 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style12 {color: #CC0000;
+	font-weight: bold;
+}
+.style161 {color: #660033;
+	font-weight: bold;
+}
+.style1911 {color: #009900; font-weight: bold; }
+.style81 {color: #009900}
+.style85 {color: #3399FF}
+.style1021 {color: #CC0000;
+	font-weight: bold;
+}
+.style171 {color: #993399;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style13 {	color: #CC0000;
+	font-weight: bold;
+}
+.style121 {color: #663300; font-weight: bold; }
+.style141 {	color: #0000FF;
+	font-size: small;
+	font-family: "Courier New", Courier, mono;
+}
+.style152 {	font-family: "Courier New", Courier, mono;
+	color: #339933;
+	font-weight: bold;
+	background-color:#F0F0F0;
+}
+.style152 {font-family: "Courier New", Courier, mono; color: #339933; font-weight: bold; background-color:#F0F0F0; }
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.style231 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+	background-color:#F0F0F0;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size:11.0pt;
+}
+.styleArial1 {	font-family: Arial, Helvetica, sans-serif;font-size:11.0pt;
+}
+.style31 {color: #336699; font-weight: bold; }
+div.figureR1 {	float:right;
+width=50%;
+	padding:4px 4px 4px 0px;
+}
+.style6 {font-size: smaller}
+.style32 {color: #333333;
+	font-weight: bold;
+}
+.style111 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.style131 {font-size: smaller}
+.style103 {	font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style103 {font-family: "Courier New", Courier, mono}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style33 {	color: #CC0000;
+	font-weight: bold;
+}
+.style36 {	color: #660099;
+	font-weight: bold;
+}
+.style35 {color: #339933; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style18 {color: #663366}
+.style1012 {	font-family: "Courier New", Courier, mono
+}
+.style1012 {font-family: "Courier New", Courier, mono}
+.style221 {color: #339966;
+	font-weight: bold;
+}
+.style29 {font-family: "Courier New", Courier, mono}
+.style30 {color: #333399;
+	font-weight: bold;
+}
+.style28 {color: #CC0000; font-weight: bold; }
+.style411 {	color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #CC0000;
+	font-weight: bold;
+}
+.style411 {color: #009900;  font-weight: bold; font-family: "Courier New", Courier, mono;}
+.style5 {	color: #CC0000;
+	font-weight: bold;
+}
+span.GramE {mso-style-name:"";
+	mso-gram-e:yes;}
+span.SpellE {mso-style-name:"";
+	mso-spl-e:yes;}
+.style331 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style391 {font-family: "Courier New", Courier, mono; font-weight: bold; color: #339933}
+.style42 {color: #CCCCCC}
+.style42 {color: #CC0000;
+	font-weight: bold;
+}
+.style401 {color: #CC0000}
+.style2311 {font-family: "Courier New", Courier, mono;
+	color: #000000;
+}
+.style261 {font-family: "Courier New", Courier, mono}
+.style371 {color: #FF0000;
+	font-weight: bold;
+}
+.style4011 {color: #0000FF; font-weight: bold; font-family: "Courier New", Courier, mono; }
+.style421 {color: #0000FF; font-weight: bold; }
+.style44 {font-family: "Courier New", Courier, mono; color: #000000; font-size: smaller; }
+.style332 {color: #0000FF; font-family: "Courier New", Courier, mono; font-size: small;
+background-color:#F0F0F0;
+}
+.style332 {color: blue; font-family: "Courier New", Courier, mono; font-size: small; }
+.style91 {	color: #333399;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center"><a name="lecture27" id="lecture27"></a>Lecture 27&mdash;Wednesday, November 28, 2012</h1>
+<h3>Topics</h3>
+<ul>
+  
+  <li><a href="lecture27.htm#fitting">Fitting the models from last time</a></li>
+  <li><a href="lecture27.htm#checking">Checking the fit of logistic regression model</a>
+    <ul>
+      <li><a href="lecture27.htm#pearson">The Pearson test</a></li>
+      <li><a href="lecture27.htm#residual">The residual deviance test</a></li>
+      <li><a href="lecture27.htm#bootstrap">A parametric bootstrap implementation of the residual deviance test</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture27.htm#overdispersion">Overdispersion and the quasi-binomial model</a></li>
+  <li><a href="lecture27.htm#continuous">Logistic regression with continuous predictors</a></li>
+  <li><a href="lecture27.htm#interpreting">Interpreting the coefficients of logistic regression </a>
+    <ul>
+      <li><a href="lecture27.htm#logit">Interpretations on a logit scale</a></li>
+      <li><a href="lecture27.htm#probability">Interpretations on a probability scale</a></li>
+      <li><a href="lecture27.htm#OR">Interpretations as odds ratios</a>  </li>
+    </ul>
+  </li>
+  <li><a href="lecture27.htm#confidence">Confidence intervals for odds ratios</a>
+    <ul>
+      <li><a href="lecture27.htm#OR1">Odds ratios for sewers: yes versus no</a></li>
+      <li> <a href="lecture27.htm#OR2">Odds ratio for high intensity land use versus rural land use</a></li>
+      <li><a href="lecture27.htm#OR3">Odds ratio for mixed land use versus rural land use</a></li>
+    </ul>
+  </li>
+  <li><a href="lecture27.htm#logistic">Odds ratio interpretations for  continuous predictors</a>  </li>
+<li><a href="lecture27.htm#cited">Cited references</a></li>
+  <li><a href="lecture27.htm#Rcode">R code</a></li>
+</ul>
+<h3>R functions and commands demonstrated</h3>
+<ul>
+  <li><a href="lecture27.htm#df">df.residual</a> extracts the degrees of freedom of the residual deviance from a <span class="style1">glm</span> model.</li>
+  <li><a href="lecture27.htm#deviance">deviance </a>extracts the  residual deviance from a <span class="style1">glm</span> model.</li>
+  <li><a href="lecture27.htm#rev">rev</a> reverses the order of the elements of a vector.</li>
+</ul>
+<h2 align="left"><a name="fitting"></a>Fitting the models from last time</h2>
+<p align="left">I reload the wells data set, collapse landscape categories, and fit the final model from last time.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">wells &lt;- read.csv(&quot;ecol 563/wells.txt&quot;)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  out1 &lt;- glm(cbind(y, n-y)~ land.use + sewer, data=wells, family=binomial)</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  wells$land.use2 &lt;- factor(ifelse(wells$land.use %in% c('agri','undev'), 'rural', 
+  as.character(wells$land.use)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  wells$land.use3 &lt;- factor(ifelse(wells$land.use2 %in% c('inst','recr','resL','resM','trans'), 
+  'mixed', as.character(wells$land.use2)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">  wells$land.use4 &lt;- factor(ifelse(wells$land.use3 %in% c('resH','comm','indus'),
+  'high.use', as.character(wells$land.use3)))</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">out2d &lt;- glm(cbind(y,n-y)~land.use4+sewer, data=wells, family=binomial)</div>
+<h2><a name="checking"></a>Checking the fit of logistic regression models</h2>
+<p>Just as with Poisson regression, the <span class="style13">fitted</span> and <span class="style13">predict</span> functions can be used to apply the regression equation to individual observations. The <span class="style13">predict</span> function returns values on the scale of the link function, here the logit, while the <span class="style13">fitted</span> function undoes the link function and returns  values on the scale of the response, here as probabilities.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # predicted logits</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> predict(out2d)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 <br>
+  -3.1289950 -4.6697646 -3.1289950 -4.6697646 -1.2341322 -2.7749018 -1.2341322 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14 <br>
+  -2.7749018 -0.1844474 -1.7252170 -1.2341322 -2.7749018 -1.2341322 -2.7749018 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20 <br>
+-1.2341322 -2.7749018 -0.1844474 -1.7252170 -0.1844474 -1.7252170</span>
+
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # fitted probabilities</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> fitted(out2d)</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 <br>
+  0.041926959 0.009287411 0.041926959 0.009287411 0.225459017 0.058695598 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 <br>
+  0.225459017 0.058695598 0.454018448 0.151200397 0.225459017 0.058695598 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18 <br>
+  0.225459017 0.058695598 0.225459017 0.058695598 0.454018448 0.151200397 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20 <br>
+0.454018448 0.151200397</span>
+<p>We can also obtain the probabilities from <span class="style13">predict</span> if we specify the <span class="style22">type='response'</span> argument.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> predict(out2d, type='response')</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 <br>
+  0.041926959 0.009287411 0.041926959 0.009287411 0.225459017 0.058695598 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 <br>
+  0.225459017 0.058695598 0.454018448 0.151200397 0.225459017 0.058695598 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18 <br>
+  0.225459017 0.058695598 0.225459017 0.058695598 0.454018448 0.151200397 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20 <br>
+0.454018448 0.151200397</span>
+<p>The mean number of counts for each binomial observation can be obtained by multiplying the fitted probabilities by the total number of trials for that observation.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # expected counts under model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">y1 &lt;- fitted(out2d)*wells$n</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">y1</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 <br>
+  &nbsp;0.7127583&nbsp; 0.5479572&nbsp; 0.2934887&nbsp; 0.4457957&nbsp; 1.1272951&nbsp; 1.2326075&nbsp; 9.6947377 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14 <br>
+  &nbsp;5.0478214 34.5054021&nbsp; 2.5704068&nbsp; 5.8619344&nbsp; 2.2304327&nbsp; 7.2146885&nbsp; 1.2913031 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20 <br>
+&nbsp;6.5383115&nbsp; 1.7608679 19.0687748&nbsp; 1.0584028 14.9826088&nbsp; 1.8144048</span>
+
+<h3><a name="pearson"></a>The Pearson test</h3>
+<p>Because binomial data are  categorical we can use a categorical goodness of fit test such as the Pearson chi-squared statistic to check the fit of the model. The observed data are the number of contaminated and uncontaminated wells out of <em>n</em> for each site. Thus to carry out the goodness of fit test we need to calculate both the estimated number of successes and the number of failures for each site. I assemble them in a matrix.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> Ei &lt;- cbind(fitted(out2d)*wells$n, wells$n-fitted(out2d)*wells$n)</div>
+
+<p>In a similar fashion I assemble the observed number of successes and failures in a matrix of the same dimension.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">Oi &lt;- cbind(wells$y, wells$n-wells$y)</div>
+<p>There are actually too many small predicted counts for the chi-squared distribution of the Pearson deviance to be valid.
+</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # too many predicted counts are small for chi-squared distribution to hold</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sum(Ei&lt;=5)/length(Ei)</div>
+<span class="style141">  [1] 0.325</span>
+</p>
+<p>I carry out the Pearson test anyway.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"></div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sum((Oi-Ei)^2/Ei)</div>
+<span class="style141">  [1] 18.904</span>&nbsp;<br>
+<p>Although our Pearson statistic is calculated using 40 different values from a 20 &times; 2 matrix, the values are not independent. We know how many wells there are in  each stratum. If these are really grouped binary data this  number was chosen by us and is not random. The only thing that is random is how the wells are allocated to the two categories. Once we know how many wells are in the contaminated category we immediately know how many uncontaminated  wells there were at that site by subtracting from the total. Thus we have <em>n</em> = 20 free values, one from each stratum. There are no further constraints arising from the study design. The  degrees of freedom of the test is therefore <em>n</em> &ndash; <em>p</em> = 16, the number of binomial observations, <em>n</em> = 20, minus the number of estimated parameters, <em>p</em> = 4.</p>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # p-value for test</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(sum((Oi-Ei)^2/Ei),nrow(wells)-length(coef(out2d)))</div>
+<span class="style141">  [1] 0.273673</span>
+
+<p>So if the <em>p</em>-value of this test can be trusted we have no evidence for lack of fit.</p>
+<h3><a name="residual" id="residual"></a>The residual deviance test</h3>
+<p>The residual deviance of the model is another potential goodness of fit test for grouped binary data (but not binary data). Again it's probably inappropriate here because of the large number of small predicted counts. The residual deviance and its degrees of freedom appear at the bottom of the output from the <span class="style1">summary</span> function.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out2d)</div>
+<span class="style141">Call:<br>
+  glm(formula = cbind(y, n - y) ~ land.use4 + sewer, family = binomial, <br>
+&nbsp;&nbsp;&nbsp; data = wells)</span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -1.631&nbsp; -1.195&nbsp; -0.185&nbsp;&nbsp; 0.668&nbsp;&nbsp; 1.717&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error z value Pr(&gt;|z|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.725&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.299&nbsp;&nbsp; -5.76&nbsp; 8.2e-09 ***<br>
+  land.use4mixed&nbsp;&nbsp; -1.050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.237&nbsp;&nbsp; -4.42&nbsp; 9.7e-06 ***<br>
+  land.use4rural&nbsp;&nbsp; -2.945&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.742&nbsp;&nbsp; -3.97&nbsp; 7.2e-05 ***<br>
+  seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.541&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.288&nbsp;&nbsp;&nbsp; 5.35&nbsp; 8.9e-08 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(Dispersion parameter for binomial family taken to be 1)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 146.956&nbsp; on 19&nbsp; degrees of freedom<br>
+  </span><span class="style25">Residual deviance:&nbsp; 21.502&nbsp; on 16&nbsp; degrees of freedom</span><span class="style141"><br>
+  AIC: 74.78</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 5</span>
+<p><a name="deviance"></a><a name="df"></a>We can also extract the deviance and its degrees of freedom directly from the model with the <span class="style1">deviance</span> and <span class="style1">df.residual</span> functions or by specifying the $deviance and $df.residual components of the model. Like the Pearson statistic, the deviance also has a large-sample chi-squared distribution.</p>
+
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> df.residual(out2d)</div>
+<span class="style141">[1] 16</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d$df.residual</div>
+<span class="style141">  [1] 16</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> deviance(out2d)</div>
+<span class="style141">[1] 21.5017</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d$deviance</div>
+<span class="style141">  [1] 21.5017</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">1-pchisq(deviance(out2d), out2d$df.residual)</div>
+<span class="style141"> [1] 0.160022</span>
+</p>
+<p>So the residual deviance test agrees with the Pearson test. We have no evidence of lack of fit. The residual deviance test is the same as the  G-test, which is asymptotically equivalent to the Pearson test.</p>
+<p align="center"><img src="../../images/lectures/lecture27/G2stat.gif" width="145" height="60" alt="gtest"></p>
+<p>Using the formula as written directly on these data is not possible because some of the observed counts are zero which would force us to take the log of zero which is undefined. To get around this we use a result from calculus  that </p>
+<p align="center"><img src="../../images/lectures/lecture27/limit.gif" width="138" height="35" alt="limit"></p>
+<p align="left">So, the zero counts should contribute nothing to the statistic. </p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> res.dev &lt;- sum(ifelse(Oi==0, 0, 2*Oi*log(Oi/Ei)))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> res.dev</div>
+<span class="style141">  [1] 21.5017</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> 1-pchisq(res.dev,out2d$df.residual)</div>
+ <span class="style141"> [1] 0.160022</span>
+</p>
+<p>We can also calculate the residual deviance by hand.  Suppose we fit a saturated model to these data, a model with one parameter per observation. One way to obtain a saturated model is to fit a model with the original <span class="style8">land.use</span> variable, the <span class="style8">sewer</span> variable, and their interaction.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2g &lt;- glm(cbind(y,n-y) ~ sewer*land.use, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> length(coef(out2g))</div>
+<span class="style141"> [1] 20</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> logLik(out2g)</div>
+<span class="style141">'log Lik.' -22.63796 (df=20)</span>
+<p>Alternatively we can create a new factor variable with 20 levels and use it as the only predictor in the model.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2g1 &lt;- glm(cbind(y,n-y) ~ factor(1:20), data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">logLik(out2g1)</div>
+<span class="style141">'log Lik.' -22.63796 (df=20)</span>
+<p>Next calculate the likelihood ratio statistic that compares the current model, <span class="style8">out2d</span>, against the saturated model.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">2*(logLik(out2g)-logLik(out2d))[[1]]</div>
+<span class="style141">[1] 21.50170</span>
+<p>Once again we get the value that is reported as the residual deviance of our current model. The residual deviance is reported routinely for all models fit using the <span class="style13">glm</span> function. It always means the same thing. It's the likelihood ratio statistic that compares the current model against a model that has one parameter for every observation and hence fits the data perfectly. The residual deviance is an attempt to place the log-likelihood of a model on some kind of absolute scale. </p>
+<p>Observe that even though <span class="style13">glm</span> reports the residual deviance and its degrees of freedom, it doesn't report a <em>p</em>-value. The connection between the residual deviance and the G-test (and hence the Pearson test) suggests that using it as a goodness of fit statistic really only makes sense for count data and hence for data that might be modeled using a Poisson or binomial distribution. For instance, the residual deviance is totally inappropriate for assessing model fit with binary data. Furthermore, because of its connection to the Pearson test the size of the expected cell counts is an issue. If the the fraction of small expected cell counts is high, say greater than 20%, the residual deviance cannot be assumed to have a chi-squared distribution with <em>n</em> &ndash; <em>p</em> degrees of freedom. This is a potential problem here where 32.5% of the expected counts are small. Small expected counts are common with real data and so the residual deviance should <u>not</u> be routinely used to check model fit.</p>
+
+<h3><a name="bootstrap" id="bootstrap"></a>A parametric bootstrap implementation of the residual deviance test</h3>
+<p>The problem with both the residual deviance (G-test) and the Pearson test for these data is the large number of small expected counts. As a result we can't be sure that either statistic has a chi-squared distribution  and therefore the calculated <em>p</em>-value is suspect. An alternative to assuming a chi-squared distribution is to generate a null distribution for the residual deviance ourselves using the parametric bootstrap. The parametric bootstrap was discussed previously (<a href="lecture6.htm#parametric">lecture 6</a>). The idea is simple. We use the model whose fit we wish to test to generate a new response variable for each observation. Treating this simulated response as the actual response we then refit the model and calculate a goodness of fit statistic. We do this repeatedly thereby building up a frequency distribution for the goodness of fit statistic, a distribution of likely values we'd expect to see when the model actually fits the data. We then compare the actual goodness of fit statistic to this distribution to see if it looks in anyway unusual. If it does we have evidence of lack of fit.</p>
+<p>I set this up as a function that carries out one complete step of this process. The function calculates both the Pearson statistic and the G-test (residual deviance) statistic, although in practice we would only calculate one. It returns the residual deviance.</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px">sim.func &lt;- function() {</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> obs &lt;- sapply(1:nrow(wells), function(x) rbinom(1, prob=fitted(out2d)[x],
+   size=wells$n[x]))</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> my.glm &lt;- glm(cbind(obs,n-obs)~land.use4 + sewer, data=wells, family=binomial)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> ei &lt;- fitted(my.glm)*wells$n</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> Ei &lt;- cbind(ei, wells$n-ei)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> Oi &lt;- cbind(obs, wells$n-obs)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # pearson test</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> pearson &lt;- sum((Oi-Ei)^2/Ei)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # G-test</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> gtest &lt;- sum(ifelse(Oi==0,0,2*Oi*log(Oi/Ei)))</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # residual deviance (same as G-test)</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> dev &lt;- deviance(my.glm)</div>
+<div class="style15" style="padding-left: 60px; text-indent:-30px"> # return residual deviance</div>
+<div class="style23" style="padding-left: 60px; text-indent:-30px"> dev</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> }</div>
+
+<p>I implement this 999 times and then add the actual residual deviance as one additional simulation. I then count up the number of simulated values that are as large as or larger than the actual residual deviance. When that's divided by 1000 we have a simulation-based <em>p</em>-value for the residual deviance goodness of fit test.</p>
+
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # obtain 999 residual deviances from model</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sims &lt;- replicate(999, sim.func())</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # append actual residual deviance to make 1000</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sims &lt;- c(sims, deviance(out2d))</div>
+<div class="style15" style="padding-left: 30px; text-indent:-30px"> # proportion of simulated values that exceed actual value</div>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> sum(sims&gt;=deviance(out2d))/length(sims)</div>
+<span class="style141">[1] 0.208</span>
+<p>The simulation-based result match our conclusions based on a chi-squared distribution for the test statistic. We fail to find evidence of lack of fit.</p>
+<h2><a name="overdispersion"></a>Overdispersion and the quasi-binomial model</h2>
+<p>I need to comment on a  frequently used seat of the pants  rule about the residual deviance that  is promulgated in textbooks and articles about statistics written for ecologists. The  rule suggests that we calculate the ratio of the residual deviance to its degrees of freedom.</p>
+<p align="center"><img src="../../images/lectures/lecture27/phi.gif" width="178" height="52" alt="phi"></p>
+<p>If &phi; &gt; 1 we say the data are overdispersed relative to a binomial distribution. If &phi; &lt; 1 we say the data are underdispersed relative to a binomial distribution. (Similar statements apply to count data that are assumed to follow a Poisson distribution.) For the current data set and model we find</p>
+<div class="style23" style="padding-left: 30px; text-indent:-30px"> out2d$deviance/out2d$df.residual</div>
+<span class="style141">[1] 1.343856</span>
+<p>so we would say based on the fitted model that the data are overdispersed relative to a binomial distribution, meaning that the data show more variability than is predicted by a binomial distribution. </p>
+<p>Technically speaking it's not the deviance based on the G-statistic that is usually used for assessing over- or underdispersion, but instead  it is the &quot;deviance&quot; based on the Pearson goodness of fit statistic. If we calculate the Pearson statistic for this model using all 20 categories including both the successes and failures we obtain the following.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> pearson.deviance &lt;- sum((Oi-Ei)^2/Ei)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px">pearson.deviance/out2d$df.residual</div>
+<span class="style141">[1] 1.181500</span>
+<p>This is a slightly smaller value than the value of &phi; we obtained using the residual deviance but once again &phi; &gt; 1 so we would say the data are overdispersed relative to a binomial distribution.</p>
+<p>If <em>Y</em> has a binomial distribution with parameters <em>n</em> (number of trials) and <em>p</em> (probability of a success) then theory tells us that </p>
+<p align="center"><img src="../../images/lectures/lecture27/binomialvariance.gif" width="332" height="30" alt="binomial variance"></p>
+<p>If the data are overdispersed or underdispersed relative to a binomial distribution then the  rule says we need  to correct for this in some way. One approach is to multiply the estimated binomial variance by &phi; yielding what's called a quasi-binomial model. (There is a comparable quasi-Poisson model.)</p>
+<p align="center"><img src="../../images/lectures/lecture27/quasibinomial.gif" width="390" height="30" alt="quasibinomial"></p>
+<p>A quasi-binomial model can be fit directly with the <span class="style13">glm</span> function in R by specifying <span class="style17">family=quasibinomial</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d.quasi &lt;- glm(cbind(y,n-y)~land.use4 + sewer, data=wells, family=quasibinomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out2d.quasi)</div>
+<span class="style141">Call:<br>
+glm(formula = cbind(y, n - y) ~ land.use4 + sewer, family = quasibinomial, <br>
+&nbsp;&nbsp;&nbsp; data = wells)</span>
+<p><span class="style141">Deviance Residuals: <br>
+  &nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1Q&nbsp;&nbsp; Median&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max&nbsp; <br>
+  -1.6314&nbsp; -1.1947&nbsp; -0.1846&nbsp;&nbsp; 0.6685&nbsp;&nbsp; 1.7167&nbsp; </span>
+<p><span class="style141">Coefficients:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error t value Pr(&gt;|t|)&nbsp;&nbsp;&nbsp; <br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp; -1.7252&nbsp;&nbsp;&nbsp;&nbsp; 0.3253&nbsp; -5.304 7.13e-05 ***<br>
+  land.use4mixed&nbsp; -1.0497&nbsp;&nbsp;&nbsp;&nbsp; 0.2580&nbsp; -4.069 0.000893 ***<br>
+  land.use4rural&nbsp; -2.9445&nbsp;&nbsp;&nbsp;&nbsp; 0.8061&nbsp; -3.653 0.002145 ** <br>
+  seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.5408&nbsp;&nbsp;&nbsp;&nbsp; 0.3132&nbsp;&nbsp; 4.920 0.000154 ***<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1 </span>
+<p><span class="style141">(</span><span class="style25">Dispersion parameter for quasibinomial family taken to be 1.181510</span><span class="style141">)</span>
+<p><span class="style141">&nbsp;&nbsp;&nbsp; Null deviance: 146.956&nbsp; on 19&nbsp; degrees of freedom<br>
+  Residual deviance:&nbsp; 21.502&nbsp; on 16&nbsp; degrees of freedom<br>
+  AIC: NA</span>
+<p><span class="style141">Number of Fisher Scoring iterations: 5</span>
+<p>In the summary output  R reports a dispersion parameter of 1.181510 which we recognize to be   the Pearson deviance divided by the residual degrees of freedom that was calculated above. Notice that the AIC value is reported as missing, NA. That's because we no longer have a likelihood-based model, hence no log-likelihood and no AIC are calculated (but see Burnham and Anderson 2002 for something they call QAIC). The quasi-binomial model is not an actual  probability model. It is just a post hoc adjustment to the variance of the binomial distribution. </p>
+<p>We should compare the coefficient tables of the binomial and quasi-binomial models to see what's changed.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"># binomial model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out2d)$coefficients</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error&nbsp;&nbsp; z value&nbsp;&nbsp;&nbsp;&nbsp; Pr(&gt;|z|)<br>
+(Intercept)&nbsp;&nbsp;&nbsp; -1.725217&nbsp; 0.2992586 -5.764971 8.167184e-09<br>
+land.use4mixed -1.049685&nbsp; 0.2373251 -4.422983 9.734746e-06<br>
+land.use4rural -2.944548&nbsp; 0.7415802 -3.970639 7.168003e-05<br>
+seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.540770&nbsp; 0.2881229&nbsp; 5.347613 8.912175e-08</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # quasi-binomial model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> summary(out2d.quasi)$coefficients</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error&nbsp;&nbsp; t value&nbsp;&nbsp;&nbsp;&nbsp; Pr(&gt;|t|)<br>
+(Intercept)&nbsp;&nbsp;&nbsp; -1.725217&nbsp; </span><span class="style25">0.3252859 -5.303694 7.131231e-05</span><span class="style141"><br>
+land.use4mixed -1.049685&nbsp; </span><span class="style25">0.2579659 -4.069084 8.926158e-04</span><span class="style141"><br>
+land.use4rural -2.944548&nbsp; </span><span class="style25">0.8060775 -3.652934 2.145381e-03</span><span class="style141"><br>
+seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.540770&nbsp; </span><span class="style25">0.3131817&nbsp; 4.919731 1.539217e-04 </span>
+<p>Observe that the parameter estimates of the two models are exactly the same, but the standard errors and hence the statistical tests are different. All that's happened is that the variances of the parameter estimates in the binomial model have been multiplied by the estimate of &phi;, the Pearson deviance divided by the degrees of freedom.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> phi &lt;- pearson.deviance/out2d$df.residual</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> phi</div>
+<span class="style141"> [1] 1.181500</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d.summary &lt;- summary(out2d)$coefficients</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sqrt(phi*out2d.summary[,2]^2)</div>
+<span class="style141"> &nbsp;&nbsp; (Intercept) land.use4mixed land.use4rural&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 0.3252846&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.2579649&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.8060743&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.3131805</span>
+<p>The overdispersion parameter has been used to increase the standard errors of the parameter estimates. This in turn has decreased the <em>z</em>-statistics and increased the <em>p</em>-values  making it harder to achieve statistical significance.</p>
+<p>So, is fitting a quasi-binomial  a good idea? Generally speaking I would say no. </p>
+<ol>
+  <li>Because of its connection to the G- and Pearson tests that do have minimum expected count guidelines, the residual deviance is only rarely an appropriate goodness of fit statistic. Hence &phi; is rarely estimating anything sensible. </li>
+  <li>The variance assumption that is made with a quasi-binomial model is fairly restrictive. Without further evidence there is no reason to believe that this adjustment is better than  doing nothing at all.</li>
+</ol>
+<p>If there is overdispersion with binomial data it means that the current binomial model is inappropriate. The binomial model might be inappropriate because we haven't found an appropriate set of predictors to describe the logit or because one or more of the assumptions of the binomial distribution have not been met. Therefore one recommendation when there is overdispersion is to include more predictors in the model if possible. Two  assumptions of the binomial distribution that are commonly violated with real data are independence and the constant probability of success for all of the Bernoulli trials that comprise the individual binomial responses. One way to account for both of these violations is to fit a binomial mixed effects model. This yields a true probability model that can be estimated using maximum likelihood and thus provides an AIC for model comparison. A mixed effects binomial model will typically yield  parameter estimates and standard errors that are different from those of the ordinary binomial model. I think this approach is preferable to just trying to &quot;patch&quot; the variance of a binomial distribution in a very ad hoc manner. </p>
+<p>Still, fitting a quasi-binomial model may be preferable to doing nothing. Because it inflates the reported standard errors (when there is overdispersion) the result is that  all of your test results are made more conservative making it less likely for them to achieve statistical significance. This in turn adds a facade of objectivity to the analysis because you've chosen to set the statistical significance bar a bit higher. If I've exhausted all other possibilities&mdash;I can't find any  more predictors to add to the model and a mixed effects model does not adequately address the problem&mdash;then and only then would I consider fitting a quasi-binomial model and using it as my final analysis.</p>
+<p>Underdispersion with binomial data also means that the current binomial model is inappropriate but for different reasons. Once again there is heterogeneity in the success probabilities within the sets of Bernoulli trials but of a very limited form yielding &quot;binomial&quot; count distributions that have a far more limited range of possible outcomes. Underdispersion is far less common and as such there are far fewer tools available for dealing with it if it can be detected. This doesn't mean that fitting a quasi-binomial model is the best choice. If it turns out that the quasi-binomial model for underdispersion is correct but you instead choose to fit a binomial model anyway, no real damage is done. It just means that your reported statistical tests are too conservative. Any result that ends up being statistically significant with the binomial model will still be statistically significant with the correct quasi-binomial model, but there may be other statistically significant effects that you failed to detect.</p>
+<h2><a name="continuous"></a>Logistic regression with continuous predictors</h2>
+<p>There are two continuous predictors in the data set, chloride and nitrate. I try adding them to a model that is additive in the sewer and the three-category land use variable.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # add continuous variables to the best categorical predictor model</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2i &lt;- glm(cbind(y,n-y) ~ land.use4 + sewer + nitrate, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2j &lt;- glm(cbind(y,n-y) ~ land.use4 + sewer + chloride, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2k &lt;- glm(cbind(y,n-y) ~ land.use4 + sewer + chloride + nitrate, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> sapply(list(out2d, out2i, out2j, out2k), AIC)</div>
+<span class="style141">[1] 74.77762 72.31957 76.57056 74.18337</span>
+<p>AIC would suggest that adding nitrate to the model has improved the model, but that the chloride variable is not needed. I test this with a likelihood ratio test.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> anova(out2d, out2i, test='Chisq')</div>
+<span class="style141">Analysis of Deviance Table</span>
+<p><span class="style141">Model 1: cbind(y, n - y) ~ land.use4 + sewer<br>
+  Model 2: cbind(y, n - y) ~ land.use4 + sewer + nitrate<br>
+  &nbsp; Resid. Df Resid. Dev Df Deviance P(&gt;|Chi|)&nbsp; <br>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp; 21.502&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 17.044&nbsp; 1&nbsp;&nbsp; 4.4581&nbsp;&nbsp; 0.03474 *<br>
+  ---<br>
+  Signif. codes:&nbsp; 0 &lsquo;***&rsquo; 0.001 &lsquo;**&rsquo; 0.01 &lsquo;*&rsquo; 0.05 &lsquo;.&rsquo; 0.1 &lsquo; &rsquo; 1</span>
+<p>So the likelihood ratio test is in agreement with AIC. </p>
+<p>Although we've been using AIC to rank models the truth is we only have <em>n</em> = 20 binomial observations, so <img src="../../images/lectures/lecture27/noverK.gif" alt="n over K" width="70" height="28" align="absmiddle"> no matter how many parameters we estimate. Because we're now fitting models with four and more parameters we should probably be using corrected AIC, AIC<sub>c</sub>, for model comparison. One problem with this idea is that it's not clear that AIC<sub>c</sub> is appropriate for non-normal models (as has been noted <a href="lecture19.htm#AICc">before</a>). It's also not clear what to use for <em>n</em> here. Do we count the 20 independent binomial observations or the 650 binary observations (assumed independent) that make up the binomial data?</p>
+<h2><a name="interpreting"></a>Interpreting the coefficients of logistic regression</h2>
+<h3><a name="logit"></a>Interpretations on a logit scale</h3>
+<p>The coefficients of a logistic regression model have exactly the same interpretation as do ordinary regression coefficients except that they are describing the effect of predictors on a response measured on a logit scale.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2d)</div>
+<span class="style141"> &nbsp;&nbsp; (Intercept) land.use4mixed land.use4rural&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes <br>
+&nbsp;&nbsp;&nbsp;&nbsp; -1.725217&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.049685&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.944548&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.540770 </span>
+<p>The regressors in the current model are all dummy variables so the different coefficients tell us how much the logit changes if we switch from the reference category (<span class="style8">land.use4 = &quot;high.use&quot;</span> and <span class="style8">sewer = &quot;no&quot;</span>) to a different category.</p>
+<ul>
+  <li> The intercept, &ndash;1.72, is the value of the logit for the reference category:<span class="style8"> sewer = &quot;no&quot;</span>and <span class="style8">land.use4 = &quot;high.use&quot;</span>.</li>
+  <li>The mixed coefficient  is how much the logits of the mixed and high use categories differ. The mixed use category has a logit that is 1.05 units lower than is the logit of the high use category.</li>
+  <li>The rural coefficient  is how much the logits of the rural and high use categories differ. The rural use category has a logit that is 2.94 units lower than is the logit of the high use category.</li>
+  <li>The sewer coefficient tells us that wells on a site with sewers have a logit that is 1.54 units higher than wells that are on a site without sewers.</li>
+</ul>
+<h3><a name="probability"></a>Interpretation on a probability scale</h3>
+<p>Each coefficient except for the intercept measures an effect, the amount the logit will change when we switch categories. Because the logit function is an invertible monotonic transformation of probability, the direction in which the logit changes is also the direction in which the probability of contamination will change. The sign of the predictor in a logit regression model gives this direction. Thus we see that wells on sites of mixed  use have a lower probability of contamination than those in high use areas. Similarly wells in rural areas have a lower probability of contamination than wells in high use areas. Wells in areas with sewers have a higher probability of contamination than wells in areas without sewers. </p>
+<h3><a name="OR"></a>Interpretation as odds ratios</h3>
+<p>One of the primary appeals of logistic regression is that the coefficients of dummy predictors have a connection to odds ratios. As an illustration, suppose our model just included a dummy variable z for sewer where <em>z</em> = 0 if sewers our absent and <em>z</em> = 1 if sewers are present. The basic logistic regression model is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logit.gif" width="160" height="55" alt="logit"></p>
+<p>As with ordinary regression this single equation corresponds to two equations depending on the value of the dummy variable <em>z</em>.</p>
+<p align="center"><img src="../../images/lectures/lecture27/twoequations.gif" width="278" height="113" alt="separate equations"></p>
+<p>As was explained in <a href="lecture26.htm#link">lecture 26</a>, the logit is a log odds, so our two equations also have the following interpretations.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logoddseqns.gif" width="417" height="58" alt="log odds"></p>
+<p>If we subtract the first equation from the second equation the intercept term cancels.</p>
+<p align="center"><img src="../../images/lectures/lecture27/beta1.gif" width="747" height="30" alt="beta1"></p>
+<p>It is a property of logarithms that a difference of two logarithms is the logarithm of a quotient.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logdifference.gif" width="163" height="52" alt="difference of logs"></p>
+<p>Thus the difference of the two log odds is also the log of a ratio of odds where the reference group appears in the denominator.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logoddsratio.gif" width="385" height="53" alt="log odds ratio"></p>
+<p>If we exponentiate both sides of this equation the log disappears and the right hand side is just a ratio of odds, an odds ratio, usually denoted OR.</p>
+<p align="center"><img src="../../images/lectures/lecture27/OR.gif" width="560" height="32" alt="odds ratio"></p>
+<p>An odds ratio  interpretation  for the coefficients of a set of dummy variables applies no matter how many levels there are. Exponentiating a coefficient of a dummy variable in a logistic regression model yields an odds ratio in which the reference group occupies the denominator of the odds ratio. In the current model there are two factor variables, one with three levels and one with two. The reference group for <span class="style8">land.use4</span> is <span class="style8">&quot;high.use&quot;</span> and the reference group for <span class="style8">sewer</span> is <span class="style8">&quot;no&quot;</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2d)</div>
+<span class="style141"> &nbsp;&nbsp; (Intercept) land.use4mixed land.use4rural&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes <br>
+&nbsp;&nbsp;&nbsp;&nbsp; -1.725217&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -1.049685&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -2.944548&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.540770 </span>
+<p>Exponentiating the "effect" estimates yields   odds ratios with the following interpretations.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(coef(out2d)[2:4])</div>
+<span class="style141"> land.use4mixed land.use4rural&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes <br>
+&nbsp;&nbsp;&nbsp; 0.35004806&nbsp;&nbsp;&nbsp;&nbsp; 0.05262586&nbsp;&nbsp;&nbsp;&nbsp; 4.66818187</span>
+<ul>
+  <li>The odds of well contamination in mixed use areas is  35% that of the odds of contamination in high use areas.</li>
+  <li>The odds of well contamination in rural areas is  5% that of the odds of contamination in high use areas.</li>
+  <li>The odds of well contamination when sewers are present is 4.7 times the odds of contamination when sewers are absent. 
+</li>
+</ul>
+<p>It is convenient particularly when constructing confidence intervals to arrange things so that point estimates for odds ratios  are bigger than one.  Recall the following property of logarithms.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logratio.gif" width="220" height="60"></p>
+<p>When we change the sign of a log odds ratio we get the reciprocal of the ratio  thus changing the reference category. If we put a minus  sign in front of the coefficient labeled <span class="style8">land.use4rural</span>, the <span class="style8">rural</span> category  becomes the denominator of the odds ratio and the current reference group <span class="style8">high.use</span> becomes the numerator.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(-coef(out2d)[3])</div>
+<span class="style141"> land.use4rural <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19.00206</span>
+<p>The odds of well contamination are 19 times higher in high use areas than they are in rural areas. Changing the sign of the coefficient labeled <span class="style8">land.use4mixed</span> makes the mixed use category the reference group.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(-coef(out2d)[2])</div>
+<span class="style141"> land.use4mixed <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.856751</span>
+<p>So the odds of well contamination in high use areas are 2.86 times the odds of contamination in mixed use areas. </p>
+<p>With the current coding of the model we can only obtain odds ratios that compare high use with rural and high use with mixed. How do we compare rural with mixed use? We could refit the model with a different reference group but it is just as easy to obtain this comparison using what we already have. The model we've fit is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logitmodel.gif" width="277" height="55" alt="logit model"></p>
+<p>where</p>
+<p align="center"><img src="../../images/lectures/lecture27/w1.gif" alt="w1" width="292" height="75" align="absmiddle"><img src="../../images/lectures/lecture27/w2.gif" alt="w2" width="280" height="75" align="absmiddle"></p>
+<p align="center"><img src="../../images/lectures/lecture27/z.gif" alt="z" width="227" height="75" align="absmiddle"></p>
+<p>so the reference group is<span class="style8"> land.use4 = high.use</span> and <span class="style8">sewer = no</span>. The modeled response is the log odds of contamination. The  regression model yields three different equations, one for each category of land use.</p>
+<ol>
+  <li>High intensity land use: <img src="../../images/lectures/lecture27/high.gif" alt="high" width="312" height="30" align="absmiddle"></li>
+  <li>Mixed land use: <img src="../../images/lectures/lecture27/mixed.gif" alt="mixed" width="348" height="30" align="absmiddle"></li>
+  <li>Rural land use: <img src="../../images/lectures/lecture27/rural.gif" alt="rural" width="350" height="30" align="absmiddle"></li>
+</ol>
+<p>If we subtract eqn (3) from eqn (2) the intercept and the sewer term will cancel (assuming that sewer status is the same in both equations).</p>
+<p align="center"><img src="../../images/lectures/lecture27/mixedvsrural.gif" width="647" height="117" alt="mixed vs rural"></p>
+<p align="left">Exponentiating this yields the odds ratio. So, to obtain an odds ratio that compares two groups not currently being compared, just subtract their exponents. The group corresponding to the term with the minus sign (the subtrahend) forms the denominator of the odds ratio.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # OR for contamination: mixed density versus rural</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(coef(out2d)[2]-coef(out2d)[3])</div>
+<span class="style141"> land.use4mixed <br>
+6.651636</span>
+<p align="left"><a name="rev"></a>Alternatively we could have just recoded the land use factor and made  rural the reference group. I accomplish this below by reversing the current factor level order with the <span class="style13">rev</span> function.</p>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # reverse order of factor levels so rural is reference category</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> wells$land.use5 &lt;- factor(wells$land.use4, levels=rev(levels(wells$land.use4)))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> levels(wells$land.use5)</div>
+<span class="style141"> [1] &quot;rural&quot;&nbsp;&nbsp;&nbsp; &quot;mixed&quot;&nbsp;&nbsp;&nbsp; &quot;high.use&quot;</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # refit model with new factor variable</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2h &lt;- glm(cbind(y,n-y)~land.use5+sewer, data=wells, family=binomial)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2h)</div>
+<span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Intercept)&nbsp;&nbsp;&nbsp; land.use5mixed land.use5high.use&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -4.669765&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.894863&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.944548&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.540770</span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # OR for contamination: high density versus rural</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(coef(out2h)[3])</div>
+<span class="style141"> land.use5high.use <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19.00206 </span>
+<div class="style152" style="padding-left: 30px; text-indent:-30px"> # OR for contamination: mixed density versus rural</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(coef(out2h)[2])</div>
+<span class="style141"> land.use5mixed <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.651636</span>
+<p align="left">These are the same values obtained above by subtracting coefficients.</p>
+<h2><a name="confidence"></a>Confidence intervals for odds ratios</h2>
+<p>An odds ratio is a derived quantity, a function (the exponential) of a regression coefficient or a linear combination of regression coefficients from a logistic regression model. Because the estimates in a logistic regression model are obtained by maximum likelihood, likelihood theory tells us they should have a large-sample normal distribution. So normality holds on the scale of the estimates and we can use that to calculate confidence intervals. The exponential function is monotonic so it preserves order. Hence when we apply it to a 95% confidence interval on the logit scale we get a 95% confidence interval on the&nbsp;odds ratio scale. Exponentiating the point estimate gives the odds ratio and exponentiating the endpoints of this interval yields a confidence interval for the odds ratio. </p>
+<p>Let's start with the odds ratios we can calculate from model <span class="style8">out2d</span>. The fitted model is</p>
+<p align="center"><img src="../../images/lectures/lecture27/logitmodel.gif" width="277" height="55" alt="logit model"></p>
+<p>As was noted above, confidence intervals for odds ratios are easier to interpret when the point estimate for the odds ratio is bigger than 1. With this in mind suppose we are interested in finding confidence intervals for the following three odds ratios.</p>
+<ol>
+  <li><span style="text-indent: 30px">Odds ratio for contamination, sewers present versus sewers absent: <img src="../../images/lectures/lecture27/OR1.gif" alt="CI 1" width="70" height="32" align="absmiddle"><span style="text-align:center"></span></span></li>
+  <li><span style="text-indent: 30px">Odds ratio for contamination, high land use versus rural land use: <img src="../../images/lectures/lecture27/OR2.gif" alt="CI 2" width="83" height="32" align="absmiddle"><span style="text-align:center"></span></span></li>
+  <li><span style="text-indent: 30px">Odds ratio for contamination, mixed land use versus rural land use: <img src="../../images/lectures/lecture27/OR3.gif" alt="OR3" width="108" height="32" align="absmiddle"><span style="text-align:center"></span></span></li>
+</ol>
+<p>I start by extracting the coefficients table from the summary table of the model.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d.sum &lt;- summary(out2d)$coefficients</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d.sum</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimate Std. Error&nbsp;&nbsp; z value&nbsp;&nbsp;&nbsp;&nbsp; Pr(&gt;|z|)<br>
+(Intercept)&nbsp;&nbsp;&nbsp; -1.725217&nbsp; 0.2992586 -5.764971 8.167184e-09<br>
+land.use4mixed -1.049685&nbsp; 0.2373251 -4.422983 9.734746e-06<br>
+land.use4rural -2.944548&nbsp; 0.7415802 -3.970639 7.168003e-05<br>
+seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.540770&nbsp; 0.2881229&nbsp; 5.347613 8.912175e-08</span>
+<p>We can also obtain confidence intervals for these parameters with the <span class="style1">confint</span> function.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d.conf &lt;- confint(out2d)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d.conf</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp;&nbsp; 97.5 %<br>
+  (Intercept)&nbsp;&nbsp;&nbsp; -2.3386647 -1.1607064<br>
+  land.use4mixed -1.5196130 -0.5877956<br>
+  land.use4rural -4.7801819 -1.7183571<br>
+seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.9950944&nbsp; 2.1304522</span>
+<h3><a name="OR1"></a>Odds ratio for sewers: yes versus no</h3>
+<p>A 95% confidence interval for the sewer coefficient &beta;<sub>3</sub>, using the asymptotic normality of MLEs, is the following.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d.sum[4,1] + c(qnorm(.025), qnorm(.975))*out2d.sum[4,2]</div>
+<span class="style141">[1] 0.9760592 2.1054801</span>
+<p>Exponentiating the point estimate gives the odds ratio. To obtain a confidence interval for the odds ratio we just exponentiate these two endpoints.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(out2d.sum[4,1])</div>
+<span class="style141"> [1] 4.668182</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(out2d.sum[4,1] + c(qnorm(.025), qnorm(.975))*out2d.sum[4,2])</div>
+<span class="style141">[1] 2.653977 8.211045</span>
+<p>Alternatively we can exponentiate the fourth row of the output from <span class="style1">confint</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(out2d.conf[4,])</div>
+<span class="style141">  &nbsp;&nbsp; 2.5 %&nbsp;&nbsp; 97.5 % <br>
+2.704980 8.418673</span>
+<p>The numbers are not the same because <span class="style1">confint</span> uses profile likelihood to obtain the confidence intervals while the hand calculations we carried out produced Wald confidence intervals.</p>
+<h3><a name="OR2"></a>Odds ratio for high intensity land use versus rural land use</h3>
+<p>A 95% confidence interval for the rural coefficient &beta;<sub>2</sub> can be obtained by again  invoking the asymptotic normality of MLEs.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2d.sum[3,1] + c(qnorm(.025), qnorm(.975))*out2d.sum[3,2]</div>
+<span class="style141">[1] -4.398018 -1.491077</span>
+<p>Next we flip the signs and exponentiate the results.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(-out2d.sum[3,1])</div>
+<span class="style141"> [1] 19.00206</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(-(out2d.sum[3,1] + c(qnorm(.025), qnorm(.975))*out2d.sum[3,2]))</div>
+<span class="style141">[1] 81.289607  4.441877</span>
+<p>Alternatively we can exponentiate the negative of the third row of the output from <span class="style1">confint</span>. (Notice that because we changed the sign the labeling of the interval endpoints is backwards.)</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(-out2d.conf[3,])</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp;&nbsp; 97.5 % <br>
+119.126013&nbsp;&nbsp; 5.575361</span>
+<h3><a name="OR3"></a>Odds ratio for mixed land use versus rural land use</h3>
+<p>From eqn (3) the  estimate of the log odds ratio is obtained by subtracting two regression coefficients, &beta;<sub>1</sub> &ndash; &beta;<sub>2</sub>. This is also an instance of a linear combination. The general problem of finding the variance of a linear combination of regression coefficients was discussed in <a href="lecture4.htm#meanmatrix">lecture 4</a>. Those same ideas apply here. We need to write this linear combination as a vector dot product using the full vector of regression coefficients. The dot product we need is the following.</p>
+<p align="center"><img src="../../images/lectures/lecture27/dotproduct.gif" width="420" height="32" alt="dot product"></p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> logOR.mixrural &lt;- c(0,1,-1,0)%*%coef(out2d)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> logOR.mixrural</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+[1,] 1.894863</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2d)[2]-coef(out2d)[3]</div>
+<span class="style141"> land.use4mixed <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.894863</span>
+<p>As was explained in <a href="lecture4.htm#sandwich">lecture 4</a> the variance of  a linear combination can be obtained by evaluating the following quadratic form.</p>
+<p align="center"><img src="../../images/lectures/lecture27/quadform.gif" width="182" height="33" alt="quadratic form"></p>
+<p>where <img src="../../images/lectures/lecture27/cvec.gif" alt="c vector" width="135" height="32" align="absmiddle"> and <img src="../../images/lectures/lecture27/sigmab.gif" alt="sigma b" width="28" height="30" align="absmiddle"> is the variance-covariance matrix of the parameter estimates returned by the <span class="style13">vcov</span> function of R applied to the model object. Thus the  standard error of the desired log odds ratio is the following.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> se.OR &lt;- sqrt(c(0,1,-1,0)%*%vcov(out2d)%*%c(0,1,-1,0))</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> se.OR</div>
+<span class="style141"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+[1,] 0.7383636</span>
+<p>Using the point estimate and its standard error we can calculate a 95% confidence interval for the log odds ratio as follows.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> logOR.mixrural + c(qnorm(.025),qnorm(.975))*se.OR</div>
+<span class="style141">[1] 0.4476968 3.3420288</span>
+<p>The rationale for this is that maximum likelihood estimates have a joint asymptotic normal distribution. Sums of jointed normally distributed variables also have normal distributions. The strategy then for finding a confidence interval for an odds ratio is to first find a confidence interval for the linear combination of regression coefficients and then exponentiate the endpoints of this interval to obtain a confidence interval for the odds ratio.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(logOR.mixrural)</div>
+<span class="style141">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [,1]<br>
+[1,] 6.651636</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(logOR.mixrural + c(qnorm(.025), qnorm(.975))*se.OR)</div>
+<span class="style141">[1]  1.564704 28.276437</span>
+<p>To obtain this interval using <span class="style1">confint</span> we'd need to refit the model making <span class="style8">rural</span> the reference group. We previously did this creating a model I called <span class="style8">out2f</span>.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2f.conf &lt;- confint(out2f)</div>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> out2f.conf</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp; 97.5 %<br>
+  (Intercept)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -6.4933077 -3.481457<br>
+  land.use5mixed&nbsp;&nbsp;&nbsp;&nbsp; 0.6766069&nbsp; 3.726395<br>
+  land.use5high.use&nbsp; 1.7183571&nbsp; 4.780182<br>
+  seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.9950944&nbsp; 2.130452</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(out2f.conf[2,])</div>
+<span class="style141">  &nbsp;&nbsp;&nbsp; 2.5 %&nbsp;&nbsp;&nbsp; 97.5 % <br>
+&nbsp;1.967192 41.529121</span>
+<p>The three odds ratios we calculated and their confidence intervals are listed in Table 1.</p>
+<table border=0 align="center" cellpadding=2 cellspacing=2>
+  <tr>
+    <td width=430 valign=top class="styleArial1" align="center" style="padding-left: 65px; text-indent:-60px"><strong>Table 1</strong>&nbsp;&nbsp;Odds ratios and their confidence intervals</td>
+  </tr>
+</table>
+<table width="500" border="1" align="center" cellpadding=2 cellspacing=0 >
+  <tr  bgcolor="#F1D2D8">
+    <td scope="col" align="center">Comparison<sub></sub></td>
+    <td  scope="col" align="center">Odds ratio
+      for contamination </td>
+    <td  scope="col" align="center">95% Wald confidence interval</td>
+    <td  scope="col" align="center">95% profile likelihood confidence interval</td>
+  <tr>
+    <td align="center">sewer: yes versus no</td>
+    <td align="center">4.67</td>
+    <td align="center">(2.65, 8.21)</td>
+    <td align="center">(2.70, 8.42)</td>
+  </tr>
+  <tr>
+    <td align="center">land use: mixed versus rural</td>
+    <td align="center">6.65</td>
+    <td align="center">(1.56, 28.28)</td>
+    <td align="center">(1.97, 41.53)</td>
+  </tr>
+  <tr>
+    <td align="center">land use: high versus rural</td>
+    <td align="center">19.00</td>
+    <td align="center">(4.44, 81.29)</td>
+    <td align="center">(5.57, 119.1)</td>
+  </tr>
+</table>
+<p>The width of the confidence intervals is striking, particularly the  long upper tail. This  is typical for ratios where  imprecision in the denominator  gets magnified into large values for the ratio. </p>
+<h2><a name="logistic"></a>Odds ratio interpretation for continuous predictors</h2>
+<p>All of the <a href="lecture27.htm#interpreting">interpretations</a> we've given for the coefficients of categorical regressors in logistic regression carry over to  continuous predictors. Suppose <em>x </em>is a continuous predictor and we fit the following logistic regression model.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logitx.gif" width="162" height="55" alt="logit model"></p>
+<p>Now consider this equation for any two values of <em>x</em> that differ by one unit.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logoddsatx.gif" width="415" height="62" alt="log odds at x"></p>
+<p>Subtract the first equation from the second equation.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logoddsdiff.gif" width="557" height="93" alt="log odds difference"></p>
+<p>Because the difference of two logs is the log of a ratio the regression coefficient &beta;<sub>1</sub> is also  a log odds ratio.</p>
+<p align="center"><img src="../../images/lectures/lecture27/logORx.gif" width="318" height="83" alt="log odds ratio"></p>
+<p>Exponentiating the regression coefficient yields the odds ratio of contamination for a one unit increase in <em>x</em>. Consider <span class="style8">model2i</span> in which the continuous predictor nitrate was added to a logistic regression model with  two categorical predictors.</p>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> coef(out2i)</div>
+<span class="style141"> &nbsp;&nbsp; (Intercept) land.use4mixed land.use4rural&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seweryes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nitrate <br>
+&nbsp;&nbsp;&nbsp; -2.6565063&nbsp;&nbsp;&nbsp;&nbsp; -0.7293304&nbsp;&nbsp;&nbsp;&nbsp; -2.8422741&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2309213&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0.2707348</span>
+<div class="style231" style="padding-left: 30px; text-indent:-30px"> exp(coef(out2i)[5])</div>
+<span class="style141">&nbsp;nitrate <br>
+1.310927</span>
+<p>The coefficient of nitrate has the following three  interpretations.</p>
+<ol>
+  <li>A one unit increase in nitrate concentration  increases the logit by 0.27.</li>
+  <li>Because the coefficient of nitrate is positive we conclude that increasing the concentration of nitrate increases the probability that a well is found to be contaminated.</li>
+  <li>A one unit increase in nitrate multiplies the odds of contamination by a factor of 1.31.</li>
+</ol>
+<p>We're not restricted to one unit increases. A <em>k</em>-unit increase in <em>x</em> yields an odds ratio of exp(<em>k&beta;</em>).</p>
+<h2><a name="cited"></a>Cited references</h2>
+<ul>
+  <li>Burnham, K. P. and D. R. Anderson. 2002. <i>Model Selection and Multimodel Inference</i>. Springer-Verlag, New York.</li>
+</ul>
+<h2><a name="Rcode"></a>R Code</h2>
+<p>A compact collection of all the R code displayed in this document appears <a href="../../notes/lecture27&#32;Rcode.html">here</a>.</p>
+<p align="center"><a href="../../index.html">Course Home Page</a> </p>
+<hr align="center" width="75%">
+<!--Standard footer follows -->
+<p></p>
+<table width="586" border="3" cellspacing="2" cellpadding="2" align=
+"CENTER">
+  <tr bgcolor="#CCCCCC">
+    <td width="100%"><font size=-1>Jack Weiss<br>
+      <i>Phone: </i>(919) 962-5930<br>
+      <i>E-Mail:</i> jack_weiss@unc.edu<br>
+      <i>Address: </i>Curriculum for the Environment and Ecology, Box 3275, University of North Carolina, Chapel Hill, 27599<br>
+      Copyright &copy; 2012<br>
+      Last Revised--November 30, 2012<br>
+      URL: <a href="lecture27.htm#lecture27" target="_self">https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/docs/lectures/lecture27.htm</a></font></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+</body>
+</html>
